@@ -115,7 +115,11 @@ public enum SpotifyPlaybackController {
             stringAttribute(kAXDescriptionAttribute as String, from: element),
             stringAttribute(kAXHelpAttribute as String, from: element)
         ].compactMap { $0 }.joined(separator: " ")
-        let semanticContext = "\(context) \(ownLabel)".lowercased()
+        // Spotify's Electron accessibility tree commonly puts a result title and its
+        // green play button in sibling nodes. Fold direct child labels into the context
+        // before descending so that the button can still be associated with its result.
+        let childLabels = directChildLabels(of: element)
+        let semanticContext = "\(context) \(ownLabel) \(childLabels)".lowercased()
         if role == kAXButtonRole as String {
             let label = [
                 stringAttribute(kAXTitleAttribute as String, from: element),
@@ -125,12 +129,16 @@ public enum SpotifyPlaybackController {
             .compactMap { $0 }
             .joined(separator: " ").lowercased()
 
-            if label.contains("play"), actionNames(of: element).contains(kAXPressAction as String) {
-                // Prefer labels tied to the spoken name. Generic player-bar play controls are
-                // deliberately ignored until a semantic result button is actually exposed.
+            if actionNames(of: element).contains(kAXPressAction as String) {
+                // Prefer labelled play controls, but Spotify occasionally exposes the green
+                // result control as an unlabelled AXButton. A result-associated, pressable
+                // button is still safer than falling back to a global player-bar control.
                 let queryWords = query.split(whereSeparator: \.isWhitespace).map(String.init)
                 let matches = queryWords.filter { semanticContext.contains($0) }.count
-                if matches > 0 { candidates.append((element, matches)) }
+                if matches > 0 {
+                    let playBonus = label.contains("play") ? 100 : 0
+                    candidates.append((element, playBonus + matches))
+                }
             }
         }
 
@@ -149,6 +157,23 @@ public enum SpotifyPlaybackController {
         var value: CFTypeRef?
         guard AXUIElementCopyAttributeValue(element, attribute as CFString, &value) == .success else { return nil }
         return value as? String
+    }
+
+    private static func directChildLabels(of element: AXUIElement) -> String {
+        var value: CFTypeRef?
+        guard AXUIElementCopyAttributeValue(element, kAXChildrenAttribute as CFString, &value) == .success,
+              let children = value as? [AXUIElement]
+        else { return "" }
+
+        return children.prefix(24).flatMap { child in
+            [
+                stringAttribute(kAXTitleAttribute as String, from: child),
+                stringAttribute(kAXDescriptionAttribute as String, from: child),
+                stringAttribute(kAXHelpAttribute as String, from: child)
+            ]
+        }
+        .compactMap { $0 }
+        .joined(separator: " ")
     }
 
     private static func actionNames(of element: AXUIElement) -> [String] {

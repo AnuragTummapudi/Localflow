@@ -139,13 +139,21 @@ private struct SidebarRow: View {
 
                 Spacer()
             }
-                .frame(height: 38)
-            .background(
-                RoundedRectangle(cornerRadius: 8, style: .continuous)
-                    .fill(isSelected
-                        ? LocalFlowDesign.sidebarHighlight
-                        : (isHovering ? LocalFlowDesign.graphite.opacity(0.07) : Color.clear))
-            )
+            .frame(height: 42)
+            .padding(.horizontal, 10)
+            .background(alignment: .leading) {
+                if isSelected {
+                    RoundedRectangle(cornerRadius: 9, style: .continuous)
+                        .fill(LocalFlowDesign.signal.opacity(0.075))
+                    Capsule()
+                        .fill(LocalFlowDesign.signal)
+                        .frame(width: 3, height: 20)
+                        .padding(.leading, 5)
+                } else if isHovering {
+                    RoundedRectangle(cornerRadius: 9, style: .continuous)
+                        .fill(LocalFlowDesign.graphite.opacity(0.045))
+                }
+            }
         }
         .buttonStyle(.plain)
         .onHover { isHovering = $0 }
@@ -159,14 +167,10 @@ private struct SidebarSymbol: View {
     let isSelected: Bool
 
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 6, style: .continuous)
-                .fill(isSelected ? LocalFlowDesign.signal.opacity(0.14) : Color.clear)
-            Image(systemName: name)
-                .symbolRenderingMode(.hierarchical)
-                .font(.system(size: 13, weight: isSelected ? .semibold : .medium))
-                .foregroundStyle(isSelected ? LocalFlowDesign.signal : LocalFlowDesign.graphite)
-        }
+        Image(systemName: name)
+            .symbolRenderingMode(.hierarchical)
+            .font(.system(size: 15, weight: isSelected ? .semibold : .medium))
+            .foregroundStyle(isSelected ? LocalFlowDesign.signal : LocalFlowDesign.graphite.opacity(0.8))
         .frame(width: 24, height: 24)
         .accessibilityHidden(true)
     }
@@ -200,7 +204,7 @@ private enum SettingsPane: String, CaseIterable, Identifiable {
 
     var icon: String {
         switch self {
-        case .dictation: "waveform"
+        case .dictation: "mic.fill"
         case .insights: "chart.xyaxis.line"
         case .dictionary: "character.cursor.ibeam"
         case .commandMode: "command"

@@ -182,10 +182,13 @@ public final class OverlayWindowController {
         let screen = NSScreen.screens.first(where: { NSPointInRect(mouse, $0.frame) })
             ?? NSScreen.main
             ?? NSScreen.screens.first
-        let screenFrame = screen?.visibleFrame ?? NSRect(x: 0, y: 0, width: 1470, height: 956)
+        // `visibleFrame` stops above the Dock and leaves the pill visually stranded on
+        // larger screens. Use the full display frame so this stays anchored to the actual
+        // bottom edge, including while the frontmost app is full screen.
+        let screenFrame = screen?.frame ?? NSRect(x: 0, y: 0, width: 1470, height: 956)
         let origin = NSPoint(
             x: screenFrame.midX - size.width / 2,
-            y: screenFrame.minY + 36
+            y: screenFrame.minY + 12
         )
         panel.setFrame(NSRect(origin: origin, size: size), display: true)
     }

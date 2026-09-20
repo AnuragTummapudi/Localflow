@@ -18,8 +18,6 @@
 		A10000000000000000000009 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* SettingsViewModel.swift */; };
 		A1000000000000000000000A /* SettingsRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000A /* SettingsRootView.swift */; };
 		A1000000000000000000000B /* CommandConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000B /* CommandConfirmationView.swift */; };
-		A1000000000000000000000C /* Credits.md in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000C /* Credits.md */; };
-		A1000000000000000000000D /* AppIconREADME.md in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000D /* AppIconREADME.md */; };
 		A1000000000000000000000E /* LaunchAtLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000014 /* LaunchAtLoginController.swift */; };
 		A1000000000000000000000F /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000015 /* AppServices.swift */; };
 		A10000000000000000000010 /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = A70000000000000000000001 /* Shared */; };
@@ -54,8 +52,6 @@
 		A20000000000000000000009 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		A2000000000000000000000A /* SettingsRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRootView.swift; sourceTree = "<group>"; };
 		A2000000000000000000000B /* CommandConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandConfirmationView.swift; sourceTree = "<group>"; };
-		A2000000000000000000000C /* Credits.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Credits.md; sourceTree = "<group>"; };
-		A2000000000000000000000D /* AppIconREADME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AppIconREADME.md; sourceTree = "<group>"; };
 		A2000000000000000000000E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2000000000000000000000F /* LocalFlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LocalFlow.entitlements; sourceTree = "<group>"; };
 		A20000000000000000000010 /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
@@ -143,8 +139,6 @@
 		A40000000000000000000003 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A2000000000000000000000C /* Credits.md */,
-				A2000000000000000000000D /* AppIconREADME.md */,
 				A20000000000000000000017 /* Assets.xcassets */,
 				A20000000000000000000020 /* Fonts */,
 			);
@@ -231,8 +225,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1000000000000000000000C /* Credits.md in Resources */,
-				A1000000000000000000000D /* AppIconREADME.md in Resources */,
 				A1000000000000000000001A /* Assets.xcassets in Resources */,
 				A10000000000000000000020 /* Fonts in Resources */,
 			);

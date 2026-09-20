@@ -297,7 +297,7 @@ public struct WaveformOverlayView: View {
     private var polishedView: some View {
         let isError: Bool = { if case .terminal(.error) = model.pillState { return true }; return false }()
         let isUnchanged: Bool = { if case .terminal(.unchanged) = model.pillState { return true }; return false }()
-        HStack(spacing: 8) {
+        return HStack(spacing: 8) {
             Image(systemName: isError ? "exclamationmark.triangle.fill" : (isUnchanged ? "checkmark.circle" : "sparkles"))
                 .font(.system(size: 13, weight: .semibold))
                 .foregroundStyle(isError ? LocalFlowDesign.destructiveRed : LocalFlowDesign.signal)

@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* LocalFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* LocalFlowApp.swift */; };
+		A10000000000000000000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* AppDelegate.swift */; };
+		A10000000000000000000003 /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* MenuBarController.swift */; };
+		A10000000000000000000004 /* DictationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* DictationCoordinator.swift */; };
+		A10000000000000000000005 /* OverlayWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* OverlayWindowController.swift */; };
+		A10000000000000000000006 /* WaveformOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* WaveformOverlayView.swift */; };
+		A10000000000000000000007 /* LaunchLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000007 /* LaunchLogoView.swift */; };
+		A10000000000000000000008 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000008 /* OnboardingView.swift */; };
+		A10000000000000000000009 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* SettingsViewModel.swift */; };
+		A1000000000000000000000A /* SettingsRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000A /* SettingsRootView.swift */; };
+		A1000000000000000000000B /* CommandConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000B /* CommandConfirmationView.swift */; };
+		A1000000000000000000000C /* Credits.md in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000C /* Credits.md */; };
+		A1000000000000000000000D /* AppIconREADME.md in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000D /* AppIconREADME.md */; };
+		A1000000000000000000000E /* LaunchAtLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000014 /* LaunchAtLoginController.swift */; };
+		A1000000000000000000000F /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000015 /* AppServices.swift */; };
+		A10000000000000000000010 /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = A70000000000000000000001 /* Shared */; };
+		A10000000000000000000011 /* AudioCapture in Frameworks */ = {isa = PBXBuildFile; productRef = A70000000000000000000002 /* AudioCapture */; };
+		A10000000000000000000012 /* HotkeyManager in Frameworks */ = {isa = PBXBuildFile; productRef = A70000000000000000000003 /* HotkeyManager */; };
+		A10000000000000000000013 /* ModelManager in Frameworks */ = {isa = PBXBuildFile; productRef = A70000000000000000000004 /* ModelManager */; };
+		A10000000000000000000014 /* TextInjection in Frameworks */ = {isa = PBXBuildFile; productRef = A70000000000000000000005 /* TextInjection */; };
+		A10000000000000000000015 /* Engines in Frameworks */ = {isa = PBXBuildFile; productRef = A70000000000000000000006 /* Engines */; };
+		A10000000000000000000016 /* CommandMode in Frameworks */ = {isa = PBXBuildFile; productRef = A70000000000000000000007 /* CommandMode */; };
+		A10000000000000000000017 /* SmartFormatting in Frameworks */ = {isa = PBXBuildFile; productRef = A70000000000000000000008 /* SmartFormatting */; };
+		A10000000000000000000021 /* SpeechCleanup in Frameworks */ = {isa = PBXBuildFile; productRef = A7000000000000000000000A /* SpeechCleanup */; };
+		A10000000000000000000018 /* PrivacyDashboard in Frameworks */ = {isa = PBXBuildFile; productRef = A70000000000000000000009 /* PrivacyDashboard */; };
+		A10000000000000000000019 /* LocalFlowDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000016 /* LocalFlowDesign.swift */; };
+		A1000000000000000000001A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000017 /* Assets.xcassets */; };
+		A1000000000000000000001B /* DictationPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001B /* DictationPane.swift */; };
+		A1000000000000000000001C /* InsightsPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001C /* InsightsPane.swift */; };
+		A1000000000000000000001D /* DictionaryPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001D /* DictionaryPane.swift */; };
+		A1000000000000000000001E /* FloatingResultCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001E /* FloatingResultCardController.swift */; };
+		A1000000000000000000001F /* FloatingResultCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001F /* FloatingResultCardView.swift */; };
+		A10000000000000000000020 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000020 /* Fonts */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A20000000000000000000001 /* LocalFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFlowApp.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* DictationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictationCoordinator.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* OverlayWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindowController.swift; sourceTree = "<group>"; };
+		A20000000000000000000006 /* WaveformOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformOverlayView.swift; sourceTree = "<group>"; };
+		A20000000000000000000007 /* LaunchLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchLogoView.swift; sourceTree = "<group>"; };
+		A20000000000000000000008 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A20000000000000000000009 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		A2000000000000000000000A /* SettingsRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRootView.swift; sourceTree = "<group>"; };
+		A2000000000000000000000B /* CommandConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandConfirmationView.swift; sourceTree = "<group>"; };
+		A2000000000000000000000C /* Credits.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Credits.md; sourceTree = "<group>"; };
+		A2000000000000000000000D /* AppIconREADME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AppIconREADME.md; sourceTree = "<group>"; };
+		A2000000000000000000000E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2000000000000000000000F /* LocalFlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LocalFlow.entitlements; sourceTree = "<group>"; };
+		A20000000000000000000010 /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
+		A20000000000000000000011 /* LocalFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000012 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		A20000000000000000000013 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A20000000000000000000014 /* LaunchAtLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginController.swift; sourceTree = "<group>"; };
+		A20000000000000000000015 /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
+		A20000000000000000000016 /* LocalFlowDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFlowDesign.swift; sourceTree = "<group>"; };
+		A20000000000000000000017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2000000000000000000001B /* DictationPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictationPane.swift; sourceTree = "<group>"; };
+		A2000000000000000000001C /* InsightsPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsPane.swift; sourceTree = "<group>"; };
+		A2000000000000000000001D /* DictionaryPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryPane.swift; sourceTree = "<group>"; };
+		A2000000000000000000001E /* FloatingResultCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingResultCardController.swift; sourceTree = "<group>"; };
+		A2000000000000000000001F /* FloatingResultCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingResultCardView.swift; sourceTree = "<group>"; };
+		A20000000000000000000020 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5E209A993042C3C5006A4455 /* New Folder */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "New Folder"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000010 /* Shared in Frameworks */,
+				A10000000000000000000011 /* AudioCapture in Frameworks */,
+				A10000000000000000000012 /* HotkeyManager in Frameworks */,
+				A10000000000000000000013 /* ModelManager in Frameworks */,
+				A10000000000000000000014 /* TextInjection in Frameworks */,
+				A10000000000000000000015 /* Engines in Frameworks */,
+				A10000000000000000000016 /* CommandMode in Frameworks */,
+				A10000000000000000000017 /* SmartFormatting in Frameworks */,
+				A10000000000000000000021 /* SpeechCleanup in Frameworks */,
+				A10000000000000000000018 /* PrivacyDashboard in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				5E209A993042C3C5006A4455 /* New Folder */,
+				A20000000000000000000012 /* Package.swift */,
+				A20000000000000000000013 /* README.md */,
+				A40000000000000000000002 /* App */,
+				A40000000000000000000003 /* Resources */,
+				A40000000000000000000004 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A40000000000000000000002 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000001 /* LocalFlowApp.swift */,
+				A20000000000000000000002 /* AppDelegate.swift */,
+				A20000000000000000000003 /* MenuBarController.swift */,
+				A20000000000000000000004 /* DictationCoordinator.swift */,
+				A20000000000000000000005 /* OverlayWindowController.swift */,
+				A20000000000000000000006 /* WaveformOverlayView.swift */,
+				A20000000000000000000007 /* LaunchLogoView.swift */,
+				A20000000000000000000008 /* OnboardingView.swift */,
+				A20000000000000000000009 /* SettingsViewModel.swift */,
+				A2000000000000000000000A /* SettingsRootView.swift */,
+				A2000000000000000000000B /* CommandConfirmationView.swift */,
+				A20000000000000000000014 /* LaunchAtLoginController.swift */,
+				A20000000000000000000015 /* AppServices.swift */,
+				A20000000000000000000016 /* LocalFlowDesign.swift */,
+				A2000000000000000000001B /* DictationPane.swift */,
+				A2000000000000000000001C /* InsightsPane.swift */,
+				A2000000000000000000001D /* DictionaryPane.swift */,
+				A2000000000000000000001E /* FloatingResultCardController.swift */,
+				A2000000000000000000001F /* FloatingResultCardView.swift */,
+				A2000000000000000000000E /* Info.plist */,
+				A2000000000000000000000F /* LocalFlow.entitlements */,
+				A20000000000000000000010 /* ExportOptions.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000003 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A2000000000000000000000C /* Credits.md */,
+				A2000000000000000000000D /* AppIconREADME.md */,
+				A20000000000000000000017 /* Assets.xcassets */,
+				A20000000000000000000020 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000004 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000011 /* LocalFlow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50000000000000000000001 /* LocalFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A60000000000000000000003 /* Build configuration list for PBXNativeTarget "LocalFlow" */;
+			buildPhases = (
+				A30000000000000000000002 /* Sources */,
+				A30000000000000000000001 /* Frameworks */,
+				A30000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LocalFlow;
+			packageProductDependencies = (
+				A70000000000000000000001 /* Shared */,
+				A70000000000000000000002 /* AudioCapture */,
+				A70000000000000000000003 /* HotkeyManager */,
+				A70000000000000000000004 /* ModelManager */,
+				A70000000000000000000005 /* TextInjection */,
+				A70000000000000000000006 /* Engines */,
+				A70000000000000000000007 /* CommandMode */,
+				A70000000000000000000008 /* SmartFormatting */,
+				A7000000000000000000000A /* SpeechCleanup */,
+				A70000000000000000000009 /* PrivacyDashboard */,
+			);
+			productName = LocalFlow;
+			productReference = A20000000000000000000011 /* LocalFlow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A50000000000000000000002 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2650;
+				LastUpgradeCheck = 2650;
+				TargetAttributes = {
+					A50000000000000000000001 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+				};
+			};
+			buildConfigurationList = A60000000000000000000001 /* Build configuration list for PBXProject "LocalFlow" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A40000000000000000000001;
+			packageReferences = (
+				A80000000000000000000001 /* XCLocalSwiftPackageReference "." */,
+			);
+			productRefGroup = A40000000000000000000004 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A50000000000000000000001 /* LocalFlow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A30000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000000000000000000000C /* Credits.md in Resources */,
+				A1000000000000000000000D /* AppIconREADME.md in Resources */,
+				A1000000000000000000001A /* Assets.xcassets in Resources */,
+				A10000000000000000000020 /* Fonts in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A30000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* LocalFlowApp.swift in Sources */,
+				A10000000000000000000002 /* AppDelegate.swift in Sources */,
+				A10000000000000000000003 /* MenuBarController.swift in Sources */,
+				A10000000000000000000004 /* DictationCoordinator.swift in Sources */,
+				A10000000000000000000005 /* OverlayWindowController.swift in Sources */,
+				A10000000000000000000006 /* WaveformOverlayView.swift in Sources */,
+				A10000000000000000000007 /* LaunchLogoView.swift in Sources */,
+				A10000000000000000000008 /* OnboardingView.swift in Sources */,
+				A10000000000000000000009 /* SettingsViewModel.swift in Sources */,
+				A1000000000000000000000A /* SettingsRootView.swift in Sources */,
+				A1000000000000000000000B /* CommandConfirmationView.swift in Sources */,
+				A1000000000000000000000E /* LaunchAtLoginController.swift in Sources */,
+				A1000000000000000000000F /* AppServices.swift in Sources */,
+				A10000000000000000000019 /* LocalFlowDesign.swift in Sources */,
+				A1000000000000000000001B /* DictationPane.swift in Sources */,
+				A1000000000000000000001C /* InsightsPane.swift in Sources */,
+				A1000000000000000000001D /* DictionaryPane.swift in Sources */,
+				A1000000000000000000001E /* FloatingResultCardController.swift in Sources */,
+				A1000000000000000000001F /* FloatingResultCardView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A60000000000000000000002 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		A60000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		A60000000000000000000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/LocalFlow.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.localflow.LocalFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		A60000000000000000000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/LocalFlow.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.localflow.LocalFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A60000000000000000000001 /* Build configuration list for PBXProject "LocalFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A60000000000000000000002 /* Debug */,
+				A60000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A60000000000000000000003 /* Build configuration list for PBXNativeTarget "LocalFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A60000000000000000000005 /* Debug */,
+				A60000000000000000000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A80000000000000000000001 /* XCLocalSwiftPackageReference "." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = .;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A70000000000000000000001 /* Shared */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A80000000000000000000001 /* XCLocalSwiftPackageReference "." */;
+			productName = Shared;
+		};
+		A70000000000000000000002 /* AudioCapture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A80000000000000000000001 /* XCLocalSwiftPackageReference "." */;
+			productName = AudioCapture;
+		};
+		A70000000000000000000003 /* HotkeyManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A80000000000000000000001 /* XCLocalSwiftPackageReference "." */;
+			productName = HotkeyManager;
+		};
+		A70000000000000000000004 /* ModelManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A80000000000000000000001 /* XCLocalSwiftPackageReference "." */;
+			productName = ModelManager;
+		};
+		A70000000000000000000005 /* TextInjection */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A80000000000000000000001 /* XCLocalSwiftPackageReference "." */;
+			productName = TextInjection;
+		};
+		A70000000000000000000006 /* Engines */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A80000000000000000000001 /* XCLocalSwiftPackageReference "." */;
+			productName = Engines;
+		};
+		A70000000000000000000007 /* CommandMode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A80000000000000000000001 /* XCLocalSwiftPackageReference "." */;
+			productName = CommandMode;
+		};
+		A70000000000000000000008 /* SmartFormatting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A80000000000000000000001 /* XCLocalSwiftPackageReference "." */;
+			productName = SmartFormatting;
+		};
+		A7000000000000000000000A /* SpeechCleanup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A80000000000000000000001 /* XCLocalSwiftPackageReference "." */;
+			productName = SpeechCleanup;
+		};
+		A70000000000000000000009 /* PrivacyDashboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A80000000000000000000001 /* XCLocalSwiftPackageReference "." */;
+			productName = PrivacyDashboard;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A50000000000000000000002 /* Project object */;
+}

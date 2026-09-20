@@ -1,0 +1,19 @@
+# macOS and Finder
+.DS_Store
+
+# Xcode and SwiftPM user/build state
+.build/
+.swiftpm/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# Local release artifacts and logs
+dist/
+*.dmg
+*.xcresult
+*.log
+
+# Downloaded speech-model data is intentionally never versioned.
+Models/

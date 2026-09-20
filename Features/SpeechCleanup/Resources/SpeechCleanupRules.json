@@ -1,0 +1,31 @@
+{
+  "standaloneFillers": [
+    "um",
+    "uh",
+    "uhh",
+    "erm",
+    "ah",
+    "ahh"
+  ],
+  "contextualFillers": [
+    {
+      "phrase": "like",
+      "requirePunctuationBoundary": true
+    },
+    {
+      "phrase": "you know",
+      "requirePunctuationBoundary": true
+    },
+    {
+      "phrase": "i mean",
+      "requirePunctuationBoundary": true
+    }
+  ],
+  "selfCorrectionTriggers": [
+    "no actually",
+    "no wait",
+    "scratch that",
+    "actually",
+    "i mean"
+  ]
+}

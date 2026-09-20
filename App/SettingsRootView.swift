@@ -141,17 +141,21 @@ private struct SidebarRow: View {
             }
             .frame(height: 42)
             .padding(.horizontal, 10)
-            .background(alignment: .leading) {
+            .background {
                 if isSelected {
                     RoundedRectangle(cornerRadius: 9, style: .continuous)
                         .fill(LocalFlowDesign.signal.opacity(0.075))
-                    Capsule()
-                        .fill(LocalFlowDesign.signal)
-                        .frame(width: 3, height: 20)
-                        .padding(.leading, 5)
                 } else if isHovering {
                     RoundedRectangle(cornerRadius: 9, style: .continuous)
                         .fill(LocalFlowDesign.graphite.opacity(0.045))
+                }
+            }
+            .overlay(alignment: .leading) {
+                if isSelected {
+                    Capsule()
+                        .fill(LocalFlowDesign.signal)
+                        .frame(width: 3, height: 20)
+                        .padding(.leading, 6)
                 }
             }
         }

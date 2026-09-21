@@ -1,4 +1,5 @@
 import SwiftUI
+import AppKit
 import Shared
 import PrivacyDashboard
 import ModelManager
@@ -701,6 +702,7 @@ private struct SettingsSubToggleRow: View {
 public struct FormattingSettingsView: View {
     /// The shared settings store.
     @ObservedObject public var settings: LocalFlowSettings
+    @State private var availabilityRevision = 0
 
     /// Creates a formatting settings view.
     public init(settings: LocalFlowSettings) {
@@ -769,20 +771,8 @@ public struct FormattingSettingsView: View {
                             subtitle: "Organize a spoken request for Codex, Claude Code or another AI app. Review and copy the result. Turn off for ordinary dictation.",
                             isOn: Binding(get: { settings.promptModeEnabled }, set: { settings.promptModeEnabled = $0 })
                         )
-                        Divider()
-                        SettingsToggleRow(
-                            title: "Use Apple Intelligence for deep Option + 1 polish",
-                            subtitle: "When available, rewrite selected text for clarity directly in place. Otherwise LocalFlow uses instant safe cleanup.",
-                            isOn: Binding(get: { settings.localRewriteEnabled }, set: { settings.localRewriteEnabled = $0 })
-                        )
                     }
                     .background(LocalFlowDesign.cardBackground(cornerRadius: 16))
-                    Text(LocalWritingAssistant.availabilityDescription)
-                        .font(LocalFlowDesign.generalSans(size: 12))
-                        .foregroundStyle(LocalFlowDesign.graphite)
-                    Text("No cloud fallback. Deep polish runs only when Apple’s on-device model is ready. LocalFlow always keeps code, paths, names and custom vocabulary intact.")
-                        .font(LocalFlowDesign.generalSans(size: 12))
-                        .foregroundStyle(LocalFlowDesign.graphite)
                 }
 
                 VStack(alignment: .leading, spacing: 12) {
@@ -841,7 +831,7 @@ public struct FormattingSettingsView: View {
                     VStack(spacing: 0) {
                         SettingsToggleRow(
                             title: "Enable Option + 1 Polish Shortcut",
-                            subtitle: "Highlight text in any app (or your latest dictation) and press ⌥1 to polish in-place.",
+                            subtitle: "Select text in any app and press ⌥1 to rewrite it in place.",
                             isOn: Binding(
                                 get: { settings.smartPolishShortcutEnabled },
                                 set: { settings.smartPolishShortcutEnabled = $0 }
@@ -850,40 +840,49 @@ public struct FormattingSettingsView: View {
 
                         Divider().background(LocalFlowDesign.hairline)
 
-                        HStack(alignment: .center, spacing: 14) {
-                            Image(systemName: "sparkles")
-                                .font(.system(size: 14, weight: .semibold))
-                                .foregroundStyle(LocalFlowDesign.signal)
-
+                        HStack {
                             VStack(alignment: .leading, spacing: 3) {
-                                Text("Apple Intelligence Writing Tools")
+                                Text("Default tone")
                                     .font(LocalFlowDesign.generalSans(size: 13, weight: .medium))
-                                    .foregroundStyle(LocalFlowDesign.ink)
-                                Text("Available in Floating Cards on supported Macs with Apple Intelligence enabled.")
+                                Text("Used whenever you press ⌥1.")
                                     .font(LocalFlowDesign.generalSans(size: 12))
                                     .foregroundStyle(LocalFlowDesign.graphite)
                             }
                             Spacer()
-
-                            Text("System tool")
-                                .font(LocalFlowDesign.generalSans(size: 11, weight: .medium))
-                                .foregroundStyle(Color(red: 0.18, green: 0.70, blue: 0.38))
-                                .padding(.horizontal, 8)
-                                .padding(.vertical, 3)
-                                .background(
-                                    Capsule(style: .continuous)
-                                        .fill(Color(red: 0.18, green: 0.70, blue: 0.38).opacity(0.12))
-                                )
+                            Picker("Default tone", selection: Binding(get: { PolishTone(rawValue: settings.smartPolishTone) ?? .natural }, set: { settings.smartPolishTone = $0.rawValue })) {
+                                ForEach(PolishTone.allCases) { tone in Text(tone.displayName).tag(tone) }
+                            }
+                            .labelsHidden()
+                            .frame(width: 140)
                         }
                         .padding(.horizontal, 16)
                         .padding(.vertical, 14)
                     }
                     .background(LocalFlowDesign.cardBackground(cornerRadius: 16))
 
-                    Text("Option + 1 always performs instant local cleanup. Deep rewriting is optional and uses Apple Intelligence only when your Mac supports it.")
-                        .font(LocalFlowDesign.generalSans(size: 12))
-                        .foregroundStyle(LocalFlowDesign.graphite)
-                        .fixedSize(horizontal: false, vertical: true)
+                    HStack(alignment: .top) {
+                        VStack(alignment: .leading, spacing: 3) {
+                            Text("Apple on-device model status")
+                                .font(LocalFlowDesign.generalSans(size: 13, weight: .medium))
+                            Text(LocalWritingAssistant.availabilityDescription)
+                                .id(availabilityRevision)
+                                .font(LocalFlowDesign.generalSans(size: 12))
+                                .foregroundStyle(LocalFlowDesign.graphite)
+                            if LocalWritingAssistant.isAvailable {
+                                Text("Runs privately on this Mac. No API key or usage fee.")
+                                    .font(LocalFlowDesign.generalSans(size: 12))
+                                    .foregroundStyle(LocalFlowDesign.graphite)
+                            }
+                        }
+                        Spacer()
+                        Button("Refresh") { availabilityRevision += 1 }
+                            .buttonStyle(.plain)
+                            .foregroundStyle(LocalFlowDesign.signal)
+                    }
+                    .onAppear { availabilityRevision += 1 }
+                    .onReceive(NSWorkspace.shared.notificationCenter.publisher(for: NSWorkspace.didActivateApplicationNotification)) { _ in
+                        availabilityRevision += 1
+                    }
                 }
 
                 // Speech Cleanup section

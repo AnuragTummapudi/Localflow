@@ -22,6 +22,12 @@ public final class LocalFlowSettings: ObservableObject, @unchecked Sendable {
         set { objectWillChange.send(); defaults.set(newValue, forKey: Keys.localRewriteEnabled) }
     }
 
+    /// Saved tone used by the explicit Option + 1 Smart Polish action.
+    public var smartPolishTone: String {
+        get { defaults.string(forKey: Keys.smartPolishTone) ?? "natural" }
+        set { objectWillChange.send(); defaults.set(newValue, forKey: Keys.smartPolishTone) }
+    }
+
     /// Creates a settings store backed by the supplied defaults suite.
     public init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
@@ -137,13 +143,7 @@ public final class LocalFlowSettings: ObservableObject, @unchecked Sendable {
     /// Whether the Option+1 Smart Polish shortcut is enabled.
     public var smartPolishShortcutEnabled: Bool {
         get { defaults.object(forKey: Keys.smartPolishShortcutEnabled) as? Bool ?? true }
-        set { defaults.set(newValue, forKey: Keys.smartPolishShortcutEnabled) }
-    }
-
-    /// Whether native Apple Intelligence Writing Tools integration is enabled.
-    public var appleIntelligenceIntegrationEnabled: Bool {
-        get { defaults.object(forKey: Keys.appleIntelligenceIntegrationEnabled) as? Bool ?? true }
-        set { defaults.set(newValue, forKey: Keys.appleIntelligenceIntegrationEnabled) }
+        set { objectWillChange.send(); defaults.set(newValue, forKey: Keys.smartPolishShortcutEnabled) }
     }
 
     private func registerDefaults() {
@@ -165,8 +165,8 @@ public final class LocalFlowSettings: ObservableObject, @unchecked Sendable {
             Keys.smartFormattingAutocorrect: true,
             Keys.smartFormattingSmartPunctuation: true,
             Keys.smartPolishShortcutEnabled: true,
+            Keys.smartPolishTone: "natural",
             Keys.localRewriteEnabled: true,
-            Keys.appleIntelligenceIntegrationEnabled: true
         ])
     }
 
@@ -215,7 +215,7 @@ public final class LocalFlowSettings: ObservableObject, @unchecked Sendable {
         static let smartFormattingAutocorrect = "smartFormattingAutocorrect"
         static let smartFormattingSmartPunctuation = "smartFormattingSmartPunctuation"
         static let smartPolishShortcutEnabled = "smartPolishShortcutEnabled"
+        static let smartPolishTone = "smartPolishTone"
         static let localRewriteEnabled = "localRewriteEnabled"
-        static let appleIntelligenceIntegrationEnabled = "appleIntelligenceIntegrationEnabled"
     }
 }

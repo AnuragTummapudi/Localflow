@@ -12,6 +12,52 @@ public enum TextInjectionOutcome: Equatable, Sendable {
     case noFocusedTarget
 }
 
+/// Immutable selection identity captured at the moment Smart Polish begins.
+public struct SelectedTextSnapshot: Sendable, Equatable {
+    public enum Method: String, Sendable { case accessibility, clipboard }
+    public let requestID: UUID
+    public let processIdentifier: Int32
+    public let bundleIdentifier: String?
+    public let text: String
+    public let range: NSRange?
+    public let method: Method
+
+    public init(requestID: UUID = UUID(), processIdentifier: Int32, bundleIdentifier: String?, text: String, range: NSRange?, method: Method) {
+        self.requestID = requestID
+        self.processIdentifier = processIdentifier
+        self.bundleIdentifier = bundleIdentifier
+        self.text = text
+        self.range = range
+        self.method = method
+    }
+}
+
+public enum SelectedTextCaptureResult: Sendable, Equatable {
+    case captured(SelectedTextSnapshot)
+    case noSelection
+    case permissionDenied
+    case unsupported
+    case secureInput
+    case failed(String)
+}
+
+public enum SelectionReplacementResult: Sendable, Equatable {
+    case verified
+    case sentUnverified
+    case selectionChanged
+    case targetChanged
+    case unsupported
+    case failed
+}
+
+public protocol SelectedTextCapturing: Sendable {
+    func captureCurrentSelection() async -> SelectedTextCaptureResult
+}
+
+public protocol SelectedTextReplacing: Sendable {
+    func replaceCapturedSelection(_ snapshot: SelectedTextSnapshot, with text: String) async -> SelectionReplacementResult
+}
+
 /// Inserts text into the focused field of a target application.
 ///
 /// Strategy (proven reliable for Notes / Electron / Chromium on macOS 26):
@@ -20,7 +66,7 @@ public enum TextInjectionOutcome: Equatable, Sendable {
 ///    (many apps return AX success without inserting).
 /// 3. Fall back to clipboard + ⌘V posted at the annotated session tap
 ///    (`.cghidEventTap` is silently dropped on newer macOS for some apps).
-public final class TextInjection {
+public final class TextInjection: @unchecked Sendable {
     /// Creates a text injection service.
     public init() {}
 
@@ -202,6 +248,62 @@ public final class TextInjection {
             return text
         }
         return nil
+    }
+
+    /// Captures only the live selection owned by the current external frontmost app.
+    /// It never consults dictation history or a previous target application.
+    public func captureCurrentSelection() async -> SelectedTextCaptureResult {
+        guard let app = NSWorkspace.shared.frontmostApplication,
+              app.bundleIdentifier != Bundle.main.bundleIdentifier,
+              !app.isTerminated else { return .unsupported }
+        guard isAccessibilityTrusted(prompt: false) else { return .permissionDenied }
+        guard let element = focusedElement(in: app.processIdentifier) else { return .unsupported }
+
+        if let selected = selectedText(from: element), !selected.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            return .captured(SelectedTextSnapshot(
+                processIdentifier: app.processIdentifier,
+                bundleIdentifier: app.bundleIdentifier,
+                text: selected,
+                range: selectedRange(from: element),
+                method: .accessibility
+            ))
+        }
+
+        // Some Chromium/Electron editors expose no AX selected text. A bounded, restored
+        // clipboard transaction is the only safe fallback; if it cannot prove a new copy,
+        // treat it as no selection rather than using stale clipboard data.
+        return await captureSelectionViaClipboard(from: app)
+    }
+
+    /// Replaces a previously captured live selection only when the same app and selection
+    /// are still focused. It intentionally never inserts at an arbitrary cursor.
+    public func replaceCapturedSelection(_ snapshot: SelectedTextSnapshot, with polished: String) async -> SelectionReplacementResult {
+        let replacement = polished.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !replacement.isEmpty else { return .failed }
+        guard let front = NSWorkspace.shared.frontmostApplication,
+              front.processIdentifier == snapshot.processIdentifier,
+              !front.isTerminated else { return .targetChanged }
+        guard isAccessibilityTrusted(prompt: false),
+              let element = focusedElement(in: front.processIdentifier),
+              selectedText(from: element) == snapshot.text else { return .selectionChanged }
+
+        // Direct AX replacement is preferred and can be verified against the text value.
+        let before = axString(element, attribute: kAXValueAttribute as String)
+        if AXUIElementSetAttributeValue(element, kAXSelectedTextAttribute as CFString, replacement as CFString) == .success {
+            let after = axString(element, attribute: kAXValueAttribute as String)
+            if let before, let after, after != before, after.contains(replacement) {
+                return .verified
+            }
+        }
+
+        do {
+            try await paste(replacement)
+            // Opaque editors cannot reliably expose their post-paste value. The snapshot
+            // was rechecked immediately before sending the paste, so report this honestly.
+            return .sentUnverified
+        } catch {
+            return .failed
+        }
     }
 
     /// Determines if an accessibility element is an editable text field.
@@ -441,6 +543,73 @@ public final class TextInjection {
         return (focused as! AXUIElement)
     }
 
+    private func focusedElement(in pid: pid_t) -> AXUIElement? {
+        let axApp = AXUIElementCreateApplication(pid)
+        var focused: CFTypeRef?
+        guard AXUIElementCopyAttributeValue(axApp, kAXFocusedUIElementAttribute as CFString, &focused) == .success,
+              let focused else { return nil }
+        return (focused as! AXUIElement)
+    }
+
+    private func selectedText(from element: AXUIElement) -> String? {
+        var selectedValue: CFTypeRef?
+        guard AXUIElementCopyAttributeValue(element, kAXSelectedTextAttribute as CFString, &selectedValue) == .success,
+              let text = selectedValue as? String else { return nil }
+        return text
+    }
+
+    private func selectedRange(from element: AXUIElement) -> NSRange? {
+        guard let range = selectedUTF16Range(of: element) else { return nil }
+        return NSRange(location: range.location, length: range.length)
+    }
+
+    private struct PasteboardSnapshot {
+        let items: [NSPasteboardItem]
+
+        init(_ pasteboard: NSPasteboard) {
+            items = (pasteboard.pasteboardItems ?? []).map { source in
+                let item = NSPasteboardItem()
+                for type in source.types {
+                    if let data = source.data(forType: type) { item.setData(data, forType: type) }
+                }
+                return item
+            }
+        }
+
+        func restore(to pasteboard: NSPasteboard) {
+            pasteboard.clearContents()
+            if !items.isEmpty { pasteboard.writeObjects(items) }
+        }
+    }
+
+    private func captureSelectionViaClipboard(from app: NSRunningApplication) async -> SelectedTextCaptureResult {
+        let pasteboard = NSPasteboard.general
+        let snapshot = PasteboardSnapshot(pasteboard)
+        let initialChangeCount = pasteboard.changeCount
+        do { try postCommandC() } catch { return .failed("Could not copy the selected text.") }
+
+        for _ in 0..<12 {
+            try? await Task.sleep(nanoseconds: 25_000_000)
+            let copiedChangeCount = pasteboard.changeCount
+            guard copiedChangeCount != initialChangeCount else { continue }
+            guard let text = pasteboard.string(forType: .string), !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+                if pasteboard.changeCount == copiedChangeCount { snapshot.restore(to: pasteboard) }
+                return .noSelection
+            }
+            // Restore only the clipboard state created by our own copy transaction. If its
+            // change count has moved again, another user/app action owns the clipboard now.
+            if pasteboard.changeCount == copiedChangeCount { snapshot.restore(to: pasteboard) }
+            return .captured(SelectedTextSnapshot(
+                processIdentifier: app.processIdentifier,
+                bundleIdentifier: app.bundleIdentifier,
+                text: text,
+                range: nil,
+                method: .clipboard
+            ))
+        }
+        return .noSelection
+    }
+
     private func insertBySplicingValue(into element: AXUIElement, text: String) -> Bool {
         var valueRef: CFTypeRef?
         guard AXUIElementCopyAttributeValue(
@@ -559,6 +728,17 @@ public final class TextInjection {
         keyUp.post(tap: .cgAnnotatedSessionEventTap)
     }
 
+    private func postCommandC() throws {
+        guard let source = CGEventSource(stateID: .hidSystemState),
+              let down = CGEvent(keyboardEventSource: source, virtualKey: CGKeyCode(kVK_ANSI_C), keyDown: true),
+              let up = CGEvent(keyboardEventSource: source, virtualKey: CGKeyCode(kVK_ANSI_C), keyDown: false)
+        else { throw LocalFlowError.textInjectionFailed }
+        down.flags = .maskCommand
+        up.flags = .maskCommand
+        down.post(tap: .cgAnnotatedSessionEventTap)
+        up.post(tap: .cgAnnotatedSessionEventTap)
+    }
+
     private func postSelectAll() throws {
         guard let source = CGEventSource(stateID: .hidSystemState) else {
             throw LocalFlowError.textInjectionFailed
@@ -578,3 +758,5 @@ public final class TextInjection {
         keyUp.post(tap: .cgAnnotatedSessionEventTap)
     }
 }
+
+extension TextInjection: SelectedTextCapturing, SelectedTextReplacing {}

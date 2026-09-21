@@ -1,6 +1,7 @@
 import AppKit
 import Combine
 import Foundation
+import OSLog
 import Shared
 import AudioCapture
 import HotkeyManager
@@ -14,6 +15,7 @@ import SmartFormatting
 /// Coordinates hotkey capture, speech recognition, commands, formatting, and text insertion.
 @MainActor
 public final class DictationCoordinator: ObservableObject {
+    private static let polishLog = Logger(subsystem: "dev.localflow.LocalFlow", category: "SmartPolish")
     /// The current activity state.
     @Published public private(set) var state: LocalFlowActivityState = .idle {
         didSet {
@@ -319,53 +321,66 @@ public final class DictationCoordinator: ObservableObject {
         }
     }
 
-    /// Wispr Flow-style Smart Polish (Option + 1):
-    /// Grabs currently highlighted text (or latest dictation from history),
-    /// applies a real Apple Intelligence rewrite,
-    /// and replaces/inserts the polished text in-place while showing a transient pill HUD.
+    /// Option + 1 Smart Polish. This action is deliberately selection-only: it never
+    /// reads dictation history and never inserts into a cursor without the same live selection.
     public func polishActiveSelectionOrRecentDictation() async {
-        guard !isRewritingSelection, state != .processing else { return }
-        isRewritingSelection = true
-        defer { isRewritingSelection = false }
-        overlayController.showPolishing()
-        let target = resolvedTargetApplication()
-        let bundleID = target?.bundleIdentifier
-            ?? NSWorkspace.shared.frontmostApplication?.bundleIdentifier
-
-        // 1. Try to read highlighted text from target application
-        let highlighted = textInjection.selectedText(preferredPID: target?.processIdentifier)
-
-        // 2. Fall back to the most recent dictation item in history if nothing is highlighted
-        let textToPolish: String
-        let hadSelection: Bool
-        if let highlighted, !highlighted.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            textToPolish = highlighted
-            hadSelection = true
-        } else if let recent = historyStore.items.first?.text, !recent.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            textToPolish = recent
-            hadSelection = false
-        } else {
-            overlayController.showError("No text to polish")
+        guard !isRewritingSelection, state != .processing else {
+            overlayController.showError("Polish already in progress.")
             return
         }
-        guard settings.localRewriteEnabled else {
-            overlayController.showError("Apple Intelligence polish is turned off")
+        isRewritingSelection = true
+        defer { isRewritingSelection = false }
+        let requestID = UUID()
+        overlayController.showPolishing(message: "Reading selection…")
+        Self.polishLog.debug("request \(requestID.uuidString, privacy: .public) received")
+        let capture = await textInjection.captureCurrentSelection()
+        let selection: SelectedTextSnapshot
+        switch capture {
+        case .captured(let snapshot):
+            selection = snapshot
+            Self.polishLog.debug("request \(requestID.uuidString, privacy: .public) captured via \(snapshot.method.rawValue, privacy: .public), length \(snapshot.text.count, privacy: .public), target \(snapshot.bundleIdentifier ?? "unknown", privacy: .public)")
+        case .permissionDenied:
+            overlayController.showError("Allow Accessibility to read selected text.")
+            return
+        case .noSelection:
+            overlayController.showError("Select some text, then press ⌥1 to polish it.")
+            return
+        case .secureInput, .unsupported, .failed:
+            overlayController.showError("Select editable text in an app, then press ⌥1 to polish it.")
             return
         }
         do {
+            overlayController.showPolishing(message: "Rewriting privately on this Mac…")
+            let started = ContinuousClock.now
             let polished = try await LocalWritingAssistant.polish(
-                textToPolish,
+                selection.text,
+                tone: PolishTone(rawValue: settings.smartPolishTone) ?? .natural,
                 protectedWords: vocabularyStore.entries.flatMap { [$0.phrase, $0.replacement] }
             )
+            Self.polishLog.debug("request \(requestID.uuidString, privacy: .public) generation finished in \(String(describing: ContinuousClock.now - started), privacy: .public)")
             guard !Task.isCancelled else { return }
-            if polished == textToPolish {
-                overlayController.showNoChanges()
+            if polished == selection.text {
+                overlayController.showPolished(message: "This text is already polished.")
                 return
             }
-            await applyPolish(polished, replacing: textToPolish, hadSelection: hadSelection, target: target, bundleID: bundleID)
+            overlayController.showPolishing(message: "Replacing text…")
+            await applyPolish(polished, selection: selection, requestID: requestID)
         } catch {
             AgentDebugLog.write(hypothesisId: "polish", location: "DictationCoordinator.polish", message: "On-device polish failed", data: ["error": error.localizedDescription])
-            overlayController.showError(error.localizedDescription)
+            Self.polishLog.error("request \(requestID.uuidString, privacy: .public) failed: \(error.localizedDescription, privacy: .public)")
+            let message: String
+            if let polishError = error as? LocalWritingAssistant.PolishError {
+                switch polishError {
+                case .alreadyRunning: message = "Polish already in progress."
+                case .unavailable(let reason): message = reason
+                case .invalidInput: message = "Select some text, then press ⌥1 to polish it."
+                case .generationFailed: message = "Apple Intelligence could not finish polishing."
+                case .unsafeOutput: message = "The rewrite was not safe to apply; your selection was kept."
+                }
+            } else {
+                message = "Apple Intelligence could not finish polishing."
+            }
+            overlayController.showError(message)
         }
     }
 
@@ -373,29 +388,25 @@ public final class DictationCoordinator: ObservableObject {
     /// the safe local pass finds no changes to make.
     private func applyPolish(
         _ polished: String,
-        replacing original: String,
-        hadSelection: Bool,
-        target: NSRunningApplication?,
-        bundleID: String?
+        selection: SelectedTextSnapshot,
+        requestID: UUID
     ) async {
-        // Inject polished text in-place (replaces selection or recent dictation without duplicating).
-        do {
-            let outcome = try await textInjection.replace(
-                recent: original,
-                with: polished,
-                hadExplicitSelection: hadSelection,
-                in: target
-            )
-            switch outcome {
-            case .inserted:
-                historyStore.append(text: polished, bundleIdentifier: bundleID)
-                overlayController.showPolished(message: "Polished")
-            case .noFocusedTarget:
-                overlayController.showError("No active text field to replace")
-            }
-        } catch {
-            AgentDebugLog.write(hypothesisId: "polish", location: "DictationCoordinator.applyPolish", message: "Replacement failed", data: ["error": error.localizedDescription])
-            overlayController.showError("Could not replace the selected text")
+        let outcome = await textInjection.replaceCapturedSelection(selection, with: polished)
+        switch outcome {
+        case .verified:
+            Self.polishLog.debug("request \(requestID.uuidString, privacy: .public) replacement verified")
+            historyStore.append(text: polished, bundleIdentifier: selection.bundleIdentifier)
+            overlayController.showPolished(message: "Text polished.")
+        case .sentUnverified:
+            Self.polishLog.debug("request \(requestID.uuidString, privacy: .public) replacement sent without AX verification")
+            historyStore.append(text: polished, bundleIdentifier: selection.bundleIdentifier)
+            overlayController.showPolished(message: "Polished text sent to the selected app.")
+        case .selectionChanged, .targetChanged:
+            Self.polishLog.notice("request \(requestID.uuidString, privacy: .public) replacement suppressed because selection changed")
+            resultCardController.show(text: polished, status: "The original selection changed, so LocalFlow did not replace it.", persistent: true)
+        case .unsupported, .failed:
+            Self.polishLog.error("request \(requestID.uuidString, privacy: .public) replacement failed")
+            overlayController.showError("Could not replace the selected text.")
         }
     }
 

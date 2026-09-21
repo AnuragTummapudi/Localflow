@@ -90,7 +90,7 @@ public final class OverlayWindowController {
 
     public func showNoChanges() { showTerminal(message: "Already clean", kind: .unchanged, durationSeconds: 1.8) }
     public func showError(_ message: String) { showTerminal(message: message, kind: .error, durationSeconds: 3.0) }
-    public func showPolishing() { showWorking(state: .polishing, message: "Polishing…") }
+    public func showPolishing(message: String = "Rewriting privately on this Mac…") { showWorking(state: .polishing, message: message) }
 
     private func showTerminal(message: String, kind: WaveformOverlayModel.TerminalKind, durationSeconds: Double) {
         levelsCancellable?.cancel()

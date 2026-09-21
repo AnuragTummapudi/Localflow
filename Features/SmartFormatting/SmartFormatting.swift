@@ -166,7 +166,11 @@ public final class SmartFormatting {
         let opts = options ?? SmartFormattingOptions(settings: settings)
         // Preserve literal code, Markdown, paths, flags and case-sensitive identifiers.
         // A developer app may contain either a source editor or a prompt composer.
-        guard profile != .code && profile != .prompt else { return text }
+        guard profile != .code && profile != .prompt else {
+            // Developer destinations must retain indentation and line structure. Only remove
+            // accidental outer whitespace; never flatten internal whitespace or newlines.
+            return text.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
         guard opts.isEnabled else {
             return cleanupWhitespace(text)
         }
@@ -208,7 +212,7 @@ public final class SmartFormatting {
         // Preserve literals in those destinations, but still allow the caller's safe
         // speech-cleanup pass to remove fillers and accidental repetition first.
         guard targetProfile != .code && targetProfile != .prompt else {
-            return cleanupWhitespace(text)
+            return text.trimmingCharacters(in: .whitespacesAndNewlines)
         }
         let _ = options ?? SmartFormattingOptions(settings: settings)
 

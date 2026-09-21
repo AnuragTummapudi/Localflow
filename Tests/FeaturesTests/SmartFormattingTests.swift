@@ -34,7 +34,7 @@ final class SmartFormattingTests: XCTestCase {
         settings.formattingProfileOverrides = ["com.openai.codex": .notes]
         XCTAssertEqual(formatter.profile(for: "com.openai.codex"), .notes)
         XCTAssertFalse(settings.promptModeEnabled)
-        XCTAssertFalse(settings.localRewriteEnabled)
+        XCTAssertTrue(settings.localRewriteEnabled)
     }
 
     @MainActor
@@ -150,5 +150,21 @@ final class SmartFormattingTests: XCTestCase {
         XCTAssertTrue(polished.contains("—"), "Expected em-dash, got: \(polished)")
         XCTAssertTrue(polished.hasPrefix("I received"), "Expected 'I received', got: \(polished)")
         XCTAssertTrue(polished.hasSuffix("."), "Expected sentence termination, got: \(polished)")
+    }
+
+    func testEverySmartPolishToneHasAStableInstruction() {
+        XCTAssertEqual(PolishTone.natural.displayName, "Natural")
+        for tone in PolishTone.allCases {
+            XCTAssertFalse(tone.instruction.isEmpty)
+            XCTAssertTrue(tone.instruction.contains("Rewrite"))
+        }
+    }
+
+    @MainActor
+    func testModelOutputValidationRejectsPromptLeakageAndRunawayOutput() {
+        let source = "Please send the report to Missy at https://example.com by 5pm."
+        XCTAssertFalse(LocalWritingAssistant.isAcceptable("As an AI, here is the rewritten text.", for: source, protectedWords: ["Missy"]))
+        XCTAssertFalse(LocalWritingAssistant.isAcceptable(String(repeating: "x", count: 2_000), for: source))
+        XCTAssertTrue(LocalWritingAssistant.isAcceptable(source, for: source, protectedWords: ["Missy"]))
     }
 }

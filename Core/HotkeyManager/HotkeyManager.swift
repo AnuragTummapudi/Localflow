@@ -25,6 +25,9 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
     private let settings: LocalFlowSettings
     private var globalMonitor: Any?
     private var localMonitor: Any?
+    private var functionEventTap: CFMachPort?
+    private var functionEventTapSource: CFRunLoopSource?
+    private var applicationActivationObserver: NSObjectProtocol?
     private var polishHotKeyRef: EventHotKeyRef?
     private var promptHotKeyRef: EventHotKeyRef?
     private var carbonHandlerRef: EventHandlerRef?
@@ -33,6 +36,8 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
     private var lastPromptDispatch = Date.distantPast
     public private(set) var isPolishShortcutRegistered = false
     public private(set) var isPromptShortcutRegistered = false
+    public private(set) var isFunctionShortcutSuppressionActive = false
+    private var isStarted = false
 
     private var lastKeyUpTime: Date?
     private let doubleTapWindow: TimeInterval = 0.38
@@ -41,7 +46,7 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
     public init(settings: LocalFlowSettings = .shared) {
         self.settings = settings
         settingsCancellable = settings.objectWillChange.sink { [weak self] _ in
-            DispatchQueue.main.async { self?.refreshPolishShortcutRegistration() }
+            DispatchQueue.main.async { self?.refreshShortcutRegistrations() }
         }
     }
 
@@ -52,11 +57,18 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
     /// Starts observing the configured global hotkey, Escape key, and Carbon Option+1 polish shortcut.
     public func start() {
         stop()
+        isStarted = true
 
         startCarbonTransformHotkeys()
+        startFunctionEventTapIfNeeded()
 
         // Carbon owns Option + 1. Monitors remain solely for dictation flags and Escape.
         globalMonitor = NSEvent.addGlobalMonitorForEvents(matching: [.flagsChanged, .keyDown]) { [weak self] event in
+            if event.type == .flagsChanged,
+               event.keyCode == UInt16(kVK_Function),
+               self?.isFunctionShortcutSuppressionActive == true {
+                return
+            }
             self?.handle(event: event)
         }
         localMonitor = NSEvent.addLocalMonitorForEvents(matching: [.flagsChanged, .keyDown]) { [weak self] event in
@@ -68,11 +80,23 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
             self?.handle(event: event)
             return consumeFunctionTrigger ? nil : event
         }
+        applicationActivationObserver = NotificationCenter.default.addObserver(
+            forName: NSApplication.didBecomeActiveNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            guard let self,
+                  self.settings.useFnAsAlternateHotkey,
+                  !self.isFunctionShortcutSuppressionActive else { return }
+            self.startFunctionEventTapIfNeeded()
+        }
     }
 
     /// Stops observing global hotkey events.
     public func stop() {
+        isStarted = false
         stopCarbonTransformHotkeys()
+        stopFunctionEventTap()
 
         if let globalMonitor {
             NSEvent.removeMonitor(globalMonitor)
@@ -80,8 +104,12 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
         if let localMonitor {
             NSEvent.removeMonitor(localMonitor)
         }
+        if let applicationActivationObserver {
+            NotificationCenter.default.removeObserver(applicationActivationObserver)
+        }
         globalMonitor = nil
         localMonitor = nil
+        applicationActivationObserver = nil
         isHotkeyPressed = false
         lastKeyUpTime = nil
     }
@@ -170,9 +198,15 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
         }
     }
 
-    /// Re-registers only the Carbon shortcut when its setting changes.
+    /// Refreshes Carbon and Fn interception when their settings change.
     public func refreshPolishShortcutRegistration() {
+        refreshShortcutRegistrations()
+    }
+
+    private func refreshShortcutRegistrations() {
+        guard isStarted else { return }
         startCarbonTransformHotkeys()
+        startFunctionEventTapIfNeeded()
     }
 
     /// Updates the configured hotkey.
@@ -229,6 +263,83 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
     /// LocalFlow, without taking over Fn when the user selected Right Option instead.
     private func shouldConsumeFunctionTrigger(_ event: NSEvent) -> Bool {
         guard settings.useFnAsAlternateHotkey, event.type == .flagsChanged else { return false }
-        return event.keyCode == UInt16(kVK_Function) || event.modifierFlags.contains(.function)
+        return Self.shouldSuppressSystemFunctionAction(
+            keyCode: event.keyCode,
+            functionHotkeyEnabled: settings.useFnAsAlternateHotkey
+        )
+    }
+
+    /// Pure decision used by both the event tap and tests. Only the physical Fn/Globe
+    /// key is filtered; other modifier changes continue through macOS unchanged.
+    public static func shouldSuppressSystemFunctionAction(
+        keyCode: UInt16,
+        functionHotkeyEnabled: Bool
+    ) -> Bool {
+        functionHotkeyEnabled && keyCode == UInt16(kVK_Function)
+    }
+
+    private func startFunctionEventTapIfNeeded() {
+        stopFunctionEventTap()
+        guard settings.useFnAsAlternateHotkey else { return }
+
+        let mask = CGEventMask(1) << CGEventType.flagsChanged.rawValue
+        let context = Unmanaged.passUnretained(self).toOpaque()
+        guard let tap = CGEvent.tapCreate(
+            tap: .cgSessionEventTap,
+            place: .headInsertEventTap,
+            options: .defaultTap,
+            eventsOfInterest: mask,
+            callback: { _, type, event, userInfo in
+                guard let userInfo else { return Unmanaged.passUnretained(event) }
+                let manager = Unmanaged<HotkeyManager>.fromOpaque(userInfo).takeUnretainedValue()
+
+                if type == .tapDisabledByTimeout || type == .tapDisabledByUserInput {
+                    if let tap = manager.functionEventTap {
+                        CGEvent.tapEnable(tap: tap, enable: true)
+                    }
+                    return Unmanaged.passUnretained(event)
+                }
+
+                guard type == .flagsChanged,
+                      let nsEvent = NSEvent(cgEvent: event),
+                      HotkeyManager.shouldSuppressSystemFunctionAction(
+                        keyCode: nsEvent.keyCode,
+                        functionHotkeyEnabled: manager.settings.useFnAsAlternateHotkey
+                      ) else {
+                    return Unmanaged.passUnretained(event)
+                }
+
+                manager.handle(event: nsEvent)
+                return nil
+            },
+            userInfo: context
+        ) else {
+            isFunctionShortcutSuppressionActive = false
+            return
+        }
+
+        guard let source = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, tap, 0) else {
+            CFMachPortInvalidate(tap)
+            return
+        }
+
+        functionEventTap = tap
+        functionEventTapSource = source
+        CFRunLoopAddSource(CFRunLoopGetMain(), source, .commonModes)
+        CGEvent.tapEnable(tap: tap, enable: true)
+        isFunctionShortcutSuppressionActive = true
+    }
+
+    private func stopFunctionEventTap() {
+        if let source = functionEventTapSource {
+            CFRunLoopRemoveSource(CFRunLoopGetMain(), source, .commonModes)
+        }
+        if let tap = functionEventTap {
+            CGEvent.tapEnable(tap: tap, enable: false)
+            CFMachPortInvalidate(tap)
+        }
+        functionEventTapSource = nil
+        functionEventTap = nil
+        isFunctionShortcutSuppressionActive = false
     }
 }

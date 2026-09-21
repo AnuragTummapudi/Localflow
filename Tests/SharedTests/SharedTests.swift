@@ -1,4 +1,5 @@
 import XCTest
+import Carbon.HIToolbox
 @testable import Shared
 @testable import AudioCapture
 @testable import HotkeyManager
@@ -196,5 +197,26 @@ final class SharedTests: XCTestCase {
 
         XCTAssertEqual(receivedEvents, [.pushToTalkDown, .pushToTalkUp, .doubleTap, .escape])
         cancellable.cancel()
+    }
+
+    func testFunctionHotkeySuppressesOnlyThePhysicalFunctionKey() {
+        XCTAssertTrue(
+            HotkeyManager.shouldSuppressSystemFunctionAction(
+                keyCode: UInt16(kVK_Function),
+                functionHotkeyEnabled: true
+            )
+        )
+        XCTAssertFalse(
+            HotkeyManager.shouldSuppressSystemFunctionAction(
+                keyCode: UInt16(kVK_Function),
+                functionHotkeyEnabled: false
+            )
+        )
+        XCTAssertFalse(
+            HotkeyManager.shouldSuppressSystemFunctionAction(
+                keyCode: UInt16(kVK_Option),
+                functionHotkeyEnabled: true
+            )
+        )
     }
 }

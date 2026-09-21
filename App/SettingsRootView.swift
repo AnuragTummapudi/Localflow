@@ -491,7 +491,7 @@ public struct GeneralSettingsView: View {
                         .font(LocalFlowDesign.generalSans(size: 12))
                         .foregroundStyle(LocalFlowDesign.graphite)
 
-                    Text("Fn capture is opt-in because it can conflict with system dictation on recent macOS releases.")
+                    Text("When Fn is selected, LocalFlow reserves the key while running so macOS shortcuts do not open at the same time.")
                         .font(LocalFlowDesign.generalSans(size: 12))
                         .foregroundStyle(LocalFlowDesign.graphite)
                         .fixedSize(horizontal: false, vertical: true)

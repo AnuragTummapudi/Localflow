@@ -102,7 +102,7 @@ public final class OverlayWindowController {
         model.polishMessage = message
         model.pillState = .terminal(kind)
 
-        let size = LocalFlowDesign.polishPillSize
+        let size = LocalFlowDesign.polishPillSize(for: message)
         let panel = ensurePanel(size: size)
         panel.ignoresMouseEvents = true
         panel.setContentSize(size)
@@ -131,7 +131,7 @@ public final class OverlayWindowController {
         model.pillState = state
         model.polishMessage = message
 
-        let size = LocalFlowDesign.processingPillSize
+        let size = LocalFlowDesign.processingPillSize(for: message)
         let panel = ensurePanel(size: size)
         panel.ignoresMouseEvents = true
         panel.setContentSize(size)

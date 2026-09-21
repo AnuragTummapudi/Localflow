@@ -56,19 +56,40 @@ public enum LocalFlowDesign {
     public static let overlaySize = CGSize(width: 114, height: 36)
 
     /// Floating hands-free listening-pill size (Cancel circle + 11 waveform bars + Finish circle).
-    public static let handsFreePillSize = CGSize(width: 172, height: 38)
+    public static let handsFreePillSize = CGSize(width: 164, height: 36)
 
     /// Floating hands-free window size (allows hover tooltip to float above pill without clipping).
-    public static let handsFreeWindowSize = CGSize(width: 260, height: 84)
+    public static let handsFreeWindowSize = CGSize(width: 252, height: 80)
 
     /// Cancelled "Transcript cancelled" pill size with Undo button and progress bar.
     public static let cancelledPillSize = CGSize(width: 286, height: 46)
 
-    /// Small progress HUD shown while local transcription finishes.
-    public static let processingPillSize = CGSize(width: 144, height: 38)
+    /// Intrinsic progress HUD size. Status copy stays on one line when practical and
+    /// grows to two lines only for unusually long actionable guidance.
+    public static func processingPillSize(for message: String) -> CGSize {
+        statusPillSize(for: message, minimumWidth: 132, accessoryWidth: 47)
+    }
 
-    /// Polish "Polished ✨" pill size (Sparkles + Polished + Checkmark).
-    public static let polishPillSize = CGSize(width: 140, height: 38)
+    /// Intrinsic terminal HUD size. The leading state glyph is included in the
+    /// accessory allowance so result and error copy never competes with the icon.
+    public static func polishPillSize(for message: String) -> CGSize {
+        statusPillSize(for: message, minimumWidth: 124, accessoryWidth: 47)
+    }
+
+    private static func statusPillSize(
+        for message: String,
+        minimumWidth: CGFloat,
+        accessoryWidth: CGFloat
+    ) -> CGSize {
+        let font = NSFont(name: "Matter-Medium", size: 12.5)
+            ?? NSFont.systemFont(ofSize: 12.5, weight: .medium)
+        let textWidth = ceil((message as NSString).size(withAttributes: [.font: font]).width)
+        let maximumWidth: CGFloat = 420
+        let desiredWidth = textWidth + accessoryWidth
+        let width = min(maximumWidth, max(minimumWidth, desiredWidth))
+        let needsSecondLine = desiredWidth > maximumWidth
+        return CGSize(width: width, height: needsSecondLine ? 54 : 36)
+    }
 
     /// Backwards compatibility alias for handsFreeOverlaySize.
     public static let handsFreeOverlaySize = handsFreePillSize

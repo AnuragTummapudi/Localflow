@@ -176,17 +176,17 @@ public struct WaveformOverlayView: View {
             .animation(.easeInOut(duration: 0.12), value: effectiveHover)
 
             // Main hands-free pill
-            HStack(alignment: .center, spacing: 10) {
+            HStack(alignment: .center, spacing: 9) {
                 // Circular Cancel button
                 Button(action: { model.onCancel?() }) {
                     ZStack {
                         Circle()
                             .fill(isCancelActive ? Color.white.opacity(0.28) : Color.white.opacity(0.18))
                         Image(systemName: "xmark")
-                            .font(.system(size: 11, weight: .bold))
+                            .font(.system(size: 10, weight: .bold))
                             .foregroundStyle(Color.white)
                     }
-                    .frame(width: 26, height: 26)
+                    .frame(width: 24, height: 24)
                 }
                 .buttonStyle(.plain)
                 .onHover { isHovered in
@@ -201,14 +201,14 @@ public struct WaveformOverlayView: View {
                 }
 
                 // Clean 11-bar waveform
-                HStack(alignment: .center, spacing: 2.6) {
+                HStack(alignment: .center, spacing: 2.4) {
                     ForEach(Array(model.levels.enumerated()), id: \.offset) { _, level in
                         Capsule(style: .continuous)
                             .fill(Color.white)
-                            .frame(width: 2.8, height: max(4, level * 20))
+                            .frame(width: 2.6, height: max(4, level * 18))
                     }
                 }
-                .frame(width: 60)
+                .frame(width: 56)
 
                 // Circular Finish & Paste button
                 Button(action: { model.onFinishAndPaste?() }) {
@@ -217,10 +217,10 @@ public struct WaveformOverlayView: View {
                             .fill(Color.white)
                             .opacity(isFinishActive ? 0.92 : 1.0)
                         Image(systemName: "checkmark")
-                            .font(.system(size: 12, weight: .bold))
+                            .font(.system(size: 11, weight: .bold))
                             .foregroundStyle(Color(red: 0.08, green: 0.08, blue: 0.10))
                     }
-                    .frame(width: 26, height: 26)
+                    .frame(width: 24, height: 24)
                 }
                 .buttonStyle(.plain)
                 .onHover { isHovered in
@@ -271,58 +271,58 @@ public struct WaveformOverlayView: View {
     // MARK: - "Polished ✨" State (Option + 1)
 
     private var processingView: some View {
-        HStack(spacing: 9) {
+        let size = LocalFlowDesign.processingPillSize(for: model.polishMessage)
+        return HStack(spacing: 7) {
             ProgressView()
-                .controlSize(.small)
+                .controlSize(.mini)
                 .tint(Color.white)
 
             Text(model.polishMessage)
-                .font(LocalFlowDesign.generalSans(size: 13, weight: .medium))
+                .font(LocalFlowDesign.generalSans(size: 12.5, weight: .medium))
+                .lineLimit(size.height > 40 ? 2 : 1)
+                .multilineTextAlignment(.leading)
                 .foregroundStyle(Color.white)
         }
-        .padding(.horizontal, 16)
-        .frame(width: LocalFlowDesign.processingPillSize.width, height: LocalFlowDesign.processingPillSize.height)
+        .padding(.horizontal, 13)
+        .frame(width: size.width, height: size.height)
         .background(
-            Capsule(style: .continuous)
+            RoundedRectangle(cornerRadius: size.height / 2, style: .continuous)
                 .fill(Color(red: 0.08, green: 0.08, blue: 0.09).opacity(0.96))
                 .overlay(
-                    Capsule(style: .continuous)
-                        .strokeBorder(Color.white.opacity(0.12), lineWidth: 1)
+                    RoundedRectangle(cornerRadius: size.height / 2, style: .continuous)
+                        .strokeBorder(Color.white.opacity(0.13), lineWidth: 0.8)
                 )
         )
-        .shadow(color: Color.black.opacity(0.35), radius: 14, y: 6)
-        .accessibilityLabel("Transcribing your dictation")
+        .shadow(color: Color.black.opacity(0.30), radius: 10, y: 4)
+        .accessibilityLabel(model.polishMessage)
     }
 
     private var polishedView: some View {
         let isError: Bool = { if case .terminal(.error) = model.pillState { return true }; return false }()
         let isUnchanged: Bool = { if case .terminal(.unchanged) = model.pillState { return true }; return false }()
+        let size = LocalFlowDesign.polishPillSize(for: model.polishMessage)
         return HStack(spacing: 8) {
             Image(systemName: isError ? "exclamationmark.triangle.fill" : (isUnchanged ? "checkmark.circle" : "sparkles"))
-                .font(.system(size: 13, weight: .semibold))
+                .font(.system(size: 11.5, weight: .semibold))
                 .foregroundStyle(isError ? LocalFlowDesign.destructiveRed : LocalFlowDesign.signal)
 
             Text(model.polishMessage)
-                .font(LocalFlowDesign.generalSans(size: 13.5, weight: .medium))
-                .lineLimit(1)
-                .fixedSize(horizontal: true, vertical: false)
+                .font(LocalFlowDesign.generalSans(size: 12.5, weight: .medium))
+                .lineLimit(size.height > 40 ? 2 : 1)
+                .multilineTextAlignment(.leading)
                 .foregroundStyle(Color.white)
-
-            Image(systemName: isError ? "xmark" : "checkmark")
-                .font(.system(size: 11, weight: .bold))
-                .foregroundStyle(isError ? LocalFlowDesign.destructiveRed : LocalFlowDesign.signal)
         }
-        .padding(.horizontal, 16)
-        .frame(width: LocalFlowDesign.polishPillSize.width, height: LocalFlowDesign.polishPillSize.height)
+        .padding(.horizontal, 13)
+        .frame(width: size.width, height: size.height)
         .background(
-            Capsule(style: .continuous)
+            RoundedRectangle(cornerRadius: size.height / 2, style: .continuous)
                 .fill(Color(red: 0.08, green: 0.08, blue: 0.09).opacity(0.96))
                 .overlay(
-                    Capsule(style: .continuous)
-                        .strokeBorder(Color.white.opacity(0.12), lineWidth: 1)
+                    RoundedRectangle(cornerRadius: size.height / 2, style: .continuous)
+                        .strokeBorder(Color.white.opacity(0.13), lineWidth: 0.8)
                 )
         )
-        .shadow(color: Color.black.opacity(0.35), radius: 14, y: 6)
+        .shadow(color: Color.black.opacity(0.30), radius: 10, y: 4)
         .accessibilityLabel(model.polishMessage)
     }
 

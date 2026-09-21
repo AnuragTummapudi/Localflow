@@ -235,7 +235,12 @@ public final class CommandMode {
         case .spotifyControl(let action):
             _ = SpotifyPlaybackController.perform(action)
         case .spotifySearchAndPlay(let query, let url):
-            SpotifyPlaybackController.searchAndPlayTopResult(query: query, searchURL: url)
+            // DictationCoordinator owns the product-facing asynchronous path. Keep this
+            // compatibility path for explicitly confirmed commands without inventing success UI.
+            _ = url
+            Task { @MainActor in
+                _ = await SpotifyPlaybackController.searchAndPlayTopResult(query: query) { _ in }
+            }
         case .openURL(let url), .searchWeb(_, _, let url):
             let openAction = {
                 NSWorkspace.shared.open(url)
@@ -248,6 +253,16 @@ public final class CommandMode {
                 }
             }
         }
+    }
+
+    /// Runs native Spotify Quick Search and returns only after playback has been verified or a
+    /// truthful terminal failure/unverified state is known.
+    @MainActor
+    public func playSpotify(
+        query: String,
+        progress: @escaping @MainActor (SpotifyPlaybackProgress) -> Void
+    ) async -> SpotifyPlaybackOutcome {
+        await SpotifyPlaybackController.searchAndPlayTopResult(query: query, progress: progress)
     }
 
     private static func spotifyAction(for transcript: String) -> SpotifyPlaybackAction? {

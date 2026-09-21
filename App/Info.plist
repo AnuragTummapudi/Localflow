@@ -27,7 +27,7 @@
     <key>NSMicrophoneUsageDescription</key>
     <string>LocalFlow records your voice only while you hold the dictation hotkey so it can transcribe speech locally on this Mac.</string>
     <key>NSAppleEventsUsageDescription</key>
-    <string>LocalFlow controls Spotify only when you use a spoken Spotify playback command, such as pause, resume, next, or previous.</string>
+    <string>LocalFlow controls Spotify only when you use a spoken Spotify command to search, play, pause, resume, skip, or go back.</string>
     <key>NSHumanReadableCopyright</key>
     <string>LocalFlow is free, open-source software.</string>
     <key>ATSApplicationFontsPath</key>

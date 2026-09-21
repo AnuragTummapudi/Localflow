@@ -229,6 +229,116 @@ final class FeaturesTests: XCTestCase {
         XCTAssertEqual(commandMode.resolve("previous Spotify track"), .execute(.spotifyControl(.previous)))
     }
 
+    func testSpotifyVerificationAcceptsChangedPlayingTrack() {
+        let before = SpotifyPlaybackSnapshot(
+            state: "playing",
+            trackName: "Old Song",
+            artist: "Old Artist",
+            album: nil,
+            trackIdentifier: "spotify:track:old",
+            position: 42
+        )
+        let after = SpotifyPlaybackSnapshot(
+            state: "playing",
+            trackName: "GLORY",
+            artist: "Ogryzek",
+            album: nil,
+            trackIdentifier: "spotify:track:new",
+            position: 0.4
+        )
+        XCTAssertTrue(SpotifyPlaybackVerifier.isVerified(
+            before: before,
+            after: after,
+            priorSample: nil,
+            query: "Glory"
+        ))
+    }
+
+    func testSpotifyVerificationAcceptsPausedTrackThatStartsPlaying() {
+        let before = SpotifyPlaybackSnapshot(
+            state: "paused",
+            trackName: "Blinding Lights",
+            artist: "The Weeknd",
+            album: nil,
+            trackIdentifier: "spotify:track:same",
+            position: 10
+        )
+        let after = SpotifyPlaybackSnapshot(
+            state: "playing",
+            trackName: "Blinding Lights",
+            artist: "The Weeknd",
+            album: nil,
+            trackIdentifier: "spotify:track:same",
+            position: 10.2
+        )
+        XCTAssertTrue(SpotifyPlaybackVerifier.isVerified(
+            before: before,
+            after: after,
+            priorSample: nil,
+            query: "Blinding Lights"
+        ))
+    }
+
+    func testSpotifyVerificationRejectsUnrelatedAlreadyPlayingTrack() {
+        let unchanged = SpotifyPlaybackSnapshot(
+            state: "playing",
+            trackName: "Unrelated Song",
+            artist: "Another Artist",
+            album: nil,
+            trackIdentifier: "spotify:track:unchanged",
+            position: 18
+        )
+        XCTAssertFalse(SpotifyPlaybackVerifier.isVerified(
+            before: unchanged,
+            after: unchanged,
+            priorSample: nil,
+            query: "Glory by Ogryzek"
+        ))
+    }
+
+    func testSpotifyVerificationUsesAdvancingPositionForSamePlayingTrack() {
+        let before = SpotifyPlaybackSnapshot(
+            state: "playing",
+            trackName: "GLORY",
+            artist: "Ogryzek",
+            album: nil,
+            trackIdentifier: "spotify:track:same",
+            position: 12
+        )
+        let later = SpotifyPlaybackSnapshot(
+            state: "playing",
+            trackName: "GLORY",
+            artist: "Ogryzek",
+            album: nil,
+            trackIdentifier: "spotify:track:same",
+            position: 12.4
+        )
+        XCTAssertTrue(SpotifyPlaybackVerifier.isVerified(
+            before: before,
+            after: later,
+            priorSample: before,
+            query: "Glory by Ogryzek"
+        ))
+    }
+
+    func testSpotifyQueryMatchingIgnoresCommandWordsAndSupportsPartialMetadata() {
+        XCTAssertEqual(
+            SpotifyPlaybackVerifier.queryMatchScore(
+                query: "play Glory by Ogryzek on Spotify",
+                candidate: "GLORY — Ogryzek"
+            ),
+            1,
+            accuracy: 0.001
+        )
+        XCTAssertGreaterThanOrEqual(
+            SpotifyPlaybackVerifier.queryMatchScore(
+                query: "Blinding Lights by The Weeknd",
+                candidate: "Blinding Lights"
+            ),
+            0.5
+        )
+    }
+
     func testGmailFormattingDoesNotInventStructure() {
         let formatter = SmartFormatting()
         let output = formatter.format("thanks for the update", profile: .gmail)

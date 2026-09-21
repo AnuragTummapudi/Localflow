@@ -58,6 +58,7 @@ public final class DictationCoordinator: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     private var router = TranscriptionRouter(engine: UnavailableEngine(message: "Model not loaded"))
     private var dictationTask: Task<Void, Never>?
+    private var spotifyCommandTask: Task<Void, Never>?
     private var timeoutTask: Task<Void, Never>?
     private var handsFreeSilenceTask: Task<Void, Never>?
     private var pendingKeyReleaseTask: Task<Void, Never>?
@@ -193,11 +194,15 @@ public final class DictationCoordinator: ObservableObject {
 
     /// Unified session teardown: guarantees audio engine, overlay, tasks, flags,
     /// and state all return to a clean idle state through one single path.
-    public func teardownSession(errorMessage: String? = nil, clearErrorMessage: Bool = false) {
+    public func teardownSession(
+        errorMessage: String? = nil,
+        clearErrorMessage: Bool = false,
+        cancelDictationTask: Bool = true
+    ) {
         timeoutTask?.cancel()
         timeoutTask = nil
 
-        dictationTask?.cancel()
+        if cancelDictationTask { dictationTask?.cancel() }
         dictationTask = nil
 
         handsFreeSilenceTask?.cancel()
@@ -740,12 +745,14 @@ public final class DictationCoordinator: ObservableObject {
                         teardownSession(errorMessage: "Transcribed and saved to History, but paste needs Accessibility. Enable LocalFlow in System Settings → Privacy & Security → Accessibility (text is also on your clipboard — press ⌘V).")
                     }
                 case .execute(let intent):
-                    commandMode.execute(intent)
-                    teardownSession(clearErrorMessage: true)
+                    if case .spotifySearchAndPlay(let query, _) = intent {
+                        startSpotifyCommand(query: query)
+                    } else {
+                        commandMode.execute(intent)
+                        teardownSession(clearErrorMessage: true)
+                    }
                     if case .searchWeb(_, let provider, _) = intent {
                         overlayController.showPolished(message: "Opening \(provider)...", durationSeconds: 1.5)
-                    } else if case .spotifySearchAndPlay = intent {
-                        overlayController.showPolished(message: "Finding Spotify result…", durationSeconds: 1.8)
                     }
                 case .needsConfirmation(let intent):
                     pendingCommand = intent
@@ -762,6 +769,44 @@ public final class DictationCoordinator: ObservableObject {
                 // #endregion
                 teardownSession(errorMessage: "Transcription failed: \(error.localizedDescription)")
             }
+        }
+    }
+
+    private func startSpotifyCommand(query: String) {
+        // End the recording/transcription lifecycle without cancelling the currently executing
+        // task before it can hand ownership of the pill to the Spotify operation.
+        teardownSession(clearErrorMessage: true, cancelDictationTask: false)
+        spotifyCommandTask = Task { @MainActor [weak self] in
+            guard let self else { return }
+            let outcome = await commandMode.playSpotify(query: query) { [weak self] progress in
+                guard let self else { return }
+                switch progress {
+                case .searching:
+                    overlayController.showPolishing(message: "Searching Spotify…")
+                case .startingPlayback:
+                    overlayController.showPolishing(message: "Starting playback…")
+                }
+            }
+            guard !Task.isCancelled else { return }
+            switch outcome {
+            case .verified(let track, let artist):
+                if let track, !track.isEmpty, let artist, !artist.isEmpty {
+                    overlayController.showPolished(message: "Playing \(track) — \(artist) ✓", durationSeconds: 2.0)
+                } else {
+                    overlayController.showPolished(message: "Playing ✓", durationSeconds: 1.8)
+                }
+            case .commandSentUnverified:
+                overlayController.showPolished(message: "Play command sent", durationSeconds: 2.0)
+            case .accessibilityRequired:
+                overlayController.showError("Accessibility permission required")
+            case .spotifyUnavailable:
+                overlayController.showError("Spotify not available")
+            case .alreadyInProgress:
+                overlayController.showError("Spotify command already in progress")
+            case .activationFailed, .resultNotFound, .playbackNotVerified:
+                overlayController.showError("Couldn't play Spotify result")
+            }
+            spotifyCommandTask = nil
         }
     }
 

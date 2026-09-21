@@ -247,7 +247,7 @@ private struct CommandModeSettingsView: View {
                 ("open [URL]", "Opens the URL in the default browser"),
                 ("open [query] in [site]", "Searches query directly on YouTube, Google, GitHub, etc."),
                 ("search [query] on [site]", "Searches query on named platform or domain"),
-                ("play [song] on Spotify", "Opens Spotify's native results for that song"),
+                ("play [song] on Spotify", "Searches Spotify and starts the first relevant result"),
                 ("pause / resume Spotify", "Controls the installed Spotify desktop app"),
                 ("next / previous Spotify track", "Moves through Spotify's current queue")
             ]

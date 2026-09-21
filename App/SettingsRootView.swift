@@ -756,57 +756,10 @@ public struct FormattingSettingsView: View {
                     }
                     .background(LocalFlowDesign.cardBackground(cornerRadius: 16))
 
-                    Text("Local spelling and typography cleanup respects your custom vocabulary. Developer profiles preserve literal text instead of autocorrecting code.")
+                    Text("Local spelling and typography cleanup respects your custom vocabulary and preserves technical literals. Gmail and Slack receive light destination-aware formatting; every other app uses neutral dictation.")
                         .font(LocalFlowDesign.generalSans(size: 12))
                         .foregroundStyle(LocalFlowDesign.graphite)
                         .fixedSize(horizontal: false, vertical: true)
-                }
-
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("AI prompts & local rewriting")
-                        .font(LocalFlowDesign.instrumentSerif(size: 18))
-                    VStack(spacing: 0) {
-                        SettingsToggleRow(
-                            title: "Turn dictation into AI prompts",
-                            subtitle: "Organize a spoken request for Codex, Claude Code or another AI app. Review and copy the result. Turn off for ordinary dictation.",
-                            isOn: Binding(get: { settings.promptModeEnabled }, set: { settings.promptModeEnabled = $0 })
-                        )
-                    }
-                    .background(LocalFlowDesign.cardBackground(cornerRadius: 16))
-                }
-
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Developer app formatting")
-                        .font(LocalFlowDesign.instrumentSerif(size: 18))
-                    Text("Preserves code, Markdown, paths and identifiers. No automatic comment prefix. Terminal apps cannot identify which CLI is running; focus its prompt before dictating.")
-                        .font(LocalFlowDesign.generalSans(size: 12))
-                        .foregroundStyle(LocalFlowDesign.graphite)
-                    ForEach([
-                        ["Codex", "com.openai.codex"],
-                        ["Claude", "com.anthropic.claudefordesktop"],
-                        ["VS Code", "com.microsoft.VSCode"],
-                        ["Terminal / Claude Code", "com.apple.Terminal"],
-                        ["iTerm / Claude Code", "com.googlecode.iterm2"],
-                        ["Chrome", "com.google.Chrome"],
-                        ["Safari", "com.apple.Safari"]
-                    ], id: \.last) { app in
-                        Picker(app[0], selection: Binding(
-                            get: { settings.formattingProfileOverrides[app[1]]?.rawValue ?? "auto" },
-                            set: { value in
-                                var overrides = settings.formattingProfileOverrides
-                                overrides[app[1]] = SmartFormattingProfile(rawValue: value)
-                                settings.formattingProfileOverrides = overrides
-                            }
-                        )) {
-                            Text("Automatic").tag("auto")
-                            ForEach(SmartFormattingProfile.allCases) { profile in
-                                Text(profile.displayName).tag(profile.rawValue)
-                            }
-                        }
-                    }
-                    Text("Browser overrides apply to every tab. Choose AI Prompt to preserve literal text in a browser-based AI composer; this does not enable generation.")
-                        .font(LocalFlowDesign.generalSans(size: 12))
-                        .foregroundStyle(LocalFlowDesign.graphite)
                 }
 
                 // Smart Polish (Option + 1) section
@@ -883,6 +836,32 @@ public struct FormattingSettingsView: View {
                     .onReceive(NSWorkspace.shared.notificationCenter.publisher(for: NSWorkspace.didActivateApplicationNotification)) { _ in
                         availabilityRevision += 1
                     }
+                }
+
+                VStack(alignment: .leading, spacing: 12) {
+                    HStack(spacing: 8) {
+                        Text("Prompt Engineer")
+                            .font(LocalFlowDesign.instrumentSerif(size: 18))
+                            .foregroundStyle(LocalFlowDesign.ink)
+                        Text("⌥2")
+                            .font(LocalFlowDesign.fragmentMono(size: 11))
+                            .fontWeight(.bold)
+                            .foregroundStyle(LocalFlowDesign.signal)
+                            .padding(.horizontal, 6)
+                            .padding(.vertical, 2)
+                            .background(RoundedRectangle(cornerRadius: 6, style: .continuous).fill(LocalFlowDesign.signal.opacity(0.12)))
+                    }
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Build a structured prompt from selected text")
+                            .font(LocalFlowDesign.generalSans(size: 13, weight: .medium))
+                        Text("Select rough text in any app and press ⌥2. LocalFlow privately turns it into a grounded role, objective, context, requirements, constraints, and expected result, then replaces the selection in place.")
+                            .font(LocalFlowDesign.generalSans(size: 12))
+                            .foregroundStyle(LocalFlowDesign.graphite)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    .padding(16)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(LocalFlowDesign.cardBackground(cornerRadius: 16))
                 }
 
                 // Speech Cleanup section

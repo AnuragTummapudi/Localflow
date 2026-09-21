@@ -8,12 +8,6 @@ public final class LocalFlowSettings: ObservableObject, @unchecked Sendable {
 
     private let defaults: UserDefaults
 
-    /// Explicit opt-in: turn dictation into an AI prompt instead of ordinary text.
-    public var promptModeEnabled: Bool {
-        get { defaults.bool(forKey: "promptModeEnabled") }
-        set { objectWillChange.send(); defaults.set(newValue, forKey: "promptModeEnabled") }
-    }
-
     /// Optional on-device semantic rewriting for Option+1. No cloud fallback.
     public var localRewriteEnabled: Bool {
         // Deep polish should work out of the box on a supported Mac. An explicit user
@@ -86,12 +80,6 @@ public final class LocalFlowSettings: ObservableObject, @unchecked Sendable {
         set { defaults.set(newValue, forKey: Keys.didPlayLaunchAnimation) }
     }
 
-    /// User overrides from bundle identifier to formatting profile.
-    public var formattingProfileOverrides: [String: SmartFormattingProfile] {
-        get { codableValue(forKey: Keys.formattingProfileOverrides, defaultValue: [:]) }
-        set { setCodableValue(newValue, forKey: Keys.formattingProfileOverrides) }
-    }
-
     /// User-added words and phrases used during local post-processing.
     public var customVocabulary: [VocabularyEntry] {
         get { codableValue(forKey: Keys.customVocabulary, defaultValue: []) }
@@ -155,7 +143,6 @@ public final class LocalFlowSettings: ObservableObject, @unchecked Sendable {
             Keys.launchAtLogin: false,
             Keys.didCompleteOnboarding: false,
             Keys.didPlayLaunchAnimation: false,
-            Keys.formattingProfileOverrides: encodedDefault([String: SmartFormattingProfile]()),
             Keys.customVocabulary: encodedDefault([VocabularyEntry]()),
             Keys.cleanSpeechEnabled: true,
             Keys.removeFillerWords: true,
@@ -205,7 +192,6 @@ public final class LocalFlowSettings: ObservableObject, @unchecked Sendable {
         static let launchAtLogin = "launchAtLogin"
         static let didCompleteOnboarding = "didCompleteOnboarding"
         static let didPlayLaunchAnimation = "didPlayLaunchAnimation"
-        static let formattingProfileOverrides = "formattingProfileOverrides"
         static let customVocabulary = "customVocabulary"
         static let cleanSpeechEnabled = "cleanSpeechEnabled"
         static let removeFillerWords = "removeFillerWords"

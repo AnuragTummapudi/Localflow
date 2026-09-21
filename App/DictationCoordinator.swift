@@ -16,6 +16,7 @@ import SmartFormatting
 @MainActor
 public final class DictationCoordinator: ObservableObject {
     private static let polishLog = Logger(subsystem: "dev.localflow.LocalFlow", category: "SmartPolish")
+    private static let promptLog = Logger(subsystem: "dev.localflow.LocalFlow", category: "PromptEngineer")
     /// The current activity state.
     @Published public private(set) var state: LocalFlowActivityState = .idle {
         didSet {
@@ -318,6 +319,77 @@ public final class DictationCoordinator: ObservableObject {
                 teardownSession(errorMessage: nil, clearErrorMessage: true)
             }
             await polishActiveSelectionOrRecentDictation()
+
+        case .promptEngineerShortcut:
+            if state == .listening {
+                teardownSession(errorMessage: nil, clearErrorMessage: true)
+            }
+            await buildPromptFromActiveSelection()
+        }
+    }
+
+    /// Option + 2 Prompt Engineer. Like Smart Polish, this is selection-only and uses
+    /// the same capture, revalidation, and safe replacement transaction.
+    public func buildPromptFromActiveSelection() async {
+        let requestID = UUID()
+        Self.promptLog.debug("request \(requestID.uuidString, privacy: .public) shortcut received")
+        guard !isRewritingSelection, state != .processing else {
+            Self.promptLog.notice("request \(requestID.uuidString, privacy: .public) duplicate suppressed")
+            overlayController.showError("Another rewrite is already in progress.")
+            return
+        }
+        isRewritingSelection = true
+        defer { isRewritingSelection = false }
+        overlayController.showPolishing(message: "Reading selection…")
+        let capture = await textInjection.captureCurrentSelection()
+        let selection: SelectedTextSnapshot
+        switch capture {
+        case .captured(let snapshot):
+            selection = snapshot
+            Self.promptLog.debug("request \(requestID.uuidString, privacy: .public) capture \(snapshot.method.rawValue, privacy: .public), length \(snapshot.text.count, privacy: .public), target \(snapshot.bundleIdentifier ?? "unknown", privacy: .public)")
+        case .permissionDenied:
+            overlayController.showError("Allow Accessibility to read selected text.")
+            return
+        case .noSelection:
+            overlayController.showError("Select text first")
+            return
+        case .secureInput, .unsupported, .failed:
+            overlayController.showError("Select editable text in an app, then press ⌥2.")
+            return
+        }
+
+        do {
+            overlayController.showPolishing(message: "Building prompt…")
+            let started = ContinuousClock.now
+            let prompt = try await LocalWritingAssistant.buildPrompt(
+                selection.text,
+                protectedWords: vocabularyStore.entries.flatMap { [$0.phrase, $0.replacement] }
+            )
+            Self.promptLog.debug("request \(requestID.uuidString, privacy: .public) generation completed in \(String(describing: ContinuousClock.now - started), privacy: .public), output length \(prompt.count, privacy: .public)")
+            guard !Task.isCancelled else { return }
+            overlayController.showPolishing(message: "Replacing text…")
+            let outcome = await textInjection.replaceCapturedSelection(selection, with: prompt)
+            switch outcome {
+            case .verified:
+                Self.promptLog.debug("request \(requestID.uuidString, privacy: .public) replacement verified")
+                historyStore.append(text: prompt, bundleIdentifier: selection.bundleIdentifier)
+                overlayController.showPolished(message: "Prompt ready ✓")
+            case .sentUnverified:
+                Self.promptLog.notice("request \(requestID.uuidString, privacy: .public) replacement sent unverified")
+                historyStore.append(text: prompt, bundleIdentifier: selection.bundleIdentifier)
+                overlayController.showPolished(message: "Prompt sent to the selected app.")
+            case .selectionChanged, .targetChanged:
+                Self.promptLog.notice("request \(requestID.uuidString, privacy: .public) selection changed")
+                resultCardController.show(text: prompt, status: "Selection changed", persistent: true)
+            case .unsupported, .failed:
+                Self.promptLog.error("request \(requestID.uuidString, privacy: .public) replacement failed")
+                resultCardController.show(text: prompt, status: "Prompt ready, but replacement failed. Copy it here.", persistent: true)
+            }
+        } catch let error as LocalWritingAssistant.PromptEngineerError {
+            Self.promptLog.error("request \(requestID.uuidString, privacy: .public) failed category \(String(describing: error), privacy: .public)")
+            overlayController.showError(error.localizedDescription)
+        } catch {
+            overlayController.showError("Prompt failed")
         }
     }
 
@@ -593,28 +665,13 @@ public final class DictationCoordinator: ObservableObject {
                     return
                 }
 
-                // Prompt mode never dispatches a spoken command or pastes into a shell.
-                if settings.promptModeEnabled {
-                    let target = resolvedTargetApplication()
-                    let rewrite = await LocalWritingAssistant.rewrite(
-                        trimmed, purpose: .prompt,
-                        protectedWords: vocabularyStore.entries.flatMap { [$0.phrase, $0.replacement] }
-                    )
-                    guard !Task.isCancelled else { return }
-                    historyStore.append(text: rewrite.text, bundleIdentifier: target?.bundleIdentifier)
-                    resultCardController.show(text: rewrite.text, status: rewrite.notice ?? "Review your prompt · Copy into your AI app", persistent: true)
-                    teardownSession(clearErrorMessage: true)
-                    return
-                }
-
                 switch commandMode.resolve(trimmed, transcriptionConfidence: result.confidence) {
                 case .notCommand:
                     let target = resolvedTargetApplication()
                     let bundleID = target?.bundleIdentifier
                         ?? NSWorkspace.shared.frontmostApplication?.bundleIdentifier
-                    let profile = formatter.profile(for: bundleID)
-                    let preserveLiterals = profile == .code || profile == .prompt
-                    let cleaned = preserveLiterals ? trimmed : speechCleanup.clean(
+                    let profile = formatter.profile(for: bundleID, applicationName: target?.localizedName)
+                    let cleaned = speechCleanup.clean(
                         trimmed,
                         options: SpeechCleanupOptions(settings: settings),
                         vocabularyStore: vocabularyStore
@@ -627,8 +684,8 @@ public final class DictationCoordinator: ObservableObject {
                         message: "transcription ok, about to insert",
                         data: [
                             "textLen": formatted.count,
-                            "raw": trimmed,
-                            "cleaned": cleaned,
+                            "rawLength": trimmed.count,
+                            "cleanedLength": cleaned.count,
                             "targetBundle": target?.bundleIdentifier ?? "nil",
                             "frontBundle": NSWorkspace.shared.frontmostApplication?.bundleIdentifier ?? "nil",
                             "axTrusted": textInjection.isAccessibilityTrusted(prompt: false)

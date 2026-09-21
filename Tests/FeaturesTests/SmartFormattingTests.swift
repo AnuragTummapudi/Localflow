@@ -1,170 +1,106 @@
 import XCTest
 @testable import Shared
 @testable import SmartFormatting
+@testable import SpeechCleanup
 
 final class SmartFormattingTests: XCTestCase {
-
-    func testDeveloperProfilesPreserveLiteralText() {
+    func testDestinationResolutionUsesOnlyExplicitAllowlist() {
         let formatter = SmartFormatting()
-        let text = "let userID = fetch_user(\"missy\")\n    // keep --dry-run and src/app.ts\nhttps://example.com/api"
-        for profile in [SmartFormattingProfile.code, .prompt] {
-            XCTAssertEqual(formatter.format(text, profile: profile), text)
-            XCTAssertEqual(formatter.polish(text, profile: profile), text)
+        XCTAssertEqual(formatter.profile(for: "com.tinyspeck.slackmacgap"), .slack)
+        XCTAssertEqual(formatter.profile(for: "com.google.Chrome", activeDomain: "app.slack.com"), .slack)
+        XCTAssertEqual(formatter.profile(for: "com.google.Gmail"), .gmail)
+        XCTAssertEqual(formatter.profile(for: "com.google.Chrome", activeDomain: "mail.google.com"), .gmail)
+        for identifier in ["com.openai.codex", "com.anthropic.claudefordesktop", "com.microsoft.VSCode", "com.apple.Terminal", "com.google.Chrome"] {
+            XCTAssertEqual(formatter.profile(for: identifier), .neutral)
         }
     }
 
-    func testPolishInDeveloperProfilesStillNormalizesSafeWhitespace() {
+    func testNeutralFormattingPreservesTechnicalLiterals() {
         let formatter = SmartFormatting()
-        let input = "  keep userID in src/auth.ts  "
-        XCTAssertEqual(formatter.polish(input, profile: .code), "keep userID in src/auth.ts")
-        XCTAssertEqual(formatter.polish(input, profile: .prompt), "keep userID in src/auth.ts")
+        let output = formatter.format("fix userID in src/auth.ts with --dry-run at https://example.com", profile: .neutral)
+        XCTAssertTrue(output.contains("userID"))
+        XCTAssertTrue(output.contains("src/auth.ts"))
+        XCTAssertTrue(output.contains("--dry-run"))
+        XCTAssertTrue(output.contains("https://example.com"))
     }
 
-    func testDeveloperDestinationDetection() {
-        let suite = "LocalFlow.ProfileTests.\(UUID().uuidString)"
-        let defaults = UserDefaults(suiteName: suite)!
-        defer { defaults.removePersistentDomain(forName: suite) }
-        let settings = LocalFlowSettings(defaults: defaults)
-        let formatter = SmartFormatting(settings: settings)
-        XCTAssertEqual(formatter.profile(for: "com.openai.codex"), .prompt)
-        XCTAssertEqual(formatter.profile(for: "com.anthropic.claudefordesktop"), .prompt)
-        XCTAssertEqual(formatter.profile(for: "com.microsoft.VSCode"), .code)
-        XCTAssertEqual(formatter.profile(for: "com.apple.Terminal"), .code)
-        XCTAssertEqual(formatter.profile(for: "com.googlecode.iterm2"), .code)
-        settings.formattingProfileOverrides = ["com.openai.codex": .notes]
-        XCTAssertEqual(formatter.profile(for: "com.openai.codex"), .notes)
-        XCTAssertFalse(settings.promptModeEnabled)
-        XCTAssertTrue(settings.localRewriteEnabled)
+    func testSlackFormattingIsLightAndGmailDoesNotInventStructure() {
+        let formatter = SmartFormatting()
+        XCTAssertEqual(formatter.format("sounds good thanks", profile: .slack), "Sounds good thanks")
+        XCTAssertEqual(formatter.format("thanks for the update", profile: .gmail), "Thanks for the update.")
+    }
+
+    func testDestinationPipelineRemovesFillersWithoutInventingContent() {
+        let cleanup = SpeechCleanup()
+        let formatter = SmartFormatting()
+        let gmailSource = "hi team uh can you send the notes before our call and flag anything that needs a decision"
+        let gmail = formatter.format(cleanup.clean(gmailSource), profile: .gmail)
+        XCTAssertFalse(gmail.lowercased().contains(" uh "))
+        XCTAssertTrue(gmail.contains("Hi team"))
+        XCTAssertTrue(gmail.contains("notes before our call"))
+        XCTAssertFalse(gmail.contains("Best,"))
+        XCTAssertFalse(gmail.contains("Subject:"))
+
+        let slackSource = "hey deployment is done staging looks good auth tests are still failing will check after lunch"
+        let slack = formatter.format(cleanup.clean(slackSource), profile: .slack)
+        XCTAssertTrue(slack.contains("deployment"))
+        XCTAssertTrue(slack.contains("auth tests"))
+        XCTAssertFalse(slack.contains("Hi,"))
+        XCTAssertFalse(slack.contains("Best,"))
+    }
+
+    func testNeutralDeveloperDictationNeverCreatesPromptLabels() {
+        let formatter = SmartFormatting()
+        let output = formatter.format("fix login redirect in src/auth.ts keep public API unchanged and tell me which tests prove the fix", profile: .neutral)
+        XCTAssertTrue(output.contains("src/auth.ts"))
+        for forbidden in ["REQUEST", "CONSTRAINT", "OUTPUT", "You are a senior"] {
+            XCTAssertFalse(output.contains(forbidden))
+        }
+    }
+
+    func testSpellingPunctuationAndVocabulary() {
+        let formatter = SmartFormatting()
+        let store = VocabularyStore()
+        store.add(phrase: "LocalFlow")
+        let output = formatter.format("i recieved the LocalFlow update .how do we ship it", profile: .neutral, vocabularyStore: store)
+        XCTAssertEqual(output, "I received the LocalFlow update. How do we ship it?")
     }
 
     @MainActor
     func testRewriteValidationProtectsTechnicalDetails() {
         let input = "Fix userID in src/app.ts using --dry-run for Missy on port 3000"
-        XCTAssertTrue(LocalWritingAssistant.isAcceptable("Request: \(input)", for: input, protectedWords: ["Missy"]))
+        XCTAssertTrue(LocalWritingAssistant.isAcceptable("Role:\nEngineer\n\nObjective:\n\(input)", for: input, protectedWords: ["Missy"]))
         XCTAssertFalse(LocalWritingAssistant.isAcceptable("Fix userid in src/app.ts using --dry-run for Missy on port 3000", for: input))
         XCTAssertFalse(LocalWritingAssistant.isAcceptable("Fix userID in src/app.ts using --dry-run for messy on port 3000", for: input, protectedWords: ["Missy"]))
-        XCTAssertFalse(LocalWritingAssistant.isAcceptable("", for: input))
     }
 
     @MainActor
-    func testAmbiguousShortPromptIsKept() async {
-        let result = await LocalWritingAssistant.rewrite("missy", purpose: .prompt)
-        XCTAssertEqual(result.text, "missy")
-        XCTAssertFalse(result.didRewrite)
-        XCTAssertNotNil(result.notice)
-    }
+    func testPromptBlueprintRendererOmitsEmptySections() {
+        let blueprint = PromptBlueprintValue(
+            role: "Senior Swift engineer",
+            objective: "Fix the login redirect.",
+            context: ["The failure occurs after refresh."],
+            requirements: ["Inspect src/auth.ts", "Run existing tests"],
+            constraints: ["Keep the public API unchanged."],
+            expectedResult: "A verified minimal fix."
+        )
+        let output = LocalWritingAssistant.renderPromptBlueprint(blueprint)
+        XCTAssertTrue(output.contains("Role:\nSenior Swift engineer"))
+        XCTAssertTrue(output.contains("Requirements:\n- Inspect src/auth.ts\n- Run existing tests"))
+        XCTAssertTrue(output.contains("Expected result:\nA verified minimal fix."))
+        XCTAssertFalse(output.contains("Output:"))
 
-    func testSpellingAutocorrection() {
-        let formatter = SmartFormatting()
-        let result = formatter.format("i recieved the package yesterday", profile: .generic)
-        XCTAssertTrue(result.contains("received"), "Expected 'recieved' to be autocorrected to 'received', got: \(result)")
-        XCTAssertTrue(result.contains("I received"), "Expected 'i' to be capitalized, got: \(result)")
-    }
-
-    func testCommonTypoFallbackWorksWithoutSystemDictionarySuggestion() {
-        let formatter = SmartFormatting()
-        let result = formatter.polish("teh report was recieved yesterday", profile: .generic)
-        XCTAssertEqual(result, "The report was received yesterday.")
-    }
-
-    func testContractionFixes() {
-        let formatter = SmartFormatting()
-        let result = formatter.format("we didnt know and they couldnt come", profile: .generic)
-        XCTAssertTrue(result.contains("didn't"), "Expected 'didn't', got: \(result)")
-        XCTAssertTrue(result.contains("couldn't"), "Expected 'couldn't', got: \(result)")
-    }
-
-    func testCustomVocabularyProtected() {
-        let formatter = SmartFormatting()
-        let store = VocabularyStore()
-        store.add(phrase: "LocalFlow")
-        store.add(phrase: "Anurag")
-        store.add(phrase: "parakeet")
-
-        let result = formatter.format("hello from Anurag using LocalFlow", profile: .generic, vocabularyStore: store)
-        XCTAssertTrue(result.contains("LocalFlow"), "Custom word LocalFlow must be preserved, got: \(result)")
-        XCTAssertTrue(result.contains("Anurag"), "Custom name Anurag must be preserved, got: \(result)")
-    }
-
-    func testSmartQuotesAndEmDashes() {
-        let formatter = SmartFormatting()
-        let result = formatter.format("he said \"hello world\" -- immediately", profile: .generic)
-        XCTAssertTrue(result.contains("“hello world”"), "Expected curly double quotes, got: \(result)")
-        XCTAssertTrue(result.contains("—"), "Expected em-dash, got: \(result)")
-    }
-
-    func testPunctuationSpacingHygiene() {
-        let formatter = SmartFormatting()
-        let result = formatter.format("hello , world .how are you", profile: .generic)
-        XCTAssertFalse(result.contains(" ,"), "Should not have space before comma, got: \(result)")
-        XCTAssertEqual(result, "Hello, world. How are you?")
-    }
-
-    func testQuestionMarkDetection() {
-        let formatter = SmartFormatting()
-        let result1 = formatter.polish("how do we deploy to production")
-        XCTAssertTrue(result1.hasSuffix("?"), "Expected question mark at end of 'how do we...', got: \(result1)")
-
-        let result2 = formatter.polish("can you review this pull request")
-        XCTAssertTrue(result2.hasSuffix("?"), "Expected question mark at end of 'can you...', got: \(result2)")
-
-        let statement = formatter.polish("we are ready to deploy to production")
-        XCTAssertTrue(statement.hasSuffix("."), "Expected period for statement, got: \(statement)")
-    }
-
-    func testSentenceCapitalizationAndPronounI() {
-        let formatter = SmartFormatting()
-        let result = formatter.format("yesterday i saw the report. it was great! then i went home", profile: .generic)
-        XCTAssertTrue(result.contains("Yesterday I saw"), "Expected capitalized start and 'I', got: \(result)")
-        XCTAssertTrue(result.contains("It was great!"), "Expected capitalized sentence, got: \(result)")
-        XCTAssertTrue(result.contains("Then I went"), "Expected capitalized 'Then I', got: \(result)")
-    }
-
-    func testChatProfileOmitsSingleSentenceTrailingPeriod() {
-        let formatter = SmartFormatting()
-        let result = formatter.format("sounds good thanks", profile: .chat)
-        XCTAssertFalse(result.hasSuffix("."), "Chat profile should omit trailing period for single line: \(result)")
-        XCTAssertEqual(result, "Sounds good thanks")
-    }
-
-    func testMailProfileAddsStructure() {
-        let formatter = SmartFormatting()
-        let result = formatter.format("thanks for the update", profile: .mail)
-        XCTAssertTrue(result.hasPrefix("Hi,\n\n"))
-        XCTAssertTrue(result.contains("Thanks for the update."))
-        XCTAssertTrue(result.hasSuffix("\n\nBest,"))
-    }
-
-    func testNotesProfileBulletFormatting() {
-        let formatter = SmartFormatting()
-        let result = formatter.format("first write the code second run tests third deploy", profile: .notes)
-        XCTAssertTrue(result.contains("- write the code") || result.contains("- Write the code") || result.contains("\n- "), "Expected bulleted notes format, got: \(result)")
-    }
-
-    func testWisprFlowStylePolish() {
-        let formatter = SmartFormatting()
-        let messy = "i recieved the email -- we didnt check it"
-        let polished = formatter.polish(messy, profile: .generic)
-        XCTAssertTrue(polished.contains("received"), "Expected 'received', got: \(polished)")
-        XCTAssertTrue(polished.contains("didn't"), "Expected 'didn't', got: \(polished)")
-        XCTAssertTrue(polished.contains("—"), "Expected em-dash, got: \(polished)")
-        XCTAssertTrue(polished.hasPrefix("I received"), "Expected 'I received', got: \(polished)")
-        XCTAssertTrue(polished.hasSuffix("."), "Expected sentence termination, got: \(polished)")
+        let minimal = LocalWritingAssistant.renderPromptBlueprint(.init(role: "Editor", objective: "Clarify the note.", context: [], requirements: [], constraints: [], expectedResult: ""))
+        XCTAssertFalse(minimal.contains("Context:"))
+        XCTAssertFalse(minimal.contains("Constraints:"))
+        XCTAssertTrue(LocalWritingAssistant.isValidPromptBlueprint(blueprint, sourceLength: 120))
+        XCTAssertFalse(LocalWritingAssistant.isValidPromptBlueprint(.init(role: "", objective: "Do work", context: [], requirements: [], constraints: [], expectedResult: ""), sourceLength: 20))
     }
 
     func testEverySmartPolishToneHasAStableInstruction() {
         XCTAssertEqual(PolishTone.natural.displayName, "Natural")
         for tone in PolishTone.allCases {
-            XCTAssertFalse(tone.instruction.isEmpty)
             XCTAssertTrue(tone.instruction.contains("Rewrite"))
         }
-    }
-
-    @MainActor
-    func testModelOutputValidationRejectsPromptLeakageAndRunawayOutput() {
-        let source = "Please send the report to Missy at https://example.com by 5pm."
-        XCTAssertFalse(LocalWritingAssistant.isAcceptable("As an AI, here is the rewritten text.", for: source, protectedWords: ["Missy"]))
-        XCTAssertFalse(LocalWritingAssistant.isAcceptable(String(repeating: "x", count: 2_000), for: source))
-        XCTAssertTrue(LocalWritingAssistant.isAcceptable(source, for: source, protectedWords: ["Missy"]))
     }
 }

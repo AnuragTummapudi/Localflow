@@ -11,6 +11,7 @@ public enum HotkeyEvent: Equatable, Sendable {
     case doubleTap
     case escape
     case polishShortcut
+    case promptEngineerShortcut
 }
 
 /// Observes the global dictation hotkey, double-taps for hands-free, and Escape cancellation.
@@ -24,11 +25,14 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
     private let settings: LocalFlowSettings
     private var globalMonitor: Any?
     private var localMonitor: Any?
-    private var carbonHotKeyRef: EventHotKeyRef?
+    private var polishHotKeyRef: EventHotKeyRef?
+    private var promptHotKeyRef: EventHotKeyRef?
     private var carbonHandlerRef: EventHandlerRef?
     private var settingsCancellable: AnyCancellable?
     private var lastPolishDispatch = Date.distantPast
+    private var lastPromptDispatch = Date.distantPast
     public private(set) var isPolishShortcutRegistered = false
+    public private(set) var isPromptShortcutRegistered = false
 
     private var lastKeyUpTime: Date?
     private let doubleTapWindow: TimeInterval = 0.38
@@ -49,7 +53,7 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
     public func start() {
         stop()
 
-        startCarbonPolishHotkey()
+        startCarbonTransformHotkeys()
 
         // Carbon owns Option + 1. Monitors remain solely for dictation flags and Escape.
         globalMonitor = NSEvent.addGlobalMonitorForEvents(matching: [.flagsChanged, .keyDown]) { [weak self] event in
@@ -68,7 +72,7 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
 
     /// Stops observing global hotkey events.
     public func stop() {
-        stopCarbonPolishHotkey()
+        stopCarbonTransformHotkeys()
 
         if let globalMonitor {
             NSEvent.removeMonitor(globalMonitor)
@@ -82,19 +86,29 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
         lastKeyUpTime = nil
     }
 
-    private func startCarbonPolishHotkey() {
-        stopCarbonPolishHotkey()
-        guard settings.smartPolishShortcutEnabled else { return }
+    private func startCarbonTransformHotkeys() {
+        stopCarbonTransformHotkeys()
 
         var eventType = EventTypeSpec(eventClass: OSType(kEventClassKeyboard), eventKind: UInt32(kEventHotKeyPressed))
         let selfPtr = Unmanaged.passUnretained(self).toOpaque()
 
         let status = InstallEventHandler(
             GetEventDispatcherTarget(),
-            { (_, _, userData) -> OSStatus in
-                guard let userData else { return noErr }
+            { (_, event, userData) -> OSStatus in
+                guard let event, let userData else { return noErr }
                 let instance = Unmanaged<HotkeyManager>.fromOpaque(userData).takeUnretainedValue()
-                instance.handleCarbonPolishShortcut()
+                var hotKeyID = EventHotKeyID()
+                let readStatus = GetEventParameter(
+                    event,
+                    EventParamName(kEventParamDirectObject),
+                    EventParamType(typeEventHotKeyID),
+                    nil,
+                    MemoryLayout<EventHotKeyID>.size,
+                    nil,
+                    &hotKeyID
+                )
+                guard readStatus == noErr else { return readStatus }
+                instance.handleCarbonTransformShortcut(id: hotKeyID.id)
                 return noErr
             },
             1,
@@ -105,43 +119,60 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
 
         guard status == noErr else { return }
 
-        let hotKeyID = EventHotKeyID(signature: OSType(0x4C46), id: 1) // 'LF', 1
-        let registrationStatus = RegisterEventHotKey(
-            UInt32(kVK_ANSI_1),
-            UInt32(optionKey),
-            hotKeyID,
-            GetEventDispatcherTarget(),
-            0,
-            &carbonHotKeyRef
+        if settings.smartPolishShortcutEnabled {
+            let polishID = EventHotKeyID(signature: OSType(0x4C46), id: 1) // 'LF', 1
+            let polishStatus = RegisterEventHotKey(
+                UInt32(kVK_ANSI_1), UInt32(optionKey), polishID,
+                GetEventDispatcherTarget(), 0, &polishHotKeyRef
+            )
+            isPolishShortcutRegistered = polishStatus == noErr && polishHotKeyRef != nil
+        }
+
+        let promptID = EventHotKeyID(signature: OSType(0x4C46), id: 2) // 'LF', 2
+        let promptStatus = RegisterEventHotKey(
+            UInt32(kVK_ANSI_2), UInt32(optionKey), promptID,
+            GetEventDispatcherTarget(), 0, &promptHotKeyRef
         )
-        isPolishShortcutRegistered = registrationStatus == noErr && carbonHotKeyRef != nil
+        isPromptShortcutRegistered = promptStatus == noErr && promptHotKeyRef != nil
     }
 
-    private func stopCarbonPolishHotkey() {
-        if let carbonHotKeyRef {
-            UnregisterEventHotKey(carbonHotKeyRef)
-            self.carbonHotKeyRef = nil
+    private func stopCarbonTransformHotkeys() {
+        if let polishHotKeyRef {
+            UnregisterEventHotKey(polishHotKeyRef)
+            self.polishHotKeyRef = nil
+        }
+        if let promptHotKeyRef {
+            UnregisterEventHotKey(promptHotKeyRef)
+            self.promptHotKeyRef = nil
         }
         if let carbonHandlerRef {
             RemoveEventHandler(carbonHandlerRef)
             self.carbonHandlerRef = nil
         }
         isPolishShortcutRegistered = false
+        isPromptShortcutRegistered = false
     }
 
-    private func handleCarbonPolishShortcut() {
-        guard settings.smartPolishShortcutEnabled else { return }
+    private func handleCarbonTransformShortcut(id: UInt32) {
         let now = Date()
-        guard now.timeIntervalSince(lastPolishDispatch) > 0.18 else { return }
-        lastPolishDispatch = now
-        DispatchQueue.main.async {
-            self.eventPublisher.send(.polishShortcut)
+        switch id {
+        case 1:
+            guard settings.smartPolishShortcutEnabled,
+                  now.timeIntervalSince(lastPolishDispatch) > 0.18 else { return }
+            lastPolishDispatch = now
+            DispatchQueue.main.async { self.eventPublisher.send(.polishShortcut) }
+        case 2:
+            guard now.timeIntervalSince(lastPromptDispatch) > 0.18 else { return }
+            lastPromptDispatch = now
+            DispatchQueue.main.async { self.eventPublisher.send(.promptEngineerShortcut) }
+        default:
+            return
         }
     }
 
     /// Re-registers only the Carbon shortcut when its setting changes.
     public func refreshPolishShortcutRegistration() {
-        startCarbonPolishHotkey()
+        startCarbonTransformHotkeys()
     }
 
     /// Updates the configured hotkey.

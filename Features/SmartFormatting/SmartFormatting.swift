@@ -129,31 +129,17 @@ public final class SmartFormatting {
     }
 
     /// Returns the formatting profile for a bundle identifier.
-    public func profile(for bundleIdentifier: String?) -> SmartFormattingProfile {
-        guard let bundleIdentifier else { return .generic }
-        if let override = settings.formattingProfileOverrides[bundleIdentifier] {
-            return override
-        }
-        let identifier = bundleIdentifier.lowercased()
-        if ["com.openai.codex", "com.openai.chat", "com.anthropic.claudefordesktop"].contains(identifier) {
-            return .prompt
-        }
-        if ["com.apple.terminal", "com.googlecode.iterm2", "com.mitchellh.ghostty", "dev.warp.warp-stable", "com.microsoft.vscode", "com.microsoft.vscodeinsiders"].contains(identifier) {
-            return .code
-        }
-        if bundleIdentifier.contains("Messages") || bundleIdentifier.contains("Slack") || bundleIdentifier.contains("discord") || bundleIdentifier.contains("WhatsApp") || bundleIdentifier.contains("Telegram") {
-            return .chat
-        }
-        if bundleIdentifier.contains("mail") || bundleIdentifier == "com.apple.mail" || bundleIdentifier.contains("outlook") {
-            return .mail
-        }
-        if bundleIdentifier.contains("Xcode") || bundleIdentifier.contains("vscode") || bundleIdentifier.contains("zed") || bundleIdentifier.contains("cursor") || bundleIdentifier == "com.todesktop.230313mzl4w4u92" {
-            return .code
-        }
-        if bundleIdentifier == "com.apple.Notes" || bundleIdentifier.contains("notion") || bundleIdentifier.contains("obsidian") || bundleIdentifier.contains("bear") {
-            return .notes
-        }
-        return .generic
+    public func profile(
+        for bundleIdentifier: String?,
+        applicationName: String? = nil,
+        activeDomain: String? = nil
+    ) -> SmartFormattingProfile {
+        let identifier = bundleIdentifier?.lowercased() ?? ""
+        let name = applicationName?.lowercased() ?? ""
+        let domain = activeDomain?.lowercased() ?? ""
+        if identifier.contains("slack") || name == "slack" || domain == "app.slack.com" { return .slack }
+        if identifier.contains("gmail") || name.contains("gmail") || domain == "mail.google.com" { return .gmail }
+        return .neutral
     }
 
     /// Formats text for a specific profile and optional settings.
@@ -164,19 +150,14 @@ public final class SmartFormatting {
         vocabularyStore: VocabularyStore? = nil
     ) -> String {
         let opts = options ?? SmartFormattingOptions(settings: settings)
-        // Preserve literal code, Markdown, paths, flags and case-sensitive identifiers.
-        // A developer app may contain either a source editor or a prompt composer.
-        guard profile != .code && profile != .prompt else {
-            // Developer destinations must retain indentation and line structure. Only remove
-            // accidental outer whitespace; never flatten internal whitespace or newlines.
-            return text.trimmingCharacters(in: .whitespacesAndNewlines)
-        }
         guard opts.isEnabled else {
             return cleanupWhitespace(text)
         }
 
         var processed = cleanupWhitespace(text)
         guard !processed.isEmpty else { return "" }
+        let protection = protectTechnicalLiterals(in: processed)
+        processed = protection.text
 
         // 1. Spelling & contraction autocorrection
         if opts.autocorrectEnabled {
@@ -195,7 +176,7 @@ public final class SmartFormatting {
         processed = applyCapitalization(processed)
 
         // 5. Profile-specific layout and semantics
-        return applyProfile(processed, profile: profile)
+        return restoreTechnicalLiterals(in: applyProfile(processed, profile: profile), literals: protection.literals)
     }
 
     /// Wispr Flow-style Smart Polish entrypoint: runs full speech hygiene, typo/spelling correction,
@@ -207,17 +188,13 @@ public final class SmartFormatting {
         options: SmartFormattingOptions? = nil,
         vocabularyStore: VocabularyStore? = nil
     ) -> String {
-        let targetProfile = profile ?? (frontmostBundleIdentifier != nil ? self.profile(for: frontmostBundleIdentifier) : .generic)
-        // Option + 1 is often used on a spoken draft inside an IDE or AI composer.
-        // Preserve literals in those destinations, but still allow the caller's safe
-        // speech-cleanup pass to remove fillers and accidental repetition first.
-        guard targetProfile != .code && targetProfile != .prompt else {
-            return text.trimmingCharacters(in: .whitespacesAndNewlines)
-        }
+        let targetProfile = profile ?? (frontmostBundleIdentifier != nil ? self.profile(for: frontmostBundleIdentifier) : .neutral)
         let _ = options ?? SmartFormattingOptions(settings: settings)
 
         var processed = cleanupWhitespace(text)
         guard !processed.isEmpty else { return "" }
+        let protection = protectTechnicalLiterals(in: processed)
+        processed = protection.text
 
         // Step A: Contractions & autocorrection pass
         processed = applySpellingAndContractions(processed, vocabularyStore: vocabularyStore)
@@ -231,13 +208,8 @@ public final class SmartFormatting {
         // Step D: Sentence casing & 'I' pronoun
         processed = applyCapitalization(processed)
 
-        // Step E: Notes / List detection if relevant
-        if targetProfile == .notes || containsEnumeration(processed) {
-            processed = notesFormat(processed)
-        }
-
-        // Step F: Profile application
-        return applyProfile(processed, profile: targetProfile)
+        // Step E: destination application
+        return restoreTechnicalLiterals(in: applyProfile(processed, profile: targetProfile), literals: protection.literals)
     }
 
     // MARK: - Internal Passes
@@ -251,6 +223,32 @@ public final class SmartFormatting {
             range: range,
             withTemplate: " "
         )
+    }
+
+    private func protectTechnicalLiterals(in text: String) -> (text: String, literals: [String]) {
+        let pattern = #"https?://[^\s]+|(?:\./|/)?[\w-]+(?:/[\w.-]+)+|--[\w-]+|\b\w+[_.]\w+(?:[./]\w+)*\b|\b[a-z]+[A-Z]\w*\b"#
+        let regex = try! NSRegularExpression(pattern: pattern)
+        let source = text as NSString
+        let matches = regex.matches(in: text, range: NSRange(location: 0, length: source.length))
+        var output = text
+        var literals: [String] = []
+        for match in matches.reversed() {
+            let literal = source.substring(with: match.range)
+            let index = literals.count
+            literals.append(literal)
+            if let range = Range(match.range, in: output) {
+                output.replaceSubrange(range, with: "\u{E000}\(index)\u{E001}")
+            }
+        }
+        return (output, literals)
+    }
+
+    private func restoreTechnicalLiterals(in text: String, literals: [String]) -> String {
+        var output = text
+        for (index, literal) in literals.enumerated() {
+            output = output.replacingOccurrences(of: "\u{E000}\(index)\u{E001}", with: literal)
+        }
+        return output
     }
 
     private func applySpellingAndContractions(_ text: String, vocabularyStore: VocabularyStore?) -> String {
@@ -280,7 +278,7 @@ public final class SmartFormatting {
             let lowerCore = coreWord.lowercased()
 
             // If user explicitly added this word to custom dictionary or it's an all-caps acronym, preserve it
-            if customWords.contains(lowerCore) || isAcronym(coreWord) {
+            if customWords.contains(lowerCore) || isAcronym(coreWord) || isTechnicalLiteral(coreWord) {
                 correctedTokens.append(rawToken)
                 continue
             }
@@ -317,6 +315,13 @@ public final class SmartFormatting {
         }
 
         return correctedTokens.joined(separator: " ")
+    }
+
+    private func isTechnicalLiteral(_ word: String) -> Bool {
+        word.contains("/") || word.contains("\\") || word.contains("_") || word.contains("-")
+            || word.contains(".") || word.contains("@") || word.contains(":")
+            || word.hasPrefix("$") || word.hasPrefix("--")
+            || word.dropFirst().contains(where: { $0.isUppercase })
     }
 
     private func applySmartPunctuation(_ text: String) -> String {
@@ -447,29 +452,15 @@ public final class SmartFormatting {
 
     private func applyProfile(_ text: String, profile: SmartFormattingProfile) -> String {
         switch profile {
-        case .generic:
+        case .neutral, .gmail:
             return sentenceCase(text)
-        case .chat:
+        case .slack:
             // Relax trailing period on single-sentence chat messages (casual messaging convention)
             var formatted = text
             if !formatted.contains("\n") && formatted.hasSuffix(".") && !formatted.hasSuffix("...") && !formatted.hasSuffix("…") {
                 formatted.removeLast()
             }
             return formatted
-        case .mail:
-            let body = sentenceCase(text)
-            let lower = body.lowercased()
-            let hasGreeting = lower.hasPrefix("hi") || lower.hasPrefix("hello") || lower.hasPrefix("dear") || lower.hasPrefix("hey")
-            let hasClosing = lower.contains("best,") || lower.contains("thanks,") || lower.contains("regards,") || lower.contains("sincerely,")
-
-            if !hasGreeting && !hasClosing {
-                return "Hi,\n\n\(body)\n\nBest,"
-            }
-            return body
-        case .code, .prompt:
-            return text
-        case .notes:
-            return notesFormat(text)
         }
     }
 

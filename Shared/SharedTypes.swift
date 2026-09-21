@@ -120,12 +120,9 @@ public struct HotkeyDescriptor: Codable, Equatable, Sendable {
 
 /// A SmartFormatting profile applied before text injection.
 public enum SmartFormattingProfile: String, Codable, CaseIterable, Identifiable, Sendable {
-    case generic
-    case chat
-    case mail
-    case code
-    case prompt
-    case notes
+    case neutral
+    case gmail
+    case slack
 
     /// The stable identifier for UI lists and persistence.
     public var id: String { rawValue }
@@ -133,12 +130,9 @@ public enum SmartFormattingProfile: String, Codable, CaseIterable, Identifiable,
     /// A user-facing profile name.
     public var displayName: String {
         switch self {
-        case .generic: "Generic"
-        case .chat: "Chat"
-        case .mail: "Mail"
-        case .code: "Code"
-        case .prompt: "AI Prompt"
-        case .notes: "Notes"
+        case .neutral: "Neutral"
+        case .gmail: "Gmail"
+        case .slack: "Slack"
         }
     }
 }

@@ -229,13 +229,10 @@ final class FeaturesTests: XCTestCase {
         XCTAssertEqual(commandMode.resolve("previous Spotify track"), .execute(.spotifyControl(.previous)))
     }
 
-    func testMailFormattingAddsStructure() {
+    func testGmailFormattingDoesNotInventStructure() {
         let formatter = SmartFormatting()
-        let output = formatter.format("thanks for the update", profile: .mail)
-
-        XCTAssertTrue(output.hasPrefix("Hi,\n\n"))
-        XCTAssertTrue(output.contains("Thanks for the update."))
-        XCTAssertTrue(output.hasSuffix("\n\nBest,"))
+        let output = formatter.format("thanks for the update", profile: .gmail)
+        XCTAssertEqual(output, "Thanks for the update.")
     }
 
     // MARK: - TextInjection caret / selection splice

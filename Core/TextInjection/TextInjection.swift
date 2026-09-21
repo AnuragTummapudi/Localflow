@@ -257,9 +257,10 @@ public final class TextInjection: @unchecked Sendable {
               app.bundleIdentifier != Bundle.main.bundleIdentifier,
               !app.isTerminated else { return .unsupported }
         guard isAccessibilityTrusted(prompt: false) else { return .permissionDenied }
-        guard let element = focusedElement(in: app.processIdentifier) else { return .unsupported }
 
-        if let selected = selectedText(from: element), !selected.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+        if let element = focusedElement(in: app.processIdentifier),
+           let selected = selectedText(from: element),
+           !selected.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             return .captured(SelectedTextSnapshot(
                 processIdentifier: app.processIdentifier,
                 bundleIdentifier: app.bundleIdentifier,
@@ -283,17 +284,29 @@ public final class TextInjection: @unchecked Sendable {
         guard let front = NSWorkspace.shared.frontmostApplication,
               front.processIdentifier == snapshot.processIdentifier,
               !front.isTerminated else { return .targetChanged }
-        guard isAccessibilityTrusted(prompt: false),
-              let element = focusedElement(in: front.processIdentifier),
-              selectedText(from: element) == snapshot.text else { return .selectionChanged }
+        guard isAccessibilityTrusted(prompt: false) else { return .unsupported }
 
-        // Direct AX replacement is preferred and can be verified against the text value.
-        let before = axString(element, attribute: kAXValueAttribute as String)
-        if AXUIElementSetAttributeValue(element, kAXSelectedTextAttribute as CFString, replacement as CFString) == .success {
-            let after = axString(element, attribute: kAXValueAttribute as String)
-            if let before, let after, after != before, after.contains(replacement) {
-                return .verified
+        switch snapshot.method {
+        case .accessibility:
+            guard let element = focusedElement(in: front.processIdentifier),
+                  selectedText(from: element) == snapshot.text else { return .selectionChanged }
+
+            // Direct AX replacement is preferred and can be verified against the text value.
+            let before = axString(element, attribute: kAXValueAttribute as String)
+            if AXUIElementSetAttributeValue(element, kAXSelectedTextAttribute as CFString, replacement as CFString) == .success {
+                let after = axString(element, attribute: kAXValueAttribute as String)
+                if let before, let after, after != before, after.contains(replacement) {
+                    return .verified
+                }
             }
+
+        case .clipboard:
+            // Opaque Chromium/Electron editors cannot expose their live selection through
+            // AX. Re-copy it immediately before replacement and require an exact match;
+            // this preserves the same safety guarantee without pretending AX can see it.
+            let recapture = await captureSelectionViaClipboard(from: front)
+            guard case .captured(let current) = recapture,
+                  current.text == snapshot.text else { return .selectionChanged }
         }
 
         do {
@@ -471,7 +484,7 @@ public final class TextInjection: @unchecked Sendable {
     }
 
     private func waitForModifiersToClear() async {
-        for _ in 0..<12 {
+        for _ in 0..<60 {
             let flags = CGEventSource.flagsState(.combinedSessionState)
             let blockers: CGEventFlags = [.maskCommand, .maskAlternate, .maskControl, .maskSecondaryFn]
             if flags.intersection(blockers).isEmpty {
@@ -583,6 +596,18 @@ public final class TextInjection: @unchecked Sendable {
     }
 
     private func captureSelectionViaClipboard(from app: NSRunningApplication) async -> SelectedTextCaptureResult {
+        guard let front = NSWorkspace.shared.frontmostApplication,
+              front.processIdentifier == app.processIdentifier,
+              !front.isTerminated else { return .unsupported }
+
+        // Carbon reports Option+1/2 on key-down. Wait for the physical Option key to be
+        // released so the synthetic copy is ⌘C rather than an unintended ⌥⌘C chord.
+        await waitForModifiersToClear()
+
+        guard let currentFront = NSWorkspace.shared.frontmostApplication,
+              currentFront.processIdentifier == app.processIdentifier,
+              !currentFront.isTerminated else { return .unsupported }
+
         let pasteboard = NSPasteboard.general
         let snapshot = PasteboardSnapshot(pasteboard)
         let initialChangeCount = pasteboard.changeCount
@@ -733,6 +758,7 @@ public final class TextInjection: @unchecked Sendable {
               let down = CGEvent(keyboardEventSource: source, virtualKey: CGKeyCode(kVK_ANSI_C), keyDown: true),
               let up = CGEvent(keyboardEventSource: source, virtualKey: CGKeyCode(kVK_ANSI_C), keyDown: false)
         else { throw LocalFlowError.textInjectionFailed }
+        source.localEventsSuppressionInterval = 0
         down.flags = .maskCommand
         up.flags = .maskCommand
         down.post(tap: .cgAnnotatedSessionEventTap)

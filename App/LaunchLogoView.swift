@@ -58,6 +58,7 @@ public struct LaunchLogoView: View {
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.52) {
             // Gentle scale-and-settle into the resolved mark — continuous with the listening orb’s fluid character.
+            OnboardingSound.playResolve()
             showResolved = true
             resolvedScale = 0.86
             withAnimation(.spring(response: 0.55, dampingFraction: 0.78)) {
@@ -78,6 +79,21 @@ public struct LaunchLogoView: View {
     private func finish() {
         settings.didPlayLaunchAnimation = true
         completion()
+    }
+}
+
+@MainActor
+private enum OnboardingSound {
+    private static var player: NSSound?
+
+    static func playResolve() {
+        guard let url = Bundle.main.url(forResource: "OnboardingResolve", withExtension: "mp3"),
+              let sound = NSSound(contentsOf: url, byReference: true)
+        else { return }
+
+        sound.volume = 0.42
+        player = sound
+        sound.play()
     }
 }
 

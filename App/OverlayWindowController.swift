@@ -162,7 +162,10 @@ public final class OverlayWindowController {
             backing: .buffered,
             defer: false
         )
-        panel.level = .statusBar
+        // A status-bar-level panel may remain behind a different application's native
+        // full-screen window. screenSaver is the standard non-key overlay level that stays
+        // visible across full-screen Spaces without activating LocalFlow.
+        panel.level = .screenSaver
         panel.collectionBehavior = [.canJoinAllSpaces, .canJoinAllApplications, .fullScreenAuxiliary, .stationary]
         panel.backgroundColor = .clear
         panel.isOpaque = false

@@ -1,4 +1,5 @@
 import AppKit
+import Carbon.HIToolbox
 import Foundation
 import Shared
 
@@ -10,6 +11,7 @@ public enum CommandIntent: Equatable, Sendable {
     case mute
     case unmute
     case sleepDisplay
+    case lockScreen
     case spotifyControl(SpotifyPlaybackAction)
     case spotifySearchAndPlay(query: String, url: URL)
     case openURL(URL)
@@ -110,6 +112,7 @@ public final class CommandMode {
         if commandPhrase == "mute" { return .execute(.mute) }
         if commandPhrase == "unmute" { return .execute(.unmute) }
         if commandPhrase == "sleep display" { return .execute(.sleepDisplay) }
+        if commandPhrase == "lock it" { return .execute(.lockScreen) }
 
         if let spotifyAction = Self.spotifyAction(for: commandPhrase) {
             return .execute(.spotifyControl(spotifyAction))
@@ -232,6 +235,8 @@ public final class CommandMode {
             task.executableURL = URL(fileURLWithPath: "/usr/bin/pmset")
             task.arguments = ["displaysleepnow"]
             try? task.run()
+        case .lockScreen:
+            lockScreen()
         case .spotifyControl(let action):
             _ = SpotifyPlaybackController.perform(action)
         case .spotifySearchAndPlay(let query, let url):
@@ -325,5 +330,20 @@ public final class CommandMode {
         task.executableURL = URL(fileURLWithPath: "/usr/bin/osascript")
         task.arguments = ["-e", script]
         try? task.run()
+    }
+
+    /// Invokes macOS's native Lock Screen shortcut without AppleScript or Automation access.
+    private func lockScreen() {
+        guard let source = CGEventSource(stateID: .hidSystemState),
+              let keyDown = CGEvent(keyboardEventSource: source, virtualKey: CGKeyCode(kVK_ANSI_Q), keyDown: true),
+              let keyUp = CGEvent(keyboardEventSource: source, virtualKey: CGKeyCode(kVK_ANSI_Q), keyDown: false)
+        else { return }
+
+        source.localEventsSuppressionInterval = 0
+        let flags: CGEventFlags = [.maskCommand, .maskControl]
+        keyDown.flags = flags
+        keyUp.flags = flags
+        keyDown.post(tap: .cgAnnotatedSessionEventTap)
+        keyUp.post(tap: .cgAnnotatedSessionEventTap)
     }
 }

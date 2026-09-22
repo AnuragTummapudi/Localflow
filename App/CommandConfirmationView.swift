@@ -39,6 +39,7 @@ public struct CommandConfirmationView: View {
         case .mute: "Mute system audio?"
         case .unmute: "Unmute system audio?"
         case .sleepDisplay: "Sleep the display?"
+        case .lockScreen: "Lock this Mac?"
         case .spotifyControl(let action):
             switch action {
             case .resume: "Resume Spotify?"

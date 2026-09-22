@@ -244,6 +244,7 @@ private struct CommandModeSettingsView: View {
                 ("switch to [app name]", "Brings named app to front"),
                 ("mute / unmute", "Toggles system audio mute"),
                 ("sleep display", "Puts the display to sleep"),
+                ("lock it", "Locks this Mac immediately"),
                 ("open [URL]", "Opens the URL in the default browser"),
                 ("open [query] in [site]", "Searches query directly on YouTube, Google, GitHub, etc."),
                 ("search [query] on [site]", "Searches query on named platform or domain"),

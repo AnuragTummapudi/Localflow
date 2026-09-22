@@ -15,6 +15,14 @@ private struct MockCatalog: ApplicationCatalog {
 }
 
 final class FeaturesTests: XCTestCase {
+    func testLockItCommandExecutesImmediately() {
+        let commandMode = CommandMode(catalog: MockCatalog())
+
+        XCTAssertEqual(commandMode.resolve("lock it"), .execute(.lockScreen))
+        XCTAssertEqual(commandMode.resolve("Lock it."), .execute(.lockScreen))
+        XCTAssertEqual(commandMode.resolve("lock it!"), .execute(.lockScreen))
+    }
+
     func testHighConfidenceCommandExecutes() {
         let commandMode = CommandMode(catalog: MockCatalog())
 

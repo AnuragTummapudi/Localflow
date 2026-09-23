@@ -119,7 +119,7 @@ public final class CommandMode {
         }
 
         if let spotifySearch = searchRegistry.parseSpotifyPlayRequest(from: normalized) {
-            return .execute(.spotifySearchAndPlay(query: spotifySearch.query, url: spotifySearch.url))
+            return .execute(.searchWeb(query: spotifySearch.query, providerName: spotifySearch.providerName, url: spotifySearch.url))
         }
 
         // 1. In-site search commands: "open [query] in/on [site]", "search [query] on [site]", "search for [query]"
@@ -239,14 +239,7 @@ public final class CommandMode {
             lockScreen()
         case .spotifyControl(let action):
             _ = SpotifyPlaybackController.perform(action)
-        case .spotifySearchAndPlay(let query, let url):
-            // DictationCoordinator owns the product-facing asynchronous path. Keep this
-            // compatibility path for explicitly confirmed commands without inventing success UI.
-            _ = url
-            Task { @MainActor in
-                _ = await SpotifyPlaybackController.searchAndPlayTopResult(query: query) { _ in }
-            }
-        case .openURL(let url), .searchWeb(_, _, let url):
+        case .spotifySearchAndPlay(_, let url), .openURL(let url), .searchWeb(_, _, let url):
             let openAction = {
                 NSWorkspace.shared.open(url)
             }

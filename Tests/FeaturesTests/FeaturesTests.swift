@@ -211,18 +211,33 @@ final class FeaturesTests: XCTestCase {
         XCTAssertTrue(isSpotifyAppOrWeb, "Expected spotify deep link or web search URL, got \(url.absoluteString)")
     }
 
-    func testPlaySongOnSpotifySearchesThenAttemptsTopResultPlayback() {
+    func testPlaySongOnSpotifyOpensSearchQueryResults() {
         let commandMode = CommandMode(catalog: MockCatalog())
 
-        guard case .execute(.spotifySearchAndPlay(let query, let url)) = commandMode.resolve("play Midnight City by M83 on Spotify") else {
-            return XCTFail("Expected a Spotify search-and-play request")
+        guard case .execute(.searchWeb(let query, let provider, let url)) = commandMode.resolve("play Midnight City by M83 on Spotify") else {
+            return XCTFail("Expected a Spotify searchWeb request")
         }
 
         XCTAssertEqual(query, "Midnight City by M83")
+        XCTAssertEqual(provider, "Spotify")
         XCTAssertTrue(
             url.absoluteString.hasPrefix("spotify:search:") || url.absoluteString.hasPrefix("https://open.spotify.com/search/"),
             "Expected Spotify deep link or web search URL, got \(url.absoluteString)"
         )
+    }
+
+    func testPlaySongWithoutProviderSuffixResolvesToSpotifyWhenInstalled() {
+        let commandMode = CommandMode(catalog: MockCatalog())
+
+        // "play Bohemian Rhapsody" should resolve to Spotify search when Spotify is installed on this Mac
+        if NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.spotify.client") != nil {
+            guard case .execute(.searchWeb(let query, let provider, let url)) = commandMode.resolve("play Bohemian Rhapsody") else {
+                return XCTFail("Expected 'play Bohemian Rhapsody' to resolve to Spotify searchWeb")
+            }
+            XCTAssertEqual(query, "Bohemian Rhapsody")
+            XCTAssertEqual(provider, "Spotify")
+            XCTAssertTrue(url.absoluteString.hasPrefix("spotify:search:"))
+        }
     }
 
     func testSpotifyPlaybackCommandsResolveLocally() {

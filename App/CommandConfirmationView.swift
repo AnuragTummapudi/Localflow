@@ -47,7 +47,7 @@ public struct CommandConfirmationView: View {
             case .next: "Skip to Spotify's next track?"
             case .previous: "Go to Spotify's previous track?"
             }
-        case .spotifySearchAndPlay(let query, _): "Play Spotify's top result for \"\(query)\"?"
+        case .spotifySearchAndPlay(let query, _): "Search Spotify for \"\(query)\"?"
         case .openURL(let url): "Open \(url.absoluteString)?"
         case .searchWeb(let query, let provider, _): "Search \(provider) for \"\(query)\"?"
         }

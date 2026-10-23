@@ -4,9 +4,11 @@ import ModelManager
 import PrivacyDashboard
 
 /// View model for LocalFlow settings.
-public final class SettingsViewModel: ObservableObject {
+@MainActor public final class SettingsViewModel: ObservableObject {
     /// The shared settings store.
     public let settings: LocalFlowSettings
+
+    public let agentMemory: AgentMemoryStore
 
     /// The local history store.
     public let historyStore: DictationHistoryStore
@@ -17,15 +19,17 @@ public final class SettingsViewModel: ObservableObject {
     /// The privacy dashboard model.
     public let privacyModel = PrivacyDashboardModel()
 
-    /// The currently active engine display name (e.g. "Apple Speech", "Parakeet").
+    /// The currently active engine display name ("Apple Speech").
     @Published public var activeEngineName: String = "Not loaded"
 
     /// Creates the settings view model.
     public init(
         settings: LocalFlowSettings = .shared,
         historyStore: DictationHistoryStore = DictationHistoryStore(),
-        vocabularyStore: VocabularyStore = VocabularyStore()
+        vocabularyStore: VocabularyStore = VocabularyStore(),
+        agentMemory: AgentMemoryStore? = nil
     ) {
+        self.agentMemory = agentMemory ?? AgentMemoryStore()
         self.settings = settings
         self.historyStore = historyStore
         self.vocabularyStore = vocabularyStore

@@ -21,13 +21,15 @@
     <key>CFBundleVersion</key>
     <string>1</string>
     <key>LSMinimumSystemVersion</key>
-    <string>14.0</string>
+    <string>26.0</string>
     <key>LSUIElement</key>
     <false/>
     <key>NSMicrophoneUsageDescription</key>
-    <string>LocalFlow records your voice only while you hold the dictation hotkey so it can transcribe speech locally on this Mac.</string>
+    <string>LocalFlow records your voice only during your explicit dictation or Voice Agent session so it can transcribe speech locally on this Mac.</string>
     <key>NSAppleEventsUsageDescription</key>
-    <string>LocalFlow controls Spotify only when you use a spoken Spotify command to search, play, pause, resume, skip, or go back.</string>
+    <string>LocalFlow uses native Automation only for your explicit Notes, Spotify, and system audio commands.</string>
+    <key>NSRemindersFullAccessUsageDescription</key>
+    <string>LocalFlow creates reminders only when you explicitly request them and can undo an unchanged reminder it just created.</string>
     <key>NSHumanReadableCopyright</key>
     <string>LocalFlow is free, open-source software.</string>
     <key>ATSApplicationFontsPath</key>

@@ -14,7 +14,7 @@ private struct MockCatalog: ApplicationCatalog {
     }
 }
 
-final class FeaturesTests: XCTestCase {
+final class FeaturesTests: LocalSettingsTestCase {
     func testLockItCommandExecutesImmediately() {
         let commandMode = CommandMode(catalog: MockCatalog())
 
@@ -363,7 +363,7 @@ final class FeaturesTests: XCTestCase {
     }
 
     func testGmailFormattingDoesNotInventStructure() {
-        let formatter = SmartFormatting()
+        let formatter = SmartFormatting(settings: settings)
         let output = formatter.format("thanks for the update", profile: .gmail)
         XCTAssertEqual(output, "Thanks for the update.")
     }

@@ -12,6 +12,7 @@ public enum HotkeyEvent: Equatable, Sendable {
     case escape
     case polishShortcut
     case promptEngineerShortcut
+    case voiceAgentShortcut
 }
 
 /// Observes the global dictation hotkey, double-taps for hands-free, and Escape cancellation.
@@ -30,6 +31,8 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
     private var applicationActivationObserver: NSObjectProtocol?
     private var polishHotKeyRef: EventHotKeyRef?
     private var promptHotKeyRef: EventHotKeyRef?
+    private var agentHotKeyRef: EventHotKeyRef?
+    private var lastAgentDispatch = Date.distantPast
     private var carbonHandlerRef: EventHandlerRef?
     private var settingsCancellable: AnyCancellable?
     private var lastPolishDispatch = Date.distantPast
@@ -162,6 +165,9 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
             GetEventDispatcherTarget(), 0, &promptHotKeyRef
         )
         isPromptShortcutRegistered = promptStatus == noErr && promptHotKeyRef != nil
+        let agentID = EventHotKeyID(signature: OSType(0x4C46), id: 3)
+        RegisterEventHotKey(UInt32(kVK_Space), UInt32(cmdKey | shiftKey), agentID,
+                            GetEventDispatcherTarget(), 0, &agentHotKeyRef)
     }
 
     private func stopCarbonTransformHotkeys() {
@@ -172,6 +178,10 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
         if let promptHotKeyRef {
             UnregisterEventHotKey(promptHotKeyRef)
             self.promptHotKeyRef = nil
+        }
+        if let agentHotKeyRef {
+            UnregisterEventHotKey(agentHotKeyRef)
+            self.agentHotKeyRef = nil
         }
         if let carbonHandlerRef {
             RemoveEventHandler(carbonHandlerRef)
@@ -193,6 +203,10 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
             guard now.timeIntervalSince(lastPromptDispatch) > 0.18 else { return }
             lastPromptDispatch = now
             DispatchQueue.main.async { self.eventPublisher.send(.promptEngineerShortcut) }
+        case 3:
+            guard now.timeIntervalSince(lastAgentDispatch) > 0.18 else { return }
+            lastAgentDispatch = now
+            DispatchQueue.main.async { self.eventPublisher.send(.voiceAgentShortcut) }
         default:
             return
         }

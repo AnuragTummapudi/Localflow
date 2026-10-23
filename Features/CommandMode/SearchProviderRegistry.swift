@@ -80,6 +80,7 @@ public final class SearchProviderRegistry: @unchecked Sendable {
     /// The shared singleton instance with default providers.
     public static let shared = SearchProviderRegistry()
 
+    public var plannerProviderNames: [String] { lock.lock(); defer { lock.unlock() }; return providers.map(\.name) }
     private var providers: [SearchProvider]
     private let lock = NSLock()
 

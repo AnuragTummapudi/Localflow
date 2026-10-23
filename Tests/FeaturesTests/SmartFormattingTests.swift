@@ -3,9 +3,9 @@ import XCTest
 @testable import SmartFormatting
 @testable import SpeechCleanup
 
-final class SmartFormattingTests: XCTestCase {
+final class SmartFormattingTests: LocalSettingsTestCase {
     func testDestinationResolutionUsesOnlyExplicitAllowlist() {
-        let formatter = SmartFormatting()
+        let formatter = SmartFormatting(settings: settings)
         XCTAssertEqual(formatter.profile(for: "com.tinyspeck.slackmacgap"), .slack)
         XCTAssertEqual(formatter.profile(for: "com.google.Chrome", activeDomain: "app.slack.com"), .slack)
         XCTAssertEqual(formatter.profile(for: "com.google.Gmail"), .gmail)
@@ -16,7 +16,7 @@ final class SmartFormattingTests: XCTestCase {
     }
 
     func testNeutralFormattingPreservesTechnicalLiterals() {
-        let formatter = SmartFormatting()
+        let formatter = SmartFormatting(settings: settings)
         let output = formatter.format("fix userID in src/auth.ts with --dry-run at https://example.com", profile: .neutral)
         XCTAssertTrue(output.contains("userID"))
         XCTAssertTrue(output.contains("src/auth.ts"))
@@ -25,14 +25,14 @@ final class SmartFormattingTests: XCTestCase {
     }
 
     func testSlackFormattingIsLightAndGmailDoesNotInventStructure() {
-        let formatter = SmartFormatting()
+        let formatter = SmartFormatting(settings: settings)
         XCTAssertEqual(formatter.format("sounds good thanks", profile: .slack), "Sounds good thanks")
         XCTAssertEqual(formatter.format("thanks for the update", profile: .gmail), "Thanks for the update.")
     }
 
     func testDestinationPipelineRemovesFillersWithoutInventingContent() {
         let cleanup = SpeechCleanup()
-        let formatter = SmartFormatting()
+        let formatter = SmartFormatting(settings: settings)
         let gmailSource = "hi team uh can you send the notes before our call and flag anything that needs a decision"
         let gmail = formatter.format(cleanup.clean(gmailSource), profile: .gmail)
         XCTAssertFalse(gmail.lowercased().contains(" uh "))
@@ -50,7 +50,7 @@ final class SmartFormattingTests: XCTestCase {
     }
 
     func testNeutralDeveloperDictationNeverCreatesPromptLabels() {
-        let formatter = SmartFormatting()
+        let formatter = SmartFormatting(settings: settings)
         let output = formatter.format("fix login redirect in src/auth.ts keep public API unchanged and tell me which tests prove the fix", profile: .neutral)
         XCTAssertTrue(output.contains("src/auth.ts"))
         for forbidden in ["REQUEST", "CONSTRAINT", "OUTPUT", "You are a senior"] {
@@ -59,8 +59,8 @@ final class SmartFormattingTests: XCTestCase {
     }
 
     func testSpellingPunctuationAndVocabulary() {
-        let formatter = SmartFormatting()
-        let store = VocabularyStore()
+        let formatter = SmartFormatting(settings: settings)
+        let store = VocabularyStore(settings: settings)
         store.add(phrase: "LocalFlow")
         let output = formatter.format("i recieved the LocalFlow update .how do we ship it", profile: .neutral, vocabularyStore: store)
         XCTAssertEqual(output, "I received the LocalFlow update. How do we ship it?")

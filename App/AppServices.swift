@@ -13,6 +13,8 @@ public final class AppServices {
     /// Single vocabulary store shared by dictation and Settings panes.
     public let vocabularyStore: VocabularyStore
 
+    public let agentMemory: AgentMemoryStore
+
     /// The dictation coordinator for the running app.
     public let coordinator: DictationCoordinator
 
@@ -20,17 +22,21 @@ public final class AppServices {
     public let settingsViewModel: SettingsViewModel
 
     private init() {
+        let agentMemory = AgentMemoryStore()
+        self.agentMemory = agentMemory
         let historyStore = DictationHistoryStore()
         let vocabularyStore = VocabularyStore()
         self.historyStore = historyStore
         self.vocabularyStore = vocabularyStore
         self.coordinator = DictationCoordinator(
             historyStore: historyStore,
-            vocabularyStore: vocabularyStore
+            vocabularyStore: vocabularyStore,
+            agentMemory: agentMemory
         )
         self.settingsViewModel = SettingsViewModel(
             historyStore: historyStore,
-            vocabularyStore: vocabularyStore
+            vocabularyStore: vocabularyStore,
+            agentMemory: agentMemory
         )
     }
 }

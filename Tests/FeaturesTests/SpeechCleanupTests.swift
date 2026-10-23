@@ -2,7 +2,7 @@ import XCTest
 @testable import Shared
 @testable import SpeechCleanup
 
-final class SpeechCleanupTests: XCTestCase {
+final class SpeechCleanupTests: LocalSettingsTestCase {
     private var cleanup: SpeechCleanup!
 
     override func setUp() {
@@ -107,9 +107,6 @@ final class SpeechCleanupTests: XCTestCase {
     }
 
     func testCapitalizeRespectsCustomVocabularyCasing() {
-        let testDefaults = UserDefaults(suiteName: "SpeechCleanupTestsSuite")!
-        testDefaults.removePersistentDomain(forName: "SpeechCleanupTestsSuite")
-        let settings = LocalFlowSettings(defaults: testDefaults)
         let store = VocabularyStore(settings: settings)
         store.add(phrase: "iOS")
         store.add(phrase: "macOS")

@@ -5,7 +5,7 @@ import Shared
 import ModelManager
 import Engines
 
-/// First-run onboarding for permissions and Apple Speech (optional local fallback).
+/// First-run onboarding for permissions and Apple-managed Speech assets on macOS 26+.
 public struct OnboardingView: View {
     @EnvironmentObject private var coordinator: DictationCoordinator
     @State private var step: Step = LocalFlowSettings.shared.didPlayLaunchAnimation ? .microphone : .logo
@@ -62,143 +62,32 @@ public struct OnboardingView: View {
 
 private struct SpeechReadyStepView: View {
     @EnvironmentObject private var coordinator: DictationCoordinator
-    @ObservedObject private var modelManager = ModelManager.shared
-
+    @ObservedObject private var manager = ModelManager.shared
     @State private var isWorking = false
-    @State private var statusMessage = "Ready to enable Apple Speech"
     @State private var errorMessage: String?
-    @State private var appleReady = false
-
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text(appleSpeechEngineIsAvailable() ? "Enable Apple Speech" : "Prepare Local Model")
-                .font(LocalFlowDesign.instrumentSerif(size: 26))
-                .foregroundStyle(LocalFlowDesign.ink)
-
-            if appleSpeechEngineIsAvailable() {
-                Text("You're on macOS 26 — LocalFlow uses Apple's built-in on-device SpeechAnalyzer. No Hugging Face download is required to start dictating.")
-                    .font(LocalFlowDesign.generalSans(size: 14))
-                    .foregroundStyle(LocalFlowDesign.graphite)
-                    .fixedSize(horizontal: false, vertical: true)
-            } else {
-                Text("This Mac needs a local speech model (Parakeet or Whisper). This is the only network step.")
-                    .font(LocalFlowDesign.generalSans(size: 14))
-                    .foregroundStyle(LocalFlowDesign.graphite)
-                    .fixedSize(horizontal: false, vertical: true)
+            Text("Apple Speech · macOS 26+").font(LocalFlowDesign.instrumentSerif(size: 26))
+            Text("Apple installs and manages the required speech assets. After setup, speech recognition runs entirely on this Mac.")
+            SpeechLocalePicker { }
+            Text(manager.speechReadiness.detail)
+            if let progress = manager.progress {
+                ProgressView(value: progress.fractionCompleted)
+                Text(progress.stage).font(.caption)
             }
-
-            if isWorking || modelManager.progress != nil {
-                let fraction = modelManager.progress?.fractionCompleted ?? (isWorking ? 0.15 : 0)
-                ProgressView(value: fraction)
-                    .progressViewStyle(.linear)
-                    .tint(LocalFlowDesign.signal)
-                Text(modelManager.progress?.stage ?? statusMessage)
-                    .font(LocalFlowDesign.generalSans(size: 12))
-                    .foregroundStyle(LocalFlowDesign.graphite)
-            } else {
-                Text(statusMessage)
-                    .font(LocalFlowDesign.generalSans(size: 12))
-                    .foregroundStyle(LocalFlowDesign.graphite)
-            }
-
-            if let errorMessage {
-                HStack(alignment: .top, spacing: 8) {
-                    Image(systemName: "exclamationmark.triangle.fill")
-                        .foregroundStyle(.red)
-                    Text(errorMessage)
-                        .font(LocalFlowDesign.generalSans(size: 12))
-                        .foregroundStyle(.red)
-                        .fixedSize(horizontal: false, vertical: true)
+            if let errorMessage { Text(errorMessage).foregroundStyle(.red) }
+            Button(manager.modelsAvailable ? "Continue" : "Set up Apple Speech") {
+                Task {
+                    isWorking = true; errorMessage = nil
+                    do {
+                        try await coordinator.prepareModelsWithError()
+                        LocalFlowSettings.shared.didCompleteOnboarding = true
+                        NSApp.keyWindow?.close()
+                    } catch { errorMessage = error.localizedDescription }
+                    isWorking = false
                 }
-                .padding(10)
-                .background(
-                    RoundedRectangle(cornerRadius: 8)
-                        .fill(Color.red.opacity(0.07))
-                )
-            }
-
-            HStack(spacing: 12) {
-                Button(appleSpeechEngineIsAvailable() ? (appleReady ? "Continue" : "Enable Apple Speech") : "Download Model") {
-                    Task { await primaryAction() }
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(LocalFlowDesign.signal)
-                .disabled(isWorking)
-
-                if appleSpeechEngineIsAvailable() {
-                    Button("Also download Parakeet (optional)") {
-                        Task { await downloadParakeetOptional() }
-                    }
-                    .buttonStyle(.bordered)
-                    .disabled(isWorking)
-                }
-
-                if isWorking {
-                    ProgressView().controlSize(.small)
-                }
-            }
-
-            if appleSpeechEngineIsAvailable() {
-                Text("Parakeet is an optional local fallback. Download it later anytime in Settings → General.")
-                    .font(LocalFlowDesign.generalSans(size: 11))
-                    .foregroundStyle(LocalFlowDesign.graphite.opacity(0.85))
-            }
-        }
-        .padding(36)
-        .task {
-            appleReady = await appleSpeechModelIsInstalled()
-            if appleReady {
-                statusMessage = "Apple Speech is already installed on this Mac."
-            }
-        }
-    }
-
-    private func primaryAction() async {
-        if appleReady {
-            await finishWithAppleSpeech()
-            return
-        }
-        isWorking = true
-        errorMessage = nil
-        statusMessage = appleSpeechEngineIsAvailable()
-            ? "Installing Apple Speech assets…"
-            : "Downloading local model…"
-        do {
-            try await coordinator.prepareModelsWithError()
-            LocalFlowSettings.shared.didCompleteOnboarding = true
-            NSApp.keyWindow?.close()
-        } catch {
-            errorMessage = error.localizedDescription
-            isWorking = false
-        }
-    }
-
-    private func finishWithAppleSpeech() async {
-        isWorking = true
-        errorMessage = nil
-        do {
-            try await coordinator.prepareModelsWithError()
-            LocalFlowSettings.shared.didCompleteOnboarding = true
-            NSApp.keyWindow?.close()
-        } catch {
-            errorMessage = error.localizedDescription
-            isWorking = false
-        }
-    }
-
-    private func downloadParakeetOptional() async {
-        isWorking = true
-        errorMessage = nil
-        statusMessage = "Downloading Parakeet fallback…"
-        do {
-            try await ModelManager.shared.downloadModel(.parakeetTDT)
-            try await coordinator.prepareModelsWithError()
-            statusMessage = "Parakeet downloaded. You can continue."
-            appleReady = true
-        } catch {
-            errorMessage = error.localizedDescription
-        }
-        isWorking = false
+            }.buttonStyle(.borderedProminent).disabled(isWorking || manager.speechReadiness.status == .unavailable)
+        }.padding(36).task { await manager.refreshReadiness() }
     }
 }
 

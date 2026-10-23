@@ -83,7 +83,10 @@ public final class VocabularyStore: ObservableObject, @unchecked Sendable {
     }
 
     /// Applies custom vocabulary replacements and corrections to transcribed text.
-    public func apply(to text: String) -> String {
+    public func apply(to text: String, preserveOperationalPayload: Bool = false) -> String {
+        // Agent aliases are resolved by operational memory. Dictation shortcuts must
+        // not rewrite note/search/URL/reminder payloads inside an agent instruction.
+        if preserveOperationalPayload { return text }
         guard !text.isEmpty, !entries.isEmpty else { return text }
 
         // Sort: favorites first, then longer phrases first to prevent partial clobbering

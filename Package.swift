@@ -6,9 +6,11 @@ let package = Package(
     name: "LocalFlow",
     defaultLocalization: "en",
     platforms: [
-        .macOS(.v14)
+        .macOS("26.0")
     ],
     products: [
+        .executable(name: "localflow-planner-setup", targets: ["PlannerSetup"]),
+        .executable(name: "localflow-workflow-guard", targets: ["LocalFlowWorkflowGuard"]),
         .executable(name: "LocalFlow", targets: ["LocalFlowApp"]),
         .library(name: "Shared", targets: ["Shared"]),
         .library(name: "AudioCapture", targets: ["AudioCapture"]),
@@ -21,11 +23,11 @@ let package = Package(
         .library(name: "SpeechCleanup", targets: ["SpeechCleanup"]),
         .library(name: "PrivacyDashboard", targets: ["PrivacyDashboard"])
     ],
-    dependencies: [
-        .package(url: "https://github.com/FluidInference/FluidAudio.git", from: "0.12.4"),
-        .package(url: "https://github.com/argmaxinc/argmax-oss-swift.git", from: "0.9.0")
-    ],
+    dependencies: [],
     targets: [
+        .target(name: "PlannerReplyProtocol", path: "Core/ModelManager/Resources/PlannerRuntime/QwenHelper/Sources/PlannerReplyProtocol"),
+        .executableTarget(name: "PlannerSetup", dependencies: ["ModelManager", "CommandMode"], path: "Runtime/PlannerSetup"),
+        .executableTarget(name: "LocalFlowWorkflowGuard", path: "Core/ModelManager/Resources/PlannerRuntime/QwenHelper/Sources/WorkflowGuard"),
         .executableTarget(
             name: "LocalFlowApp",
             dependencies: [
@@ -56,21 +58,19 @@ let package = Package(
         .target(name: "Shared", path: "Shared"),
         .target(name: "AudioCapture", dependencies: ["Shared"], path: "Core/AudioCapture"),
         .target(name: "HotkeyManager", dependencies: ["Shared"], path: "Core/HotkeyManager"),
-        .target(name: "ModelManager", dependencies: ["Shared", "Engines"], path: "Core/ModelManager"),
+        .target(name: "ModelManager", dependencies: ["Shared", "Engines", "CommandMode"], path: "Core/ModelManager", resources: [.copy("Resources/DecisionPreparation"), .copy("Resources/PlannerRuntime")]),
         .target(name: "TextInjection", dependencies: ["Shared"], path: "Core/TextInjection"),
         .target(
             name: "Engines",
             dependencies: [
-                "Shared",
-                .product(name: "FluidAudio", package: "FluidAudio"),
-                .product(name: "WhisperKit", package: "argmax-oss-swift")
+                "Shared"
             ],
             path: "Engines",
             linkerSettings: [
                 .linkedFramework("Speech")
             ]
         ),
-        .target(name: "CommandMode", dependencies: ["Shared"], path: "Features/CommandMode"),
+        .target(name: "CommandMode", dependencies: ["Shared", "TextInjection"], path: "Features/CommandMode", resources: [.copy("Resources/laya-questions.json"), .copy("Resources/laya-v2-questions.json"), .copy("Resources/voice-agent-stability.json"), .copy("Resources/workflow-guard.json")]),
         .target(
             name: "SpeechCleanup",
             dependencies: ["Shared"],
@@ -81,10 +81,10 @@ let package = Package(
         ),
         .target(name: "SmartFormatting", dependencies: ["Shared"], path: "Features/SmartFormatting"),
         .target(name: "PrivacyDashboard", dependencies: ["Shared", "ModelManager"], path: "Features/PrivacyDashboard"),
-        .testTarget(name: "SharedTests", dependencies: ["Shared", "AudioCapture", "HotkeyManager", "ModelManager", "Engines"], path: "Tests/SharedTests"),
+        .testTarget(name: "SharedTests", dependencies: ["Shared", "AudioCapture", "HotkeyManager", "ModelManager", "Engines", "CommandMode"], path: "Tests/SharedTests"),
         .testTarget(
             name: "FeaturesTests",
-            dependencies: ["Shared", "CommandMode", "SpeechCleanup", "SmartFormatting", "TextInjection"],
+            dependencies: ["Shared", "CommandMode", "SpeechCleanup", "SmartFormatting", "TextInjection", "PlannerReplyProtocol"],
             path: "Tests/FeaturesTests"
         )
     ]

@@ -6,6 +6,196 @@ import ModelManager
 import Engines
 import TextInjection
 import SmartFormatting
+import CommandMode
+import AVFoundation
+
+#if DEBUG
+/// Uses the application's actual capture, parser, executor and readback receipts.
+/// All payload evidence is transient in this pane and cleared when it is closed.
+private struct AgentRealityGatePanel: View {
+    @ObservedObject var agent: VoiceAgentCoordinator
+    @EnvironmentObject private var coordinator: DictationCoordinator
+    @State private var enabled = false
+    @State private var step = 0
+    @State private var activeStep: Int?
+    @State private var evidence: [Int: VoiceAgentSnapshot] = [:]
+    @State private var expected: [Int: [AgentAction]] = [:]
+    @State private var error = ""
+    @State private var permissionRefresh = 0
+    @State private var confirmationTask: Task<Void, Never>?
+    private let instructions = [
+        "Microphone permission", "Accessibility permission", "Automation permission for Notes and Reminders",
+        "Say: Apple Speech transcript check", "Open Notes", "Create a note called LocalFlow Ideas",
+        "Append to current note Exact sentence from LocalFlow.", "Open Safari",
+        "Search for Norbert Wiener", "Open github.com",
+        "Create reminder Review LocalFlow Ideas", "Open Chrome",
+        "Open Notes, pause, Open Safari, pause, Open Chrome, pause, Open github.com — ONE continuous session",
+        "Open Chrome, actually Safari", "Open Notes then search for cancellation test — cancel pending action",
+        "Consequential confirmation preview — consume the grant without locking the Mac",
+        "Set volume to 40 percent, then mute — use guarded Undo to restore", "Pause Spotify",
+        "Open nonexistent application, then Open Safari", "Stop Voice Agent and restart; then Open Notes",
+        "Open Notes; Create a new note; Call it LocalFlow Ideas; Write hello from LocalFlow — pause between commands"
+    ]
+    var body: some View {
+        GroupBox("Developer reality gate · Debug only") {
+            VStack(alignment: .leading, spacing: 10) {
+                Toggle("Show transient live evidence", isOn: $enabled)
+                Text("Real microphone and native effects. Steps create one test note/reminder and append to that test note. Payloads stay in this pane's memory; closing it clears them. Browser request acceptance remains UNVERIFIED until observable readback proves completion.").font(.caption)
+                if enabled {
+                    Text("Step \(step + 1) of \(instructions.count): \(instructions[step])").font(.headline).textSelection(.enabled)
+                    controls
+                    if !error.isEmpty { Text(error).foregroundStyle(.red).textSelection(.enabled) }
+                    if let snapshot = evidence[step] { trace(snapshot) }
+                    else if enabled { trace(agent.snapshot) }
+                    HStack {
+                        Button("Previous") { step = max(0, step - 1) }.disabled(step == 0 || coordinator.state != .idle || agent.snapshot.isBusy)
+                        Button("Next") { step = min(instructions.count - 1, step + 1) }.disabled(step == instructions.count - 1 || coordinator.state != .idle || agent.snapshot.isBusy)
+                        Button("Clear Evidence") { evidence.removeAll(); expected.removeAll(); agent.clearDeveloperTrace(); agent.developerTraceEnabled = enabled }
+                    }
+                }
+            }.padding(6)
+        }
+        .onChange(of: enabled) { _, value in
+            if value { agent.developerTraceEnabled = true }
+            else { evidence.removeAll(); expected.removeAll(); activeStep = nil; agent.clearDeveloperTrace(); confirmationTask?.cancel(); coordinator.cancelRealityPreview() }
+        }
+        .onChange(of: agent.snapshot) { _, value in
+            if enabled, let activeStep {
+                evidence[activeStep] = value
+                if activeStep == 6, let grant = value.confirmation,
+                   case .currentNote(_, let captured?) = grant.action.arguments {
+                    let created = evidence[5]?.actions.first { $0.action.toolID == .createNote && $0.verification == .verified }
+                    if created?.output != .note(captured.id) {
+                        error = "FAILED — selected note differs from the verified test note. Append cancelled."
+                        agent.cancel()
+                    }
+                }
+            }
+        }
+        .onDisappear {
+            evidence.removeAll(); expected.removeAll(); activeStep = nil
+            agent.clearDeveloperTrace(); confirmationTask?.cancel(); confirmationTask = nil; coordinator.cancelRealityPreview()
+        }
+    }
+    @ViewBuilder private var controls: some View {
+        switch step {
+        case 0:
+            Text(AVCaptureDevice.authorizationStatus(for: .audio) == .authorized ? "VERIFIED — microphone permission granted" : "UNVERIFIED — microphone permission not granted").id(permissionRefresh)
+            Button("Request Microphone Permission") { Task { _ = await AVCaptureDevice.requestAccess(for: .audio); permissionRefresh += 1 } }
+        case 1:
+            Text(TextInjection().isAccessibilityTrusted() ? "VERIFIED — Accessibility trust granted" : "UNVERIFIED — Accessibility trust not granted")
+            Button("Open Accessibility Settings") { TextInjection().openAccessibilitySettings() }
+            Button("Refresh Permission Status") { permissionRefresh += 1 }
+        case 2:
+            Text("UNVERIFIED until the following real Notes/Reminders actions receive permission and read back their changes. Grant only the Automation prompts you approve.")
+            Button("Open Automation Settings") { openPermissionSettings("Privacy_Automation") }
+        case 15:
+            Text(coordinator.realityConfirmationStatus).textSelection(.enabled)
+            HStack {
+                Button("Prepare Real Confirmation") { confirmationTask = Task { await coordinator.prepareRealityConfirmation() } }
+                    .disabled(coordinator.state != .idle || agent.snapshot.isBusy || coordinator.realityPreviewPreparing)
+                Button("Confirm Preview Without Effect") { coordinator.confirmRealityPreview() }.disabled(coordinator.realityConfirmation == nil)
+                Button("Cancel Preview") { confirmationTask?.cancel(); coordinator.cancelRealityPreview() }
+                    .disabled(coordinator.realityConfirmation == nil && !coordinator.realityPreviewPreparing)
+            }
+        default:
+            if step == 14 { Text("Press Cancel while an action is executing. Cancellation after an effect was sent cannot retract it; inspect the receipt and phase below.").font(.caption) }
+            HStack {
+                Button("Start Real Spoken Step") {
+                    if step == 6, evidence[5]?.actions.contains(where: { $0.action.toolID == .createNote && $0.verification == .verified }) != true {
+                        error = "Create and verify the test note in step 6 before appending."
+                        return
+                    }
+                    let selectedStep = step
+                    error = ""; activeStep = selectedStep; evidence[selectedStep] = VoiceAgentSnapshot()
+                    if step > 3 {
+                        let commands = CommandMode().forAgentSession(memory: coordinator.agentMemory.memory)
+                        let parts = try? commands.segments(instructions[step])
+                        expected[step] = parts?.compactMap { part in
+                            if let action = SpeechCommandSegmenter.noteAction(part.text) { return action }
+                            switch commands.resolve(part.text) {
+                            case .execute(let intent), .needsConfirmation(let intent): return intent.agentAction
+                            case .notCommand: return nil
+                            }
+                        }
+                        // Payload gold is explicit, not produced by the parser under test.
+                        switch step {
+                        case 5: expected[step] = [AgentAction(toolID: .createNote, arguments: .note(title: "LocalFlow Ideas", body: ""))]
+                        case 6: expected[step] = [AgentAction(toolID: .appendNote, arguments: .currentNote("Exact sentence from LocalFlow."))]
+                        case 9: expected[step] = [AgentAction(toolID: .openURL, arguments: .url(URL(string: "https://github.com")!))]
+                        case 10: expected[step] = [AgentAction(toolID: .createReminder, arguments: .reminder(title: "Review LocalFlow Ideas"))]
+                        default: break
+                        }
+                    }
+                    Task {
+                        await coordinator.beginVoiceAgent()
+                        if selectedStep == 6, coordinator.state == .listening {
+                            // Settings was clicked to start capture. Restore Notes for
+                            // the current-note tool; the island itself remains non-key.
+                            NSRunningApplication.runningApplications(withBundleIdentifier: "com.apple.Notes").first?.activate(options: [.activateIgnoringOtherApps])
+                        }
+                    }
+                }.disabled(coordinator.state != .idle || agent.snapshot.isBusy || agent.snapshot.confirmation != nil)
+                Button("Finish Speech") {
+                    Task {
+                        if activeStep == 6 { restoreNotesFocus() }
+                        await coordinator.endDictation()
+                    }
+                }.disabled(coordinator.state != .listening)
+                Button("Cancel") { coordinator.cancelHandsFreeSession() }.disabled(coordinator.state == .idle && !agent.snapshot.isBusy && agent.snapshot.confirmation == nil)
+                if agent.snapshot.confirmation != nil {
+                    Button("Confirm Native Action") { Task { if activeStep == 6 { restoreNotesFocus() }; await agent.confirm() } }
+                }
+            }
+            if let message = coordinator.lastErrorMessage { Text("FAILED — " + message).foregroundStyle(.red) }
+        }
+    }
+    private func openPermissionSettings(_ pane: String) {
+        if let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?" + pane) { NSWorkspace.shared.open(url) }
+    }
+    private func restoreNotesFocus() {
+        NSRunningApplication.runningApplications(withBundleIdentifier: "com.apple.Notes").first?.activate(options: [.activateIgnoringOtherApps])
+    }
+    @ViewBuilder private func trace(_ snapshot: VoiceAgentSnapshot) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text("Volatile / original: " + snapshot.streamingTranscript)
+            Text("Finalized / original: " + snapshot.finalizedTranscript)
+            Text("Chosen interpretation: " + snapshot.transcript)
+            ForEach(snapshot.speechInterpretations, id: \.phraseID) { phrase in
+                Text("Phrase \(phrase.phraseID): \(phrase.original) → \(phrase.selected) · alternative used: \(phrase.rescued) · alternatives: \(phrase.alternatives.joined(separator: " | "))")
+            }
+            Text("Final: " + (snapshot.isFinal ? snapshot.transcript : "UNVERIFIED — awaiting final"))
+            Text("Speech source: " + (snapshot.speechSource ?? "streaming partial"))
+            DisclosureGroup("Live stream diagnostics (in memory only)") {
+                Text("Seen \(snapshot.seenWordCount) · stable \(snapshot.stabilizedWordCount) · consumed \(snapshot.consumedWordCursor)")
+                ForEach(Array(snapshot.streamTrace.enumerated()), id: \.offset) { _, item in
+                    Text("\(item.event) session=\(item.sessionID) revision=\(item.revision)\nTranscript: \(item.transcript)\nPrevious stable: \(item.previousStablePrefix)\nStable: \(item.stablePrefix)\nConsumed: \(item.consumedWordCursor), next: \(item.nextUnconsumedRange)\n\(item.candidates.joined(separator: "; "))\n\(item.ledger.joined(separator: "; "))\n\(item.details)")
+                }
+            }
+            ForEach(Array(snapshot.decisionTrace.enumerated()), id: \.offset) { _, item in
+                Text("Segment \(item.segment): \(item.text)\nParsed: \(item.parsed)\nQuestions/results: \(String(describing: item.questions))\nDecision source: \(item.source) · confidence: \(item.confidence.map { String(format: "%.4f", $0) } ?? "not used") · accepted: \(item.accepted.map(String.init) ?? "not used")")
+            }
+            ForEach(snapshot.actions) { record in
+                Text("Tool: \(record.action.toolID.rawValue)\nExact arguments: \(String(describing: record.action.arguments))\nReceipt: \(record.detail)\nOutput: \(record.output.map { String(describing: $0) } ?? "none received")\nPhase: \(record.phase.rawValue) · \(verification(record.verification))")
+            }
+            if snapshot.isFinal, let slots = expected[step], !slots.isEmpty {
+                let result = AgentBenchmarkResult(scenario: step + 1, mode: "developer-real-microphone-native", snapshot: snapshot, expected: slots)
+                Text("Exact invocation comparator: incorrect \(result.incorrectActionRate), missing \(result.missingActions), duplicate \(result.duplicateActionRate). Verification is separately reported above.")
+            }
+            Text("Timings: " + snapshot.timings.map { "\($0.kind.rawValue) \(String(format: "%.1f", $0.milliseconds)) ms" }.joined(separator: " · "))
+            Text(snapshot.notice)
+        }.font(.system(.caption, design: .monospaced)).textSelection(.enabled)
+    }
+    private func verification(_ value: ToolVerification?) -> String {
+        switch value {
+        case .verified: return "VERIFIED"
+        case .unverified(let reason): return "UNVERIFIED — " + reason
+        case .failed(let reason): return "FAILED — " + reason
+        case nil: return "UNVERIFIED — no completion receipt"
+        }
+    }
+}
+#endif
 
 // MARK: - Settings Root
 
@@ -66,6 +256,8 @@ public struct SettingsRootView: View {
             InsightsPane(store: viewModel.historyStore)
         case .dictionary:
             DictionaryPane(store: viewModel.vocabularyStore)
+        case .agent:
+            AgentSettingsView(store: viewModel.agentMemory)
         case .commandMode:
             CommandModeSettingsView()
         case .smartFormatting:
@@ -189,6 +381,7 @@ private enum SettingsPane: String, CaseIterable, Identifiable {
     case insights
     case dictionary
     case commandMode
+    case agent
     case smartFormatting
     case privacyDashboard
     case general
@@ -200,6 +393,7 @@ private enum SettingsPane: String, CaseIterable, Identifiable {
         case .dictation: "Dictation"
         case .insights: "Insights"
         case .dictionary: "Dictionary"
+        case .agent: "Agent / Mac Control"
         case .commandMode: "Command Mode"
         case .smartFormatting: "Smart Formatting"
         case .privacyDashboard: "Privacy Dashboard"
@@ -212,6 +406,7 @@ private enum SettingsPane: String, CaseIterable, Identifiable {
         case .dictation: "mic.fill"
         case .insights: "chart.xyaxis.line"
         case .dictionary: "character.cursor.ibeam"
+        case .agent: "desktopcomputer"
         case .commandMode: "command"
         case .smartFormatting: "text.badge.checkmark"
         case .privacyDashboard: "hand.raised.fill"
@@ -345,125 +540,22 @@ public struct GeneralSettingsView: View {
                     }
                 }
 
-                // Engine status
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Speech Engine")
-                        .font(LocalFlowDesign.instrumentSerif(size: 18))
-                        .foregroundStyle(LocalFlowDesign.ink)
-
-                    HStack(spacing: 10) {
-                        Image(systemName: coordinator.isEngineReady ? "checkmark.circle.fill" : "exclamationmark.triangle.fill")
-                            .foregroundStyle(coordinator.isEngineReady ? LocalFlowDesign.signal : LocalFlowDesign.marker)
-                        Text(coordinator.isEngineReady
-                             ? (viewModel.activeEngineName == "Not loaded" ? coordinator.activeEngineName : viewModel.activeEngineName)
-                             : "Not loaded — enable Apple Speech or download a local model")
-                            .font(LocalFlowDesign.generalSans(size: 13))
-                            .foregroundStyle(LocalFlowDesign.ink)
-                        Spacer()
+                    Text("Speech · macOS 26+").font(LocalFlowDesign.instrumentSerif(size: 18))
+                    Text(ModelManager.shared.speechReadiness.detail)
+                    SpeechLocalePicker { Task { await prepareModel() } }
+                    Text("Apple manages speech assets. Transcription stays on this Mac after setup.").font(.caption)
+                    if let prepareMessage { Text(prepareMessage).font(.caption) }
+                    if let error = coordinator.lastErrorMessage { Text(error).foregroundStyle(.red).font(.caption) }
+                    LFPrimaryButton(isPreparingModel ? "Preparing…" : "Set up Apple Speech", enabled: !isPreparingModel) {
+                        Task { await prepareModel() }
                     }
-                    .padding(14)
-                    .background(LocalFlowDesign.cardBackground(cornerRadius: 16))
-
-                    if appleSpeechEngineIsAvailable() {
-                        HStack(alignment: .top, spacing: 10) {
-                            Image(systemName: "apple.logo")
-                                .foregroundStyle(LocalFlowDesign.signal)
-                                .padding(.top, 1)
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text("Apple Speech (primary)")
-                                    .font(LocalFlowDesign.generalSans(size: 13, weight: .medium))
-                                    .foregroundStyle(LocalFlowDesign.ink)
-                                Text("On-device SpeechAnalyzer on macOS 26. No Hugging Face download required.")
-                                    .font(LocalFlowDesign.generalSans(size: 12))
-                                    .foregroundStyle(LocalFlowDesign.graphite)
-                                    .fixedSize(horizontal: false, vertical: true)
-                            }
-                        }
-                        .padding(14)
-                        .background(
-                            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                .fill(LocalFlowDesign.signal.opacity(0.07))
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                        .strokeBorder(LocalFlowDesign.signal.opacity(0.2), lineWidth: 1)
-                                )
-                        )
-                    }
-
-                    if let prepareMessage {
-                        Text(prepareMessage)
-                            .font(LocalFlowDesign.generalSans(size: 12))
-                            .foregroundStyle(LocalFlowDesign.graphite)
-                    }
-                    if let err = coordinator.lastErrorMessage {
-                        Text(err)
-                            .font(LocalFlowDesign.generalSans(size: 12))
-                            .foregroundStyle(LocalFlowDesign.marker)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-
-                    HStack(spacing: 12) {
-                        LFPrimaryButton(
-                            isPreparingModel ? "Preparing…" : (appleSpeechEngineIsAvailable() ? "Enable / Reload Apple Speech" : "Download / Prepare Model"),
-                            enabled: !isPreparingModel
-                        ) {
-                            Task { await prepareModel() }
-                        }
-                        if isPreparingModel {
-                            ProgressView().controlSize(.small)
-                        }
-                    }
-
-                    if appleSpeechEngineIsAvailable() {
-                        VStack(alignment: .leading, spacing: 10) {
-                            Text("Optional local fallbacks")
-                                .font(LocalFlowDesign.generalSans(size: 13, weight: .medium))
-                                .foregroundStyle(LocalFlowDesign.ink)
-                            Text("Download Parakeet or Whisper if you want a second engine when Apple Speech fails or returns empty text. Already-downloaded models are used automatically as fallback.")
-                                .font(LocalFlowDesign.generalSans(size: 12))
-                                .foregroundStyle(LocalFlowDesign.graphite)
-                                .fixedSize(horizontal: false, vertical: true)
-
-                            HStack(spacing: 10) {
-                                Button {
-                                    Task { await downloadFallback(.parakeetTDT) }
-                                } label: {
-                                    Text(ModelManager.shared.localModelExists(for: .parakeetTDT) ? "Parakeet ✓" : "Download Parakeet")
-                                        .font(LocalFlowDesign.generalSans(size: 12, weight: .medium))
-                                        .foregroundStyle(LocalFlowDesign.ink)
-                                        .padding(.horizontal, 12)
-                                        .frame(height: 32)
-                                        .background(
-                                            Capsule(style: .continuous)
-                                                .fill(LocalFlowDesign.card)
-                                                .overlay(Capsule(style: .continuous).strokeBorder(LocalFlowDesign.hairline, lineWidth: 1))
-                                        )
-                                }
-                                .buttonStyle(.plain)
-                                .disabled(isPreparingModel)
-
-                                Button {
-                                    Task { await downloadFallback(.whisperLargeV3Turbo) }
-                                } label: {
-                                    Text(ModelManager.shared.localModelExists(for: .whisperLargeV3Turbo) ? "Whisper ✓" : "Download Whisper")
-                                        .font(LocalFlowDesign.generalSans(size: 12, weight: .medium))
-                                        .foregroundStyle(LocalFlowDesign.ink)
-                                        .padding(.horizontal, 12)
-                                        .frame(height: 32)
-                                        .background(
-                                            Capsule(style: .continuous)
-                                                .fill(LocalFlowDesign.card)
-                                                .overlay(Capsule(style: .continuous).strokeBorder(LocalFlowDesign.hairline, lineWidth: 1))
-                                        )
-                                }
-                                .buttonStyle(.plain)
-                                .disabled(isPreparingModel)
-                            }
-                        }
-                        .padding(14)
-                        .background(LocalFlowDesign.cardBackground(cornerRadius: 16))
+                    if let progress = ModelManager.shared.progress {
+                        ProgressView(value: progress.fractionCompleted)
+                        Text(progress.stage).font(.caption)
                     }
                 }
+                AgentReadinessView()
 
                 // Hotkey — custom card selector (not stock Picker)
                 VStack(alignment: .leading, spacing: 12) {
@@ -510,55 +602,8 @@ public struct GeneralSettingsView: View {
                             }
                         )
                     )
-                    Divider().background(LocalFlowDesign.hairline)
-                    SettingsToggleRow(
-                        title: "Show advanced options",
-                        subtitle: "Reveal model override controls below.",
-                        isOn: Binding(
-                            get: { viewModel.settings.showAdvancedOptions },
-                            set: { viewModel.settings.showAdvancedOptions = $0 }
-                        )
-                    )
                 }
                 .background(LocalFlowDesign.cardBackground(cornerRadius: 16))
-
-                if viewModel.settings.showAdvancedOptions {
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("Model override")
-                            .font(LocalFlowDesign.instrumentSerif(size: 18))
-                            .foregroundStyle(LocalFlowDesign.ink)
-
-                        Text("Automatic keeps Apple Speech first (on macOS 26). Choosing Parakeet or Whisper forces that local model.")
-                            .font(LocalFlowDesign.generalSans(size: 12))
-                            .foregroundStyle(LocalFlowDesign.graphite)
-
-                        HStack(spacing: 10) {
-                            ForEach(ModelTier.allCases) { tier in
-                                let selected = (viewModel.settings.modelOverride ?? .automatic) == tier
-                                Button {
-                                    viewModel.settings.modelOverride = tier
-                                    Task { await prepareModel() }
-                                } label: {
-                                    Text(tier.displayName)
-                                        .font(LocalFlowDesign.generalSans(size: 13, weight: .medium))
-                                        .foregroundStyle(selected ? Color.white : LocalFlowDesign.ink)
-                                        .padding(.horizontal, 14)
-                                        .frame(height: 36)
-                                        .background(
-                                            Capsule(style: .continuous)
-                                                .fill(selected ? LocalFlowDesign.signal : LocalFlowDesign.card)
-                                                .overlay(
-                                                    Capsule(style: .continuous)
-                                                        .strokeBorder(selected ? Color.clear : LocalFlowDesign.hairline, lineWidth: 1)
-                                                )
-                                        )
-                                }
-                                .buttonStyle(.plain)
-                                .disabled(isPreparingModel)
-                            }
-                        }
-                    }
-                }
 
                 Spacer(minLength: 24)
             }
@@ -580,9 +625,7 @@ public struct GeneralSettingsView: View {
 
     private func prepareModel() async {
         isPreparingModel = true
-        prepareMessage = appleSpeechEngineIsAvailable()
-            ? "Enabling Apple Speech…"
-            : "Downloading / loading model — this can take a few minutes the first time…"
+        prepareMessage = "Setting up Apple Speech…"
         do {
             try await coordinator.prepareModelsWithError()
             prepareMessage = "Ready: \(coordinator.activeEngineName)"
@@ -593,19 +636,7 @@ public struct GeneralSettingsView: View {
         isPreparingModel = false
     }
 
-    private func downloadFallback(_ tier: ModelTier) async {
-        isPreparingModel = true
-        prepareMessage = "Downloading \(tier.displayName)…"
-        do {
-            try await ModelManager.shared.downloadModel(tier)
-            try await coordinator.prepareModelsWithError()
-            prepareMessage = "Ready: \(coordinator.activeEngineName)"
-            viewModel.activeEngineName = coordinator.activeEngineName
-        } catch {
-            prepareMessage = error.localizedDescription
-        }
-        isPreparingModel = false
-    }
+
 }
 
 private struct HotkeyOptionCard: View {
@@ -1038,5 +1069,365 @@ public struct PrivacySettingsView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(LocalFlowDesign.canvas)
         .onAppear { model.refresh() }
+    }
+}
+
+// Matches the existing General/Privacy panes: same canvas, pane title, native controls.
+private struct AgentSettingsView: View {
+    @ObservedObject var store: AgentMemoryStore
+    @ObservedObject private var planner = PlannerModelManager.shared
+    @State private var plannerGoal = ""
+    @State private var plannerThinking = false
+    @State private var plannerTask: Task<Void, Never>?
+    @ObservedObject private var models = DecisionModelManager.shared
+    @EnvironmentObject private var coordinator: DictationCoordinator
+    @State private var draft = ""
+    @State private var message = ""
+    @State private var bytes: Int64 = 0
+    @State private var modelTask: Task<Void, Never>?
+    @State private var modelBusy = false
+    @State private var resetRequested = false
+    @State private var removeRequested = false
+    @State private var mappingName = ""
+    @State private var benchmarkIndex = 1
+    @State private var applications: [ApplicationMatch] = []
+    @State private var aliasKind = "application"
+    @State private var aliasName = ""
+    @State private var aliasValue = ""
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 18) {
+                LFPaneTitle("Agent / Mac Control")
+                Text("Operational preferences stay on this Mac. Nothing is learned from conversations. Changes apply to the next agent session.")
+                    .foregroundStyle(LocalFlowDesign.graphite)
+                GroupBox("System-2 Planner") {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Qwen3.5-4B · " + planner.status.rawValue)
+                        Text(planner.resident ? "Warm / resident" : "Unloaded").font(.caption)
+                        Text(ByteCountFormatter.string(fromByteCount: planner.diskBytes, countStyle: .file) + " · " + String(planner.revision.prefix(12))).font(.caption)
+                        if let progress = planner.progress { ProgressView(value: progress.fractionCompleted); Text(progress.stage).font(.caption) }
+                        if let error = planner.error { Text(error).font(.caption).foregroundStyle(.red) }
+                        HStack {
+                            Button("Download") { plannerTask = Task { do { try await planner.download(); await planner.refreshDiskUsage() } catch { message = error.localizedDescription } } }
+                                .disabled(planner.busy || planner.isInstalled)
+                            Button("Prepare / Load") { plannerTask = Task { do { try await planner.prepare(schemas: coordinator.plannerToolSchemas) } catch { message = error.localizedDescription } } }
+                                .disabled(planner.busy || !planner.isInstalled || planner.resident)
+                            Button("Unload") { plannerTask = Task { await planner.unload() } }.disabled(!planner.resident || planner.busy)
+                            Button("Cancel") { plannerTask?.cancel(); Task { await planner.cancel() } }.disabled(!planner.busy)
+                            Button("Remove", role: .destructive) { plannerTask = Task { do { try await planner.remove() } catch { message = error.localizedDescription } } }
+                                .disabled(planner.busy || !planner.isInstalled)
+                        }
+                        Toggle("Experimental Planner", isOn: Binding(get: { planner.experimentalEnabled }, set: { planner.experimentalEnabled = $0; if !$0 && coordinator.isTypedPlannerSession { coordinator.cancelTypedPlanner() } }))
+                        Text("Explicit typed requests only. Automatic voice fallback awaits the planner quality gate.").font(.caption)
+                        #if DEBUG
+                        TextField("Typed planner goal", text: $plannerGoal)
+                        Toggle("Thinking mode (benchmark)", isOn: $plannerThinking)
+                        Button("Run typed request") { coordinator.runTypedPlanner(goal: plannerGoal, thinking: plannerThinking) }
+                            .disabled(!coordinator.canRunTypedRequest(plannerGoal))
+                        if coordinator.voiceAgent.snapshot.plannerNeedsContinuation {
+                            Button("Continue (up to 16 more actions)") { coordinator.continueTypedPlannerAfterUserApproval() }
+                        }
+                        Text("Saved projects and approved executable workflows are edited in operational JSON below. Prepare the pinned native helper with Scripts/prepare-planner.sh before loading.").font(.caption)
+                        if let metrics = planner.lastGenerationMetrics {
+                            Text(String(format: "TTFT %.0f ms · first call %.0f ms · %.1f tokens/s", metrics.ttftMS, metrics.firstToolCallMS, metrics.tokensPerSecond)).font(.caption)
+                        }
+                        #endif
+                    }.frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .task { await planner.refreshDiskUsage() }
+                GroupBox("Local decision model") {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text(models.isInstalled ? "Laya installed" : "Laya not installed")
+                        Text(models.status.description)
+                        Text("Model disk usage: \(ByteCountFormatter.string(fromByteCount: bytes, countStyle: .file))")
+                        if let progress = models.progress {
+                            Text(progress.stage)
+                            ProgressView(value: progress.fractionCompleted)
+                        }
+                        HStack {
+                            Button("Install LocalFlow-Laya-v2…") { installDecisionModel() }
+                                .disabled(modelBusy || models.isBusy || coordinator.state != .idle)
+                            Button("Cancel Installation") { modelTask?.cancel() }.disabled(!modelBusy)
+                            Button("Remove Model", role: .destructive) { removeRequested = true }
+                                .disabled(!models.isInstalled || modelBusy || models.isBusy || coordinator.state != .idle)
+                        }
+                        .disabled(models.isBusy && !modelBusy)
+                        Text("Supported commands remain available when Laya is absent or abstains.").font(.caption)
+                    }.frame(maxWidth: .infinity, alignment: .leading)
+                }
+                Toggle("Enable real-time agent (⌘⇧Space)", isOn: Binding(
+                    get: { store.memory.realTimeEnabled }, set: { enabled in update { $0.realTimeEnabled = enabled } }))
+                Picker("Confirmation policy", selection: Binding(
+                    get: { store.memory.confirmAllActions }, set: { all in update { $0.confirmAllActions = all } })) {
+                    Text("Consequential and uncertain actions").tag(false)
+                    Text("Every action").tag(true)
+                }
+                Text("Quitting apps, replacing text, and changing existing notes always require confirmation.").font(.caption)
+                GroupBox("Preferred apps") {
+                    VStack(alignment: .leading, spacing: 10) {
+                        ForEach(["browser", "editor", "terminal"], id: \.self) { role in
+                            preferredAppPicker(role)
+                        }
+                    }.padding(6)
+                }
+                GroupBox("Aliases, folders, websites & workflows") {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Picker("Add", selection: $aliasKind) {
+                            Text("Application alias").tag("application")
+                            Text("Folder / project").tag("folder")
+                            Text("Website alias").tag("website")
+                            Text("Workflow").tag("workflow")
+                        }
+                        TextField("Name (for example, placement portal)", text: $aliasName)
+                        if aliasKind == "workflow" {
+                            Text("One supported command per line. Text payloads remain intact.").font(.caption)
+                            TextEditor(text: $aliasValue).frame(height: 80).accessibilityLabel("Workflow commands")
+                        } else {
+                            TextField(aliasKind == "website" ? "Full website URL" : aliasKind == "folder" ? "Absolute folder path" : "Application name or bundle identifier", text: $aliasValue)
+                        }
+                        HStack {
+                            Button("Add / Update") { addAlias() }.disabled(aliasName.trimmingCharacters(in: .whitespaces).isEmpty)
+                            if aliasKind == "folder" {
+                                Button("Choose Folder…") {
+                                    let panel = NSOpenPanel(); panel.canChooseDirectories = true; panel.canChooseFiles = false
+                                    panel.allowsMultipleSelection = false
+                                    if panel.runModal() == .OK, let url = panel.url { aliasValue = url.path }
+                                }
+                            }
+                        }
+                        Text("Review or remove entries in the editable JSON. Save applies the complete configuration; Reload discards unsaved JSON edits.").font(.caption)
+                        TextEditor(text: $draft).font(.system(.body, design: .monospaced)).frame(minHeight: 260)
+                            .accessibilityLabel("Operational memory JSON")
+                        HStack {
+                            Button("Save Memory") { saveDraft() }
+                            Button("Reload from Disk") { store.reload(); refreshDraft() }
+                            Button("Reveal JSON") {
+                                do {
+                                    if !FileManager.default.fileExists(atPath: store.fileURL.path) { try store.save(store.memory) }
+                                    NSWorkspace.shared.activateFileViewerSelecting([store.fileURL])
+                                } catch { message = error.localizedDescription }
+                            }
+                        }
+                        Text(store.fileURL.path).font(.caption).textSelection(.enabled)
+                    }.padding(6)
+                }
+                GroupBox("Approve a successful command mapping") {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Save the last verified single command under a name you choose. Consequential actions are excluded.")
+                        Text(coordinator.voiceAgent.snapshot.transcript.isEmpty ? "No instruction to approve yet." : coordinator.voiceAgent.snapshot.transcript)
+                            .font(.system(.body, design: .monospaced)).textSelection(.enabled)
+                        TextField("Mapping name", text: $mappingName)
+                        Button("Approve & Save Last Command") {
+                            do { try coordinator.voiceAgent.approveSuccessfulCommand(as: mappingName); refreshDraft(); message = "Approved command saved." }
+                            catch { message = error.localizedDescription }
+                        }.disabled(mappingName.trimmingCharacters(in: .whitespaces).isEmpty)
+                    }.padding(6)
+                }
+                if !message.isEmpty { Text(message).textSelection(.enabled) }
+                if let error = store.error { Text(error).foregroundStyle(.red) }
+                GroupBox("Activity / history · last 200 actions") {
+                    LazyVStack(alignment: .leading, spacing: 6) {
+                        if store.activity.isEmpty { Text("No agent activity yet.") }
+                        ForEach(store.activity.reversed()) { event in
+                            Text("\(event.date.formatted(date: .abbreviated, time: .shortened)) · \(event.tool) · \(event.outcome) · \(Int(event.milliseconds)) ms").font(.caption)
+                        }
+                    }.frame(maxWidth: .infinity, alignment: .leading).padding(6)
+                }
+                GroupBox("Daily-use benchmark") {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Picker("Scenario", selection: $benchmarkIndex) {
+                            ForEach(AgentBenchmarkScenario.daily) { scenario in
+                                Text("\(scenario.id). \(scenario.instruction)").tag(scenario.id)
+                            }
+                        }
+                        Text("Start, say the selected instruction, then press Finish in the island. Confirm when prompted. This uses real apps and creates a benchmark note/reminder; camera capture is not triggered.").font(.caption)
+                        HStack {
+                            Button("Start Spoken Benchmark") {
+                                Task { @MainActor in
+                                    do { try await coordinator.beginBenchmark(AgentBenchmarkScenario.daily[benchmarkIndex - 1]) }
+                                    catch { message = error.localizedDescription }
+                                }
+                            }.disabled(coordinator.state != .idle || !store.memory.realTimeEnabled)
+                            Button("Export Measurements") {
+                                do { NSWorkspace.shared.activateFileViewerSelecting([try coordinator.exportBenchmarks()]) }
+                                catch { message = error.localizedDescription }
+                            }.disabled(coordinator.benchmarkResults.isEmpty)
+                        }
+                        ForEach(coordinator.benchmarkResults.suffix(10).reversed()) { result in
+                            VStack(alignment: .leading, spacing: 3) {
+                                Text("Scenario \(result.scenario) · \(result.cancelled ? "cancelled" : "finished")")
+                                Text("Partial STT \(ms(result.partialSTTMilliseconds)) · Decision \(ms(result.decisionMilliseconds)) · First action \(ms(result.firstActionMilliseconds)) · Total \(ms(result.completionMilliseconds))")
+                                Text("Duplicate \(Int(result.duplicateActionRate * 100))% · Incorrect \(Int(result.incorrectActionRate * 100))% · Missing \(result.missingActions) · Unverified \(result.unverifiedActions) · Failed \(result.failedActions) · Out of order \(result.outOfOrderActions)")
+                            }.font(.caption).textSelection(.enabled)
+                        }
+                    }.padding(6)
+                }
+#if DEBUG
+                AgentRealityGatePanel(agent: coordinator.voiceAgent)
+#endif
+                Button("Reset Agent Memory", role: .destructive) { resetRequested = true }
+                    .disabled(coordinator.state != .idle)
+            }
+            .padding(28)
+        }
+        .task {
+            refreshDraft()
+            let apps = LaunchServicesApplicationCatalog().installedApplications()
+            applications = Dictionary(grouping: apps, by: \.id).compactMap { $0.value.first }.sorted { $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending }
+            bytes = await models.diskUsage()
+        }
+        .alert("Reset operational memory?", isPresented: $resetRequested) {
+            Button("Reset", role: .destructive) {
+                Task { @MainActor in
+                    do { try await coordinator.resetOperationalMemory(); refreshDraft(); message = "Agent memory and activity reset." }
+                    catch { message = error.localizedDescription }
+                }
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: { Text("Removes saved agent preferences, aliases, workflows and activity. Dictation history and vocabulary are preserved.") }
+        .alert("Remove local Laya model?", isPresented: $removeRequested) {
+            Button("Remove", role: .destructive) {
+                modelBusy = true
+                modelTask = Task { @MainActor in
+                    do { try await models.remove(); bytes = await models.diskUsage() }
+                    catch { message = error.localizedDescription }
+                    modelBusy = false; modelTask = nil
+                }
+            }
+            Button("Cancel", role: .cancel) {}
+        }
+    }
+    private func preferredAppPicker(_ role: String) -> some View {
+        let preference = store.memory.preferredApps[role] ?? ""
+        let isKnown = applications.contains { ($0.bundleIdentifier ?? $0.name) == preference }
+        return Picker(role.capitalized, selection: Binding<String>(
+            get: { store.memory.preferredApps[role] ?? "" },
+            set: { value in update { memory in
+                if value.isEmpty { memory.preferredApps.removeValue(forKey: role) }
+                else { memory.preferredApps[role] = value }
+            } })) {
+                Text("System default / unset").tag("")
+                ForEach(applications) { app in Text(app.name).tag(app.bundleIdentifier ?? app.name) }
+                if !preference.isEmpty && !isKnown { Text(preference).tag(preference) }
+            }
+    }
+    private func ms(_ value: Double?) -> String { value.map { "\(Int($0)) ms" } ?? "unavailable" }
+    private func refreshDraft() { draft = (try? store.editableJSON()) ?? "" }
+    private func update(_ edit: (inout AgentMemory) -> Void) {
+        do {
+            var value = store.memory
+            edit(&value)
+            try store.save(value)
+            // Keep unrelated advanced JSON edits when changing a top-level control.
+            if var edited = try? JSONDecoder().decode(AgentMemory.self, from: Data(draft.utf8)) {
+                edit(&edited)
+                let encoder = JSONEncoder(); encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+                draft = String(decoding: try encoder.encode(edited), as: UTF8.self)
+            } else { refreshDraft() }
+            message = "Preference saved."
+        } catch { message = error.localizedDescription }
+    }
+    private func addAlias() {
+        do {
+            var value = try JSONDecoder().decode(AgentMemory.self, from: Data(draft.utf8))
+            let key = AgentMemory.key(aliasName)
+            switch aliasKind {
+            case "folder": value.folders[key] = aliasValue.trimmingCharacters(in: .whitespacesAndNewlines)
+            case "website": value.websites[key] = aliasValue.trimmingCharacters(in: .whitespacesAndNewlines)
+            case "workflow": value.workflows[key] = aliasValue.split(separator: "\n").map { String($0).trimmingCharacters(in: .whitespaces) }.filter { !$0.isEmpty }
+            default: value.applicationAliases[key] = aliasValue.trimmingCharacters(in: .whitespacesAndNewlines)
+            }
+            try CommandMode().validateOperationalMemory(value)
+            try store.save(value); refreshDraft(); message = "Saved \(key)."; aliasName = ""; aliasValue = ""
+        } catch { message = error.localizedDescription }
+    }
+    private func saveDraft() {
+        do {
+            let value = try JSONDecoder().decode(AgentMemory.self, from: Data(draft.utf8))
+            try CommandMode().validateOperationalMemory(value)
+            try store.save(value); refreshDraft(); message = "Memory saved locally."
+        } catch { message = error.localizedDescription }
+    }
+    private func installDecisionModel() {
+        guard !modelBusy, !models.isBusy, coordinator.state == .idle else { return }
+        let picker = NSOpenPanel()
+        picker.title = "Install LocalFlow-Laya-v2"
+        picker.message = "Choose a trained native package with hashes, calibration and parity evidence."
+        picker.canChooseDirectories = true; picker.canChooseFiles = false; picker.allowsMultipleSelection = false
+        guard picker.runModal() == .OK, let directory = picker.url else { return }
+        modelBusy = true
+        modelTask = Task { @MainActor in
+            do { try await models.install(from: directory); message = "Local decision model installed." }
+            catch is CancellationError { message = "Model preparation cancelled." }
+            catch { message = error.localizedDescription }
+            bytes = await models.diskUsage(); modelBusy = false; modelTask = nil
+        }
+    }
+}
+
+/// Native speech locale selection is shared by onboarding and Settings.
+struct SpeechLocalePicker: View {
+    @EnvironmentObject private var coordinator: DictationCoordinator
+    @ObservedObject private var manager = ModelManager.shared
+    @ObservedObject private var settings = LocalFlowSettings.shared
+    let didSelect: () -> Void
+    var body: some View {
+        Picker("Speech language", selection: Binding(get: { settings.speechLocaleIdentifier }, set: { value in
+            settings.speechLocaleIdentifier = value
+            Task { await manager.refreshReadiness(); didSelect() }
+        })) {
+            if !manager.supportedLocales.contains(where: { $0.identifier == settings.speechLocaleIdentifier }) {
+                Text(Locale.current.localizedString(forIdentifier: settings.speechLocaleIdentifier) ?? settings.speechLocaleIdentifier)
+                    .tag(settings.speechLocaleIdentifier)
+            }
+            ForEach(manager.supportedLocales, id: \.identifier) { locale in
+                Text(Locale.current.localizedString(forIdentifier: locale.identifier) ?? locale.identifier).tag(locale.identifier)
+            }
+        }.disabled(coordinator.state != .idle || manager.progress != nil)
+            .task { await manager.refreshReadiness() }
+    }
+}
+
+/// Readiness is observational. Native Automation prompts occur when a tool needs access.
+private struct AgentReadinessView: View {
+    @EnvironmentObject private var coordinator: DictationCoordinator
+    @ObservedObject private var speech = ModelManager.shared
+    @ObservedObject private var laya = DecisionModelManager.shared
+    @State private var refresh = 0
+    @State private var automationReady = false
+    var body: some View {
+        GroupBox("Agent Readiness") {
+            VStack(alignment: .leading, spacing: 10) {
+                row("Microphone", state: AVCaptureDevice.authorizationStatus(for: .audio) == .authorized ? "READY" : "ACTION REQUIRED") {
+                    Task { _ = await coordinator.requestMicrophonePermission(); refresh += 1 }
+                }
+                row("Accessibility", state: SemanticAccessibilityService.readiness) {
+                    TextInjection().openAccessibilitySettings()
+                }
+                row("Apple Speech Assets", state: speech.speechReadiness.status == .ready ? "READY" : speech.speechReadiness.status == .unavailable ? "UNAVAILABLE" : "ACTION REQUIRED") {
+                    Task { await coordinator.prepareModels() }
+                }
+                Text(speech.speechReadiness.detail).font(.caption)
+                row("Automation", state: automationReady ? "READY" : "ACTION REQUIRED") {
+                    open("Privacy_Automation")
+                }
+                Text("Notes and Spotify each need Automation access. Run the requested tool to trigger its native prompt. Reminders uses its own permission.").font(.caption)
+                row("Laya", state: laya.status == .ready ? "READY" : laya.status == .failed ? "UNAVAILABLE" : "ACTION REQUIRED") {
+                    laya.prepareInstalled()
+                }
+                Text("Model readiness is separate from calibrated decision authority.").font(.caption)
+                Button("Refresh Readiness") { Task { refresh += 1; await speech.refreshReadiness() } }
+            }.padding(6).id(refresh)
+        }.task(id: refresh) { automationReady = await NativePermissionReadiness.automationReady() }
+        .onReceive(NotificationCenter.default.publisher(for: NSApplication.didBecomeActiveNotification)) { _ in
+            Task { refresh += 1; await speech.refreshReadiness() }
+        }
+    }
+    private func row(_ title: String, state: String, action: @escaping () -> Void) -> some View {
+        HStack { Text(title); Spacer(); Text(state).font(.caption.monospaced()); Button(state == "READY" ? "Settings" : "Review", action: action) }
+    }
+    private func open(_ pane: String) {
+        if let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?" + pane) { NSWorkspace.shared.open(url) }
     }
 }

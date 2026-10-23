@@ -16,6 +16,12 @@ public final class LocalFlowSettings: ObservableObject, @unchecked Sendable {
         set { objectWillChange.send(); defaults.set(newValue, forKey: Keys.localRewriteEnabled) }
     }
 
+    /// Explicit experimental System-2 setting. Direct commands never depend on it.
+    public var experimentalPlannerEnabled: Bool {
+        get { defaults.bool(forKey: "experimentalPlannerEnabled") }
+        set { objectWillChange.send(); defaults.set(newValue, forKey: "experimentalPlannerEnabled") }
+    }
+
     /// Saved tone used by the explicit Option + 1 Smart Polish action.
     public var smartPolishTone: String {
         get { defaults.string(forKey: Keys.smartPolishTone) ?? "natural" }
@@ -44,16 +50,10 @@ public final class LocalFlowSettings: ObservableObject, @unchecked Sendable {
         }
     }
 
-    /// Whether advanced engine and model settings are visible.
-    public var showAdvancedOptions: Bool {
-        get { defaults.bool(forKey: Keys.showAdvancedOptions) }
-        set { defaults.set(newValue, forKey: Keys.showAdvancedOptions) }
-    }
-
-    /// An optional model override for advanced users.
-    public var modelOverride: ModelTier? {
-        get { optionalCodableValue(forKey: Keys.modelOverride) }
-        set { setOptionalCodableValue(newValue, forKey: Keys.modelOverride) }
+    /// Explicit supported Apple Speech language; never selects a different engine.
+    public var speechLocaleIdentifier: String {
+        get { defaults.string(forKey: "speechLocaleIdentifier") ?? Locale.current.identifier }
+        set { defaults.set(newValue, forKey: "speechLocaleIdentifier") }
     }
 
     /// Whether all network access should be blocked after required models are present.
@@ -138,7 +138,6 @@ public final class LocalFlowSettings: ObservableObject, @unchecked Sendable {
         defaults.register(defaults: [
             Keys.hotkey: encodedDefault(HotkeyDescriptor.rightOption),
             Keys.useFnAsAlternateHotkey: false,
-            Keys.showAdvancedOptions: false,
             Keys.hardBlockNetworkAfterModelsDownloaded: false,
             Keys.launchAtLogin: false,
             Keys.didCompleteOnboarding: false,
@@ -186,8 +185,6 @@ public final class LocalFlowSettings: ObservableObject, @unchecked Sendable {
     private enum Keys {
         static let hotkey = "hotkey"
         static let useFnAsAlternateHotkey = "useFnAsAlternateHotkey"
-        static let showAdvancedOptions = "showAdvancedOptions"
-        static let modelOverride = "modelOverride"
         static let hardBlockNetworkAfterModelsDownloaded = "hardBlockNetworkAfterModelsDownloaded"
         static let launchAtLogin = "launchAtLogin"
         static let didCompleteOnboarding = "didCompleteOnboarding"

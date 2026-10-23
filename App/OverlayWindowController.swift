@@ -3,201 +3,227 @@ import SwiftUI
 import Combine
 import Shared
 
-/// Shows the floating listening pill while dictation is active.
-///
-/// Reuses a single nonactivating panel (create-once) so subsequent hotkey
-/// presses remain reliable — tearing down/recreating the panel caused missed
-/// shows and AppKit layout warnings.
+/// One reusable, nonactivating island for recording, decisions and action feedback.
 @MainActor
 public final class OverlayWindowController {
-    private var window: NSPanel?
+    private var window: IslandPanel?
     private let model = WaveformOverlayModel()
     private var levelsCancellable: AnyCancellable?
-    private var terminalDismissTask: Task<Void, Never>?
+    private var dismissalTask: Task<Void, Never>?
+    private var screenObserver: (any NSObjectProtocol)?
+    private var anchoredScreen: NSScreen?
+    private var presentationID = UUID()
 
-    /// Callbacks invoked when interactive overlay buttons are tapped.
-    public var onCancel: (() -> Void)? {
-        get { model.onCancel }
-        set { model.onCancel = newValue }
-    }
+    public var onCancel: (() -> Void)? { get { model.onCancel } set { model.onCancel = newValue } }
+    public var onFinishAndPaste: (() -> Void)? { get { model.onFinishAndPaste } set { model.onFinishAndPaste = newValue } }
+    public var onUndo: (() -> Void)? { get { model.onUndo } set { model.onUndo = newValue } }
+    public var onConfirm: (() -> Void)? { get { model.onConfirm } set { model.onConfirm = newValue } }
+    public var isConfirming: Bool { model.presentation.phase == .confirmation }
+    public var currentPresentationID: UUID { presentationID }
+    public var supportsCancellationUndo: Bool { model.presentation.phase == .cancelled && model.presentation.showsUndo }
 
-    public var onFinishAndPaste: (() -> Void)? {
-        get { model.onFinishAndPaste }
-        set { model.onFinishAndPaste = newValue }
-    }
-
-    public var onUndo: (() -> Void)? {
-        get { model.onUndo }
-        set { model.onUndo = newValue }
-    }
-
-    /// Creates an overlay controller.
-    public init() {}
-
-    /// Shows the listening pill and begins observing waveform levels.
-    public func show(mode: DictationSessionMode = .pushToTalk, levelsPublisher: AnyPublisher<[Float], Never>) {
-        cancelTerminalDismissal()
-        levelsCancellable?.cancel()
-        model.resetCancellation()
-        model.mode = mode
-        model.pillState = .listening
-        model.update(levels: Array(repeating: 0.15, count: WaveformOverlayModel.barCount))
-
-        let size = mode == .handsFree ? LocalFlowDesign.handsFreeWindowSize : LocalFlowDesign.overlaySize
-        let panel = ensurePanel(size: size)
-        panel.ignoresMouseEvents = (mode == .pushToTalk)
-        panel.setContentSize(size)
-        position(panel, size: size)
-        panel.orderFrontRegardless()
-
-        levelsCancellable = levelsPublisher
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] levels in
-                self?.model.update(levels: levels)
-            }
-    }
-
-    /// Convenience for one-shot initial levels without a live publisher.
-    public func show(mode: DictationSessionMode = .pushToTalk, levels: [Float]) {
-        model.mode = mode
-        model.update(levels: levels)
-        show(mode: mode, levelsPublisher: Just(levels).eraseToAnyPublisher())
-    }
-
-    /// Displays the "Transcript cancelled" state with Undo button and animated progress bar.
-    public func showCancelled(durationSeconds: Double = 3.5, onDismiss: @escaping () -> Void) {
-        cancelTerminalDismissal()
-        levelsCancellable?.cancel()
-        levelsCancellable = nil
-
-        let size = LocalFlowDesign.cancelledPillSize
-        let panel = ensurePanel(size: size)
-        panel.ignoresMouseEvents = false
-        panel.setContentSize(size)
-        position(panel, size: size)
-        panel.orderFrontRegardless()
-
-        model.triggerCancelled(durationSeconds: durationSeconds) { [weak self] in
-            self?.hide()
-            onDismiss()
+    public init() {
+        model.onDismiss = { [weak self] in self?.hide() }
+        screenObserver = NotificationCenter.default.addObserver(
+            forName: NSApplication.didChangeScreenParametersNotification, object: nil, queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor in self?.layout() }
         }
     }
 
-    /// Displays the "Polished ✨" state at the bottom center of the screen (same anchor as speaking pill).
-    public func showPolished(message: String = "Polished", durationSeconds: Double = 1.6) {
-        showTerminal(message: message, kind: .success, durationSeconds: durationSeconds)
+    deinit {
+        dismissalTask?.cancel()
+        if let screenObserver { NotificationCenter.default.removeObserver(screenObserver) }
     }
 
-    public func showNoChanges() { showTerminal(message: "Already clean", kind: .unchanged, durationSeconds: 1.8) }
-    public func showError(_ message: String) { showTerminal(message: message, kind: .error, durationSeconds: 3.0) }
-    public func showPolishing(message: String = "Rewriting privately on this Mac…") { showWorking(state: .polishing, message: message) }
+    public func show(mode: DictationSessionMode = .pushToTalk, levelsPublisher: AnyPublisher<[Float], Never>) {
+        beginPresentation()
+        model.listen(mode: mode)
+        model.update(levels: Array(repeating: 0.15, count: WaveformOverlayModel.barCount))
+        layout(resetWidth: true)
+        reveal()
+        levelsCancellable = levelsPublisher
+            .receive(on: RunLoop.main)
+            .throttle(for: .milliseconds(16), scheduler: RunLoop.main, latest: true)
+            .sink { [weak self] in self?.model.update(levels: $0) }
+    }
 
-    private func showTerminal(message: String, kind: WaveformOverlayModel.TerminalKind, durationSeconds: Double) {
+    public func show(mode: DictationSessionMode = .pushToTalk, levels: [Float]) {
+        show(mode: mode, levelsPublisher: Just(levels).eraseToAnyPublisher())
+    }
+
+    public func update(transcript: PartialTranscript?) {
+        if model.update(transcript: transcript) { layout() }
+    }
+
+    /// Update the existing panel without dropping waveform subscriptions or recording controls.
+    public func updateAgent(transcript: PartialTranscript?, message: OverlayMessage?, recording: Bool,
+                            phase: OverlayPhase, allowsUndo: Bool = false) {
+        dismissalTask?.cancel(); dismissalTask = nil
+        if !recording { levelsCancellable?.cancel(); levelsCancellable = nil }
+        model.agent(transcript: transcript, message: message, recording: recording, phase: phase, allowsUndo: allowsUndo)
+        layout(); reveal()
+        if !recording, phase == .success || phase == .error || phase == .cancelled {
+            dismiss(after: allowsUndo ? 8 : (phase == .error ? 6 : 3))
+        }
+    }
+
+    public func showProcessing() { showThinking(message: "Transcribing…") }
+    public func showThinking(message: String = "Deciding…", detail: String = "") {
+        present(.thinking, message: OverlayMessage(title: message, detail: detail, symbol: "ellipsis"))
+    }
+    public func showPolishing(message: String = "Rewriting privately on this Mac…") {
+        showThinking(message: message)
+    }
+    public func showActing(_ message: OverlayMessage, durationSeconds: Double? = nil) {
+        present(.acting, message: message)
+        if let durationSeconds { dismiss(after: durationSeconds) }
+    }
+    public func showConfirmation(_ message: OverlayMessage) {
+        present(.confirmation, message: message)
+    }
+    public func showPolished(message: String = "Done", durationSeconds: Double = 1.6) {
+        present(.success, message: OverlayMessage(title: message, symbol: "checkmark.circle.fill"))
+        dismiss(after: durationSeconds)
+    }
+    public func showToolResult(message: String, verified: Bool, allowsUndo: Bool) {
+        present(.success, message: OverlayMessage(title: message, detail: verified ? "" : "Request sent · unverified",
+                                                  symbol: verified ? "checkmark.circle.fill" : "arrow.up.right.circle"), allowsUndo: allowsUndo)
+        dismiss(after: allowsUndo ? 8 : 3)
+    }
+    public func showNoChanges() { showPolished(message: "Already clean", durationSeconds: 1.8) }
+    public func showError(_ message: String) {
+        present(.error, message: OverlayMessage(title: "Couldn’t finish", detail: message, symbol: "exclamationmark.triangle.fill"))
+        dismiss(after: 6)
+    }
+
+    /// Retains the existing 3.5 second Undo window; monotonic time avoids clock changes.
+    public func showCancelled(durationSeconds: Double = 3.5, allowsUndo: Bool = true, message: String = "Transcript cancelled", onDismiss: @escaping () -> Void = {}) {
+        present(.cancelled, message: OverlayMessage(title: message, symbol: "xmark.circle"), allowsUndo: allowsUndo)
+        let id = presentationID
+        dismissalTask = Task { @MainActor [weak self] in
+            let clock = ContinuousClock()
+            let start = clock.now
+            while !Task.isCancelled {
+                do { try await Task.sleep(for: .milliseconds(32)) } catch { return }
+                guard let self, self.presentationID == id else { return }
+                let elapsed = start.duration(to: clock.now)
+                let components = elapsed.components
+                let seconds = Double(components.seconds) + Double(components.attoseconds) / 1e18
+                self.model.cancelProgress = max(0, 1 - seconds / max(0.01, durationSeconds))
+                if seconds >= durationSeconds {
+                    self.hide()
+                    onDismiss()
+                    return
+                }
+            }
+        }
+    }
+
+    public func hide() {
+        beginPresentation()
+        model.hide()
+        window?.orderOut(nil)
+        anchoredScreen = nil
+    }
+
+    /// Dismiss idle feedback with Escape without interrupting a real recording.
+    public func dismissTransient() {
+        if !model.presentation.phase.isRecording { hide() }
+    }
+
+    private func present(_ phase: OverlayPhase, message: OverlayMessage, allowsUndo: Bool = false) {
+        beginPresentation()
+        model.present(phase, message: message, allowsUndo: allowsUndo)
+        layout(resetWidth: true)
+        reveal()
+    }
+
+    private func beginPresentation() {
+        presentationID = UUID()
+        dismissalTask?.cancel()
+        dismissalTask = nil
         levelsCancellable?.cancel()
         levelsCancellable = nil
-        cancelTerminalDismissal()
+    }
 
-        model.resetAll()
-        model.isPolished = true
-        model.polishMessage = message
-        model.pillState = .terminal(kind)
-
-        let size = LocalFlowDesign.polishPillSize(for: message)
-        let panel = ensurePanel(size: size)
-        panel.ignoresMouseEvents = true
-        panel.setContentSize(size)
-        position(panel, size: size)
-        panel.orderFrontRegardless()
-
-        terminalDismissTask = Task { @MainActor [weak self] in
-            do { try await Task.sleep(nanoseconds: UInt64(durationSeconds * 1_000_000_000)) } catch { return }
-            guard let self, self.model.pillState == .terminal(kind) else { return }
+    private func dismiss(after seconds: Double) {
+        let id = presentationID
+        dismissalTask = Task { @MainActor [weak self] in
+            do { try await Task.sleep(for: .seconds(max(0.01, seconds))) } catch { return }
+            guard let self, self.presentationID == id else { return }
             self.hide()
         }
     }
 
-    /// Keeps a compact progress indicator visible between recording and insertion.
-    public func showProcessing() {
-        showWorking(state: .transcribing, message: "Transcribing")
+    private func reveal() {
+        guard let window, anchoredScreen != nil else { return }
+        window.ignoresMouseEvents = model.presentation.phase == .thinking || model.presentation.phase == .acting
+        window.orderFrontRegardless()
     }
 
-    private func showWorking(state: WaveformOverlayModel.PillState, message: String) {
-        cancelTerminalDismissal()
-        levelsCancellable?.cancel()
-        levelsCancellable = nil
+    private func screen() -> NSScreen? {
+        if let anchoredScreen, NSScreen.screens.contains(where: { $0 == anchoredScreen }) { return anchoredScreen }
+        let mouse = NSEvent.mouseLocation
+        let selected = NSScreen.screens.first(where: { $0.frame.contains(mouse) }) ?? NSScreen.main ?? NSScreen.screens.first
+        anchoredScreen = selected
+        return selected
+    }
 
-        model.resetAll()
-        model.isProcessing = true
-        model.pillState = state
-        model.polishMessage = message
-
-        let size = LocalFlowDesign.processingPillSize(for: message)
+    private func layout(resetWidth: Bool = false) {
+        guard model.presentation.phase != .hidden, let screen = screen() else { return }
+        let state = model.presentation
+        let text = state.phase.isRecording ? String((state.transcript?.text ?? "Listening…").suffix(240)) : state.message.title
+        let font = NSFont(name: "Matter-Medium", size: 13.5) ?? .systemFont(ofSize: 13.5, weight: .medium)
+        let titleWidth = ceil((text as NSString).size(withAttributes: [.font: font]).width)
+        let detailWidth = ceil((String(state.message.detail.prefix(240)) as NSString).size(withAttributes: [.font: font]).width)
+        let desired = OverlayLayout.width(textWidth: max(titleWidth, detailWidth), phase: state.phase, screenWidth: screen.frame.width)
+        let limit = OverlayLayout.width(textWidth: .greatestFiniteMagnitude, phase: state.phase, screenWidth: screen.frame.width)
+        let width = state.phase.isRecording && !resetWidth ? min(limit, max(model.surfaceSize.width, desired)) : desired
+        let baseHeight: CGFloat = state.agentMessage != nil ? 64 : (state.phase == .confirmation ? 96 : (state.phase == .error ? 72 : (state.phase.isRecording ? 48 : 52)))
+        let height = baseHeight + (!state.phase.isRecording && state.transcript != nil ? 20 : 0)
+        model.surfaceSize = CGSize(width: width, height: height)
+        let size = CGSize(width: width + 2 * OverlayLayout.shadowInset, height: height + 2 * OverlayLayout.shadowInset)
         let panel = ensurePanel(size: size)
-        panel.ignoresMouseEvents = true
-        panel.setContentSize(size)
-        position(panel, size: size)
-        panel.orderFrontRegardless()
-    }
-
-    /// Hides the overlay without destroying the panel (keeps it ready for reuse).
-    public func hide() {
-        cancelTerminalDismissal()
-        levelsCancellable?.cancel()
-        levelsCancellable = nil
-        model.resetAll()
-        window?.orderOut(nil)
-    }
-
-    // MARK: - Private
-
-    private func ensurePanel(size: CGSize) -> NSPanel {
-        if let window {
-            return window
-        }
-
-        let hosting = NSHostingController(rootView: WaveformOverlayView(model: model))
-        let panel = NSPanel(
-            contentRect: NSRect(origin: .zero, size: size),
-            styleMask: [.borderless, .nonactivatingPanel],
-            backing: .buffered,
-            defer: false
+        let frame = OverlayLayout.panelFrame(
+            size: size, screenFrame: screen.frame, visibleFrame: screen.visibleFrame, safeTop: screen.safeAreaInsets.top,
+            left: screen.auxiliaryTopLeftArea, right: screen.auxiliaryTopRightArea
         )
-        // A status-bar-level panel may remain behind a different application's native
-        // full-screen window. screenSaver is the standard non-key overlay level that stays
-        // visible across full-screen Spaces without activating LocalFlow.
+        // SwiftUI handles the restrained spring. Frame changes themselves remain direct
+        // so hit testing always matches the visible capsule and never covers the menu bar.
+        if panel.frame != frame { panel.setFrame(frame, display: true) }
+    }
+
+    private func ensurePanel(size: CGSize) -> IslandPanel {
+        if let window { return window }
+        let panel = IslandPanel(contentRect: NSRect(origin: .zero, size: size), styleMask: [.borderless, .nonactivatingPanel], backing: .buffered, defer: false)
         panel.level = .screenSaver
         panel.collectionBehavior = [.canJoinAllSpaces, .canJoinAllApplications, .fullScreenAuxiliary, .stationary]
         panel.backgroundColor = .clear
+        panel.appearance = NSAppearance(named: .darkAqua)
+        panel.title = "LocalFlow Island"
         panel.isOpaque = false
         panel.hasShadow = false
-        panel.ignoresMouseEvents = true
-        panel.acceptsMouseMovedEvents = true
         panel.hidesOnDeactivate = false
+        panel.isReleasedWhenClosed = false
         panel.becomesKeyOnlyIfNeeded = true
-        panel.contentViewController = hosting
-        panel.setContentSize(size)
+        panel.acceptsMouseMovedEvents = true
+        let hosting = IslandHostingView(rootView: WaveformOverlayView(model: model))
+        hosting.sizingOptions = []
+        panel.contentView = hosting
         self.window = panel
         return panel
     }
+}
 
-    private func position(_ panel: NSPanel, size: CGSize) {
-        let mouse = NSEvent.mouseLocation
-        let screen = NSScreen.screens.first(where: { NSPointInRect(mouse, $0.frame) })
-            ?? NSScreen.main
-            ?? NSScreen.screens.first
-        // `visibleFrame` stops above the Dock and leaves the pill visually stranded on
-        // larger screens. Use the full display frame so this stays anchored to the actual
-        // bottom edge, including while the frontmost app is full screen.
-        let screenFrame = screen?.frame ?? NSRect(x: 0, y: 0, width: 1470, height: 956)
-        let origin = NSPoint(
-            x: screenFrame.midX - size.width / 2,
-            y: screenFrame.minY + 12
-        )
-        panel.setFrame(NSRect(origin: origin, size: size), display: true)
-    }
+/// Even clicking Stop/Confirm must leave the foreground application's keyboard focus intact.
+private final class IslandPanel: NSPanel {
+    override var canBecomeKey: Bool { false }
+    override var canBecomeMain: Bool { false }
+}
 
-    private func cancelTerminalDismissal() {
-        terminalDismissTask?.cancel()
-        terminalDismissTask = nil
-    }
+private final class IslandHostingView<Content: View>: NSHostingView<Content> {
+    override func acceptsFirstMouse(for event: NSEvent?) -> Bool { true }
+    override var needsPanelToBecomeKey: Bool { false }
+    override var acceptsFirstResponder: Bool { false }
 }

@@ -2,6 +2,7 @@ import AppKit
 import Combine
 import Foundation
 import OSLog
+import NaturalLanguage
 import Shared
 import AudioCapture
 import HotkeyManager
@@ -25,13 +26,19 @@ public final class DictationCoordinator: ObservableObject {
     }
 
     /// The pending command that requires user confirmation.
-    @Published public var pendingCommand: CommandIntent?
+    @Published public private(set) var pendingCommand: CommandIntent?
 
     /// The display name of the engine currently handling transcription.
     @Published public private(set) var activeEngineName: String = "Not loaded"
 
     /// Last user-visible error message (cleared on next successful start).
     @Published public private(set) var lastErrorMessage: String?
+
+    /// Revisable UI speech. Ordinary dictation enters commands/history only after final ASR.
+    @Published public private(set) var transcriptState = TranscriptState()
+
+    /// Streaming is optional; batch transcription remains ready if setup fails.
+    @Published public private(set) var streamingStatus = "Not prepared"
 
     /// Whether a speech engine is ready to transcribe.
     public var isEngineReady: Bool { activeEngineName != "Not loaded" }
@@ -45,11 +52,89 @@ public final class DictationCoordinator: ObservableObject {
     /// Local custom vocabulary (shared with Settings).
     public let vocabularyStore: VocabularyStore
 
+    public let agentMemory: AgentMemoryStore
+
     private let settings = LocalFlowSettings.shared
     private let hotkeyManager = HotkeyManager()
     private let modelManager = ModelManager.shared
     private let textInjection = TextInjection()
     private let commandMode = CommandMode()
+    public let plannerModels = PlannerModelManager.shared
+    @Published public private(set) var isTypedPlannerSession = false
+    private var typedPlannerTask: Task<Void, Never>?
+    private lazy var actionExecutor: ActionExecutor = ActionExecutor(registry: ToolRegistry(system: MacNativeToolSystem(injection: textInjection, preferredBrowser: { [weak self] in
+        guard let self else { return nil }
+        return (self.isVoiceAgentSession ? self.voiceAgent.operationalMemory : self.agentMemory.memory).preferredApps["browser"]
+    }, memory: { [weak self] in
+        guard let self else { return AgentMemory() }
+        return (self.isVoiceAgentSession || self.isTypedPlannerSession) ? self.voiceAgent.operationalMemory : self.agentMemory.memory
+    })))
+    private var nativeActionTask: Task<Void, Never>?
+    private var nativePresentationID = UUID()
+    private var pendingToolConfirmation: ToolConfirmation?
+    private var lastToolUndo: ToolUndoToken?
+    private let decisionModels = DecisionModelManager.shared
+    @Published public private(set) var isVoiceAgentSession = false
+    public private(set) lazy var voiceAgent: VoiceAgentCoordinator = VoiceAgentCoordinator(commands: commandMode, executor: actionExecutor, memoryStore: agentMemory) { [weak self] state, fallback in
+        guard let self else { return AgentDecisionEvaluation(decisions: fallback, source: .deterministic) }
+        return await self.decisionModels.evaluateForAgent(state, fallback: fallback)
+    }
+    @Published public private(set) var benchmarkResults: [AgentBenchmarkResult] = []
+    private var pendingBenchmark: (Int, [AgentAction])?
+#if DEBUG
+    @Published public private(set) var realityConfirmation: ToolConfirmation?
+    @Published public private(set) var realityConfirmationStatus = "UNVERIFIED"
+    @Published public private(set) var realityPreviewPreparing = false
+    private var realityPreviewGeneration = UUID()
+    public func prepareRealityConfirmation() async {
+        guard state == .idle, !isStartingDictation, !isRewritingSelection, !realityPreviewPreparing,
+              voiceAgent.snapshot.confirmation == nil else { return }
+        cancelRealityPreview()
+        let id = UUID(); realityPreviewGeneration = id; realityPreviewPreparing = true
+        defer { if realityPreviewGeneration == id { realityPreviewPreparing = false } }
+        let result = await actionExecutor.execute(AgentAction(toolID: .lockMac, arguments: .none))
+        guard realityPreviewGeneration == id, !Task.isCancelled else {
+            if case .requiresConfirmation(let grant) = result { actionExecutor.cancelConfirmation(matching: grant) }
+            return
+        }
+        if case .requiresConfirmation(let grant) = result {
+            realityConfirmation = grant
+            realityConfirmationStatus = "UNVERIFIED — real confirmation grant prepared; no effect sent"
+        } else {
+            realityConfirmation = nil
+            realityConfirmationStatus = "FAILED — could not prepare the test confirmation"
+        }
+    }
+    public func confirmRealityPreview() {
+        guard let grant = realityConfirmation else { return }
+        realityConfirmation = nil
+        realityConfirmationStatus = actionExecutor.validateConfirmationWithoutPerforming(grant)
+            ? "VERIFIED — single-use confirmation consumed; lock effect deliberately not performed"
+            : "FAILED — confirmation expired or was superseded"
+    }
+    public func cancelRealityPreview() {
+        realityPreviewGeneration = UUID(); realityPreviewPreparing = false
+        guard let grant = realityConfirmation else { return }
+        realityConfirmation = nil; actionExecutor.cancelConfirmation(matching: grant)
+        realityConfirmationStatus = "UNVERIFIED — preview cancelled; no effect sent"
+    }
+#endif
+    public func beginBenchmark(_ scenario: AgentBenchmarkScenario) async throws {
+        guard state == .idle, !isStartingDictation, !isRewritingSelection else { throw ToolError.busy }
+        agentMemory.reload()
+        let expected = try scenario.expectedActions(commands: commandMode.forAgentSession(memory: agentMemory.memory))
+        await beginVoiceAgent()
+        guard isVoiceAgentSession, state == .listening else { throw ToolError.unavailable(lastErrorMessage ?? "Voice capture could not start.") }
+        pendingBenchmark = (scenario.id, expected)
+    }
+    public func exportBenchmarks() throws -> URL {
+        let url = agentMemory.fileURL.deletingLastPathComponent().appendingPathComponent("benchmark.json")
+        try FileManager.default.createDirectory(at: url.deletingLastPathComponent(), withIntermediateDirectories: true)
+        let encoder = JSONEncoder(); encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        try encoder.encode(benchmarkResults).write(to: url, options: .atomic)
+        return url
+    }
+    @Published public private(set) var lastDecisions: SpeechDecisions?
     private let speechCleanup = SpeechCleanup()
     private let formatter = SmartFormatting()
     private var isRewritingSelection = false
@@ -57,6 +142,22 @@ public final class DictationCoordinator: ObservableObject {
     private let resultCardController = FloatingResultCardController()
     private var cancellables = Set<AnyCancellable>()
     private var router = TranscriptionRouter(engine: UnavailableEngine(message: "Model not loaded"))
+    private let streamingRouter = StreamingTranscriptionRouter()
+    private var streamingStartTask: Task<StreamingTranscriptionSession, Never>?
+    private var streamingEventsTask: Task<Void, Never>?
+    private var recordingID: UUID?
+    private var isStartingDictation = false
+    private var isResettingAgentMemory = false
+    public func resetOperationalMemory() async throws {
+        guard state == .idle, !isStartingDictation, !isRewritingSelection, !isResettingAgentMemory else { throw ToolError.busy }
+        isResettingAgentMemory = true
+        defer { isResettingAgentMemory = false }
+        let retiredNativeAction = nativeActionTask
+        cancelPendingCommand()
+        await voiceAgent.cancelAndWait()
+        await retiredNativeAction?.value
+        try agentMemory.reset()
+    }
     private var dictationTask: Task<Void, Never>?
     private var timeoutTask: Task<Void, Never>?
     private var handsFreeSilenceTask: Task<Void, Never>?
@@ -75,10 +176,13 @@ public final class DictationCoordinator: ObservableObject {
     /// Creates a dictation coordinator and starts observing the hotkey.
     public init(
         historyStore: DictationHistoryStore = DictationHistoryStore(),
-        vocabularyStore: VocabularyStore = VocabularyStore()
+        vocabularyStore: VocabularyStore = VocabularyStore(),
+        agentMemory: AgentMemoryStore? = nil
     ) {
+        self.agentMemory = agentMemory ?? AgentMemoryStore()
         self.historyStore = historyStore
         self.vocabularyStore = vocabularyStore
+        decisionModels.prepareInstalled()
         hotkeyManager.start()
         hotkeyManager.eventPublisher
             .sink { [weak self] event in
@@ -90,19 +194,34 @@ public final class DictationCoordinator: ObservableObject {
 
         overlayController.onCancel = { [weak self] in
             Task { @MainActor in
-                self?.cancelHandsFreeSession()
+                guard let self else { return }
+                if self.isTypedPlannerSession {
+                    self.cancelTypedPlanner()
+                } else if self.isVoiceAgentSession {
+                    self.teardownSession(clearErrorMessage: true)
+                    self.overlayController.showCancelled(durationSeconds: 1.6, allowsUndo: false, message: "Voice Agent cancelled")
+                } else if self.overlayController.isConfirming {
+                    self.cancelPendingCommand()
+                } else {
+                    self.cancelHandsFreeSession()
+                }
             }
         }
+        overlayController.onConfirm = { [weak self] in self?.confirmPendingCommand() }
         overlayController.onFinishAndPaste = { [weak self] in
             Task { @MainActor in
                 await self?.endDictation()
             }
         }
         overlayController.onUndo = { [weak self] in
-            Task { @MainActor in
-                self?.undoCancellation()
+            guard let self else { return }
+            if let token = self.lastToolUndo {
+                self.undoNativeAction(token)
+            } else if self.overlayController.supportsCancellationUndo {
+                self.undoCancellation()
             }
         }
+
 
         if let front = NSWorkspace.shared.frontmostApplication,
            front.bundleIdentifier != Bundle.main.bundleIdentifier {
@@ -154,41 +273,109 @@ public final class DictationCoordinator: ObservableObject {
 
     /// Loads an engine on cold start when a local model (or Apple Speech asset) is already present.
     public func prepareModelsIfAvailable() async {
-        let appleReady: Bool
-        if appleSpeechEngineIsAvailable() {
-            appleReady = await appleSpeechModelIsInstalled()
-        } else {
-            appleReady = false
-        }
-        guard modelManager.modelsAvailable() || appleReady else { return }
-        await prepareModels()
+        await modelManager.refreshReadiness()
+        guard modelManager.modelsAvailable else { return }
+        do { try await prepareModelsWithError(allowInstallation: false) }
+        catch { state = .error; lastErrorMessage = error.localizedDescription }
     }
 
-    /// Prepares speech models and throws on failure, enabling callers to surface errors.
-    public func prepareModelsWithError() async throws {
-        let engine = try await modelManager.prepareEngine()
-        let name = modelManager.selectedEngine.kind.displayName
-        let detail = modelManager.selectedEngine.detail
-        await router.updateEngine(engine, name: name)
-        activeEngineName = name
-        NotificationCenter.default.post(
-            name: .localFlowEngineDidChange,
-            object: detail.isEmpty ? name : "\(name) — \(detail)"
-        )
-        state = .idle
+    public func prepareModelsWithError(allowInstallation: Bool = true) async throws {
+        let engine = try await modelManager.prepareEngine(allowInstallation: allowInstallation)
+        await router.updateEngine(engine, name: "Apple Speech")
+        await streamingRouter.updateEngine(engine)
+        activeEngineName = "Apple Speech"
+        streamingStatus = modelManager.speechReadiness.detail
+        NotificationCenter.default.post(name: .localFlowEngineDidChange, object: "Apple Speech")
+        if state != .listening && state != .processing { state = .idle }
         lastErrorMessage = nil
     }
 
-    /// Executes a command after explicit user confirmation.
+    /// Executes only the exact single-use action captured by the executor.
     public func confirmPendingCommand() {
-        guard let pendingCommand else { return }
-        commandMode.execute(pendingCommand)
-        self.pendingCommand = nil
+        if isVoiceAgentSession || isTypedPlannerSession {
+            Task { @MainActor [weak self] in await self?.voiceAgent.confirm() }
+            return
+        }
+        guard let intent = pendingCommand, let challenge = pendingToolConfirmation else { return }
+        pendingCommand = nil
+        pendingToolConfirmation = nil
+        let id = UUID()
+        nativePresentationID = id
+        overlayController.showActing(actionPresentation(for: intent))
+        let presentation = overlayController.currentPresentationID
+        nativeActionTask = Task { @MainActor [weak self] in
+            guard let self else { return }
+            let result = await self.actionExecutor.confirm(challenge)
+            guard self.nativePresentationID == id else { return }
+            self.nativeActionTask = nil
+            guard self.overlayController.currentPresentationID == presentation else { return }
+            self.presentToolResult(result, intent: intent)
+        }
     }
 
-    /// Cancels the pending command confirmation.
     public func cancelPendingCommand() {
         pendingCommand = nil
+        pendingToolConfirmation = nil
+        actionExecutor.cancelConfirmation()
+        invalidateNativePresentation()
+        if overlayController.isConfirming {
+            overlayController.showCancelled(durationSeconds: 1.6, allowsUndo: false, message: "Command cancelled")
+        }
+    }
+
+    private func invalidateNativePresentation() {
+        nativePresentationID = UUID()
+        nativeActionTask?.cancel()
+        nativeActionTask = nil
+        lastToolUndo = nil
+    }
+
+    private func executeCommand(_ intent: CommandIntent, requireConfirmation: Bool = false) {
+        invalidateNativePresentation()
+        let id = nativePresentationID
+        overlayController.showActing(actionPresentation(for: intent))
+        let presentation = overlayController.currentPresentationID
+        nativeActionTask = Task { @MainActor [weak self] in
+            guard let self else { return }
+            let result = await self.commandMode.execute(intent, using: self.actionExecutor, requireConfirmation: requireConfirmation)
+            guard self.nativePresentationID == id else { return }
+            self.nativeActionTask = nil
+            guard self.overlayController.currentPresentationID == presentation else { return }
+            self.presentToolResult(result, intent: intent)
+        }
+    }
+
+    private func undoNativeAction(_ token: ToolUndoToken) {
+        invalidateNativePresentation()
+        let id = nativePresentationID
+        overlayController.showActing(OverlayMessage(title: "Undoing…", symbol: "arrow.uturn.backward"))
+        let presentation = overlayController.currentPresentationID
+        nativeActionTask = Task { @MainActor [weak self] in
+            guard let self else { return }
+            let result = await self.actionExecutor.undo(token)
+            guard self.nativePresentationID == id else { return }
+            self.nativeActionTask = nil
+            guard self.overlayController.currentPresentationID == presentation else { return }
+            self.presentToolResult(result, intent: nil)
+        }
+    }
+
+    private func presentToolResult(_ result: ToolResult, intent: CommandIntent?) {
+        switch result {
+        case .requiresConfirmation(let challenge):
+            guard let intent else { return }
+            pendingCommand = intent
+            pendingToolConfirmation = challenge
+            overlayController.showConfirmation(OverlayMessage(title: challenge.action.summary, detail: "Confirm this action?", symbol: "hand.raised"))
+        case .completed(let message, _, let verification, let undo):
+            lastToolUndo = undo
+            overlayController.showToolResult(message: message, verified: verification == .verified, allowsUndo: undo != nil)
+        case .failed(let message):
+            lastErrorMessage = message
+            overlayController.showError(message)
+        case .cancelled:
+            overlayController.showCancelled(durationSeconds: 1.6, allowsUndo: false, message: "Command cancelled")
+        }
     }
 
     /// Unified session teardown: guarantees audio engine, overlay, tasks, flags,
@@ -196,8 +383,15 @@ public final class DictationCoordinator: ObservableObject {
     public func teardownSession(
         errorMessage: String? = nil,
         clearErrorMessage: Bool = false,
-        cancelDictationTask: Bool = true
+        cancelDictationTask: Bool = true,
+        preserveOverlay: Bool = false,
+        preserveVoiceAgent: Bool = false
     ) {
+        if !preserveVoiceAgent, isVoiceAgentSession {
+            isVoiceAgentSession = false
+            voiceAgent.cancel()
+        }
+        cancelStreamingSession()
         timeoutTask?.cancel()
         timeoutTask = nil
 
@@ -214,7 +408,7 @@ public final class DictationCoordinator: ObservableObject {
         sessionMode = .pushToTalk
 
         audioCapture.reset()
-        overlayController.hide()
+        if !preserveOverlay { overlayController.hide() }
 
         targetApplication = nil
 
@@ -225,11 +419,19 @@ public final class DictationCoordinator: ObservableObject {
         }
 
         state = .idle
+        if let errorMessage { overlayController.showError(errorMessage) }
     }
 
     /// Cancels hands-free mode and presents the "Transcript cancelled" state with an Undo window.
     public func cancelHandsFreeSession() {
+        if isVoiceAgentSession {
+            teardownSession(clearErrorMessage: true)
+            overlayController.showCancelled(durationSeconds: 1.6, allowsUndo: false, message: "Voice Agent cancelled")
+            return
+        }
         guard state == .listening || state == .processing else { return }
+
+        cancelStreamingSession()
 
         timeoutTask?.cancel()
         timeoutTask = nil
@@ -271,6 +473,7 @@ public final class DictationCoordinator: ObservableObject {
                 sessionMode = .handsFree
                 setupHandsFreeTimers()
                 overlayController.show(mode: .handsFree, levelsPublisher: audioCapture.$waveformLevels.eraseToAnyPublisher())
+                overlayController.update(transcript: transcriptState.partial)
             } else if state == .idle {
                 await beginDictation(mode: .handsFree)
             }
@@ -309,23 +512,45 @@ public final class DictationCoordinator: ObservableObject {
                 }
             }
 
+        case .voiceAgentShortcut:
+            if isVoiceAgentSession && state == .listening { await endDictation() }
+            else if state == .idle { await beginVoiceAgent() }
+
         case .escape:
+            if isTypedPlannerSession { cancelTypedPlanner(); return }
+            if isVoiceAgentSession {
+                teardownSession(clearErrorMessage: true)
+                overlayController.showCancelled(durationSeconds: 1.6, allowsUndo: false, message: "Voice Agent cancelled")
+                return
+            }
+            if pendingCommand != nil {
+                cancelPendingCommand()
+                return
+            }
+            if isStartingDictation {
+                teardownSession(errorMessage: nil, clearErrorMessage: true)
+                return
+            }
             // "Escape key cancels an active hands-free session outright (discards the recording, no transcription attempt)"
             if sessionMode == .handsFree && (state == .listening || state == .processing) {
                 cancelHandsFreeSession()
             } else if state == .listening || state == .processing {
                 teardownSession(errorMessage: nil, clearErrorMessage: true)
+                overlayController.showCancelled(durationSeconds: 1.6, allowsUndo: false)
+            } else {
+                invalidateNativePresentation()
+                overlayController.dismissTransient()
             }
 
         case .polishShortcut:
             // Cancel any in-flight dictation triggered accidentally by Option keydown
-            if state == .listening {
+            if state == .listening || isVoiceAgentSession {
                 teardownSession(errorMessage: nil, clearErrorMessage: true)
             }
             await polishActiveSelectionOrRecentDictation()
 
         case .promptEngineerShortcut:
-            if state == .listening {
+            if state == .listening || isVoiceAgentSession {
                 teardownSession(errorMessage: nil, clearErrorMessage: true)
             }
             await buildPromptFromActiveSelection()
@@ -335,6 +560,7 @@ public final class DictationCoordinator: ObservableObject {
     /// Option + 2 Prompt Engineer. Like Smart Polish, this is selection-only and uses
     /// the same capture, revalidation, and safe replacement transaction.
     public func buildPromptFromActiveSelection() async {
+        if isVoiceAgentSession { teardownSession(clearErrorMessage: true) }
         let requestID = UUID()
         Self.promptLog.debug("request \(requestID.uuidString, privacy: .public) shortcut received")
         guard !isRewritingSelection, state != .processing else {
@@ -400,6 +626,7 @@ public final class DictationCoordinator: ObservableObject {
     /// Option + 1 Smart Polish. This action is deliberately selection-only: it never
     /// reads dictation history and never inserts into a cursor without the same live selection.
     public func polishActiveSelectionOrRecentDictation() async {
+        if isVoiceAgentSession { teardownSession(clearErrorMessage: true) }
         guard !isRewritingSelection, state != .processing else {
             overlayController.showError("Polish already in progress.")
             return
@@ -494,7 +721,7 @@ public final class DictationCoordinator: ObservableObject {
                 try await Task.sleep(nanoseconds: 1_800_000_000_000)
                 guard !Task.isCancelled else { return }
                 await MainActor.run {
-                    guard self?.state == .listening, self?.sessionMode == .handsFree else { return }
+                    guard self?.state == .listening, self?.sessionMode == .handsFree, self?.isVoiceAgentSession == false else { return }
                     Task { @MainActor in
                         await self?.endDictation()
                     }
@@ -508,11 +735,13 @@ public final class DictationCoordinator: ObservableObject {
         handsFreeSilenceTask = Task { [weak self] in
             while !Task.isCancelled {
                 do {
-                    try await Task.sleep(nanoseconds: 1_000_000_000)
+                    try await Task.sleep(for: .seconds(self?.isVoiceAgentSession == true ? 0.2 : 1))
                     guard !Task.isCancelled else { return }
                     await MainActor.run {
                         guard let self, self.state == .listening, self.sessionMode == .handsFree else { return }
-                        if self.audioCapture.continuousSilenceDurationSeconds >= 45.0 {
+                        if self.isVoiceAgentSession {
+                            self.voiceAgent.observePause(silenceDurationSeconds: self.audioCapture.continuousSilenceDurationSeconds)
+                        } else if self.audioCapture.continuousSilenceDurationSeconds >= 45.0 {
                             if self.audioCapture.hasMeaningfulAudio {
                                 // User spoke thoughts and stopped: auto-transcribe & insert!
                                 Task { @MainActor in
@@ -531,17 +760,65 @@ public final class DictationCoordinator: ObservableObject {
         }
     }
 
+    /// Agent traffic is explicit; the ordinary Option/Fn dictation path retains final-only behavior.
+    public func beginVoiceAgent() async {
+        if isTypedPlannerSession { cancelTypedPlanner(); await voiceAgent.cancelAndWait() }
+        agentMemory.reload()
+        if let error = agentMemory.error {
+            lastErrorMessage = "Repair or reload agent memory in Settings: " + error
+            overlayController.showError(lastErrorMessage ?? error)
+            return
+        }
+        guard agentMemory.memory.realTimeEnabled else {
+            lastErrorMessage = "Enable real-time agent in Settings → Agent / Mac Control."; return
+        }
+        guard state == .idle, !isStartingDictation, !isRewritingSelection else { return }
+        await beginCapture(mode: .handsFree, agent: true)
+    }
+
     public func beginDictation(mode: DictationSessionMode = .pushToTalk) async {
+        if isTypedPlannerSession { cancelTypedPlanner(); await voiceAgent.cancelAndWait() }
+        await beginCapture(mode: mode, agent: false)
+    }
+
+    private func beginCapture(mode: DictationSessionMode, agent: Bool) async {
+        guard !isStartingDictation, !isResettingAgentMemory else { return }
+        isStartingDictation = true
+        defer { isStartingDictation = false }
+        let startID = UUID()
+        recordingID = startID
+        // A new recording supersedes unconfirmed actions and waits for cancelled native
+        // helper ownership before warming it again. It never races a new IPC session.
+        if pendingCommand != nil { cancelPendingCommand() }
+        let previousNativeTask = nativeActionTask
+        invalidateNativePresentation()
+        await previousNativeTask?.value
+        isVoiceAgentSession = false
+#if DEBUG
+        cancelRealityPreview()
+#endif
+        await voiceAgent.cancelAndWait()
+        guard recordingID == startID else { return }
+        decisionModels.prepareInstalled()
+        lastDecisions = nil
         // Guarantee any previous session (or stuck state) is cleanly torn down first.
         if state != .idle {
             teardownSession()
         }
+        isVoiceAgentSession = agent
+        if agent {
+            voiceAgent.onChange = { [weak self] snapshot in self?.presentAgent(snapshot) }
+        }
+        let recordingID = UUID()
+        self.recordingID = recordingID
+        transcriptState = TranscriptState()
 
         // Never capture audio without a real engine — that was producing empty history.
         if !isEngineReady {
             do {
-                try await prepareModelsWithError()
+                try await prepareModelsWithError(allowInstallation: false)
             } catch {
+                guard self.recordingID == recordingID else { return }
                 lastErrorMessage = "Speech model not ready. Open Settings → General → Download / Prepare Model. (\(error.localizedDescription))"
                 state = .error
                 Task { @MainActor in
@@ -556,6 +833,7 @@ public final class DictationCoordinator: ObservableObject {
             lastErrorMessage = "Speech model not loaded. Finish onboarding or download a model in Settings → General."
             return
         }
+        guard self.recordingID == recordingID else { return }
 
         // Remember where text should land — Settings/LocalFlow must never become the paste target.
         if let front = NSWorkspace.shared.frontmostApplication,
@@ -582,12 +860,33 @@ public final class DictationCoordinator: ObservableObject {
         // #endregion
 
         do {
-            try audioCapture.start()
+            let chunks = try audioCapture.startStreaming(retainRecording: !agent)
             sessionMode = mode
             sessionStartTime = Date()
             overlayController.show(mode: mode, levelsPublisher: audioCapture.$waveformLevels.eraseToAnyPublisher())
             state = .listening
+            if agent { voiceAgent.begin() }
             lastErrorMessage = nil
+            let startTask = Task { await streamingRouter.start(chunks: chunks) }
+            streamingStartTask = startTask
+            streamingEventsTask = Task { @MainActor [weak self] in
+                let session = await startTask.value
+                for await event in session.events {
+                    guard !Task.isCancelled, let self, self.recordingID == recordingID else { return }
+                    self.transcriptState.apply(event)
+                    if case .failed(let message) = event {
+                        self.teardownSession(errorMessage: message)
+                        return
+                    }
+                    if self.isVoiceAgentSession, self.state == .listening, case .partial(let partial) = event {
+                        if let onset = self.audioCapture.speechOnsetUptime { self.voiceAgent.markSpeechOnset(at: onset) }
+                        self.voiceAgent.receive(partial)
+                    }
+                    if self.state == .listening && !self.isVoiceAgentSession {
+                        self.overlayController.update(transcript: self.transcriptState.partial)
+                    }
+                }
+            }
 
             if mode == .handsFree {
                 setupHandsFreeTimers()
@@ -614,7 +913,7 @@ public final class DictationCoordinator: ObservableObject {
     }
 
     public func endDictation() async {
-        guard state == .listening else { return }
+        guard state == .listening, let recordingID, let startTask = streamingStartTask else { return }
 
         // Cancel recording timeouts
         timeoutTask?.cancel()
@@ -624,12 +923,11 @@ public final class DictationCoordinator: ObservableObject {
         pendingKeyReleaseTask?.cancel()
         pendingKeyReleaseTask = nil
 
-        let audio = audioCapture.stop()
-        overlayController.hide()
+        _ = audioCapture.stop()
 
         // Silence detection: if no meaningful audio energy was captured for the hold duration,
         // explicitly cancel and tear down the session — do not attempt to transcribe or inject.
-        guard !audio.isEmpty, audio.hasMeaningfulAudio, audioCapture.hasMeaningfulAudio else {
+        guard audioCapture.hasMeaningfulAudio else {
             teardownSession(errorMessage: "No speech detected.")
             return
         }
@@ -637,7 +935,9 @@ public final class DictationCoordinator: ObservableObject {
         state = .processing
         // Keep the user oriented while the local speech engine and formatter work,
         // then hide this small HUD only after we inject or show the fallback card.
-        overlayController.showProcessing()
+        if isVoiceAgentSession {
+            overlayController.updateAgent(transcript: transcriptState.partial, message: OverlayMessage(title: "Finishing speech…", symbol: "ellipsis"), recording: false, phase: .thinking)
+        } else { overlayController.showProcessing() }
 
         // Hard timeout failsafe on processing: prevent indefinite hangs in transcription engines (120s limit)
         timeoutTask = Task { [weak self] in
@@ -654,14 +954,16 @@ public final class DictationCoordinator: ObservableObject {
         dictationTask?.cancel()
         dictationTask = Task { @MainActor in
             do {
-                let result = try await router.transcribe(audio: audio)
-                guard !Task.isCancelled else {
-                    teardownSession()
-                    return
-                }
+                let session = await startTask.value
+                try Task.checkCancellation()
+                let result = try await streamingRouter.finish(sessionID: session.id)
+                guard !Task.isCancelled, self.recordingID == recordingID else { return }
+                transcriptState.apply(.final(result))
+                if !isVoiceAgentSession { overlayController.showThinking(message: "Deciding…") }
 
-                let corrected = vocabularyStore.apply(to: result.text)
-                let trimmed = corrected.trimmingCharacters(in: .whitespacesAndNewlines)
+                // Resolve every operational command against source text. Vocabulary
+                // shortcuts belong to dictation, including in legacy single-command capture.
+                let trimmed = result.text.trimmingCharacters(in: .whitespacesAndNewlines)
 
                 // If transcription engine returns empty/near-empty result, explicitly cancel
                 guard !trimmed.isEmpty else {
@@ -669,14 +971,52 @@ public final class DictationCoordinator: ObservableObject {
                     return
                 }
 
-                switch commandMode.resolve(trimmed, transcriptionConfidence: result.confidence) {
+                if isVoiceAgentSession {
+                    // The final transcript reconciles the incremental ledger instead of re-running
+                    // the ordinary single-command/dictation branch or injecting leftover commands.
+                    await voiceAgent.finish(FinalTranscript(text: trimmed, confidence: result.confidence, source: result.source, phrases: result.phrases))
+                    guard !Task.isCancelled, self.recordingID == recordingID else { return }
+                    teardownSession(clearErrorMessage: true, cancelDictationTask: false, preserveOverlay: true, preserveVoiceAgent: true)
+                    presentAgent(voiceAgent.snapshot)
+                    return
+                }
+
+                let sessionCommands = commandMode.withMemory(agentMemory.memory)
+                let parsed = sessionCommands.resolve(trimmed, transcriptionConfidence: result.confidence)
+                let fallback = try DeterministicDecisionEngine.decisions(for: parsed, isFinal: true)
+                let needsSemanticHelp: Bool
+                switch parsed {
+                case .needsConfirmation: needsSemanticHelp = true
+                case .execute(let intent):
+                    let action = intent.agentAction
+                    needsSemanticHelp = action.toolID == .openApplication
+                        && !sessionCommands.isExactApplicationOpen(trimmed, action: action)
+                        && !sessionCommands.isConfiguredApplicationOpen(trimmed, action: action)
+                case .notCommand: needsSemanticHelp = false
+                }
+                let decisions = needsSemanticHelp
+                    ? await decisionModels.evaluate(DecisionState(text: trimmed, languageCode: NLLanguageRecognizer.dominantLanguage(for: trimmed)?.rawValue ?? "und"), fallback: fallback)
+                    : fallback
+                guard !Task.isCancelled, self.recordingID == recordingID else { return }
+                lastDecisions = decisions
+                if let narrow = decisions.narrow, needsSemanticHelp {
+                    switch NarrowDecisionPolicy.route(parsed, knownExact: false, isFinal: true, decisions: narrow) {
+                    case .parsed: break
+                    case .wait, .abstain:
+                        teardownSession(errorMessage: "Uncertain or incomplete command. Nothing was sent.")
+                        return
+                    }
+                }
+                switch DecisionCommandPolicy.resolve(parsed, decisions: decisions) {
                 case .notCommand:
+                    overlayController.showThinking(message: "Formatting…")
+                    let dictationText = vocabularyStore.apply(to: trimmed)
                     let target = resolvedTargetApplication()
                     let bundleID = target?.bundleIdentifier
                         ?? NSWorkspace.shared.frontmostApplication?.bundleIdentifier
                     let profile = formatter.profile(for: bundleID, applicationName: target?.localizedName)
                     let cleaned = speechCleanup.clean(
-                        trimmed,
+                        dictationText,
                         options: SpeechCleanupOptions(settings: settings),
                         vocabularyStore: vocabularyStore
                     )
@@ -699,8 +1039,10 @@ public final class DictationCoordinator: ObservableObject {
                     // #endregion
                     // Always keep history even when paste/AX insert fails.
                     historyStore.append(text: formatted, bundleIdentifier: bundleID)
+                    overlayController.showActing(OverlayMessage(title: target?.localizedName ?? "Dictation", detail: "Sending text…", symbol: "text.cursor"))
                     do {
                         let outcome = try await textInjection.insert(formatted, into: target)
+                        guard !Task.isCancelled, self.recordingID == recordingID else { return }
                         switch outcome {
                         case .inserted:
                             // #region agent log
@@ -715,7 +1057,8 @@ public final class DictationCoordinator: ObservableObject {
                                 runId: "post-fix"
                             )
                             // #endregion
-                            teardownSession(clearErrorMessage: true)
+                            teardownSession(clearErrorMessage: true, preserveOverlay: true)
+                            overlayController.showPolished(message: "Text sent")
                         case .noFocusedTarget:
                             // #region agent log
                             AgentDebugLog.write(
@@ -733,6 +1076,7 @@ public final class DictationCoordinator: ObservableObject {
                             teardownSession(clearErrorMessage: true)
                         }
                     } catch {
+                        guard !Task.isCancelled, self.recordingID == recordingID else { return }
                         // #region agent log
                         AgentDebugLog.write(
                             hypothesisId: "D",
@@ -744,18 +1088,14 @@ public final class DictationCoordinator: ObservableObject {
                         teardownSession(errorMessage: "Transcribed and saved to History, but paste needs Accessibility. Enable LocalFlow in System Settings → Privacy & Security → Accessibility (text is also on your clipboard — press ⌘V).")
                     }
                 case .execute(let intent):
-                    commandMode.execute(intent)
-                    teardownSession(clearErrorMessage: true)
-                    if case .searchWeb(_, let provider, _) = intent {
-                        overlayController.showPolished(message: "Opening \(provider)...", durationSeconds: 1.5)
-                    } else if case .spotifySearchAndPlay = intent {
-                        overlayController.showPolished(message: "Opening Spotify...", durationSeconds: 1.5)
-                    }
+                    teardownSession(clearErrorMessage: true, preserveOverlay: true)
+                    executeCommand(intent)
                 case .needsConfirmation(let intent):
-                    pendingCommand = intent
-                    teardownSession(clearErrorMessage: true)
+                    teardownSession(clearErrorMessage: true, preserveOverlay: true)
+                    executeCommand(intent, requireConfirmation: true)
                 }
             } catch {
+                guard !Task.isCancelled, self.recordingID == recordingID else { return }
                 // #region agent log
                 AgentDebugLog.write(
                     hypothesisId: "B",
@@ -767,6 +1107,138 @@ public final class DictationCoordinator: ObservableObject {
                 teardownSession(errorMessage: "Transcription failed: \(error.localizedDescription)")
             }
         }
+    }
+
+    /// Explicit typed developer requests. Automatic speech fallback is quality-gated separately.
+    public var plannerToolSchemas: [PlannerToolSchema] { actionExecutor.registry.plannerSchemas }
+    public func canRunTypedRequest(_ goal: String) -> Bool {
+        guard !goal.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty, state == .idle,
+              !isStartingDictation, !isRewritingSelection, typedPlannerTask == nil, !plannerModels.busy else { return false }
+        let route = PlannerRouter.route(goal, authoritative: true, enabled: plannerModels.experimentalEnabled, commands: commandMode)
+        return route == .direct || route == .planner && plannerModels.resident
+    }
+    public func runTypedPlanner(goal: String, thinking: Bool = false) {
+        guard canRunTypedRequest(goal) else { return }
+        isTypedPlannerSession = true
+        voiceAgent.onChange = { [weak self] snapshot in self?.presentAgent(snapshot) }
+        typedPlannerTask = Task { @MainActor [weak self] in
+            guard let self else { return }
+            await self.voiceAgent.runPlanner(PlannerRequest(goal: goal, mode: thinking ? .thinking : .nonThinking), provider: self.plannerModels)
+            self.typedPlannerTask = nil
+        }
+    }
+    /// Only an explicit UI click renews the bounded planner budget; tool confirmation still applies.
+    public func continueTypedPlannerAfterUserApproval() {
+        guard isTypedPlannerSession, typedPlannerTask == nil, voiceAgent.snapshot.plannerNeedsContinuation else { return }
+        let goal = voiceAgent.snapshot.transcript
+        typedPlannerTask = Task { @MainActor [weak self] in
+            guard let self else { return }
+            await self.voiceAgent.runPlanner(PlannerRequest(goal: goal), provider: self.plannerModels, resumeAfterUserApproval: true)
+            self.typedPlannerTask = nil
+        }
+    }
+    public func cancelTypedPlanner() {
+        typedPlannerTask?.cancel(); voiceAgent.cancel(); isTypedPlannerSession = false
+        Task { await plannerModels.cancelGeneration() }
+        lastToolUndo = voiceAgent.snapshot.actions.last(where: { $0.phase == .completed && $0.undo != nil })?.undo
+        overlayController.showCancelled(durationSeconds: 1.6, allowsUndo: lastToolUndo != nil, message: "Planner cancelled")
+    }
+    public func terminateOwnedPlannerProcesses() {
+        typedPlannerTask?.cancel(); voiceAgent.cancel(); actionExecutor.registry.terminateOwnedProcesses()
+        plannerModels.runtime.terminateImmediately()
+    }
+
+    private func presentAgent(_ snapshot: VoiceAgentSnapshot) {
+        if let (scenario, expected) = pendingBenchmark,
+           snapshot.isCancelled || snapshot.timings.contains(where: { $0.kind == .totalCompletion }) {
+            benchmarkResults.append(AgentBenchmarkResult(scenario: scenario, mode: "live-microphone-native-tools", snapshot: snapshot, expected: expected))
+            benchmarkResults = Array(benchmarkResults.suffix(100))
+            pendingBenchmark = nil
+        }
+        guard isVoiceAgentSession || isTypedPlannerSession, !snapshot.isCancelled else { return }
+        let recording = state == .listening
+        let action = snapshot.actions.first(where: { $0.phase == .executing })
+            ?? snapshot.actions.first(where: { $0.phase == .stable })
+            ?? ((snapshot.isFinal || snapshot.feedbackVisible)
+                ? snapshot.actions.last(where: { $0.phase == .completed || $0.phase == .failed }) : nil)
+        let phase: OverlayPhase
+        let message: OverlayMessage
+        if let confirmation = snapshot.confirmation {
+            phase = .confirmation
+            message = OverlayMessage(title: confirmation.action.summary, detail: snapshot.notice.isEmpty ? "Confirm this action?" : snapshot.notice, symbol: "hand.raised")
+        } else if snapshot.plannerActive {
+            phase = action?.phase == .executing ? .acting : .thinking
+            message = OverlayMessage(title: action?.phase == .executing ? action!.action.summary : snapshot.notice,
+                detail: snapshot.plannerProgress, symbol: "gearshape")
+        } else if isTypedPlannerSession, snapshot.notice == "Planner finished" {
+            phase = .success
+            message = OverlayMessage(title: "Planner finished", detail: snapshot.actions.contains(where: { $0.verification != .verified }) ? "Some requests remain unverified" : "Actions complete", symbol: "checkmark.circle.fill")
+        } else if !snapshot.notice.isEmpty, snapshot.isFinal {
+            phase = .error
+            message = OverlayMessage(title: "Check instruction", detail: snapshot.notice, symbol: "exclamationmark.triangle.fill")
+        } else if let action {
+            switch action.phase {
+            case .executing: phase = .acting
+            case .failed: phase = .error
+            case .completed: phase = .success
+            default: phase = .thinking
+            }
+            let verified = action.verification == .verified
+            let detail = action.phase == .executing ? "Running…" : (action.phase == .completed && !verified ? "Request sent · unverified" : action.detail)
+            message = OverlayMessage(title: action.action.summary, detail: detail, symbol: action.phase == .completed && verified ? "checkmark.circle.fill" : "gearshape")
+        } else {
+            phase = snapshot.notice.isEmpty ? (recording ? .handsFree : .thinking) : .error
+            message = OverlayMessage(title: snapshot.notice.isEmpty ? "Voice Agent" : "Couldn’t resolve instruction", detail: snapshot.notice.isEmpty ? "Listening for commands…" : snapshot.notice, symbol: "waveform")
+        }
+        lastToolUndo = !recording && snapshot.confirmation == nil ? action?.undo : nil
+        overlayController.updateAgent(transcript: PartialTranscript(text: snapshot.transcript), message: message,
+                                      recording: recording, phase: phase, allowsUndo: lastToolUndo != nil)
+    }
+
+    /// Feedback before execution; the typed result supplies truthful terminal feedback.
+    private func actionPresentation(for intent: CommandIntent, confirmation: Bool = false) -> OverlayMessage {
+        let title: String
+        let verb: String
+        let symbol: String
+        switch intent {
+        case .nativeAction(let action): (title, verb, symbol) = (action.summary, "Running", "gearshape")
+        case .openApplication(let app): (title, verb, symbol) = (app.name, "Opening", "app")
+        case .switchToApplication(let app): (title, verb, symbol) = (app.name, "Switching to", "app")
+        case .quitApplication(let app): (title, verb, symbol) = (app.name, "Quitting", "app")
+        case .openURL(let url): (title, verb, symbol) = (url.host ?? "Website", "Opening", "globe")
+        case .searchWeb(_, let provider, _): (title, verb, symbol) = (provider, "Searching", "magnifyingglass")
+        case .spotifySearchAndPlay: (title, verb, symbol) = ("Spotify", "Opening", "music.note")
+        case .spotifyControl(let action):
+            title = "Spotify"
+            symbol = "music.note"
+            switch action {
+            case .resume: verb = "Resuming"
+            case .pause: verb = "Pausing"
+            case .next: verb = "Skipping track"
+            case .previous: verb = "Going to previous track"
+            }
+        case .mute: (title, verb, symbol) = ("System audio", "Muting", "speaker.slash")
+        case .unmute: (title, verb, symbol) = ("System audio", "Unmuting", "speaker.wave.2")
+        case .sleepDisplay: (title, verb, symbol) = ("Display", "Sleeping", "display")
+        case .lockScreen: (title, verb, symbol) = ("This Mac", "Locking", "lock")
+        }
+        return OverlayMessage(title: title, detail: confirmation ? "\(verb) \(title). Continue?" : "\(verb)…", symbol: symbol)
+    }
+
+    /// Immediately invalidates UI/injection ownership; actor cleanup cannot cancel a newer session.
+    private func cancelStreamingSession() {
+        recordingID = nil
+        transcriptState = TranscriptState()
+        streamingEventsTask?.cancel()
+        streamingEventsTask = nil
+        if let startTask = streamingStartTask {
+            startTask.cancel()
+            Task {
+                let session = await startTask.value
+                await streamingRouter.cancel(sessionID: session.id)
+            }
+        }
+        streamingStartTask = nil
     }
 
     /// Prefer the app captured at hotkey-down; never paste into LocalFlow itself.

@@ -33,6 +33,7 @@ public struct CommandConfirmationView: View {
 
     private var description: String {
         switch intent {
+        case .nativeAction(let action): "\(action.summary)?"
         case .openApplication(let match): "Open \(match.name)?"
         case .quitApplication(let match): "Quit \(match.name)?"
         case .switchToApplication(let match): "Switch to \(match.name)?"

@@ -48,6 +48,7 @@ enum SpotifyPlaybackVerifier {
     static func snapshot() async -> SpotifyPlaybackSnapshot? {
         await Task.detached(priority: .utility) {
             let source = """
+            with timeout of 3 seconds
             tell application id "com.spotify.client"
                 if it is not running then return ""
                 set fieldSeparator to ASCII character 30
@@ -67,10 +68,11 @@ enum SpotifyPlaybackVerifier {
                 end try
                 return stateText & fieldSeparator & trackName & fieldSeparator & artistName & fieldSeparator & albumName & fieldSeparator & trackID & fieldSeparator & positionText
             end tell
+            end timeout
             """
             var error: NSDictionary?
             guard let value = NSAppleScript(source: source)?.executeAndReturnError(&error).stringValue,
-                  !value.isEmpty else { return nil }
+                  error == nil, !value.isEmpty else { return nil }
             let fields = value.components(separatedBy: String(UnicodeScalar(30)))
             guard let state = fields.first, !state.isEmpty else { return nil }
             func field(_ index: Int) -> String? {
@@ -455,9 +457,10 @@ public enum SpotifyPlaybackController {
         case .next: command = "next track"
         case .previous: command = "previous track"
         }
-        let source = "tell application id \"com.spotify.client\" to \(command)"
+        let source = "with timeout of 3 seconds\ntell application id \"com.spotify.client\" to \(command)\nend timeout"
         var error: NSDictionary?
-        return NSAppleScript(source: source)?.executeAndReturnError(&error) != nil
+        let result = NSAppleScript(source: source)?.executeAndReturnError(&error)
+        return result != nil && error == nil
     }
 
     @MainActor

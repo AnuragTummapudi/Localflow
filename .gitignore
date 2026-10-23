@@ -17,3 +17,7 @@ dist/
 
 # Downloaded speech-model data is intentionally never versioned.
 Models/
+
+# Build-time decision-model evaluation tools
+__pycache__/
+*.pyc

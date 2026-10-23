@@ -10,9 +10,9 @@
 </p>
 
 <p align="center">
-  <a href="https://apple.com/macos"><img src="https://img.shields.io/badge/macOS-14.0%2B-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS 14.0+" /></a>
+  <a href="https://apple.com/macos"><img src="https://img.shields.io/badge/macOS-26.0%2B-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS 26.0+" /></a>
   <a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-5.9%2B-F05138?style=for-the-badge&logo=swift&logoColor=white" alt="Swift 5.9+" /></a>
-  <a href="#"><img src="https://img.shields.io/badge/Arch-Universal%20(Apple%20Silicon%20%26%20Intel)-4A154B?style=for-the-badge" alt="Universal Binary" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/Arch-Native%20macOS-4A154B?style=for-the-badge" alt="Native macOS" /></a>
   <a href="#privacy"><img src="https://img.shields.io/badge/Privacy-100%25%20On--Device-10B981?style=for-the-badge" alt="100% On-Device" /></a>
   <a href="dist/LocalFlow.dmg"><img src="https://img.shields.io/badge/Download-LocalFlow.dmg-007AFF?style=for-the-badge&logo=apple&logoColor=white" alt="Download DMG" /></a>
 </p>
@@ -39,7 +39,7 @@
 
 ## ⚡ Key Features
 
-- **🎙️ Zero-Cloud Dictation**: Transcription runs locally using optimized on-device models (Whisper / Apple Speech). Your voice never touches external servers.
+- **🎙️ Zero-Cloud Dictation**: Transcription runs locally using Apple's macOS 26 SpeechAnalyzer and SpeechTranscriber. Your voice never touches external servers.
 - **⌨️ Instant Text Insertion**: Hold **Fn** or **Right Option** to dictate, then release to insert text into any focused text box, IDE, browser, or terminal without stealing application focus.
 - **🙌 Hands-Free Toggle**: Double-tap your trigger key to lock dictation hands-free for continuous talking, and single-tap to stop.
 - **🧠 On-Device Smart Polish**: Clean up rambling thoughts into structured, professional prose with **Option + 1** using Apple Intelligence / local models.
@@ -60,7 +60,7 @@
 
 ### Required Permissions
 
-LocalFlow requires two standard macOS system permissions to operate completely on-device:
+Basic dictation uses Microphone and Accessibility permissions. Voice Agent tools additionally request Automation for Notes/Spotify and Reminders access when needed. Settings → Agent Readiness shows permissions, Apple Speech assets and Laya status; LocalFlow cannot pre-authorize Automation.
 
 | Permission | Purpose | Why It's Needed |
 |---|---|---|
@@ -137,8 +137,8 @@ LocalFlow is engineered with a strict **Local-First Privacy Architecture**:
 ## 🛠️ Building from Source
 
 ### Prerequisites
-- macOS 14.0 (Sonoma) or later
-- Xcode 15.0 or later with Command Line Tools
+- macOS 26 or later; Apple Speech availability is checked for the device and selected locale. Unsupported configurations show a clear unavailable state.
+- Xcode 26.0 or later with Command Line Tools
 - Swift 5.9 or later
 
 ### 1. Clone the Repository
@@ -189,7 +189,6 @@ LocalFlow/
 │   └── TextInsertion.swift          # Accessibility and clipboard insertion engine
 ├── Engines/            # On-device transcription engine drivers
 │   ├── AppleSpeechEngine.swift      # Native Apple Speech transcription
-│   └── WhisperEngine.swift          # Local Whisper transcription pipeline
 ├── Features/           # High-level product features
 │   ├── CommandMode/                 # Voice command parsing, search routing, & Spotify control
 │   ├── SmartFormatting/             # App-aware punctuation, casing, & cleanup
@@ -216,3 +215,8 @@ Contributions are welcome! Please feel free to submit issues, feature suggestion
 ## 📄 License
 
 LocalFlow is free and open-source software licensed under the **MIT License**.
+
+
+## System-2 phase
+
+The next local architecture phase is documented in [SYSTEM2_PLANNER.md](SYSTEM2_PLANNER.md), with measured results in [SYSTEM2_PLANNER_REPORT.md](SYSTEM2_PLANNER_REPORT.md). It introduces an experimental resident local Qwen planner and explicit project/workflow tools; automatic voice fallback remains separately gated.

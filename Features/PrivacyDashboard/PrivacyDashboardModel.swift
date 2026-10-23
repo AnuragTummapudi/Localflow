@@ -43,8 +43,6 @@ public final class PrivacyDashboardModel: ObservableObject, @unchecked Sendable 
     public var credits: [String] {
         [
             "Apple SpeechAnalyzer / SpeechTranscriber (on-device, macOS).",
-            "FluidAudio / Parakeet: optional local fallback, CC-BY-4.0.",
-            "WhisperKit: optional local fallback, MIT.",
             "SpeechAnalyzer live-input patterns informed by open macOS dictation work (ambient-voice, MacinTalk)."
         ]
     }

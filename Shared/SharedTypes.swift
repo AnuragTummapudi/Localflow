@@ -1,46 +1,6 @@
 @preconcurrency import AVFoundation
 import Foundation
 
-/// A supported transcription engine family.
-public enum EngineKind: String, Codable, CaseIterable, Identifiable, Sendable {
-    case automatic
-    case appleSpeech
-    case parakeet
-    case whisper
-
-    /// The stable identifier for UI lists and persistence.
-    public var id: String { rawValue }
-
-    /// A user-facing engine name for display in Settings.
-    public var displayName: String {
-        switch self {
-        case .automatic: "Automatic"
-        case .appleSpeech: "Apple Speech"
-        case .parakeet: "Parakeet"
-        case .whisper: "Whisper"
-        }
-    }
-}
-
-/// A model tier LocalFlow can download and load.
-public enum ModelTier: String, Codable, CaseIterable, Identifiable, Sendable {
-    case automatic
-    case parakeetTDT
-    case whisperLargeV3Turbo
-
-    /// The stable identifier for UI lists and persistence.
-    public var id: String { rawValue }
-
-    /// A human-readable model name.
-    public var displayName: String {
-        switch self {
-        case .automatic: "Automatic"
-        case .parakeetTDT: "Parakeet TDT"
-        case .whisperLargeV3Turbo: "Whisper Large v3 Turbo"
-        }
-    }
-}
-
 /// Captured speech audio preserved in the native audio form expected by engine SDKs.
 public struct CapturedAudio: @unchecked Sendable {
     /// The original captured PCM buffer, when capture came from AVAudioEngine.
@@ -262,7 +222,7 @@ public enum LocalFlowError: Error, LocalizedError, Equatable {
         case .microphonePermissionDenied: "Microphone permission is required to capture dictation."
         case .accessibilityPermissionMissing: "Accessibility permission is required to insert text into other apps."
         case .networkBlocked: "Network access is blocked by privacy settings."
-        case .modelUnavailable(let detail): "The speech model is unavailable: \(detail)"
+        case .modelUnavailable(let detail): "Apple Speech unavailable: \(detail)"
         case .transcriptionFailed(let detail): "Transcription failed: \(detail)"
         case .textInjectionFailed: "LocalFlow could not insert text into the focused field."
         case .audioCaptureFailed(let detail): "Audio capture failed: \(detail)"

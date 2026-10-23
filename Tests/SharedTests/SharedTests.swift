@@ -7,6 +7,25 @@ import Carbon.HIToolbox
 @testable import Engines
 
 final class SharedTests: XCTestCase {
+    private var suiteName: String!
+    private var defaults: UserDefaults!
+    private var settings: LocalFlowSettings!
+
+    override func setUp() {
+        super.setUp()
+        suiteName = "LocalFlowTests.\(UUID().uuidString)"
+        defaults = UserDefaults(suiteName: suiteName)!
+        settings = LocalFlowSettings(defaults: defaults)
+    }
+
+    override func tearDown() {
+        defaults.removePersistentDomain(forName: suiteName)
+        settings = nil
+        defaults = nil
+        suiteName = nil
+        super.tearDown()
+    }
+
     func testAudioCaptureSessionResetAndSilenceState() {
         let session = AudioCaptureSession()
         XCTAssertFalse(session.isRecording)
@@ -21,8 +40,6 @@ final class SharedTests: XCTestCase {
         XCTAssertEqual(session.waveformLevels.first, 0.12)
     }
     func testVocabularyReplacementIsCaseInsensitive() {
-        let defaults = UserDefaults(suiteName: "LocalFlowTests.\(UUID().uuidString)")!
-        let settings = LocalFlowSettings(defaults: defaults)
         let store = VocabularyStore(settings: settings)
         store.add(phrase: "local flow", replacement: "LocalFlow")
 
@@ -30,8 +47,6 @@ final class SharedTests: XCTestCase {
     }
 
     func testCustomWordCasingPreservedWithoutDeletion() {
-        let defaults = UserDefaults(suiteName: "LocalFlowTests.\(UUID().uuidString)")!
-        let settings = LocalFlowSettings(defaults: defaults)
         let store = VocabularyStore(settings: settings)
         // Add single word without replacement
         store.add(phrase: "Anurag Tummapudi")
@@ -41,8 +56,6 @@ final class SharedTests: XCTestCase {
     }
 
     func testWordBoundaryPreventsSubstringCorruption() {
-        let defaults = UserDefaults(suiteName: "LocalFlowTests.\(UUID().uuidString)")!
-        let settings = LocalFlowSettings(defaults: defaults)
         let store = VocabularyStore(settings: settings)
 
         // "dinner" contains "inr", "obtuse" contains "bt"
@@ -54,8 +67,6 @@ final class SharedTests: XCTestCase {
     }
 
     func testShortcutCapitalizationPreservation() {
-        let defaults = UserDefaults(suiteName: "LocalFlowTests.\(UUID().uuidString)")!
-        let settings = LocalFlowSettings(defaults: defaults)
         let store = VocabularyStore(settings: settings)
 
         let result = store.apply(to: "Btw, we are launching today.")
@@ -63,8 +74,6 @@ final class SharedTests: XCTestCase {
     }
 
     func testSmartPhoneticsVariations() {
-        let defaults = UserDefaults(suiteName: "LocalFlowTests.\(UUID().uuidString)")!
-        let settings = LocalFlowSettings(defaults: defaults)
         let store = VocabularyStore(settings: settings)
 
         let input = "meeting with mccarthy and reading posh quotes about a b gen"
@@ -73,8 +82,6 @@ final class SharedTests: XCTestCase {
     }
 
     func testEmailSpokenAddressParsing() {
-        let defaults = UserDefaults(suiteName: "LocalFlowTests.\(UUID().uuidString)")!
-        let settings = LocalFlowSettings(defaults: defaults)
         let store = VocabularyStore(settings: settings)
 
         let input = "email me at tummapudianurag at gmail dot com today"
@@ -83,8 +90,6 @@ final class SharedTests: XCTestCase {
     }
 
     func testLengthPrioritizedMatching() {
-        let defaults = UserDefaults(suiteName: "LocalFlowTests.\(UUID().uuidString)")!
-        let settings = LocalFlowSettings(defaults: defaults)
         let store = VocabularyStore(settings: settings)
 
         // Both "Anurag" and "Anurag Tummapudi" exist
@@ -103,8 +108,6 @@ final class SharedTests: XCTestCase {
     }
 
     func testNetworkPolicyBlocksAfterModelsAreAvailable() {
-        let defaults = UserDefaults(suiteName: "LocalFlowTests.\(UUID().uuidString)")!
-        let settings = LocalFlowSettings(defaults: defaults)
         settings.hardBlockNetworkAfterModelsDownloaded = true
         let policy = NetworkPolicy(settings: settings, modelsAvailable: { true })
 
@@ -122,22 +125,9 @@ final class SharedTests: XCTestCase {
         XCTAssertEqual(counter.requestCount, 0)
     }
 
-    func testEngineSelectionPriority() async throws {
-        // Apple Speech APIs exist only on macOS 26+; older OSes should fall through cleanly.
-        if appleSpeechEngineIsAvailable() {
-            let isInstalled = await appleSpeechModelIsInstalled()
-            // Headless CI typically has no OS speech asset pre-downloaded.
-            _ = isInstalled
-        } else {
-            XCTAssertFalse(appleSpeechEngineIsAvailable())
-        }
-
-        do {
-            _ = try await ModelManager.shared.prepareEngine()
-        } catch {
-            // Expected when local Parakeet/Whisper weights are not pre-downloaded.
-            XCTAssertNotNil(error)
-        }
+    func testSpeechLocaleIsAnExplicitPreference() {
+        settings.speechLocaleIdentifier = "en-IN"
+        XCTAssertEqual(settings.speechLocaleIdentifier, "en-IN")
     }
 
     func testCapturedAudioSilenceDetection() {
@@ -183,7 +173,7 @@ final class SharedTests: XCTestCase {
     }
 
     func testHotkeyEventsAndDoubleTapBehavior() {
-        let manager = HotkeyManager()
+        let manager = HotkeyManager(settings: settings)
         var receivedEvents: [HotkeyEvent] = []
         let cancellable = manager.eventPublisher.sink { event in
             receivedEvents.append(event)

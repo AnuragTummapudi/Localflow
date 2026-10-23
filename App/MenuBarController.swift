@@ -1,5 +1,6 @@
 import AppKit
 import SwiftUI
+import Combine
 import Shared
 import ModelManager
 import PrivacyDashboard
@@ -13,6 +14,8 @@ public final class MenuBarController: NSObject, NSMenuDelegate {
     private let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     private var observer: (any NSObjectProtocol)?
     private var settingsWindowController: NSWindowController?
+    private var decisionStatusItem: NSMenuItem?
+    private var decisionObservers = Set<AnyCancellable>()
 
     /// Creates and configures a menu bar item.
     public override init() {
@@ -70,6 +73,13 @@ public final class MenuBarController: NSObject, NSMenuDelegate {
         menu.delegate = self
         rebuildMenu(menu)
         statusItem.menu = menu
+        let manager = DecisionModelManager.shared
+        manager.$status.combineLatest(manager.$progress).sink { [weak self] status, progress in
+            self?.decisionStatusItem?.title = progress.map { update in
+                let fraction = update.fractionCompleted.map { " \(Int($0 * 100))%" } ?? ""
+                return update.stage + fraction
+            } ?? status.description
+        }.store(in: &decisionObservers)
     }
 
     private func rebuildMenu(_ menu: NSMenu) {
@@ -84,14 +94,22 @@ public final class MenuBarController: NSObject, NSMenuDelegate {
             statusItem.isEnabled = false
             menu.addItem(statusItem)
 
-            let stopItem = NSMenuItem(title: "Stop & Transcribe", action: #selector(stopDictationAction), keyEquivalent: "")
+            let stopItem = NSMenuItem(title: coordinator.isVoiceAgentSession ? "Finish Voice Agent" : "Stop & Transcribe", action: #selector(stopDictationAction), keyEquivalent: "")
             stopItem.target = self
             menu.addItem(stopItem)
 
-            let cancelItem = NSMenuItem(title: "Cancel Dictation", action: #selector(cancelDictationAction), keyEquivalent: "")
+            let cancelItem = NSMenuItem(title: coordinator.isVoiceAgentSession ? "Cancel Voice Agent" : "Cancel Dictation", action: #selector(cancelDictationAction), keyEquivalent: "")
             cancelItem.target = self
             menu.addItem(cancelItem)
 
+            menu.addItem(.separator())
+        }
+
+        if currentState == .idle {
+            let agent = NSMenuItem(title: "Start Voice Agent", action: #selector(startVoiceAgentAction), keyEquivalent: " ")
+            agent.keyEquivalentModifierMask = [.command, .shift]
+            agent.target = self
+            menu.addItem(agent)
             menu.addItem(.separator())
         }
 
@@ -105,8 +123,55 @@ public final class MenuBarController: NSObject, NSMenuDelegate {
         historyItem.target = self
         menu.addItem(historyItem)
 
+        let decisionMenu = NSMenu(title: "Local decisions")
+        let decisionStatus = NSMenuItem(title: DecisionModelManager.shared.progress?.stage ?? DecisionModelManager.shared.status.description, action: nil, keyEquivalent: "")
+        decisionStatus.isEnabled = false
+        decisionStatusItem = decisionStatus
+        decisionMenu.addItem(decisionStatus)
+        let install = NSMenuItem(title: "Install LocalFlow-Laya-v2…", action: #selector(installDecisionModel), keyEquivalent: "")
+        install.target = self
+        decisionMenu.addItem(install)
+        let remove = NSMenuItem(title: "Remove Laya Model", action: #selector(removeDecisionModel), keyEquivalent: "")
+        remove.target = self
+        remove.isEnabled = FileManager.default.fileExists(atPath: DecisionModelManager.shared.directory.path)
+        decisionMenu.addItem(remove)
+        let decisionItem = NSMenuItem(title: "Local Decisions", action: nil, keyEquivalent: "")
+        decisionItem.submenu = decisionMenu
+        menu.addItem(decisionItem)
         menu.addItem(.separator())
         menu.addItem(NSMenuItem(title: "Quit LocalFlow", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+    }
+
+    @objc private func installDecisionModel() {
+        let picker = NSOpenPanel()
+        picker.title = "Install LocalFlow-Laya-v2"
+        picker.message = "Choose a trained and parity-validated LocalFlow-Laya-v2 native package. Calibration and human-review evidence control decision authority."
+        picker.canChooseFiles = false
+        picker.canChooseDirectories = true
+        picker.allowsMultipleSelection = false
+        guard picker.runModal() == .OK, let directory = picker.url else { return }
+        Task { @MainActor in
+            do { try await DecisionModelManager.shared.install(from: directory) }
+            catch { showDecisionModelError() }
+        }
+    }
+
+    @objc private func removeDecisionModel() {
+        Task { @MainActor in
+            do { try await DecisionModelManager.shared.remove() }
+            catch { showDecisionModelError() }
+        }
+    }
+
+    private func showDecisionModelError() {
+        let alert = NSAlert()
+        alert.messageText = "Local Laya model unavailable"
+        alert.informativeText = "Check the prepared package and try again. Deterministic voice commands remain available."
+        alert.runModal()
+    }
+
+    @objc private func startVoiceAgentAction() {
+        Task { @MainActor in await AppServices.shared.coordinator.beginVoiceAgent() }
     }
 
     @objc private func stopDictationAction() {

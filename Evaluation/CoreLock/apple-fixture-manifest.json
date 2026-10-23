@@ -1,0 +1,52 @@
+[
+  {
+    "file": "notes.aiff",
+    "utterance": "Open Notes."
+  },
+  {
+    "file": "safari.aiff",
+    "utterance": "Open Safari."
+  },
+  {
+    "file": "chrome.aiff",
+    "utterance": "Open Chrome."
+  },
+  {
+    "file": "github.aiff",
+    "utterance": "Open github.com.",
+    "slot": "url",
+    "value": "https://github.com"
+  },
+  {
+    "file": "title.aiff",
+    "utterance": "Create a note called LocalFlow Ideas.",
+    "slot": "title",
+    "value": "LocalFlow Ideas"
+  },
+  {
+    "file": "body.aiff",
+    "utterance": "Write hello from LocalFlow.",
+    "slot": "body",
+    "value": "hello from LocalFlow."
+  },
+  {
+    "file": "query.aiff",
+    "utterance": "Search for Norbert Wiener.",
+    "slot": "query",
+    "value": "Norbert Wiener"
+  },
+  {
+    "file": "reminder.aiff",
+    "utterance": "Create reminder Review LocalFlow Ideas.",
+    "slot": "title",
+    "value": "Review LocalFlow Ideas"
+  },
+  {
+    "file": "correction.aiff",
+    "utterance": "Open Chrome, actually Safari."
+  },
+  {
+    "file": "continuation.caf",
+    "utterance": "Open Notes. Open Safari. Open Chrome. Open github.com."
+  }
+]

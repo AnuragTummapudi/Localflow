@@ -1,0 +1,138 @@
+{
+  "": {
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/AppDelegate.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/AppDelegate.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/AppDelegate.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/AppDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/AppDelegate.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/AppDelegate.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/AppServices.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/AppServices.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/AppServices.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/AppServices~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/AppServices.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/AppServices.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/CommandConfirmationView.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/CommandConfirmationView.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/CommandConfirmationView.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/CommandConfirmationView~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/CommandConfirmationView.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/CommandConfirmationView.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/DictationCoordinator.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/DictationCoordinator.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/DictationCoordinator.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/DictationCoordinator~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/DictationCoordinator.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/DictationCoordinator.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/DictationPane.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/DictationPane.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/DictationPane.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/DictationPane~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/DictationPane.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/DictationPane.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/DictionaryPane.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/DictionaryPane.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/DictionaryPane.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/DictionaryPane~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/DictionaryPane.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/DictionaryPane.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/FloatingResultCardController.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/FloatingResultCardController.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/FloatingResultCardController.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/FloatingResultCardController~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/FloatingResultCardController.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/FloatingResultCardController.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/FloatingResultCardView.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/FloatingResultCardView.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/FloatingResultCardView.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/FloatingResultCardView~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/FloatingResultCardView.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/FloatingResultCardView.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/InsightsPane.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/InsightsPane.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/InsightsPane.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/InsightsPane~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/InsightsPane.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/InsightsPane.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/LaunchAtLoginController.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LaunchAtLoginController.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LaunchAtLoginController.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LaunchAtLoginController~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LaunchAtLoginController.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LaunchAtLoginController.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/LaunchLogoView.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LaunchLogoView.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LaunchLogoView.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LaunchLogoView~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LaunchLogoView.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LaunchLogoView.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/LocalFlowApp.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LocalFlowApp.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LocalFlowApp.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LocalFlowApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LocalFlowApp.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LocalFlowApp.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/LocalFlowDesign.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LocalFlowDesign.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LocalFlowDesign.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LocalFlowDesign~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LocalFlowDesign.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/LocalFlowDesign.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/MenuBarController.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/MenuBarController.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/MenuBarController.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/MenuBarController~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/MenuBarController.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/MenuBarController.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/OnboardingView.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/OnboardingView.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/OnboardingView.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/OnboardingView~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/OnboardingView.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/OnboardingView.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/OverlayWindowController.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/OverlayWindowController.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/OverlayWindowController.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/OverlayWindowController~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/OverlayWindowController.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/OverlayWindowController.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/SettingsRootView.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/SettingsRootView.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/SettingsRootView.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/SettingsRootView~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/SettingsRootView.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/SettingsRootView.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/SettingsViewModel.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/SettingsViewModel.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/SettingsViewModel.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/SettingsViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/SettingsViewModel.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/SettingsViewModel.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/WaveformOverlayView.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/WaveformOverlayView.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/WaveformOverlayView.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/WaveformOverlayView~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/WaveformOverlayView.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/LocalFlowApp.build/WaveformOverlayView.dia"
+  }
+}

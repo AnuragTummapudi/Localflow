@@ -1,0 +1,20 @@
+{
+  "checkpoint": "convaiinnovations/laya",
+  "revision": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+  "protocolVersion": 1,
+  "validated": true,
+  "checkpointSHA256": "891102d372688fc2a094dac56a384bc537b87c63f21f9f3dac0be2b7cbc8d86c",
+  "exportRevision": "fa9a2a7070b1789912a49ae24603bbfb1a78b001",
+  "exporterSHA256": "3dc6eac8971358ad5531c7124f2e631ddd4da6890a8df8a6237051e56b4594e2",
+  "files": {
+    "localflow-laya": "fc5a173b2393fd9ec5884b5b0c9f65f2c8f8592af48f863d19f4d2b8418b6bad",
+    "laya.onnx": "a1964dd61ad50ce05ba662383ea773a3e7447c80b2db80c425fa2ef060d001d3",
+    "laya.onnx.data": "c1c08150e12327b306ed5389a9e5768c69ee068ed591362911fa67da3b6ee387",
+    "tokenizer/tokenizer.json": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+    "tokenizer/tokenizer_config.json": "50044de60daaa73df97d262e15a40d4faf0160e7d742df64b377877a1320dd12",
+    "questions.json": "769bab57174be24499eda5475a1c84343194bfc5642a312b771bb1f0136f8aac",
+    "option-order.json": "56e4aff1612cc99b2604ce636144777d8d0a818c4827798add42619f916f8907",
+    "calibration.json": "fe18aed0c93402fb7dabb7cc251ee6b0b072a826c2f9dc610f20d953e9541fc5",
+    "validation.json": "af10360c167d1e33e48017736511b296955eebad55aaf6cc10aff4516fe5ed7f"
+  }
+}

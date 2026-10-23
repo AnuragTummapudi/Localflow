@@ -1,0 +1,170 @@
+{
+  "boundary" : "Real model and real repository reads; no editor\/browser\/workflow effects or production memory writes",
+  "examples" : [
+    {
+      "firstActualActionMS" : 21953.555541665992,
+      "goal" : "Resolve project LF",
+      "notice" : "Planner stopped: Planner repeated a delivered action. No retry was sent.",
+      "receipts" : [
+        {
+          "arguments" : {
+            "name" : "LF"
+          },
+          "data" : {
+            "folder" : "\/Users\/anuragtummapudi\/Localflow-project\/LocalFlow",
+            "project" : "LocalFlow"
+          },
+          "detail" : "Resolved LocalFlow",
+          "status" : "verified",
+          "stepID" : "1",
+          "tool" : "project.resolve"
+        }
+      ],
+      "totalMS" : 24795.39499999737
+    },
+    {
+      "firstActualActionMS" : 0.081791666161734611,
+      "goal" : "Find the VoiceAgentCoordinator symbol in project LocalFlow",
+      "notice" : "Planner stopped: Planner repeated a delivered action. No retry was sent.",
+      "receipts" : [
+        {
+          "arguments" : {
+            "name" : "LocalFlow"
+          },
+          "data" : {
+            "folder" : "\/Users\/anuragtummapudi\/Localflow-project\/LocalFlow",
+            "project" : "LocalFlow"
+          },
+          "detail" : "Resolved LocalFlow",
+          "status" : "verified",
+          "stepID" : "1",
+          "tool" : "project.resolve"
+        },
+        {
+          "arguments" : {
+            "project" : "LocalFlow",
+            "query" : "VoiceAgentCoordinator"
+          },
+          "data" : {
+            "matches" : [
+              {
+                "line" : 207,
+                "path" : "LIVE_CONTINUATION_BUGFIX_REPORT.md"
+              },
+              {
+                "line" : 78,
+                "path" : "App\/DictationCoordinator.swift"
+              },
+              {
+                "line" : 16,
+                "path" : "App\/SettingsRootView.swift"
+              },
+              {
+                "line" : 720,
+                "path" : "REALITY_GATE_REPORT.md"
+              },
+              {
+                "line" : 1,
+                "path" : "Features\/CommandMode\/VoiceAgentCoordinator.swift"
+              },
+              {
+                "line" : 42,
+                "path" : "Tests\/FeaturesTests\/AgentOperationalTests.swift"
+              },
+              {
+                "line" : 10,
+                "path" : "Tests\/FeaturesTests\/PlannerTests.swift"
+              },
+              {
+                "line" : 24,
+                "path" : "Tests\/FeaturesTests\/VoiceAgentTests.swift"
+              },
+              {
+                "line" : 21,
+                "path" : "Tests\/FeaturesTests\/VoiceContinuationTests.swift"
+              },
+              {
+                "line" : 114,
+                "path" : "Tests\/FeaturesTests\/PlannerBenchmarkTests.swift"
+              },
+              {
+                "line" : 227,
+                "path" : "Tests\/SharedTests\/LayaRuntimeTests.swift"
+              },
+              {
+                "line" : 82,
+                "path" : "Tests\/SharedTests\/AppleSpeechTests.swift"
+              },
+              {
+                "line" : 19,
+                "path" : "STREAMING.md"
+              },
+              {
+                "line" : 10,
+                "path" : "SYSTEM2_PLANNER.md"
+              },
+              {
+                "line" : 16,
+                "path" : "Evaluation\/System2\/third-compile.log"
+              },
+              {
+                "line" : 6,
+                "path" : "Evaluation\/System2\/ui-compile.log"
+              },
+              {
+                "line" : 7,
+                "path" : "Evaluation\/System2\/typed-benchmark.log"
+              },
+              {
+                "line" : 5,
+                "path" : "Evaluation\/System2\/planner-tests-8.log"
+              },
+              {
+                "line" : 143,
+                "path" : "Evaluation\/System2\/first-compile.log"
+              },
+              {
+                "line" : 14,
+                "path" : "Evaluation\/System2\/build_scenarios.py"
+              }
+            ]
+          },
+          "detail" : "Found 20 project matches",
+          "status" : "verified",
+          "stepID" : "2",
+          "tool" : "project.search"
+        }
+      ],
+      "totalMS" : 11886.847708330606
+    },
+    {
+      "firstActualActionMS" : 0.096291667432524264,
+      "goal" : "Resolve project LocalFlow then list its saved workflows",
+      "notice" : "Planner stopped: Planner repeated a delivered action. No retry was sent.",
+      "receipts" : [
+        {
+          "arguments" : {
+            "name" : "LocalFlow"
+          },
+          "data" : {
+            "folder" : "\/Users\/anuragtummapudi\/Localflow-project\/LocalFlow",
+            "project" : "LocalFlow"
+          },
+          "detail" : "Resolved LocalFlow",
+          "status" : "verified",
+          "stepID" : "1",
+          "tool" : "project.resolve"
+        }
+      ],
+      "totalMS" : 5269.4943749993399
+    }
+  ],
+  "generationCancellationMS" : 18.820458331902046,
+  "load" : {
+    "coldLoadMS" : 2555.3151666645135,
+    "mlxActiveBytes" : 2367679904,
+    "mlxPeakBytes" : 3034562212,
+    "rssBytes" : 684048384
+  },
+  "reloadAfterCancellation" : true
+}

@@ -1,0 +1,71 @@
+[
+  {
+    "agentActions" : [
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+        "milliseconds" : 5067.8638333320123,
+        "tool" : "application.open"
+      }
+    ],
+    "agentActionsBeforeInputClose" : [
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+        "milliseconds" : 5067.8638333320123,
+        "tool" : "application.open"
+      }
+    ],
+    "agentInput" : "Real paced Apple Speech; injected native effects, deterministic decision fallback",
+    "completedMilliseconds" : 6582.5411249988974,
+    "confidence" : 0.88433331251144409,
+    "confirmation" : null,
+    "exactTranscript" : true,
+    "expected" : "Open Chrome, actually Safari.",
+    "file" : "correction.aiff",
+    "final" : "Open Chrome, actually Safari.",
+    "finalDrainMilliseconds" : 57.12883333217178,
+    "finalRangeLagMilliseconds" : [
+      4612.0883333325764,
+      3532.2079583321465,
+      2272.2697499988135
+    ],
+    "firstFinalFromInputStartMilliseconds" : 4912.0883333325764,
+    "inputClosedMilliseconds" : 6525.4122916667257,
+    "phraseCount" : 3,
+    "realAnalyzerCancellationMilliseconds" : 37.621499999659136,
+    "revisions" : 10,
+    "speechAlternatives" : [
+      {
+        "alternatives" : [
+          "Open"
+        ],
+        "original" : "Open"
+      },
+      {
+        "alternatives" : [
+          "Chrome, actually",
+          "chrome, actually",
+          "Chrome actually"
+        ],
+        "original" : "Chrome, actually"
+      },
+      {
+        "alternatives" : [
+          "Safari.",
+          "safari."
+        ],
+        "original" : "Safari."
+      }
+    ],
+    "trailingSilenceMilliseconds" : 3250.7936507936506,
+    "volatileFromInputStartMilliseconds" : 4687.2072916667094,
+    "volatileRangeLagMilliseconds" : [
+      714.51979166670935,
+      717.23262499984412,
+      671.35012499855657,
+      672.02091666584602,
+      672.10916666661797,
+      672.32016666528943,
+      672.4879583332804
+    ]
+  }
+]

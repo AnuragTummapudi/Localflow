@@ -1,0 +1,503 @@
+{
+  "createdUTC": "2026-10-04T11:55:49.472744+00:00",
+  "phase": "COMPLETED",
+  "scope": "Only fixed project-generated paths and two proven LocalFlow-owned obsolete Parakeet paths. No Git deletion, no git clean, no user data, no global caches, no Apple assets, no Laya checkpoint deletion.",
+  "before": {
+    "repositoryAllocatedBytes": 28970344448,
+    "obsoleteOwnedSpeechAllocatedBytes": 932577280,
+    "filesystemFreeBytes": 9708552192
+  },
+  "entries": [
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 243691520,
+      "logicalBytes": 233030718,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/CompilationCache.noindex",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 28672,
+      "logicalBytes": 16688,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Index.noindex",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 52011008,
+      "logicalBytes": 41373868,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Logs",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 73728,
+      "logicalBytes": 47710,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/ModuleCache.noindex",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 397160448,
+      "logicalBytes": 394451584,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SDKStatCaches.noindex",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 14417920,
+      "logicalBytes": 14416176,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/artifacts",
+      "reason": "Compiled artifacts for obsolete speech dependencies; repository/checkouts/history preserved.",
+      "allocatedBytes": 0,
+      "logicalBytes": 0,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 481320960,
+      "logicalBytes": 471631382,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/CompilationCache.noindex",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 28672,
+      "logicalBytes": 16688,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Logs",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 528384,
+      "logicalBytes": 503404,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/ModuleCache.noindex",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 1179435008,
+      "logicalBytes": 1172768928,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SDKStatCaches.noindex",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 14417920,
+      "logicalBytes": 14416176,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/artifacts",
+      "reason": "Compiled artifacts for obsolete speech dependencies; repository/checkouts/history preserved.",
+      "allocatedBytes": 0,
+      "logicalBytes": 0,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 372752384,
+      "logicalBytes": 365439245,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/CompilationCache.noindex",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 28672,
+      "logicalBytes": 16688,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Logs",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 65536,
+      "logicalBytes": 45197,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/ModuleCache.noindex",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 684367872,
+      "logicalBytes": 679235472,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SDKStatCaches.noindex",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 14417920,
+      "logicalBytes": 14416176,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/artifacts",
+      "reason": "Compiled artifacts for obsolete speech dependencies; repository/checkouts/history preserved.",
+      "allocatedBytes": 0,
+      "logicalBytes": 0,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 369135616,
+      "logicalBytes": 361874019,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/CompilationCache.noindex",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 28672,
+      "logicalBytes": 16688,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Logs",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 24576,
+      "logicalBytes": 4230,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/ModuleCache.noindex",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 684249088,
+      "logicalBytes": 679118007,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/SDKStatCaches.noindex",
+      "reason": "Superseded project-specific Xcode generated products/cache; current unsigned Debug build retained separately.",
+      "allocatedBytes": 14417920,
+      "logicalBytes": 14416176,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/SourcePackages/artifacts",
+      "reason": "Compiled artifacts for obsolete speech dependencies; repository/checkouts/history preserved.",
+      "allocatedBytes": 0,
+      "logicalBytes": 0,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx",
+      "reason": "Superseded helper products; freshly built macOS 26 helper parity validated and included in retained v2 package.",
+      "allocatedBytes": 314441728,
+      "logicalBytes": 313165476,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/artifacts",
+      "reason": "Superseded helper products; freshly built macOS 26 helper parity validated and included in retained v2 package.",
+      "allocatedBytes": 279375872,
+      "logicalBytes": 279200705,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx",
+      "reason": "Superseded helper products; freshly built macOS 26 helper parity validated and included in retained v2 package.",
+      "allocatedBytes": 315011072,
+      "logicalBytes": 313744049,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/artifacts",
+      "reason": "Superseded helper products; freshly built macOS 26 helper parity validated and included in retained v2 package.",
+      "allocatedBytes": 279375872,
+      "logicalBytes": 279200705,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/core-lock/helper-scratch/arm64-apple-macosx",
+      "reason": "Superseded helper products; freshly built macOS 26 helper parity validated and included in retained v2 package.",
+      "allocatedBytes": 316719104,
+      "logicalBytes": 315419783,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/core-lock/helper-scratch/artifacts",
+      "reason": "Superseded helper products; freshly built macOS 26 helper parity validated and included in retained v2 package.",
+      "allocatedBytes": 279375872,
+      "logicalBytes": 279200705,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx",
+      "reason": "Reproducible SwiftPM products after three final passing regression runs; current Xcode Debug app retained.",
+      "allocatedBytes": 770351104,
+      "logicalBytes": 750526968,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-v2/whisper-turbo",
+      "reason": "Obsolete project-owned Whisper speech download; downloader and runtime integration removed, see speech removal audit.",
+      "allocatedBytes": 3197960192,
+      "logicalBytes": 3197885828,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-production-package",
+      "reason": "Duplicate preserved installed v1 model, SHA-256 identical external weights; evidence archived before deletion.",
+      "allocatedBytes": 1728516096,
+      "logicalBytes": 1728493883,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/laya.onnx",
+      "reason": "Obsolete v1 ONNX export/intermediate; weights identical to preserved installed v1, metadata/evaluation preserved.",
+      "allocatedBytes": 3690496,
+      "logicalBytes": 3687079,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/laya.onnx.data",
+      "reason": "Obsolete v1 ONNX export/intermediate; weights identical to preserved installed v1, metadata/evaluation preserved.",
+      "allocatedBytes": 1685258240,
+      "logicalBytes": 1685258240,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/laya-inferred.onnx",
+      "reason": "Obsolete v1 ONNX export/intermediate; weights identical to preserved installed v1, metadata/evaluation preserved.",
+      "allocatedBytes": 3694592,
+      "logicalBytes": 3694380,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/reality-gate/quantization-source",
+      "reason": "Obsolete conversion intermediates; external weights identical to preserved installed v1; current v2 package retained.",
+      "allocatedBytes": 1692516352,
+      "logicalBytes": 1692508952,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/dist/LocalFlow.dmg",
+      "reason": "Stale pre-existing release output; no release built or packaged in this task.",
+      "allocatedBytes": 11440128,
+      "logicalBytes": 11436856,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/LocalFlow-latest.dmg",
+      "reason": "Pre-existing project release output from September; current architecture requires macOS 26. No release built or packaged in this task; original hash preserved in stale-dmg-proof.json.",
+      "allocatedBytes": 11440128,
+      "logicalBytes": 11436856,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Library/Application Support/LocalFlow/Models/parakeet-eou-streaming",
+      "reason": "LocalFlow-owned obsolete speech model directory proven by historical ModelManager paths; Apple speech assets and both Laya directories excluded.",
+      "allocatedBytes": 449269760,
+      "logicalBytes": 449190189,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Library/Application Support/LocalFlow/Models/parakeet-tdt-0.6b-v3",
+      "reason": "LocalFlow-owned obsolete speech model directory proven by historical ModelManager paths; Apple speech assets and both Laya directories excluded.",
+      "allocatedBytes": 483307520,
+      "logicalBytes": 483256769,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Evaluation/Laya/__pycache__",
+      "reason": "Reproducible project Python bytecode cache.",
+      "allocatedBytes": 12288,
+      "logicalBytes": 6787,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Evaluation/RealityGate/__pycache__",
+      "reason": "Reproducible project Python bytecode cache.",
+      "allocatedBytes": 147456,
+      "logicalBytes": 129960,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Evaluation/LayaV2/__pycache__",
+      "reason": "Reproducible project Python bytecode cache.",
+      "allocatedBytes": 221184,
+      "logicalBytes": 190618,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Evaluation/STTBakeoff/__pycache__",
+      "reason": "Reproducible project Python bytecode cache.",
+      "allocatedBytes": 20480,
+      "logicalBytes": 15253,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/core-lock/speech-fixtures/smoke.aiff",
+      "reason": "Test-owned synthesized audio; fixture manifest and real Apple result evidence retained.",
+      "allocatedBytes": 200704,
+      "logicalBytes": 200320,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/core-lock/speech-fixtures-broad/github.aiff",
+      "reason": "Test-owned synthesized audio; fixture manifest and real Apple result evidence retained.",
+      "allocatedBytes": 49152,
+      "logicalBytes": 45696,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/core-lock/speech-fixtures-broad/continuation.aiff",
+      "reason": "Test-owned synthesized audio; fixture manifest and real Apple result evidence retained.",
+      "allocatedBytes": 430080,
+      "logicalBytes": 429184,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/core-lock/speech-fixtures-broad/notes.aiff",
+      "reason": "Test-owned synthesized audio; fixture manifest and real Apple result evidence retained.",
+      "allocatedBytes": 45056,
+      "logicalBytes": 44672,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/core-lock/speech-fixtures-broad/title.aiff",
+      "reason": "Test-owned synthesized audio; fixture manifest and real Apple result evidence retained.",
+      "allocatedBytes": 114688,
+      "logicalBytes": 112934,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/core-lock/speech-fixtures-broad/body.aiff",
+      "reason": "Test-owned synthesized audio; fixture manifest and real Apple result evidence retained.",
+      "allocatedBytes": 86016,
+      "logicalBytes": 84708,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/core-lock/speech-fixtures-broad/continuation.caf",
+      "reason": "Test-owned synthesized audio; fixture manifest and real Apple result evidence retained.",
+      "allocatedBytes": 761856,
+      "logicalBytes": 761280,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/core-lock/speech-fixtures-broad/reminder.aiff",
+      "reason": "Test-owned synthesized audio; fixture manifest and real Apple result evidence retained.",
+      "allocatedBytes": 135168,
+      "logicalBytes": 125222,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/core-lock/speech-fixtures-broad/safari.aiff",
+      "reason": "Test-owned synthesized audio; fixture manifest and real Apple result evidence retained.",
+      "allocatedBytes": 53248,
+      "logicalBytes": 49792,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/core-lock/speech-fixtures-broad/query.aiff",
+      "reason": "Test-owned synthesized audio; fixture manifest and real Apple result evidence retained.",
+      "allocatedBytes": 69632,
+      "logicalBytes": 69142,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/core-lock/speech-fixtures-broad/correction.aiff",
+      "reason": "Test-owned synthesized audio; fixture manifest and real Apple result evidence retained.",
+      "allocatedBytes": 110592,
+      "logicalBytes": 107646,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/core-lock/speech-fixtures-broad/chrome.aiff",
+      "reason": "Test-owned synthesized audio; fixture manifest and real Apple result evidence retained.",
+      "allocatedBytes": 45056,
+      "logicalBytes": 43136,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/core-lock/speech-fixtures-broad/continuation-fixtures/continuation.caf",
+      "reason": "Test-owned synthesized audio; fixture manifest and real Apple result evidence retained.",
+      "allocatedBytes": 761856,
+      "logicalBytes": 761280,
+      "containsGit": false,
+      "status": "DELETED"
+    },
+    {
+      "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/core-lock/speech-fixtures-broad/correction-fixtures/correction.aiff",
+      "reason": "Test-owned synthesized audio; fixture manifest and real Apple result evidence retained.",
+      "allocatedBytes": 110592,
+      "logicalBytes": 107646,
+      "containsGit": false,
+      "status": "DELETED"
+    }
+  ],
+  "after": {
+    "repositoryAllocatedBytes": 15244201984,
+    "obsoleteOwnedSpeechAllocatedBytes": 0,
+    "filesystemFreeBytes": 22421819392
+  },
+  "completedUTC": "2026-10-04T11:57:53.873313+00:00",
+  "afterFinalVerification": {
+    "repositoryAllocatedBytes": 15536414720,
+    "filesystemFreeBytes": 22003421184,
+    "note": "Current SwiftPM products regenerated for final hierarchical-gate tests; retained as current developer products."
+  }
+}

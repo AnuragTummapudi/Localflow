@@ -1,0 +1,10 @@
+# Exact versions used in the verified local experiment. No app dependency changes.
+laya==0.3.26
+torch==2.14.1
+transformers==5.18.0
+tokenizers==0.23.2
+huggingface-hub==1.33.0
+numpy==2.4.6
+safetensors==0.8.0
+tqdm==4.70.1
+packaging==26.3

@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/HotkeyManager.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/HotkeyManager/HotkeyManager.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/HotkeyManager.build/HotkeyManager.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/HotkeyManager.build/HotkeyManager.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/HotkeyManager.build/HotkeyManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/HotkeyManager.build/HotkeyManager.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/HotkeyManager.build/HotkeyManager.dia"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "counts": {
+    "scenarios": 30,
+    "parseable": 24,
+    "correctNextTool": 20,
+    "correctHostResolvedArguments": 18,
+    "exactStableIDArguments": 13,
+    "accepted": 22,
+    "undesiredAcceptedNextActions": 4,
+    "unknownAcceptedTools": 0,
+    "acceptedEnvelopeEscapes": 0,
+    "finishCases": 6,
+    "correctFinish": 0
+  },
+  "cohort": "30 authored scenarios; 11 successful initial rows retained, 19 repaired/tightened cases remeasured. Exact known subject/workflow equivalents normalized by host; not a full final model qualification. Final clause-domain hardening leaves this corpus scope unchanged.",
+  "beforeParseable": {
+    "count": 82,
+    "invocations": 92,
+    "stage": "original 108-scenario phase, different corpus"
+  },
+  "averageToolsExposed": 4.666666666666667,
+  "maxToolsExposed": 8,
+  "promptTokens": {
+    "beforeMean": 3220.75,
+    "beforeSamples": 20,
+    "afterMean": 1007.3333333333334,
+    "afterSamples": 24,
+    "caveat": "After count available only for 24 parseable replies; invalid reply metrics were not exported"
+  },
+  "latency": {
+    "failed-file": {
+      "samples": 5,
+      "ttftMS": {
+        "p50": 4257.897083334683,
+        "p95": 4721.109124999202
+      },
+      "firstToolCallMS": {
+        "p50": 6957.613875005336,
+        "p95": 8473.069749998103
+      },
+      "promptTokens": {
+        "p50": 1050,
+        "p95": 1050
+      },
+      "firstRealEffectMS": {
+        "samples": 5,
+        "p50": 7313.050500000827,
+        "p95": 8867.15524999454
+      }
+    },
+    "file-find": {
+      "samples": 5,
+      "ttftMS": {
+        "p50": 1977.7853333362145,
+        "p95": 3945.500958332559
+      },
+      "firstToolCallMS": {
+        "p50": 6036.465333338128,
+        "p95": 11957.944999994652
+      },
+      "promptTokens": {
+        "p50": 1377,
+        "p95": 1377
+      },
+      "firstRealEffectMS": {
+        "samples": 5,
+        "p50": 6201.0151666690945,
+        "p95": 12252.036708334344
+      }
+    },
+    "symbol": {
+      "samples": 5,
+      "ttftMS": {
+        "p50": 1575.1205416672747,
+        "p95": 1814.994291664334
+      },
+      "firstToolCallMS": {
+        "p50": 3826.5211666657706,
+        "p95": 4010.8036666642874
+      },
+      "promptTokens": {
+        "p50": 1144,
+        "p95": 1144
+      },
+      "firstRealEffectMS": {
+        "samples": 5,
+        "p50": 3971.224124994478,
+        "p95": 4265.728291662526
+      }
+    }
+  },
+  "live": [
+    {
+      "goal": "Find my LocalFlow project.",
+      "calls": [
+        "project.resolve"
+      ],
+      "notice": "Planner stopped: Invalid arguments for this tool.",
+      "firstRealEffectMS": 11584.60491666483
+    },
+    {
+      "goal": "Find VoiceAgentCoordinator in LocalFlow.",
+      "calls": [
+        "file.search"
+      ],
+      "notice": "Planner stopped: Invalid arguments for this tool.",
+      "firstRealEffectMS": 17220.195291665732
+    },
+    {
+      "goal": "Show me files related to the planner.",
+      "calls": [
+        "file.search"
+      ],
+      "notice": "Planner stopped: Invalid arguments for this tool.",
+      "firstRealEffectMS": 14750.390833338315
+    },
+    {
+      "goal": "Find where command continuation is implemented.",
+      "calls": [
+        "project.search"
+      ],
+      "notice": "Planner stopped: Invalid arguments for this tool.",
+      "firstRealEffectMS": 13077.344749995973
+    }
+  ],
+  "cancellationMS": 14.927458338206634,
+  "storage": {
+    "activeModelLogicalBytes": 3061128063,
+    "runtimeLogicalBytes": 182585512,
+    "plannerBuildAllocatedBytes": 2005520384,
+    "evaluationAllocatedBytes": 3469312,
+    "freeBytesCurrent": 4466954240,
+    "remainingPlannerGeneratedChildren": [
+      "mlx_metal-0.32.2-py3-none-macosx_14_0_arm64.whl",
+      "app-debug",
+      "swift"
+    ],
+    "activeQwenDirectories": [
+      "qwen3.5-4b-4bit",
+      "qwen-runtime"
+    ],
+    "freeBytesAfter": 4459454464
+  },
+  "diskRemovedLogicalBytes": 3883753178,
+  "freeBytesBefore": 7082672128,
+  "fullSwift": "316 tests, 15 skipped, zero failures; one full run",
+  "unsignedDebugBuildSucceeded": true
+}

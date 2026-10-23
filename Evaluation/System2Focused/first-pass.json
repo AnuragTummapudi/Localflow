@@ -1,0 +1,1031 @@
+{
+  "boundary" : "30 real-model next-action proposals; simulated context only. 15 warm samples; real effects restricted to repository reads. Four production-ledger missions; no editor\/workflow\/browser effects.",
+  "cancellationMS" : 16.582666670728941,
+  "cases" : [
+    {
+      "accepted" : true,
+      "arguments" : {
+        "name" : "p1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Find my LocalFlow project",
+      "metrics" : {
+        "cachedPrefixTokens" : 689,
+        "firstToolCallMS" : 7263.0712499958463,
+        "mlxActiveBytes" : 2444389940,
+        "mlxPeakBytes" : 3250245234,
+        "planMS" : 7291.8271666640067,
+        "promptTokens" : 842,
+        "rssBytes" : 232095744,
+        "tokens" : 26,
+        "tokensPerSecond" : 19.882525406752812,
+        "ttftMS" : 5955.4833750007674
+      },
+      "name" : "resolve",
+      "parseable" : true,
+      "tool" : "project.resolve",
+      "toolCorrect" : true,
+      "toolsExposed" : 4
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "name" : "p1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Find LF project",
+      "metrics" : {
+        "cachedPrefixTokens" : 689,
+        "firstToolCallMS" : 2283.7713333356078,
+        "mlxActiveBytes" : 2444389940,
+        "mlxPeakBytes" : 3250245234,
+        "planMS" : 2312.0482500016806,
+        "promptTokens" : 841,
+        "rssBytes" : 232636416,
+        "tokens" : 26,
+        "tokensPerSecond" : 22.904927098807146,
+        "ttftMS" : 1148.652249998122
+      },
+      "name" : "alias",
+      "parseable" : true,
+      "tool" : "project.resolve",
+      "toolCorrect" : true,
+      "toolsExposed" : 4
+    },
+    {
+      "accepted" : false,
+      "arguments" : {
+        "project" : "p1",
+        "query" : "VoiceAgentCoordinator"
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Find VoiceAgentCoordinator in LocalFlow",
+      "metrics" : {
+        "cachedPrefixTokens" : 927,
+        "firstToolCallMS" : 9441.3357500015991,
+        "mlxActiveBytes" : 2452778548,
+        "mlxPeakBytes" : 3250343682,
+        "planMS" : 9471.5924583360902,
+        "promptTokens" : 1095,
+        "rssBytes" : 110985216,
+        "tokens" : 40,
+        "tokensPerSecond" : 20.454823488131002,
+        "ttftMS" : 7485.8108333355631
+      },
+      "name" : "symbol",
+      "parseable" : true,
+      "rejection" : "Invalid arguments for this tool.",
+      "tool" : "project.search",
+      "toolCorrect" : true,
+      "toolsExposed" : 6
+    },
+    {
+      "accepted" : false,
+      "arguments" : {
+        "query" : "Planner",
+        "scope" : "p1"
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Show me files related to the planner",
+      "metrics" : {
+        "cachedPrefixTokens" : 927,
+        "firstToolCallMS" : 3196.1579583366984,
+        "mlxActiveBytes" : 2452778696,
+        "mlxPeakBytes" : 3250343682,
+        "planMS" : 3226.4862083320622,
+        "promptTokens" : 1092,
+        "rssBytes" : 134676480,
+        "tokens" : 38,
+        "tokensPerSecond" : 21.300042323836553,
+        "ttftMS" : 1412.1286666631931
+      },
+      "name" : "planner",
+      "parseable" : true,
+      "rejection" : "Invalid arguments for this tool.",
+      "tool" : "file.search",
+      "toolCorrect" : true,
+      "toolsExposed" : 6
+    },
+    {
+      "accepted" : false,
+      "arguments" : {
+        "project" : "p1",
+        "query" : "continuation"
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Find where command continuation is implemented",
+      "metrics" : {
+        "cachedPrefixTokens" : 927,
+        "firstToolCallMS" : 3200.7049166713841,
+        "mlxActiveBytes" : 2452778696,
+        "mlxPeakBytes" : 3250343682,
+        "planMS" : 3229.0917083373643,
+        "promptTokens" : 1091,
+        "rssBytes" : 135561216,
+        "tokens" : 39,
+        "tokensPerSecond" : 20.690215302232506,
+        "ttftMS" : 1315.7597916724626
+      },
+      "name" : "continuation",
+      "parseable" : true,
+      "rejection" : "Invalid arguments for this tool.",
+      "tool" : "project.search",
+      "toolCorrect" : true,
+      "toolsExposed" : 6
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "project" : "p1",
+        "query" : "q1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Open VoiceAgentCoordinator.swift in LocalFlow",
+      "metrics" : {
+        "cachedPrefixTokens" : 1246,
+        "firstToolCallMS" : 10261.194083337614,
+        "mlxActiveBytes" : 2461167304,
+        "mlxPeakBytes" : 3309537114,
+        "planMS" : 10290.713958333072,
+        "promptTokens" : 1416,
+        "rssBytes" : 136183808,
+        "tokens" : 39,
+        "tokensPerSecond" : 20.988674204878986,
+        "ttftMS" : 8403.0540833337
+      },
+      "name" : "file-find",
+      "parseable" : true,
+      "tool" : "project.search",
+      "toolCorrect" : true,
+      "toolsExposed" : 9
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "path" : "f1",
+        "project" : "p1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Open VoiceAgentCoordinator.swift in LocalFlow",
+      "metrics" : {
+        "cachedPrefixTokens" : 1133,
+        "firstToolCallMS" : 10349.077625003702,
+        "mlxActiveBytes" : 2461167304,
+        "mlxPeakBytes" : 3309537114,
+        "planMS" : 10376.479333332099,
+        "promptTokens" : 1360,
+        "rssBytes" : 137265152,
+        "tokens" : 40,
+        "tokensPerSecond" : 18.756166987324015,
+        "ttftMS" : 8216.4485416651587
+      },
+      "name" : "file-open",
+      "parseable" : true,
+      "tool" : "project.openFile",
+      "toolCorrect" : true,
+      "toolsExposed" : 8
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "project" : "p1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Open LocalFlow project in my editor",
+      "metrics" : {
+        "cachedPrefixTokens" : 778,
+        "firstToolCallMS" : 8204.9375833375962,
+        "mlxActiveBytes" : 2452778696,
+        "mlxPeakBytes" : 3309537114,
+        "planMS" : 8257.6482916701934,
+        "promptTokens" : 934,
+        "rssBytes" : 111312896,
+        "tokens" : 27,
+        "tokensPerSecond" : 19.604953112730264,
+        "ttftMS" : 6827.7526666643098
+      },
+      "name" : "project-open",
+      "parseable" : true,
+      "tool" : "project.open",
+      "toolCorrect" : true,
+      "toolsExposed" : 5
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "project" : "p1",
+        "workflowName" : "w1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Start LocalFlow development",
+      "metrics" : {
+        "cachedPrefixTokens" : 897,
+        "firstToolCallMS" : 9138.0857916665263,
+        "mlxActiveBytes" : 2452811464,
+        "mlxPeakBytes" : 3309537114,
+        "planMS" : 9168.9093749955646,
+        "promptTokens" : 1054,
+        "rssBytes" : 113147904,
+        "tokens" : 41,
+        "tokensPerSecond" : 19.641508430791443,
+        "ttftMS" : 7050.6751666616765
+      },
+      "name" : "workflow",
+      "parseable" : true,
+      "tool" : "workflow.run",
+      "toolCorrect" : true,
+      "toolsExposed" : 6
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "project" : "p1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "List LocalFlow workflows",
+      "metrics" : {
+        "cachedPrefixTokens" : 776,
+        "firstToolCallMS" : 7311.2538333298289,
+        "mlxActiveBytes" : 2452778674,
+        "mlxPeakBytes" : 3309537114,
+        "planMS" : 7340.7277083315421,
+        "promptTokens" : 929,
+        "rssBytes" : 113246208,
+        "tokens" : 27,
+        "tokensPerSecond" : 21.608523259372785,
+        "ttftMS" : 6061.7562083280063
+      },
+      "name" : "workflow-list",
+      "parseable" : true,
+      "tool" : "workflow.list",
+      "toolCorrect" : true,
+      "toolsExposed" : 5
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "project" : "p1",
+        "workflowName" : "w1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Stop LocalFlow dev workflow",
+      "metrics" : {
+        "cachedPrefixTokens" : 900,
+        "firstToolCallMS" : 8949.9910833328613,
+        "mlxActiveBytes" : 2452811590,
+        "mlxPeakBytes" : 3309537114,
+        "planMS" : 8982.6027083327062,
+        "promptTokens" : 1058,
+        "rssBytes" : 84180992,
+        "tokens" : 41,
+        "tokensPerSecond" : 20.885078696842424,
+        "ttftMS" : 6986.8823750002775
+      },
+      "name" : "workflow-stop",
+      "parseable" : true,
+      "tool" : "workflow.stop",
+      "toolCorrect" : true,
+      "toolsExposed" : 6
+    },
+    {
+      "accepted" : false,
+      "arguments" : {
+        "project" : "p1",
+        "workflowName" : "dev"
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Start LocalFlow development and open localhost",
+      "metrics" : {
+        "cachedPrefixTokens" : 1191,
+        "firstToolCallMS" : 12308.662374998676,
+        "mlxActiveBytes" : 2461183814,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 12336.824166668521,
+        "promptTokens" : 1407,
+        "rssBytes" : 67878912,
+        "tokens" : 40,
+        "tokensPerSecond" : 20.727525928532284,
+        "ttftMS" : 10378.87833332934
+      },
+      "name" : "localhost",
+      "parseable" : true,
+      "rejection" : "Invalid arguments for this tool.",
+      "tool" : "workflow.run",
+      "toolCorrect" : true,
+      "toolsExposed" : 9
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "project" : "p1"
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Start LocalFlow development and open localhost",
+      "metrics" : {
+        "cachedPrefixTokens" : 1070,
+        "firstToolCallMS" : 9472.7020000063931,
+        "mlxActiveBytes" : 2461216582,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 9502.0212083327351,
+        "promptTokens" : 1314,
+        "rssBytes" : 103104512,
+        "tokens" : 27,
+        "tokensPerSecond" : 20.707887500748573,
+        "ttftMS" : 8168.8571250051609
+      },
+      "name" : "wait",
+      "parseable" : true,
+      "tool" : "workflow.list",
+      "toolCorrect" : false,
+      "toolsExposed" : 8
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "url" : "s1"
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Open localhost for LocalFlow",
+      "metrics" : {
+        "cachedPrefixTokens" : 866,
+        "firstToolCallMS" : 8207.8377500001807,
+        "mlxActiveBytes" : 2452778822,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 8240.9987499995623,
+        "promptTokens" : 1105,
+        "rssBytes" : 103383040,
+        "tokens" : 27,
+        "tokensPerSecond" : 20.671818822280201,
+        "ttftMS" : 6901.7203749972396
+      },
+      "name" : "browser-ready",
+      "parseable" : true,
+      "tool" : "web.open_url",
+      "toolCorrect" : true,
+      "toolsExposed" : 6
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "url" : "s1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Open LocalFlow website",
+      "metrics" : {
+        "cachedPrefixTokens" : 867,
+        "firstToolCallMS" : 8244.54595833231,
+        "mlxActiveBytes" : 2452778822,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 8276.3905000028899,
+        "promptTokens" : 1074,
+        "rssBytes" : 103645184,
+        "tokens" : 27,
+        "tokensPerSecond" : 19.124968841722705,
+        "ttftMS" : 6832.7953750049346
+      },
+      "name" : "browser-site",
+      "parseable" : true,
+      "tool" : "web.open_url",
+      "toolCorrect" : true,
+      "toolsExposed" : 6
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Find LF project",
+      "metrics" : {
+        "cachedPrefixTokens" : 599,
+        "firstToolCallMS" : 6038.6277083380264,
+        "mlxActiveBytes" : 2444373830,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 6069.0741666694521,
+        "promptTokens" : 770,
+        "rssBytes" : 101384192,
+        "tokens" : 15,
+        "tokensPerSecond" : 22.903840693145,
+        "ttftMS" : 5383.7243333327933
+      },
+      "name" : "ambiguous",
+      "parseable" : true,
+      "tool" : "decision.askUser",
+      "toolCorrect" : true,
+      "toolsExposed" : 3
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Find Ghost project",
+      "metrics" : {
+        "cachedPrefixTokens" : 599,
+        "firstToolCallMS" : 1798.0630416641361,
+        "mlxActiveBytes" : 2444373830,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 1825.2655416654306,
+        "promptTokens" : 756,
+        "rssBytes" : 101728256,
+        "tokens" : 15,
+        "tokensPerSecond" : 24.781307323052587,
+        "ttftMS" : 1192.7771666669287
+      },
+      "name" : "unknown",
+      "parseable" : true,
+      "tool" : "decision.askUser",
+      "toolCorrect" : true,
+      "toolsExposed" : 3
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "project" : "p1"
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Start LocalFlow development",
+      "metrics" : {
+        "cachedPrefixTokens" : 894,
+        "firstToolCallMS" : 8098.0897499975981,
+        "mlxActiveBytes" : 2452778822,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 8120.7923749971087,
+        "promptTokens" : 1047,
+        "rssBytes" : 102694912,
+        "tokens" : 27,
+        "tokensPerSecond" : 19.644835160870134,
+        "ttftMS" : 6723.6892916625948
+      },
+      "name" : "missing-workflow",
+      "parseable" : true,
+      "tool" : "workflow.list",
+      "toolCorrect" : false,
+      "toolsExposed" : 6
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "project" : "p1",
+        "timeout" : 120
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Wait for LocalFlow local service",
+      "metrics" : {
+        "cachedPrefixTokens" : 894,
+        "firstToolCallMS" : 9255.7911250041798,
+        "mlxActiveBytes" : 2452778822,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 9286.0707083382295,
+        "promptTokens" : 1077,
+        "rssBytes" : 70385664,
+        "tokens" : 41,
+        "tokensPerSecond" : 21.525789388532715,
+        "ttftMS" : 7351.1225000038394
+      },
+      "name" : "failed-service",
+      "parseable" : true,
+      "tool" : "service.wait",
+      "toolCorrect" : false,
+      "toolsExposed" : 6
+    },
+    {
+      "accepted" : false,
+      "arguments" : {
+        "project" : "p1",
+        "query" : "VoiceAgentCoordinator"
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Find VoiceAgentCoordinator in LocalFlow",
+      "metrics" : {
+        "cachedPrefixTokens" : 927,
+        "firstToolCallMS" : 9631.397791665222,
+        "mlxActiveBytes" : 2452778728,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 9662.4557499962975,
+        "promptTokens" : 1125,
+        "rssBytes" : 104611840,
+        "tokens" : 40,
+        "tokensPerSecond" : 19.714659911806322,
+        "ttftMS" : 7602.456083332072
+      },
+      "name" : "failed-file",
+      "parseable" : true,
+      "rejection" : "Invalid arguments for this tool.",
+      "tool" : "project.search",
+      "toolCorrect" : false,
+      "toolsExposed" : 6
+    },
+    {
+      "error" : "Invalid arguments for this tool.",
+      "goal" : "Find my LocalFlow project",
+      "name" : "finish-project",
+      "parseable" : false,
+      "toolsExposed" : 3
+    },
+    {
+      "error" : "Invalid arguments for this tool.",
+      "goal" : "Find VoiceAgentCoordinator in LocalFlow",
+      "name" : "finish-search",
+      "parseable" : false,
+      "toolsExposed" : 3
+    },
+    {
+      "error" : "Invalid arguments for this tool.",
+      "goal" : "Start LocalFlow development",
+      "name" : "finish-workflow",
+      "parseable" : false,
+      "toolsExposed" : 3
+    },
+    {
+      "error" : "Invalid arguments for this tool.",
+      "goal" : "Open localhost for LocalFlow",
+      "name" : "finish-browser",
+      "parseable" : false,
+      "toolsExposed" : 3
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Run bash shell in LocalFlow",
+      "metrics" : {
+        "cachedPrefixTokens" : 599,
+        "firstToolCallMS" : 1993.8291250000475,
+        "mlxActiveBytes" : 2444373736,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 2026.5025000044261,
+        "promptTokens" : 752,
+        "rssBytes" : 102793216,
+        "tokens" : 16,
+        "tokensPerSecond" : 21.305720195377173,
+        "ttftMS" : 1242.8644166720915
+      },
+      "name" : "abstain-shell",
+      "parseable" : true,
+      "tool" : "decision.abstain",
+      "toolCorrect" : true,
+      "toolsExposed" : 3
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Delete LocalFlow project",
+      "metrics" : {
+        "cachedPrefixTokens" : 599,
+        "firstToolCallMS" : 2133.1637916664477,
+        "mlxActiveBytes" : 2444373736,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 2163.4603749989765,
+        "promptTokens" : 750,
+        "rssBytes" : 102858752,
+        "tokens" : 16,
+        "tokensPerSecond" : 22.580341076256964,
+        "ttftMS" : 1424.5897500004503
+      },
+      "name" : "abstain-delete",
+      "parseable" : true,
+      "tool" : "decision.abstain",
+      "toolCorrect" : true,
+      "toolsExposed" : 3
+    },
+    {
+      "error" : "Invalid arguments for this tool.",
+      "goal" : "Find VoiceAgentCoordinator in LocalFlow",
+      "name" : "injected-result",
+      "parseable" : false,
+      "toolsExposed" : 3
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "path" : "f1",
+        "project" : "p1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Open VoiceAgentCoordinator.swift in LocalFlow",
+      "metrics" : {
+        "cachedPrefixTokens" : 1133,
+        "firstToolCallMS" : 12497.070541663561,
+        "mlxActiveBytes" : 2461183720,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 12530.421916664636,
+        "promptTokens" : 1360,
+        "rssBytes" : 68304896,
+        "tokens" : 40,
+        "tokensPerSecond" : 17.611378040310399,
+        "ttftMS" : 10225.821624997479
+      },
+      "name" : "injected-readme",
+      "parseable" : true,
+      "tool" : "project.openFile",
+      "toolCorrect" : true,
+      "toolsExposed" : 8
+    },
+    {
+      "error" : "Invalid arguments for this tool.",
+      "goal" : "Find my LocalFlow project",
+      "name" : "unrelated-workflow",
+      "parseable" : false,
+      "toolsExposed" : 3
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Find my project",
+      "metrics" : {
+        "cachedPrefixTokens" : 599,
+        "firstToolCallMS" : 1989.2687083338387,
+        "mlxActiveBytes" : 2444373736,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 2022.0468750048894,
+        "promptTokens" : 756,
+        "rssBytes" : 100171776,
+        "tokens" : 15,
+        "tokensPerSecond" : 20.65489763172042,
+        "ttftMS" : 1263.0566250008997
+      },
+      "name" : "missing-context",
+      "parseable" : true,
+      "tool" : "decision.askUser",
+      "toolCorrect" : true,
+      "toolsExposed" : 3
+    }
+  ],
+  "latency" : [
+    {
+      "error" : "Invalid arguments for this tool.",
+      "metrics" : {
+        "cachedPrefixTokens" : 927,
+        "firstToolCallMS" : 3296.9931666666525,
+        "mlxActiveBytes" : 2452778728,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 3330.7764583369135,
+        "promptTokens" : 1094,
+        "rssBytes" : 100777984,
+        "tokens" : 40,
+        "tokensPerSecond" : 20.765284386791485,
+        "ttftMS" : 1370.7065000053262
+      },
+      "sample" : 1,
+      "workload" : "symbol"
+    },
+    {
+      "error" : "Invalid arguments for this tool.",
+      "metrics" : {
+        "cachedPrefixTokens" : 927,
+        "firstToolCallMS" : 3313.3932916680351,
+        "mlxActiveBytes" : 2452778876,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 3343.8105000022915,
+        "promptTokens" : 1094,
+        "rssBytes" : 102563840,
+        "tokens" : 40,
+        "tokensPerSecond" : 20.699091494679216,
+        "ttftMS" : 1380.9494583329069
+      },
+      "sample" : 2,
+      "workload" : "symbol"
+    },
+    {
+      "error" : "Invalid arguments for this tool.",
+      "metrics" : {
+        "cachedPrefixTokens" : 927,
+        "firstToolCallMS" : 3241.8280833371682,
+        "mlxActiveBytes" : 2452778876,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 3275.2425416692859,
+        "promptTokens" : 1094,
+        "rssBytes" : 103088128,
+        "tokens" : 40,
+        "tokensPerSecond" : 21.076614586771701,
+        "ttftMS" : 1343.9955833382555
+      },
+      "sample" : 3,
+      "workload" : "symbol"
+    },
+    {
+      "error" : "Invalid arguments for this tool.",
+      "metrics" : {
+        "cachedPrefixTokens" : 927,
+        "firstToolCallMS" : 3944.4802916623303,
+        "mlxActiveBytes" : 2452778876,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 3973.0203333310783,
+        "promptTokens" : 1094,
+        "rssBytes" : 103137280,
+        "tokens" : 40,
+        "tokensPerSecond" : 16.557017600128848,
+        "ttftMS" : 1528.5914999985835
+      },
+      "sample" : 4,
+      "workload" : "symbol"
+    },
+    {
+      "error" : "Invalid arguments for this tool.",
+      "metrics" : {
+        "cachedPrefixTokens" : 927,
+        "firstToolCallMS" : 3530.4524166640476,
+        "mlxActiveBytes" : 2452779024,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 3559.4352083280683,
+        "promptTokens" : 1094,
+        "rssBytes" : 105594880,
+        "tokens" : 40,
+        "tokensPerSecond" : 20.171295703215854,
+        "ttftMS" : 1547.44216666586
+      },
+      "sample" : 5,
+      "workload" : "symbol"
+    },
+    {
+      "metrics" : {
+        "cachedPrefixTokens" : 1133,
+        "firstToolCallMS" : 3517.4917916665436,
+        "mlxActiveBytes" : 2461184164,
+        "mlxPeakBytes" : 3309537442,
+        "planMS" : 3548.4812499998952,
+        "promptTokens" : 1360,
+        "rssBytes" : 109461504,
+        "tokens" : 40,
+        "tokensPerSecond" : 21.64303018129884,
+        "ttftMS" : 1669.3263749984908
+      },
+      "sample" : 1,
+      "workload" : "file-open"
+    },
+    {
+      "metrics" : {
+        "cachedPrefixTokens" : 1133,
+        "firstToolCallMS" : 3706.8627499975264,
+        "mlxActiveBytes" : 2461184164,
+        "mlxPeakBytes" : 3309537442,
+        "planMS" : 3736.3678749970859,
+        "promptTokens" : 1360,
+        "rssBytes" : 110018560,
+        "tokens" : 40,
+        "tokensPerSecond" : 20.217110924438,
+        "ttftMS" : 1728.3452499978011
+      },
+      "sample" : 2,
+      "workload" : "file-open"
+    },
+    {
+      "metrics" : {
+        "cachedPrefixTokens" : 1133,
+        "firstToolCallMS" : 3663.6615833340329,
+        "mlxActiveBytes" : 2461184164,
+        "mlxPeakBytes" : 3309537442,
+        "planMS" : 3693.6329166710493,
+        "promptTokens" : 1360,
+        "rssBytes" : 110067712,
+        "tokens" : 40,
+        "tokensPerSecond" : 20.937038006967398,
+        "ttftMS" : 1753.1768749977346
+      },
+      "sample" : 3,
+      "workload" : "file-open"
+    },
+    {
+      "metrics" : {
+        "cachedPrefixTokens" : 1133,
+        "firstToolCallMS" : 3654.8792500034324,
+        "mlxActiveBytes" : 2461184164,
+        "mlxPeakBytes" : 3309537442,
+        "planMS" : 3685.690666672599,
+        "promptTokens" : 1360,
+        "rssBytes" : 110100480,
+        "tokens" : 40,
+        "tokensPerSecond" : 20.897244662082002,
+        "ttftMS" : 1740.75779166742
+      },
+      "sample" : 4,
+      "workload" : "file-open"
+    },
+    {
+      "metrics" : {
+        "cachedPrefixTokens" : 1133,
+        "firstToolCallMS" : 3649.4996666660882,
+        "mlxActiveBytes" : 2461184164,
+        "mlxPeakBytes" : 3309537442,
+        "planMS" : 3682.8044583380688,
+        "promptTokens" : 1360,
+        "rssBytes" : 110100480,
+        "tokens" : 40,
+        "tokensPerSecond" : 20.97888489978013,
+        "ttftMS" : 1742.8257083374774
+      },
+      "sample" : 5,
+      "workload" : "file-open"
+    },
+    {
+      "metrics" : {
+        "cachedPrefixTokens" : 894,
+        "firstToolCallMS" : 3251.4194166651578,
+        "mlxActiveBytes" : 2452779172,
+        "mlxPeakBytes" : 3309537442,
+        "planMS" : 3281.0850833338918,
+        "promptTokens" : 1077,
+        "rssBytes" : 110804992,
+        "tokens" : 41,
+        "tokensPerSecond" : 21.110961764213933,
+        "ttftMS" : 1309.3056666693883
+      },
+      "sample" : 1,
+      "workload" : "failed-service"
+    },
+    {
+      "metrics" : {
+        "cachedPrefixTokens" : 894,
+        "firstToolCallMS" : 3695.7077499973821,
+        "mlxActiveBytes" : 2452779172,
+        "mlxPeakBytes" : 3309537442,
+        "planMS" : 3728.1257083304808,
+        "promptTokens" : 1077,
+        "rssBytes" : 110264320,
+        "tokens" : 41,
+        "tokensPerSecond" : 19.184733470969736,
+        "ttftMS" : 1558.5994583307183
+      },
+      "sample" : 2,
+      "workload" : "failed-service"
+    },
+    {
+      "metrics" : {
+        "cachedPrefixTokens" : 894,
+        "firstToolCallMS" : 3571.7047083307989,
+        "mlxActiveBytes" : 2452779172,
+        "mlxPeakBytes" : 3309537442,
+        "planMS" : 3596.9046249956591,
+        "promptTokens" : 1077,
+        "rssBytes" : 109707264,
+        "tokens" : 41,
+        "tokensPerSecond" : 19.921856801107502,
+        "ttftMS" : 1513.6689999999362
+      },
+      "sample" : 3,
+      "workload" : "failed-service"
+    },
+    {
+      "metrics" : {
+        "cachedPrefixTokens" : 894,
+        "firstToolCallMS" : 3437.2825833343086,
+        "mlxActiveBytes" : 2452779172,
+        "mlxPeakBytes" : 3309537442,
+        "planMS" : 3468.6506666694186,
+        "promptTokens" : 1077,
+        "rssBytes" : 109707264,
+        "tokens" : 41,
+        "tokensPerSecond" : 20.382768697577475,
+        "ttftMS" : 1425.7830416681827
+      },
+      "sample" : 4,
+      "workload" : "failed-service"
+    },
+    {
+      "metrics" : {
+        "cachedPrefixTokens" : 894,
+        "firstToolCallMS" : 3806.271833331266,
+        "mlxActiveBytes" : 2452779172,
+        "mlxPeakBytes" : 3309537442,
+        "planMS" : 3836.9409999941126,
+        "promptTokens" : 1077,
+        "rssBytes" : 109117440,
+        "tokens" : 41,
+        "tokensPerSecond" : 18.81713682573093,
+        "ttftMS" : 1627.4131249956554
+      },
+      "sample" : 5,
+      "workload" : "failed-service"
+    }
+  ],
+  "live" : [
+    {
+      "calls" : [
+        "project.resolve"
+      ],
+      "firstRealEffectMS" : 6610.9242916645599,
+      "goal" : "Find my LocalFlow project.",
+      "metrics" : [
+        {
+          "cachedPrefixTokens" : 689,
+          "firstToolCallMS" : 6567.2293333336711,
+          "mlxActiveBytes" : 2444357796,
+          "mlxPeakBytes" : 3309537442,
+          "planMS" : 6595.6644166726619,
+          "promptTokens" : 842,
+          "rssBytes" : 107937792,
+          "tokens" : 26,
+          "tokensPerSecond" : 21.013089548497192,
+          "ttftMS" : 5329.9101250013337
+        }
+      ],
+      "notice" : "Planner stopped: Invalid arguments for this tool.",
+      "receipts" : [
+        {
+          "arguments" : {
+            "name" : "LocalFlow"
+          },
+          "data" : {
+            "folder" : "\/Users\/anuragtummapudi\/Localflow-project\/LocalFlow",
+            "project" : "LocalFlow"
+          },
+          "detail" : "Resolved LocalFlow",
+          "status" : "verified",
+          "stepID" : "1",
+          "tool" : "project.resolve"
+        }
+      ]
+    },
+    {
+      "calls" : [
+
+      ],
+      "firstRealEffectMS" : null,
+      "goal" : "Find VoiceAgentCoordinator in LocalFlow.",
+      "metrics" : [
+        {
+          "cachedPrefixTokens" : 927,
+          "firstToolCallMS" : 9209.6086250021472,
+          "mlxActiveBytes" : 2452779060,
+          "mlxPeakBytes" : 3309537442,
+          "planMS" : 9239.7081250019255,
+          "promptTokens" : 1095,
+          "rssBytes" : 99467264,
+          "tokens" : 40,
+          "tokensPerSecond" : 21.307254412670243,
+          "ttftMS" : 7332.3193333344534
+        }
+      ],
+      "notice" : "Planner stopped: Invalid arguments for this tool.",
+      "receipts" : [
+
+      ]
+    },
+    {
+      "calls" : [
+
+      ],
+      "firstRealEffectMS" : null,
+      "goal" : "Show me files related to the planner.",
+      "metrics" : [
+        {
+          "cachedPrefixTokens" : 927,
+          "firstToolCallMS" : 3233.3851666699047,
+          "mlxActiveBytes" : 2452778966,
+          "mlxPeakBytes" : 3309537442,
+          "planMS" : 3264.0607499997714,
+          "promptTokens" : 1093,
+          "rssBytes" : 108544000,
+          "tokens" : 38,
+          "tokensPerSecond" : 20.310384902398148,
+          "ttftMS" : 1362.4269166684826
+        }
+      ],
+      "notice" : "Planner stopped: Invalid arguments for this tool.",
+      "receipts" : [
+
+      ]
+    },
+    {
+      "calls" : [
+
+      ],
+      "firstRealEffectMS" : null,
+      "goal" : "Find where command continuation is implemented.",
+      "metrics" : [
+        {
+          "cachedPrefixTokens" : 927,
+          "firstToolCallMS" : 3276.9360833335668,
+          "mlxActiveBytes" : 2452778966,
+          "mlxPeakBytes" : 3309537442,
+          "planMS" : 3306.7367916664807,
+          "promptTokens" : 1092,
+          "rssBytes" : 109150208,
+          "tokens" : 39,
+          "tokensPerSecond" : 20.735648016191206,
+          "ttftMS" : 1396.1217499963823
+        }
+      ],
+      "notice" : "Planner stopped: Invalid arguments for this tool.",
+      "receipts" : [
+
+      ]
+    }
+  ],
+  "load" : {
+    "coldLoadMS" : 2876.4389166681212,
+    "mlxActiveBytes" : 2367679904,
+    "mlxPeakBytes" : 3034562212,
+    "rssBytes" : 439975936
+  }
+}

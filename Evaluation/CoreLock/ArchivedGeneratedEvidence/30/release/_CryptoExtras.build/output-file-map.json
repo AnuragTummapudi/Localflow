@@ -1,0 +1,13 @@
+{
+  "": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/_CryptoExtras.build/_CryptoExtras.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/_CryptoExtras.build/_CryptoExtras.o",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/_CryptoExtras.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-crypto/Sources/_CryptoExtras/Exports.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/_CryptoExtras.build/Exports.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/_CryptoExtras.build/Exports~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/_CryptoExtras.build/Exports.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/_CryptoExtras.build/Exports.dia"
+  }
+}

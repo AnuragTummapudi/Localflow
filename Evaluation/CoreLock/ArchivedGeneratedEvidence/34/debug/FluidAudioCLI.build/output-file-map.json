@@ -1,0 +1,369 @@
+{
+  "": {
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Cohere/CohereBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CohereBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CohereBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CohereBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CohereBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CohereBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Cohere/CohereTranscribeCommand.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CohereTranscribeCommand.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CohereTranscribeCommand.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CohereTranscribeCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CohereTranscribeCommand.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CohereTranscribeCommand.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/JapaneseAsrBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/JapaneseAsrBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/JapaneseAsrBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/JapaneseAsrBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/JapaneseAsrBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/JapaneseAsrBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/ParaformerTranscribeCommand.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ParaformerTranscribeCommand.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ParaformerTranscribeCommand.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ParaformerTranscribeCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ParaformerTranscribeCommand.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ParaformerTranscribeCommand.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Parakeet/SlidingWindow/AsrBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AsrBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AsrBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AsrBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AsrBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AsrBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Parakeet/SlidingWindow/AsrBenchmarkTypes.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AsrBenchmarkTypes.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AsrBenchmarkTypes.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AsrBenchmarkTypes~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AsrBenchmarkTypes.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AsrBenchmarkTypes.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Parakeet/SlidingWindow/CtcDecodeBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CtcDecodeBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CtcDecodeBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CtcDecodeBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CtcDecodeBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CtcDecodeBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Parakeet/SlidingWindow/CtcEarningsBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CtcEarningsBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CtcEarningsBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CtcEarningsBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CtcEarningsBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CtcEarningsBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Parakeet/SlidingWindow/EmissionDelayBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/EmissionDelayBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/EmissionDelayBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/EmissionDelayBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/EmissionDelayBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/EmissionDelayBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Parakeet/SlidingWindow/FleursBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/FleursBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/FleursBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/FleursBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/FleursBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/FleursBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Parakeet/SlidingWindow/MultiStreamCommand.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/MultiStreamCommand.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/MultiStreamCommand.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/MultiStreamCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/MultiStreamCommand.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/MultiStreamCommand.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Parakeet/SlidingWindow/TranscribeCommand.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TranscribeCommand.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TranscribeCommand.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TranscribeCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TranscribeCommand.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TranscribeCommand.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Parakeet/Streaming/NemotronBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Parakeet/Streaming/NemotronMultilingualFleursBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronMultilingualFleursBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronMultilingualFleursBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronMultilingualFleursBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronMultilingualFleursBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronMultilingualFleursBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Parakeet/Streaming/NemotronMultilingualMultiStreamBench.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronMultilingualMultiStreamBench.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronMultilingualMultiStreamBench.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronMultilingualMultiStreamBench~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronMultilingualMultiStreamBench.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronMultilingualMultiStreamBench.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Parakeet/Streaming/NemotronMultilingualTranscribe.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronMultilingualTranscribe.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronMultilingualTranscribe.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronMultilingualTranscribe~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronMultilingualTranscribe.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronMultilingualTranscribe.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Parakeet/Streaming/NemotronTranscribe.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronTranscribe.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronTranscribe.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronTranscribe~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronTranscribe.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/NemotronTranscribe.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Parakeet/Streaming/ParakeetEouCommand.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ParakeetEouCommand.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ParakeetEouCommand.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ParakeetEouCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ParakeetEouCommand.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ParakeetEouCommand.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/Parakeet/Unified/UnifiedBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/UnifiedBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/UnifiedBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/UnifiedBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/UnifiedBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/UnifiedBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/SenseVoiceBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SenseVoiceBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SenseVoiceBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SenseVoiceBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SenseVoiceBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SenseVoiceBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ASR/SenseVoiceTranscribeCommand.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SenseVoiceTranscribeCommand.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SenseVoiceTranscribeCommand.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SenseVoiceTranscribeCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SenseVoiceTranscribeCommand.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SenseVoiceTranscribeCommand.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/DiarizationBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DiarizationBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DiarizationBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DiarizationBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DiarizationBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DiarizationBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/DiarizationBenchmarkUtils.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DiarizationBenchmarkUtils.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DiarizationBenchmarkUtils.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DiarizationBenchmarkUtils~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DiarizationBenchmarkUtils.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DiarizationBenchmarkUtils.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/DownloadCommand.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DownloadCommand.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DownloadCommand.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DownloadCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DownloadCommand.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DownloadCommand.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/G2PBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/G2PBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/G2PBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/G2PBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/G2PBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/G2PBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/LSEENDBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/LSEENDBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/LSEENDBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/LSEENDBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/LSEENDBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/LSEENDBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/LSEENDCommand.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/LSEENDCommand.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/LSEENDCommand.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/LSEENDCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/LSEENDCommand.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/LSEENDCommand.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/MinimaxCorpusCommand.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/MinimaxCorpusCommand.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/MinimaxCorpusCommand.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/MinimaxCorpusCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/MinimaxCorpusCommand.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/MinimaxCorpusCommand.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/ProcessCommand.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ProcessCommand.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ProcessCommand.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ProcessCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ProcessCommand.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ProcessCommand.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/SortformerBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SortformerBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SortformerBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SortformerBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SortformerBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SortformerBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/SortformerCommand.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SortformerCommand.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SortformerCommand.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SortformerCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SortformerCommand.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/SortformerCommand.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/TTSAsrVerifyCommand.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TTSAsrVerifyCommand.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TTSAsrVerifyCommand.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TTSAsrVerifyCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TTSAsrVerifyCommand.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TTSAsrVerifyCommand.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/TTSCommand.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TTSCommand.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TTSCommand.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TTSCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TTSCommand.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TTSCommand.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/TtsBenchmarkCommand.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TtsBenchmarkCommand.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TtsBenchmarkCommand.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TtsBenchmarkCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TtsBenchmarkCommand.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TtsBenchmarkCommand.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/VadAnalyzeCommand.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/VadAnalyzeCommand.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/VadAnalyzeCommand.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/VadAnalyzeCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/VadAnalyzeCommand.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/VadAnalyzeCommand.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Commands/VadBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/VadBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/VadBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/VadBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/VadBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/VadBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/DatasetParsers/AMIKaldiData.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AMIKaldiData.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AMIKaldiData.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AMIKaldiData~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AMIKaldiData.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AMIKaldiData.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/DatasetParsers/AMIParser.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AMIParser.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AMIParser.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AMIParser~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AMIParser.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/AMIParser.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/DatasetParsers/DatasetDownloader.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DatasetDownloader.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DatasetDownloader.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DatasetDownloader~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DatasetDownloader.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DatasetDownloader.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/DatasetParsers/JapaneseDatasetDownloader.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/JapaneseDatasetDownloader.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/JapaneseDatasetDownloader.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/JapaneseDatasetDownloader~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/JapaneseDatasetDownloader.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/JapaneseDatasetDownloader.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/DatasetParsers/MultilingualBenchmarkDataset.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/MultilingualBenchmarkDataset.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/MultilingualBenchmarkDataset.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/MultilingualBenchmarkDataset~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/MultilingualBenchmarkDataset.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/MultilingualBenchmarkDataset.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/FluidAudioCLI.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/FluidAudioCLI.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/FluidAudioCLI.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/FluidAudioCLI~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/FluidAudioCLI.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/FluidAudioCLI.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Models/CLIModels.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CLIModels.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CLIModels.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CLIModels~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CLIModels.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/CLIModels.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Utils/DiarizationMetrics.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DiarizationMetrics.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DiarizationMetrics.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DiarizationMetrics~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DiarizationMetrics.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DiarizationMetrics.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Utils/InlineDiff.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/InlineDiff.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/InlineDiff.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/InlineDiff~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/InlineDiff.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/InlineDiff.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Utils/LevenshteinDistance.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/LevenshteinDistance.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/LevenshteinDistance.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/LevenshteinDistance~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/LevenshteinDistance.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/LevenshteinDistance.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Utils/RTTMParser.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/RTTMParser.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/RTTMParser.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/RTTMParser~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/RTTMParser.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/RTTMParser.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Utils/ResultsFormatter.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ResultsFormatter.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ResultsFormatter.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ResultsFormatter~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ResultsFormatter.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/ResultsFormatter.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Utils/TerminalUI.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TerminalUI.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TerminalUI.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TerminalUI~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TerminalUI.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TerminalUI.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Utils/TextNormalizer.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TextNormalizer.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TextNormalizer.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TextNormalizer~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TextNormalizer.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/TextNormalizer.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/FluidAudio/Sources/FluidAudioCLI/Utils/WERCalculator.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/WERCalculator.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/WERCalculator.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/WERCalculator~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/WERCalculator.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/WERCalculator.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/DerivedSources/resource_bundle_accessor.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/resource_bundle_accessor.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/resource_bundle_accessor.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/resource_bundle_accessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/resource_bundle_accessor.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FluidAudioCLI.build/resource_bundle_accessor.dia"
+  }
+}

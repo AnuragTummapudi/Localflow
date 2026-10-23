@@ -1,0 +1,252 @@
+{
+  "accessibility" : "READY",
+  "automationNotesOSStatus" : 0,
+  "automationSpotifyOSStatus" : 0,
+  "inputSource" : "fixed developer requests, no microphone",
+  "microphone" : "READY",
+  "results" : [
+    {
+      "arguments" : "application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: Optional(file:\/\/\/System\/Applications\/Notes.app\/), confidence: 1.0, alternateNames: []), processID: nil)",
+      "milliseconds" : 117.24795833379176,
+      "output" : "application(10020)",
+      "receipt" : "Notes focused",
+      "scenario" : "Open Notes",
+      "status" : "VERIFIED",
+      "tool" : "application.open"
+    },
+    {
+      "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+      "milliseconds" : 39.123916666540026,
+      "output" : "application(14070)",
+      "receipt" : "Safari focused",
+      "scenario" : "Open Safari",
+      "status" : "VERIFIED",
+      "tool" : "application.open"
+    },
+    {
+      "arguments" : "application(CommandMode.ApplicationMatch(name: \"Google Chrome\", bundleIdentifier: Optional(\"com.google.Chrome\"), url: Optional(file:\/\/\/Applications\/Google%20Chrome.app\/), confidence: 1.0, alternateNames: [\"Chrome\"]), processID: nil)",
+      "milliseconds" : 247.57070833311445,
+      "output" : "application(2060)",
+      "receipt" : "Google Chrome focused",
+      "scenario" : "Open Chrome",
+      "status" : "VERIFIED",
+      "tool" : "application.open"
+    },
+    {
+      "arguments" : "url(https:\/\/github.com)",
+      "milliseconds" : 24.130124999828695,
+      "output" : "openedURL(https:\/\/github.com)",
+      "reason" : "The browser accepted the URL; page loading is not verified.",
+      "receipt" : "Website opened",
+      "scenario" : "Open github.com",
+      "status" : "UNVERIFIED",
+      "tool" : "web.open_url"
+    },
+    {
+      "arguments" : "url(https:\/\/www.google.com\/search?q=Norbert%20Wiener)",
+      "milliseconds" : 16.262708333670162,
+      "output" : "openedURL(https:\/\/www.google.com\/search?q=Norbert%20Wiener)",
+      "reason" : "The browser accepted the URL; page loading is not verified.",
+      "receipt" : "Website opened",
+      "scenario" : "Search for Norbert Wiener",
+      "status" : "UNVERIFIED",
+      "tool" : "web.open_url"
+    },
+    {
+      "reason" : "No exact executable parser result",
+      "scenario" : "Open nonexistent application",
+      "status" : "UNAVAILABLE"
+    },
+    {
+      "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+      "milliseconds" : 45.467041666597652,
+      "output" : "application(14070)",
+      "receipt" : "Safari focused",
+      "scenario" : "Open Safari",
+      "status" : "VERIFIED",
+      "tool" : "application.open"
+    },
+    {
+      "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+      "milliseconds" : 35.708958333088958,
+      "output" : "application(14070)",
+      "receipt" : "Safari focused",
+      "scenario" : "Open Chrome, actually Safari",
+      "status" : "VERIFIED",
+      "tool" : "application.open"
+    },
+    {
+      "arguments" : "note(title: \"LocalFlow Ideas\", body: \"hello from LocalFlow\")",
+      "milliseconds" : 1105.1933750004537,
+      "output" : "note(\"x-coredata:\/\/8685DEC8-23A8-4004-B216-FCE3941019A2\/ICNote\/p80\")",
+      "receipt" : "Note created",
+      "scenario" : "Create exact test note",
+      "status" : "VERIFIED",
+      "tool" : "note.create"
+    },
+    {
+      "arguments" : "currentNote(\"Exact sentence from LocalFlow.\", snapshot: nil)",
+      "milliseconds" : 858.4327916660186,
+      "reason" : "Frozen confirmation prepared; native effect not performed.",
+      "scenario" : "Prepare exact note mutation",
+      "status" : "ACTION REQUIRED",
+      "tool" : "note.append_current"
+    },
+    {
+      "arguments" : "currentNote(\"Exact sentence from LocalFlow.\", snapshot: nil)",
+      "milliseconds" : 0,
+      "reason" : "This confirmation is no longer valid.",
+      "scenario" : "Cancel pending note mutation",
+      "status" : "FAILED",
+      "tool" : "note.append_current"
+    },
+    {
+      "arguments" : "currentNote(\"LocalFlow Ideas\", snapshot: nil)",
+      "milliseconds" : 385.18216666670924,
+      "reason" : "Frozen confirmation prepared; native effect not performed.",
+      "scenario" : "Prepare exact note mutation",
+      "status" : "ACTION REQUIRED",
+      "tool" : "note.rename_current"
+    },
+    {
+      "arguments" : "currentNote(\"LocalFlow Ideas\", snapshot: nil)",
+      "milliseconds" : 0,
+      "reason" : "This confirmation is no longer valid.",
+      "scenario" : "Cancel pending note mutation",
+      "status" : "FAILED",
+      "tool" : "note.rename_current"
+    },
+    {
+      "arguments" : "note(title: \"LocalFlow Ideas\", body: \"hello from LocalFlow\")",
+      "milliseconds" : 0,
+      "output" : "none",
+      "receipt" : "Action undone",
+      "scenario" : "Guarded test-note Undo",
+      "status" : "VERIFIED",
+      "tool" : "note.create"
+    },
+    {
+      "arguments" : "note(title: \"LocalFlow Ideas\", body: \"hello from LocalFlow\")",
+      "milliseconds" : 477.13262500019482,
+      "output" : "note(\"x-coredata:\/\/8685DEC8-23A8-4004-B216-FCE3941019A2\/ICNote\/p81\")",
+      "receipt" : "Note created",
+      "scenario" : "Create owned note for exact write acceptance",
+      "status" : "VERIFIED",
+      "tool" : "note.create"
+    },
+    {
+      "arguments" : "currentNote(\"LocalFlow Ideas\", snapshot: nil)",
+      "milliseconds" : 802.4405416663285,
+      "reason" : "Frozen confirmation prepared; native effect not performed.",
+      "scenario" : "Owned-note exact write preview",
+      "status" : "ACTION REQUIRED",
+      "tool" : "note.rename_current"
+    },
+    {
+      "arguments" : "currentNote(\"LocalFlow Ideas\", snapshot: Optional(CommandMode.NoteSnapshot(id: \"x-coredata:\/\/8685DEC8-23A8-4004-B216-FCE3941019A2\/ICNote\/p81\", bodyHTML: \"<div><b><span style=\\\"font-size: 24px\\\">LocalFlow Ideas<\/span><\/b><\/div>\\n<div>hello from LocalFlow<\/div>\\n\")))",
+      "milliseconds" : 0.8746249995965627,
+      "reason" : "This note has no supported simple title. Edit its title directly in Notes.",
+      "scenario" : "Explicit developer confirmation on owned test note",
+      "status" : "FAILED",
+      "tool" : "note.rename_current"
+    },
+    {
+      "arguments" : "currentNote(\"hello from LocalFlow\", snapshot: nil)",
+      "milliseconds" : 241.88949999916076,
+      "reason" : "Frozen confirmation prepared; native effect not performed.",
+      "scenario" : "Owned-note exact write preview",
+      "status" : "ACTION REQUIRED",
+      "tool" : "note.append_current"
+    },
+    {
+      "arguments" : "currentNote(\"hello from LocalFlow\", snapshot: Optional(CommandMode.NoteSnapshot(id: \"x-coredata:\/\/8685DEC8-23A8-4004-B216-FCE3941019A2\/ICNote\/p81\", bodyHTML: \"<div><b><span style=\\\"font-size: 24px\\\">LocalFlow Ideas<\/span><\/b><\/div>\\n<div>hello from LocalFlow<\/div>\\n\")))",
+      "milliseconds" : 508.47558333316556,
+      "output" : "note(\"x-coredata:\/\/8685DEC8-23A8-4004-B216-FCE3941019A2\/ICNote\/p81\")",
+      "reason" : "Notes normalized the HTML; inspect the note.",
+      "receipt" : "Note updated",
+      "scenario" : "Explicit developer confirmation on owned test note",
+      "status" : "UNVERIFIED",
+      "tool" : "note.append_current"
+    },
+    {
+      "arguments" : "reminder(title: \"Review LocalFlow Ideas\", notes: nil, due: nil)",
+      "milliseconds" : 444.98804166687478,
+      "output" : "reminder(\"7611723F-B873-4A1B-B596-DC58DEA32F4F\")",
+      "receipt" : "Reminder created",
+      "scenario" : "Create exact test reminder",
+      "status" : "VERIFIED",
+      "tool" : "reminder.create"
+    },
+    {
+      "arguments" : "reminder(title: \"Review LocalFlow Ideas\", notes: nil, due: nil)",
+      "milliseconds" : 0,
+      "output" : "none",
+      "receipt" : "Action undone",
+      "scenario" : "Guarded test-reminder Undo",
+      "status" : "VERIFIED",
+      "tool" : "reminder.create"
+    },
+    {
+      "arguments" : "volume(40)",
+      "milliseconds" : 590.36083333285205,
+      "output" : "volume(40, muted: false)",
+      "receipt" : "Volume 40%",
+      "scenario" : "Native reversible command",
+      "status" : "VERIFIED",
+      "tool" : "system.volume_set"
+    },
+    {
+      "arguments" : "volume(40)",
+      "milliseconds" : 0,
+      "output" : "none",
+      "receipt" : "Action undone",
+      "scenario" : "Guarded native Undo",
+      "status" : "VERIFIED",
+      "tool" : "system.volume_set"
+    },
+    {
+      "arguments" : "none",
+      "milliseconds" : 5.2968333329772577,
+      "output" : "volume(94, muted: true)",
+      "receipt" : "Audio muted",
+      "scenario" : "Native reversible command",
+      "status" : "VERIFIED",
+      "tool" : "system.mute"
+    },
+    {
+      "arguments" : "none",
+      "milliseconds" : 0,
+      "output" : "none",
+      "receipt" : "Action undone",
+      "scenario" : "Guarded native Undo",
+      "status" : "VERIFIED",
+      "tool" : "system.mute"
+    },
+    {
+      "arguments" : "spotify(CommandMode.SpotifyPlaybackAction.pause)",
+      "milliseconds" : 532.21920833311742,
+      "output" : "media",
+      "receipt" : "Spotify updated",
+      "scenario" : "Native reversible command",
+      "status" : "VERIFIED",
+      "tool" : "spotify.transport"
+    },
+    {
+      "arguments" : "none",
+      "milliseconds" : 0,
+      "reason" : "Frozen confirmation prepared; native effect not performed.",
+      "scenario" : "Consequential preview",
+      "status" : "ACTION REQUIRED",
+      "tool" : "system.lock"
+    },
+    {
+      "arguments" : "none",
+      "milliseconds" : 0,
+      "reason" : "This confirmation is no longer valid.",
+      "scenario" : "Cancelled preview cannot execute",
+      "status" : "FAILED",
+      "tool" : "system.lock"
+    }
+  ],
+  "run" : "2026-10-04T07:53:29Z"
+}

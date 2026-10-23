@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/AudioCapture.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/AudioCapture/AudioCaptureSession.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/AudioCapture.build/AudioCaptureSession.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/AudioCapture.build/AudioCaptureSession.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/AudioCapture.build/AudioCaptureSession~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/AudioCapture.build/AudioCaptureSession.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/AudioCapture.build/AudioCaptureSession.dia"
+  }
+}

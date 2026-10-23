@@ -1,0 +1,49 @@
+{
+  "experiment": "localflow-laya-v1",
+  "baseModel": ".build/reality-gate/models/multilingual",
+  "baseSHA256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+  "baseProvenance": {
+    "model": "convaiinnovations/laya-multilingual",
+    "revision": "e4e9ddf21a7b1903b7acffd8814ad4307bf63a67",
+    "hashes": {
+      "encoder/config.json": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4",
+      "tokenizer/tokenizer.json": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+      "tokenizer/tokenizer_config.json": "424b69444bf7b5809dc2cd2e36d0bd71b8055124dd24274d6db3c655d38205e7",
+      "rl_agent_config.json": "25061739243b617ad88d1219ba6f8a9c86c5881ca28df024fa2d9b3b2fcc30c6",
+      "model.safetensors": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204"
+    }
+  },
+  "seed": 421322,
+  "datasetManifestSHA256": "e8247ce3b8d17ae3afbeadcfca9dcdc1a460dc4ff7945bca3a69b9d669775e14",
+  "questionsSHA256": "d4bd68e029bc282806f83afddba5ddf242eca127dd21e5e43f74d6d969fbf16a",
+  "pipelineSHA256": "21b1de70ea04bb600dba146b28c29bb2b7cbff12f6c1ffaaae0e0716b4b91c2b",
+  "metricsSHA256": "a60b5a9e53f2266a99dd5bd75a97a8bc0ee0190374de7a47fd2807eaf059f883",
+  "recipeRevision": "2e4d9c87e8b1621deb344eac7de5c7258f32f849",
+  "device": "mps",
+  "headOnly": false,
+  "maxUpdates": 0,
+  "epochs": 2,
+  "gradAccum": 32,
+  "torch": "2.14.1",
+  "microBatch": 1,
+  "loss": "official RLCD four noisy projections + one-hot CE",
+  "optimizer": {
+    "name": "AdamW",
+    "encoderLearningRate": 2.5e-05,
+    "headLearningRate": 0.0001,
+    "weightDecay": 0.01
+  },
+  "scheduler": {
+    "name": "CosineAnnealingLR",
+    "updates": 74,
+    "minimumLearningRate": 1e-06
+  },
+  "gradientNormClip": 1.0,
+  "sigmaStart": 0.4,
+  "sigmaEnd": 0.1,
+  "projections": 4,
+  "sphericalWeight": 0.75,
+  "rankedWeight": 1.0,
+  "numericBoundary": "Seeded MPS run; bitwise repeatability across GPU/software versions is not guaranteed.",
+  "limitation": "One-hot assistant-reviewed labels, not independent teacher soft distributions."
+}

@@ -1,0 +1,864 @@
+[
+  [
+    {
+      "candidates" : [
+        "segment=0 end=1 closed=false text=open"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "",
+      "event" : "revision",
+      "ledger" : [
+
+      ],
+      "nextUnconsumedRange" : "0..<1",
+      "previousStablePrefix" : "",
+      "revision" : 1,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "",
+      "transcript" : "open"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=1 closed=false text=open"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 parsed=notCommand",
+      "event" : "parser",
+      "ledger" : [
+
+      ],
+      "nextUnconsumedRange" : "0..<1",
+      "previousStablePrefix" : "",
+      "revision" : 1,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "",
+      "transcript" : "open"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open notes"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "",
+      "event" : "revision",
+      "ledger" : [
+
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "",
+      "revision" : 2,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "open",
+      "transcript" : "open notes"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open notes"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 parsed=execute(CommandMode.CommandIntent.openApplication(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"fixture.Notes\"), url: nil, confidence: 1.0)))",
+      "event" : "parser",
+      "ledger" : [
+
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "open",
+      "revision" : 2,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "open",
+      "transcript" : "open notes"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open notes"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 action=AgentAction(id: 523AAAD2-7B1B-46A7-B51E-676286633CE4, toolID: CommandMode.NativeToolID.openApplication, arguments: CommandMode.ToolArguments.application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"fixture.Notes\"), url: nil, confidence: 1.0), processID: nil)) key=application.open:fixture.Notes::",
+      "event" : "proposed",
+      "ledger" : [
+        "segment=0 id=523AAAD2-7B1B-46A7-B51E-676286633CE4 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "open",
+      "revision" : 2,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "open",
+      "transcript" : "open notes"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=3 closed=false text=open notes open"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "",
+      "event" : "revision",
+      "ledger" : [
+        "segment=0 id=523AAAD2-7B1B-46A7-B51E-676286633CE4 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<3",
+      "previousStablePrefix" : "open",
+      "revision" : 3,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "open notes",
+      "transcript" : "open notes open"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=3 closed=false text=open notes open"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 parsed=execute(CommandMode.CommandIntent.openApplication(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"fixture.Notes\"), url: nil, confidence: 0.9)))",
+      "event" : "parser",
+      "ledger" : [
+        "segment=0 id=523AAAD2-7B1B-46A7-B51E-676286633CE4 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<3",
+      "previousStablePrefix" : "open notes",
+      "revision" : 3,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "open notes",
+      "transcript" : "open notes open"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=3 closed=false text=open notes open"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 key=application.open:fixture.Notes::",
+      "event" : "deduplicated",
+      "ledger" : [
+        "segment=0 id=523AAAD2-7B1B-46A7-B51E-676286633CE4 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<3",
+      "previousStablePrefix" : "open notes",
+      "revision" : 3,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "open notes",
+      "transcript" : "open notes open"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=4 closed=false text=open notes open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "",
+      "event" : "revision",
+      "ledger" : [
+        "segment=0 id=523AAAD2-7B1B-46A7-B51E-676286633CE4 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<4",
+      "previousStablePrefix" : "open notes",
+      "revision" : 4,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "open notes open",
+      "transcript" : "open notes open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=4 closed=false text=open notes open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 parsed=execute(CommandMode.CommandIntent.openApplication(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"fixture.Notes\"), url: nil, confidence: 0.9)))",
+      "event" : "parser",
+      "ledger" : [
+        "segment=0 id=523AAAD2-7B1B-46A7-B51E-676286633CE4 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<4",
+      "previousStablePrefix" : "open notes open",
+      "revision" : 4,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "open notes open",
+      "transcript" : "open notes open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=4 closed=false text=open notes open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 key=application.open:fixture.Notes::",
+      "event" : "deduplicated",
+      "ledger" : [
+        "segment=0 id=523AAAD2-7B1B-46A7-B51E-676286633CE4 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<4",
+      "previousStablePrefix" : "open notes open",
+      "revision" : 4,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "open notes open",
+      "transcript" : "open notes open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=5 closed=false text=open notes open safari open"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "",
+      "event" : "revision",
+      "ledger" : [
+        "segment=0 id=523AAAD2-7B1B-46A7-B51E-676286633CE4 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<5",
+      "previousStablePrefix" : "open notes open",
+      "revision" : 5,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "open notes open safari",
+      "transcript" : "open notes open safari open"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=5 closed=false text=open notes open safari open"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 parsed=execute(CommandMode.CommandIntent.openApplication(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"fixture.Notes\"), url: nil, confidence: 0.9)))",
+      "event" : "parser",
+      "ledger" : [
+        "segment=0 id=523AAAD2-7B1B-46A7-B51E-676286633CE4 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<5",
+      "previousStablePrefix" : "open notes open safari",
+      "revision" : 5,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "open notes open safari",
+      "transcript" : "open notes open safari open"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=5 closed=false text=open notes open safari open"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 key=application.open:fixture.Notes::",
+      "event" : "deduplicated",
+      "ledger" : [
+        "segment=0 id=523AAAD2-7B1B-46A7-B51E-676286633CE4 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<5",
+      "previousStablePrefix" : "open notes open safari",
+      "revision" : 5,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "open notes open safari",
+      "transcript" : "open notes open safari open"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=6 closed=false text=open notes open safari open chrome"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "",
+      "event" : "revision",
+      "ledger" : [
+        "segment=0 id=523AAAD2-7B1B-46A7-B51E-676286633CE4 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<6",
+      "previousStablePrefix" : "open notes open safari",
+      "revision" : 6,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "open notes open safari open",
+      "transcript" : "open notes open safari open chrome"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=6 closed=false text=open notes open safari open chrome"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 parsed=execute(CommandMode.CommandIntent.openApplication(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"fixture.Notes\"), url: nil, confidence: 0.9)))",
+      "event" : "parser",
+      "ledger" : [
+        "segment=0 id=523AAAD2-7B1B-46A7-B51E-676286633CE4 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<6",
+      "previousStablePrefix" : "open notes open safari open",
+      "revision" : 6,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "open notes open safari open",
+      "transcript" : "open notes open safari open chrome"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=6 closed=false text=open notes open safari open chrome"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 key=application.open:fixture.Notes::",
+      "event" : "deduplicated",
+      "ledger" : [
+        "segment=0 id=523AAAD2-7B1B-46A7-B51E-676286633CE4 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<6",
+      "previousStablePrefix" : "open notes open safari open",
+      "revision" : 6,
+      "sessionID" : "642DAE46-5F4E-4E26-87A1-9DE181D5BCFA",
+      "stablePrefix" : "open notes open safari open",
+      "transcript" : "open notes open safari open chrome"
+    }
+  ],
+  [
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open notes"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "",
+      "event" : "revision",
+      "ledger" : [
+
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "",
+      "revision" : 1,
+      "sessionID" : "E3831F77-6E23-470B-94AA-A31A5BE56D3F",
+      "stablePrefix" : "",
+      "transcript" : "open notes"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open notes"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 parsed=execute(CommandMode.CommandIntent.openApplication(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"fixture.Notes\"), url: nil, confidence: 1.0)))",
+      "event" : "parser",
+      "ledger" : [
+
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "",
+      "revision" : 1,
+      "sessionID" : "E3831F77-6E23-470B-94AA-A31A5BE56D3F",
+      "stablePrefix" : "",
+      "transcript" : "open notes"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open notes"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 action=AgentAction(id: B8BAAFA1-144F-43B5-83FC-212F2C1D943D, toolID: CommandMode.NativeToolID.openApplication, arguments: CommandMode.ToolArguments.application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"fixture.Notes\"), url: nil, confidence: 1.0), processID: nil)) key=application.open:fixture.Notes::",
+      "event" : "proposed",
+      "ledger" : [
+        "segment=0 id=B8BAAFA1-144F-43B5-83FC-212F2C1D943D key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "",
+      "revision" : 1,
+      "sessionID" : "E3831F77-6E23-470B-94AA-A31A5BE56D3F",
+      "stablePrefix" : "",
+      "transcript" : "open notes"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=4 closed=false text=open notes open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "",
+      "event" : "revision",
+      "ledger" : [
+        "segment=0 id=B8BAAFA1-144F-43B5-83FC-212F2C1D943D key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<4",
+      "previousStablePrefix" : "",
+      "revision" : 2,
+      "sessionID" : "E3831F77-6E23-470B-94AA-A31A5BE56D3F",
+      "stablePrefix" : "open notes",
+      "transcript" : "open notes open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=4 closed=false text=open notes open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 parsed=execute(CommandMode.CommandIntent.openApplication(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"fixture.Notes\"), url: nil, confidence: 0.9)))",
+      "event" : "parser",
+      "ledger" : [
+        "segment=0 id=B8BAAFA1-144F-43B5-83FC-212F2C1D943D key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<4",
+      "previousStablePrefix" : "open notes",
+      "revision" : 2,
+      "sessionID" : "E3831F77-6E23-470B-94AA-A31A5BE56D3F",
+      "stablePrefix" : "open notes",
+      "transcript" : "open notes open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=4 closed=false text=open notes open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 key=application.open:fixture.Notes::",
+      "event" : "deduplicated",
+      "ledger" : [
+        "segment=0 id=B8BAAFA1-144F-43B5-83FC-212F2C1D943D key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<4",
+      "previousStablePrefix" : "open notes",
+      "revision" : 2,
+      "sessionID" : "E3831F77-6E23-470B-94AA-A31A5BE56D3F",
+      "stablePrefix" : "open notes",
+      "transcript" : "open notes open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=6 closed=false text=open notes open safari open chrome"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "",
+      "event" : "revision",
+      "ledger" : [
+        "segment=0 id=B8BAAFA1-144F-43B5-83FC-212F2C1D943D key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<6",
+      "previousStablePrefix" : "open notes",
+      "revision" : 3,
+      "sessionID" : "E3831F77-6E23-470B-94AA-A31A5BE56D3F",
+      "stablePrefix" : "open notes open safari",
+      "transcript" : "open notes open safari open chrome"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=6 closed=false text=open notes open safari open chrome"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 parsed=execute(CommandMode.CommandIntent.openApplication(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"fixture.Notes\"), url: nil, confidence: 0.9)))",
+      "event" : "parser",
+      "ledger" : [
+        "segment=0 id=B8BAAFA1-144F-43B5-83FC-212F2C1D943D key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<6",
+      "previousStablePrefix" : "open notes open safari",
+      "revision" : 3,
+      "sessionID" : "E3831F77-6E23-470B-94AA-A31A5BE56D3F",
+      "stablePrefix" : "open notes open safari",
+      "transcript" : "open notes open safari open chrome"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=6 closed=false text=open notes open safari open chrome"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 key=application.open:fixture.Notes::",
+      "event" : "deduplicated",
+      "ledger" : [
+        "segment=0 id=B8BAAFA1-144F-43B5-83FC-212F2C1D943D key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<6",
+      "previousStablePrefix" : "open notes open safari",
+      "revision" : 3,
+      "sessionID" : "E3831F77-6E23-470B-94AA-A31A5BE56D3F",
+      "stablePrefix" : "open notes open safari",
+      "transcript" : "open notes open safari open chrome"
+    }
+  ],
+  [
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open notes"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "",
+      "event" : "revision",
+      "ledger" : [
+
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "",
+      "revision" : 1,
+      "sessionID" : "79775F60-5996-45BE-A788-E2ED23DBFB3F",
+      "stablePrefix" : "",
+      "transcript" : "open notes"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open notes"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 parsed=execute(CommandMode.CommandIntent.openApplication(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"fixture.Notes\"), url: nil, confidence: 1.0)))",
+      "event" : "parser",
+      "ledger" : [
+
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "",
+      "revision" : 1,
+      "sessionID" : "79775F60-5996-45BE-A788-E2ED23DBFB3F",
+      "stablePrefix" : "",
+      "transcript" : "open notes"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open notes"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 action=AgentAction(id: 09D18FD2-9ABE-40F5-8103-EB360360F83E, toolID: CommandMode.NativeToolID.openApplication, arguments: CommandMode.ToolArguments.application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"fixture.Notes\"), url: nil, confidence: 1.0), processID: nil)) key=application.open:fixture.Notes::",
+      "event" : "proposed",
+      "ledger" : [
+        "segment=0 id=09D18FD2-9ABE-40F5-8103-EB360360F83E key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "",
+      "revision" : 1,
+      "sessionID" : "79775F60-5996-45BE-A788-E2ED23DBFB3F",
+      "stablePrefix" : "",
+      "transcript" : "open notes"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "",
+      "event" : "revision",
+      "ledger" : [
+        "segment=0 id=09D18FD2-9ABE-40F5-8103-EB360360F83E key=application.open:fixture.Notes:: phase=cancelled sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "",
+      "revision" : 2,
+      "sessionID" : "79775F60-5996-45BE-A788-E2ED23DBFB3F",
+      "stablePrefix" : "open",
+      "transcript" : "open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 parsed=execute(CommandMode.CommandIntent.openApplication(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"fixture.Safari\"), url: nil, confidence: 1.0)))",
+      "event" : "parser",
+      "ledger" : [
+        "segment=0 id=09D18FD2-9ABE-40F5-8103-EB360360F83E key=application.open:fixture.Notes:: phase=cancelled sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "open",
+      "revision" : 2,
+      "sessionID" : "79775F60-5996-45BE-A788-E2ED23DBFB3F",
+      "stablePrefix" : "open",
+      "transcript" : "open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 action=AgentAction(id: 21575CF8-046A-47B3-8379-61CC86D7A039, toolID: CommandMode.NativeToolID.openApplication, arguments: CommandMode.ToolArguments.application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"fixture.Safari\"), url: nil, confidence: 1.0), processID: nil)) key=application.open:fixture.Safari::",
+      "event" : "proposed",
+      "ledger" : [
+        "segment=0 id=09D18FD2-9ABE-40F5-8103-EB360360F83E key=application.open:fixture.Notes:: phase=cancelled sent=false",
+        "segment=0 id=21575CF8-046A-47B3-8379-61CC86D7A039 key=application.open:fixture.Safari:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "open",
+      "revision" : 2,
+      "sessionID" : "79775F60-5996-45BE-A788-E2ED23DBFB3F",
+      "stablePrefix" : "open",
+      "transcript" : "open safari"
+    }
+  ],
+  [
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=true text=open notes",
+        "segment=1 end=4 closed=false text=open"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "",
+      "event" : "revision",
+      "ledger" : [
+
+      ],
+      "nextUnconsumedRange" : "0..<4",
+      "previousStablePrefix" : "",
+      "revision" : 1,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "",
+      "transcript" : "open notes then open"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=true text=open notes",
+        "segment=1 end=4 closed=false text=open"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 parsed=execute(CommandMode.CommandIntent.openApplication(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"fixture.Notes\"), url: nil, confidence: 1.0)))",
+      "event" : "parser",
+      "ledger" : [
+
+      ],
+      "nextUnconsumedRange" : "0..<4",
+      "previousStablePrefix" : "",
+      "revision" : 1,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "",
+      "transcript" : "open notes then open"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=true text=open notes",
+        "segment=1 end=4 closed=false text=open"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 action=AgentAction(id: 23971FDA-1E87-4BEB-B815-E6FAA678CF95, toolID: CommandMode.NativeToolID.openApplication, arguments: CommandMode.ToolArguments.application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"fixture.Notes\"), url: nil, confidence: 1.0), processID: nil)) key=application.open:fixture.Notes::",
+      "event" : "proposed",
+      "ledger" : [
+        "segment=0 id=23971FDA-1E87-4BEB-B815-E6FAA678CF95 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<4",
+      "previousStablePrefix" : "",
+      "revision" : 1,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "",
+      "transcript" : "open notes then open"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=true text=open notes",
+        "segment=1 end=4 closed=false text=open"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=1 parsed=notCommand",
+      "event" : "parser",
+      "ledger" : [
+        "segment=0 id=23971FDA-1E87-4BEB-B815-E6FAA678CF95 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<4",
+      "previousStablePrefix" : "",
+      "revision" : 1,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "",
+      "transcript" : "open notes then open"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=true text=open notes",
+        "segment=1 end=5 closed=false text=open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "",
+      "event" : "revision",
+      "ledger" : [
+        "segment=0 id=23971FDA-1E87-4BEB-B815-E6FAA678CF95 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<5",
+      "previousStablePrefix" : "",
+      "revision" : 2,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "open notes then open",
+      "transcript" : "open notes then open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=true text=open notes",
+        "segment=1 end=5 closed=false text=open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 parsed=execute(CommandMode.CommandIntent.openApplication(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"fixture.Notes\"), url: nil, confidence: 1.0)))",
+      "event" : "parser",
+      "ledger" : [
+        "segment=0 id=23971FDA-1E87-4BEB-B815-E6FAA678CF95 key=application.open:fixture.Notes:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<5",
+      "previousStablePrefix" : "open notes then open",
+      "revision" : 2,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "open notes then open",
+      "transcript" : "open notes then open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=true text=open notes",
+        "segment=1 end=5 closed=false text=open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 key=application.open:fixture.Notes::",
+      "event" : "deduplicated",
+      "ledger" : [
+        "segment=0 id=23971FDA-1E87-4BEB-B815-E6FAA678CF95 key=application.open:fixture.Notes:: phase=stable sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<5",
+      "previousStablePrefix" : "open notes then open",
+      "revision" : 2,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "open notes then open",
+      "transcript" : "open notes then open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=true text=open notes",
+        "segment=1 end=5 closed=false text=open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=1 parsed=execute(CommandMode.CommandIntent.openApplication(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"fixture.Safari\"), url: nil, confidence: 1.0)))",
+      "event" : "parser",
+      "ledger" : [
+        "segment=0 id=23971FDA-1E87-4BEB-B815-E6FAA678CF95 key=application.open:fixture.Notes:: phase=stable sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<5",
+      "previousStablePrefix" : "open notes then open",
+      "revision" : 2,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "open notes then open",
+      "transcript" : "open notes then open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=true text=open notes",
+        "segment=1 end=5 closed=false text=open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=1 action=AgentAction(id: BAE5E266-9D33-4C2E-BB80-3148E334562D, toolID: CommandMode.NativeToolID.openApplication, arguments: CommandMode.ToolArguments.application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"fixture.Safari\"), url: nil, confidence: 1.0), processID: nil)) key=application.open:fixture.Safari::",
+      "event" : "proposed",
+      "ledger" : [
+        "segment=0 id=23971FDA-1E87-4BEB-B815-E6FAA678CF95 key=application.open:fixture.Notes:: phase=stable sent=false",
+        "segment=1 id=BAE5E266-9D33-4C2E-BB80-3148E334562D key=application.open:fixture.Safari:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<5",
+      "previousStablePrefix" : "open notes then open",
+      "revision" : 2,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "open notes then open",
+      "transcript" : "open notes then open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=true text=open notes",
+        "segment=1 end=5 closed=false text=open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0",
+      "event" : "execution-start",
+      "ledger" : [
+        "segment=0 id=23971FDA-1E87-4BEB-B815-E6FAA678CF95 key=application.open:fixture.Notes:: phase=executing sent=false",
+        "segment=1 id=BAE5E266-9D33-4C2E-BB80-3148E334562D key=application.open:fixture.Safari:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<5",
+      "previousStablePrefix" : "open notes then open",
+      "revision" : 2,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "open notes then open",
+      "transcript" : "open notes then open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=true text=open notes",
+        "segment=1 end=5 closed=false text=open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 result=completed(message: \"Fixture receipt\", output: CommandMode.ToolOutput.none, verification: CommandMode.ToolVerification.verified, undo: nil)",
+      "event" : "receipt",
+      "ledger" : [
+        "segment=0 id=23971FDA-1E87-4BEB-B815-E6FAA678CF95 key=application.open:fixture.Notes:: phase=completed sent=true",
+        "segment=1 id=BAE5E266-9D33-4C2E-BB80-3148E334562D key=application.open:fixture.Safari:: phase=proposed sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<5",
+      "previousStablePrefix" : "open notes then open",
+      "revision" : 2,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "open notes then open",
+      "transcript" : "open notes then open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "",
+      "event" : "revision",
+      "ledger" : [
+        "segment=0 id=23971FDA-1E87-4BEB-B815-E6FAA678CF95 key=application.open:fixture.Notes:: phase=completed sent=true",
+        "segment=1 id=BAE5E266-9D33-4C2E-BB80-3148E334562D key=application.open:fixture.Safari:: phase=cancelled sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "open notes then open",
+      "revision" : 3,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "open",
+      "transcript" : "open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open safari"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 parsed=execute(CommandMode.CommandIntent.openApplication(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"fixture.Safari\"), url: nil, confidence: 1.0)))",
+      "event" : "parser",
+      "ledger" : [
+        "segment=0 id=23971FDA-1E87-4BEB-B815-E6FAA678CF95 key=application.open:fixture.Notes:: phase=completed sent=true",
+        "segment=1 id=BAE5E266-9D33-4C2E-BB80-3148E334562D key=application.open:fixture.Safari:: phase=cancelled sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "open",
+      "revision" : 3,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "open",
+      "transcript" : "open safari"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open chrome"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "",
+      "event" : "revision",
+      "ledger" : [
+        "segment=0 id=23971FDA-1E87-4BEB-B815-E6FAA678CF95 key=application.open:fixture.Notes:: phase=completed sent=true",
+        "segment=1 id=BAE5E266-9D33-4C2E-BB80-3148E334562D key=application.open:fixture.Safari:: phase=cancelled sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "open",
+      "revision" : 4,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "open",
+      "transcript" : "open chrome"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open chrome"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 parsed=execute(CommandMode.CommandIntent.openApplication(CommandMode.ApplicationMatch(name: \"Chrome\", bundleIdentifier: Optional(\"fixture.Chrome\"), url: nil, confidence: 1.0)))",
+      "event" : "parser",
+      "ledger" : [
+        "segment=0 id=23971FDA-1E87-4BEB-B815-E6FAA678CF95 key=application.open:fixture.Notes:: phase=completed sent=true",
+        "segment=1 id=BAE5E266-9D33-4C2E-BB80-3148E334562D key=application.open:fixture.Safari:: phase=cancelled sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "open",
+      "revision" : 4,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "open",
+      "transcript" : "open chrome"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open github.com"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "",
+      "event" : "revision",
+      "ledger" : [
+        "segment=0 id=23971FDA-1E87-4BEB-B815-E6FAA678CF95 key=application.open:fixture.Notes:: phase=completed sent=true",
+        "segment=1 id=BAE5E266-9D33-4C2E-BB80-3148E334562D key=application.open:fixture.Safari:: phase=cancelled sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "open",
+      "revision" : 5,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "open",
+      "transcript" : "open github.com"
+    },
+    {
+      "candidates" : [
+        "segment=0 end=2 closed=false text=open github.com"
+      ],
+      "consumedWordCursor" : 0,
+      "details" : "segment=0 parsed=execute(CommandMode.CommandIntent.openURL(https:\/\/github.com))",
+      "event" : "parser",
+      "ledger" : [
+        "segment=0 id=23971FDA-1E87-4BEB-B815-E6FAA678CF95 key=application.open:fixture.Notes:: phase=completed sent=true",
+        "segment=1 id=BAE5E266-9D33-4C2E-BB80-3148E334562D key=application.open:fixture.Safari:: phase=cancelled sent=false"
+      ],
+      "nextUnconsumedRange" : "0..<2",
+      "previousStablePrefix" : "open",
+      "revision" : 5,
+      "sessionID" : "3E332568-9804-47F9-81AD-3F4BB3FAF150",
+      "stablePrefix" : "open",
+      "transcript" : "open github.com"
+    }
+  ]
+]

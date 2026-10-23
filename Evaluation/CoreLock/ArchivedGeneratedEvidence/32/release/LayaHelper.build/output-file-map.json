@@ -1,0 +1,13 @@
+{
+  "": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/LayaHelper.build/LayaHelper.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/LayaHelper.build/LayaHelper.o",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/LayaHelper.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/Sources/LayaHelper/LocalLaya.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/LayaHelper.build/LocalLaya.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/LayaHelper.build/LocalLaya~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/LayaHelper.build/LocalLaya.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/LayaHelper.build/LocalLaya.dia"
+  }
+}

@@ -1,0 +1,165 @@
+[
+  {
+    "metadataOutputVersion" : "3.0",
+    "storagePrecision" : "Float16",
+    "outputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float16",
+        "formattedType" : "MultiArray (Float16 1 × 1 × 51866)",
+        "shortDescription" : "",
+        "shape" : "[1, 1, 51866]",
+        "name" : "logits",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float16",
+        "formattedType" : "MultiArray (Float16 1 × 40960 × 1 × 1)",
+        "shortDescription" : "",
+        "shape" : "[1, 40960, 1, 1]",
+        "name" : "key_cache_updates",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float16",
+        "formattedType" : "MultiArray (Float16 1 × 40960 × 1 × 1)",
+        "shortDescription" : "",
+        "shape" : "[1, 40960, 1, 1]",
+        "name" : "value_cache_updates",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float16",
+        "formattedType" : "MultiArray (Float16 1 × 1500)",
+        "shortDescription" : "",
+        "shape" : "[1, 1500]",
+        "name" : "alignment_heads_weights",
+        "type" : "MultiArray"
+      }
+    ],
+    "modelParameters" : [
+
+    ],
+    "specificationVersion" : 7,
+    "mlProgramOperationTypeHistogram" : {
+      "Split" : 2,
+      "Concat" : 3,
+      "Ios16.rsqrt" : 97,
+      "Ios16.mul" : 386,
+      "Squeeze" : 1,
+      "SliceByIndex" : 20,
+      "Ios16.sub" : 98,
+      "Transpose" : 1,
+      "Ios16.conv" : 320,
+      "Ios16.add" : 290,
+      "Ios16.linear" : 1,
+      "Ios16.matmul" : 128,
+      "Ios16.gelu" : 32,
+      "Ios16.reduceMean" : 195,
+      "ExpandDims" : 6,
+      "Ios16.batchNorm" : 97,
+      "Ios16.gather" : 2,
+      "Ios16.reshape" : 256,
+      "Ios16.softmax" : 64
+    },
+    "computePrecision" : "Mixed (Float16, Int32)",
+    "isUpdatable" : "0",
+    "availability" : {
+      "macOS" : "13.0",
+      "tvOS" : "16.0",
+      "visionOS" : "1.0",
+      "watchOS" : "9.0",
+      "iOS" : "16.0",
+      "macCatalyst" : "16.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_mlProgram"
+    },
+    "userDefinedMetadata" : {
+      "com.github.apple.coremltools.source_dialect" : "TorchScript",
+      "com.github.apple.coremltools.source" : "torch==2.2.1",
+      "com.github.apple.coremltools.version" : "7.1"
+    },
+    "inputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Int32",
+        "formattedType" : "MultiArray (Int32 1)",
+        "shortDescription" : "",
+        "shape" : "[1]",
+        "name" : "input_ids",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Int32",
+        "formattedType" : "MultiArray (Int32 1)",
+        "shortDescription" : "",
+        "shape" : "[1]",
+        "name" : "cache_length",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float16",
+        "formattedType" : "MultiArray (Float16 1 × 40960 × 1 × 224)",
+        "shortDescription" : "",
+        "shape" : "[1, 40960, 1, 224]",
+        "name" : "key_cache",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float16",
+        "formattedType" : "MultiArray (Float16 1 × 40960 × 1 × 224)",
+        "shortDescription" : "",
+        "shape" : "[1, 40960, 1, 224]",
+        "name" : "value_cache",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float16",
+        "formattedType" : "MultiArray (Float16 1 × 224)",
+        "shortDescription" : "",
+        "shape" : "[1, 224]",
+        "name" : "kv_cache_update_mask",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float16",
+        "formattedType" : "MultiArray (Float16 1 × 1280 × 1 × 1500)",
+        "shortDescription" : "",
+        "shape" : "[1, 1280, 1, 1500]",
+        "name" : "encoder_output_embeds",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float16",
+        "formattedType" : "MultiArray (Float16 1 × 224)",
+        "shortDescription" : "",
+        "shape" : "[1, 224]",
+        "name" : "decoder_key_padding_mask",
+        "type" : "MultiArray"
+      }
+    ],
+    "generatedClassName" : "TextDecoder",
+    "method" : "predict"
+  }
+]

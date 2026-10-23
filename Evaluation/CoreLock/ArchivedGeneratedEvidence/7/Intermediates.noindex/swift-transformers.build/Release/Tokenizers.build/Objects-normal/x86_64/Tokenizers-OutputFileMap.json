@@ -1,0 +1,71 @@
+{
+  "" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizers-primary.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizers-primary.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizers-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizers-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizers-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizers-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizers-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/BPETokenizer.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/BPETokenizer.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/BPETokenizer.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/BPETokenizer.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/BertTokenizer.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/BertTokenizer.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/BertTokenizer.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/BertTokenizer.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/ByteEncoder.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/ByteEncoder.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/ByteEncoder.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/ByteEncoder.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/Decoder.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Decoder.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Decoder.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Decoder.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/Normalizer.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Normalizer.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Normalizer.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Normalizer.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/PostProcessor.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/PostProcessor.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/PostProcessor.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/PostProcessor.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/PreTokenizer.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/PreTokenizer.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/PreTokenizer.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/PreTokenizer.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/String+PreTokenization.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/String+PreTokenization.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/String+PreTokenization.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/String+PreTokenization.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/TokenLattice.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/TokenLattice.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/TokenLattice.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/TokenLattice.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/Tokenizer.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizer.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizer.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Tokenizer.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/Trie.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Trie.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Trie.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/Trie.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/UnigramTokenizer.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/UnigramTokenizer.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/UnigramTokenizer.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/swift-transformers.build/Release/Tokenizers.build/Objects-normal/x86_64/UnigramTokenizer.o"
+  }
+}

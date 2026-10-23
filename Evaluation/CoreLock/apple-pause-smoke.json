@@ -1,0 +1,15 @@
+[
+  {
+    "completedMilliseconds" : 6441.9593749998967,
+    "confidence" : 0.78509998321533203,
+    "exactTranscript" : false,
+    "expected" : "Open Notes. Open Safari. Open Chrome. Open github.com.",
+    "file" : "smoke.aiff",
+    "final" : "Open Notes, open Safari, open Chrome, open Gitob.",
+    "finalDrainMilliseconds" : 101.88312499985841,
+    "firstFinalFromInputStartMilliseconds" : 6034.3539166665323,
+    "phraseCount" : 4,
+    "revisions" : 19,
+    "volatileFromInputStartMilliseconds" : 4347.7445416665432
+  }
+]

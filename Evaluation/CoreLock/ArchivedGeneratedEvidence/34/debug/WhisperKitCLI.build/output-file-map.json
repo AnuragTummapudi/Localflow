@@ -1,0 +1,54 @@
+{
+  "": {
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKitCLI/CLIUtils.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/CLIUtils.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/CLIUtils.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/CLIUtils~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/CLIUtils.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/CLIUtils.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKitCLI/DiarizeCLI.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/DiarizeCLI.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/DiarizeCLI.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/DiarizeCLI~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/DiarizeCLI.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/DiarizeCLI.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKitCLI/TTSCLI.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TTSCLI.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TTSCLI.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TTSCLI~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TTSCLI.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TTSCLI.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKitCLI/TranscribeCLI.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TranscribeCLI.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TranscribeCLI.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TranscribeCLI~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TranscribeCLI.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TranscribeCLI.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKitCLI/TranscribeCLIArguments.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TranscribeCLIArguments.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TranscribeCLIArguments.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TranscribeCLIArguments~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TranscribeCLIArguments.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TranscribeCLIArguments.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKitCLI/TranscribeCLIUtils.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TranscribeCLIUtils.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TranscribeCLIUtils.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TranscribeCLIUtils~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TranscribeCLIUtils.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/TranscribeCLIUtils.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKitCLI/WhisperKitCLI.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/WhisperKitCLI.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/WhisperKitCLI.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/WhisperKitCLI~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/WhisperKitCLI.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKitCLI.build/WhisperKitCLI.dia"
+  }
+}

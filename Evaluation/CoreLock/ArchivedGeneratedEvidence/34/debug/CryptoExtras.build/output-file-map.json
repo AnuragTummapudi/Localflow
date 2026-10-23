@@ -1,0 +1,495 @@
+{
+  "": {
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/AES/AES_CBC.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CBC.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CBC.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CBC~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CBC.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CBC.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/AES/AES_CFB.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CFB.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CFB.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CFB~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CFB.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CFB.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/AES/AES_CTR.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CTR.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CTR.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CTR~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CTR.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CTR.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/AES/AES_GCM_SIV.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_GCM_SIV.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_GCM_SIV.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_GCM_SIV~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_GCM_SIV.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_GCM_SIV.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/AES/Block Function.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Block Function.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Block Function.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Block Function~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Block Function.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Block Function.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/AES/BoringSSL/AES_CBC_boring.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CBC_boring.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CBC_boring.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CBC_boring~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CBC_boring.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CBC_boring.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/AES/BoringSSL/AES_CFB_boring.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CFB_boring.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CFB_boring.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CFB_boring~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CFB_boring.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CFB_boring.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/AES/BoringSSL/AES_CTR_boring.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CTR_boring.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CTR_boring.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CTR_boring~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CTR_boring.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_CTR_boring.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/AES/BoringSSL/AES_GCM_SIV_boring.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_GCM_SIV_boring.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_GCM_SIV_boring.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_GCM_SIV_boring~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_GCM_SIV_boring.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/AES_GCM_SIV_boring.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/AES/CMAC.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/CMAC.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/CMAC.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/CMAC~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/CMAC.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/CMAC.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ARC/ARC+API.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARC+API.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARC+API.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARC+API~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARC+API.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARC+API.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ARC/ARC.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARC.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARC.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARC~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARC.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARC.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ARC/ARCCredential.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCCredential.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCCredential.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCCredential~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCCredential.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCCredential.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ARC/ARCEncoding.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCEncoding.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCEncoding.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCEncoding~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCEncoding.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCEncoding.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ARC/ARCPrecredential.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCPrecredential.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCPrecredential.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCPrecredential~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCPrecredential.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCPrecredential.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ARC/ARCPresentation.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCPresentation.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCPresentation.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCPresentation~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCPresentation.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCPresentation.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ARC/ARCRequest.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCRequest.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCRequest.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCRequest~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCRequest.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCRequest.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ARC/ARCResponse.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCResponse.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCResponse.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCResponse~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCResponse.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCResponse.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ARC/ARCServer.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCServer.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCServer.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCServer~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCServer.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ARCServer.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ChaCha20CTR/BoringSSL/ChaCha20CTR_boring.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ChaCha20CTR_boring.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ChaCha20CTR_boring.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ChaCha20CTR_boring~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ChaCha20CTR_boring.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ChaCha20CTR_boring.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ChaCha20CTR/ChaCha20CTR.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ChaCha20CTR.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ChaCha20CTR.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ChaCha20CTR~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ChaCha20CTR.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ChaCha20CTR.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Digests/BoringSSL/BoringSSLSHA512256Context.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLSHA512256Context.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLSHA512256Context.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLSHA512256Context~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLSHA512256Context.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLSHA512256Context.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Digests/BoringSSL/BoringSSLSHA512256HashFunction.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLSHA512256HashFunction.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLSHA512256HashFunction.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLSHA512256HashFunction~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLSHA512256HashFunction.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLSHA512256HashFunction.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Digests/SHA512256.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/SHA512256.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/SHA512256.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/SHA512256~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/SHA512256.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/SHA512256.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Digests/SHA512256Digest.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/SHA512256Digest.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/SHA512256Digest.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/SHA512256Digest~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/SHA512256Digest.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/SHA512256Digest.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/EC/Curve25519+PEM.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Curve25519+PEM.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Curve25519+PEM.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Curve25519+PEM~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Curve25519+PEM.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Curve25519+PEM.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/EC/ObjectIdentifier.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ObjectIdentifier.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ObjectIdentifier.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ObjectIdentifier~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ObjectIdentifier.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ObjectIdentifier.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/EC/PKCS8DERRepresentation.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PKCS8DERRepresentation.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PKCS8DERRepresentation.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PKCS8DERRepresentation~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PKCS8DERRepresentation.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PKCS8DERRepresentation.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/EC/PKCS8PrivateKey.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PKCS8PrivateKey.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PKCS8PrivateKey.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PKCS8PrivateKey~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PKCS8PrivateKey.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PKCS8PrivateKey.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/EC/RFC8410AlgorithmIdentifier.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RFC8410AlgorithmIdentifier.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RFC8410AlgorithmIdentifier.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RFC8410AlgorithmIdentifier~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RFC8410AlgorithmIdentifier.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RFC8410AlgorithmIdentifier.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ECToolbox/BoringSSL/ECToolbox_boring.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ECToolbox_boring.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ECToolbox_boring.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ECToolbox_boring~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ECToolbox_boring.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ECToolbox_boring.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ECToolbox/ECToolbox.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ECToolbox.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ECToolbox.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ECToolbox~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ECToolbox.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ECToolbox.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/H2G/HashToField.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/HashToField.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/HashToField.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/HashToField~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/HashToField.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/HashToField.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Key Derivation/KDF.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/KDF.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/KDF.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/KDF~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/KDF.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/KDF.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Key Derivation/PBKDF2/BoringSSL/PBKDF2_boring.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PBKDF2_boring.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PBKDF2_boring.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PBKDF2_boring~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PBKDF2_boring.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PBKDF2_boring.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Key Derivation/PBKDF2/BoringSSL/PBKDF2_commoncrypto.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PBKDF2_commoncrypto.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PBKDF2_commoncrypto.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PBKDF2_commoncrypto~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PBKDF2_commoncrypto.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PBKDF2_commoncrypto.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Key Derivation/PBKDF2/PBKDF2.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PBKDF2.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PBKDF2.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PBKDF2~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PBKDF2.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PBKDF2.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Key Derivation/Scrypt/BoringSSL/Scrypt_boring.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Scrypt_boring.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Scrypt_boring.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Scrypt_boring~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Scrypt_boring.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Scrypt_boring.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Key Derivation/Scrypt/Scrypt.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Scrypt.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Scrypt.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Scrypt~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Scrypt.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Scrypt.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/OPRFs/OPRF.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/OPRF.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/OPRF.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/OPRF~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/OPRF.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/OPRF.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/OPRFs/OPRFClient.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/OPRFClient.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/OPRFClient.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/OPRFClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/OPRFClient.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/OPRFClient.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/OPRFs/OPRFServer.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/OPRFServer.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/OPRFServer.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/OPRFServer~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/OPRFServer.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/OPRFServer.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/OPRFs/VOPRF+API.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/VOPRF+API.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/VOPRF+API.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/VOPRF+API~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/VOPRF+API.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/VOPRF+API.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/OPRFs/VOPRFClient.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/VOPRFClient.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/VOPRFClient.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/VOPRFClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/VOPRFClient.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/VOPRFClient.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/OPRFs/VOPRFServer.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/VOPRFServer.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/VOPRFServer.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/VOPRFServer~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/VOPRFServer.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/VOPRFServer.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/RSA/BoringSSLPassphraseCallbackManager.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLPassphraseCallbackManager.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLPassphraseCallbackManager.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLPassphraseCallbackManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLPassphraseCallbackManager.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLPassphraseCallbackManager.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/RSA/RSA+BlindSigning.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RSA+BlindSigning.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RSA+BlindSigning.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RSA+BlindSigning~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RSA+BlindSigning.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RSA+BlindSigning.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/RSA/RSA.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RSA.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RSA.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RSA~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RSA.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RSA.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/RSA/RSA_boring.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RSA_boring.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RSA_boring.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RSA_boring~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RSA_boring.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/RSA_boring.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Reexport.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Reexport.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Reexport.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Reexport~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Reexport.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Reexport.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Util/BoringSSL/Zeroization_boring.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Zeroization_boring.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Zeroization_boring.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Zeroization_boring~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Zeroization_boring.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Zeroization_boring.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Util/BoringSSLHelpers.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLHelpers.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLHelpers.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLHelpers~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLHelpers.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/BoringSSLHelpers.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Util/CryptoKitErrors_boring.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/CryptoKitErrors_boring.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/CryptoKitErrors_boring.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/CryptoKitErrors_boring~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/CryptoKitErrors_boring.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/CryptoKitErrors_boring.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Util/Data+Extensions.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Data+Extensions.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Data+Extensions.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Data+Extensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Data+Extensions.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Data+Extensions.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Util/DigestType.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/DigestType.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/DigestType.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/DigestType~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/DigestType.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/DigestType.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Util/Error.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Error.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Error.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Error~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Error.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Error.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Util/I2OSP.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/I2OSP.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/I2OSP.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/I2OSP~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/I2OSP.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/I2OSP.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Util/IntegerEncoding.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/IntegerEncoding.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/IntegerEncoding.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/IntegerEncoding~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/IntegerEncoding.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/IntegerEncoding.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Util/PEMDocument.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PEMDocument.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PEMDocument.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PEMDocument~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PEMDocument.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PEMDocument.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Util/PrettyBytes.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PrettyBytes.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PrettyBytes.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PrettyBytes~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PrettyBytes.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/PrettyBytes.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Util/SubjectPublicKeyInfo.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/SubjectPublicKeyInfo.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/SubjectPublicKeyInfo.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/SubjectPublicKeyInfo~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/SubjectPublicKeyInfo.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/SubjectPublicKeyInfo.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Util/ThreadSpecific/ThreadOps.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadOps.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadOps.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadOps~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadOps.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadOps.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Util/ThreadSpecific/ThreadPosix.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadPosix.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadPosix.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadPosix~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadPosix.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadPosix.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Util/ThreadSpecific/ThreadSpecific.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadSpecific.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadSpecific.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadSpecific~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadSpecific.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadSpecific.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/Util/ThreadSpecific/ThreadWindows.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadWindows.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadWindows.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadWindows~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadWindows.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ThreadWindows.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ZKPs/DLEQ.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/DLEQ.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/DLEQ.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/DLEQ~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/DLEQ.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/DLEQ.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ZKPs/Prover.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Prover.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Prover.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Prover~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Prover.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Prover.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ZKPs/Verifier.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Verifier.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Verifier.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Verifier~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Verifier.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/Verifier.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-crypto/Sources/CryptoExtras/ZKPs/ZKPToolbox.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ZKPToolbox.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ZKPToolbox.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ZKPToolbox~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ZKPToolbox.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/ZKPToolbox.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/DerivedSources/resource_bundle_accessor.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/resource_bundle_accessor.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/resource_bundle_accessor.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/resource_bundle_accessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/resource_bundle_accessor.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CryptoExtras.build/resource_bundle_accessor.dia"
+  }
+}

@@ -1,0 +1,889 @@
+{
+  "runtime": "native",
+  "command": [
+    "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/system2/swift/release/localflow-qwen",
+    "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/system2/candidate"
+  ],
+  "load": {
+    "coldLoadMS": 2657.15195833036,
+    "mlxActiveBytes": 2367679904,
+    "mlxPeakBytes": 3034562212,
+    "ready": true,
+    "rssBytes": 471154688
+  },
+  "samplesPerModeCase": 5,
+  "firstOnly": false,
+  "rssSemantics": "current RSS",
+  "rows": [
+    {
+      "case": "one",
+      "thinking": false,
+      "sample": 0,
+      "warmup": true,
+      "wallMS": 34735.49904199899,
+      "reply": {
+        "firstToolCallMS": "34638.505041668395",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3379565196",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "34729.50354166824",
+        "rssBytes": "56082432",
+        "tokens": "26",
+        "tokensPerSecond": "18.290099903628537",
+        "ttftMS": "33272.81487499931"
+      }
+    },
+    {
+      "case": "one",
+      "thinking": false,
+      "sample": 1,
+      "warmup": false,
+      "wallMS": 21445.318250000128,
+      "reply": {
+        "firstToolCallMS": "21354.96558333398",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3379565196",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "21444.427875001566",
+        "rssBytes": "94683136",
+        "tokens": "26",
+        "tokensPerSecond": "18.447997179645675",
+        "ttftMS": "20002.705458333367"
+      }
+    },
+    {
+      "case": "one",
+      "thinking": false,
+      "sample": 2,
+      "warmup": false,
+      "wallMS": 23055.516209002235,
+      "reply": {
+        "firstToolCallMS": "22963.657458334637",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3379565196",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "23052.689333333547",
+        "rssBytes": "94699520",
+        "tokens": "26",
+        "tokensPerSecond": "16.0881933311214",
+        "ttftMS": "21410.05270833557"
+      }
+    },
+    {
+      "case": "one",
+      "thinking": false,
+      "sample": 3,
+      "warmup": false,
+      "wallMS": 26144.909791000828,
+      "reply": {
+        "firstToolCallMS": "26045.293874998606",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3379565196",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "26140.436291665537",
+        "rssBytes": "52887552",
+        "tokens": "26",
+        "tokensPerSecond": "16.322768772222172",
+        "ttftMS": "24509.54829166585"
+      }
+    },
+    {
+      "case": "one",
+      "thinking": false,
+      "sample": 4,
+      "warmup": false,
+      "wallMS": 25083.217625000543,
+      "reply": {
+        "firstToolCallMS": "24975.091416665236",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3379565196",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "25080.560708331177",
+        "rssBytes": "50823168",
+        "tokens": "26",
+        "tokensPerSecond": "16.679175804620442",
+        "ttftMS": "23484.54320833116"
+      }
+    },
+    {
+      "case": "one",
+      "thinking": false,
+      "sample": 5,
+      "warmup": false,
+      "wallMS": 20265.986459002306,
+      "reply": {
+        "firstToolCallMS": "20181.18675000005",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3379565196",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "20265.07120833412",
+        "rssBytes": "88588288",
+        "tokens": "26",
+        "tokensPerSecond": "19.824281221016243",
+        "ttftMS": "18921.511125001416"
+      }
+    },
+    {
+      "case": "three",
+      "thinking": false,
+      "sample": 0,
+      "warmup": true,
+      "wallMS": 25025.447500000155,
+      "reply": {
+        "firstToolCallMS": "23287.359750000178",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3379565196",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>\n<tool_call>\n<function=workflow.list>\n<parameter=project>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "25022.179499999766",
+        "rssBytes": "88375296",
+        "tokens": "54",
+        "tokensPerSecond": "17.103909540925514",
+        "ttftMS": "21832.73091666706"
+      }
+    },
+    {
+      "case": "three",
+      "thinking": false,
+      "sample": 1,
+      "warmup": false,
+      "wallMS": 25323.102667000057,
+      "reply": {
+        "firstToolCallMS": "23730.32133333254",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3379565196",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>\n<tool_call>\n<function=workflow.list>\n<parameter=project>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "25320.33770833368",
+        "rssBytes": "88326144",
+        "tokens": "54",
+        "tokensPerSecond": "18.79949899525141",
+        "ttftMS": "22412.315124998713"
+      }
+    },
+    {
+      "case": "three",
+      "thinking": false,
+      "sample": 2,
+      "warmup": false,
+      "wallMS": 22573.743083001318,
+      "reply": {
+        "firstToolCallMS": "20919.54166666619",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3379565196",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>\n<tool_call>\n<function=workflow.list>\n<parameter=project>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "22571.08474999768",
+        "rssBytes": "88309760",
+        "tokens": "54",
+        "tokensPerSecond": "18.375991211032975",
+        "ttftMS": "19603.972416665783"
+      }
+    },
+    {
+      "case": "three",
+      "thinking": false,
+      "sample": 3,
+      "warmup": false,
+      "wallMS": 22913.347499998054,
+      "reply": {
+        "firstToolCallMS": "21363.557708333246",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3379565196",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>\n<tool_call>\n<function=workflow.list>\n<parameter=project>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "22910.51774999869",
+        "rssBytes": "88293376",
+        "tokens": "54",
+        "tokensPerSecond": "19.076149146960162",
+        "ttftMS": "20045.34966666688"
+      }
+    },
+    {
+      "case": "three",
+      "thinking": false,
+      "sample": 4,
+      "warmup": false,
+      "wallMS": 23771.652374998666,
+      "reply": {
+        "firstToolCallMS": "22182.487500002026",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3379565196",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>\n<tool_call>\n<function=workflow.list>\n<parameter=project>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "23768.28525000019",
+        "rssBytes": "88260608",
+        "tokens": "54",
+        "tokensPerSecond": "19.00579226158082",
+        "ttftMS": "20895.27625000119"
+      }
+    },
+    {
+      "case": "three",
+      "thinking": false,
+      "sample": 5,
+      "warmup": false,
+      "wallMS": 22102.06012499839,
+      "reply": {
+        "firstToolCallMS": "20531.755875003",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3379565196",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>\n<tool_call>\n<function=workflow.list>\n<parameter=project>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "22099.856291668402",
+        "rssBytes": "88440832",
+        "tokens": "54",
+        "tokensPerSecond": "18.552773451951644",
+        "ttftMS": "19157.00633333472"
+      }
+    },
+    {
+      "case": "five",
+      "thinking": false,
+      "sample": 0,
+      "warmup": true,
+      "wallMS": 20700.439792002726,
+      "reply": {
+        "firstToolCallMS": "20612.603249999665",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3386809012",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "20697.401083336445",
+        "rssBytes": "90030080",
+        "tokens": "26",
+        "tokensPerSecond": "18.71487818852066",
+        "ttftMS": "19276.954125001794"
+      }
+    },
+    {
+      "case": "five",
+      "thinking": false,
+      "sample": 1,
+      "warmup": false,
+      "wallMS": 20648.38979200067,
+      "reply": {
+        "firstToolCallMS": "20562.470958335325",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3386825396",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "20645.39233333562",
+        "rssBytes": "90046464",
+        "tokens": "26",
+        "tokensPerSecond": "19.226604007191558",
+        "ttftMS": "19262.113041666453"
+      }
+    },
+    {
+      "case": "five",
+      "thinking": false,
+      "sample": 2,
+      "warmup": false,
+      "wallMS": 20744.702542000596,
+      "reply": {
+        "firstToolCallMS": "20658.743333333405",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3386825396",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "20741.803375000018",
+        "rssBytes": "90112000",
+        "tokens": "26",
+        "tokensPerSecond": "19.675608733400065",
+        "ttftMS": "19388.09662499989"
+      }
+    },
+    {
+      "case": "five",
+      "thinking": false,
+      "sample": 3,
+      "warmup": false,
+      "wallMS": 21281.499000000622,
+      "reply": {
+        "firstToolCallMS": "21197.094000002835",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3386825396",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "21278.597666667338",
+        "rssBytes": "89866240",
+        "tokens": "26",
+        "tokensPerSecond": "17.962636720786435",
+        "ttftMS": "19801.42375000287"
+      }
+    },
+    {
+      "case": "five",
+      "thinking": false,
+      "sample": 4,
+      "warmup": false,
+      "wallMS": 22693.115999998554,
+      "reply": {
+        "firstToolCallMS": "22606.08991666595",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3386825396",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "22691.498333333584",
+        "rssBytes": "90128384",
+        "tokens": "26",
+        "tokensPerSecond": "18.635241300373654",
+        "ttftMS": "21265.869374998147"
+      }
+    },
+    {
+      "case": "five",
+      "thinking": false,
+      "sample": 5,
+      "warmup": false,
+      "wallMS": 22989.425207997556,
+      "reply": {
+        "firstToolCallMS": "22903.027166667016",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3386825396",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "22986.84137500095",
+        "rssBytes": "86474752",
+        "tokens": "26",
+        "tokensPerSecond": "18.847463427183307",
+        "ttftMS": "21577.778833336197"
+      }
+    },
+    {
+      "case": "replan",
+      "thinking": false,
+      "sample": 0,
+      "warmup": true,
+      "wallMS": 28562.082625001494,
+      "reply": {
+        "firstToolCallMS": "28469.020416665444",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3388725988",
+        "output": "",
+        "planMS": "28557.9432500017",
+        "rssBytes": "50675712",
+        "tokens": "72",
+        "tokensPerSecond": "18.69354938600312",
+        "ttftMS": "24672.88970833397",
+        "assistantTextDiscarded": true
+      }
+    },
+    {
+      "case": "replan",
+      "thinking": false,
+      "sample": 1,
+      "warmup": false,
+      "wallMS": 25548.758959001134,
+      "reply": {
+        "firstToolCallMS": "25422.97245833106",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3388742372",
+        "output": "",
+        "planMS": "25547.661041666288",
+        "rssBytes": "88391680",
+        "tokens": "72",
+        "tokensPerSecond": "15.337910329186702",
+        "ttftMS": "20790.821499998856",
+        "assistantTextDiscarded": true
+      }
+    },
+    {
+      "case": "replan",
+      "thinking": false,
+      "sample": 2,
+      "warmup": false,
+      "wallMS": 26499.815667000803,
+      "reply": {
+        "firstToolCallMS": "26411.75312500127",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3388824292",
+        "output": "",
+        "planMS": "26495.870166669192",
+        "rssBytes": "88162304",
+        "tokens": "72",
+        "tokensPerSecond": "18.722642629543092",
+        "ttftMS": "22617.60420833525",
+        "assistantTextDiscarded": true
+      }
+    },
+    {
+      "case": "replan",
+      "thinking": false,
+      "sample": 3,
+      "warmup": false,
+      "wallMS": 23148.476250000385,
+      "reply": {
+        "firstToolCallMS": "23062.84987500112",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3388824292",
+        "output": "",
+        "planMS": "23147.483249998913",
+        "rssBytes": "88539136",
+        "tokens": "72",
+        "tokensPerSecond": "18.634529377995296",
+        "ttftMS": "19250.532166668563",
+        "assistantTextDiscarded": true
+      }
+    },
+    {
+      "case": "replan",
+      "thinking": false,
+      "sample": 4,
+      "warmup": false,
+      "wallMS": 23194.199958001263,
+      "reply": {
+        "firstToolCallMS": "23108.22141666722",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3388824292",
+        "output": "",
+        "planMS": "23190.554541666643",
+        "rssBytes": "88489984",
+        "tokens": "72",
+        "tokensPerSecond": "18.911838853713814",
+        "ttftMS": "19351.610208334023",
+        "assistantTextDiscarded": true
+      }
+    },
+    {
+      "case": "replan",
+      "thinking": false,
+      "sample": 5,
+      "warmup": false,
+      "wallMS": 26436.16720799764,
+      "reply": {
+        "firstToolCallMS": "26352.678541668865",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3388873444",
+        "output": "",
+        "planMS": "26434.65491666575",
+        "rssBytes": "87670784",
+        "tokens": "72",
+        "tokensPerSecond": "18.632855909028144",
+        "ttftMS": "22540.89233333434",
+        "assistantTextDiscarded": true
+      }
+    },
+    {
+      "case": "one",
+      "thinking": true,
+      "sample": 0,
+      "warmup": true,
+      "wallMS": 27631.401291000657,
+      "reply": {
+        "firstToolCallMS": "27544.75891666516",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "27628.83691666866",
+        "rssBytes": "89440256",
+        "tokens": "155",
+        "tokensPerSecond": "18.745706781038322",
+        "ttftMS": "19327.343875000224"
+      }
+    },
+    {
+      "case": "one",
+      "thinking": true,
+      "sample": 1,
+      "warmup": false,
+      "wallMS": 28375.760916998843,
+      "reply": {
+        "firstToolCallMS": "28288.51020833463",
+        "mlxActiveBytes": "2367680070",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "28371.311416667595",
+        "rssBytes": "89489408",
+        "tokens": "155",
+        "tokensPerSecond": "17.56606633381005",
+        "ttftMS": "19516.227916668868"
+      }
+    },
+    {
+      "case": "one",
+      "thinking": true,
+      "sample": 2,
+      "warmup": false,
+      "wallMS": 31441.969666997466,
+      "reply": {
+        "firstToolCallMS": "31341.328291666287",
+        "mlxActiveBytes": "2367680178",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "31436.469291664253",
+        "rssBytes": "55033856",
+        "tokens": "155",
+        "tokensPerSecond": "17.77360498337873",
+        "ttftMS": "22680.57562499962"
+      }
+    },
+    {
+      "case": "one",
+      "thinking": true,
+      "sample": 3,
+      "warmup": false,
+      "wallMS": 38725.50075000254,
+      "reply": {
+        "firstToolCallMS": "38629.94304166568",
+        "mlxActiveBytes": "2367680344",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "38723.75258333341",
+        "rssBytes": "91111424",
+        "tokens": "155",
+        "tokensPerSecond": "1.0622130726237773",
+        "ttftMS": "29535.19245833013"
+      }
+    },
+    {
+      "case": "one",
+      "thinking": true,
+      "sample": 4,
+      "warmup": false,
+      "wallMS": 31786.045167002158,
+      "reply": {
+        "firstToolCallMS": "31694.19566666693",
+        "mlxActiveBytes": "2367680344",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "31778.253500000574",
+        "rssBytes": "52461568",
+        "tokens": "155",
+        "tokensPerSecond": "20.7352062058924",
+        "ttftMS": "24270.3142499995"
+      }
+    },
+    {
+      "case": "one",
+      "thinking": true,
+      "sample": 5,
+      "warmup": false,
+      "wallMS": 28428.364250001323,
+      "reply": {
+        "firstToolCallMS": "28322.124333331885",
+        "mlxActiveBytes": "2367680344",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "28426.066791667836",
+        "rssBytes": "90521600",
+        "tokens": "155",
+        "tokensPerSecond": "20.68531925729282",
+        "ttftMS": "20882.713499999227"
+      }
+    },
+    {
+      "case": "three",
+      "thinking": true,
+      "sample": 0,
+      "warmup": true,
+      "wallMS": 30388.095291000354,
+      "reply": {
+        "firstToolCallMS": "30305.506625001726",
+        "mlxActiveBytes": "2367680232",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "30383.67350000044",
+        "rssBytes": "87900160",
+        "tokens": "213",
+        "tokensPerSecond": "12.264434266747179",
+        "ttftMS": "19322.102583333617"
+      }
+    },
+    {
+      "case": "three",
+      "thinking": true,
+      "sample": 1,
+      "warmup": false,
+      "wallMS": 29932.594916997914,
+      "reply": {
+        "firstToolCallMS": "29856.891333332896",
+        "mlxActiveBytes": "2367680232",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "29929.96587500238",
+        "rssBytes": "93519872",
+        "tokens": "213",
+        "tokensPerSecond": "20.547120669550758",
+        "ttftMS": "19535.646208332764"
+      }
+    },
+    {
+      "case": "three",
+      "thinking": true,
+      "sample": 2,
+      "warmup": false,
+      "wallMS": 30807.481415999064,
+      "reply": {
+        "firstToolCallMS": "30714.289625000674",
+        "mlxActiveBytes": "2367680232",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "30801.85370833351",
+        "rssBytes": "60801024",
+        "tokens": "213",
+        "tokensPerSecond": "19.43155131286719",
+        "ttftMS": "19815.336708332325"
+      }
+    },
+    {
+      "case": "three",
+      "thinking": true,
+      "sample": 3,
+      "warmup": false,
+      "wallMS": 32616.604208000354,
+      "reply": {
+        "firstToolCallMS": "32530.279958333267",
+        "mlxActiveBytes": "2367680232",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "32614.765833332058",
+        "rssBytes": "53575680",
+        "tokens": "213",
+        "tokensPerSecond": "7.171253826717133",
+        "ttftMS": "21789.245958330866"
+      }
+    },
+    {
+      "case": "three",
+      "thinking": true,
+      "sample": 4,
+      "warmup": false,
+      "wallMS": 33416.49691699786,
+      "reply": {
+        "firstToolCallMS": "33317.185250001785",
+        "mlxActiveBytes": "2367680232",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "33409.92445833399",
+        "rssBytes": "52674560",
+        "tokens": "213",
+        "tokensPerSecond": "19.794959641967814",
+        "ttftMS": "22613.500416668103"
+      }
+    },
+    {
+      "case": "three",
+      "thinking": true,
+      "sample": 5,
+      "warmup": false,
+      "wallMS": 30658.23341700161,
+      "reply": {
+        "firstToolCallMS": "30576.57625000138",
+        "mlxActiveBytes": "2367680232",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "30656.910541667457",
+        "rssBytes": "90685440",
+        "tokens": "213",
+        "tokensPerSecond": "20.28981461638691",
+        "ttftMS": "20128.81341666798"
+      }
+    },
+    {
+      "case": "five",
+      "thinking": true,
+      "sample": 0,
+      "warmup": true,
+      "wallMS": 29287.30920900125,
+      "reply": {
+        "firstToolCallMS": "29201.419000000897",
+        "mlxActiveBytes": "2367680232",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "29283.176583332533",
+        "rssBytes": "91471872",
+        "tokens": "181",
+        "tokensPerSecond": "1.3950239221221037",
+        "ttftMS": "20147.074374999647"
+      }
+    },
+    {
+      "case": "five",
+      "thinking": true,
+      "sample": 1,
+      "warmup": false,
+      "wallMS": 28857.441374999325,
+      "reply": {
+        "firstToolCallMS": "28773.727750001854",
+        "mlxActiveBytes": "2367680232",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "28854.227916664968",
+        "rssBytes": "91340800",
+        "tokens": "181",
+        "tokensPerSecond": "20.360612204652135",
+        "ttftMS": "19933.986916665162"
+      }
+    },
+    {
+      "case": "five",
+      "thinking": true,
+      "sample": 2,
+      "warmup": false,
+      "wallMS": 29357.140041000093,
+      "reply": {
+        "firstToolCallMS": "29278.121208331868",
+        "mlxActiveBytes": "2367680232",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "29353.25287500018",
+        "rssBytes": "89817088",
+        "tokens": "181",
+        "tokensPerSecond": "20.565349239586045",
+        "ttftMS": "20521.439708332764"
+      }
+    },
+    {
+      "case": "five",
+      "thinking": true,
+      "sample": 3,
+      "warmup": false,
+      "wallMS": 28733.839958000317,
+      "reply": {
+        "firstToolCallMS": "28634.998166668083",
+        "mlxActiveBytes": "2367680232",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "28730.732416668616",
+        "rssBytes": "89161728",
+        "tokens": "181",
+        "tokensPerSecond": "19.314683260298402",
+        "ttftMS": "19324.460291667492"
+      }
+    },
+    {
+      "case": "five",
+      "thinking": true,
+      "sample": 4,
+      "warmup": false,
+      "wallMS": 31111.49366599784,
+      "reply": {
+        "firstToolCallMS": "31008.19495833275",
+        "mlxActiveBytes": "2367680232",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "31100.837999998475",
+        "rssBytes": "52215808",
+        "tokens": "181",
+        "tokensPerSecond": "20.39140919358087",
+        "ttftMS": "22190.114666667796"
+      }
+    },
+    {
+      "case": "five",
+      "thinking": true,
+      "sample": 5,
+      "warmup": false,
+      "wallMS": 28280.41470899916,
+      "reply": {
+        "firstToolCallMS": "28192.287708334334",
+        "mlxActiveBytes": "2367680398",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "28275.224833334505",
+        "rssBytes": "92798976",
+        "tokens": "181",
+        "tokensPerSecond": "20.792827189834302",
+        "ttftMS": "19538.61545833206"
+      }
+    },
+    {
+      "case": "replan",
+      "thinking": true,
+      "sample": 0,
+      "warmup": true,
+      "wallMS": 33082.38420900307,
+      "reply": {
+        "firstToolCallMS": "32997.18658333586",
+        "mlxActiveBytes": "2367680452",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "33077.443791666155",
+        "rssBytes": "95404032",
+        "tokens": "270",
+        "tokensPerSecond": "20.097727028021286",
+        "ttftMS": "19620.462166665675"
+      }
+    },
+    {
+      "case": "replan",
+      "thinking": true,
+      "sample": 1,
+      "warmup": false,
+      "wallMS": 32755.718584001443,
+      "reply": {
+        "firstToolCallMS": "32666.271250000136",
+        "mlxActiveBytes": "2367680452",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "32752.602333333925",
+        "rssBytes": "95928320",
+        "tokens": "270",
+        "tokensPerSecond": "1.5738364494974209",
+        "ttftMS": "19053.645666666853"
+      }
+    },
+    {
+      "case": "replan",
+      "thinking": true,
+      "sample": 2,
+      "warmup": false,
+      "wallMS": 32533.99391700077,
+      "reply": {
+        "firstToolCallMS": "32449.50975000029",
+        "mlxActiveBytes": "2367680618",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "32532.34545833402",
+        "rssBytes": "97370112",
+        "tokens": "270",
+        "tokensPerSecond": "20.596180170905097",
+        "ttftMS": "19392.241749999812"
+      }
+    },
+    {
+      "case": "replan",
+      "thinking": true,
+      "sample": 3,
+      "warmup": false,
+      "wallMS": 37923.920541998086,
+      "reply": {
+        "firstToolCallMS": "37836.801916666445",
+        "mlxActiveBytes": "2367680618",
+        "mlxPeakBytes": "3388873444",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "37922.1294166673",
+        "rssBytes": "55640064",
+        "tokens": "270",
+        "tokensPerSecond": "17.955324704975812",
+        "ttftMS": "22852.854833334277"
+      }
+    },
+    {
+      "case": "replan",
+      "thinking": true,
+      "sample": 4,
+      "warmup": false,
+      "wallMS": 34498.7360419982,
+      "reply": {
+        "firstToolCallMS": "34409.406750000926",
+        "mlxActiveBytes": "2367680488",
+        "mlxPeakBytes": "3389380100",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "34497.08545833346",
+        "rssBytes": "96157696",
+        "tokens": "270",
+        "tokensPerSecond": "19.87049007348932",
+        "ttftMS": "20876.085666666768"
+      }
+    },
+    {
+      "case": "replan",
+      "thinking": true,
+      "sample": 5,
+      "warmup": false,
+      "wallMS": 34995.21162500241,
+      "reply": {
+        "firstToolCallMS": "34920.13125000085",
+        "mlxActiveBytes": "2367680488",
+        "mlxPeakBytes": "3389380100",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "34992.150916667015",
+        "rssBytes": "92520448",
+        "tokens": "270",
+        "tokensPerSecond": "4.270459258115125",
+        "ttftMS": "19790.942125000583"
+      }
+    }
+  ]
+}

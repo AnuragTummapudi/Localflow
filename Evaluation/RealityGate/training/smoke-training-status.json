@@ -1,0 +1,11 @@
+{
+  "updatesCompleted": 3,
+  "microSteps": 6,
+  "elapsedSeconds": 16.49660733298515,
+  "status": "smoke-trained; not production qualified",
+  "checkpointSHA256": "a83826815dcb67186985026d7e28e79ab55945cc9cb224f74e104e966d06621e",
+  "calibration": "Not embedded. Evaluate fits per-decision calibration on separate calibration split.",
+  "testUsedInTraining": false,
+  "peakRSSBytes": 2728771584,
+  "artifactRetention": "Superseded smoke weight binary removed when disk filled; hash/config/metrics retained. Full two-epoch trained checkpoint retained locally."
+}

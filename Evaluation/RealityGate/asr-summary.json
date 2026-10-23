@@ -1,0 +1,41 @@
+{
+  "before": {
+    "scenarios": 10,
+    "invocations": 12,
+    "incorrectInvocations": 5,
+    "duplicates": 0,
+    "mode": "real-streaming-ASR-batch-refinement-synthetic-audio-mock-native",
+    "timingMediansMilliseconds": {
+      "partialSTTMilliseconds": 665.5309999914607,
+      "decisionMilliseconds": 0.27770407431296806,
+      "firstActionMilliseconds": 1797.6451875001658,
+      "completionMilliseconds": 2353.2370000175433
+    }
+  },
+  "after": {
+    "scenarios": 10,
+    "invocations": 12,
+    "incorrectInvocations": 5,
+    "duplicates": 0,
+    "mode": "real-streaming-ASR-batch-refinement-synthetic-audio-mock-native",
+    "timingMediansMilliseconds": {
+      "partialSTTMilliseconds": 675.7425833347952,
+      "decisionMilliseconds": 0.2040959828134094,
+      "firstActionMilliseconds": 1936.662645835895,
+      "completionMilliseconds": 2517.7990833326476
+    }
+  },
+  "earlyAfter": {
+    "scenarios": 10,
+    "invocations": 12,
+    "incorrectInvocations": 5,
+    "duplicates": 0,
+    "mode": "real-streaming-ASR-batch-refinement-synthetic-audio-mock-native",
+    "timingMediansMilliseconds": {
+      "partialSTTMilliseconds": 667.1566666627768,
+      "decisionMilliseconds": 0.22032738083258405,
+      "firstActionMilliseconds": 1815.8926041651284,
+      "completionMilliseconds": 2370.3478958341293
+    }
+  }
+}

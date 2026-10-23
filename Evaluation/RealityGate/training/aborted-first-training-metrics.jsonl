@@ -1,0 +1,11 @@
+{"update": 1, "microSteps": 32, "epoch": 0, "meanLoss": 0.8094474792014807, "elapsedSeconds": 11.411102042009588}
+{"update": 2, "microSteps": 64, "epoch": 0, "meanLoss": 0.7576319286017679, "elapsedSeconds": 23.90044412499992}
+{"update": 3, "microSteps": 96, "epoch": 0, "meanLoss": 0.7086855432426091, "elapsedSeconds": 35.32585691701388}
+{"update": 4, "microSteps": 128, "epoch": 0, "meanLoss": 0.9321074488689192, "elapsedSeconds": 45.29234112499398}
+{"update": 5, "microSteps": 160, "epoch": 0, "meanLoss": 1.08020012113775, "elapsedSeconds": 56.10640620801132}
+{"update": 6, "microSteps": 192, "epoch": 0, "meanLoss": 0.8458406699137413, "elapsedSeconds": 66.025722958002}
+{"update": 7, "microSteps": 224, "epoch": 0, "meanLoss": 3.5590675136481877, "elapsedSeconds": 77.69990820801468}
+{"update": 8, "microSteps": 256, "epoch": 0, "meanLoss": 0.7841936109180097, "elapsedSeconds": 92.00449154200032}
+{"update": 9, "microSteps": 288, "epoch": 0, "meanLoss": 1.8855992849057657, "elapsedSeconds": 104.86028383299708}
+{"update": 10, "microSteps": 320, "epoch": 0, "meanLoss": 2.3991568475030363, "elapsedSeconds": 114.87580433301628}
+{"update": 11, "microSteps": 352, "epoch": 0, "meanLoss": 0.8230280816933371, "elapsedSeconds": 124.51545370800886}

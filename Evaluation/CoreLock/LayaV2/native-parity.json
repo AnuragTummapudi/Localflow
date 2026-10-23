@@ -1,0 +1,2134 @@
+{
+  "summary": {
+    "passed": true,
+    "decisions": 128,
+    "maxAbsoluteLogitDifference": 3.403425216674805e-05,
+    "argmaxAgreements": 128,
+    "reference": "official laya 0.3.26 token construction and full-precision PyTorch CPU",
+    "firstIPCInferenceMilliseconds": 410.62487500039424,
+    "warmIPC_p50Milliseconds": 466.59729200018774,
+    "warmIPC_p95Milliseconds": 676.0361454998929,
+    "nativeReady": {
+      "coldLoadMilliseconds": 6746.357209,
+      "protocolVersion": 2,
+      "ready": true,
+      "residentBytes": 689553408,
+      "wallColdLoadMilliseconds": 7185.908499999641
+    },
+    "referenceColdLoadMilliseconds": 4449.6503329992265
+  },
+  "decisions": [
+    {
+      "id": "test/productivity/2/13/payload_prefix/4",
+      "question": "actionable_command",
+      "native": [
+        -6.950529098510742,
+        3.7522268295288086
+      ],
+      "reference": [
+        -6.950531959533691,
+        3.752229928970337
+      ],
+      "maxDifference": 3.0994415283203125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/productivity/2/13/payload_prefix/4",
+      "question": "needs_more_speech",
+      "native": [
+        -5.482297420501709,
+        2.0533344745635986
+      ],
+      "reference": [
+        -5.482298851013184,
+        2.053335666656494
+      ],
+      "maxDifference": 1.430511474609375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/productivity/2/13/payload_prefix/4",
+      "question": "correction_or_replacement",
+      "native": [
+        7.459910869598389,
+        -1.8803399801254272
+      ],
+      "reference": [
+        7.459909915924072,
+        -1.8803387880325317
+      ],
+      "maxDifference": 1.1920928955078125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/productivity/2/13/payload_prefix/4",
+      "question": "coarse_family",
+      "native": [
+        -4.977574825286865,
+        -6.642950057983398,
+        7.179577350616455,
+        -5.1779866218566895,
+        -4.162554740905762,
+        -6.011171817779541,
+        -4.529277324676514
+      ],
+      "reference": [
+        -4.97756290435791,
+        -6.642955780029297,
+        7.179576873779297,
+        -5.177988052368164,
+        -4.1625494956970215,
+        -6.011170387268066,
+        -4.529266357421875
+      ],
+      "maxDifference": 1.1920928955078125e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/media/1/0/trailing_conjunction/1",
+      "question": "actionable_command",
+      "native": [
+        -7.75816011428833,
+        5.779447078704834
+      ],
+      "reference": [
+        -7.758155345916748,
+        5.77944278717041
+      ],
+      "maxDifference": 4.76837158203125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/media/1/0/trailing_conjunction/1",
+      "question": "needs_more_speech",
+      "native": [
+        -7.025200366973877,
+        4.4225664138793945
+      ],
+      "reference": [
+        -7.025200843811035,
+        4.422571182250977
+      ],
+      "maxDifference": 4.76837158203125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/media/1/0/trailing_conjunction/1",
+      "question": "correction_or_replacement",
+      "native": [
+        8.383014678955078,
+        -2.105947732925415
+      ],
+      "reference": [
+        8.383020401000977,
+        -2.105945587158203
+      ],
+      "maxDifference": 5.7220458984375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/media/1/0/trailing_conjunction/1",
+      "question": "coarse_family",
+      "native": [
+        -4.874521732330322,
+        7.014195919036865,
+        -5.642886161804199,
+        -5.019613742828369,
+        -5.219719886779785,
+        0.19299905002117157,
+        -2.37009334564209
+      ],
+      "reference": [
+        -4.874510765075684,
+        7.014196872711182,
+        -5.642885684967041,
+        -5.019613265991211,
+        -5.219721794128418,
+        0.19298312067985535,
+        -2.370077133178711
+      ],
+      "maxDifference": 1.621246337890625e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/web/0/10/incomplete_web_query/1",
+      "question": "actionable_command",
+      "native": [
+        -8.14418888092041,
+        6.936154365539551
+      ],
+      "reference": [
+        -8.144186973571777,
+        6.9361491203308105
+      ],
+      "maxDifference": 5.245208740234375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/web/0/10/incomplete_web_query/1",
+      "question": "needs_more_speech",
+      "native": [
+        -7.283858776092529,
+        4.259593963623047
+      ],
+      "reference": [
+        -7.283850193023682,
+        4.2595906257629395
+      ],
+      "maxDifference": 8.58306884765625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/web/0/10/incomplete_web_query/1",
+      "question": "correction_or_replacement",
+      "native": [
+        8.181722640991211,
+        -1.646124005317688
+      ],
+      "reference": [
+        8.181722640991211,
+        -1.6461238861083984
+      ],
+      "maxDifference": 1.1920928955078125e-07,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/web/0/10/incomplete_web_query/1",
+      "question": "coarse_family",
+      "native": [
+        -4.987841606140137,
+        9.197982788085938,
+        -6.092019081115723,
+        -6.166875839233398,
+        -5.706573009490967,
+        -6.367183208465576,
+        -4.919356346130371
+      ],
+      "reference": [
+        -4.987839221954346,
+        9.19798469543457,
+        -6.0920257568359375,
+        -6.166881561279297,
+        -5.706578731536865,
+        -6.3671793937683105,
+        -4.919342517852783
+      ],
+      "maxDifference": 1.3828277587890625e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/corrupt/0/2/complete/0",
+      "question": "actionable_command",
+      "native": [
+        -6.7555036544799805,
+        5.0850419998168945
+      ],
+      "reference": [
+        -6.7555036544799805,
+        5.085049152374268
+      ],
+      "maxDifference": 7.152557373046875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/corrupt/0/2/complete/0",
+      "question": "needs_more_speech",
+      "native": [
+        3.977226734161377,
+        -0.4429139196872711
+      ],
+      "reference": [
+        3.9772324562072754,
+        -0.44291555881500244
+      ],
+      "maxDifference": 5.7220458984375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/corrupt/0/2/complete/0",
+      "question": "correction_or_replacement",
+      "native": [
+        8.381109237670898,
+        -2.7125163078308105
+      ],
+      "reference": [
+        8.381110191345215,
+        -2.7125155925750732
+      ],
+      "maxDifference": 9.5367431640625e-07,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/corrupt/0/2/complete/0",
+      "question": "coarse_family",
+      "native": [
+        -0.018663760274648666,
+        -6.047877311706543,
+        -5.035530090332031,
+        -5.378788471221924,
+        -4.945137977600098,
+        -5.681856155395508,
+        -4.943454742431641
+      ],
+      "reference": [
+        -0.018647193908691406,
+        -6.047876358032227,
+        -5.035527229309082,
+        -5.378781318664551,
+        -4.945132732391357,
+        -5.68185567855835,
+        -4.943448066711426
+      ],
+      "maxDifference": 1.6566365957260132e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/ambiguous/1/19/trailing_conjunction/1",
+      "question": "actionable_command",
+      "native": [
+        -7.569809436798096,
+        5.708917140960693
+      ],
+      "reference": [
+        -7.569802284240723,
+        5.708920478820801
+      ],
+      "maxDifference": 7.152557373046875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/ambiguous/1/19/trailing_conjunction/1",
+      "question": "needs_more_speech",
+      "native": [
+        -6.6195807456970215,
+        4.309244155883789
+      ],
+      "reference": [
+        -6.619577407836914,
+        4.30925178527832
+      ],
+      "maxDifference": 7.62939453125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/ambiguous/1/19/trailing_conjunction/1",
+      "question": "correction_or_replacement",
+      "native": [
+        7.5125532150268555,
+        -2.525207996368408
+      ],
+      "reference": [
+        7.512557506561279,
+        -2.5252034664154053
+      ],
+      "maxDifference": 4.5299530029296875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/ambiguous/1/19/trailing_conjunction/1",
+      "question": "coarse_family",
+      "native": [
+        -4.9333577156066895,
+        -6.009527683258057,
+        -4.7952561378479,
+        -5.593125343322754,
+        1.6839834451675415,
+        -5.318553447723389,
+        1.3388680219650269
+      ],
+      "reference": [
+        -4.933350563049316,
+        -6.009529113769531,
+        -4.795248508453369,
+        -5.593123912811279,
+        1.683969259262085,
+        -5.318558692932129,
+        1.3388729095458984
+      ],
+      "maxDifference": 1.4185905456542969e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/1/3/new_command_after_pause/6",
+      "question": "actionable_command",
+      "native": [
+        -5.517642974853516,
+        3.1809585094451904
+      ],
+      "reference": [
+        -5.517643928527832,
+        3.180967330932617
+      ],
+      "maxDifference": 8.821487426757812e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/1/3/new_command_after_pause/6",
+      "question": "needs_more_speech",
+      "native": [
+        -3.075361967086792,
+        0.6528341770172119
+      ],
+      "reference": [
+        -3.0753540992736816,
+        0.6528321504592896
+      ],
+      "maxDifference": 7.867813110351562e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/1/3/new_command_after_pause/6",
+      "question": "correction_or_replacement",
+      "native": [
+        8.126063346862793,
+        -1.7219021320343018
+      ],
+      "reference": [
+        8.126068115234375,
+        -1.7218992710113525
+      ],
+      "maxDifference": 4.76837158203125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/1/3/new_command_after_pause/6",
+      "question": "coarse_family",
+      "native": [
+        -3.714068651199341,
+        -5.940785884857178,
+        6.10260009765625,
+        -5.082248210906982,
+        -4.967766284942627,
+        -5.281766414642334,
+        -4.951244354248047
+      ],
+      "reference": [
+        -3.7140579223632812,
+        -5.940784454345703,
+        6.102597236633301,
+        -5.082244396209717,
+        -4.967756748199463,
+        -5.281768798828125,
+        -4.951237201690674
+      ],
+      "maxDifference": 1.0728836059570312e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/application/1/4/partial_application/1",
+      "question": "actionable_command",
+      "native": [
+        -6.243314266204834,
+        5.280707836151123
+      ],
+      "reference": [
+        -6.243318557739258,
+        5.280711650848389
+      ],
+      "maxDifference": 4.291534423828125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/application/1/4/partial_application/1",
+      "question": "needs_more_speech",
+      "native": [
+        3.8874642848968506,
+        -0.3514375388622284
+      ],
+      "reference": [
+        3.887465476989746,
+        -0.35143613815307617
+      ],
+      "maxDifference": 1.4007091522216797e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/application/1/4/partial_application/1",
+      "question": "correction_or_replacement",
+      "native": [
+        8.3392915725708,
+        -2.378427267074585
+      ],
+      "reference": [
+        8.339289665222168,
+        -2.3784234523773193
+      ],
+      "maxDifference": 3.814697265625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/application/1/4/partial_application/1",
+      "question": "coarse_family",
+      "native": [
+        6.991033554077148,
+        -6.250943660736084,
+        -5.615466594696045,
+        -5.527063846588135,
+        -5.229310035705566,
+        -5.816694736480713,
+        -4.963550567626953
+      ],
+      "reference": [
+        6.991028785705566,
+        -6.250943183898926,
+        -5.615457057952881,
+        -5.5270609855651855,
+        -5.229310512542725,
+        -5.8166937828063965,
+        -4.963543891906738
+      ],
+      "maxDifference": 9.5367431640625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/0/5/trailing_conjunction/1",
+      "question": "actionable_command",
+      "native": [
+        -8.463425636291504,
+        7.238095760345459
+      ],
+      "reference": [
+        -8.463424682617188,
+        7.238100051879883
+      ],
+      "maxDifference": 4.291534423828125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/0/5/trailing_conjunction/1",
+      "question": "needs_more_speech",
+      "native": [
+        -8.33227825164795,
+        5.7039313316345215
+      ],
+      "reference": [
+        -8.332282066345215,
+        5.7039337158203125
+      ],
+      "maxDifference": 3.814697265625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/0/5/trailing_conjunction/1",
+      "question": "correction_or_replacement",
+      "native": [
+        8.19723129272461,
+        -1.7378848791122437
+      ],
+      "reference": [
+        8.197230339050293,
+        -1.737884283065796
+      ],
+      "maxDifference": 9.5367431640625e-07,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/0/5/trailing_conjunction/1",
+      "question": "coarse_family",
+      "native": [
+        3.0813074111938477,
+        5.585501670837402,
+        -5.5688323974609375,
+        -5.337493419647217,
+        -4.991105079650879,
+        -5.601520538330078,
+        4.888834476470947
+      ],
+      "reference": [
+        3.081305742263794,
+        5.585501670837402,
+        -5.568831443786621,
+        -5.337493419647217,
+        -4.991105079650879,
+        -5.601521015167236,
+        4.888838768005371
+      ],
+      "maxDifference": 4.291534423828125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/dictation/0/9/hesitation/2",
+      "question": "actionable_command",
+      "native": [
+        5.989498615264893,
+        -1.5013396739959717
+      ],
+      "reference": [
+        5.989508628845215,
+        -1.5013402700424194
+      ],
+      "maxDifference": 1.0013580322265625e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/dictation/0/9/hesitation/2",
+      "question": "needs_more_speech",
+      "native": [
+        6.754696846008301,
+        -1.4929009675979614
+      ],
+      "reference": [
+        6.754700660705566,
+        -1.4928985834121704
+      ],
+      "maxDifference": 3.814697265625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/dictation/0/9/hesitation/2",
+      "question": "correction_or_replacement",
+      "native": [
+        7.608835220336914,
+        -2.056008815765381
+      ],
+      "reference": [
+        7.608836650848389,
+        -2.0560057163238525
+      ],
+      "maxDifference": 3.0994415283203125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/dictation/0/9/hesitation/2",
+      "question": "coarse_family",
+      "native": [
+        -5.861861705780029,
+        -7.237323760986328,
+        8.355586051940918,
+        -6.708340167999268,
+        -5.0750837326049805,
+        -6.835555553436279,
+        -6.095896244049072
+      ],
+      "reference": [
+        -5.861867427825928,
+        -7.23732328414917,
+        8.35558795928955,
+        -6.7083353996276855,
+        -5.075082778930664,
+        -6.8355560302734375,
+        -6.095895767211914
+      ],
+      "maxDifference": 5.7220458984375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/system/0/13/complete/0",
+      "question": "actionable_command",
+      "native": [
+        -5.0498576164245605,
+        3.8745310306549072
+      ],
+      "reference": [
+        -5.049857139587402,
+        3.87453556060791
+      ],
+      "maxDifference": 4.5299530029296875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/system/0/13/complete/0",
+      "question": "needs_more_speech",
+      "native": [
+        4.875340938568115,
+        -0.7440858483314514
+      ],
+      "reference": [
+        4.875344276428223,
+        -0.7440844178199768
+      ],
+      "maxDifference": 3.337860107421875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/system/0/13/complete/0",
+      "question": "correction_or_replacement",
+      "native": [
+        8.057230949401855,
+        -2.423875570297241
+      ],
+      "reference": [
+        8.057233810424805,
+        -2.423872470855713
+      ],
+      "maxDifference": 3.0994415283203125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/system/0/13/complete/0",
+      "question": "coarse_family",
+      "native": [
+        -5.3416643142700195,
+        -6.894765853881836,
+        -4.961956024169922,
+        6.685191631317139,
+        -5.473947048187256,
+        -5.584364891052246,
+        -4.905128002166748
+      ],
+      "reference": [
+        -5.341662406921387,
+        -6.8947672843933105,
+        -4.961948871612549,
+        6.6851911544799805,
+        -5.473946571350098,
+        -5.584367275238037,
+        -4.905116558074951
+      ],
+      "maxDifference": 1.1444091796875e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/application/1/9/streaming_prefix/4",
+      "question": "actionable_command",
+      "native": [
+        -6.604141712188721,
+        5.27957010269165
+      ],
+      "reference": [
+        -6.6041412353515625,
+        5.279574394226074
+      ],
+      "maxDifference": 4.291534423828125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/application/1/9/streaming_prefix/4",
+      "question": "needs_more_speech",
+      "native": [
+        3.2493631839752197,
+        -0.03051675483584404
+      ],
+      "reference": [
+        3.2493667602539062,
+        -0.030518293380737305
+      ],
+      "maxDifference": 3.5762786865234375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/application/1/9/streaming_prefix/4",
+      "question": "correction_or_replacement",
+      "native": [
+        8.504606246948242,
+        -2.4190986156463623
+      ],
+      "reference": [
+        8.50460433959961,
+        -2.4190902709960938
+      ],
+      "maxDifference": 8.344650268554688e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/application/1/9/streaming_prefix/4",
+      "question": "coarse_family",
+      "native": [
+        7.558898448944092,
+        -6.648146629333496,
+        -5.9712114334106445,
+        -6.064146041870117,
+        -5.547888278961182,
+        -6.035337448120117,
+        -4.97338342666626
+      ],
+      "reference": [
+        7.558893203735352,
+        -6.648143768310547,
+        -5.971209526062012,
+        -6.064144134521484,
+        -5.547888278961182,
+        -6.035338878631592,
+        -4.973378658294678
+      ],
+      "maxDifference": 5.245208740234375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/hypothetical/0/16/hesitation/2",
+      "question": "actionable_command",
+      "native": [
+        2.2217440605163574,
+        2.084644317626953
+      ],
+      "reference": [
+        2.2217400074005127,
+        2.0846469402313232
+      ],
+      "maxDifference": 4.0531158447265625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/hypothetical/0/16/hesitation/2",
+      "question": "needs_more_speech",
+      "native": [
+        6.833723068237305,
+        -1.429961919784546
+      ],
+      "reference": [
+        6.833721160888672,
+        -1.4299583435058594
+      ],
+      "maxDifference": 3.5762786865234375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/hypothetical/0/16/hesitation/2",
+      "question": "correction_or_replacement",
+      "native": [
+        7.145188331604004,
+        -2.0785324573516846
+      ],
+      "reference": [
+        7.145187854766846,
+        -2.078529119491577
+      ],
+      "maxDifference": 3.337860107421875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/hypothetical/0/16/hesitation/2",
+      "question": "coarse_family",
+      "native": [
+        5.831282138824463,
+        -6.403912544250488,
+        -5.063347816467285,
+        -4.9811015129089355,
+        -5.329962253570557,
+        -6.0784196853637695,
+        5.561627388000488
+      ],
+      "reference": [
+        5.831287860870361,
+        -6.403909206390381,
+        -5.063344478607178,
+        -4.9810991287231445,
+        -5.329964637756348,
+        -6.07841682434082,
+        5.5616254806518555
+      ],
+      "maxDifference": 5.7220458984375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/productivity/2/4/complete/0",
+      "question": "actionable_command",
+      "native": [
+        -4.980343341827393,
+        2.131385087966919
+      ],
+      "reference": [
+        -4.980336666107178,
+        2.1313884258270264
+      ],
+      "maxDifference": 6.67572021484375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/productivity/2/4/complete/0",
+      "question": "needs_more_speech",
+      "native": [
+        5.566671848297119,
+        -1.151079773902893
+      ],
+      "reference": [
+        5.566675186157227,
+        -1.1510766744613647
+      ],
+      "maxDifference": 3.337860107421875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/productivity/2/4/complete/0",
+      "question": "correction_or_replacement",
+      "native": [
+        7.439114570617676,
+        -2.5599491596221924
+      ],
+      "reference": [
+        7.439111709594727,
+        -2.5599441528320312
+      ],
+      "maxDifference": 5.0067901611328125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/productivity/2/4/complete/0",
+      "question": "coarse_family",
+      "native": [
+        -5.611062526702881,
+        -6.6648359298706055,
+        6.809914588928223,
+        -5.56535530090332,
+        -4.784512042999268,
+        -6.063967227935791,
+        -4.6167216300964355
+      ],
+      "reference": [
+        -5.6110687255859375,
+        -6.664841175079346,
+        6.80992317199707,
+        -5.56535530090332,
+        -4.78450345993042,
+        -6.063969612121582,
+        -4.616716384887695
+      ],
+      "maxDifference": 8.58306884765625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/web/1/10/incomplete_web_query/1",
+      "question": "actionable_command",
+      "native": [
+        -6.631323337554932,
+        4.913815975189209
+      ],
+      "reference": [
+        -6.6313276290893555,
+        4.913819789886475
+      ],
+      "maxDifference": 4.291534423828125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/web/1/10/incomplete_web_query/1",
+      "question": "needs_more_speech",
+      "native": [
+        -1.5142920017242432,
+        0.2754631042480469
+      ],
+      "reference": [
+        -1.514262318611145,
+        0.27545973658561707
+      ],
+      "maxDifference": 2.968311309814453e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/web/1/10/incomplete_web_query/1",
+      "question": "correction_or_replacement",
+      "native": [
+        7.021332740783691,
+        -2.0729103088378906
+      ],
+      "reference": [
+        7.021329402923584,
+        -2.072906017303467
+      ],
+      "maxDifference": 4.291534423828125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/web/1/10/incomplete_web_query/1",
+      "question": "coarse_family",
+      "native": [
+        -3.786533832550049,
+        -3.4250004291534424,
+        -4.95512580871582,
+        -5.43808650970459,
+        -4.962573051452637,
+        -5.126805305480957,
+        3.997978687286377
+      ],
+      "reference": [
+        -3.7865264415740967,
+        -3.425013542175293,
+        -4.9551167488098145,
+        -5.438081741333008,
+        -4.962567329406738,
+        -5.126809120178223,
+        3.9979918003082275
+      ],
+      "maxDifference": 1.3113021850585938e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/productivity/2/6/incomplete_note/2",
+      "question": "actionable_command",
+      "native": [
+        -8.071732521057129,
+        4.0178632736206055
+      ],
+      "reference": [
+        -8.071725845336914,
+        4.017862319946289
+      ],
+      "maxDifference": 6.67572021484375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/productivity/2/6/incomplete_note/2",
+      "question": "needs_more_speech",
+      "native": [
+        -7.137880802154541,
+        2.8395845890045166
+      ],
+      "reference": [
+        -7.137884616851807,
+        2.8395917415618896
+      ],
+      "maxDifference": 7.152557373046875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/productivity/2/6/incomplete_note/2",
+      "question": "correction_or_replacement",
+      "native": [
+        8.051983833312988,
+        -1.6988404989242554
+      ],
+      "reference": [
+        8.051987648010254,
+        -1.6988375186920166
+      ],
+      "maxDifference": 3.814697265625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/productivity/2/6/incomplete_note/2",
+      "question": "coarse_family",
+      "native": [
+        -5.1060791015625,
+        -6.545287609100342,
+        7.269631385803223,
+        -5.5794243812561035,
+        -4.969864845275879,
+        -6.591203689575195,
+        -3.9504683017730713
+      ],
+      "reference": [
+        -5.106080055236816,
+        -6.545294284820557,
+        7.26963996887207,
+        -5.579425811767578,
+        -4.969859600067139,
+        -6.591202735900879,
+        -3.950468063354492
+      ],
+      "maxDifference": 8.58306884765625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/1/2/complete/0",
+      "question": "actionable_command",
+      "native": [
+        -7.040393352508545,
+        4.41261625289917
+      ],
+      "reference": [
+        -7.040398597717285,
+        4.412621021270752
+      ],
+      "maxDifference": 5.245208740234375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/1/2/complete/0",
+      "question": "needs_more_speech",
+      "native": [
+        -5.04388952255249,
+        2.607282876968384
+      ],
+      "reference": [
+        -5.043881416320801,
+        2.6072850227355957
+      ],
+      "maxDifference": 8.106231689453125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/1/2/complete/0",
+      "question": "correction_or_replacement",
+      "native": [
+        7.620356559753418,
+        -1.7982877492904663
+      ],
+      "reference": [
+        7.620352745056152,
+        -1.7982869148254395
+      ],
+      "maxDifference": 3.814697265625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/1/2/complete/0",
+      "question": "coarse_family",
+      "native": [
+        -5.255008220672607,
+        -6.621293067932129,
+        7.343356132507324,
+        -5.013948440551758,
+        -5.207818508148193,
+        -5.783033847808838,
+        -4.968562602996826
+      ],
+      "reference": [
+        -5.255009651184082,
+        -6.621292591094971,
+        7.3433637619018555,
+        -5.013946533203125,
+        -5.2078166007995605,
+        -5.783029556274414,
+        -4.96855354309082
+      ],
+      "maxDifference": 9.059906005859375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/quoted/0/1/dictation_prefix/1",
+      "question": "actionable_command",
+      "native": [
+        0.5060180425643921,
+        2.776972532272339
+      ],
+      "reference": [
+        0.5060093402862549,
+        2.7769775390625
+      ],
+      "maxDifference": 8.702278137207031e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/quoted/0/1/dictation_prefix/1",
+      "question": "needs_more_speech",
+      "native": [
+        -7.472129821777344,
+        1.7754383087158203
+      ],
+      "reference": [
+        -7.472116470336914,
+        1.775435209274292
+      ],
+      "maxDifference": 1.33514404296875e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/quoted/0/1/dictation_prefix/1",
+      "question": "correction_or_replacement",
+      "native": [
+        7.153862476348877,
+        -1.5743687152862549
+      ],
+      "reference": [
+        7.153865814208984,
+        -1.5743684768676758
+      ],
+      "maxDifference": 3.337860107421875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/quoted/0/1/dictation_prefix/1",
+      "question": "coarse_family",
+      "native": [
+        6.123905658721924,
+        -6.221495628356934,
+        -4.980077266693115,
+        -4.9755353927612305,
+        -4.991876125335693,
+        -5.691893577575684,
+        -2.037245035171509
+      ],
+      "reference": [
+        6.123902320861816,
+        -6.221482276916504,
+        -4.980074405670166,
+        -4.975526809692383,
+        -4.991876125335693,
+        -5.691890716552734,
+        -2.0372376441955566
+      ],
+      "maxDifference": 1.33514404296875e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/correction/0/8/complete/0",
+      "question": "actionable_command",
+      "native": [
+        -4.826991081237793,
+        3.1546859741210938
+      ],
+      "reference": [
+        -4.8269782066345215,
+        3.154690742492676
+      ],
+      "maxDifference": 1.2874603271484375e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/correction/0/8/complete/0",
+      "question": "needs_more_speech",
+      "native": [
+        6.877857685089111,
+        -0.8282665610313416
+      ],
+      "reference": [
+        6.877849578857422,
+        -0.8282660245895386
+      ],
+      "maxDifference": 8.106231689453125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/correction/0/8/complete/0",
+      "question": "correction_or_replacement",
+      "native": [
+        8.169570922851562,
+        -1.7144194841384888
+      ],
+      "reference": [
+        8.169574737548828,
+        -1.7144149541854858
+      ],
+      "maxDifference": 4.5299530029296875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/correction/0/8/complete/0",
+      "question": "coarse_family",
+      "native": [
+        7.03661584854126,
+        -6.400493621826172,
+        -6.327078819274902,
+        -5.477128028869629,
+        -5.154982089996338,
+        -6.329237937927246,
+        -1.9331505298614502
+      ],
+      "reference": [
+        7.03661584854126,
+        -6.400491714477539,
+        -6.327084064483643,
+        -5.477130889892578,
+        -5.154979228973389,
+        -6.329242706298828,
+        -1.933141827583313
+      ],
+      "maxDifference": 8.702278137207031e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/application/2/15/complete/0",
+      "question": "actionable_command",
+      "native": [
+        -5.140951156616211,
+        3.3267874717712402
+      ],
+      "reference": [
+        -5.140953540802002,
+        3.3267922401428223
+      ],
+      "maxDifference": 4.76837158203125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/application/2/15/complete/0",
+      "question": "needs_more_speech",
+      "native": [
+        1.85774827003479,
+        -0.5002232193946838
+      ],
+      "reference": [
+        1.8577516078948975,
+        -0.5002205967903137
+      ],
+      "maxDifference": 3.337860107421875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/application/2/15/complete/0",
+      "question": "correction_or_replacement",
+      "native": [
+        8.200299263000488,
+        -2.618635416030884
+      ],
+      "reference": [
+        8.200298309326172,
+        -2.6186301708221436
+      ],
+      "maxDifference": 5.245208740234375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/application/2/15/complete/0",
+      "question": "coarse_family",
+      "native": [
+        6.1787028312683105,
+        -6.510756492614746,
+        -5.603426456451416,
+        -5.223994255065918,
+        -5.021084308624268,
+        -6.291515827178955,
+        1.5665061473846436
+      ],
+      "reference": [
+        6.178701877593994,
+        -6.5107526779174805,
+        -5.603419780731201,
+        -5.223996639251709,
+        -5.021084308624268,
+        -6.291510581970215,
+        1.5665161609649658
+      ],
+      "maxDifference": 1.0013580322265625e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/media/0/12/trailing_conjunction/1",
+      "question": "actionable_command",
+      "native": [
+        -7.58695125579834,
+        5.260809421539307
+      ],
+      "reference": [
+        -7.586947917938232,
+        5.260815143585205
+      ],
+      "maxDifference": 5.7220458984375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/media/0/12/trailing_conjunction/1",
+      "question": "needs_more_speech",
+      "native": [
+        -6.786529541015625,
+        4.833737373352051
+      ],
+      "reference": [
+        -6.786524295806885,
+        4.833743095397949
+      ],
+      "maxDifference": 5.7220458984375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/media/0/12/trailing_conjunction/1",
+      "question": "correction_or_replacement",
+      "native": [
+        8.264967918395996,
+        -1.642063856124878
+      ],
+      "reference": [
+        8.26496696472168,
+        -1.6420634984970093
+      ],
+      "maxDifference": 9.5367431640625e-07,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/media/0/12/trailing_conjunction/1",
+      "question": "coarse_family",
+      "native": [
+        -3.6773018836975098,
+        -6.60031795501709,
+        -5.4075703620910645,
+        -4.973649978637695,
+        -6.042507648468018,
+        5.911683082580566,
+        -3.4686222076416016
+      ],
+      "reference": [
+        -3.6772871017456055,
+        -6.600313186645508,
+        -5.407564163208008,
+        -4.973641395568848,
+        -6.042506217956543,
+        5.911683082580566,
+        -3.4686105251312256
+      ],
+      "maxDifference": 1.4781951904296875e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/correction/1/5/hesitation/2",
+      "question": "actionable_command",
+      "native": [
+        -4.987924575805664,
+        4.035844326019287
+      ],
+      "reference": [
+        -4.987915992736816,
+        4.0358452796936035
+      ],
+      "maxDifference": 8.58306884765625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/correction/1/5/hesitation/2",
+      "question": "needs_more_speech",
+      "native": [
+        6.399665355682373,
+        -1.3356012105941772
+      ],
+      "reference": [
+        6.399670600891113,
+        -1.3355973958969116
+      ],
+      "maxDifference": 5.245208740234375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/correction/1/5/hesitation/2",
+      "question": "correction_or_replacement",
+      "native": [
+        7.663570404052734,
+        -1.892944097518921
+      ],
+      "reference": [
+        7.663572311401367,
+        -1.8929412364959717
+      ],
+      "maxDifference": 2.86102294921875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/correction/1/5/hesitation/2",
+      "question": "coarse_family",
+      "native": [
+        -4.935334205627441,
+        5.499866485595703,
+        -4.967609405517578,
+        -5.452292442321777,
+        2.5148160457611084,
+        -5.177248954772949,
+        2.6271779537200928
+      ],
+      "reference": [
+        -4.935323238372803,
+        5.4998626708984375,
+        -4.9676032066345215,
+        -5.45229434967041,
+        2.514796257019043,
+        -5.177245140075684,
+        2.62719988822937
+      ],
+      "maxDifference": 2.193450927734375e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/application/2/4/partial_application/1",
+      "question": "actionable_command",
+      "native": [
+        -5.0454936027526855,
+        3.5539040565490723
+      ],
+      "reference": [
+        -5.045490741729736,
+        3.5539052486419678
+      ],
+      "maxDifference": 2.86102294921875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/application/2/4/partial_application/1",
+      "question": "needs_more_speech",
+      "native": [
+        1.323646903038025,
+        -0.5731381177902222
+      ],
+      "reference": [
+        1.3236501216888428,
+        -0.5731368064880371
+      ],
+      "maxDifference": 3.2186508178710938e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/application/2/4/partial_application/1",
+      "question": "correction_or_replacement",
+      "native": [
+        8.303269386291504,
+        -2.6530556678771973
+      ],
+      "reference": [
+        8.303271293640137,
+        -2.6530580520629883
+      ],
+      "maxDifference": 2.384185791015625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/application/2/4/partial_application/1",
+      "question": "coarse_family",
+      "native": [
+        5.262205123901367,
+        -6.819875717163086,
+        -5.8909173011779785,
+        -5.748270511627197,
+        -5.128862380981445,
+        -6.3224568367004395,
+        2.5760791301727295
+      ],
+      "reference": [
+        5.262212753295898,
+        -6.819878101348877,
+        -5.89091682434082,
+        -5.7482709884643555,
+        -5.128866195678711,
+        -6.322456359863281,
+        2.576071262359619
+      ],
+      "maxDifference": 7.867813110351562e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/hypothetical/1/4/hesitation/2",
+      "question": "actionable_command",
+      "native": [
+        -3.08560848236084,
+        3.3251171112060547
+      ],
+      "reference": [
+        -3.0855982303619385,
+        3.325120449066162
+      ],
+      "maxDifference": 1.0251998901367188e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/hypothetical/1/4/hesitation/2",
+      "question": "needs_more_speech",
+      "native": [
+        6.499503135681152,
+        -1.6240445375442505
+      ],
+      "reference": [
+        6.499503135681152,
+        -1.6240428686141968
+      ],
+      "maxDifference": 1.6689300537109375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/hypothetical/1/4/hesitation/2",
+      "question": "correction_or_replacement",
+      "native": [
+        7.114800453186035,
+        -1.539048433303833
+      ],
+      "reference": [
+        7.114801406860352,
+        -1.5390477180480957
+      ],
+      "maxDifference": 9.5367431640625e-07,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/hypothetical/1/4/hesitation/2",
+      "question": "coarse_family",
+      "native": [
+        -1.7610257863998413,
+        -5.181143760681152,
+        -4.9586029052734375,
+        -5.055110454559326,
+        -4.955382823944092,
+        -5.132601737976074,
+        4.178391933441162
+      ],
+      "reference": [
+        -1.761023759841919,
+        -5.1811442375183105,
+        -4.958595275878906,
+        -5.055110931396484,
+        -4.955373764038086,
+        -5.132606506347656,
+        4.178403854370117
+      ],
+      "maxDifference": 1.1920928955078125e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/productivity/1/5/incomplete_reminder/3",
+      "question": "actionable_command",
+      "native": [
+        -8.338104248046875,
+        5.864099979400635
+      ],
+      "reference": [
+        -8.33809757232666,
+        5.864099502563477
+      ],
+      "maxDifference": 6.67572021484375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/productivity/1/5/incomplete_reminder/3",
+      "question": "needs_more_speech",
+      "native": [
+        -7.427040100097656,
+        3.484834671020508
+      ],
+      "reference": [
+        -7.427037239074707,
+        3.484841823577881
+      ],
+      "maxDifference": 7.152557373046875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/productivity/1/5/incomplete_reminder/3",
+      "question": "correction_or_replacement",
+      "native": [
+        7.566434860229492,
+        -1.1689778566360474
+      ],
+      "reference": [
+        7.566442966461182,
+        -1.168974757194519
+      ],
+      "maxDifference": 8.106231689453125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/productivity/1/5/incomplete_reminder/3",
+      "question": "coarse_family",
+      "native": [
+        -5.026665687561035,
+        -6.288291931152344,
+        7.939593315124512,
+        -5.072768688201904,
+        -4.913852214813232,
+        -5.84533166885376,
+        -3.461803913116455
+      ],
+      "reference": [
+        -5.026665210723877,
+        -6.2882914543151855,
+        7.939593315124512,
+        -5.072765827178955,
+        -4.913842678070068,
+        -5.845331192016602,
+        -3.461798667907715
+      ],
+      "maxDifference": 9.5367431640625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/0/18/new_command_after_pause/6",
+      "question": "actionable_command",
+      "native": [
+        -5.8925676345825195,
+        5.474324703216553
+      ],
+      "reference": [
+        -5.892570495605469,
+        5.474331855773926
+      ],
+      "maxDifference": 7.152557373046875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/0/18/new_command_after_pause/6",
+      "question": "needs_more_speech",
+      "native": [
+        2.971497058868408,
+        0.16232426464557648
+      ],
+      "reference": [
+        2.9715001583099365,
+        0.16233256459236145
+      ],
+      "maxDifference": 8.299946784973145e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/0/18/new_command_after_pause/6",
+      "question": "correction_or_replacement",
+      "native": [
+        7.208432197570801,
+        -0.4818294644355774
+      ],
+      "reference": [
+        7.208428382873535,
+        -0.48182445764541626
+      ],
+      "maxDifference": 5.0067901611328125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/0/18/new_command_after_pause/6",
+      "question": "coarse_family",
+      "native": [
+        6.390227317810059,
+        2.4531750679016113,
+        -4.978357791900635,
+        -5.034181118011475,
+        -5.070221424102783,
+        -5.268762111663818,
+        -2.3383779525756836
+      ],
+      "reference": [
+        6.390223503112793,
+        2.4531545639038086,
+        -4.978356838226318,
+        -5.034176349639893,
+        -5.070218563079834,
+        -5.268764495849609,
+        -2.3383758068084717
+      ],
+      "maxDifference": 2.0503997802734375e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/dictation/0/10/hesitation/2",
+      "question": "actionable_command",
+      "native": [
+        6.090439319610596,
+        -1.8458436727523804
+      ],
+      "reference": [
+        6.090428352355957,
+        -1.845841407775879
+      ],
+      "maxDifference": 1.0967254638671875e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/dictation/0/10/hesitation/2",
+      "question": "needs_more_speech",
+      "native": [
+        6.611946105957031,
+        -1.8256356716156006
+      ],
+      "reference": [
+        6.611950874328613,
+        -1.825635552406311
+      ],
+      "maxDifference": 4.76837158203125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/dictation/0/10/hesitation/2",
+      "question": "correction_or_replacement",
+      "native": [
+        6.034775733947754,
+        -2.0256552696228027
+      ],
+      "reference": [
+        6.034780502319336,
+        -2.0256507396698
+      ],
+      "maxDifference": 4.76837158203125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/dictation/0/10/hesitation/2",
+      "question": "coarse_family",
+      "native": [
+        -5.009195804595947,
+        -6.370957851409912,
+        5.4671220779418945,
+        -5.438556671142578,
+        -4.420710563659668,
+        -5.924461364746094,
+        -4.986708164215088
+      ],
+      "reference": [
+        -5.00919771194458,
+        -6.370955944061279,
+        5.467127799987793,
+        -5.438558578491211,
+        -4.420694351196289,
+        -5.924457550048828,
+        -4.986705303192139
+      ],
+      "maxDifference": 1.621246337890625e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/web/0/13/incomplete_web_query/1",
+      "question": "actionable_command",
+      "native": [
+        -8.143671035766602,
+        7.1078386306762695
+      ],
+      "reference": [
+        -8.143667221069336,
+        7.107840538024902
+      ],
+      "maxDifference": 3.814697265625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/web/0/13/incomplete_web_query/1",
+      "question": "needs_more_speech",
+      "native": [
+        -7.099367141723633,
+        4.723739147186279
+      ],
+      "reference": [
+        -7.099360466003418,
+        4.723743438720703
+      ],
+      "maxDifference": 6.67572021484375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/web/0/13/incomplete_web_query/1",
+      "question": "correction_or_replacement",
+      "native": [
+        8.108235359191895,
+        -1.470052719116211
+      ],
+      "reference": [
+        8.108233451843262,
+        -1.470050573348999
+      ],
+      "maxDifference": 2.1457672119140625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/web/0/13/incomplete_web_query/1",
+      "question": "coarse_family",
+      "native": [
+        -5.019868850708008,
+        9.222155570983887,
+        -6.165242671966553,
+        -6.272189140319824,
+        -5.818593502044678,
+        -6.499589920043945,
+        -4.9549479484558105
+      ],
+      "reference": [
+        -5.01986837387085,
+        9.222163200378418,
+        -6.1652398109436035,
+        -6.272187232971191,
+        -5.818592548370361,
+        -6.499587059020996,
+        -4.9549384117126465
+      ],
+      "maxDifference": 9.5367431640625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/corrupt/1/6/hesitation/2",
+      "question": "actionable_command",
+      "native": [
+        -4.960958480834961,
+        0.7432919144630432
+      ],
+      "reference": [
+        -4.9609479904174805,
+        0.7432702779769897
+      ],
+      "maxDifference": 2.1636486053466797e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/corrupt/1/6/hesitation/2",
+      "question": "needs_more_speech",
+      "native": [
+        6.032069683074951,
+        -1.5717982053756714
+      ],
+      "reference": [
+        6.032065391540527,
+        -1.5717942714691162
+      ],
+      "maxDifference": 4.291534423828125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/corrupt/1/6/hesitation/2",
+      "question": "correction_or_replacement",
+      "native": [
+        8.076216697692871,
+        -2.8455002307891846
+      ],
+      "reference": [
+        8.076225280761719,
+        -2.845496892929077
+      ],
+      "maxDifference": 8.58306884765625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/corrupt/1/6/hesitation/2",
+      "question": "coarse_family",
+      "native": [
+        -4.560328960418701,
+        4.972785949707031,
+        -4.969311237335205,
+        -5.227835655212402,
+        -5.172583103179932,
+        -4.973942279815674,
+        -2.012211322784424
+      ],
+      "reference": [
+        -4.560328960418701,
+        4.972808837890625,
+        -4.969306468963623,
+        -5.227841377258301,
+        -5.172588348388672,
+        -4.973936080932617,
+        -2.012221336364746
+      ],
+      "maxDifference": 2.288818359375e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/0/10/trailing_conjunction/1",
+      "question": "actionable_command",
+      "native": [
+        -8.43217658996582,
+        6.677614688873291
+      ],
+      "reference": [
+        -8.432172775268555,
+        6.677618026733398
+      ],
+      "maxDifference": 3.814697265625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/0/10/trailing_conjunction/1",
+      "question": "needs_more_speech",
+      "native": [
+        -8.172270774841309,
+        5.221609592437744
+      ],
+      "reference": [
+        -8.17226791381836,
+        5.221611499786377
+      ],
+      "maxDifference": 2.86102294921875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/0/10/trailing_conjunction/1",
+      "question": "correction_or_replacement",
+      "native": [
+        8.49705982208252,
+        -2.015505075454712
+      ],
+      "reference": [
+        8.497060775756836,
+        -2.01550555229187
+      ],
+      "maxDifference": 9.5367431640625e-07,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/compound/0/10/trailing_conjunction/1",
+      "question": "coarse_family",
+      "native": [
+        -2.294645309448242,
+        7.767531394958496,
+        -6.230701446533203,
+        -5.9911651611328125,
+        -5.569108963012695,
+        -5.954561710357666,
+        1.2191591262817383
+      ],
+      "reference": [
+        -2.2946410179138184,
+        7.767530918121338,
+        -6.230706214904785,
+        -5.991165637969971,
+        -5.5691118240356445,
+        -5.954559326171875,
+        1.2191812992095947
+      ],
+      "maxDifference": 2.2172927856445312e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/negation/0/2/dictation_prefix/1",
+      "question": "actionable_command",
+      "native": [
+        7.167046070098877,
+        -1.8319647312164307
+      ],
+      "reference": [
+        7.1670427322387695,
+        -1.8319593667984009
+      ],
+      "maxDifference": 5.364418029785156e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/negation/0/2/dictation_prefix/1",
+      "question": "needs_more_speech",
+      "native": [
+        -7.317882537841797,
+        0.8828293681144714
+      ],
+      "reference": [
+        -7.3178815841674805,
+        0.8828279972076416
+      ],
+      "maxDifference": 1.3709068298339844e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/negation/0/2/dictation_prefix/1",
+      "question": "correction_or_replacement",
+      "native": [
+        7.89448356628418,
+        -2.431492567062378
+      ],
+      "reference": [
+        7.894485950469971,
+        -2.431490898132324
+      ],
+      "maxDifference": 2.384185791015625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/negation/0/2/dictation_prefix/1",
+      "question": "coarse_family",
+      "native": [
+        5.427023887634277,
+        -6.257433891296387,
+        -5.37104606628418,
+        -5.607158184051514,
+        -5.421726703643799,
+        -5.3850274085998535,
+        -1.9743589162826538
+      ],
+      "reference": [
+        5.427021503448486,
+        -6.2574262619018555,
+        -5.3710432052612305,
+        -5.6071600914001465,
+        -5.421720504760742,
+        -5.38502311706543,
+        -1.9743578433990479
+      ],
+      "maxDifference": 7.62939453125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/quoted/1/2/hesitation/2",
+      "question": "actionable_command",
+      "native": [
+        -0.22136570513248444,
+        0.3802494704723358
+      ],
+      "reference": [
+        -0.22135791182518005,
+        0.38024652004241943
+      ],
+      "maxDifference": 7.793307304382324e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/quoted/1/2/hesitation/2",
+      "question": "needs_more_speech",
+      "native": [
+        7.13925313949585,
+        -1.8300813436508179
+      ],
+      "reference": [
+        7.139253616333008,
+        -1.830079436302185
+      ],
+      "maxDifference": 1.9073486328125e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/quoted/1/2/hesitation/2",
+      "question": "correction_or_replacement",
+      "native": [
+        6.912349224090576,
+        -1.7127429246902466
+      ],
+      "reference": [
+        6.912350177764893,
+        -1.7127399444580078
+      ],
+      "maxDifference": 2.9802322387695312e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/quoted/1/2/hesitation/2",
+      "question": "coarse_family",
+      "native": [
+        -4.969239234924316,
+        5.5581231117248535,
+        -4.941107273101807,
+        -5.173403739929199,
+        -4.969006061553955,
+        -5.343519687652588,
+        -0.9903692007064819
+      ],
+      "reference": [
+        -4.96923303604126,
+        5.558144569396973,
+        -4.941100120544434,
+        -5.173409461975098,
+        -4.969001293182373,
+        -5.343520641326904,
+        -0.990394115447998
+      ],
+      "maxDifference": 2.491474151611328e-05,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/ambiguous/1/11/trailing_conjunction/1",
+      "question": "actionable_command",
+      "native": [
+        -6.966481685638428,
+        5.581515789031982
+      ],
+      "reference": [
+        -6.966482639312744,
+        5.581518650054932
+      ],
+      "maxDifference": 2.86102294921875e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/ambiguous/1/11/trailing_conjunction/1",
+      "question": "needs_more_speech",
+      "native": [
+        -6.570591449737549,
+        4.087652683258057
+      ],
+      "reference": [
+        -6.570591926574707,
+        4.087650299072266
+      ],
+      "maxDifference": 2.384185791015625e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/ambiguous/1/11/trailing_conjunction/1",
+      "question": "correction_or_replacement",
+      "native": [
+        7.7307353019714355,
+        -2.4390556812286377
+      ],
+      "reference": [
+        7.730733871459961,
+        -2.4390501976013184
+      ],
+      "maxDifference": 5.4836273193359375e-06,
+      "argmaxAgreement": true
+    },
+    {
+      "id": "test/ambiguous/1/11/trailing_conjunction/1",
+      "question": "coarse_family",
+      "native": [
+        -2.8419463634490967,
+        -6.373196601867676,
+        -4.977333068847656,
+        -5.146988391876221,
+        2.8571901321411133,
+        -5.720173358917236,
+        -0.37160706520080566
+      ],
+      "reference": [
+        -2.8419430255889893,
+        -6.373194217681885,
+        -4.97732400894165,
+        -5.146988391876221,
+        2.857178211212158,
+        -5.7201762199401855,
+        -0.3715730309486389
+      ],
+      "maxDifference": 3.403425216674805e-05,
+      "argmaxAgreement": true
+    }
+  ]
+}

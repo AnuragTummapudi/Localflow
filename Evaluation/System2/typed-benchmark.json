@@ -1,0 +1,9 @@
+{
+  "boundary" : "Authored gold plans; mocked native effects; NO real model accuracy or real native completion",
+  "confirmationChecks" : 4,
+  "goldPlansAccepted" : 84,
+  "injectedFailureChecks" : 12,
+  "routingAccuracy" : 1,
+  "routingCorrect" : 108,
+  "scenarios" : 108
+}

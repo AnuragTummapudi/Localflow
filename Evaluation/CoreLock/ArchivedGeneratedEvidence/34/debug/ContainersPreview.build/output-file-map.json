@@ -1,0 +1,278 @@
+{
+  "": {
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Extensions/OutputSpan+Extras.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/OutputSpan+Extras.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/OutputSpan+Extras.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/OutputSpan+Extras~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/OutputSpan+Extras.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/OutputSpan+Extras.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Extensions/TemporaryAllocation.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/TemporaryAllocation.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/TemporaryAllocation.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/TemporaryAllocation~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/TemporaryAllocation.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/TemporaryAllocation.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingIteratorProtocol+Copy.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Copy.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Copy.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Copy~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Copy.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Copy.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingIteratorProtocol+ElementsEqual.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+ElementsEqual.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+ElementsEqual.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+ElementsEqual~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+ElementsEqual.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+ElementsEqual.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingIteratorProtocol+Filter.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Filter.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Filter.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Filter~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Filter.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Filter.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingIteratorProtocol+Map.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Map.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Map.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Map~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Map.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Map.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingIteratorProtocol+Reduce.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Reduce.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Reduce.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Reduce~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Reduce.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+Reduce.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingIteratorProtocol+SpanwiseZip.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+SpanwiseZip.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+SpanwiseZip.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+SpanwiseZip~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+SpanwiseZip.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol+SpanwiseZip.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingIteratorProtocol.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingIteratorProtocol.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingSequence+Algorithms.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence+Algorithms.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence+Algorithms.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence+Algorithms~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence+Algorithms.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence+Algorithms.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingSequence+Standard Conformances.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence+Standard Conformances.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence+Standard Conformances.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence+Standard Conformances~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence+Standard Conformances.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence+Standard Conformances.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingSequence+Utilities.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence+Utilities.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence+Utilities.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence+Utilities~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence+Utilities.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence+Utilities.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/BorrowingSequence.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BorrowingSequence.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/BidirectionalContainer.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BidirectionalContainer.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BidirectionalContainer.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BidirectionalContainer~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BidirectionalContainer.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/BidirectionalContainer.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/Container+Filter.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Container+Filter.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Container+Filter.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Container+Filter~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Container+Filter.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Container+Filter.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/Container+SpanwiseZip.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Container+SpanwiseZip.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Container+SpanwiseZip.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Container+SpanwiseZip~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Container+SpanwiseZip.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Container+SpanwiseZip.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/Container.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Container.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Container.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Container~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Container.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Container.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/ContainerIterator.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/ContainerIterator.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/ContainerIterator.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/ContainerIterator~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/ContainerIterator.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/ContainerIterator.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/DynamicContainer.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/DynamicContainer.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/DynamicContainer.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/DynamicContainer~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/DynamicContainer.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/DynamicContainer.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/MutableContainer.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/MutableContainer.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/MutableContainer.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/MutableContainer~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/MutableContainer.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/MutableContainer.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/PermutableContainer.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/PermutableContainer.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/PermutableContainer.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/PermutableContainer~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/PermutableContainer.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/PermutableContainer.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/RandomAccessContainer.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/RandomAccessContainer.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/RandomAccessContainer.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/RandomAccessContainer~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/RandomAccessContainer.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/RandomAccessContainer.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/RangeExpression2.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/RangeExpression2.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/RangeExpression2.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/RangeExpression2~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/RangeExpression2.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/RangeExpression2.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/RangeReplaceableContainer.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/RangeReplaceableContainer.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/RangeReplaceableContainer.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/RangeReplaceableContainer~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/RangeReplaceableContainer.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/RangeReplaceableContainer.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Container/Strideable+Limits.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Strideable+Limits.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Strideable+Limits.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Strideable+Limits~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Strideable+Limits.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Strideable+Limits.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Drain+Map.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Drain+Map.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Drain+Map.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Drain+Map~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Drain+Map.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Drain+Map.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Drain+Reduce.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Drain+Reduce.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Drain+Reduce.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Drain+Reduce~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Drain+Reduce.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Drain+Reduce.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Drain.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Drain.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Drain.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Drain~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Drain.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Drain.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Producer+Collect.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Collect.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Collect.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Collect~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Collect.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Collect.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Producer+Filter.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Filter.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Filter.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Filter~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Filter.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Filter.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Producer+Map.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Map.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Map.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Map~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Map.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Map.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Producer+Reduce.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Reduce.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Reduce.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Reduce~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Reduce.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer+Reduce.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Protocols/Producer.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Producer.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Types/InputSpan.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/InputSpan.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/InputSpan.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/InputSpan~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/InputSpan.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/InputSpan.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Types/MutableRef.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/MutableRef.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/MutableRef.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/MutableRef~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/MutableRef.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/MutableRef.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Types/Ref.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Ref.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Ref.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Ref~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Ref.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Ref.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Types/Shared.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Shared.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Shared.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Shared~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Shared.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/Shared.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Types/SpanIterator.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/SpanIterator.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/SpanIterator.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/SpanIterator~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/SpanIterator.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/SpanIterator.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/swift-collections/Sources/ContainersPreview/Types/UniqueBox.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/UniqueBox.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/UniqueBox.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/UniqueBox~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/UniqueBox.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/ContainersPreview.build/UniqueBox.dia"
+  }
+}

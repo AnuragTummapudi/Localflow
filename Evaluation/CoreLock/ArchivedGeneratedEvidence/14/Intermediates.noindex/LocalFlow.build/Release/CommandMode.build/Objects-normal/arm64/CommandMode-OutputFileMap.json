@@ -1,0 +1,26 @@
+{
+  "" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/CommandMode.build/Objects-normal/arm64/CommandMode-primary.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/CommandMode.build/Objects-normal/arm64/CommandMode-primary.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/CommandMode.build/Objects-normal/arm64/CommandMode-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/CommandMode.build/Objects-normal/arm64/CommandMode-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/CommandMode.build/Objects-normal/arm64/CommandMode-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/CommandMode.build/Objects-normal/arm64/CommandMode-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/CommandMode.build/Objects-normal/arm64/CommandMode-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/CommandMode.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/CommandMode.build/Objects-normal/arm64/CommandMode.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/CommandMode.build/Objects-normal/arm64/CommandMode.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/CommandMode.build/Objects-normal/arm64/CommandMode.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/SearchProviderRegistry.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/CommandMode.build/Objects-normal/arm64/SearchProviderRegistry.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/CommandMode.build/Objects-normal/arm64/SearchProviderRegistry.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/CommandMode.build/Objects-normal/arm64/SearchProviderRegistry.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/SpotifyPlaybackController.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/CommandMode.build/Objects-normal/arm64/SpotifyPlaybackController.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/CommandMode.build/Objects-normal/arm64/SpotifyPlaybackController.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/CommandMode.build/Objects-normal/arm64/SpotifyPlaybackController.o"
+  }
+}

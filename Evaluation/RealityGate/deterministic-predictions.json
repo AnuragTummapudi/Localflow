@@ -1,0 +1,2690 @@
+[
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-denial:authored:234",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 5.8268333377782255,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-instruction-quotation:authored:235",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.20658332505263388,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-metaphor:authored:236",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.10166666470468044,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-dictated-negation:authored:237",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "text_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.090875022578984499,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-history:authored:238",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.085500010754913092,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-editor-correction:authored:239",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.097583309980109334,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-target-correction:authored:240",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "focus_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.088541681179776788,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-exit-unsaved:authored:241",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "quit_application",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.1225416490342468,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-site-spelling:authored:242",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "web_navigation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.086916668806225061,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-query-quote:authored:243",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "search",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 5.7804166863206774,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-title-command:authored:244",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "note_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.25154167087748647,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-reminder-location:authored:245",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "reminder_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.46991664567030966,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-media-specific:authored:246",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "media_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.10424997890368104,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-system-percent:authored:247",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "system_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.11008334695361555,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-system-lock:authored:248",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "system_action",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.15916666598059237,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-path-spaces:authored:249",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "file_action",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.1914166787173599,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-macro-named:authored:250",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "workflow",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.094333314336836338,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-compound-correct:authored:251",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "workflow",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.086625019321218133,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-danger-hidden:authored:252",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "unknown",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.085291656432673335,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-app-ambiguous:authored:253",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.23504166165366769,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-domain-ambiguous:authored:254",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "web_navigation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.099083350505679846,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-time-ambiguous:authored:255",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "reminder_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.088166678324341774,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-prefix-web:authored:256",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "web_navigation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.08800000068731606,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 0.33333333333333337,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-prefix-exit:authored:257",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "quit_application",
+      "more_speech" : true,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 1.2089166848454624,
+    "predictions" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "quit_application",
+      "more_speech" : true,
+      "risk" : "consequential"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-prefix-replace:authored:258",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "text_action",
+      "more_speech" : true,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.20825001411139965,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-prefix-completed:authored:259",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "system_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.10095833567902446,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-prefix-dictation:authored:260",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.092291651526466012,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-prefix-negation:authored:261",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.098583346698433161,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-prefix-macro:authored:262",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "workflow",
+      "more_speech" : true,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.11258333688601851,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-partial-asr:authored:263",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "search",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "milliseconds" : 1.4216250274330378,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "search",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-repetition:authored:264",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "web_navigation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.14141667634248734,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-near-homophone:authored:265",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.098708347650244832,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-header-body:authored:266",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "note_action",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.094666669610887766,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 0.20930232558139539,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-headline:authored:267",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 7.1648333396296948,
+    "predictions" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-unsupported-explain:authored:268",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "unknown",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.21616666344925761,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-due-correction:authored:269",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "reminder_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.11383331730030477,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 0.19230769230769229,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-intent-shift:authored:270",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "search",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 8.179124997695908,
+    "predictions" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-aborted-command:authored:271",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.26033332687802613,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-filler-dictation:authored:272",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.13408332597464323,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "cal-no-article:authored:273",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "note_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.10016665328294039,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "calibration"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-quote-nested:authored:274",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.77374998363666236,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-payload-is-command:authored:275",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "text_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.14441667008213699,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-conditional-macro:authored:276",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.097000011010095477,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 0.20833333333333337,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-open-adjective:authored:277",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 7.5080000096932054,
+    "predictions" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-quoted-reminder:authored:278",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.56412501726299524,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-past-action:authored:279",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.13991666492074728,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-negated-app:authored:280",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.099750002846121788,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 0.17073170731707321,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-descriptive-quit:authored:281",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 4.9667916900943965,
+    "predictions" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "quit_application",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-fiction:authored:282",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.47995834029279649,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-instruction-as-note:authored:283",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "note_action",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.1586250145919621,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-nested-title:authored:284",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "note_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.13541665975935757,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-two-headers:authored:285",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "note_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.13087500701658428,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-query-correction:authored:286",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "search",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.66254165722057223,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "search",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 0.90000000000000002,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-app-correction:authored:287",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 5.4093333310447633,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 0.20512820512820518,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-correction-aborted:authored:288",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 8.9816249965224415,
+    "predictions" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-time-correction:authored:289",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "reminder_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.55266666458919644,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "reminder_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 0.90000000000000002,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-compound-scope:authored:290",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "workflow",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 9.4158333085943013,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 0.16326530612244894,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-compound-payload:authored:291",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "workflow",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 6.1774583591613919,
+    "predictions" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 0.1428571428571429,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-compound-revision:authored:292",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "workflow",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 8.3147083350922912,
+    "predictions" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-macro-reference:authored:293",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "workflow",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.2930416667368263,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-unknown-transaction:authored:294",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "unknown",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.1367916411254555,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-unknown-shell:authored:295",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "unknown",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.14604165335185826,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-unknown-upload:authored:296",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "unknown",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.12012501247227192,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-unknown-answer:authored:297",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "unknown",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.23554166546091437,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 0.17777777777777781,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-editor-ambiguous:authored:298",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 8.5099583375267684,
+    "predictions" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-arc-distinction:authored:299",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.20591667271219194,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 0.2857142857142857,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-notion-distinction:authored:300",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 2.5174999900627881,
+    "predictions" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 0.90000000000000002,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-terminal-distinction:authored:301",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "focus_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 5.7697500160429627,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "focus_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-web-missing-target:authored:302",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "web_navigation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 2.0092083141207695,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-reminder-missing-title:authored:303",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "reminder_action",
+      "more_speech" : true,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.23608331684954464,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-payload-spelled-url:authored:304",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "web_navigation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.13395832502283156,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-http-preservation:authored:305",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "web_navigation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.52666664123535156,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "web_navigation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-search-literal:authored:306",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "search",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.15662499936297536,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-reminder-command-title:authored:307",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "reminder_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.12166667147539556,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-file-alias-unset:authored:308",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "file_action",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.11637501302175224,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-file-exact:authored:309",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "file_action",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.13599998783320189,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-text-selection:authored:310",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "text_action",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.11995833483524621,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-text-literal:authored:311",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "text_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.12129166861996055,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-copy-quote:authored:312",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "text_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.61083331820555031,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 0.90000000000000002,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-quit-exception:authored:313",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "quit_application",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 6.5011666447389871,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "quit_application",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-focus-explicit:authored:314",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "focus_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.18395832739770412,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-open-complete:authored:315",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.10129166184924543,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-media-target:authored:316",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "media_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.10391665273346007,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-media-negation:authored:317",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.085125007899478078,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-system-specific:authored:318",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "system_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.08437500218860805,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-system-consequential:authored:319",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "system_action",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.093416660092771053,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-prefix-operator:authored:320",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "unknown",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.1014166628010571,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-prefix-target:authored:321",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : true,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.096208328614011407,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 0.90000000000000002,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-prefix-and:authored:322",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "workflow",
+      "more_speech" : true,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 3.9737916667945683,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : true,
+      "risk" : "reversible"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-prefix-body:authored:323",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "note_action",
+      "more_speech" : true,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.21091665257699788,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-prefix-domain:authored:324",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "web_navigation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.11033331975340843,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-prefix-query:authored:325",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "search",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.12870834325440228,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-prefix-self-repair:authored:326",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "search",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.49133331049233675,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "search",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-prefix-finished:authored:327",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "media_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.10720832506194711,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-prefix-dictated-past:authored:328",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.090749992523342371,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-prefix-quote:authored:329",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.09920832235366106,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-prefix-reminder-complete:authored:330",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "reminder_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.086333311628550291,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-asr-repeated-correction:authored:331",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "search",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.3539166646078229,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "search",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-asr-partial-word:authored:332",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "note_action",
+      "more_speech" : true,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.091333349701017141,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : true,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-asr-hesitation:authored:333",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "quit_application",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.086499989265576005,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-asr-confusable-title:authored:334",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "note_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.084333325503394008,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-asr-confusable-body:authored:335",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "note_action",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.084458326455205679,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-asr-missing-punctuation:authored:336",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "workflow",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.087166670709848404,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-asr-article-noise:authored:337",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "search",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.42245830991305411,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "search",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-asr-no-casing:authored:338",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "file_action",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.18483333406038582,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 0.15909090909090906,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-asr-near-domain:authored:339",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "web_navigation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 7.1092083235271275,
+    "predictions" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "open_application",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-text-internal-boundary:authored:340",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "text_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.2701666671782732,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-negated-consequence:authored:341",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.10649999603629112,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-unknown-general-plan:authored:342",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "unknown",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.11229168740101159,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-workflow-unsaved:authored:343",
+    "labels" : {
+      "ambiguous" : true,
+      "command" : true,
+      "intent" : "workflow",
+      "more_speech" : false,
+      "risk" : "consequential"
+    },
+    "milliseconds" : 0.091750000137835741,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-correction-addition:authored:344",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : true,
+      "intent" : "reminder_action",
+      "more_speech" : false,
+      "risk" : "reversible"
+    },
+    "milliseconds" : 0.091208319645375013,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  },
+  {
+    "confidence" : {
+      "intent" : 1,
+      "more_speech" : 1,
+      "risk" : 1
+    },
+    "id" : "test-quoted-opener:authored:345",
+    "labels" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "milliseconds" : 0.44158333912491798,
+    "predictions" : {
+      "ambiguous" : false,
+      "command" : false,
+      "intent" : "dictation",
+      "more_speech" : false,
+      "risk" : "safe"
+    },
+    "split" : "test"
+  }
+]

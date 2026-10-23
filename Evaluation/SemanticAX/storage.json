@@ -1,0 +1,29 @@
+{
+  "freeBeforeBytes": 8542629888,
+  "removedGeneratedPaths": {
+    ".build/ReleaseDerivedData": 574788644,
+    ".build/AgentDebug": 578944043,
+    ".build/onboarding-derived": 575795366,
+    ".build/xcode-derived": 575067487,
+    ".build/core-lock/pre-final-Debug.app": 664279557,
+    "/Users/anuragtummapudi/Library/Developer/Xcode/DerivedData/LocalFlow-eagpmznfemuvxwdrmgtcakjdkuie/Build": 615659830,
+    "/Users/anuragtummapudi/Library/Developer/Xcode/DerivedData/LocalFlow-eagpmznfemuvxwdrmgtcakjdkuie/Index.noindex": 300308379,
+    "/Users/anuragtummapudi/Library/Developer/Xcode/DerivedData/LocalFlow-gmcywgwypiebqedpukgnaoopoyxb/Build": 292782172,
+    "/Users/anuragtummapudi/Library/Developer/Xcode/DerivedData/LocalFlow-gmcywgwypiebqedpukgnaoopoyxb/Index.noindex": 43602548
+  },
+  "removedLogicalBytes": 4221228026,
+  "freeAfterCleanupBytes": 9463832576,
+  "preservedOwnedStorage": {
+    "/Users/anuragtummapudi/Library/Application Support/LocalFlow/Models/qwen3.5-4b-4bit": 3061128063,
+    "/Users/anuragtummapudi/Library/Application Support/LocalFlow/Models/laya-v2": 1360965277,
+    "/Users/anuragtummapudi/Library/Application Support/LocalFlow/Models/laya": 1728911086,
+    "/Users/anuragtummapudi/Library/Application Support/LocalFlow/Models/qwen-runtime": 182585624
+  },
+  "buildStorage": {
+    "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/system2/swift": 1562184138,
+    "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/system2/app-debug": 370771321,
+    "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug": 323785030,
+    "/Users/anuragtummapudi/Localflow-project/LocalFlow/Evaluation/SemanticAX": 12365
+  },
+  "freeAfterBytes": 9257234432
+}

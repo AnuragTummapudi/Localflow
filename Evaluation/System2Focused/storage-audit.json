@@ -1,0 +1,16 @@
+{
+  "activeModelLogicalBytes": 3061128063,
+  "runtimeLogicalBytes": 182585512,
+  "plannerBuildAllocatedBytes": 1999478784,
+  "evaluationAllocatedBytes": 3170304,
+  "freeBytesCurrent": 4466954240,
+  "remainingPlannerGeneratedChildren": [
+    "mlx_metal-0.32.2-py3-none-macosx_14_0_arm64.whl",
+    "app-debug",
+    "swift"
+  ],
+  "activeQwenDirectories": [
+    "qwen3.5-4b-4bit",
+    "qwen-runtime"
+  ]
+}

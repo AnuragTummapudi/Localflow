@@ -1,0 +1,207 @@
+[
+  {
+    "batchFinal" : "Open notes.",
+    "constructedActions" : [
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: nil, confidence: 1.0), processID: nil) [completed]"
+    ],
+    "expected" : [
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: nil, confidence: 1.0), processID: nil)"
+    ],
+    "latestStreamingPartial" : "open notes",
+    "scenario" : 1,
+    "segments" : [
+      "Open notes."
+    ],
+    "streamingFinal" : "open notes",
+    "syntheticInstruction" : "Open Notes",
+    "vocabulary" : "not applied in synthetic fixture"
+  },
+  {
+    "batchFinal" : "Create a new note, call it local flow benchmark.",
+    "constructedActions" : [
+      "note.create: note(title: \"Untitled\", body: \"\") [cancelled]",
+      "note.create: note(title: \"call\", body: \"\") [cancelled]",
+      "note.create: note(title: \"call it\", body: \"\") [cancelled]",
+      "note.create: note(title: \"loc\", body: \"\") [cancelled]",
+      "note.create: note(title: \"local\", body: \"\") [cancelled]",
+      "note.create: note(title: \"local so\", body: \"\") [cancelled]",
+      "note.create: note(title: \"local sob\", body: \"\") [cancelled]",
+      "note.create: note(title: \"local sobench\", body: \"\") [cancelled]",
+      "note.create: note(title: \"local sobenchm\", body: \"\") [cancelled]",
+      "note.create: note(title: \"local sobenchmark\", body: \"\") [cancelled]",
+      "note.create: note(title: \"local flow benchmark.\", body: \"\") [completed]"
+    ],
+    "expected" : [
+      "note.create: note(title: \"LocalFlow Benchmark\", body: \"\")"
+    ],
+    "latestStreamingPartial" : "create a new note call it local sobenchmark",
+    "scenario" : 2,
+    "segments" : [
+      "Create a new note, call it local flow benchmark."
+    ],
+    "streamingFinal" : "create a new note call it local sobenchmark",
+    "syntheticInstruction" : "Create a new note, call it LocalFlow Benchmark",
+    "vocabulary" : "not applied in synthetic fixture"
+  },
+  {
+    "batchFinal" : "Append to current note, this is my dictated benchmark text.",
+    "constructedActions" : [
+      "note.append_current: currentNote(\"this is my dictated benchmark text.\", snapshot: nil) [completed]"
+    ],
+    "expected" : [
+      "note.append_current: currentNote(\"This is my dictated benchmark text.\", snapshot: nil)"
+    ],
+    "latestStreamingPartial" : "to current note this is my dictated benchmark text",
+    "scenario" : 3,
+    "segments" : [
+      "Append to current note, this is my dictated benchmark text."
+    ],
+    "streamingFinal" : "to current note this is my dictated benchmark text",
+    "syntheticInstruction" : "Append to current note This is my dictated benchmark text.",
+    "vocabulary" : "not applied in synthetic fixture"
+  },
+  {
+    "batchFinal" : "Open Browser",
+    "constructedActions" : [
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: nil, confidence: 0.19999999999999996), processID: nil) [cancelled]",
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: nil, confidence: 1.0), processID: nil) [completed]"
+    ],
+    "expected" : [
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: nil, confidence: 1.0), processID: nil)"
+    ],
+    "latestStreamingPartial" : "open browser",
+    "scenario" : 4,
+    "segments" : [
+      "Open Browser"
+    ],
+    "streamingFinal" : "open browser",
+    "syntheticInstruction" : "Open browser",
+    "vocabulary" : "not applied in synthetic fixture"
+  },
+  {
+    "batchFinal" : "Search for Ada Lovelace.",
+    "constructedActions" : [
+      "web.open_url: url(https:\/\/www.google.com\/search?q=for) [cancelled]",
+      "web.open_url: url(https:\/\/www.google.com\/search?q=ad) [cancelled]",
+      "web.open_url: url(https:\/\/www.google.com\/search?q=ada) [cancelled]",
+      "web.open_url: url(https:\/\/www.google.com\/search?q=ada%20lo) [cancelled]",
+      "web.open_url: url(https:\/\/www.google.com\/search?q=ada%20lovel) [cancelled]",
+      "web.open_url: url(https:\/\/www.google.com\/search?q=ada%20lovelace) [cancelled]",
+      "web.open_url: url(https:\/\/www.google.com\/search?q=Ada%20Lovelace) [completed]"
+    ],
+    "expected" : [
+      "web.open_url: url(https:\/\/www.google.com\/search?q=Ada%20Lovelace)"
+    ],
+    "latestStreamingPartial" : "search for ada lovelace",
+    "scenario" : 5,
+    "segments" : [
+      "Search for Ada Lovelace."
+    ],
+    "streamingFinal" : "search for ada lovelace",
+    "syntheticInstruction" : "Search for Ada Lovelace",
+    "vocabulary" : "not applied in synthetic fixture"
+  },
+  {
+    "batchFinal" : "Open www.wikipedia.org",
+    "constructedActions" : [
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: nil, confidence: 0.0), processID: nil) [cancelled]",
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: nil, confidence: 0.125), processID: nil) [cancelled]",
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: nil, confidence: 0.09999999999999998), processID: nil) [cancelled]",
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: nil, confidence: 0.1333333333333333), processID: nil) [cancelled]",
+      "web.open_url: url(https:\/\/www.wikipedia.org) [completed]"
+    ],
+    "expected" : [
+      "web.open_url: url(https:\/\/www.wikipedia.org)"
+    ],
+    "latestStreamingPartial" : "open wwwwikipediaorg",
+    "scenario" : 6,
+    "segments" : [
+      "Open www.wikipedia.org"
+    ],
+    "streamingFinal" : "open wwwwikipediaorg",
+    "syntheticInstruction" : "Open https:\/\/www.wikipedia.org",
+    "vocabulary" : "not applied in synthetic fixture"
+  },
+  {
+    "batchFinal" : "Open Photo Boot?",
+    "constructedActions" : [
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Photo Booth\", bundleIdentifier: Optional(\"com.apple.PhotoBooth\"), url: nil, confidence: 0.9), processID: nil) [completed]"
+    ],
+    "expected" : [
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Photo Booth\", bundleIdentifier: Optional(\"com.apple.PhotoBooth\"), url: nil, confidence: 1.0), processID: nil)"
+    ],
+    "latestStreamingPartial" : "open photo booth",
+    "scenario" : 7,
+    "segments" : [
+      "Open Photo Boot?"
+    ],
+    "streamingFinal" : "open photo booth",
+    "syntheticInstruction" : "Open Photo Booth",
+    "vocabulary" : "not applied in synthetic fixture"
+  },
+  {
+    "batchFinal" : "Open examblow.com",
+    "constructedActions" : [
+      "web.open_url: url(https:\/\/examblow.com) [completed]"
+    ],
+    "expected" : [
+      "web.open_url: url(https:\/\/example.com)"
+    ],
+    "latestStreamingPartial" : "an examlocom",
+    "scenario" : 8,
+    "segments" : [
+      "Open examblow.com"
+    ],
+    "streamingFinal" : "an examlocom",
+    "syntheticInstruction" : "Open https:\/\/example.com",
+    "vocabulary" : "not applied in synthetic fixture"
+  },
+  {
+    "batchFinal" : "Create reminder review local flow benchmark.",
+    "constructedActions" : [
+      "reminder.create: reminder(title: \"review local flow benchmark.\", notes: nil, due: nil) [completed]"
+    ],
+    "expected" : [
+      "reminder.create: reminder(title: \"Review LocalFlow benchmark\", notes: nil, due: nil)"
+    ],
+    "latestStreamingPartial" : "reminder review local benchmark",
+    "scenario" : 9,
+    "segments" : [
+      "Create reminder review local flow benchmark."
+    ],
+    "streamingFinal" : "reminder review local benchmark",
+    "syntheticInstruction" : "Create reminder Review LocalFlow benchmark",
+    "vocabulary" : "not applied in synthetic fixture"
+  },
+  {
+    "batchFinal" : "Open notes then open browser then search for Swift Actors.",
+    "constructedActions" : [
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: nil, confidence: 1.0), processID: nil) [completed]",
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: nil, confidence: 0.19999999999999996), processID: nil) [cancelled]",
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: nil, confidence: 1.0), processID: nil) [cancelled]",
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: nil, confidence: 0.25), processID: nil) [cancelled]",
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: nil, confidence: 1.0), processID: nil) [completed]",
+      "web.open_url: url(https:\/\/www.google.com\/search?q=for) [cancelled]",
+      "web.open_url: url(https:\/\/www.google.com\/search?q=swif) [cancelled]",
+      "web.open_url: url(https:\/\/www.google.com\/search?q=swift) [cancelled]",
+      "web.open_url: url(https:\/\/www.google.com\/search?q=swift%20act) [cancelled]",
+      "web.open_url: url(https:\/\/www.google.com\/search?q=swift%20actors) [cancelled]",
+      "web.open_url: url(https:\/\/www.google.com\/search?q=Swift%20Actors) [completed]"
+    ],
+    "expected" : [
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: nil, confidence: 1.0), processID: nil)",
+      "application.open: application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: nil, confidence: 1.0), processID: nil)",
+      "web.open_url: url(https:\/\/www.google.com\/search?q=Swift%20actors)"
+    ],
+    "latestStreamingPartial" : "open notes then open browser then search for swift actors",
+    "scenario" : 10,
+    "segments" : [
+      "Open notes",
+      "open browser",
+      "search for Swift Actors."
+    ],
+    "streamingFinal" : "open notes then open browser then search for swift actors",
+    "syntheticInstruction" : "Open Notes then open browser then search for Swift actors",
+    "vocabulary" : "not applied in synthetic fixture"
+  }
+]

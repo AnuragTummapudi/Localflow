@@ -1,0 +1,25 @@
+{
+  "": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/Models.build/Models.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/Models.build/Models.o",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/Models.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/checkouts/swift-transformers/Sources/Models/LanguageModel.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/Models.build/LanguageModel.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/Models.build/LanguageModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/Models.build/LanguageModel.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/Models.build/LanguageModel.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/checkouts/swift-transformers/Sources/Models/LanguageModelTypes.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/Models.build/LanguageModelTypes.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/Models.build/LanguageModelTypes~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/Models.build/LanguageModelTypes.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/Models.build/LanguageModelTypes.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/checkouts/swift-transformers/Sources/Models/Weights.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/Models.build/Weights.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/Models.build/Weights~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/Models.build/Weights.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/Models.build/Weights.dia"
+  }
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "id": "actionable_command",
+    "type": "noul",
+    "instructions": "Is this a direct current request to act on the Mac? Incomplete and unsupported requests still count. Narration, quoted command language, negation and hypotheticals do not.",
+    "options": {
+      "false": "no, the statement does not hold",
+      "true": "yes, the statement holds"
+    }
+  },
+  {
+    "id": "needs_more_speech",
+    "type": "noul",
+    "instructions": "Does this utterance need more speech? Missing targets or text, partial names, unfinished sentences, trailing conjunctions and unresolved corrections need more. A complete command does not need more merely because is_final is false.",
+    "options": {
+      "false": "no, the statement does not hold",
+      "true": "yes, the statement holds"
+    }
+  },
+  {
+    "id": "correction_or_replacement",
+    "type": "noul",
+    "instructions": "Is the speaker correcting or replacing a current instruction? Explicit actually, scratch that, no wait, correction or I mean changes to a requested action count, including unfinished corrections. Quoted, narrated and hypothetical corrections do not.",
+    "options": {
+      "false": "no, the statement does not hold",
+      "true": "yes, the statement holds"
+    }
+  },
+  {
+    "id": "coarse_family",
+    "type": "choice",
+    "instructions": "Choose the broad family of this direct request. Do not select a tool or invent any value.",
+    "options": {
+      "application": "Open, focus or quit an application.",
+      "web": "Navigate or search websites.",
+      "productivity": "Notes or reminders.",
+      "system": "Sound, lock, sleep or device settings.",
+      "text_file": "Type, copy, replace text or reveal files.",
+      "media": "Music or playback.",
+      "other": "Other or unresolved requests."
+    }
+  }
+]

@@ -1,0 +1,244 @@
+[
+  {
+    "cancelled" : false,
+    "completionMilliseconds" : 1031.3973333395552,
+    "date" : 812739657.556382,
+    "decisionMilliseconds" : 1.9179305527359247,
+    "decisionSources" : [
+      "deterministic"
+    ],
+    "duplicateActionRate" : 0,
+    "failedActions" : 0,
+    "firstActionMilliseconds" : 1031.0874583374243,
+    "id" : "248E7201-F01E-4724-9ABB-BC54069B5EA7",
+    "incorrectActionRate" : 0,
+    "missingActions" : 0,
+    "mode" : "real-streaming-ASR-batch-refinement-synthetic-audio-mock-native",
+    "observedTools" : [
+      "application.open"
+    ],
+    "outOfOrderActions" : 0,
+    "partialSTTMilliseconds" : 611.2664583197329,
+    "scenario" : 1,
+    "speechSource" : "batchRefinement",
+    "unverifiedActions" : 0
+  },
+  {
+    "cancelled" : false,
+    "completionMilliseconds" : 3576.732624991564,
+    "date" : 812739661.137549,
+    "decisionMilliseconds" : 0.09475297702010721,
+    "decisionSources" : [
+      "deterministic"
+    ],
+    "duplicateActionRate" : 0,
+    "failedActions" : 0,
+    "firstActionMilliseconds" : 3576.6765833250247,
+    "id" : "0F59ECD7-AFD5-4727-9755-067EB6585AA3",
+    "incorrectActionRate" : 1,
+    "missingActions" : 1,
+    "mode" : "real-streaming-ASR-batch-refinement-synthetic-audio-mock-native",
+    "observedTools" : [
+      "note.create"
+    ],
+    "outOfOrderActions" : 0,
+    "partialSTTMilliseconds" : 618.8614999991842,
+    "scenario" : 2,
+    "speechSource" : "batchRefinement",
+    "unverifiedActions" : 0
+  },
+  {
+    "cancelled" : false,
+    "completionMilliseconds" : 4006.7983333428856,
+    "date" : 812739665.149173,
+    "decisionMilliseconds" : 0.08194345407121416,
+    "decisionSources" : [
+      "deterministic"
+    ],
+    "duplicateActionRate" : 0,
+    "failedActions" : 0,
+    "firstActionMilliseconds" : 4006.7638750188053,
+    "id" : "C4F02D9A-FCB9-4AF6-9B1E-A02EC455F6A5",
+    "incorrectActionRate" : 1,
+    "missingActions" : 1,
+    "mode" : "real-streaming-ASR-batch-refinement-synthetic-audio-mock-native",
+    "observedTools" : [
+      "note.append_current"
+    ],
+    "outOfOrderActions" : 0,
+    "partialSTTMilliseconds" : 931.7211666784715,
+    "scenario" : 3,
+    "speechSource" : "batchRefinement",
+    "unverifiedActions" : 0
+  },
+  {
+    "cancelled" : false,
+    "completionMilliseconds" : 1108.6658333369996,
+    "date" : 812739666.260923,
+    "decisionMilliseconds" : 0.22955208987696096,
+    "decisionSources" : [
+      "deterministic"
+    ],
+    "duplicateActionRate" : 0,
+    "failedActions" : 0,
+    "firstActionMilliseconds" : 1108.630083326716,
+    "id" : "20D5F261-2834-402E-B45B-0FF9D7A86992",
+    "incorrectActionRate" : 0,
+    "missingActions" : 0,
+    "mode" : "real-streaming-ASR-batch-refinement-synthetic-audio-mock-native",
+    "observedTools" : [
+      "application.open"
+    ],
+    "outOfOrderActions" : 0,
+    "partialSTTMilliseconds" : 537.7983333310112,
+    "scenario" : 4,
+    "speechSource" : "batchRefinement",
+    "unverifiedActions" : 0
+  },
+  {
+    "cancelled" : false,
+    "completionMilliseconds" : 1792.5697916653007,
+    "date" : 812739668.056785,
+    "decisionMilliseconds" : 0.5289345322775522,
+    "decisionSources" : [
+      "deterministic"
+    ],
+    "duplicateActionRate" : 0,
+    "failedActions" : 0,
+    "firstActionMilliseconds" : 1792.5197499862406,
+    "id" : "99BC1EAE-92AC-4935-80D7-35BF79BA9C62",
+    "incorrectActionRate" : 0,
+    "missingActions" : 0,
+    "mode" : "real-streaming-ASR-batch-refinement-synthetic-audio-mock-native",
+    "observedTools" : [
+      "web.open_url"
+    ],
+    "outOfOrderActions" : 0,
+    "partialSTTMilliseconds" : 636.4392916439101,
+    "scenario" : 5,
+    "speechSource" : "batchRefinement",
+    "unverifiedActions" : 0
+  },
+  {
+    "cancelled" : false,
+    "completionMilliseconds" : 3605.282791686477,
+    "date" : 812739671.667031,
+    "decisionMilliseconds" : 0.5760972174660614,
+    "decisionSources" : [
+      "deterministic"
+    ],
+    "duplicateActionRate" : 0,
+    "failedActions" : 0,
+    "firstActionMilliseconds" : 3605.242499994347,
+    "id" : "356497BC-F219-4F64-98D7-39BB72AAA291",
+    "incorrectActionRate" : 0,
+    "missingActions" : 0,
+    "mode" : "real-streaming-ASR-batch-refinement-synthetic-audio-mock-native",
+    "observedTools" : [
+      "web.open_url"
+    ],
+    "outOfOrderActions" : 0,
+    "partialSTTMilliseconds" : 638.8498333399184,
+    "scenario" : 6,
+    "speechSource" : "batchRefinement",
+    "unverifiedActions" : 0
+  },
+  {
+    "cancelled" : false,
+    "completionMilliseconds" : 1172.6969166484196,
+    "date" : 812739672.843523,
+    "decisionMilliseconds" : 0.49446666962467134,
+    "decisionSources" : [
+      "deterministic"
+    ],
+    "duplicateActionRate" : 0,
+    "failedActions" : 0,
+    "firstActionMilliseconds" : 1172.6604999857955,
+    "id" : "58A476AC-6CCE-4CEF-AF7E-10048E43667E",
+    "incorrectActionRate" : 0,
+    "missingActions" : 0,
+    "mode" : "real-streaming-ASR-batch-refinement-synthetic-audio-mock-native",
+    "observedTools" : [
+      "application.open"
+    ],
+    "outOfOrderActions" : 0,
+    "partialSTTMilliseconds" : 531.9617499771994,
+    "scenario" : 7,
+    "speechSource" : "batchRefinement",
+    "unverifiedActions" : 0
+  },
+  {
+    "cancelled" : false,
+    "completionMilliseconds" : 1813.8722916773986,
+    "date" : 812739674.66072,
+    "decisionMilliseconds" : 0.10439583275001496,
+    "decisionSources" : [
+      "deterministic"
+    ],
+    "duplicateActionRate" : 0,
+    "failedActions" : 0,
+    "firstActionMilliseconds" : 1813.8342916790862,
+    "id" : "13CB9E70-22DF-40B1-BD1C-F648EA0AE447",
+    "incorrectActionRate" : 1,
+    "missingActions" : 1,
+    "mode" : "real-streaming-ASR-batch-refinement-synthetic-audio-mock-native",
+    "observedTools" : [
+      "web.open_url"
+    ],
+    "outOfOrderActions" : 0,
+    "partialSTTMilliseconds" : 789.6677500102669,
+    "scenario" : 8,
+    "speechSource" : "batchRefinement",
+    "unverifiedActions" : 0
+  },
+  {
+    "cancelled" : false,
+    "completionMilliseconds" : 2898.3933333365712,
+    "date" : 812739677.563252,
+    "decisionMilliseconds" : 0.09050462783003847,
+    "decisionSources" : [
+      "deterministic"
+    ],
+    "duplicateActionRate" : 0,
+    "failedActions" : 0,
+    "firstActionMilliseconds" : 2898.355333338259,
+    "id" : "FAE755F3-FFD1-4214-9DEB-D8776FCF4825",
+    "incorrectActionRate" : 1,
+    "missingActions" : 1,
+    "mode" : "real-streaming-ASR-batch-refinement-synthetic-audio-mock-native",
+    "observedTools" : [
+      "reminder.create"
+    ],
+    "outOfOrderActions" : 0,
+    "partialSTTMilliseconds" : 933.9099583448842,
+    "scenario" : 9,
+    "speechSource" : "batchRefinement",
+    "unverifiedActions" : 0
+  },
+  {
+    "cancelled" : false,
+    "completionMilliseconds" : 3883.8374999759253,
+    "date" : 812739681.453208,
+    "decisionMilliseconds" : 0.30829419494804106,
+    "decisionSources" : [
+      "deterministic"
+    ],
+    "duplicateActionRate" : 0,
+    "failedActions" : 0,
+    "firstActionMilliseconds" : 1604.4511666405015,
+    "id" : "68AB323A-75A6-4E76-83DD-3329413FBEE7",
+    "incorrectActionRate" : 0.3333333333333333,
+    "missingActions" : 1,
+    "mode" : "real-streaming-ASR-batch-refinement-synthetic-audio-mock-native",
+    "observedTools" : [
+      "application.open",
+      "application.open",
+      "web.open_url"
+    ],
+    "outOfOrderActions" : 0,
+    "partialSTTMilliseconds" : 688.9470416645054,
+    "scenario" : 10,
+    "speechSource" : "batchRefinement",
+    "unverifiedActions" : 0
+  }
+]

@@ -1,0 +1,1193 @@
+{
+  "repository": "/Users/anuragtummapudi/Localflow-project/LocalFlow",
+  "head": "83290ea1a2797c2df662afa1afbe5822417386b8",
+  "counts": {
+    "taskStartTrackedModified": 22,
+    "taskStartUntrackedFiles": 58,
+    "currentTrackedModified": 23,
+    "currentUntrackedFiles": 128
+  },
+  "taskDelta": [
+    {
+      "path": "App/DictationCoordinator.swift",
+      "gitStatus": " M",
+      "taskDelta": "modified",
+      "beforeSHA256": "f4c5701d21cc1a3f7788cdb6143e04184fce3a2377d1b3e390758f5bae4c4a41",
+      "afterSHA256": "e4dba8eba9d568e4052ace15ff2442aa5d27fbbc8dbfeaec6bcbade56de588c0"
+    },
+    {
+      "path": "App/SettingsRootView.swift",
+      "gitStatus": " M",
+      "taskDelta": "modified",
+      "beforeSHA256": "2f0389a3777155445198351c68267eb66ba0ab253bcef557727fa030da6e792d",
+      "afterSHA256": "6ace15150bd226f382e53f0786e0dea9498664fadc6b4392d5be15a94accbf9d"
+    },
+    {
+      "path": "Shared/VocabularyStore.swift",
+      "gitStatus": " M",
+      "taskDelta": "modified",
+      "beforeSHA256": "b8e234733ed7053b38149f6c1890c221fdffd900d5e29e9f77087ed31b840470",
+      "afterSHA256": "584e244c36cb45a53ca212896cc386b827af411b98ffdb29f11106dd0c966ddf"
+    },
+    {
+      "path": "Core/ModelManager/DecisionModelManager.swift",
+      "gitStatus": "??",
+      "taskDelta": "modified",
+      "beforeSHA256": "fd859a059de2a0bc74d4bb579c9fb1568c2c5421982360662376c7ca7f02bcbe",
+      "afterSHA256": "bde3dd8901ed279156669c5c26ee9378b3b8d910fdbe170f5d48c6ff38341f3c"
+    },
+    {
+      "path": "DECISIONS.md",
+      "gitStatus": "??",
+      "taskDelta": "modified",
+      "beforeSHA256": "b8c2c6f46e3d5af0b699da982db4405adf687abc747ff3ffcd01f74bb531de2f",
+      "afterSHA256": "b62af36d3a62bf3a753bab8a0de7e4bcfebe329bf476da61c441cef98c260a83"
+    },
+    {
+      "path": "Evaluation/RealityGate/GUIDED_VALIDATION.md",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "43789d1a954136b32d3c18ce897e5092064f2c133616ab6f37672bcd3fcb27ab"
+    },
+    {
+      "path": "Evaluation/RealityGate/README.md",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "ec34723c969af7a64ef75a05b8d105193a274e07232a0cf9b6d6acae7e27eb9b"
+    },
+    {
+      "path": "Evaluation/RealityGate/RESEARCH.md",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "446720314d444012da1e8d9e7a4ef13021e3ac70e9b87295c337c98f03f19783"
+    },
+    {
+      "path": "Evaluation/RealityGate/asr-after.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "6dd2a93b5a2704233493844dce076ef030369efabe292f9783cccf81c9811a2e"
+    },
+    {
+      "path": "Evaluation/RealityGate/asr-before.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "630dc28dd92d257ea084fa40fead4d2671b12fcc6095ec143692fbbc090d6124"
+    },
+    {
+      "path": "Evaluation/RealityGate/asr-final.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "2df99b3baafabce34d8d8f322dd09061870fe376434c6fa72b3fbeef9cf92c58"
+    },
+    {
+      "path": "Evaluation/RealityGate/asr-summary.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "83cfa44f2efe9e3370a8d6fa8fdc6fed1ca6717360b61bb21094eaa43af77301"
+    },
+    {
+      "path": "Evaluation/RealityGate/audio-qc.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "40a1be5dc5e5b64ab9274b671a99598db44fb33acc8eddaa4723939606588818"
+    },
+    {
+      "path": "Evaluation/RealityGate/build_corpus.py",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "ad46d7047374a942ef835e32af3c9b769cd0b4c19aec64a721ee0fb1c23add24"
+    },
+    {
+      "path": "Evaluation/RealityGate/calibration.jsonl",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "825e9f6567aa3d5530ec84ffec3a85e2bd5b68f344a636a63e1b3a8a882bedc7"
+    },
+    {
+      "path": "Evaluation/RealityGate/check_quality.py",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "e7ac91c7f0e9f86e012aa18084534215e9790950acfef174ade6159dc95da0b3"
+    },
+    {
+      "path": "Evaluation/RealityGate/conversion-status.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "4cee6a45649c471f7ee668ee794f39ff0e6f8678ac9711021882b66e526d22b3"
+    },
+    {
+      "path": "Evaluation/RealityGate/corpus.tsv",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "8c1793759067b775cf49e07e8f3107af0f0782b3c13b6e49cb7634addd988067"
+    },
+    {
+      "path": "Evaluation/RealityGate/decisions.py",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "d4bd68e029bc282806f83afddba5ddf242eca127dd21e5e43f74d6d969fbf16a"
+    },
+    {
+      "path": "Evaluation/RealityGate/deterministic-predictions.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "d0e8937979e6528a87ba97e4b14dc6942f427bc78d75371759853fb152a78ecb"
+    },
+    {
+      "path": "Evaluation/RealityGate/deterministic-report.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "afc5129351f85d2b581bfb217b5c4991d9839b7d0e4345d838ebdc1d8d29b6ef"
+    },
+    {
+      "path": "Evaluation/RealityGate/fetch_checkpoints.py",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "d61ef22b6267e6db4bf9f9628b50fbc81c5c8a46a5f943ac799caf30f8ba992b"
+    },
+    {
+      "path": "Evaluation/RealityGate/fp16-parity.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "8b86707606659257dab6eb57acfd854f38fe7f49fd53168c5f8f4f4f85effb18"
+    },
+    {
+      "path": "Evaluation/RealityGate/inference_candidates.py",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "eabfaa1094d567cefb551b568e938ca9f9be9f70e17f1904d428eb445c8e6cbd"
+    },
+    {
+      "path": "Evaluation/RealityGate/int8-parity.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "6f38c18e0072436732899c5b12ba488f46a3c99630fd555366d5798a91839a02"
+    },
+    {
+      "path": "Evaluation/RealityGate/live-results.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "d06204c94b307e6fc39fc8a1c47c6154819ae6525a05565286080793dc343ba9"
+    },
+    {
+      "path": "Evaluation/RealityGate/metrics.py",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "a60b5a9e53f2266a99dd5bd75a97a8bc0ee0190374de7a47fd2807eaf059f883"
+    },
+    {
+      "path": "Evaluation/RealityGate/model_pipeline.py",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "87e6a6681684d220f8f29ae20dcdf6eb8aee24dc2ae263dcaf3f011129c476e5"
+    },
+    {
+      "path": "Evaluation/RealityGate/onnx-parity.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "9c5d737cfa7ffbafc73dacc63cbd45ec70ca0f9258e055a9cc4061e3387702c1"
+    },
+    {
+      "path": "Evaluation/RealityGate/payload-failures.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "4c9a8f256f8c204a1adb42890d61b28fe49f669342c119e75d197ee32c252aaa"
+    },
+    {
+      "path": "Evaluation/RealityGate/payload-final.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "7bab23df90cc995d88d51cdf883cf8c4a6f803a7798339845bea68a49383c695"
+    },
+    {
+      "path": "Evaluation/RealityGate/public-provenance.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "5bf172751e6b43d9e82e9cd8e4d9812cfa92a01ff641f29647d2f3988e290c73"
+    },
+    {
+      "path": "Evaluation/RealityGate/quality-gate.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "d539f94cd0a3092a359aeca25d8b359e1aeb72083c7d7cfcde35769218e866b0"
+    },
+    {
+      "path": "Evaluation/RealityGate/requirements-training.txt",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "16720f21fd29679bd47c4b8358502050f090dc5390226cdabbd0e394dbd42f39"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/english-mps-fp32/predictions.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "a0925155c220beae58c58d31e56b44f69b3a1a82fc854e564d0817bbc14024f8"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/english-mps-fp32/report.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "0b3daf82f598824df3bd7c1f1e924ea9a98b9eef1a5766abe718d43c4c46592c"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/english-onnx-cpu/predictions.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "6d15950a28a1c200b1484650ae4f70944ea96138cea836537e770c6e1dad4a00"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/english-onnx-cpu/report.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "7a7170497cb4c96c724263bcaf0b7599b1d9c61faa73b11f3df85cd40b592f09"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/english-onnx-int8/predictions.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "037c6268161caa49ff6b50b7327d17df5fc4ee2b648d3b779a97a404b45f7bdd"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/english-onnx-int8/report.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "18cbaf210c9ed7d9836feda6527f18788e9b2d8efea7314f3f7768c1b7ee4781"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/localflow-laya-v1-mps-fp16/predictions.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "b467ca497d3845a66ed0b6f971c27687cb0f4f0805d6d8caaddacc1f9b525923"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/localflow-laya-v1-mps-fp16/report.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "2aa8fea77ec951af89eddd4384a9c568c0e73203bb843470e4113cd13e7c2c37"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/localflow-laya-v1-mps-fp32/predictions.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "bfe5fc89f09323138af554e9597cd98db0b8823a17a825a3498291d13ba59c79"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/localflow-laya-v1-mps-fp32/report.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "49696bd9040d3208e88daf4fac9ca0fbc2ad623667590e01da591b49fad70012"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/multilingual-assets.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "25b67083868473981dffe9e73478cf709cab3686652ae28edf8b7f4c9d3415c8"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/multilingual-mps-fp16/predictions.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "4724238ef2165663e827ff078f4881315d3a395a58158f68b65bb12573ce51df"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/multilingual-mps-fp16/report.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "5e4d21e3e0d5098b22487b493fdd927c8b4142b3c0aa6441a249a8f0721f28ca"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/multilingual-mps-fp32/predictions.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "1b58efe04f715358117181784dfcc7dfa603b87cb0db560d5ceeae53884423e1"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/multilingual-mps-fp32/report.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "a3638947406991b88a9c072b1944449c2d1dd0d14a482ecf8fcc0b4b74dab8d3"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/typed-assets.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "b0933f36f45071838fb8a896c95fab7a8a465896139dcd37e246005ade5d007f"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/typed-mps-fp32/predictions.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "67e33190bdc520a3e31a43c8393bfe2e846254009be90ff8b2cbf5bfc01d3991"
+    },
+    {
+      "path": "Evaluation/RealityGate/results/typed-mps-fp32/report.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "534a373fa7643b2874abad4633d143c1e0433d9f698a028e3acfdeee4740ece4"
+    },
+    {
+      "path": "Evaluation/RealityGate/run_gpu.sh",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "caf7ededd114cece81286d05f986d6410581adff5967599c6d2f9ded9b9ff35f"
+    },
+    {
+      "path": "Evaluation/RealityGate/split-manifest.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "e8247ce3b8d17ae3afbeadcfca9dcdc1a460dc4ff7945bca3a69b9d669775e14"
+    },
+    {
+      "path": "Evaluation/RealityGate/test-runs.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "77e2f8852afc2b2f171b55b5e16aace2b3b88f025cc4e9ffbc0b877beb1863b6"
+    },
+    {
+      "path": "Evaluation/RealityGate/test.jsonl",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "f75dae25cad37c472bd34dc3df8366efb392343994f7059dd4134b6ba44d6a9d"
+    },
+    {
+      "path": "Evaluation/RealityGate/test_pipeline.py",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "b09054f6c6e3dd95edb8d00ca10c1ae81c73de1e4b773a1507771123da40a192"
+    },
+    {
+      "path": "Evaluation/RealityGate/train.jsonl",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "4a4cef924f2c7925dc93876aa5daeb1d395976de13375ddb3b68945a3cba291c"
+    },
+    {
+      "path": "Evaluation/RealityGate/trained-fp16-parity.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "c073af3b6970d8e909764f99681e7390aed9ae8ed1052933d8fab12cde05e2f4"
+    },
+    {
+      "path": "Evaluation/RealityGate/training/aborted-first-training-config.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "339fcf8a315052e6e32ee4456df2377d1afcc18cb5520a497a3192a19a754554"
+    },
+    {
+      "path": "Evaluation/RealityGate/training/aborted-first-training-metrics.jsonl",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "d38c56bba5b7fc1fbe39c6e6213eaacbee7ceccba0a0caeff58d7f514c01c31d"
+    },
+    {
+      "path": "Evaluation/RealityGate/training/calibration.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "e7439d34b8250342e9a39f6827fbf8d1a5e88247e4136f1cb234dd49fa12aff8"
+    },
+    {
+      "path": "Evaluation/RealityGate/training/executed-metrics-source.py",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "a60b5a9e53f2266a99dd5bd75a97a8bc0ee0190374de7a47fd2807eaf059f883"
+    },
+    {
+      "path": "Evaluation/RealityGate/training/executed-training-source.py",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "21b1de70ea04bb600dba146b28c29bb2b7cbff12f6c1ffaaae0e0716b4b91c2b"
+    },
+    {
+      "path": "Evaluation/RealityGate/training/smoke-training-config.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "9606de7eeb8de399c23a8463ad28b96bdc3b73306c7121042849208b7979ec90"
+    },
+    {
+      "path": "Evaluation/RealityGate/training/smoke-training-metrics.jsonl",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "a1bb457a37068f771db656ffe6b5faa88387994907f1a267d78f246614a6b7a1"
+    },
+    {
+      "path": "Evaluation/RealityGate/training/smoke-training-status.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "0186e8f1992ca70434026a687847a302539294d57c07e063203159c78c2a81d9"
+    },
+    {
+      "path": "Evaluation/RealityGate/training/training-config.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "2cdf440872bcdb97458d9ae53d2c7c6c17e54242a5bb4c76a1dca2d4adb28a02"
+    },
+    {
+      "path": "Evaluation/RealityGate/training/training-metrics.jsonl",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "083c15785b81d0a86bfa9857963c9c55a8dbfaf3270d58d26f158b5f6ecfec8a"
+    },
+    {
+      "path": "Evaluation/RealityGate/training/training-status.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "88383988c865874a2e1c66d4bb7b3a339fda418242d3ea8ec2b0086d0ad96b98"
+    },
+    {
+      "path": "Evaluation/RealityGate/verification-record.json",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "93c72512cf5451f5abca7119ff6a075029087e9da33789a7db9f20da2783435c"
+    },
+    {
+      "path": "Features/CommandMode/IncrementalSpeech.swift",
+      "gitStatus": "??",
+      "taskDelta": "modified",
+      "beforeSHA256": "6120a732d7858b27c918c4ef1fa7dd90d982df73a10ecd429b7a822db89a0e1b",
+      "afterSHA256": "d9a13a144f1e889ec5e172721b6b39be9bc40afb011de0bb63a506e5969c7052"
+    },
+    {
+      "path": "Features/CommandMode/NativeTools.swift",
+      "gitStatus": "??",
+      "taskDelta": "modified",
+      "beforeSHA256": "69142cd6d419b8da95aa8360f49c119ffde349801e1e5d84eba0baea744e9f4d",
+      "afterSHA256": "d6ba649383cd0f8edb75711315513fa8b59b36a18636f81634428fb2d4b47498"
+    },
+    {
+      "path": "Features/CommandMode/VoiceAgentCoordinator.swift",
+      "gitStatus": "??",
+      "taskDelta": "modified",
+      "beforeSHA256": "b801e02680f512001675d747faa0970e0c46b403f0a2ec7270939f6a08caf0f7",
+      "afterSHA256": "85c9222d052c005403b5a040d5cd9a2410752e9e67223edf216fa9015758e369"
+    },
+    {
+      "path": "REALITY_GATE_REPORT.md",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "b0c5e2b5d8ccdc068a348032a292fa207d575759c5e09a433d33ac65ac82e8c3"
+    },
+    {
+      "path": "Tests/FeaturesTests/NativeToolTests.swift",
+      "gitStatus": "??",
+      "taskDelta": "modified",
+      "beforeSHA256": "e69c9e32b617aefce723049505d91c0054aebe39709c914c245df11f04b1a994",
+      "afterSHA256": "ecd6898de2a585b4c88c21291fd82aa295d97ad4801adf87b27ca208e9f595be"
+    },
+    {
+      "path": "Tests/FeaturesTests/PayloadRealityTests.swift",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "3017ff3f1d96975779893b8c9ad4332615e5497213f748ad356c5a532e474ca8"
+    },
+    {
+      "path": "Tests/FeaturesTests/RealityCorpusTests.swift",
+      "gitStatus": "??",
+      "taskDelta": "added",
+      "beforeSHA256": null,
+      "afterSHA256": "57d0b76fd2cd768759403246611eb533c712204cb71e8749e37a891936ddba10"
+    },
+    {
+      "path": "Tests/FeaturesTests/VoiceAgentTests.swift",
+      "gitStatus": "??",
+      "taskDelta": "modified",
+      "beforeSHA256": "d9b5385a0aa0a7f0ac67c574a880c7bd08fcdc08ff013563e191615c0d5a7014",
+      "afterSHA256": "c5a7fc9057fcf0881c65a2ac2d3ee5417fa55d8f6c76f72bbbc993f30f664a8a"
+    },
+    {
+      "path": "Tests/SharedTests/LayaRuntimeTests.swift",
+      "gitStatus": "??",
+      "taskDelta": "modified",
+      "beforeSHA256": "505d29db9c55e535b1bc35ca87407837ee4cf7c459f4530b1086aeb58584e1bc",
+      "afterSHA256": "6985ad118d0d6dc7b15f840cb318119c4803a28dbf5e9741458dba055ee46546"
+    },
+    {
+      "path": "Tests/SharedTests/ParakeetStreamingIntegrationTests.swift",
+      "gitStatus": "??",
+      "taskDelta": "modified",
+      "beforeSHA256": "1ac76ffd832d2db4640ce77eebb3a67b60aaf19a30d247fb4387cea6f8ef469e",
+      "afterSHA256": "697f70783a9cdfb18938c1818bc1c56eddab7a81ef5e753e9c249229c3545db8"
+    },
+    {
+      "path": "VOICE_AGENT.md",
+      "gitStatus": "??",
+      "taskDelta": "modified",
+      "beforeSHA256": "b76bca2fb80e70f2f4028327fdc740b292ac01e5e80bfdaf2e00392c784be9a8",
+      "afterSHA256": "34fd84d5230c50f77c4af86e40b036710c8969883b64bb13a60fd8f2c1eeb1ae"
+    }
+  ],
+  "allWorkingTreeFiles": [
+    {
+      "status": " M",
+      "path": ".gitignore"
+    },
+    {
+      "status": " M",
+      "path": "App/AppServices.swift"
+    },
+    {
+      "status": " M",
+      "path": "App/CommandConfirmationView.swift"
+    },
+    {
+      "status": " M",
+      "path": "App/DictationCoordinator.swift"
+    },
+    {
+      "status": " M",
+      "path": "App/Info.plist"
+    },
+    {
+      "status": " M",
+      "path": "App/LocalFlow.entitlements"
+    },
+    {
+      "status": " M",
+      "path": "App/MenuBarController.swift"
+    },
+    {
+      "status": " M",
+      "path": "App/OverlayWindowController.swift"
+    },
+    {
+      "status": " M",
+      "path": "App/SettingsRootView.swift"
+    },
+    {
+      "status": " M",
+      "path": "App/SettingsViewModel.swift"
+    },
+    {
+      "status": " M",
+      "path": "App/WaveformOverlayView.swift"
+    },
+    {
+      "status": " M",
+      "path": "Core/AudioCapture/AudioCaptureSession.swift"
+    },
+    {
+      "status": " M",
+      "path": "Core/HotkeyManager/HotkeyManager.swift"
+    },
+    {
+      "status": " M",
+      "path": "Core/ModelManager/ModelManager.swift"
+    },
+    {
+      "status": " M",
+      "path": "Engines/TranscriptionRouter.swift"
+    },
+    {
+      "status": " M",
+      "path": "Features/CommandMode/CommandMode.swift"
+    },
+    {
+      "status": " M",
+      "path": "Features/CommandMode/SpotifyPlaybackController.swift"
+    },
+    {
+      "status": " M",
+      "path": "Package.swift"
+    },
+    {
+      "status": " M",
+      "path": "Shared/VocabularyStore.swift"
+    },
+    {
+      "status": " M",
+      "path": "Tests/FeaturesTests/FeaturesTests.swift"
+    },
+    {
+      "status": " M",
+      "path": "Tests/FeaturesTests/SmartFormattingTests.swift"
+    },
+    {
+      "status": " M",
+      "path": "Tests/FeaturesTests/SpeechCleanupTests.swift"
+    },
+    {
+      "status": " M",
+      "path": "Tests/SharedTests/SharedTests.swift"
+    },
+    {
+      "status": "??",
+      "path": "AGENTS.md"
+    },
+    {
+      "status": "??",
+      "path": "BASELINE.md"
+    },
+    {
+      "status": "??",
+      "path": "Core/ModelManager/DecisionModelManager.swift"
+    },
+    {
+      "status": "??",
+      "path": "Core/ModelManager/Resources/DecisionPreparation/Laya/evaluate.py"
+    },
+    {
+      "status": "??",
+      "path": "Core/ModelManager/Resources/DecisionPreparation/Laya/utterances.json"
+    },
+    {
+      "status": "??",
+      "path": "Core/ModelManager/Resources/DecisionPreparation/LayaHelper/Package.resolved"
+    },
+    {
+      "status": "??",
+      "path": "Core/ModelManager/Resources/DecisionPreparation/LayaHelper/Package.swift"
+    },
+    {
+      "status": "??",
+      "path": "Core/ModelManager/Resources/DecisionPreparation/LayaHelper/Sources/LayaHelper/LocalLaya.swift"
+    },
+    {
+      "status": "??",
+      "path": "Core/ModelManager/Resources/DecisionPreparation/laya-questions.json"
+    },
+    {
+      "status": "??",
+      "path": "Core/ModelManager/Resources/DecisionPreparation/prepare-laya.py"
+    },
+    {
+      "status": "??",
+      "path": "Core/ModelManager/Resources/DecisionPreparation/prepare-laya.sh"
+    },
+    {
+      "status": "??",
+      "path": "DECISIONS.md"
+    },
+    {
+      "status": "??",
+      "path": "Engines/ParakeetEngine/ParakeetStreamingEngine.swift"
+    },
+    {
+      "status": "??",
+      "path": "Engines/StreamingSTTEngine.swift"
+    },
+    {
+      "status": "??",
+      "path": "Engines/StreamingTranscriptionRouter.swift"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/Agent/VALIDATION.md"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/Agent/refined-results.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/Agent/scripted-results.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/Agent/streaming-results.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/Agent/summary.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/Laya/evaluate.py"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/Laya/test_calibration.py"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/Laya/validated-baseline.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/GUIDED_VALIDATION.md"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/README.md"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/RESEARCH.md"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/asr-after.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/asr-before.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/asr-final.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/asr-summary.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/audio-qc.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/build_corpus.py"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/calibration.jsonl"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/changed-files.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/check_quality.py"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/conversion-status.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/corpus.tsv"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/decisions.py"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/deterministic-predictions.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/deterministic-report.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/fetch_checkpoints.py"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/fp16-parity.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/inference_candidates.py"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/int8-parity.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/live-results.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/metrics.py"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/model_pipeline.py"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/onnx-parity.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/payload-failures.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/payload-final.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/public-provenance.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/quality-gate.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/requirements-training.txt"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/english-mps-fp32/predictions.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/english-mps-fp32/report.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/english-onnx-cpu/predictions.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/english-onnx-cpu/report.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/english-onnx-int8/predictions.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/english-onnx-int8/report.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/localflow-laya-v1-mps-fp16/predictions.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/localflow-laya-v1-mps-fp16/report.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/localflow-laya-v1-mps-fp32/predictions.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/localflow-laya-v1-mps-fp32/report.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/multilingual-assets.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/multilingual-mps-fp16/predictions.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/multilingual-mps-fp16/report.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/multilingual-mps-fp32/predictions.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/multilingual-mps-fp32/report.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/typed-assets.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/typed-mps-fp32/predictions.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/results/typed-mps-fp32/report.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/run_gpu.sh"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/split-manifest.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/test-runs.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/test.jsonl"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/test_pipeline.py"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/train.jsonl"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/trained-fp16-parity.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/training/aborted-first-training-config.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/training/aborted-first-training-metrics.jsonl"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/training/calibration.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/training/executed-metrics-source.py"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/training/executed-training-source.py"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/training/smoke-training-config.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/training/smoke-training-metrics.jsonl"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/training/smoke-training-status.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/training/training-config.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/training/training-metrics.jsonl"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/training/training-status.json"
+    },
+    {
+      "status": "??",
+      "path": "Evaluation/RealityGate/verification-record.json"
+    },
+    {
+      "status": "??",
+      "path": "Features/CommandMode/AgentBenchmark.swift"
+    },
+    {
+      "status": "??",
+      "path": "Features/CommandMode/DecisionEngine.swift"
+    },
+    {
+      "status": "??",
+      "path": "Features/CommandMode/IncrementalSpeech.swift"
+    },
+    {
+      "status": "??",
+      "path": "Features/CommandMode/LayaDecisionEngine.swift"
+    },
+    {
+      "status": "??",
+      "path": "Features/CommandMode/MacNativeToolSystem.swift"
+    },
+    {
+      "status": "??",
+      "path": "Features/CommandMode/NativeCommandParser.swift"
+    },
+    {
+      "status": "??",
+      "path": "Features/CommandMode/NativeTools.swift"
+    },
+    {
+      "status": "??",
+      "path": "Features/CommandMode/NativeUndoGuards.swift"
+    },
+    {
+      "status": "??",
+      "path": "Features/CommandMode/Resources/laya-questions.json"
+    },
+    {
+      "status": "??",
+      "path": "Features/CommandMode/Resources/voice-agent-stability.json"
+    },
+    {
+      "status": "??",
+      "path": "Features/CommandMode/SpotifyTransportPolicy.swift"
+    },
+    {
+      "status": "??",
+      "path": "Features/CommandMode/VoiceAgentCoordinator.swift"
+    },
+    {
+      "status": "??",
+      "path": "NATIVE_TOOLS.md"
+    },
+    {
+      "status": "??",
+      "path": "OPERATIONAL_MEMORY.md"
+    },
+    {
+      "status": "??",
+      "path": "OVERLAY.md"
+    },
+    {
+      "status": "??",
+      "path": "REALITY_GATE_REPORT.md"
+    },
+    {
+      "status": "??",
+      "path": "Runtime/README.md"
+    },
+    {
+      "status": "??",
+      "path": "STREAMING.md"
+    },
+    {
+      "status": "??",
+      "path": "Scripts/prepare-laya.sh"
+    },
+    {
+      "status": "??",
+      "path": "Shared/AgentMemoryStore.swift"
+    },
+    {
+      "status": "??",
+      "path": "Shared/OverlayState.swift"
+    },
+    {
+      "status": "??",
+      "path": "Shared/StreamingSpeech.swift"
+    },
+    {
+      "status": "??",
+      "path": "Tests/FeaturesTests/AgentOperationalTests.swift"
+    },
+    {
+      "status": "??",
+      "path": "Tests/FeaturesTests/DecisionEngineTests.swift"
+    },
+    {
+      "status": "??",
+      "path": "Tests/FeaturesTests/LocalSettingsTestCase.swift"
+    },
+    {
+      "status": "??",
+      "path": "Tests/FeaturesTests/NativeToolTests.swift"
+    },
+    {
+      "status": "??",
+      "path": "Tests/FeaturesTests/PayloadRealityTests.swift"
+    },
+    {
+      "status": "??",
+      "path": "Tests/FeaturesTests/RealityCorpusTests.swift"
+    },
+    {
+      "status": "??",
+      "path": "Tests/FeaturesTests/VoiceAgentTests.swift"
+    },
+    {
+      "status": "??",
+      "path": "Tests/SharedTests/AgentMemoryTests.swift"
+    },
+    {
+      "status": "??",
+      "path": "Tests/SharedTests/BatchOwnershipTests.swift"
+    },
+    {
+      "status": "??",
+      "path": "Tests/SharedTests/CascadingSTTEngineTests.swift"
+    },
+    {
+      "status": "??",
+      "path": "Tests/SharedTests/LayaRuntimeTests.swift"
+    },
+    {
+      "status": "??",
+      "path": "Tests/SharedTests/OverlayStateTests.swift"
+    },
+    {
+      "status": "??",
+      "path": "Tests/SharedTests/ParakeetStreamingIntegrationTests.swift"
+    },
+    {
+      "status": "??",
+      "path": "Tests/SharedTests/StreamingTranscriptionTests.swift"
+    },
+    {
+      "status": "??",
+      "path": "VERSION_EVOLUTION_SUMMARY.md"
+    },
+    {
+      "status": "??",
+      "path": "VOICE_AGENT.md"
+    }
+  ],
+  "inventoryHashExcluded": true
+}

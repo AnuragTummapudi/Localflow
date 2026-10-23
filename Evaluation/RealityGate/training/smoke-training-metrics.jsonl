@@ -1,0 +1,3 @@
+{"update": 1, "microSteps": 2, "epoch": 0, "meanLoss": 1.2958760410547256, "elapsedSeconds": 8.02260720799677}
+{"update": 2, "microSteps": 4, "epoch": 0, "meanLoss": 2.550766348838806, "elapsedSeconds": 11.666188750008587}
+{"update": 3, "microSteps": 6, "epoch": 0, "meanLoss": -0.04464951157569885, "elapsedSeconds": 13.695577417005552}

@@ -1,0 +1,20 @@
+{
+  "checkpoint": "LocalFlow-Laya-v2",
+  "revision": "e4e9ddf21a7b1903b7acffd8814ad4307bf63a67",
+  "protocolVersion": 2,
+  "validated": true,
+  "checkpointSHA256": "b9a7d21a756740a11fe32d1ad44cba73898f96999b060fe437407a5c87c96e9a",
+  "files": {
+    "localflow-laya": "4a31e0028e5789e54ba09c4e653a08ecce8c4d579920b12d019b1246de7ded85",
+    "laya.onnx": "bc6448fad360dd7a4972e6a56d205295d51bc31dafe197bbb044a325a142af63",
+    "laya.onnx.data": "ad575d375cdb17aed4906c94eacd8a552ad60931c475368124c0daf1c965f9bc",
+    "tokenizer/tokenizer.json": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+    "tokenizer/tokenizer_config.json": "424b69444bf7b5809dc2cd2e36d0bd71b8055124dd24274d6db3c655d38205e7",
+    "questions.json": "e6ddd9e2ecfc88be47219f339d20ce415e3aea708b4f8445e3c58e77fc874cc4",
+    "option-order.json": "0f2397a584eefc09c8d60dee85c5196939410fb9de2c6b5163cf44b69a180987",
+    "calibration.json": "a9238fba275b53918c45a48a23b980e99a5bd759934df205430fc31109414f82",
+    "validation.json": "338bae28edceef3273aa49dac24a707f0330eb2d97882159ba673ebdf38c2f96",
+    "runtime-spec.json": "aa8b2bc818d382be188369d9c862ef1b8440ae768208979fcc2c501ae0e74762",
+    "training-provenance.json": "c334efa746024c33e0d7a74976e135a73620a821933c348c43b307c387a9b6f9"
+  }
+}

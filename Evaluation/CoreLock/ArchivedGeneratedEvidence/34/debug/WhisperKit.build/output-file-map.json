@@ -1,0 +1,173 @@
+{
+  "": {
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Audio/AudioChunker.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioChunker.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioChunker.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioChunker~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioChunker.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioChunker.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Audio/AudioProcessor.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioProcessor.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioProcessor.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioProcessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioProcessor.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioProcessor.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Audio/AudioStreamTranscriber.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioStreamTranscriber.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioStreamTranscriber.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioStreamTranscriber~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioStreamTranscriber.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioStreamTranscriber.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Audio/EnergyVAD.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/EnergyVAD.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/EnergyVAD.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/EnergyVAD~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/EnergyVAD.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/EnergyVAD.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Audio/VoiceActivityDetector.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/VoiceActivityDetector.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/VoiceActivityDetector.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/VoiceActivityDetector~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/VoiceActivityDetector.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/VoiceActivityDetector.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/AudioEncoder.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioEncoder.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioEncoder.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioEncoder~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioEncoder.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/AudioEncoder.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Configurations.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Configurations.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Configurations.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Configurations~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Configurations.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Configurations.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/FeatureExtractor.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/FeatureExtractor.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/FeatureExtractor.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/FeatureExtractor~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/FeatureExtractor.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/FeatureExtractor.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Models.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Models.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Models.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Models~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Models.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Models.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Text/LogitsFilter.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/LogitsFilter.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/LogitsFilter.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/LogitsFilter~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/LogitsFilter.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/LogitsFilter.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Text/SegmentSeeker.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/SegmentSeeker.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/SegmentSeeker.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/SegmentSeeker~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/SegmentSeeker.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/SegmentSeeker.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Text/TokenSampler.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TokenSampler.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TokenSampler.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TokenSampler~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TokenSampler.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TokenSampler.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/TextDecoder.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TextDecoder.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TextDecoder.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TextDecoder~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TextDecoder.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TextDecoder.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/TranscribeTask.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TranscribeTask.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TranscribeTask.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TranscribeTask~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TranscribeTask.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TranscribeTask.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/WhisperKit.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/WhisperKit.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/WhisperKit.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/WhisperKit~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/WhisperKit.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/WhisperKit.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/Concurrency.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Concurrency.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Concurrency.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Concurrency~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Concurrency.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Concurrency.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/Extensions+Internal.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Extensions+Internal.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Extensions+Internal.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Extensions+Internal~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Extensions+Internal.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Extensions+Internal.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/Extensions+Public.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Extensions+Public.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Extensions+Public.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Extensions+Public~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Extensions+Public.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Extensions+Public.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/Logging.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Logging.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Logging.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Logging~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Logging.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/Logging.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/ModelUtilities.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/ModelUtilities.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/ModelUtilities.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/ModelUtilities~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/ModelUtilities.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/ModelUtilities.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/ResultWriter.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/ResultWriter.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/ResultWriter.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/ResultWriter~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/ResultWriter.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/ResultWriter.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/TextUtilities.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TextUtilities.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TextUtilities.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TextUtilities~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TextUtilities.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TextUtilities.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/TranscriptionUtilities.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TranscriptionUtilities.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TranscriptionUtilities.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TranscriptionUtilities~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TranscriptionUtilities.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/TranscriptionUtilities.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/WhisperError.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/WhisperError.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/WhisperError.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/WhisperError~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/WhisperError.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/WhisperKit.build/WhisperError.dia"
+  }
+}

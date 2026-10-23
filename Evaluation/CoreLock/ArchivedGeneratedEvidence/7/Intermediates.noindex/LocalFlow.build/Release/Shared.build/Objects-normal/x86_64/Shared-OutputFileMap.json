@@ -1,0 +1,41 @@
+{
+  "" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/Shared-primary.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/Shared-primary.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/Shared-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/Shared-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/Shared-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/Shared-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/Shared-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Shared/AgentDebugLog.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/AgentDebugLog.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/AgentDebugLog.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/AgentDebugLog.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Shared/DictationHistoryStore.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/DictationHistoryStore.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/DictationHistoryStore.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/DictationHistoryStore.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Shared/LocalFlowSettings.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/LocalFlowSettings.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/LocalFlowSettings.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/LocalFlowSettings.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Shared/NetworkActivityCounter.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/NetworkActivityCounter.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/NetworkActivityCounter.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/NetworkActivityCounter.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Shared/SharedTypes.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/SharedTypes.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/SharedTypes.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/SharedTypes.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Shared/VocabularyStore.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/VocabularyStore.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/VocabularyStore.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/Shared.build/Objects-normal/x86_64/VocabularyStore.o"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "accessibility" : "READY",
+  "automationNotesOSStatus" : 0,
+  "automationSpotifyOSStatus" : 0,
+  "inputSource" : "fixed developer requests, no microphone",
+  "microphone" : "READY",
+  "results" : [
+    {
+      "arguments" : "application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: Optional(file:\/\/\/System\/Applications\/Notes.app\/), confidence: 1.0, alternateNames: []), processID: nil)",
+      "milliseconds" : 99.638083333957184,
+      "output" : "application(10020)",
+      "receipt" : "Notes focused",
+      "scenario" : "Open Notes",
+      "status" : "VERIFIED",
+      "tool" : "application.open"
+    },
+    {
+      "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+      "milliseconds" : 71.433499999329797,
+      "output" : "application(14070)",
+      "receipt" : "Safari focused",
+      "scenario" : "Open Safari",
+      "status" : "VERIFIED",
+      "tool" : "application.open"
+    },
+    {
+      "arguments" : "application(CommandMode.ApplicationMatch(name: \"Google Chrome\", bundleIdentifier: Optional(\"com.google.Chrome\"), url: Optional(file:\/\/\/Applications\/Google%20Chrome.app\/), confidence: 1.0, alternateNames: [\"Chrome\"]), processID: nil)",
+      "milliseconds" : 208.70437499979744,
+      "output" : "application(2060)",
+      "receipt" : "Google Chrome focused",
+      "scenario" : "Open Chrome",
+      "status" : "VERIFIED",
+      "tool" : "application.open"
+    },
+    {
+      "arguments" : "url(https:\/\/github.com)",
+      "milliseconds" : 43.348875000447151,
+      "output" : "openedURL(https:\/\/github.com)",
+      "reason" : "The browser accepted the URL; page loading is not verified.",
+      "receipt" : "Website opened",
+      "scenario" : "Open github.com",
+      "status" : "UNVERIFIED",
+      "tool" : "web.open_url"
+    },
+    {
+      "arguments" : "url(https:\/\/www.google.com\/search?q=Norbert%20Wiener)",
+      "milliseconds" : 16.380208333430346,
+      "output" : "openedURL(https:\/\/www.google.com\/search?q=Norbert%20Wiener)",
+      "reason" : "The browser accepted the URL; page loading is not verified.",
+      "receipt" : "Website opened",
+      "scenario" : "Search for Norbert Wiener",
+      "status" : "UNVERIFIED",
+      "tool" : "web.open_url"
+    },
+    {
+      "reason" : "No exact executable parser result",
+      "scenario" : "Open nonexistent application",
+      "status" : "UNAVAILABLE"
+    },
+    {
+      "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+      "milliseconds" : 37.591999999676773,
+      "output" : "application(14070)",
+      "receipt" : "Safari focused",
+      "scenario" : "Open Safari",
+      "status" : "VERIFIED",
+      "tool" : "application.open"
+    },
+    {
+      "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+      "milliseconds" : 36.410166667337762,
+      "output" : "application(14070)",
+      "receipt" : "Safari focused",
+      "scenario" : "Open Chrome, actually Safari",
+      "status" : "VERIFIED",
+      "tool" : "application.open"
+    },
+    {
+      "arguments" : "note(title: \"LocalFlow Ideas\", body: \"hello from LocalFlow\")",
+      "milliseconds" : 1796.200000000681,
+      "reason" : "Native automation failed (-1728).",
+      "scenario" : "Create exact test note",
+      "status" : "FAILED",
+      "tool" : "note.create"
+    },
+    {
+      "arguments" : "note(title: \"LocalFlow Ideas\", body: \"hello from LocalFlow\")",
+      "milliseconds" : 783.78199999951903,
+      "reason" : "Native automation failed (-1728).",
+      "scenario" : "Create owned note for exact write acceptance",
+      "status" : "FAILED",
+      "tool" : "note.create"
+    },
+    {
+      "arguments" : "reminder(title: \"Review LocalFlow Ideas\", notes: nil, due: nil)",
+      "milliseconds" : 689.28595833313011,
+      "output" : "reminder(\"5D7D4AFE-AA6F-4B2D-822A-5B1A150E7E36\")",
+      "receipt" : "Reminder created",
+      "scenario" : "Create exact test reminder",
+      "status" : "VERIFIED",
+      "tool" : "reminder.create"
+    },
+    {
+      "arguments" : "reminder(title: \"Review LocalFlow Ideas\", notes: nil, due: nil)",
+      "milliseconds" : 0,
+      "output" : "none",
+      "receipt" : "Action undone",
+      "scenario" : "Guarded test-reminder Undo",
+      "status" : "VERIFIED",
+      "tool" : "reminder.create"
+    },
+    {
+      "arguments" : "volume(40)",
+      "milliseconds" : 450.10508333325561,
+      "output" : "volume(40, muted: false)",
+      "receipt" : "Volume 40%",
+      "scenario" : "Native reversible command",
+      "status" : "VERIFIED",
+      "tool" : "system.volume_set"
+    },
+    {
+      "arguments" : "volume(40)",
+      "milliseconds" : 0,
+      "output" : "none",
+      "receipt" : "Action undone",
+      "scenario" : "Guarded native Undo",
+      "status" : "VERIFIED",
+      "tool" : "system.volume_set"
+    },
+    {
+      "arguments" : "none",
+      "milliseconds" : 5.9454583333717892,
+      "output" : "volume(94, muted: true)",
+      "receipt" : "Audio muted",
+      "scenario" : "Native reversible command",
+      "status" : "VERIFIED",
+      "tool" : "system.mute"
+    },
+    {
+      "arguments" : "none",
+      "milliseconds" : 0,
+      "output" : "none",
+      "receipt" : "Action undone",
+      "scenario" : "Guarded native Undo",
+      "status" : "VERIFIED",
+      "tool" : "system.mute"
+    },
+    {
+      "arguments" : "spotify(CommandMode.SpotifyPlaybackAction.pause)",
+      "milliseconds" : 451.79062499937572,
+      "output" : "media",
+      "receipt" : "Spotify updated",
+      "scenario" : "Native reversible command",
+      "status" : "VERIFIED",
+      "tool" : "spotify.transport"
+    },
+    {
+      "arguments" : "none",
+      "milliseconds" : 0,
+      "reason" : "Frozen confirmation prepared; native effect not performed.",
+      "scenario" : "Consequential preview",
+      "status" : "ACTION REQUIRED",
+      "tool" : "system.lock"
+    },
+    {
+      "arguments" : "none",
+      "milliseconds" : 0,
+      "reason" : "This confirmation is no longer valid.",
+      "scenario" : "Cancelled preview cannot execute",
+      "status" : "FAILED",
+      "tool" : "system.lock"
+    }
+  ],
+  "run" : "2026-10-04T07:50:20Z"
+}

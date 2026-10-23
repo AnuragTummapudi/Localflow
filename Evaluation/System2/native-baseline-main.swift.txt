@@ -1,0 +1,90 @@
+import Darwin
+import Foundation
+import MLX
+import MLXLLM
+import MLXLMCommon
+import Tokenizers
+
+struct LocalTokenizer: MLXLMCommon.Tokenizer {
+    let base: any Tokenizers.Tokenizer
+    func encode(text: String, addSpecialTokens: Bool) -> [Int] { base.encode(text: text, addSpecialTokens: addSpecialTokens) }
+    func decode(tokenIds: [Int], skipSpecialTokens: Bool) -> String { base.decode(tokens: tokenIds, skipSpecialTokens: skipSpecialTokens) }
+    func convertTokenToId(_ token: String) -> Int? { base.convertTokenToId(token) }
+    func convertIdToToken(_ id: Int) -> String? { base.convertIdToToken(id) }
+    var bosToken: String? { base.bosToken }
+    var eosToken: String? { base.eosToken }
+    var unknownToken: String? { base.unknownToken }
+    func applyChatTemplate(messages: [[String: any Sendable]], tools: [[String: any Sendable]]?, additionalContext: [String: any Sendable]?) throws -> [Int] {
+        try base.applyChatTemplate(messages: messages, tools: tools, additionalContext: additionalContext)
+    }
+}
+struct LocalTokenizerLoader: TokenizerLoader {
+    func load(from directory: URL) async throws -> any MLXLMCommon.Tokenizer {
+        LocalTokenizer(base: try await AutoTokenizer.from(modelFolder: directory))
+    }
+}
+func send(_ value: [String: Any]) {
+    guard let bytes = try? JSONSerialization.data(withJSONObject: value, options: [.sortedKeys]) else { return }
+    FileHandle.standardOutput.write(bytes + Data([10]))
+}
+func sendable(_ value: Any) -> any Sendable {
+    if let d = value as? [String: Any] { return d.mapValues(sendable) }
+    if let a = value as? [Any] { return a.map(sendable) }
+    if let n = value as? NSNumber { return CFGetTypeID(n) == CFBooleanGetTypeID() ? n.boolValue as any Sendable : n.intValue as any Sendable }
+    return (value as? String) ?? ""
+}
+func milliseconds(_ start: TimeInterval) -> Double { (ProcessInfo.processInfo.systemUptime - start) * 1000 }
+func rss() -> UInt64 {
+    var info = mach_task_basic_info(); var count = mach_msg_type_number_t(MemoryLayout.size(ofValue: info) / MemoryLayout<integer_t>.size)
+    let status = withUnsafeMutablePointer(to: &info) { p in p.withMemoryRebound(to: integer_t.self, capacity: Int(count)) { task_info(mach_task_self_, task_flavor_t(MACH_TASK_BASIC_INFO), $0, &count) } }
+    return status == KERN_SUCCESS ? info.resident_size : 0
+}
+let started = ProcessInfo.processInfo.systemUptime
+// Parent pipe EOF and process termination own lifetime. No HTTP/download client or auto logging.
+do {
+    guard CommandLine.arguments.count == 2 else { throw CocoaError(.fileReadInvalidFileName) }
+    Memory.cacheLimit = 128 * 1024 * 1024
+    let model = try await LLMModelFactory.shared.loadContainer(from: URL(fileURLWithPath: CommandLine.arguments[1]), using: LocalTokenizerLoader())
+    send(["ready": true, "coldLoadMS": milliseconds(started), "rssBytes": rss(), "mlxActiveBytes": Memory.activeMemory, "mlxPeakBytes": Memory.peakMemory])
+    while let line = readLine() {
+        let start = ProcessInfo.processInfo.systemUptime
+        guard line.utf8.count <= 131_072 else { send(["error": "Request too large"]); continue }
+        do {
+            guard let data = line.data(using: .utf8), let request = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+                  let messages = request["messages"] as? [[String: Any]], let rawTools = request["tools"] as? [[String: Any]],
+                  messages.count <= 20, rawTools.count <= 64 else { throw CocoaError(.coderInvalidValue) }
+            let thinking = request["thinking"] as? Bool ?? false
+            let firstOnly = request["firstOnly"] as? Bool ?? true
+            let limit = min(thinking ? 2048 : 512, max(1, request["maxTokens"] as? Int ?? (thinking ? 2048 : 512)))
+            let chat: [[String: any Sendable]] = messages.map { $0.mapValues(sendable) }
+            let tools: [[String: any Sendable]] = rawTools.map { $0.mapValues(sendable) }
+            let reply = try await model.perform { context -> [String: String] in
+                let prompt = try context.tokenizer.applyChatTemplate(messages: chat, tools: tools, additionalContext: ["enable_thinking": thinking])
+                guard prompt.count <= 8192 else { throw CocoaError(.coderInvalidValue) }
+                let input = LMInput(tokens: MLXArray(prompt))
+                var output = ""; var tokenCount = 0; var firstToken: Double?; var firstCall: Double?
+                var detokenizer = NaiveStreamingDetokenizer(tokenizer: context.tokenizer)
+                let info = try generate(input: input, parameters: GenerateParameters(maxTokens: limit, temperature: 0), context: context) { (token: Int) in
+                    if firstToken == nil { firstToken = milliseconds(start) }
+                    tokenCount += 1; detokenizer.append(token: token); output += detokenizer.next() ?? ""
+                    if output.contains("</tool_call>") && (!thinking || output.contains("</think>")) {
+                        if firstCall == nil { firstCall = milliseconds(start) }
+                        if firstOnly { return .stop }
+                    }
+                    return .more
+                }
+                // Reasoning NEVER crosses IPC. Only the documented function-call envelope is returned.
+                if thinking {
+                    if let end = output.range(of: "</think>") { output = String(output[end.upperBound...]) }
+                    else { output = "" }
+                }
+                // Prose is never converted into actions. Preserve it as a rejection, not a command.
+                let accepted = output.trimmingCharacters(in: .whitespacesAndNewlines)
+                return ["output": accepted, "ttftMS": String(firstToken ?? -1), "firstToolCallMS": String(firstCall ?? -1),
+                    "planMS": String(milliseconds(start)), "tokens": String(tokenCount), "tokensPerSecond": String(info.tokensPerSecond)]
+            }
+            send(reply.merging(["rssBytes": String(rss()), "mlxActiveBytes": String(Memory.activeMemory), "mlxPeakBytes": String(Memory.peakMemory)]) { a, _ in a })
+            Memory.clearCache()
+        } catch { send(["error": "Local generation failed: \(type(of: error))"]) }
+    }
+} catch { send(["error": "Local model load failed: \(error)"]); exit(1) }

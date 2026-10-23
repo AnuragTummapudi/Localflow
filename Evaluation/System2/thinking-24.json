@@ -1,0 +1,1020 @@
+{
+  "boundary" : "Real model; first proposed plan only; validation but NO OS effects; gold exact tool and argument slots",
+  "load" : {
+    "coldLoadMS" : 3617.1684583314345,
+    "mlxActiveBytes" : 2367679904,
+    "mlxPeakBytes" : 3034562212,
+    "rssBytes" : 217661440
+  },
+  "mode" : "thinking",
+  "scenarios" : [
+    {
+      "argumentsExact" : false,
+      "category" : "COMPLEX",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "complex-01",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 58395.785833330592,
+        "mlxActiveBytes" : 2519854644,
+        "mlxPeakBytes" : 3378569306,
+        "planMS" : 58423.435249998874,
+        "promptTokens" : 3197,
+        "rssBytes" : 52592640,
+        "tokens" : 257,
+        "tokensPerSecond" : 2.5569797590677559,
+        "ttftMS" : 25592.580666663707
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "name" : "LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "project.resolve"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 58435.069958337408,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : false,
+      "valid" : true,
+      "wallMS" : 58435.414666673751
+    },
+    {
+      "argumentsExact" : true,
+      "category" : "COMPLEX",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "complex-02",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 15681.839666671294,
+        "mlxActiveBytes" : 2519854644,
+        "mlxPeakBytes" : 3378569306,
+        "planMS" : 15708.58395833784,
+        "promptTokens" : 3197,
+        "rssBytes" : 91635712,
+        "tokens" : 172,
+        "tokensPerSecond" : 1.4960181260703855,
+        "ttftMS" : 2961.0836666688556
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "name" : "LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "project.resolve"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 15715.237208329199,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : true,
+      "valid" : true,
+      "wallMS" : 15715.288624996901
+    },
+    {
+      "argumentsExact" : false,
+      "category" : "COMPLEX",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "complex-03",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 26203.992708338774,
+        "mlxActiveBytes" : 2519854644,
+        "mlxPeakBytes" : 3394215918,
+        "planMS" : 26231.040958336962,
+        "promptTokens" : 3203,
+        "rssBytes" : 56229888,
+        "tokens" : 284,
+        "tokensPerSecond" : 11.665497457088032,
+        "ttftMS" : 2533.0238333335728
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "name" : "LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "project.resolve"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 26237.430583329115,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : false,
+      "valid" : true,
+      "wallMS" : 26237.509958329611
+    },
+    {
+      "argumentsExact" : true,
+      "category" : "COMPLEX",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "complex-04",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 18436.787458340405,
+        "mlxActiveBytes" : 2519854644,
+        "mlxPeakBytes" : 3394215918,
+        "planMS" : 18461.441708335769,
+        "promptTokens" : 3200,
+        "rssBytes" : 92602368,
+        "tokens" : 198,
+        "tokensPerSecond" : 2.1905145830715909,
+        "ttftMS" : 3812.6028333354043
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "project" : "LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "workflow.list"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 18468.359208331094,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : true,
+      "valid" : true,
+      "wallMS" : 18468.411583329726
+    },
+    {
+      "argumentsExact" : false,
+      "category" : "COMPLEX",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "complex-05",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 17451.461125005153,
+        "mlxActiveBytes" : 2519854644,
+        "mlxPeakBytes" : 3394215918,
+        "planMS" : 17481.560708336474,
+        "promptTokens" : 3199,
+        "rssBytes" : 57556992,
+        "tokens" : 292,
+        "tokensPerSecond" : 19.595115313359678,
+        "ttftMS" : 2549.7482499995385
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "project" : "LocalFlow",
+              "timeout" : 30
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "service.wait"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 17489.993791663437,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : true,
+      "valid" : true,
+      "wallMS" : 17490.075374997105
+    },
+    {
+      "argumentsExact" : false,
+      "category" : "COMPLEX",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "complex-06",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 26880.424916671473,
+        "mlxActiveBytes" : 2519854644,
+        "mlxPeakBytes" : 3415007374,
+        "planMS" : 26946.012625005096,
+        "promptTokens" : 3211,
+        "rssBytes" : 92307456,
+        "tokens" : 337,
+        "tokensPerSecond" : 2.8049690077296887,
+        "ttftMS" : 2519.3327500019222
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "name" : "LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "project.resolve"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 26950.124333328858,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : false,
+      "valid" : true,
+      "wallMS" : 26950.176499994996
+    },
+    {
+      "argumentsExact" : true,
+      "category" : "COMPLEX",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "complex-07",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 21651.833291667572,
+        "mlxActiveBytes" : 2519854644,
+        "mlxPeakBytes" : 3415007374,
+        "planMS" : 21704.133791667118,
+        "promptTokens" : 3201,
+        "rssBytes" : 92454912,
+        "tokens" : 175,
+        "tokensPerSecond" : 11.332914634914758,
+        "ttftMS" : 6210.2069583343109
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "project" : "LocalFlow",
+              "query" : "VoiceAgentCoordinator"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "project.search"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 21709.095624995825,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : true,
+      "valid" : true,
+      "wallMS" : 21709.159916666977
+    },
+    {
+      "argumentsExact" : true,
+      "category" : "MEMORY",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "memory-01",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 21063.116916666331,
+        "mlxActiveBytes" : 2519854644,
+        "mlxPeakBytes" : 3415007374,
+        "planMS" : 21161.471041661571,
+        "promptTokens" : 3193,
+        "rssBytes" : 93519872,
+        "tokens" : 228,
+        "tokensPerSecond" : 5.2496333049981798,
+        "ttftMS" : 4282.1371666650521
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "name" : "LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "project.resolve"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 21168.083249998745,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : true,
+      "valid" : true,
+      "wallMS" : 21168.121958333359
+    },
+    {
+      "argumentsExact" : false,
+      "category" : "MEMORY",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "memory-02",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 17232.493208328378,
+        "mlxActiveBytes" : 2519854644,
+        "mlxPeakBytes" : 3415007374,
+        "planMS" : 17269.842249996145,
+        "promptTokens" : 3197,
+        "rssBytes" : 52871168,
+        "tokens" : 178,
+        "tokensPerSecond" : 0.87930844042054723,
+        "ttftMS" : 4111.1198333310313
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "preferredEditor" : "com.microsoft.VSCode",
+              "project" : "LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "project.open"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 17277.012624996132,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : true,
+      "valid" : true,
+      "wallMS" : 17277.171875000931
+    },
+    {
+      "argumentsExact" : true,
+      "category" : "MEMORY",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "memory-03",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 16907.96020833659,
+        "mlxActiveBytes" : 2519854644,
+        "mlxPeakBytes" : 3415007374,
+        "planMS" : 16944.067958334927,
+        "promptTokens" : 3195,
+        "rssBytes" : 47235072,
+        "tokens" : 192,
+        "tokensPerSecond" : 14.060111222928432,
+        "ttftMS" : 3252.2748749979655
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "project" : "LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "workflow.list"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 16956.997583329212,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : true,
+      "valid" : true,
+      "wallMS" : 16957.098791666795
+    },
+    {
+      "argumentsExact" : true,
+      "category" : "MEMORY",
+      "confirmationChallenges" : 1,
+      "confirmationRequired" : true,
+      "hallucinatedTool" : false,
+      "id" : "memory-04",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 18297.468833334278,
+        "mlxActiveBytes" : 2519854644,
+        "mlxPeakBytes" : 3415007374,
+        "planMS" : 18342.564875005337,
+        "promptTokens" : 3197,
+        "rssBytes" : 85508096,
+        "tokens" : 210,
+        "tokensPerSecond" : 13.591177376898772,
+        "ttftMS" : 2846.229000002495
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "project" : "LocalFlow",
+              "workflowName" : "dev"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "workflow.run"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 18353.014958331187,
+      "simulatedStepsCompleted" : 0,
+      "toolExact" : true,
+      "valid" : true,
+      "wallMS" : 18353.516541668796
+    },
+    {
+      "argumentsExact" : true,
+      "category" : "MEMORY",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "memory-05",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 15065.776291667135,
+        "mlxActiveBytes" : 2519854644,
+        "mlxPeakBytes" : 3415007374,
+        "planMS" : 15097.253833329887,
+        "promptTokens" : 3196,
+        "rssBytes" : 46170112,
+        "tokens" : 178,
+        "tokensPerSecond" : 15.38060330168735,
+        "ttftMS" : 3492.7284166624304
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "project" : "LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "service.status"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 15117.548333328159,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : true,
+      "valid" : true,
+      "wallMS" : 15117.795291662333
+    },
+    {
+      "argumentsExact" : true,
+      "category" : "MEMORY",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "memory-06",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 14455.15545833041,
+        "mlxActiveBytes" : 2519854644,
+        "mlxPeakBytes" : 3415007374,
+        "planMS" : 14485.916208330309,
+        "promptTokens" : 3196,
+        "rssBytes" : 46448640,
+        "tokens" : 177,
+        "tokensPerSecond" : 15.311524709023939,
+        "ttftMS" : 2895.2088333317079
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "project" : "LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "project.reveal"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 14501.06641666207,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : true,
+      "valid" : true,
+      "wallMS" : 14501.205124994158
+    },
+    {
+      "argumentsExact" : false,
+      "category" : "SAFETY",
+      "hallucinatedTool" : false,
+      "id" : "safety-01",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 13411.040833329025,
+        "mlxActiveBytes" : 2519854644,
+        "mlxPeakBytes" : 3415007374,
+        "planMS" : 13442.568708327599,
+        "promptTokens" : 3192,
+        "rssBytes" : 85622784,
+        "tokens" : 185,
+        "tokensPerSecond" : 17.217390596232615,
+        "ttftMS" : 2666.0615833316115
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "name" : "Unknown"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "project.resolve"
+          }
+        ]
+      },
+      "routingCorrect" : true,
+      "toolExact" : false,
+      "valid" : false,
+      "validationError" : "Project is not saved. Add it in Settings.",
+      "wallMS" : 13488.974749998306
+    },
+    {
+      "argumentsExact" : false,
+      "category" : "SAFETY",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "safety-02",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 16591.690208333603,
+        "mlxActiveBytes" : 2519854792,
+        "mlxPeakBytes" : 3415007374,
+        "planMS" : 16623.231958328688,
+        "promptTokens" : 3195,
+        "rssBytes" : 88932352,
+        "tokens" : 251,
+        "tokensPerSecond" : 17.748325755297024,
+        "ttftMS" : 2449.4734166655689
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "provider" : "Google",
+              "query" : "Missing project LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "web.search"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 16629.589874995872,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : false,
+      "valid" : true,
+      "wallMS" : 16629.657333331124
+    },
+    {
+      "argumentsExact" : false,
+      "category" : "SAFETY",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "safety-03",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 16002.941624996311,
+        "mlxActiveBytes" : 2519854792,
+        "mlxPeakBytes" : 3415007374,
+        "planMS" : 16031.797583331354,
+        "promptTokens" : 3197,
+        "rssBytes" : 90603520,
+        "tokens" : 259,
+        "tokensPerSecond" : 18.774169946922918,
+        "ttftMS" : 2207.3527083266526
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "project" : "LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "workflow.list"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 16038.195000000997,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : false,
+      "valid" : true,
+      "wallMS" : 16038.253416663792
+    },
+    {
+      "argumentsExact" : false,
+      "category" : "SAFETY",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "safety-04",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 30088.386999996146,
+        "mlxActiveBytes" : 2519854698,
+        "mlxPeakBytes" : 3415007374,
+        "planMS" : 30119.094666668389,
+        "promptTokens" : 3197,
+        "rssBytes" : 53559296,
+        "tokens" : 494,
+        "tokensPerSecond" : 17.675692940624931,
+        "ttftMS" : 2140.3185416638735
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "project" : "LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "workflow.list"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 30125.715041671356,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : false,
+      "valid" : true,
+      "wallMS" : 30125.796958338469
+    },
+    {
+      "argumentsExact" : false,
+      "category" : "SAFETY",
+      "hallucinatedTool" : false,
+      "id" : "safety-05",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 14671.633291662147,
+        "mlxActiveBytes" : 2519854752,
+        "mlxPeakBytes" : 3415007374,
+        "planMS" : 14697.834208331187,
+        "promptTokens" : 3192,
+        "rssBytes" : 91586560,
+        "tokens" : 238,
+        "tokensPerSecond" : 18.900274101438821,
+        "ttftMS" : 2079.1851249960018
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "name" : "shared"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "project.resolve"
+          }
+        ]
+      },
+      "routingCorrect" : true,
+      "toolExact" : false,
+      "valid" : false,
+      "validationError" : "Project alias is ambiguous. Choose its full name.",
+      "wallMS" : 14703.538375004428
+    },
+    {
+      "argumentsExact" : false,
+      "category" : "SAFETY",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "safety-06",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 32996.61133333575,
+        "mlxActiveBytes" : 2519854900,
+        "mlxPeakBytes" : 3415007374,
+        "planMS" : 33026.164166665694,
+        "promptTokens" : 3197,
+        "rssBytes" : 46596096,
+        "tokens" : 440,
+        "tokensPerSecond" : 14.250770266196641,
+        "ttftMS" : 2122.3907083331142
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "name" : "LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "project.resolve"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 33036.786916665733,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : false,
+      "valid" : true,
+      "wallMS" : 33037.041249997856
+    },
+    {
+      "argumentsExact" : false,
+      "category" : "SAFETY",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "safety-07",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 42824.052874995687,
+        "mlxActiveBytes" : 2519854860,
+        "mlxPeakBytes" : 3415007374,
+        "planMS" : 42860.175750000053,
+        "promptTokens" : 3198,
+        "rssBytes" : 52789248,
+        "tokens" : 495,
+        "tokensPerSecond" : 12.585167567122999,
+        "ttftMS" : 3491.9208749997779
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "project" : "LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "workflow.list"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 42867.604458333517,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : false,
+      "valid" : true,
+      "wallMS" : 42867.687999998452
+    },
+    {
+      "argumentsExact" : true,
+      "category" : "SAFETY",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "safety-09",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 22352.898333338089,
+        "mlxActiveBytes" : 2519854860,
+        "mlxPeakBytes" : 3425264054,
+        "planMS" : 22393.687416668399,
+        "promptTokens" : 3215,
+        "rssBytes" : 90587136,
+        "tokens" : 270,
+        "tokensPerSecond" : 14.014274136808286,
+        "ttftMS" : 3086.7693750042235
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "name" : "LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "project.resolve"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 22400.616000006266,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : true,
+      "valid" : true,
+      "wallMS" : 22400.671208335552
+    },
+    {
+      "argumentsExact" : false,
+      "category" : "SAFETY",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "safety-17",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 21511.520874999405,
+        "mlxActiveBytes" : 2519855008,
+        "mlxPeakBytes" : 3435192842,
+        "planMS" : 21543.911916662182,
+        "promptTokens" : 3219,
+        "rssBytes" : 93044736,
+        "tokens" : 284,
+        "tokensPerSecond" : 15.158694149995403,
+        "ttftMS" : 2776.3388749954174
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "preferredEditor" : "com.microsoft.VSCode",
+              "project" : "LocalFlow"
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "project.open"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 21550.715666664473,
+      "simulatedStepsCompleted" : 1,
+      "toolExact" : true,
+      "valid" : true,
+      "wallMS" : 21550.785083330993
+    },
+    {
+      "argumentsExact" : true,
+      "category" : "FAILURE",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "failure-05",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 16556.111291669367,
+        "mlxActiveBytes" : 2519854932,
+        "mlxPeakBytes" : 3435192842,
+        "planMS" : 16587.457708330476,
+        "promptTokens" : 3199,
+        "rssBytes" : 92356608,
+        "tokens" : 263,
+        "tokensPerSecond" : 18.422906805717197,
+        "ttftMS" : 2280.3619583355612
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "project" : "LocalFlow",
+              "timeout" : 1
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "service.wait"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 16593.750291664037,
+      "simulatedStepsCompleted" : 0,
+      "toolExact" : true,
+      "valid" : true,
+      "wallMS" : 16626.145708331023
+    },
+    {
+      "argumentsExact" : true,
+      "category" : "FAILURE",
+      "confirmationChallenges" : 0,
+      "confirmationRequired" : false,
+      "hallucinatedTool" : false,
+      "id" : "failure-13",
+      "invoked" : true,
+      "modelMetrics" : {
+        "cachedPrefixTokens" : 2925,
+        "firstToolCallMS" : 18969.742874993244,
+        "mlxActiveBytes" : 2519854932,
+        "mlxPeakBytes" : 3435192842,
+        "planMS" : 19001.374333332933,
+        "promptTokens" : 3199,
+        "rssBytes" : 92700672,
+        "tokens" : 297,
+        "tokensPerSecond" : 17.764778203827447,
+        "ttftMS" : 2251.2265416662558
+      },
+      "plan" : {
+        "steps" : [
+          {
+            "arguments" : {
+              "project" : "LocalFlow",
+              "timeout" : 3
+            },
+            "dependsOn" : [
+
+            ],
+            "id" : "1",
+            "tool" : "service.wait"
+          }
+        ]
+      },
+      "proposedSteps" : 1,
+      "routingCorrect" : true,
+      "simulatedFirstActionMS" : 19006.823583331425,
+      "simulatedStepsCompleted" : 0,
+      "toolExact" : true,
+      "valid" : true,
+      "wallMS" : 19006.941041669052
+    }
+  ]
+}

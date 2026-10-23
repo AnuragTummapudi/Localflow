@@ -1,0 +1,221 @@
+{
+  "duplicates_removed_before_freezing": {
+    "calibration": 248,
+    "test": 465,
+    "train": 1149
+  },
+  "exact_duplicates": 0,
+  "generator_sha256": "305047439a9ddd74d1708b6d7f6730d326274a0c8b84221482ac340320156249",
+  "human_review": "PENDING: 240-example CSV, no independent human review performed",
+  "label_policy": {
+    "actionable_command": "Direct current request to act, even if incomplete or unsupported; never an execution grant.",
+    "coarse_family": "Only labeled on actionable speech; broad topic, never tool or payload.",
+    "correction_or_replacement": "Explicit replacement of a requested action, including unfinished correction. Narrative/quoted/hypothetical markers are negative.",
+    "needs_more_speech": "Missing syntactic target/body, unfinished correction/conjunction/sentence. Complete streaming command is negative even with is_final=false."
+  },
+  "limits": "Synthetic English corpus. Template grammar and target/topic entities (including fixed correction destinations) are disjoint across splits. Shared operation semantics (e.g. launch apps) remain by design; this does not establish natural microphone generalization.",
+  "normalized_duplicates": 0,
+  "scenario_family_overlap": 0,
+  "seed": 722041,
+  "splits": {
+    "calibration": {
+      "balances": {
+        "actionable_command": {
+          "False": 67,
+          "True": 333
+        },
+        "coarse_family": {
+          "None": 67,
+          "application": 79,
+          "media": 22,
+          "other": 64,
+          "productivity": 76,
+          "system": 22,
+          "text_file": 24,
+          "web": 46
+        },
+        "correction_or_replacement": {
+          "False": 377,
+          "True": 23
+        },
+        "needs_more_speech": {
+          "False": 200,
+          "True": 200
+        }
+      },
+      "count": 400,
+      "diagnostics": {
+        "complete": 84,
+        "compound_prefix": 12,
+        "dictation_prefix": 17,
+        "hesitation": 86,
+        "incomplete_note": 12,
+        "incomplete_reminder": 11,
+        "incomplete_web_query": 12,
+        "initial_prefix": 9,
+        "new_command_after_pause": 6,
+        "partial_application": 12,
+        "partial_correction": 11,
+        "payload_prefix": 12,
+        "repeated_partial": 24,
+        "streaming_prefix": 12,
+        "trailing_conjunction": 80
+      },
+      "prefix_word_lengths": {
+        "1": 1,
+        "10": 23,
+        "11": 10,
+        "13": 14,
+        "14": 5,
+        "16": 4,
+        "17": 5,
+        "19": 3,
+        "2": 4,
+        "3": 25,
+        "4": 13,
+        "5": 12,
+        "6": 17,
+        "7": 27,
+        "8": 25,
+        "9": 12
+      },
+      "semantic_scenario_families": 263,
+      "sha256": "e03fc18a16697dd5fcbc3740000d43a48d02ceb21374eebd47b346ff907bf980",
+      "template_families": 36
+    },
+    "test": {
+      "balances": {
+        "actionable_command": {
+          "False": 98,
+          "True": 502
+        },
+        "coarse_family": {
+          "None": 98,
+          "application": 116,
+          "media": 36,
+          "other": 98,
+          "productivity": 95,
+          "system": 35,
+          "text_file": 35,
+          "web": 87
+        },
+        "correction_or_replacement": {
+          "False": 564,
+          "True": 36
+        },
+        "needs_more_speech": {
+          "False": 300,
+          "True": 300
+        }
+      },
+      "count": 600,
+      "diagnostics": {
+        "complete": 128,
+        "compound_prefix": 18,
+        "dictation_prefix": 21,
+        "hesitation": 131,
+        "incomplete_note": 18,
+        "incomplete_reminder": 18,
+        "incomplete_web_query": 18,
+        "initial_prefix": 9,
+        "new_command_after_pause": 9,
+        "partial_application": 18,
+        "partial_correction": 18,
+        "payload_prefix": 18,
+        "repeated_partial": 32,
+        "streaming_prefix": 18,
+        "trailing_conjunction": 126
+      },
+      "prefix_word_lengths": {
+        "10": 5,
+        "11": 12,
+        "12": 14,
+        "13": 5,
+        "14": 16,
+        "15": 5,
+        "16": 11,
+        "17": 16,
+        "18": 8,
+        "19": 8,
+        "2": 1,
+        "3": 4,
+        "4": 25,
+        "5": 18,
+        "6": 31,
+        "7": 44,
+        "8": 41,
+        "9": 36
+      },
+      "semantic_scenario_families": 422,
+      "sha256": "e4fefef8ec7cbe57e3c59e42bc84652d4350b1faf53f1db7cd5138a2a1a4a653",
+      "template_families": 36
+    },
+    "train": {
+      "balances": {
+        "actionable_command": {
+          "False": 501,
+          "True": 1899
+        },
+        "coarse_family": {
+          "None": 501,
+          "application": 450,
+          "media": 121,
+          "other": 435,
+          "productivity": 384,
+          "system": 121,
+          "text_file": 121,
+          "web": 267
+        },
+        "correction_or_replacement": {
+          "False": 2280,
+          "True": 120
+        },
+        "needs_more_speech": {
+          "False": 1200,
+          "True": 1200
+        }
+      },
+      "count": 2400,
+      "diagnostics": {
+        "complete": 516,
+        "compound_prefix": 159,
+        "dictation_prefix": 192,
+        "hesitation": 513,
+        "incomplete_note": 53,
+        "incomplete_reminder": 53,
+        "incomplete_web_query": 52,
+        "initial_prefix": 11,
+        "new_command_after_pause": 34,
+        "partial_application": 53,
+        "partial_correction": 52,
+        "payload_prefix": 52,
+        "repeated_partial": 137,
+        "streaming_prefix": 156,
+        "trailing_conjunction": 367
+      },
+      "prefix_word_lengths": {
+        "1": 3,
+        "10": 47,
+        "11": 18,
+        "12": 33,
+        "13": 53,
+        "14": 38,
+        "15": 37,
+        "16": 14,
+        "17": 11,
+        "2": 152,
+        "3": 104,
+        "4": 76,
+        "5": 115,
+        "6": 122,
+        "7": 145,
+        "8": 158,
+        "9": 74
+      },
+      "semantic_scenario_families": 1440,
+      "sha256": "ba262b61ce837d54507639720b5213ca25a2f1bab8e6c4a685c95f5997fa8954",
+      "template_families": 49
+    }
+  },
+  "template_family_overlap": 0
+}

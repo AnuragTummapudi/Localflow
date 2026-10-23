@@ -1,0 +1,25 @@
+{
+  "": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/SpanPreview.build/SpanPreview.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/SpanPreview.build/SpanPreview.o",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/SpanPreview.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/checkouts/swift-collections/Sources/SpanPreview/InputSpan.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/SpanPreview.build/InputSpan.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/SpanPreview.build/InputSpan~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/SpanPreview.build/InputSpan.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/SpanPreview.build/InputSpan.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/checkouts/swift-collections/Sources/SpanPreview/MutableSpan+InputSpanHelpers.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/SpanPreview.build/MutableSpan+InputSpanHelpers.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/SpanPreview.build/MutableSpan+InputSpanHelpers~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/SpanPreview.build/MutableSpan+InputSpanHelpers.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/SpanPreview.build/MutableSpan+InputSpanHelpers.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/checkouts/swift-collections/Sources/SpanPreview/OutputSpan+InputSpanHelpers.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/SpanPreview.build/OutputSpan+InputSpanHelpers.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/SpanPreview.build/OutputSpan+InputSpanHelpers~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/SpanPreview.build/OutputSpan+InputSpanHelpers.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/SpanPreview.build/OutputSpan+InputSpanHelpers.dia"
+  }
+}

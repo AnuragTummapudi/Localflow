@@ -1,0 +1,10 @@
+{
+  "reference": "English current SDK MPS FP32",
+  "candidate": "existing English ONNX FP32 export",
+  "decisions": 560,
+  "agreement": 1.0,
+  "argmaxDisagreements": 0,
+  "maxAbsoluteLogitDrift": 0.00038433074951171875,
+  "meanAbsoluteLogitDrift": 9.316220006078297e-06,
+  "disagreements": []
+}

@@ -1,0 +1,148 @@
+[
+  {
+    "agentActions" : [
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: Optional(file:\/\/\/System\/Applications\/Notes.app\/), confidence: 1.0, alternateNames: []), processID: nil)",
+        "milliseconds" : 4489.4642083336294,
+        "tool" : "application.open"
+      },
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+        "milliseconds" : 8642.8150833335167,
+        "tool" : "application.open"
+      },
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Google Chrome\", bundleIdentifier: Optional(\"com.google.Chrome\"), url: Optional(file:\/\/\/Applications\/Google%20Chrome.app\/), confidence: 1.0, alternateNames: [\"Chrome\"]), processID: nil)",
+        "milliseconds" : 8812.6693333333606,
+        "tool" : "application.open"
+      },
+      {
+        "arguments" : "website(\"GitHub\")",
+        "milliseconds" : 11248.890875000143,
+        "tool" : "web.open_website"
+      }
+    ],
+    "agentActionsBeforeInputClose" : [
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: Optional(file:\/\/\/System\/Applications\/Notes.app\/), confidence: 1.0, alternateNames: []), processID: nil)",
+        "milliseconds" : 4489.4642083336294,
+        "tool" : "application.open"
+      },
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+        "milliseconds" : 8642.8150833335167,
+        "tool" : "application.open"
+      },
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Google Chrome\", bundleIdentifier: Optional(\"com.google.Chrome\"), url: Optional(file:\/\/\/Applications\/Google%20Chrome.app\/), confidence: 1.0, alternateNames: [\"Chrome\"]), processID: nil)",
+        "milliseconds" : 8812.6693333333606,
+        "tool" : "application.open"
+      }
+    ],
+    "agentInput" : "Real paced Apple Speech; injected native effects, deterministic decision fallback",
+    "completedMilliseconds" : 11278.424000000086,
+    "confidence" : 0.87037503719329834,
+    "confirmation" : null,
+    "exactTranscript" : false,
+    "expected" : "Open Notes. Open Safari. Open Chrome. Open github.com.",
+    "file" : "continuation.caf",
+    "final" : "Open notes. Open Safari. Open Chrome. Open GitHub.",
+    "finalDrainMilliseconds" : 333.56329166690557,
+    "finalRangeLagMilliseconds" : [
+      4099.7504166667932,
+      3319.8005833331626,
+      5845.4154583334821,
+      4585.5101666670453,
+      3285.377416666197,
+      2325.4323749999458,
+      3155.8854999999676,
+      2135.9543749996374
+    ],
+    "firstFinalFromInputStartMilliseconds" : 4459.7504166667932,
+    "phraseCount" : 8,
+    "realAnalyzerCancellationMilliseconds" : 1.070708333827497,
+    "revisions" : 24,
+    "speechAlternatives" : [
+      {
+        "alternatives" : [
+          "Open"
+        ],
+        "original" : "Open"
+      },
+      {
+        "alternatives" : [
+          "notes.",
+          "Notes",
+          "notes",
+          "Notes."
+        ],
+        "original" : "notes."
+      },
+      {
+        "alternatives" : [
+          "Open",
+          "open"
+        ],
+        "original" : "Open"
+      },
+      {
+        "alternatives" : [
+          "Safari.",
+          "Safari",
+          "safari."
+        ],
+        "original" : "Safari."
+      },
+      {
+        "alternatives" : [
+          "Open",
+          "open"
+        ],
+        "original" : "Open"
+      },
+      {
+        "alternatives" : [
+          "Chrome.",
+          "chrome.",
+          "Chrome.,"
+        ],
+        "original" : "Chrome."
+      },
+      {
+        "alternatives" : [
+          "Open"
+        ],
+        "original" : "Open"
+      },
+      {
+        "alternatives" : [
+          "GitHub.",
+          "GitHob.",
+          "GuitHub.",
+          "gitHub.",
+          "GitHub. Open"
+        ],
+        "original" : "GitHub."
+      }
+    ],
+    "volatileFromInputStartMilliseconds" : 4432.2762083329508,
+    "volatileRangeLagMilliseconds" : [
+      439.21370833295077,
+      439.38849999967351,
+      439.45354166653124,
+      420.33224999963568,
+      420.45912499984115,
+      773.54029166686087,
+      758.03183333310153,
+      758.09720833340543,
+      758.44095833336178,
+      758.87308333322289,
+      1034.2398749995846,
+      1034.3560833331503,
+      1034.8722083332541,
+      1035.5238333328452,
+      1036.1616249998769,
+      1036.8745833335561
+    ]
+  }
+]

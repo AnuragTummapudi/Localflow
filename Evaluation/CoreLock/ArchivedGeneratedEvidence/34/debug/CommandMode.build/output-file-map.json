@@ -1,0 +1,131 @@
+{
+  "": {
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/AgentBenchmark.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/AgentBenchmark.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/AgentBenchmark.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/AgentBenchmark~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/AgentBenchmark.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/AgentBenchmark.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/CommandMode.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/CommandMode.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/CommandMode.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/CommandMode~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/CommandMode.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/CommandMode.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/DecisionEngine.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/DecisionEngine.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/DecisionEngine.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/DecisionEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/DecisionEngine.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/DecisionEngine.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/IncrementalSpeech.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/IncrementalSpeech.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/IncrementalSpeech.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/IncrementalSpeech~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/IncrementalSpeech.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/IncrementalSpeech.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/LayaDecisionEngine.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/LayaDecisionEngine.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/LayaDecisionEngine.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/LayaDecisionEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/LayaDecisionEngine.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/LayaDecisionEngine.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/MacNativeToolSystem.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/MacNativeToolSystem.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/MacNativeToolSystem.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/MacNativeToolSystem~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/MacNativeToolSystem.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/MacNativeToolSystem.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/NarrowDecisions.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NarrowDecisions.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NarrowDecisions.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NarrowDecisions~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NarrowDecisions.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NarrowDecisions.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/NativeCommandParser.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativeCommandParser.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativeCommandParser.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativeCommandParser~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativeCommandParser.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativeCommandParser.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/NativePermissionReadiness.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativePermissionReadiness.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativePermissionReadiness.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativePermissionReadiness~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativePermissionReadiness.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativePermissionReadiness.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/NativeTools.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativeTools.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativeTools.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativeTools~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativeTools.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativeTools.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/NativeUndoGuards.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativeUndoGuards.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativeUndoGuards.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativeUndoGuards~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativeUndoGuards.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/NativeUndoGuards.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/PayloadCanonicalizer.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/PayloadCanonicalizer.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/PayloadCanonicalizer.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/PayloadCanonicalizer~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/PayloadCanonicalizer.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/PayloadCanonicalizer.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/SearchProviderRegistry.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SearchProviderRegistry.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SearchProviderRegistry.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SearchProviderRegistry~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SearchProviderRegistry.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SearchProviderRegistry.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/SpeechAlternativeResolver.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SpeechAlternativeResolver.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SpeechAlternativeResolver.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SpeechAlternativeResolver~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SpeechAlternativeResolver.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SpeechAlternativeResolver.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/SpotifyPlaybackController.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SpotifyPlaybackController.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SpotifyPlaybackController.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SpotifyPlaybackController~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SpotifyPlaybackController.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SpotifyPlaybackController.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/SpotifyTransportPolicy.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SpotifyTransportPolicy.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SpotifyTransportPolicy.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SpotifyTransportPolicy~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SpotifyTransportPolicy.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/SpotifyTransportPolicy.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/CommandMode/VoiceAgentCoordinator.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/VoiceAgentCoordinator.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/VoiceAgentCoordinator.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/VoiceAgentCoordinator~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/VoiceAgentCoordinator.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/VoiceAgentCoordinator.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/DerivedSources/resource_bundle_accessor.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/resource_bundle_accessor.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/resource_bundle_accessor.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/resource_bundle_accessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/resource_bundle_accessor.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/CommandMode.build/resource_bundle_accessor.dia"
+  }
+}

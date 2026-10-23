@@ -1,0 +1,39 @@
+{
+  "" : {
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/ModelManager-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/ModelManager-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/ModelManager-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/ModelManager-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/ModelManager-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/DerivedSources/resource_bundle_accessor.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/resource_bundle_accessor.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/resource_bundle_accessor.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/resource_bundle_accessor.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/resource_bundle_accessor.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/resource_bundle_accessor.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/resource_bundle_accessor.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/resource_bundle_accessor.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/resource_bundle_accessor~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/DecisionModelManager.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/DecisionModelManager.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/DecisionModelManager.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/DecisionModelManager.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/DecisionModelManager.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/DecisionModelManager.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/DecisionModelManager.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/DecisionModelManager.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/DecisionModelManager~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/ModelManager.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/ModelManager.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/ModelManager.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/ModelManager.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/ModelManager.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/ModelManager.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/ModelManager.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/ModelManager.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/ModelManager.build/Objects-normal/arm64/ModelManager~partial.swiftmodule"
+  }
+}

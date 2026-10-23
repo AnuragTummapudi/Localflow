@@ -1,0 +1,46 @@
+{
+  "" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/Hub-primary.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/Hub-primary.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/Hub-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/Hub-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/Hub-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/Hub-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/Hub-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/DerivedSources/resource_bundle_accessor.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/resource_bundle_accessor.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/resource_bundle_accessor.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/resource_bundle_accessor.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-transformers/Sources/Hub/BinaryDistinct.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/BinaryDistinct.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/BinaryDistinct.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/BinaryDistinct.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-transformers/Sources/Hub/Config.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/Config.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/Config.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/Config.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-transformers/Sources/Hub/Downloader.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/Downloader.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/Downloader.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/Downloader.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-transformers/Sources/Hub/Hub.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/Hub.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/Hub.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/Hub.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-transformers/Sources/Hub/HubApi.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/HubApi.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/HubApi.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/HubApi.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-transformers/Sources/Hub/YYJSONParser.swift" : {
+    "index-unit-output-path" : "/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/YYJSONParser.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/YYJSONParser.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-transformers.build/Release/Hub.build/Objects-normal/x86_64/YYJSONParser.o"
+  }
+}

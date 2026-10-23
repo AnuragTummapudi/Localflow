@@ -1,0 +1,267 @@
+{
+  "resolve": {
+    "goal": "Find my LocalFlow project",
+    "tools": [
+      "project.resolve"
+    ],
+    "arguments": {
+      "name": "p1"
+    }
+  },
+  "alias": {
+    "goal": "Find LF project",
+    "tools": [
+      "project.resolve"
+    ],
+    "arguments": {
+      "name": "p1"
+    }
+  },
+  "symbol": {
+    "goal": "Find VoiceAgentCoordinator in LocalFlow",
+    "tools": [
+      "project.search",
+      "file.search"
+    ],
+    "arguments": {
+      "project": "p1",
+      "query": "q1"
+    }
+  },
+  "planner": {
+    "goal": "Show me files related to the planner",
+    "tools": [
+      "project.search",
+      "file.search"
+    ],
+    "arguments": {
+      "project": "p1",
+      "query": "q1"
+    }
+  },
+  "continuation": {
+    "goal": "Find where command continuation is implemented",
+    "tools": [
+      "project.search",
+      "file.search"
+    ],
+    "arguments": {
+      "project": "p1",
+      "query": "q1"
+    }
+  },
+  "file-find": {
+    "goal": "Open VoiceAgentCoordinator.swift in LocalFlow",
+    "tools": [
+      "project.search",
+      "file.search"
+    ],
+    "arguments": {
+      "project": "p1",
+      "query": "q1"
+    }
+  },
+  "file-open": {
+    "goal": "Open VoiceAgentCoordinator.swift in LocalFlow",
+    "tools": [
+      "project.openFile",
+      "editor.openFile"
+    ],
+    "arguments": {
+      "project": "p1",
+      "path": "f1"
+    }
+  },
+  "project-open": {
+    "goal": "Open LocalFlow project in my editor",
+    "tools": [
+      "project.open"
+    ],
+    "arguments": {
+      "project": "p1"
+    }
+  },
+  "workflow": {
+    "goal": "Start LocalFlow development",
+    "tools": [
+      "workflow.run"
+    ],
+    "arguments": {
+      "project": "p1",
+      "workflowName": "w1"
+    }
+  },
+  "workflow-list": {
+    "goal": "List LocalFlow workflows",
+    "tools": [
+      "workflow.list"
+    ],
+    "arguments": {
+      "project": "p1"
+    }
+  },
+  "workflow-stop": {
+    "goal": "Stop LocalFlow dev workflow",
+    "tools": [
+      "workflow.stop"
+    ],
+    "arguments": {
+      "project": "p1",
+      "workflowName": "w1"
+    }
+  },
+  "localhost": {
+    "goal": "Start LocalFlow development and open localhost",
+    "tools": [
+      "workflow.run"
+    ],
+    "arguments": {
+      "project": "p1",
+      "workflowName": "w1"
+    }
+  },
+  "wait": {
+    "goal": "Start LocalFlow development and open localhost",
+    "tools": [
+      "service.wait",
+      "service.status"
+    ],
+    "arguments": {
+      "project": "p1"
+    }
+  },
+  "browser-ready": {
+    "goal": "Open localhost for LocalFlow",
+    "tools": [
+      "web.open_url"
+    ],
+    "arguments": {
+      "url": "s1"
+    }
+  },
+  "browser-site": {
+    "goal": "Open LocalFlow website",
+    "tools": [
+      "web.open_url"
+    ],
+    "arguments": {
+      "url": "s1"
+    }
+  },
+  "ambiguous": {
+    "goal": "Find LF project",
+    "tools": [
+      "decision.askUser"
+    ],
+    "arguments": {}
+  },
+  "unknown": {
+    "goal": "Find Ghost project",
+    "tools": [
+      "decision.askUser"
+    ],
+    "arguments": {}
+  },
+  "missing-workflow": {
+    "goal": "Start LocalFlow development",
+    "tools": [
+      "decision.askUser"
+    ],
+    "arguments": {}
+  },
+  "failed-service": {
+    "goal": "Wait for LocalFlow local service",
+    "tools": [
+      "decision.askUser",
+      "service.status"
+    ],
+    "arguments": {
+      "project": "p1"
+    }
+  },
+  "failed-file": {
+    "goal": "Find VoiceAgentCoordinator in LocalFlow",
+    "tools": [
+      "decision.askUser",
+      "file.search"
+    ],
+    "arguments": {
+      "scope": "p1",
+      "query": "q1"
+    }
+  },
+  "finish-project": {
+    "goal": "Find my LocalFlow project",
+    "tools": [
+      "decision.finish"
+    ],
+    "arguments": {}
+  },
+  "finish-search": {
+    "goal": "Find VoiceAgentCoordinator in LocalFlow",
+    "tools": [
+      "decision.finish"
+    ],
+    "arguments": {}
+  },
+  "finish-workflow": {
+    "goal": "Start LocalFlow development",
+    "tools": [
+      "decision.finish"
+    ],
+    "arguments": {}
+  },
+  "finish-browser": {
+    "goal": "Open localhost for LocalFlow",
+    "tools": [
+      "decision.finish"
+    ],
+    "arguments": {}
+  },
+  "abstain-shell": {
+    "goal": "Run bash shell in LocalFlow",
+    "tools": [
+      "decision.abstain"
+    ],
+    "arguments": {}
+  },
+  "abstain-delete": {
+    "goal": "Delete LocalFlow project",
+    "tools": [
+      "decision.abstain"
+    ],
+    "arguments": {}
+  },
+  "injected-result": {
+    "goal": "Find VoiceAgentCoordinator in LocalFlow",
+    "tools": [
+      "decision.finish"
+    ],
+    "arguments": {}
+  },
+  "injected-readme": {
+    "goal": "Open VoiceAgentCoordinator.swift in LocalFlow",
+    "tools": [
+      "project.openFile",
+      "editor.openFile"
+    ],
+    "arguments": {
+      "project": "p1",
+      "path": "f1"
+    }
+  },
+  "unrelated-workflow": {
+    "goal": "Find my LocalFlow project",
+    "tools": [
+      "decision.finish"
+    ],
+    "arguments": {}
+  },
+  "missing-context": {
+    "goal": "Find my project",
+    "tools": [
+      "decision.askUser"
+    ],
+    "arguments": {}
+  }
+}

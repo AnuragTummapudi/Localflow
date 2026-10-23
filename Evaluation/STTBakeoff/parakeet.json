@@ -1,0 +1,694 @@
+{
+  "coldBoundary" : "already cached model load\/prewarm; no download",
+  "coldPreparationMilliseconds" : 87407.18345833011,
+  "engine" : "parakeet",
+  "fixtureKind" : "frozen synthetic TTS",
+  "nativeEffects" : "none; parser comparison only",
+  "peakRSSBytes" : 483491840,
+  "rows" : [
+    {
+      "actual" : [
+        {
+          "application" : "com.apple.Notes",
+          "tool" : "application.open"
+        }
+      ],
+      "audioSHA256" : "f37bd2ae372ec6bb9a2d5639bc983542a64c669ffe949965b3db833cfa56ab7f",
+      "expected" : [
+        {
+          "application" : "com.apple.Notes",
+          "tool" : "application.open"
+        }
+      ],
+      "finalInferenceMilliseconds" : 403.31470832461491,
+      "instruction" : "Open Notes",
+      "processResidentBytes" : 102629376,
+      "repeat" : 0,
+      "scenario" : 1,
+      "transcript" : "Open notes."
+    },
+    {
+      "actual" : [
+        {
+          "noteBody" : "",
+          "noteTitle" : "local flow benchmark.",
+          "tool" : "note.create"
+        }
+      ],
+      "audioSHA256" : "e939563e7b31ff51789bd9b2cfac17cd6d0b1402ef0828e7391ece705f256f75",
+      "expected" : [
+        {
+          "noteBody" : "",
+          "noteTitle" : "LocalFlow Benchmark",
+          "tool" : "note.create"
+        }
+      ],
+      "finalInferenceMilliseconds" : 391.45945833297446,
+      "instruction" : "Create a new note, call it LocalFlow Benchmark",
+      "processResidentBytes" : 104873984,
+      "repeat" : 0,
+      "scenario" : 2,
+      "transcript" : "Create a new note, call it local flow benchmark."
+    },
+    {
+      "actual" : [
+        {
+          "noteBody" : "this is my dictated benchmark text.",
+          "tool" : "note.append_current"
+        }
+      ],
+      "audioSHA256" : "1ab97f8d89327748c986d4204ecc987e4a16412928545b1722ed74d93b1d5c0f",
+      "expected" : [
+        {
+          "noteBody" : "This is my dictated benchmark text.",
+          "tool" : "note.append_current"
+        }
+      ],
+      "finalInferenceMilliseconds" : 561.23287498485297,
+      "instruction" : "Append to current note This is my dictated benchmark text.",
+      "processResidentBytes" : 109477888,
+      "repeat" : 0,
+      "scenario" : 3,
+      "transcript" : "Append to current note, this is my dictated benchmark text."
+    },
+    {
+      "actual" : [
+        {
+          "application" : "com.apple.Safari",
+          "tool" : "application.open"
+        }
+      ],
+      "audioSHA256" : "840e93374e3c91087c13aec5b2b7fe8372cf7625f7965a5e500d3338eb62cbac",
+      "expected" : [
+        {
+          "application" : "com.apple.Safari",
+          "tool" : "application.open"
+        }
+      ],
+      "finalInferenceMilliseconds" : 349.59408332360908,
+      "instruction" : "Open browser",
+      "processResidentBytes" : 110018560,
+      "repeat" : 0,
+      "scenario" : 4,
+      "transcript" : "Open Browser"
+    },
+    {
+      "actual" : [
+        {
+          "searchQuery" : "Ada Lovelace",
+          "tool" : "web.open_url"
+        }
+      ],
+      "audioSHA256" : "7b63cddbbad63e5277dda1cc46a0d7d640073fcfcd3ed9a85209934fbee7f549",
+      "expected" : [
+        {
+          "searchQuery" : "Ada Lovelace",
+          "tool" : "web.open_url"
+        }
+      ],
+      "finalInferenceMilliseconds" : 366.69470835477114,
+      "instruction" : "Search for Ada Lovelace",
+      "processResidentBytes" : 110149632,
+      "repeat" : 0,
+      "scenario" : 5,
+      "transcript" : "Search for Ada Lovelace."
+    },
+    {
+      "actual" : [
+        {
+          "tool" : "web.open_url",
+          "url" : "https:\/\/www.wikipedia.org"
+        }
+      ],
+      "audioSHA256" : "1c7c314d4e66e62111532d2ff5b469fdb1ab16fd40eb47894d40108ced31597f",
+      "expected" : [
+        {
+          "tool" : "web.open_url",
+          "url" : "https:\/\/www.wikipedia.org"
+        }
+      ],
+      "finalInferenceMilliseconds" : 342.78125001583248,
+      "instruction" : "Open https:\/\/www.wikipedia.org",
+      "processResidentBytes" : 111312896,
+      "repeat" : 0,
+      "scenario" : 6,
+      "transcript" : "Open www.wikipedia.org"
+    },
+    {
+      "actual" : [
+        {
+          "application" : "com.apple.PhotoBooth",
+          "tool" : "application.open"
+        }
+      ],
+      "audioSHA256" : "acd2f8de3582131426f739a978d0f82c39178842e5f49c21f6f8a7dec1d712b0",
+      "expected" : [
+        {
+          "application" : "com.apple.PhotoBooth",
+          "tool" : "application.open"
+        }
+      ],
+      "finalInferenceMilliseconds" : 301.05737497797236,
+      "instruction" : "Open Photo Booth",
+      "processResidentBytes" : 112197632,
+      "repeat" : 0,
+      "scenario" : 7,
+      "transcript" : "Open Photo Boot?"
+    },
+    {
+      "actual" : [
+        {
+          "tool" : "web.open_url",
+          "url" : "https:\/\/examblow.com"
+        }
+      ],
+      "audioSHA256" : "5ad1d2a30c04cafd7570694e6085a56723f5cc2c78f8335455e367193d17c615",
+      "expected" : [
+        {
+          "tool" : "web.open_url",
+          "url" : "https:\/\/example.com"
+        }
+      ],
+      "finalInferenceMilliseconds" : 199.03866667300463,
+      "instruction" : "Open https:\/\/example.com",
+      "processResidentBytes" : 109821952,
+      "repeat" : 0,
+      "scenario" : 8,
+      "transcript" : "Open examblow.com"
+    },
+    {
+      "actual" : [
+        {
+          "reminderTitle" : "review local flow benchmark.",
+          "tool" : "reminder.create"
+        }
+      ],
+      "audioSHA256" : "3b9e56ce0bd6e9572f11066d40a0647fbd179267eea4379344c8a12e97066b16",
+      "expected" : [
+        {
+          "reminderTitle" : "Review LocalFlow benchmark",
+          "tool" : "reminder.create"
+        }
+      ],
+      "finalInferenceMilliseconds" : 300.54783332161605,
+      "instruction" : "Create reminder Review LocalFlow benchmark",
+      "processResidentBytes" : 108445696,
+      "repeat" : 0,
+      "scenario" : 9,
+      "transcript" : "Create reminder review local flow benchmark."
+    },
+    {
+      "actual" : [
+        {
+          "application" : "com.apple.Notes",
+          "tool" : "application.open"
+        },
+        {
+          "application" : "com.apple.Safari",
+          "tool" : "application.open"
+        },
+        {
+          "searchQuery" : "Swift Actors",
+          "tool" : "web.open_url"
+        }
+      ],
+      "audioSHA256" : "01537731d74c57e23d6b3889a73879bc0a4959c5b1687ca50014b8339f50f4e1",
+      "expected" : [
+        {
+          "application" : "com.apple.Notes",
+          "tool" : "application.open"
+        },
+        {
+          "application" : "com.apple.Safari",
+          "tool" : "application.open"
+        },
+        {
+          "searchQuery" : "Swift actors",
+          "tool" : "web.open_url"
+        }
+      ],
+      "finalInferenceMilliseconds" : 234.48283335892484,
+      "instruction" : "Open Notes then open browser then search for Swift actors",
+      "processResidentBytes" : 81149952,
+      "repeat" : 0,
+      "scenario" : 10,
+      "transcript" : "Open notes then open browser then search for Swift Actors."
+    },
+    {
+      "actual" : [
+        {
+          "application" : "com.apple.Notes",
+          "tool" : "application.open"
+        }
+      ],
+      "audioSHA256" : "f37bd2ae372ec6bb9a2d5639bc983542a64c669ffe949965b3db833cfa56ab7f",
+      "expected" : [
+        {
+          "application" : "com.apple.Notes",
+          "tool" : "application.open"
+        }
+      ],
+      "finalInferenceMilliseconds" : 420.34929170040414,
+      "instruction" : "Open Notes",
+      "processResidentBytes" : 79675392,
+      "repeat" : 1,
+      "scenario" : 1,
+      "transcript" : "Open notes."
+    },
+    {
+      "actual" : [
+        {
+          "noteBody" : "",
+          "noteTitle" : "local flow benchmark.",
+          "tool" : "note.create"
+        }
+      ],
+      "audioSHA256" : "e939563e7b31ff51789bd9b2cfac17cd6d0b1402ef0828e7391ece705f256f75",
+      "expected" : [
+        {
+          "noteBody" : "",
+          "noteTitle" : "LocalFlow Benchmark",
+          "tool" : "note.create"
+        }
+      ],
+      "finalInferenceMilliseconds" : 529.75295833311975,
+      "instruction" : "Create a new note, call it LocalFlow Benchmark",
+      "processResidentBytes" : 78430208,
+      "repeat" : 1,
+      "scenario" : 2,
+      "transcript" : "Create a new note, call it local flow benchmark."
+    },
+    {
+      "actual" : [
+        {
+          "noteBody" : "this is my dictated benchmark text.",
+          "tool" : "note.append_current"
+        }
+      ],
+      "audioSHA256" : "1ab97f8d89327748c986d4204ecc987e4a16412928545b1722ed74d93b1d5c0f",
+      "expected" : [
+        {
+          "noteBody" : "This is my dictated benchmark text.",
+          "tool" : "note.append_current"
+        }
+      ],
+      "finalInferenceMilliseconds" : 303.14187501790002,
+      "instruction" : "Append to current note This is my dictated benchmark text.",
+      "processResidentBytes" : 83476480,
+      "repeat" : 1,
+      "scenario" : 3,
+      "transcript" : "Append to current note, this is my dictated benchmark text."
+    },
+    {
+      "actual" : [
+        {
+          "application" : "com.apple.Safari",
+          "tool" : "application.open"
+        }
+      ],
+      "audioSHA256" : "840e93374e3c91087c13aec5b2b7fe8372cf7625f7965a5e500d3338eb62cbac",
+      "expected" : [
+        {
+          "application" : "com.apple.Safari",
+          "tool" : "application.open"
+        }
+      ],
+      "finalInferenceMilliseconds" : 233.46887499792501,
+      "instruction" : "Open browser",
+      "processResidentBytes" : 83214336,
+      "repeat" : 1,
+      "scenario" : 4,
+      "transcript" : "Open Browser"
+    },
+    {
+      "actual" : [
+        {
+          "searchQuery" : "Ada Lovelace",
+          "tool" : "web.open_url"
+        }
+      ],
+      "audioSHA256" : "7b63cddbbad63e5277dda1cc46a0d7d640073fcfcd3ed9a85209934fbee7f549",
+      "expected" : [
+        {
+          "searchQuery" : "Ada Lovelace",
+          "tool" : "web.open_url"
+        }
+      ],
+      "finalInferenceMilliseconds" : 290.54374998668209,
+      "instruction" : "Search for Ada Lovelace",
+      "processResidentBytes" : 83263488,
+      "repeat" : 1,
+      "scenario" : 5,
+      "transcript" : "Search for Ada Lovelace."
+    },
+    {
+      "actual" : [
+        {
+          "tool" : "web.open_url",
+          "url" : "https:\/\/www.wikipedia.org"
+        }
+      ],
+      "audioSHA256" : "1c7c314d4e66e62111532d2ff5b469fdb1ab16fd40eb47894d40108ced31597f",
+      "expected" : [
+        {
+          "tool" : "web.open_url",
+          "url" : "https:\/\/www.wikipedia.org"
+        }
+      ],
+      "finalInferenceMilliseconds" : 361.05154169490561,
+      "instruction" : "Open https:\/\/www.wikipedia.org",
+      "processResidentBytes" : 83542016,
+      "repeat" : 1,
+      "scenario" : 6,
+      "transcript" : "Open www.wikipedia.org"
+    },
+    {
+      "actual" : [
+        {
+          "application" : "com.apple.PhotoBooth",
+          "tool" : "application.open"
+        }
+      ],
+      "audioSHA256" : "acd2f8de3582131426f739a978d0f82c39178842e5f49c21f6f8a7dec1d712b0",
+      "expected" : [
+        {
+          "application" : "com.apple.PhotoBooth",
+          "tool" : "application.open"
+        }
+      ],
+      "finalInferenceMilliseconds" : 338.75391667243093,
+      "instruction" : "Open Photo Booth",
+      "processResidentBytes" : 82722816,
+      "repeat" : 1,
+      "scenario" : 7,
+      "transcript" : "Open Photo Boot?"
+    },
+    {
+      "actual" : [
+        {
+          "tool" : "web.open_url",
+          "url" : "https:\/\/examblow.com"
+        }
+      ],
+      "audioSHA256" : "5ad1d2a30c04cafd7570694e6085a56723f5cc2c78f8335455e367193d17c615",
+      "expected" : [
+        {
+          "tool" : "web.open_url",
+          "url" : "https:\/\/example.com"
+        }
+      ],
+      "finalInferenceMilliseconds" : 317.21800001105294,
+      "instruction" : "Open https:\/\/example.com",
+      "processResidentBytes" : 82739200,
+      "repeat" : 1,
+      "scenario" : 8,
+      "transcript" : "Open examblow.com"
+    },
+    {
+      "actual" : [
+        {
+          "reminderTitle" : "review local flow benchmark.",
+          "tool" : "reminder.create"
+        }
+      ],
+      "audioSHA256" : "3b9e56ce0bd6e9572f11066d40a0647fbd179267eea4379344c8a12e97066b16",
+      "expected" : [
+        {
+          "reminderTitle" : "Review LocalFlow benchmark",
+          "tool" : "reminder.create"
+        }
+      ],
+      "finalInferenceMilliseconds" : 375.79008331522346,
+      "instruction" : "Create reminder Review LocalFlow benchmark",
+      "processResidentBytes" : 82968576,
+      "repeat" : 1,
+      "scenario" : 9,
+      "transcript" : "Create reminder review local flow benchmark."
+    },
+    {
+      "actual" : [
+        {
+          "application" : "com.apple.Notes",
+          "tool" : "application.open"
+        },
+        {
+          "application" : "com.apple.Safari",
+          "tool" : "application.open"
+        },
+        {
+          "searchQuery" : "Swift Actors",
+          "tool" : "web.open_url"
+        }
+      ],
+      "audioSHA256" : "01537731d74c57e23d6b3889a73879bc0a4959c5b1687ca50014b8339f50f4e1",
+      "expected" : [
+        {
+          "application" : "com.apple.Notes",
+          "tool" : "application.open"
+        },
+        {
+          "application" : "com.apple.Safari",
+          "tool" : "application.open"
+        },
+        {
+          "searchQuery" : "Swift actors",
+          "tool" : "web.open_url"
+        }
+      ],
+      "finalInferenceMilliseconds" : 437.55970831261948,
+      "instruction" : "Open Notes then open browser then search for Swift actors",
+      "processResidentBytes" : 83378176,
+      "repeat" : 1,
+      "scenario" : 10,
+      "transcript" : "Open notes then open browser then search for Swift Actors."
+    },
+    {
+      "actual" : [
+        {
+          "application" : "com.apple.Notes",
+          "tool" : "application.open"
+        }
+      ],
+      "audioSHA256" : "f37bd2ae372ec6bb9a2d5639bc983542a64c669ffe949965b3db833cfa56ab7f",
+      "expected" : [
+        {
+          "application" : "com.apple.Notes",
+          "tool" : "application.open"
+        }
+      ],
+      "finalInferenceMilliseconds" : 321.4282916742377,
+      "instruction" : "Open Notes",
+      "processResidentBytes" : 83066880,
+      "repeat" : 2,
+      "scenario" : 1,
+      "transcript" : "Open notes."
+    },
+    {
+      "actual" : [
+        {
+          "noteBody" : "",
+          "noteTitle" : "local flow benchmark.",
+          "tool" : "note.create"
+        }
+      ],
+      "audioSHA256" : "e939563e7b31ff51789bd9b2cfac17cd6d0b1402ef0828e7391ece705f256f75",
+      "expected" : [
+        {
+          "noteBody" : "",
+          "noteTitle" : "LocalFlow Benchmark",
+          "tool" : "note.create"
+        }
+      ],
+      "finalInferenceMilliseconds" : 378.28341667773202,
+      "instruction" : "Create a new note, call it LocalFlow Benchmark",
+      "processResidentBytes" : 83345408,
+      "repeat" : 2,
+      "scenario" : 2,
+      "transcript" : "Create a new note, call it local flow benchmark."
+    },
+    {
+      "actual" : [
+        {
+          "noteBody" : "this is my dictated benchmark text.",
+          "tool" : "note.append_current"
+        }
+      ],
+      "audioSHA256" : "1ab97f8d89327748c986d4204ecc987e4a16412928545b1722ed74d93b1d5c0f",
+      "expected" : [
+        {
+          "noteBody" : "This is my dictated benchmark text.",
+          "tool" : "note.append_current"
+        }
+      ],
+      "finalInferenceMilliseconds" : 388.16208328353241,
+      "instruction" : "Append to current note This is my dictated benchmark text.",
+      "processResidentBytes" : 83410944,
+      "repeat" : 2,
+      "scenario" : 3,
+      "transcript" : "Append to current note, this is my dictated benchmark text."
+    },
+    {
+      "actual" : [
+        {
+          "application" : "com.apple.Safari",
+          "tool" : "application.open"
+        }
+      ],
+      "audioSHA256" : "840e93374e3c91087c13aec5b2b7fe8372cf7625f7965a5e500d3338eb62cbac",
+      "expected" : [
+        {
+          "application" : "com.apple.Safari",
+          "tool" : "application.open"
+        }
+      ],
+      "finalInferenceMilliseconds" : 309.2976666521281,
+      "instruction" : "Open browser",
+      "processResidentBytes" : 83099648,
+      "repeat" : 2,
+      "scenario" : 4,
+      "transcript" : "Open Browser"
+    },
+    {
+      "actual" : [
+        {
+          "searchQuery" : "Ada Lovelace",
+          "tool" : "web.open_url"
+        }
+      ],
+      "audioSHA256" : "7b63cddbbad63e5277dda1cc46a0d7d640073fcfcd3ed9a85209934fbee7f549",
+      "expected" : [
+        {
+          "searchQuery" : "Ada Lovelace",
+          "tool" : "web.open_url"
+        }
+      ],
+      "finalInferenceMilliseconds" : 320.78041665954515,
+      "instruction" : "Search for Ada Lovelace",
+      "processResidentBytes" : 83116032,
+      "repeat" : 2,
+      "scenario" : 5,
+      "transcript" : "Search for Ada Lovelace."
+    },
+    {
+      "actual" : [
+        {
+          "tool" : "web.open_url",
+          "url" : "https:\/\/www.wikipedia.org"
+        }
+      ],
+      "audioSHA256" : "1c7c314d4e66e62111532d2ff5b469fdb1ab16fd40eb47894d40108ced31597f",
+      "expected" : [
+        {
+          "tool" : "web.open_url",
+          "url" : "https:\/\/www.wikipedia.org"
+        }
+      ],
+      "finalInferenceMilliseconds" : 348.66954165045172,
+      "instruction" : "Open https:\/\/www.wikipedia.org",
+      "processResidentBytes" : 83410944,
+      "repeat" : 2,
+      "scenario" : 6,
+      "transcript" : "Open www.wikipedia.org"
+    },
+    {
+      "actual" : [
+        {
+          "application" : "com.apple.PhotoBooth",
+          "tool" : "application.open"
+        }
+      ],
+      "audioSHA256" : "acd2f8de3582131426f739a978d0f82c39178842e5f49c21f6f8a7dec1d712b0",
+      "expected" : [
+        {
+          "application" : "com.apple.PhotoBooth",
+          "tool" : "application.open"
+        }
+      ],
+      "finalInferenceMilliseconds" : 340.94675001688302,
+      "instruction" : "Open Photo Booth",
+      "processResidentBytes" : 83017728,
+      "repeat" : 2,
+      "scenario" : 7,
+      "transcript" : "Open Photo Boot?"
+    },
+    {
+      "actual" : [
+        {
+          "tool" : "web.open_url",
+          "url" : "https:\/\/examblow.com"
+        }
+      ],
+      "audioSHA256" : "5ad1d2a30c04cafd7570694e6085a56723f5cc2c78f8335455e367193d17c615",
+      "expected" : [
+        {
+          "tool" : "web.open_url",
+          "url" : "https:\/\/example.com"
+        }
+      ],
+      "finalInferenceMilliseconds" : 349.85679166857153,
+      "instruction" : "Open https:\/\/example.com",
+      "processResidentBytes" : 83017728,
+      "repeat" : 2,
+      "scenario" : 8,
+      "transcript" : "Open examblow.com"
+    },
+    {
+      "actual" : [
+        {
+          "reminderTitle" : "review local flow benchmark.",
+          "tool" : "reminder.create"
+        }
+      ],
+      "audioSHA256" : "3b9e56ce0bd6e9572f11066d40a0647fbd179267eea4379344c8a12e97066b16",
+      "expected" : [
+        {
+          "reminderTitle" : "Review LocalFlow benchmark",
+          "tool" : "reminder.create"
+        }
+      ],
+      "finalInferenceMilliseconds" : 391.16699999431148,
+      "instruction" : "Create reminder Review LocalFlow benchmark",
+      "processResidentBytes" : 83034112,
+      "repeat" : 2,
+      "scenario" : 9,
+      "transcript" : "Create reminder review local flow benchmark."
+    },
+    {
+      "actual" : [
+        {
+          "application" : "com.apple.Notes",
+          "tool" : "application.open"
+        },
+        {
+          "application" : "com.apple.Safari",
+          "tool" : "application.open"
+        },
+        {
+          "searchQuery" : "Swift Actors",
+          "tool" : "web.open_url"
+        }
+      ],
+      "audioSHA256" : "01537731d74c57e23d6b3889a73879bc0a4959c5b1687ca50014b8339f50f4e1",
+      "expected" : [
+        {
+          "application" : "com.apple.Notes",
+          "tool" : "application.open"
+        },
+        {
+          "application" : "com.apple.Safari",
+          "tool" : "application.open"
+        },
+        {
+          "searchQuery" : "Swift actors",
+          "tool" : "web.open_url"
+        }
+      ],
+      "finalInferenceMilliseconds" : 412.35900000901893,
+      "instruction" : "Open Notes then open browser then search for Swift actors",
+      "processResidentBytes" : 83443712,
+      "repeat" : 2,
+      "scenario" : 10,
+      "transcript" : "Open notes then open browser then search for Swift Actors."
+    }
+  ]
+}

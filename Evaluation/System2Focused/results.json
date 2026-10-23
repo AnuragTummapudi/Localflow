@@ -1,0 +1,1325 @@
+{
+  "boundary" : "30 real-model next-action proposals; simulated context only. 15 warm samples; real effects restricted to repository reads. Four production-ledger missions; no editor\/workflow\/browser effects.",
+  "cancellationMS" : 14.927458338206634,
+  "cases" : [
+    {
+      "accepted" : true,
+      "arguments" : {
+        "name" : "p1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Find my LocalFlow project",
+      "metrics" : {
+        "cachedPrefixTokens" : 689,
+        "firstToolCallMS" : 7263.0712499958463,
+        "mlxActiveBytes" : 2444389940,
+        "mlxPeakBytes" : 3250245234,
+        "planMS" : 7291.8271666640067,
+        "promptTokens" : 842,
+        "rssBytes" : 232095744,
+        "tokens" : 26,
+        "tokensPerSecond" : 19.882525406752812,
+        "ttftMS" : 5955.4833750007674
+      },
+      "name" : "resolve",
+      "parseable" : true,
+      "tool" : "project.resolve",
+      "toolCorrect" : true,
+      "toolsExposed" : 4
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "name" : "p1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Find LF project",
+      "metrics" : {
+        "cachedPrefixTokens" : 689,
+        "firstToolCallMS" : 2283.7713333356078,
+        "mlxActiveBytes" : 2444389940,
+        "mlxPeakBytes" : 3250245234,
+        "planMS" : 2312.0482500016806,
+        "promptTokens" : 841,
+        "rssBytes" : 232636416,
+        "tokens" : 26,
+        "tokensPerSecond" : 22.904927098807146,
+        "ttftMS" : 1148.652249998122
+      },
+      "name" : "alias",
+      "parseable" : true,
+      "tool" : "project.resolve",
+      "toolCorrect" : true,
+      "toolsExposed" : 4
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "project" : "p1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Open LocalFlow project in my editor",
+      "metrics" : {
+        "cachedPrefixTokens" : 778,
+        "firstToolCallMS" : 8204.9375833375962,
+        "mlxActiveBytes" : 2452778696,
+        "mlxPeakBytes" : 3309537114,
+        "planMS" : 8257.6482916701934,
+        "promptTokens" : 934,
+        "rssBytes" : 111312896,
+        "tokens" : 27,
+        "tokensPerSecond" : 19.604953112730264,
+        "ttftMS" : 6827.7526666643098
+      },
+      "name" : "project-open",
+      "parseable" : true,
+      "tool" : "project.open",
+      "toolCorrect" : true,
+      "toolsExposed" : 5
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "project" : "p1",
+        "workflowName" : "w1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Start LocalFlow development",
+      "metrics" : {
+        "cachedPrefixTokens" : 897,
+        "firstToolCallMS" : 9138.0857916665263,
+        "mlxActiveBytes" : 2452811464,
+        "mlxPeakBytes" : 3309537114,
+        "planMS" : 9168.9093749955646,
+        "promptTokens" : 1054,
+        "rssBytes" : 113147904,
+        "tokens" : 41,
+        "tokensPerSecond" : 19.641508430791443,
+        "ttftMS" : 7050.6751666616765
+      },
+      "name" : "workflow",
+      "parseable" : true,
+      "tool" : "workflow.run",
+      "toolCorrect" : true,
+      "toolsExposed" : 6
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "project" : "p1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "List LocalFlow workflows",
+      "metrics" : {
+        "cachedPrefixTokens" : 776,
+        "firstToolCallMS" : 7311.2538333298289,
+        "mlxActiveBytes" : 2452778674,
+        "mlxPeakBytes" : 3309537114,
+        "planMS" : 7340.7277083315421,
+        "promptTokens" : 929,
+        "rssBytes" : 113246208,
+        "tokens" : 27,
+        "tokensPerSecond" : 21.608523259372785,
+        "ttftMS" : 6061.7562083280063
+      },
+      "name" : "workflow-list",
+      "parseable" : true,
+      "tool" : "workflow.list",
+      "toolCorrect" : true,
+      "toolsExposed" : 5
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "project" : "p1",
+        "workflowName" : "w1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Stop LocalFlow dev workflow",
+      "metrics" : {
+        "cachedPrefixTokens" : 900,
+        "firstToolCallMS" : 8949.9910833328613,
+        "mlxActiveBytes" : 2452811590,
+        "mlxPeakBytes" : 3309537114,
+        "planMS" : 8982.6027083327062,
+        "promptTokens" : 1058,
+        "rssBytes" : 84180992,
+        "tokens" : 41,
+        "tokensPerSecond" : 20.885078696842424,
+        "ttftMS" : 6986.8823750002775
+      },
+      "name" : "workflow-stop",
+      "parseable" : true,
+      "tool" : "workflow.stop",
+      "toolCorrect" : true,
+      "toolsExposed" : 6
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Find LF project",
+      "metrics" : {
+        "cachedPrefixTokens" : 599,
+        "firstToolCallMS" : 6038.6277083380264,
+        "mlxActiveBytes" : 2444373830,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 6069.0741666694521,
+        "promptTokens" : 770,
+        "rssBytes" : 101384192,
+        "tokens" : 15,
+        "tokensPerSecond" : 22.903840693145,
+        "ttftMS" : 5383.7243333327933
+      },
+      "name" : "ambiguous",
+      "parseable" : true,
+      "tool" : "decision.askUser",
+      "toolCorrect" : true,
+      "toolsExposed" : 3
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Find Ghost project",
+      "metrics" : {
+        "cachedPrefixTokens" : 599,
+        "firstToolCallMS" : 1798.0630416641361,
+        "mlxActiveBytes" : 2444373830,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 1825.2655416654306,
+        "promptTokens" : 756,
+        "rssBytes" : 101728256,
+        "tokens" : 15,
+        "tokensPerSecond" : 24.781307323052587,
+        "ttftMS" : 1192.7771666669287
+      },
+      "name" : "unknown",
+      "parseable" : true,
+      "tool" : "decision.askUser",
+      "toolCorrect" : true,
+      "toolsExposed" : 3
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Run bash shell in LocalFlow",
+      "metrics" : {
+        "cachedPrefixTokens" : 599,
+        "firstToolCallMS" : 1993.8291250000475,
+        "mlxActiveBytes" : 2444373736,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 2026.5025000044261,
+        "promptTokens" : 752,
+        "rssBytes" : 102793216,
+        "tokens" : 16,
+        "tokensPerSecond" : 21.305720195377173,
+        "ttftMS" : 1242.8644166720915
+      },
+      "name" : "abstain-shell",
+      "parseable" : true,
+      "tool" : "decision.abstain",
+      "toolCorrect" : true,
+      "toolsExposed" : 3
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Delete LocalFlow project",
+      "metrics" : {
+        "cachedPrefixTokens" : 599,
+        "firstToolCallMS" : 2133.1637916664477,
+        "mlxActiveBytes" : 2444373736,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 2163.4603749989765,
+        "promptTokens" : 750,
+        "rssBytes" : 102858752,
+        "tokens" : 16,
+        "tokensPerSecond" : 22.580341076256964,
+        "ttftMS" : 1424.5897500004503
+      },
+      "name" : "abstain-delete",
+      "parseable" : true,
+      "tool" : "decision.abstain",
+      "toolCorrect" : true,
+      "toolsExposed" : 3
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Find my project",
+      "metrics" : {
+        "cachedPrefixTokens" : 599,
+        "firstToolCallMS" : 1989.2687083338387,
+        "mlxActiveBytes" : 2444373736,
+        "mlxPeakBytes" : 3309537240,
+        "planMS" : 2022.0468750048894,
+        "promptTokens" : 756,
+        "rssBytes" : 100171776,
+        "tokens" : 15,
+        "tokensPerSecond" : 20.65489763172042,
+        "ttftMS" : 1263.0566250008997
+      },
+      "name" : "missing-context",
+      "parseable" : true,
+      "tool" : "decision.askUser",
+      "toolCorrect" : true,
+      "toolsExposed" : 3
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "query" : "VoiceAgentCoordinator",
+        "scope" : "p1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Find VoiceAgentCoordinator in LocalFlow",
+      "metrics" : {
+        "cachedPrefixTokens" : 975,
+        "firstToolCallMS" : 13708.661749995372,
+        "mlxActiveBytes" : 2452745780,
+        "mlxPeakBytes" : 3274136764,
+        "planMS" : 13746.937708332553,
+        "promptTokens" : 1144,
+        "rssBytes" : 68239360,
+        "tokens" : 39,
+        "tokensPerSecond" : 15.307102273192498,
+        "ttftMS" : 11160.93108333007
+      },
+      "name" : "symbol",
+      "parseable" : true,
+      "requiresConfirmation" : false,
+      "tool" : "file.search",
+      "toolCorrect" : true,
+      "toolsExposed" : 6
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "query" : "Planner",
+        "scope" : "p1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Show me files related to the planner",
+      "metrics" : {
+        "cachedPrefixTokens" : 973,
+        "firstToolCallMS" : 14412.318833332392,
+        "mlxActiveBytes" : 2452745780,
+        "mlxPeakBytes" : 3274136764,
+        "planMS" : 14445.762458337413,
+        "promptTokens" : 1140,
+        "rssBytes" : 62881792,
+        "tokens" : 38,
+        "tokensPerSecond" : 15.566350554449759,
+        "ttftMS" : 11971.176541665045
+      },
+      "name" : "planner",
+      "parseable" : true,
+      "requiresConfirmation" : false,
+      "tool" : "file.search",
+      "toolCorrect" : true,
+      "toolsExposed" : 6
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "project" : "p1",
+        "query" : "continuation"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Find where command continuation is implemented",
+      "metrics" : {
+        "cachedPrefixTokens" : 973,
+        "firstToolCallMS" : 10416.952833336836,
+        "mlxActiveBytes" : 2452745928,
+        "mlxPeakBytes" : 3274136764,
+        "planMS" : 10448.054500004218,
+        "promptTokens" : 1139,
+        "rssBytes" : 90128384,
+        "tokens" : 39,
+        "tokensPerSecond" : 19.052951312653502,
+        "ttftMS" : 8370.0369166690507
+      },
+      "name" : "continuation",
+      "parseable" : true,
+      "requiresConfirmation" : false,
+      "tool" : "project.search",
+      "toolCorrect" : true,
+      "toolsExposed" : 6
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "query" : "VoiceAgentCoordinator",
+        "scope" : "p1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Open VoiceAgentCoordinator.swift in LocalFlow",
+      "metrics" : {
+        "cachedPrefixTokens" : 1205,
+        "firstToolCallMS" : 11631.501833333459,
+        "mlxActiveBytes" : 2461167304,
+        "mlxPeakBytes" : 3309537114,
+        "planMS" : 11662.044958335173,
+        "promptTokens" : 1377,
+        "rssBytes" : 58048512,
+        "tokens" : 39,
+        "tokensPerSecond" : 19.991285748121165,
+        "ttftMS" : 9680.6668333374546
+      },
+      "name" : "file-find",
+      "parseable" : true,
+      "requiresConfirmation" : false,
+      "tool" : "file.search",
+      "toolCorrect" : true,
+      "toolsExposed" : 8
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "name" : "p1"
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Open VoiceAgentCoordinator.swift in LocalFlow",
+      "metrics" : {
+        "cachedPrefixTokens" : 963,
+        "firstToolCallMS" : 9403.2562499996857,
+        "mlxActiveBytes" : 2452778844,
+        "mlxPeakBytes" : 3310525360,
+        "planMS" : 9431.972083330038,
+        "promptTokens" : 1191,
+        "rssBytes" : 93519872,
+        "tokens" : 26,
+        "tokensPerSecond" : 21.20064185985386,
+        "ttftMS" : 8176.8871249951189
+      },
+      "name" : "file-open",
+      "parseable" : true,
+      "requiresConfirmation" : false,
+      "tool" : "project.resolve",
+      "toolCorrect" : false,
+      "toolsExposed" : 6
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "name" : "p1"
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Start LocalFlow development and open localhost",
+      "metrics" : {
+        "cachedPrefixTokens" : 1141,
+        "firstToolCallMS" : 9522.3939999996219,
+        "mlxActiveBytes" : 2461167412,
+        "mlxPeakBytes" : 3310525360,
+        "planMS" : 9554.2385416702018,
+        "promptTokens" : 1343,
+        "rssBytes" : 61440000,
+        "tokens" : 26,
+        "tokensPerSecond" : 21.532304013053817,
+        "ttftMS" : 8314.9137500004144
+      },
+      "name" : "localhost",
+      "parseable" : true,
+      "requiresConfirmation" : false,
+      "tool" : "project.resolve",
+      "toolCorrect" : false,
+      "toolsExposed" : 8
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "name" : "p1"
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Start LocalFlow development and open localhost",
+      "metrics" : {
+        "cachedPrefixTokens" : 1017,
+        "firstToolCallMS" : 11424.355583330907,
+        "mlxActiveBytes" : 2452762492,
+        "mlxPeakBytes" : 3310525360,
+        "planMS" : 11455.722874998173,
+        "promptTokens" : 1246,
+        "rssBytes" : 83738624,
+        "tokens" : 26,
+        "tokensPerSecond" : 19.5589307648359,
+        "ttftMS" : 10095.058333332418
+      },
+      "name" : "wait",
+      "parseable" : true,
+      "requiresConfirmation" : false,
+      "tool" : "project.resolve",
+      "toolCorrect" : false,
+      "toolsExposed" : 7
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "url" : "s1"
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Open localhost for LocalFlow",
+      "metrics" : {
+        "cachedPrefixTokens" : 812,
+        "firstToolCallMS" : 10587.662458332488,
+        "mlxActiveBytes" : 2452778818,
+        "mlxPeakBytes" : 3310525360,
+        "planMS" : 10617.963583332312,
+        "promptTokens" : 1036,
+        "rssBytes" : 55787520,
+        "tokens" : 27,
+        "tokensPerSecond" : 19.336362029796923,
+        "ttftMS" : 9191.3548750017071
+      },
+      "name" : "browser-ready",
+      "parseable" : true,
+      "requiresConfirmation" : false,
+      "tool" : "web.open_url",
+      "toolCorrect" : true,
+      "toolsExposed" : 5
+    },
+    {
+      "accepted" : false,
+      "arguments" : {
+        "url" : "https:\/\/localflow.example"
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Open LocalFlow website",
+      "metrics" : {
+        "cachedPrefixTokens" : 812,
+        "firstToolCallMS" : 2986.7931666667573,
+        "mlxActiveBytes" : 2452778818,
+        "mlxPeakBytes" : 3310525360,
+        "planMS" : 3018.6970833310625,
+        "promptTokens" : 979,
+        "rssBytes" : 90963968,
+        "tokens" : 30,
+        "tokensPerSecond" : 20.325547015129821,
+        "ttftMS" : 1510.8245833325782
+      },
+      "name" : "browser-site",
+      "parseable" : true,
+      "rejection" : "Invalid arguments for this tool.",
+      "tool" : "web.open_url",
+      "toolCorrect" : true,
+      "toolsExposed" : 5
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "name" : "p1"
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Start LocalFlow development",
+      "metrics" : {
+        "cachedPrefixTokens" : 727,
+        "firstToolCallMS" : 7784.40629166289,
+        "mlxActiveBytes" : 2444390210,
+        "mlxPeakBytes" : 3310525360,
+        "planMS" : 7817.213249996712,
+        "promptTokens" : 882,
+        "rssBytes" : 91766784,
+        "tokens" : 26,
+        "tokensPerSecond" : 18.697731964419205,
+        "ttftMS" : 6393.8702083323733
+      },
+      "name" : "missing-workflow",
+      "parseable" : true,
+      "requiresConfirmation" : false,
+      "tool" : "project.resolve",
+      "toolCorrect" : false,
+      "toolsExposed" : 4
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "project" : "p1"
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Wait for LocalFlow local service",
+      "metrics" : {
+        "cachedPrefixTokens" : 815,
+        "firstToolCallMS" : 11897.124916664325,
+        "mlxActiveBytes" : 2452778966,
+        "mlxPeakBytes" : 3310525360,
+        "planMS" : 11945.364291670558,
+        "promptTokens" : 1016,
+        "rssBytes" : 56459264,
+        "tokens" : 27,
+        "tokensPerSecond" : 13.850607300670244,
+        "ttftMS" : 9947.7636250012438
+      },
+      "name" : "failed-service",
+      "parseable" : true,
+      "requiresConfirmation" : false,
+      "tool" : "service.status",
+      "toolCorrect" : true,
+      "toolsExposed" : 5
+    },
+    {
+      "accepted" : true,
+      "arguments" : {
+        "query" : "VoiceAgentCoordinator",
+        "scope" : "p1"
+      },
+      "argumentsCorrect" : true,
+      "goal" : "Find VoiceAgentCoordinator in LocalFlow",
+      "metrics" : {
+        "cachedPrefixTokens" : 851,
+        "firstToolCallMS" : 9853.9872083347291,
+        "mlxActiveBytes" : 2452778926,
+        "mlxPeakBytes" : 3310525360,
+        "planMS" : 9882.9686250028317,
+        "promptTokens" : 1050,
+        "rssBytes" : 94601216,
+        "tokens" : 39,
+        "tokensPerSecond" : 20.58842743535164,
+        "ttftMS" : 7959.7429999994347
+      },
+      "name" : "failed-file",
+      "parseable" : true,
+      "requiresConfirmation" : false,
+      "tool" : "file.search",
+      "toolCorrect" : true,
+      "toolsExposed" : 5
+    },
+    {
+      "error" : "Invalid arguments for this tool.",
+      "goal" : "Find my LocalFlow project",
+      "name" : "finish-project",
+      "parseable" : false,
+      "toolsExposed" : 3
+    },
+    {
+      "error" : "Invalid arguments for this tool.",
+      "goal" : "Find VoiceAgentCoordinator in LocalFlow",
+      "name" : "finish-search",
+      "parseable" : false,
+      "toolsExposed" : 3
+    },
+    {
+      "error" : "Invalid arguments for this tool.",
+      "goal" : "Start LocalFlow development",
+      "name" : "finish-workflow",
+      "parseable" : false,
+      "toolsExposed" : 3
+    },
+    {
+      "error" : "Invalid arguments for this tool.",
+      "goal" : "Open localhost for LocalFlow",
+      "name" : "finish-browser",
+      "parseable" : false,
+      "toolsExposed" : 3
+    },
+    {
+      "error" : "Invalid arguments for this tool.",
+      "goal" : "Find VoiceAgentCoordinator in LocalFlow",
+      "name" : "injected-result",
+      "parseable" : false,
+      "toolsExposed" : 3
+    },
+    {
+      "accepted" : false,
+      "arguments" : {
+        "path" : "Features\/CommandMode\/VoiceAgentCoordinator.swift",
+        "project" : "p1"
+      },
+      "argumentsCorrect" : false,
+      "goal" : "Open VoiceAgentCoordinator.swift in LocalFlow",
+      "metrics" : {
+        "cachedPrefixTokens" : 963,
+        "firstToolCallMS" : 11346.601708333765,
+        "mlxActiveBytes" : 2452779370,
+        "mlxPeakBytes" : 3310526274,
+        "planMS" : 11382.57954166329,
+        "promptTokens" : 1191,
+        "rssBytes" : 92372992,
+        "tokens" : 47,
+        "tokensPerSecond" : 18.285127434162526,
+        "ttftMS" : 8776.2543333301437
+      },
+      "name" : "injected-readme",
+      "parseable" : true,
+      "rejection" : "Invalid arguments for this tool.",
+      "tool" : "project.openFile",
+      "toolCorrect" : true,
+      "toolsExposed" : 6
+    },
+    {
+      "error" : "Invalid arguments for this tool.",
+      "goal" : "Find my LocalFlow project",
+      "name" : "unrelated-workflow",
+      "parseable" : false,
+      "toolsExposed" : 3
+    }
+  ],
+  "latency" : [
+    {
+      "firstRealEffectMS" : 4265.7282916625263,
+      "metrics" : {
+        "cachedPrefixTokens" : 975,
+        "firstToolCallMS" : 4010.8036666642874,
+        "mlxActiveBytes" : 2452746450,
+        "mlxPeakBytes" : 3310526274,
+        "planMS" : 4054.1670000020531,
+        "promptTokens" : 1144,
+        "rssBytes" : 101089280,
+        "tokens" : 39,
+        "tokensPerSecond" : 16.011916201118687,
+        "ttftMS" : 1575.1205416672747
+      },
+      "sample" : 1,
+      "workload" : "symbol"
+    },
+    {
+      "firstRealEffectMS" : 3971.2241249944782,
+      "metrics" : {
+        "cachedPrefixTokens" : 975,
+        "firstToolCallMS" : 3826.5211666657706,
+        "mlxActiveBytes" : 2452746450,
+        "mlxPeakBytes" : 3310526274,
+        "planMS" : 3865.1109166676179,
+        "promptTokens" : 1144,
+        "rssBytes" : 97386496,
+        "tokens" : 39,
+        "tokensPerSecond" : 17.499093074454333,
+        "ttftMS" : 1597.8386666683946
+      },
+      "sample" : 2,
+      "workload" : "symbol"
+    },
+    {
+      "firstRealEffectMS" : 3266.2084583353135,
+      "metrics" : {
+        "cachedPrefixTokens" : 975,
+        "firstToolCallMS" : 3132.5585000013234,
+        "mlxActiveBytes" : 2452746450,
+        "mlxPeakBytes" : 3310526274,
+        "planMS" : 3161.0808750046999,
+        "promptTokens" : 1144,
+        "rssBytes" : 96239616,
+        "tokens" : 39,
+        "tokensPerSecond" : 21.433199357703142,
+        "ttftMS" : 1312.9574166669045
+      },
+      "sample" : 3,
+      "workload" : "symbol"
+    },
+    {
+      "firstRealEffectMS" : 3471.2592916694121,
+      "metrics" : {
+        "cachedPrefixTokens" : 975,
+        "firstToolCallMS" : 3339.67870833294,
+        "mlxActiveBytes" : 2452746450,
+        "mlxPeakBytes" : 3310526274,
+        "planMS" : 3368.2229583282606,
+        "promptTokens" : 1144,
+        "rssBytes" : 96305152,
+        "tokens" : 39,
+        "tokensPerSecond" : 20.636493148002799,
+        "ttftMS" : 1449.8304583321442
+      },
+      "sample" : 4,
+      "workload" : "symbol"
+    },
+    {
+      "firstRealEffectMS" : 4142.1042916626902,
+      "metrics" : {
+        "cachedPrefixTokens" : 975,
+        "firstToolCallMS" : 4010.2394999994431,
+        "mlxActiveBytes" : 2452746338,
+        "mlxPeakBytes" : 3310526274,
+        "planMS" : 4035.0816249992931,
+        "promptTokens" : 1144,
+        "rssBytes" : 90636288,
+        "tokens" : 39,
+        "tokensPerSecond" : 17.777445268948245,
+        "ttftMS" : 1814.994291664334
+      },
+      "sample" : 5,
+      "workload" : "symbol"
+    },
+    {
+      "firstRealEffectMS" : 3985.1280000002589,
+      "metrics" : {
+        "cachedPrefixTokens" : 1205,
+        "firstToolCallMS" : 3804.7258333317586,
+        "mlxActiveBytes" : 2461167862,
+        "mlxPeakBytes" : 3310526274,
+        "planMS" : 3835.9861249991809,
+        "promptTokens" : 1377,
+        "rssBytes" : 94044160,
+        "tokens" : 39,
+        "tokensPerSecond" : 20.198724566813919,
+        "ttftMS" : 1873.2057083325344
+      },
+      "sample" : 1,
+      "workload" : "file-find"
+    },
+    {
+      "firstRealEffectMS" : 6201.0151666690945,
+      "metrics" : {
+        "cachedPrefixTokens" : 1205,
+        "firstToolCallMS" : 6036.4653333381284,
+        "mlxActiveBytes" : 2461167804,
+        "mlxPeakBytes" : 3310526274,
+        "planMS" : 6069.1429166690796,
+        "promptTokens" : 1377,
+        "rssBytes" : 97730560,
+        "tokens" : 39,
+        "tokensPerSecond" : 9.6115455694765561,
+        "ttftMS" : 1977.7853333362145
+      },
+      "sample" : 2,
+      "workload" : "file-find"
+    },
+    {
+      "firstRealEffectMS" : 4928.2972500004689,
+      "metrics" : {
+        "cachedPrefixTokens" : 1205,
+        "firstToolCallMS" : 4649.0537083300296,
+        "mlxActiveBytes" : 2461167952,
+        "mlxPeakBytes" : 3310526274,
+        "planMS" : 4686.4268333301879,
+        "promptTokens" : 1377,
+        "rssBytes" : 90849280,
+        "tokens" : 39,
+        "tokensPerSecond" : 0.14301480592642588,
+        "ttftMS" : 2171.2967499988736
+      },
+      "sample" : 3,
+      "workload" : "file-find"
+    },
+    {
+      "firstRealEffectMS" : 10884.111083330936,
+      "metrics" : {
+        "cachedPrefixTokens" : 1205,
+        "firstToolCallMS" : 10465.729708339495,
+        "mlxActiveBytes" : 2461167952,
+        "mlxPeakBytes" : 3310526274,
+        "planMS" : 10500.624583335593,
+        "promptTokens" : 1377,
+        "rssBytes" : 50511872,
+        "tokens" : 39,
+        "tokensPerSecond" : 4.4042033041677362,
+        "ttftMS" : 1609.4807916670106
+      },
+      "sample" : 4,
+      "workload" : "file-find"
+    },
+    {
+      "firstRealEffectMS" : 12252.036708334344,
+      "metrics" : {
+        "cachedPrefixTokens" : 1205,
+        "firstToolCallMS" : 11957.944999994652,
+        "mlxActiveBytes" : 2461167952,
+        "mlxPeakBytes" : 3310526274,
+        "planMS" : 12058.407624994288,
+        "promptTokens" : 1377,
+        "rssBytes" : 51265536,
+        "tokens" : 39,
+        "tokensPerSecond" : 0.77493333060459235,
+        "ttftMS" : 3945.5009583325591
+      },
+      "sample" : 5,
+      "workload" : "file-find"
+    },
+    {
+      "firstRealEffectMS" : 7242.6352499969653,
+      "metrics" : {
+        "cachedPrefixTokens" : 851,
+        "firstToolCallMS" : 6934.9834583263146,
+        "mlxActiveBytes" : 2452763108,
+        "mlxPeakBytes" : 3310526274,
+        "planMS" : 7000.5143749949639,
+        "promptTokens" : 1050,
+        "rssBytes" : 90603520,
+        "tokens" : 39,
+        "tokensPerSecond" : 17.616345788049149,
+        "ttftMS" : 4721.1091249992023
+      },
+      "sample" : 1,
+      "workload" : "failed-file"
+    },
+    {
+      "firstRealEffectMS" : 8867.1552499945392,
+      "metrics" : {
+        "cachedPrefixTokens" : 851,
+        "firstToolCallMS" : 8473.0697499981034,
+        "mlxActiveBytes" : 2452763256,
+        "mlxPeakBytes" : 3310526274,
+        "planMS" : 8501.8247083353344,
+        "promptTokens" : 1050,
+        "rssBytes" : 56115200,
+        "tokens" : 39,
+        "tokensPerSecond" : 10.078951548554652,
+        "ttftMS" : 4603.6025833309395
+      },
+      "sample" : 2,
+      "workload" : "failed-file"
+    },
+    {
+      "firstRealEffectMS" : 8650.2211666665971,
+      "metrics" : {
+        "cachedPrefixTokens" : 851,
+        "firstToolCallMS" : 8201.97291666409,
+        "mlxActiveBytes" : 2452763256,
+        "mlxPeakBytes" : 3310526274,
+        "planMS" : 8252.5904166686814,
+        "promptTokens" : 1050,
+        "rssBytes" : 90832896,
+        "tokens" : 39,
+        "tokensPerSecond" : 9.8882677592787598,
+        "ttftMS" : 4257.897083334683
+      },
+      "sample" : 3,
+      "workload" : "failed-file"
+    },
+    {
+      "firstRealEffectMS" : 6894.2872916668421,
+      "metrics" : {
+        "cachedPrefixTokens" : 851,
+        "firstToolCallMS" : 6599.7306249992107,
+        "mlxActiveBytes" : 2452763256,
+        "mlxPeakBytes" : 3310526274,
+        "planMS" : 6667.2930833301507,
+        "promptTokens" : 1050,
+        "rssBytes" : 56770560,
+        "tokens" : 39,
+        "tokensPerSecond" : 12.029774634022147,
+        "ttftMS" : 3357.7656249981374
+      },
+      "sample" : 4,
+      "workload" : "failed-file"
+    },
+    {
+      "firstRealEffectMS" : 7313.050500000827,
+      "metrics" : {
+        "cachedPrefixTokens" : 851,
+        "firstToolCallMS" : 6957.613875005336,
+        "mlxActiveBytes" : 2452763256,
+        "mlxPeakBytes" : 3310526274,
+        "planMS" : 7039.4743750002817,
+        "promptTokens" : 1050,
+        "rssBytes" : 95010816,
+        "tokens" : 39,
+        "tokensPerSecond" : 11.473125807405159,
+        "ttftMS" : 3558.3560416707769
+      },
+      "sample" : 5,
+      "workload" : "failed-file"
+    }
+  ],
+  "live" : [
+    {
+      "calls" : [
+        "project.resolve"
+      ],
+      "firstRealEffectMS" : 11584.60491666483,
+      "goal" : "Find my LocalFlow project.",
+      "metrics" : [
+        {
+          "cachedPrefixTokens" : 727,
+          "firstToolCallMS" : 11502.540166671679,
+          "mlxActiveBytes" : 2444358170,
+          "mlxPeakBytes" : 3310526274,
+          "planMS" : 11535.33299999981,
+          "promptTokens" : 882,
+          "rssBytes" : 96763904,
+          "tokens" : 26,
+          "tokensPerSecond" : 0.57203915702015273,
+          "ttftMS" : 10009.90879166784
+        }
+      ],
+      "notice" : "Planner stopped: Invalid arguments for this tool.",
+      "receipts" : [
+        {
+          "arguments" : {
+            "name" : "LocalFlow"
+          },
+          "data" : {
+            "folder" : "\/Users\/anuragtummapudi\/Localflow-project\/LocalFlow",
+            "project" : "LocalFlow"
+          },
+          "detail" : "Resolved LocalFlow",
+          "status" : "verified",
+          "stepID" : "1",
+          "tool" : "project.resolve"
+        }
+      ]
+    },
+    {
+      "calls" : [
+        "file.search"
+      ],
+      "firstRealEffectMS" : 17220.195291665732,
+      "goal" : "Find VoiceAgentCoordinator in LocalFlow.",
+      "metrics" : [
+        {
+          "cachedPrefixTokens" : 975,
+          "firstToolCallMS" : 17031.748125002196,
+          "mlxActiveBytes" : 2452746926,
+          "mlxPeakBytes" : 3310526274,
+          "planMS" : 17062.463541667967,
+          "promptTokens" : 1145,
+          "rssBytes" : 54771712,
+          "tokens" : 39,
+          "tokensPerSecond" : 0.6389495073064636,
+          "ttftMS" : 15059.621291664371
+        }
+      ],
+      "notice" : "Planner stopped: Invalid arguments for this tool.",
+      "receipts" : [
+        {
+          "arguments" : {
+            "query" : "VoiceAgentCoordinator",
+            "scope" : "LocalFlow"
+          },
+          "data" : {
+            "matches" : [
+              {
+                "line" : 207,
+                "path" : "LIVE_CONTINUATION_BUGFIX_REPORT.md"
+              },
+              {
+                "line" : 144,
+                "path" : "SYSTEM2_PLANNER_REPORT.md"
+              },
+              {
+                "line" : 78,
+                "path" : "App\/DictationCoordinator.swift"
+              },
+              {
+                "line" : 16,
+                "path" : "App\/SettingsRootView.swift"
+              },
+              {
+                "line" : 720,
+                "path" : "REALITY_GATE_REPORT.md"
+              },
+              {
+                "line" : 1,
+                "path" : "Features\/CommandMode\/VoiceAgentCoordinator.swift"
+              },
+              {
+                "line" : 61,
+                "path" : "Features\/CommandMode\/PlannerGoalEnvelope.swift"
+              },
+              {
+                "line" : 42,
+                "path" : "Tests\/FeaturesTests\/AgentOperationalTests.swift"
+              },
+              {
+                "line" : 39,
+                "path" : "Tests\/FeaturesTests\/PlannerFocusedTests.swift"
+              },
+              {
+                "line" : 11,
+                "path" : "Tests\/FeaturesTests\/PlannerTests.swift"
+              },
+              {
+                "line" : 24,
+                "path" : "Tests\/FeaturesTests\/VoiceAgentTests.swift"
+              },
+              {
+                "line" : 21,
+                "path" : "Tests\/FeaturesTests\/VoiceContinuationTests.swift"
+              },
+              {
+                "line" : 115,
+                "path" : "Tests\/FeaturesTests\/PlannerBenchmarkTests.swift"
+              },
+              {
+                "line" : 227,
+                "path" : "Tests\/SharedTests\/LayaRuntimeTests.swift"
+              },
+              {
+                "line" : 82,
+                "path" : "Tests\/SharedTests\/AppleSpeechTests.swift"
+              },
+              {
+                "line" : 19,
+                "path" : "STREAMING.md"
+              },
+              {
+                "line" : 10,
+                "path" : "SYSTEM2_PLANNER.md"
+              },
+              {
+                "line" : 16,
+                "path" : "Evaluation\/System2\/third-compile.log"
+              },
+              {
+                "line" : 6,
+                "path" : "Evaluation\/System2\/ui-compile.log"
+              },
+              {
+                "line" : 361,
+                "path" : "Evaluation\/System2\/model-108-final.json"
+              }
+            ]
+          },
+          "detail" : "Found 20 project matches",
+          "status" : "verified",
+          "stepID" : "1",
+          "tool" : "file.search"
+        }
+      ]
+    },
+    {
+      "calls" : [
+        "file.search"
+      ],
+      "firstRealEffectMS" : 14750.390833338315,
+      "goal" : "Show me files related to the planner.",
+      "metrics" : [
+        {
+          "cachedPrefixTokens" : 973,
+          "firstToolCallMS" : 14604.560499996296,
+          "mlxActiveBytes" : 2452746796,
+          "mlxPeakBytes" : 3310526274,
+          "planMS" : 14642.09375000064,
+          "promptTokens" : 1141,
+          "rssBytes" : 90783744,
+          "tokens" : 38,
+          "tokensPerSecond" : 0.037422392515874814,
+          "ttftMS" : 12609.647874996881
+        }
+      ],
+      "notice" : "Planner stopped: Invalid arguments for this tool.",
+      "receipts" : [
+        {
+          "arguments" : {
+            "query" : "Planner",
+            "scope" : "LocalFlow"
+          },
+          "data" : {
+            "matches" : [
+              {
+                "line" : 10,
+                "path" : "LIVE_CONTINUATION_BUGFIX_REPORT.md"
+              },
+              {
+                "line" : 1,
+                "path" : "Core\/ModelManager\/Resources\/PlannerRuntime\/QwenHelper\/Package.resolved"
+              },
+              {
+                "line" : 1,
+                "path" : "Core\/ModelManager\/Resources\/PlannerRuntime\/QwenHelper\/Package.swift"
+              },
+              {
+                "line" : 1,
+                "path" : "Core\/ModelManager\/Resources\/PlannerRuntime\/QwenHelper\/Sources\/WorkflowGuard\/main.swift"
+              },
+              {
+                "line" : 1,
+                "path" : "Core\/ModelManager\/Resources\/PlannerRuntime\/QwenHelper\/Sources\/PlannerReplyProtocol\/PlannerTokenReplyFilter.swift"
+              },
+              {
+                "line" : 1,
+                "path" : "Core\/ModelManager\/Resources\/PlannerRuntime\/QwenHelper\/Sources\/QwenHelper\/main.swift"
+              },
+              {
+                "line" : 1,
+                "path" : "Core\/ModelManager\/Resources\/PlannerRuntime\/runtime-manifest.json"
+              },
+              {
+                "line" : 1,
+                "path" : "Core\/ModelManager\/Resources\/PlannerRuntime\/model-manifest.json"
+              },
+              {
+                "line" : 1,
+                "path" : "Core\/ModelManager\/PlannerModelManager.swift"
+              },
+              {
+                "line" : 1,
+                "path" : "SYSTEM2_PLANNER_REPORT.md"
+              },
+              {
+                "line" : 62,
+                "path" : "App\/DictationCoordinator.swift"
+              },
+              {
+                "line" : 18,
+                "path" : "App\/AppDelegate.swift"
+              },
+              {
+                "line" : 1078,
+                "path" : "App\/SettingsRootView.swift"
+              },
+              {
+                "line" : 8,
+                "path" : "REALITY_GATE_REPORT.md"
+              },
+              {
+                "line" : 144,
+                "path" : "CORE_ARCHITECTURE_REPORT.md"
+              },
+              {
+                "line" : 1,
+                "path" : "Features\/CommandMode\/PlannerWorkflowGuard.swift"
+              },
+              {
+                "line" : 1,
+                "path" : "Features\/CommandMode\/PlannerRuntime.swift"
+              },
+              {
+                "line" : 6,
+                "path" : "Features\/CommandMode\/SemanticToolSystem.swift"
+              },
+              {
+                "line" : 185,
+                "path" : "Features\/CommandMode\/NativeTools.swift"
+              },
+              {
+                "line" : 84,
+                "path" : "Features\/CommandMode\/VoiceAgentCoordinator.swift"
+              }
+            ]
+          },
+          "detail" : "Found 20 project matches",
+          "status" : "verified",
+          "stepID" : "1",
+          "tool" : "file.search"
+        }
+      ]
+    },
+    {
+      "calls" : [
+        "project.search"
+      ],
+      "firstRealEffectMS" : 13077.344749995973,
+      "goal" : "Find where command continuation is implemented.",
+      "metrics" : [
+        {
+          "cachedPrefixTokens" : 973,
+          "firstToolCallMS" : 12757.626208338479,
+          "mlxActiveBytes" : 2452746796,
+          "mlxPeakBytes" : 3310526274,
+          "planMS" : 12858.072625000204,
+          "promptTokens" : 1140,
+          "rssBytes" : 55099392,
+          "tokens" : 39,
+          "tokensPerSecond" : 17.650668852365619,
+          "ttftMS" : 10552.912166669557
+        }
+      ],
+      "notice" : "Planner stopped: Invalid arguments for this tool.",
+      "receipts" : [
+        {
+          "arguments" : {
+            "project" : "LocalFlow",
+            "query" : "continuation"
+          },
+          "data" : {
+            "matches" : [
+              {
+                "line" : 1,
+                "path" : "LIVE_CONTINUATION_BUGFIX_REPORT.md"
+              },
+              {
+                "line" : 30,
+                "path" : "Core\/AudioCapture\/AudioCaptureSession.swift"
+              },
+              {
+                "line" : 131,
+                "path" : "SYSTEM2_PLANNER_REPORT.md"
+              },
+              {
+                "line" : 1132,
+                "path" : "App\/DictationCoordinator.swift"
+              },
+              {
+                "line" : 1128,
+                "path" : "App\/SettingsRootView.swift"
+              },
+              {
+                "line" : 41,
+                "path" : "CORE_ARCHITECTURE_REPORT.md"
+              },
+              {
+                "line" : 79,
+                "path" : "Features\/SpeechCleanup\/SpeechCleanup.swift"
+              },
+              {
+                "line" : 46,
+                "path" : "Features\/CommandMode\/NativePermissionReadiness.swift"
+              },
+              {
+                "line" : 180,
+                "path" : "Features\/CommandMode\/PlannerRuntime.swift"
+              },
+              {
+                "line" : 84,
+                "path" : "Features\/CommandMode\/VoiceAgentCoordinator.swift"
+              },
+              {
+                "line" : 64,
+                "path" : "Features\/CommandMode\/PlannerGoalEnvelope.swift"
+              },
+              {
+                "line" : 230,
+                "path" : "Tests\/FeaturesTests\/NativeToolTests.swift"
+              },
+              {
+                "line" : 41,
+                "path" : "Tests\/FeaturesTests\/PlannerFocusedTests.swift"
+              },
+              {
+                "line" : 322,
+                "path" : "Tests\/FeaturesTests\/PlannerTests.swift"
+              },
+              {
+                "line" : 1,
+                "path" : "Tests\/FeaturesTests\/VoiceContinuationTests.swift"
+              },
+              {
+                "line" : 99,
+                "path" : "Tests\/SharedTests\/AppleSpeechTests.swift"
+              },
+              {
+                "line" : 222,
+                "path" : "Tests\/SharedTests\/StreamingTranscriptionTests.swift"
+              },
+              {
+                "line" : 46,
+                "path" : "Tests\/SharedTests\/BatchOwnershipTests.swift"
+              },
+              {
+                "line" : 31,
+                "path" : "SYSTEM2_PLANNER.md"
+              },
+              {
+                "line" : 100,
+                "path" : "Engines\/AppleSpeechEngine\/AppleSpeechEngine.swift"
+              }
+            ]
+          },
+          "detail" : "Found 20 project matches",
+          "status" : "verified",
+          "stepID" : "1",
+          "tool" : "project.search"
+        }
+      ]
+    }
+  ],
+  "load" : {
+    "coldLoadMS" : 3261.2690833339002,
+    "mlxActiveBytes" : 2367679904,
+    "mlxPeakBytes" : 3034562212,
+    "rssBytes" : 584597504
+  }
+}

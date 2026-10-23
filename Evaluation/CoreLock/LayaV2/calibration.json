@@ -1,0 +1,22 @@
+{
+  "actionable_command": {
+    "temperature": 3.4673685045253184,
+    "threshold": null,
+    "enabled": false
+  },
+  "needs_more_speech": {
+    "temperature": 1.995262314968881,
+    "threshold": null,
+    "enabled": false
+  },
+  "correction_or_replacement": {
+    "temperature": 2.9739477452346077,
+    "threshold": null,
+    "enabled": false
+  },
+  "coarse_family": {
+    "temperature": 3.1622776601683813,
+    "threshold": null,
+    "enabled": false
+  }
+}

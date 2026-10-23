@@ -1,0 +1,101 @@
+[
+  {
+    "agentActions" : [
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: Optional(file:\/\/\/System\/Applications\/Notes.app\/), confidence: 1.0, alternateNames: []), processID: nil)",
+        "milliseconds" : 2262.6347083332803,
+        "tool" : "application.open"
+      }
+    ],
+    "agentActionsBeforeInputClose" : [
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: Optional(file:\/\/\/System\/Applications\/Notes.app\/), confidence: 1.0, alternateNames: []), processID: nil)",
+        "milliseconds" : 2262.6347083332803,
+        "tool" : "application.open"
+      }
+    ],
+    "agentInput" : "Real paced Apple Speech; injected native effects, deterministic decision fallback",
+    "completedMilliseconds" : 11147.506999999678,
+    "confidence" : 0.56120002269744873,
+    "confirmation" : null,
+    "exactTranscript" : false,
+    "expected" : "Open Notes. Open Safari. Open Chrome. Open github.com.",
+    "file" : "continuation.caf",
+    "final" : "Open notes. ... ... ...",
+    "finalDrainMilliseconds" : 85.621666666156671,
+    "finalRangeLagMilliseconds" : [
+      1861.9755416663247,
+      1022.0352916665433,
+      1217.8802083334012,
+      1453.6122916667373,
+      1582.9153749997058
+    ],
+    "firstFinalFromInputStartMilliseconds" : 2221.9755416663247,
+    "phraseCount" : 5,
+    "realAnalyzerCancellationMilliseconds" : 1.3456666665661032,
+    "revisions" : 21,
+    "speechAlternatives" : [
+      {
+        "alternatives" : [
+          "Open"
+        ],
+        "original" : "Open"
+      },
+      {
+        "alternatives" : [
+          "notes.",
+          "Notes.",
+          "notes"
+        ],
+        "original" : "notes."
+      },
+      {
+        "alternatives" : [
+          "...",
+          "..",
+          ".",
+          "to."
+        ],
+        "original" : "..."
+      },
+      {
+        "alternatives" : [
+          "...",
+          "..",
+          ",..",
+          "."
+        ],
+        "original" : "..."
+      },
+      {
+        "alternatives" : [
+          "...",
+          "to..",
+          "..",
+          ".",
+          "to."
+        ],
+        "original" : "..."
+      }
+    ],
+    "volatileFromInputStartMilliseconds" : 2205.0235416663782,
+    "volatileRangeLagMilliseconds" : [
+      441.08604166637815,
+      441.89124999945489,
+      442.0092916669746,
+      621.04416666641191,
+      621.3935833331343,
+      622.17716666616616,
+      851.97595833329979,
+      852.23195833356294,
+      853.04504166657716,
+      853.49425000009796,
+      1072.145958333429,
+      1072.2420833332289,
+      1072.6855833333029,
+      1073.1591666668901,
+      1073.6924166664248,
+      1074.2523333334684
+    ]
+  }
+]

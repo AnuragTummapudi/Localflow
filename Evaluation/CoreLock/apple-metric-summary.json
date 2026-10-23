@@ -1,0 +1,39 @@
+{
+  "volatileFromInputStartMilliseconds": {
+    "count": 10,
+    "p50": 4527.138333333369,
+    "p95": 4640.654772916241,
+    "min": 4323.206000000027,
+    "max": 4662.198916666057
+  },
+  "firstFinalFromInputStartMilliseconds": {
+    "count": 10,
+    "p50": 4568.042895833059,
+    "p95": 4680.608879166448,
+    "min": 4342.962124999758,
+    "max": 4697.6594166662835
+  },
+  "finalDrainMilliseconds": {
+    "count": 10,
+    "p50": 62.76581249994706,
+    "p95": 79.40050833335587,
+    "min": 45.92912499992963,
+    "max": 89.80308333320863
+  },
+  "volatileRangeLagMilliseconds": {
+    "count": 75,
+    "p50": 603.4830833338128,
+    "p95": 1667.2272708339478
+  },
+  "finalRangeLagMilliseconds": {
+    "count": 33,
+    "p50": 3547.801083332997,
+    "p95": 5123.07420833344
+  },
+  "exactSlots": {
+    "passed": 2,
+    "count": 5
+  },
+  "returnedAlternativeStrings": 77,
+  "manualMicLatency": "Not measured"
+}

@@ -1,0 +1,99 @@
+{
+  "" : {
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/Engines-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/Engines-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/Engines-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/Engines-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/Engines-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Engines/AppleSpeechEngine/AppleSpeechEngine.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/AppleSpeechEngine.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/AppleSpeechEngine.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/AppleSpeechEngine.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/AppleSpeechEngine.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/AppleSpeechEngine.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/AppleSpeechEngine.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/AppleSpeechEngine.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/AppleSpeechEngine~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Engines/CascadingSTTEngine.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/CascadingSTTEngine.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/CascadingSTTEngine.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/CascadingSTTEngine.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/CascadingSTTEngine.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/CascadingSTTEngine.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/CascadingSTTEngine.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/CascadingSTTEngine.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/CascadingSTTEngine~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Engines/ParakeetEngine/ParakeetEngine.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/ParakeetEngine.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/ParakeetEngine.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/ParakeetEngine.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/ParakeetEngine.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/ParakeetEngine.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/ParakeetEngine.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/ParakeetEngine.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/ParakeetEngine~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Engines/ParakeetEngine/ParakeetStreamingEngine.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/ParakeetStreamingEngine.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/ParakeetStreamingEngine.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/ParakeetStreamingEngine.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/ParakeetStreamingEngine.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/ParakeetStreamingEngine.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/ParakeetStreamingEngine.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/ParakeetStreamingEngine.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/ParakeetStreamingEngine~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Engines/STTEngine.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/STTEngine.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/STTEngine.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/STTEngine.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/STTEngine.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/STTEngine.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/STTEngine.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/STTEngine.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/STTEngine~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Engines/StreamingSTTEngine.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/StreamingSTTEngine.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/StreamingSTTEngine.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/StreamingSTTEngine.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/StreamingSTTEngine.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/StreamingSTTEngine.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/StreamingSTTEngine.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/StreamingSTTEngine.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/StreamingSTTEngine~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Engines/StreamingTranscriptionRouter.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/StreamingTranscriptionRouter.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/StreamingTranscriptionRouter.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/StreamingTranscriptionRouter.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/StreamingTranscriptionRouter.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/StreamingTranscriptionRouter.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/StreamingTranscriptionRouter.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/StreamingTranscriptionRouter.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/StreamingTranscriptionRouter~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Engines/TranscriptionRouter.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/TranscriptionRouter.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/TranscriptionRouter.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/TranscriptionRouter.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/TranscriptionRouter.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/TranscriptionRouter.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/TranscriptionRouter.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/TranscriptionRouter.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/TranscriptionRouter~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Engines/WhisperEngine/WhisperEngine.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/WhisperEngine.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/WhisperEngine.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/WhisperEngine.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/WhisperEngine.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/WhisperEngine.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/WhisperEngine.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/WhisperEngine.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/LocalFlow.build/Debug/Engines.build/Objects-normal/arm64/WhisperEngine~partial.swiftmodule"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "intent": {
+    "temperature": 1.829220207709305,
+    "threshold": null,
+    "enabled": false,
+    "calibrationNLL": 1.1672121497883094,
+    "calibrationCount": 91
+  },
+  "risk": {
+    "temperature": 1.5211182989324266,
+    "threshold": null,
+    "enabled": false,
+    "calibrationNLL": 1.0275748680946262,
+    "calibrationCount": 91
+  },
+  "requires_more_speech": {
+    "temperature": 1.0200148436614485,
+    "threshold": 0.8061749187924125,
+    "enabled": false,
+    "calibrationNLL": 0.2557145493099069,
+    "calibrationCount": 91
+  }
+}

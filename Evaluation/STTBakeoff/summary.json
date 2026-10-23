@@ -1,0 +1,2785 @@
+{
+  "engines": [
+    {
+      "engine": "apple",
+      "expectedPayloads": 36,
+      "exactCorrect": 24,
+      "exactRate": 0.6666666666666666,
+      "exactFailureRate": 0.3333333333333333,
+      "contentCorruptions": 6,
+      "contentCorruptionRate": 0.16666666666666666,
+      "orthographicDifferences": 6,
+      "semanticPayloadCorrectnessProxy": 0.8333333333333334,
+      "semanticMetricLimit": "Conservative lexical equivalence proxy, not independent human semantic judgments. Only case, whitespace, terminal punctuation, and named LocalFlow split/join; URLs preserve path/query case. Exact failures always retained.",
+      "categories": {
+        "application": {
+          "count": 15,
+          "exactCorrect": 15,
+          "exactRate": 1.0,
+          "contentCorrect": 15,
+          "contentRate": 1.0
+        },
+        "noteTitle": {
+          "count": 3,
+          "exactCorrect": 0,
+          "exactRate": 0.0,
+          "contentCorrect": 3,
+          "contentRate": 1.0
+        },
+        "properName": {
+          "count": 12,
+          "exactCorrect": 6,
+          "exactRate": 0.5,
+          "contentCorrect": 12,
+          "contentRate": 1.0
+        },
+        "noteBody": {
+          "count": 3,
+          "exactCorrect": 0,
+          "exactRate": 0.0,
+          "contentCorrect": 0,
+          "contentRate": 0.0
+        },
+        "searchQuery": {
+          "count": 6,
+          "exactCorrect": 6,
+          "exactRate": 1.0,
+          "contentCorrect": 6,
+          "contentRate": 1.0
+        },
+        "url": {
+          "count": 6,
+          "exactCorrect": 3,
+          "exactRate": 0.5,
+          "contentCorrect": 3,
+          "contentRate": 0.5
+        },
+        "reminderTitle": {
+          "count": 3,
+          "exactCorrect": 0,
+          "exactRate": 0.0,
+          "contentCorrect": 3,
+          "contentRate": 1.0
+        }
+      },
+      "performance": {
+        "coldPreparationMilliseconds": 342.3621666734107,
+        "firstInferenceMilliseconds": 3841.90866665449,
+        "warmP50Milliseconds": 340.9580833395012,
+        "warmP95Milliseconds": 510.5573833105153,
+        "peakRSSBytes": 43712512,
+        "perScenarioWarmMilliseconds": {
+          "1": [
+            270.27479163371027,
+            300.85720837814733
+          ],
+          "2": [
+            429.0702083380893,
+            376.62229168927297
+          ],
+          "3": [
+            543.099083355628,
+            394.4455833407119
+          ],
+          "4": [
+            266.1482083494775,
+            250.6225417018868
+          ],
+          "5": [
+            255.06866670912132,
+            256.5017082961276
+          ],
+          "6": [
+            402.063041634392,
+            336.27999998861924
+          ],
+          "7": [
+            261.80470833787695,
+            234.59820833522826
+          ],
+          "8": [
+            340.9580833395012,
+            312.5478749861941
+          ],
+          "9": [
+            315.83066668827087,
+            381.5421250183135
+          ],
+          "10": [
+            464.2560000065714,
+            387.7215833053924
+          ]
+        }
+      },
+      "repeatAgreement": true,
+      "checks": [
+        {
+          "scenario": 1,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 2,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "noteTitle": {
+              "expected": "LocalFlow Benchmark",
+              "actual": "Local Flow Benchmark.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 3,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "noteBody": {
+              "expected": "This is my dictated benchmark text.",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 4,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 5,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "searchQuery": {
+              "expected": "Ada Lovelace",
+              "actual": "Ada Lovelace",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 6,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "url": {
+              "expected": "https://www.wikipedia.org",
+              "actual": "https://www.wikipedia.org",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 7,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.PhotoBooth",
+              "actual": "com.apple.PhotoBooth",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 8,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "url": {
+              "expected": "https://example.com",
+              "actual": "https://examblow.com",
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 9,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "reminderTitle": {
+              "expected": "Review LocalFlow benchmark",
+              "actual": "review local flow benchmark.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 0,
+          "action": 1,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 0,
+          "action": 2,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "searchQuery": {
+              "expected": "Swift actors",
+              "actual": "Swift actors",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 1,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 2,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "noteTitle": {
+              "expected": "LocalFlow Benchmark",
+              "actual": "Local Flow Benchmark.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 3,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "noteBody": {
+              "expected": "This is my dictated benchmark text.",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 4,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 5,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "searchQuery": {
+              "expected": "Ada Lovelace",
+              "actual": "Ada Lovelace",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 6,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "url": {
+              "expected": "https://www.wikipedia.org",
+              "actual": "https://www.wikipedia.org",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 7,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.PhotoBooth",
+              "actual": "com.apple.PhotoBooth",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 8,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "url": {
+              "expected": "https://example.com",
+              "actual": "https://examblow.com",
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 9,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "reminderTitle": {
+              "expected": "Review LocalFlow benchmark",
+              "actual": "review local flow benchmark.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 1,
+          "action": 1,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 1,
+          "action": 2,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "searchQuery": {
+              "expected": "Swift actors",
+              "actual": "Swift actors",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 1,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 2,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "noteTitle": {
+              "expected": "LocalFlow Benchmark",
+              "actual": "Local Flow Benchmark.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 3,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "noteBody": {
+              "expected": "This is my dictated benchmark text.",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 4,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 5,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "searchQuery": {
+              "expected": "Ada Lovelace",
+              "actual": "Ada Lovelace",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 6,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "url": {
+              "expected": "https://www.wikipedia.org",
+              "actual": "https://www.wikipedia.org",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 7,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.PhotoBooth",
+              "actual": "com.apple.PhotoBooth",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 8,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "url": {
+              "expected": "https://example.com",
+              "actual": "https://examblow.com",
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 9,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "reminderTitle": {
+              "expected": "Review LocalFlow benchmark",
+              "actual": "review local flow benchmark.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 2,
+          "action": 1,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 2,
+          "action": 2,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "searchQuery": {
+              "expected": "Swift actors",
+              "actual": "Swift actors",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        }
+      ],
+      "unexpectedExtraActions": 0
+    },
+    {
+      "engine": "parakeet",
+      "expectedPayloads": 36,
+      "exactCorrect": 21,
+      "exactRate": 0.5833333333333334,
+      "exactFailureRate": 0.4166666666666667,
+      "contentCorruptions": 3,
+      "contentCorruptionRate": 0.08333333333333333,
+      "orthographicDifferences": 12,
+      "semanticPayloadCorrectnessProxy": 0.9166666666666666,
+      "semanticMetricLimit": "Conservative lexical equivalence proxy, not independent human semantic judgments. Only case, whitespace, terminal punctuation, and named LocalFlow split/join; URLs preserve path/query case. Exact failures always retained.",
+      "categories": {
+        "application": {
+          "count": 15,
+          "exactCorrect": 15,
+          "exactRate": 1.0,
+          "contentCorrect": 15,
+          "contentRate": 1.0
+        },
+        "noteTitle": {
+          "count": 3,
+          "exactCorrect": 0,
+          "exactRate": 0.0,
+          "contentCorrect": 3,
+          "contentRate": 1.0
+        },
+        "properName": {
+          "count": 12,
+          "exactCorrect": 6,
+          "exactRate": 0.5,
+          "contentCorrect": 12,
+          "contentRate": 1.0
+        },
+        "noteBody": {
+          "count": 3,
+          "exactCorrect": 0,
+          "exactRate": 0.0,
+          "contentCorrect": 3,
+          "contentRate": 1.0
+        },
+        "searchQuery": {
+          "count": 6,
+          "exactCorrect": 3,
+          "exactRate": 0.5,
+          "contentCorrect": 6,
+          "contentRate": 1.0
+        },
+        "url": {
+          "count": 6,
+          "exactCorrect": 3,
+          "exactRate": 0.5,
+          "contentCorrect": 3,
+          "contentRate": 0.5
+        },
+        "reminderTitle": {
+          "count": 3,
+          "exactCorrect": 0,
+          "exactRate": 0.0,
+          "contentCorrect": 3,
+          "contentRate": 1.0
+        }
+      },
+      "performance": {
+        "coldPreparationMilliseconds": 87407.18345833011,
+        "firstInferenceMilliseconds": 403.3147083246149,
+        "warmP50Milliseconds": 348.6695416504517,
+        "warmP95Milliseconds": 492.8756583249194,
+        "peakRSSBytes": 483491840,
+        "perScenarioWarmMilliseconds": {
+          "1": [
+            420.34929170040414,
+            321.4282916742377
+          ],
+          "2": [
+            529.7529583331198,
+            378.283416677732
+          ],
+          "3": [
+            303.1418750179,
+            388.1620832835324
+          ],
+          "4": [
+            233.468874997925,
+            309.2976666521281
+          ],
+          "5": [
+            290.5437499866821,
+            320.78041665954515
+          ],
+          "6": [
+            361.0515416949056,
+            348.6695416504517
+          ],
+          "7": [
+            338.75391667243093,
+            340.946750016883
+          ],
+          "8": [
+            317.21800001105294,
+            349.85679166857153
+          ],
+          "9": [
+            375.79008331522346,
+            391.1669999943115
+          ],
+          "10": [
+            437.5597083126195,
+            412.3590000090189
+          ]
+        }
+      },
+      "repeatAgreement": true,
+      "checks": [
+        {
+          "scenario": 1,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 2,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "noteTitle": {
+              "expected": "LocalFlow Benchmark",
+              "actual": "local flow benchmark.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 3,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "noteBody": {
+              "expected": "This is my dictated benchmark text.",
+              "actual": "this is my dictated benchmark text.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 4,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 5,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "searchQuery": {
+              "expected": "Ada Lovelace",
+              "actual": "Ada Lovelace",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 6,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "url": {
+              "expected": "https://www.wikipedia.org",
+              "actual": "https://www.wikipedia.org",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 7,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.PhotoBooth",
+              "actual": "com.apple.PhotoBooth",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 8,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "url": {
+              "expected": "https://example.com",
+              "actual": "https://examblow.com",
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 9,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "reminderTitle": {
+              "expected": "Review LocalFlow benchmark",
+              "actual": "review local flow benchmark.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 0,
+          "action": 1,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 0,
+          "action": 2,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "searchQuery": {
+              "expected": "Swift actors",
+              "actual": "Swift Actors",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 1,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 2,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "noteTitle": {
+              "expected": "LocalFlow Benchmark",
+              "actual": "local flow benchmark.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 3,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "noteBody": {
+              "expected": "This is my dictated benchmark text.",
+              "actual": "this is my dictated benchmark text.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 4,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 5,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "searchQuery": {
+              "expected": "Ada Lovelace",
+              "actual": "Ada Lovelace",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 6,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "url": {
+              "expected": "https://www.wikipedia.org",
+              "actual": "https://www.wikipedia.org",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 7,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.PhotoBooth",
+              "actual": "com.apple.PhotoBooth",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 8,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "url": {
+              "expected": "https://example.com",
+              "actual": "https://examblow.com",
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 9,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "reminderTitle": {
+              "expected": "Review LocalFlow benchmark",
+              "actual": "review local flow benchmark.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 1,
+          "action": 1,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 1,
+          "action": 2,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "searchQuery": {
+              "expected": "Swift actors",
+              "actual": "Swift Actors",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 1,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 2,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "noteTitle": {
+              "expected": "LocalFlow Benchmark",
+              "actual": "local flow benchmark.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 3,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "noteBody": {
+              "expected": "This is my dictated benchmark text.",
+              "actual": "this is my dictated benchmark text.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 4,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 5,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "searchQuery": {
+              "expected": "Ada Lovelace",
+              "actual": "Ada Lovelace",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 6,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "url": {
+              "expected": "https://www.wikipedia.org",
+              "actual": "https://www.wikipedia.org",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 7,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.PhotoBooth",
+              "actual": "com.apple.PhotoBooth",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 8,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "url": {
+              "expected": "https://example.com",
+              "actual": "https://examblow.com",
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 9,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "reminderTitle": {
+              "expected": "Review LocalFlow benchmark",
+              "actual": "review local flow benchmark.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 2,
+          "action": 1,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 2,
+          "action": 2,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "searchQuery": {
+              "expected": "Swift actors",
+              "actual": "Swift Actors",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        }
+      ],
+      "unexpectedExtraActions": 0
+    },
+    {
+      "engine": "whisper-base",
+      "expectedPayloads": 36,
+      "exactCorrect": 12,
+      "exactRate": 0.3333333333333333,
+      "exactFailureRate": 0.6666666666666666,
+      "contentCorruptions": 21,
+      "contentCorruptionRate": 0.5833333333333334,
+      "orthographicDifferences": 3,
+      "semanticPayloadCorrectnessProxy": 0.4166666666666667,
+      "semanticMetricLimit": "Conservative lexical equivalence proxy, not independent human semantic judgments. Only case, whitespace, terminal punctuation, and named LocalFlow split/join; URLs preserve path/query case. Exact failures always retained.",
+      "categories": {
+        "application": {
+          "count": 15,
+          "exactCorrect": 6,
+          "exactRate": 0.4,
+          "contentCorrect": 6,
+          "contentRate": 0.4
+        },
+        "noteTitle": {
+          "count": 3,
+          "exactCorrect": 0,
+          "exactRate": 0.0,
+          "contentCorrect": 0,
+          "contentRate": 0.0
+        },
+        "properName": {
+          "count": 12,
+          "exactCorrect": 6,
+          "exactRate": 0.5,
+          "contentCorrect": 6,
+          "contentRate": 0.5
+        },
+        "noteBody": {
+          "count": 3,
+          "exactCorrect": 0,
+          "exactRate": 0.0,
+          "contentCorrect": 0,
+          "contentRate": 0.0
+        },
+        "searchQuery": {
+          "count": 6,
+          "exactCorrect": 3,
+          "exactRate": 0.5,
+          "contentCorrect": 6,
+          "contentRate": 1.0
+        },
+        "url": {
+          "count": 6,
+          "exactCorrect": 3,
+          "exactRate": 0.5,
+          "contentCorrect": 3,
+          "contentRate": 0.5
+        },
+        "reminderTitle": {
+          "count": 3,
+          "exactCorrect": 0,
+          "exactRate": 0.0,
+          "contentCorrect": 0,
+          "contentRate": 0.0
+        }
+      },
+      "performance": {
+        "coldPreparationMilliseconds": 36485.28504165006,
+        "firstInferenceMilliseconds": 33.56287500355393,
+        "warmP50Milliseconds": 227.37550002057105,
+        "warmP95Milliseconds": 331.8917583324946,
+        "peakRSSBytes": 162070528,
+        "perScenarioWarmMilliseconds": {
+          "1": [
+            22.485166671685874,
+            21.66324999416247
+          ],
+          "2": [
+            303.9238750061486,
+            338.234625000041
+          ],
+          "3": [
+            282.70412498386577,
+            322.37745833117515
+          ],
+          "4": [
+            17.10079167969525,
+            20.049166661920026
+          ],
+          "5": [
+            209.61404166882858,
+            242.9732083401177
+          ],
+          "6": [
+            227.37550002057105,
+            312.07200000062585
+          ],
+          "7": [
+            21.748458326328546,
+            30.19691666122526
+          ],
+          "8": [
+            193.02412500837818,
+            245.14370833639987
+          ],
+          "9": [
+            248.44429167569615,
+            277.0109999983106
+          ],
+          "10": [
+            283.3565416513011,
+            255.50079165259376
+          ]
+        }
+      },
+      "repeatAgreement": true,
+      "checks": [
+        {
+          "scenario": 1,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 2,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "noteTitle": {
+              "expected": "LocalFlow Benchmark",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 3,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "noteBody": {
+              "expected": "This is my dictated benchmark text.",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 4,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 5,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "searchQuery": {
+              "expected": "Ada Lovelace",
+              "actual": "Ada Lovelace",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 6,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "url": {
+              "expected": "https://www.wikipedia.org",
+              "actual": "https://www.wikipedia.org",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 7,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.PhotoBooth",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 8,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "url": {
+              "expected": "https://example.com",
+              "actual": "https://Examble.com",
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 9,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "reminderTitle": {
+              "expected": "Review LocalFlow benchmark",
+              "actual": "Review look how so benchmark.",
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 0,
+          "action": 1,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 0,
+          "action": 2,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "searchQuery": {
+              "expected": "Swift actors",
+              "actual": "Swift Actors",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 1,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 2,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "noteTitle": {
+              "expected": "LocalFlow Benchmark",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 3,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "noteBody": {
+              "expected": "This is my dictated benchmark text.",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 4,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 5,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "searchQuery": {
+              "expected": "Ada Lovelace",
+              "actual": "Ada Lovelace",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 6,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "url": {
+              "expected": "https://www.wikipedia.org",
+              "actual": "https://www.wikipedia.org",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 7,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.PhotoBooth",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 8,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "url": {
+              "expected": "https://example.com",
+              "actual": "https://Examble.com",
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 9,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "reminderTitle": {
+              "expected": "Review LocalFlow benchmark",
+              "actual": "Review look how so benchmark.",
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 1,
+          "action": 1,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 1,
+          "action": 2,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "searchQuery": {
+              "expected": "Swift actors",
+              "actual": "Swift Actors",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 1,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 2,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "noteTitle": {
+              "expected": "LocalFlow Benchmark",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 3,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "noteBody": {
+              "expected": "This is my dictated benchmark text.",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 4,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 5,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "searchQuery": {
+              "expected": "Ada Lovelace",
+              "actual": "Ada Lovelace",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 6,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "url": {
+              "expected": "https://www.wikipedia.org",
+              "actual": "https://www.wikipedia.org",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 7,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.PhotoBooth",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 8,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "url": {
+              "expected": "https://example.com",
+              "actual": "https://Examble.com",
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 9,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "reminderTitle": {
+              "expected": "Review LocalFlow benchmark",
+              "actual": "Review look how so benchmark.",
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 2,
+          "action": 1,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 2,
+          "action": 2,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "searchQuery": {
+              "expected": "Swift actors",
+              "actual": "Swift Actors",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        }
+      ],
+      "unexpectedExtraActions": 0
+    },
+    {
+      "engine": "whisper-turbo",
+      "expectedPayloads": 36,
+      "exactCorrect": 12,
+      "exactRate": 0.3333333333333333,
+      "exactFailureRate": 0.6666666666666666,
+      "contentCorruptions": 15,
+      "contentCorruptionRate": 0.4166666666666667,
+      "orthographicDifferences": 9,
+      "semanticPayloadCorrectnessProxy": 0.5833333333333334,
+      "semanticMetricLimit": "Conservative lexical equivalence proxy, not independent human semantic judgments. Only case, whitespace, terminal punctuation, and named LocalFlow split/join; URLs preserve path/query case. Exact failures always retained.",
+      "categories": {
+        "application": {
+          "count": 15,
+          "exactCorrect": 6,
+          "exactRate": 0.4,
+          "contentCorrect": 6,
+          "contentRate": 0.4
+        },
+        "noteTitle": {
+          "count": 3,
+          "exactCorrect": 0,
+          "exactRate": 0.0,
+          "contentCorrect": 0,
+          "contentRate": 0.0
+        },
+        "properName": {
+          "count": 12,
+          "exactCorrect": 6,
+          "exactRate": 0.5,
+          "contentCorrect": 9,
+          "contentRate": 0.75
+        },
+        "noteBody": {
+          "count": 3,
+          "exactCorrect": 0,
+          "exactRate": 0.0,
+          "contentCorrect": 3,
+          "contentRate": 1.0
+        },
+        "searchQuery": {
+          "count": 6,
+          "exactCorrect": 3,
+          "exactRate": 0.5,
+          "contentCorrect": 6,
+          "contentRate": 1.0
+        },
+        "url": {
+          "count": 6,
+          "exactCorrect": 3,
+          "exactRate": 0.5,
+          "contentCorrect": 3,
+          "contentRate": 0.5
+        },
+        "reminderTitle": {
+          "count": 3,
+          "exactCorrect": 0,
+          "exactRate": 0.0,
+          "contentCorrect": 3,
+          "contentRate": 1.0
+        }
+      },
+      "performance": {
+        "coldPreparationMilliseconds": 1470279.533999972,
+        "firstInferenceMilliseconds": 190.7200000132434,
+        "warmP50Milliseconds": 2236.4682916668244,
+        "warmP95Milliseconds": 3697.417200019117,
+        "peakRSSBytes": 1543077888,
+        "perScenarioWarmMilliseconds": {
+          "1": [
+            81.5477499854751,
+            86.44533331971616
+          ],
+          "2": [
+            3518.261999997776,
+            2993.4901249944232
+          ],
+          "3": [
+            2794.4133750279434,
+            2645.8667916595004
+          ],
+          "4": [
+            70.40966668864712,
+            67.35620833933353
+          ],
+          "5": [
+            1872.8657083120197,
+            1870.6763749942183
+          ],
+          "6": [
+            2149.244958360214,
+            2352.729249978438
+          ],
+          "7": [
+            68.98900005035102,
+            63.28237504931167
+          ],
+          "8": [
+            1998.532833356876,
+            2557.006541697774
+          ],
+          "9": [
+            2236.4682916668244,
+            2957.870250043925
+          ],
+          "10": [
+            3304.283916717395,
+            3816.854000033345
+          ]
+        }
+      },
+      "repeatAgreement": true,
+      "checks": [
+        {
+          "scenario": 1,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 2,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "noteTitle": {
+              "expected": "LocalFlow Benchmark",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 3,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "noteBody": {
+              "expected": "This is my dictated benchmark text.",
+              "actual": "this is my dictated benchmark text.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 4,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 5,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "searchQuery": {
+              "expected": "Ada Lovelace",
+              "actual": "Ada Lovelace",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 6,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "url": {
+              "expected": "https://www.wikipedia.org",
+              "actual": "https://www.wikipedia.org",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 7,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.PhotoBooth",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 8,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "url": {
+              "expected": "https://example.com",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 9,
+          "repeat": 0,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "reminderTitle": {
+              "expected": "Review LocalFlow benchmark",
+              "actual": "Review Localflow Benchmark.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 0,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 0,
+          "action": 1,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 0,
+          "action": 2,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "searchQuery": {
+              "expected": "Swift actors",
+              "actual": "Swift Actors",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 1,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 2,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "noteTitle": {
+              "expected": "LocalFlow Benchmark",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 3,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "noteBody": {
+              "expected": "This is my dictated benchmark text.",
+              "actual": "this is my dictated benchmark text.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 4,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 5,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "searchQuery": {
+              "expected": "Ada Lovelace",
+              "actual": "Ada Lovelace",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 6,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "url": {
+              "expected": "https://www.wikipedia.org",
+              "actual": "https://www.wikipedia.org",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 7,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.PhotoBooth",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 8,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "url": {
+              "expected": "https://example.com",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 9,
+          "repeat": 1,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "reminderTitle": {
+              "expected": "Review LocalFlow benchmark",
+              "actual": "Review Localflow Benchmark.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 1,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 1,
+          "action": 1,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 1,
+          "action": 2,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "searchQuery": {
+              "expected": "Swift actors",
+              "actual": "Swift Actors",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 1,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 2,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "noteTitle": {
+              "expected": "LocalFlow Benchmark",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 3,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "noteBody": {
+              "expected": "This is my dictated benchmark text.",
+              "actual": "this is my dictated benchmark text.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 4,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 5,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "searchQuery": {
+              "expected": "Ada Lovelace",
+              "actual": "Ada Lovelace",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 6,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "url": {
+              "expected": "https://www.wikipedia.org",
+              "actual": "https://www.wikipedia.org",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 7,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "application": {
+              "expected": "com.apple.PhotoBooth",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 8,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": false,
+          "diagnosis": "content_error",
+          "fields": {
+            "url": {
+              "expected": "https://example.com",
+              "actual": null,
+              "exact": false,
+              "contentCorrect": false
+            }
+          }
+        },
+        {
+          "scenario": 9,
+          "repeat": 2,
+          "action": 0,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "reminderTitle": {
+              "expected": "Review LocalFlow benchmark",
+              "actual": "Review Localflow Benchmark.",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 2,
+          "action": 0,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Notes",
+              "actual": "com.apple.Notes",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 2,
+          "action": 1,
+          "exact": true,
+          "contentEquivalent": true,
+          "diagnosis": "exact",
+          "fields": {
+            "application": {
+              "expected": "com.apple.Safari",
+              "actual": "com.apple.Safari",
+              "exact": true,
+              "contentCorrect": true
+            }
+          }
+        },
+        {
+          "scenario": 10,
+          "repeat": 2,
+          "action": 2,
+          "exact": false,
+          "contentEquivalent": true,
+          "diagnosis": "orthographic_difference",
+          "fields": {
+            "searchQuery": {
+              "expected": "Swift actors",
+              "actual": "Swift Actors",
+              "exact": false,
+              "contentCorrect": true
+            }
+          }
+        }
+      ],
+      "unexpectedExtraActions": 0
+    }
+  ],
+  "sameAudioHashes": {
+    "1": "f37bd2ae372ec6bb9a2d5639bc983542a64c669ffe949965b3db833cfa56ab7f",
+    "2": "e939563e7b31ff51789bd9b2cfac17cd6d0b1402ef0828e7391ece705f256f75",
+    "3": "1ab97f8d89327748c986d4204ecc987e4a16412928545b1722ed74d93b1d5c0f",
+    "4": "840e93374e3c91087c13aec5b2b7fe8372cf7625f7965a5e500d3338eb62cbac",
+    "5": "7b63cddbbad63e5277dda1cc46a0d7d640073fcfcd3ed9a85209934fbee7f549",
+    "6": "1c7c314d4e66e62111532d2ff5b469fdb1ab16fd40eb47894d40108ced31597f",
+    "7": "acd2f8de3582131426f739a978d0f82c39178842e5f49c21f6f8a7dec1d712b0",
+    "8": "5ad1d2a30c04cafd7570694e6085a56723f5cc2c78f8335455e367193d17c615",
+    "9": "3b9e56ce0bd6e9572f11066d40a0647fbd179267eea4379344c8a12e97066b16",
+    "10": "01537731d74c57e23d6b3889a73879bc0a4959c5b1687ca50014b8339f50f4e1"
+  },
+  "nativeEffects": "none"
+}

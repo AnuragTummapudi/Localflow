@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-03",
+  "timezone": "Asia/Kolkata",
+  "nativeEffects": "mocked",
+  "decisionModel": "deterministic fallback; Laya not used",
+  "audio": "synthetic system TTS; test-owned model assets; warm model timings",
+  "scenarios": 10,
+  "performedActions": 12,
+  "exactSlotMismatches": 5,
+  "duplicates": 0,
+  "medianMilliseconds": {
+    "partialSTTMilliseconds": 637.6445624919143,
+    "decisionMilliseconds": 0.26892314241250104,
+    "firstActionMilliseconds": 1803.1770208326634,
+    "completionMilliseconds": 2356.132812506985
+  }
+}

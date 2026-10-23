@@ -1,0 +1,13 @@
+{
+  "": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Collections.build/Collections.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Collections.build/Collections.o",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Collections.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-collections/Sources/Collections/Collections.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Collections.build/Collections.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Collections.build/Collections~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Collections.build/Collections.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Collections.build/Collections.dia"
+  }
+}

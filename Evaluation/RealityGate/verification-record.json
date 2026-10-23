@@ -1,0 +1,44 @@
+{
+  "Features/CommandMode/AgentBenchmark.swift": {
+    "unchangedFromTaskStart": true,
+    "sha256": "f19d0cdbbc737fde984bd3cd345193dcaad5a6152f5fa4f81fe1f719ed1de3e3"
+  },
+  "Features/CommandMode/NativeCommandParser.swift": {
+    "unchangedFromTaskStart": true,
+    "sha256": "b513cd5fcc6b1670aa5c33696aa5c76366c2514ff92e409adcb5e1074610f5bf"
+  },
+  "Features/CommandMode/Resources/laya-questions.json": {
+    "unchangedFromTaskStart": true,
+    "sha256": "769bab57174be24499eda5475a1c84343194bfc5642a312b771bb1f0136f8aac"
+  },
+  "Features/CommandMode/Resources/voice-agent-stability.json": {
+    "unchangedFromTaskStart": true,
+    "sha256": "edb30d048d0c21ada423d590878e574667305ed1e4955a63b587995d74f83959"
+  },
+  "LocalFlow.xcodeproj/project.pbxproj": {
+    "unchangedFromTaskStart": true,
+    "sha256": "0d28dbf385dfcdb48f6b999c10f5ad0577f75cc6230d08fd22f6274a2d0031e8"
+  },
+  "VERSION_EVOLUTION_SUMMARY.md": {
+    "unchangedFromTaskStart": true,
+    "sha256": "5d31a2acb37f03a02358f8e21b44c115c9d1a26878ad823163724eb03de91baf"
+  },
+  "Package.resolved": {
+    "unchangedFromTaskStart": true,
+    "sha256": "dac4a7e3d81b217edeab3087449786f253827041d5180f47f007bfbfd919f855"
+  },
+  "LocalFlow.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved": {
+    "unchangedFromTaskStart": true,
+    "sha256": "276fa5a8e25bdb29744d6e102789bd0ed8c12ad38b5e1f4abefb6ba5bb98a624"
+  },
+  "Core/ModelManager/Resources/DecisionPreparation/LayaHelper/Package.resolved": {
+    "unchangedFromTaskStart": true,
+    "sha256": "df6d5c782d3da4802322e802c82ff3be0b07c4436d17688229cd4c55699c92ee"
+  },
+  "fluidAudio": {
+    "revision": "19600a485baa4998812e4654b70d2bab8f2c9949",
+    "clean": true
+  },
+  "executedTrainingSourceHashMatches": true,
+  "executedMetricsHashMatches": true
+}

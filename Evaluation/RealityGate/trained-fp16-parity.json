@@ -1,0 +1,12 @@
+{
+  "reference": "localflow-laya-v1-mps-fp32",
+  "candidate": "localflow-laya-v1-mps-fp16",
+  "decisions": 560,
+  "agreement": 1.0,
+  "argmaxDisagreements": 0,
+  "maxAbsoluteLogitDrift": 0.33002758026123047,
+  "meanAbsoluteLogitDrift": 0.007835360209208837,
+  "disagreements": [],
+  "productionAccepted": false,
+  "reason": "Quality, selective precision and latency targets unsatisfied."
+}

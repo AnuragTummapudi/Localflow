@@ -1,0 +1,555 @@
+{
+  "reference": "english-onnx-cpu",
+  "candidate": "english-onnx-int8",
+  "decisions": 560,
+  "argmaxDisagreements": 75,
+  "agreement": 0.8660714285714286,
+  "maximumAbsoluteLogitDrift": 7.724942326545715,
+  "meanAbsoluteLogitDrift": 0.3656875090760335,
+  "consequentialRiskDemotions": [
+    "cal-metaphor:authored:236",
+    "cal-dictated-negation:authored:237",
+    "test-payload-is-command:authored:275",
+    "test-query-correction:authored:286",
+    "test-text-selection:authored:310",
+    "test-quit-exception:authored:313",
+    "test-system-consequential:authored:319",
+    "test-prefix-target:authored:321",
+    "test-prefix-and:authored:322",
+    "test-prefix-domain:authored:324",
+    "test-asr-partial-word:authored:332"
+  ],
+  "disagreements": [
+    {
+      "id": "cal-metaphor:authored:236",
+      "split": "calibration",
+      "question": "risk",
+      "reference": 2,
+      "candidate": 0
+    },
+    {
+      "id": "cal-metaphor:authored:236",
+      "split": "calibration",
+      "question": "ambiguous",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "cal-dictated-negation:authored:237",
+      "split": "calibration",
+      "question": "risk",
+      "reference": 2,
+      "candidate": 1
+    },
+    {
+      "id": "cal-target-correction:authored:240",
+      "split": "calibration",
+      "question": "ambiguous",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "cal-site-spelling:authored:242",
+      "split": "calibration",
+      "question": "intent",
+      "reference": 0,
+      "candidate": 4
+    },
+    {
+      "id": "cal-title-command:authored:244",
+      "split": "calibration",
+      "question": "risk",
+      "reference": 1,
+      "candidate": 2
+    },
+    {
+      "id": "cal-title-command:authored:244",
+      "split": "calibration",
+      "question": "ambiguous",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "cal-reminder-location:authored:245",
+      "split": "calibration",
+      "question": "intent",
+      "reference": 0,
+      "candidate": 7
+    },
+    {
+      "id": "cal-reminder-location:authored:245",
+      "split": "calibration",
+      "question": "more_speech",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "cal-system-percent:authored:247",
+      "split": "calibration",
+      "question": "intent",
+      "reference": 9,
+      "candidate": 0
+    },
+    {
+      "id": "cal-time-ambiguous:authored:255",
+      "split": "calibration",
+      "question": "more_speech",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "cal-time-ambiguous:authored:255",
+      "split": "calibration",
+      "question": "ambiguous",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "cal-prefix-exit:authored:257",
+      "split": "calibration",
+      "question": "command",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "cal-prefix-macro:authored:262",
+      "split": "calibration",
+      "question": "risk",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "cal-repetition:authored:264",
+      "split": "calibration",
+      "question": "intent",
+      "reference": 4,
+      "candidate": 12
+    },
+    {
+      "id": "cal-header-body:authored:266",
+      "split": "calibration",
+      "question": "more_speech",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "cal-header-body:authored:266",
+      "split": "calibration",
+      "question": "ambiguous",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "cal-due-correction:authored:269",
+      "split": "calibration",
+      "question": "command",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "cal-aborted-command:authored:271",
+      "split": "calibration",
+      "question": "intent",
+      "reference": 0,
+      "candidate": 3
+    },
+    {
+      "id": "test-payload-is-command:authored:275",
+      "split": "test",
+      "question": "risk",
+      "reference": 2,
+      "candidate": 1
+    },
+    {
+      "id": "test-payload-is-command:authored:275",
+      "split": "test",
+      "question": "more_speech",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-open-adjective:authored:277",
+      "split": "test",
+      "question": "more_speech",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "test-negated-app:authored:280",
+      "split": "test",
+      "question": "more_speech",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-negated-app:authored:280",
+      "split": "test",
+      "question": "ambiguous",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-instruction-as-note:authored:283",
+      "split": "test",
+      "question": "more_speech",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "test-nested-title:authored:284",
+      "split": "test",
+      "question": "risk",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-query-correction:authored:286",
+      "split": "test",
+      "question": "risk",
+      "reference": 2,
+      "candidate": 1
+    },
+    {
+      "id": "test-query-correction:authored:286",
+      "split": "test",
+      "question": "command",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "test-macro-reference:authored:293",
+      "split": "test",
+      "question": "ambiguous",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-unknown-shell:authored:295",
+      "split": "test",
+      "question": "intent",
+      "reference": 12,
+      "candidate": 0
+    },
+    {
+      "id": "test-unknown-upload:authored:296",
+      "split": "test",
+      "question": "more_speech",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "test-unknown-answer:authored:297",
+      "split": "test",
+      "question": "more_speech",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-unknown-answer:authored:297",
+      "split": "test",
+      "question": "command",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-editor-ambiguous:authored:298",
+      "split": "test",
+      "question": "command",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-notion-distinction:authored:300",
+      "split": "test",
+      "question": "risk",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "test-terminal-distinction:authored:301",
+      "split": "test",
+      "question": "intent",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-web-missing-target:authored:302",
+      "split": "test",
+      "question": "command",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "test-web-missing-target:authored:302",
+      "split": "test",
+      "question": "ambiguous",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-payload-spelled-url:authored:304",
+      "split": "test",
+      "question": "intent",
+      "reference": 0,
+      "candidate": 4
+    },
+    {
+      "id": "test-http-preservation:authored:305",
+      "split": "test",
+      "question": "intent",
+      "reference": 0,
+      "candidate": 4
+    },
+    {
+      "id": "test-search-literal:authored:306",
+      "split": "test",
+      "question": "command",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "test-reminder-command-title:authored:307",
+      "split": "test",
+      "question": "more_speech",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-text-selection:authored:310",
+      "split": "test",
+      "question": "intent",
+      "reference": 0,
+      "candidate": 12
+    },
+    {
+      "id": "test-text-selection:authored:310",
+      "split": "test",
+      "question": "risk",
+      "reference": 2,
+      "candidate": 1
+    },
+    {
+      "id": "test-text-literal:authored:311",
+      "split": "test",
+      "question": "intent",
+      "reference": 0,
+      "candidate": 10
+    },
+    {
+      "id": "test-text-literal:authored:311",
+      "split": "test",
+      "question": "risk",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-quit-exception:authored:313",
+      "split": "test",
+      "question": "risk",
+      "reference": 2,
+      "candidate": 1
+    },
+    {
+      "id": "test-focus-explicit:authored:314",
+      "split": "test",
+      "question": "intent",
+      "reference": 0,
+      "candidate": 7
+    },
+    {
+      "id": "test-media-target:authored:316",
+      "split": "test",
+      "question": "intent",
+      "reference": 0,
+      "candidate": 12
+    },
+    {
+      "id": "test-media-negation:authored:317",
+      "split": "test",
+      "question": "risk",
+      "reference": 0,
+      "candidate": 2
+    },
+    {
+      "id": "test-media-negation:authored:317",
+      "split": "test",
+      "question": "command",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-system-specific:authored:318",
+      "split": "test",
+      "question": "intent",
+      "reference": 0,
+      "candidate": 12
+    },
+    {
+      "id": "test-system-consequential:authored:319",
+      "split": "test",
+      "question": "risk",
+      "reference": 2,
+      "candidate": 1
+    },
+    {
+      "id": "test-prefix-target:authored:321",
+      "split": "test",
+      "question": "risk",
+      "reference": 2,
+      "candidate": 1
+    },
+    {
+      "id": "test-prefix-target:authored:321",
+      "split": "test",
+      "question": "ambiguous",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-prefix-and:authored:322",
+      "split": "test",
+      "question": "risk",
+      "reference": 2,
+      "candidate": 1
+    },
+    {
+      "id": "test-prefix-and:authored:322",
+      "split": "test",
+      "question": "ambiguous",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "test-prefix-domain:authored:324",
+      "split": "test",
+      "question": "intent",
+      "reference": 0,
+      "candidate": 4
+    },
+    {
+      "id": "test-prefix-domain:authored:324",
+      "split": "test",
+      "question": "risk",
+      "reference": 2,
+      "candidate": 0
+    },
+    {
+      "id": "test-prefix-query:authored:325",
+      "split": "test",
+      "question": "risk",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-prefix-self-repair:authored:326",
+      "split": "test",
+      "question": "risk",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-prefix-finished:authored:327",
+      "split": "test",
+      "question": "more_speech",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "test-prefix-quote:authored:329",
+      "split": "test",
+      "question": "intent",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-prefix-reminder-complete:authored:330",
+      "split": "test",
+      "question": "risk",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-asr-repeated-correction:authored:331",
+      "split": "test",
+      "question": "intent",
+      "reference": 5,
+      "candidate": 0
+    },
+    {
+      "id": "test-asr-repeated-correction:authored:331",
+      "split": "test",
+      "question": "more_speech",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-asr-repeated-correction:authored:331",
+      "split": "test",
+      "question": "command",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-asr-partial-word:authored:332",
+      "split": "test",
+      "question": "risk",
+      "reference": 2,
+      "candidate": 1
+    },
+    {
+      "id": "test-asr-hesitation:authored:333",
+      "split": "test",
+      "question": "more_speech",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "test-asr-confusable-body:authored:335",
+      "split": "test",
+      "question": "ambiguous",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-asr-article-noise:authored:337",
+      "split": "test",
+      "question": "more_speech",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "test-asr-article-noise:authored:337",
+      "split": "test",
+      "question": "ambiguous",
+      "reference": 1,
+      "candidate": 0
+    },
+    {
+      "id": "test-asr-near-domain:authored:339",
+      "split": "test",
+      "question": "intent",
+      "reference": 4,
+      "candidate": 1
+    },
+    {
+      "id": "test-text-internal-boundary:authored:340",
+      "split": "test",
+      "question": "ambiguous",
+      "reference": 0,
+      "candidate": 1
+    },
+    {
+      "id": "test-quoted-opener:authored:345",
+      "split": "test",
+      "question": "command",
+      "reference": 0,
+      "candidate": 1
+    }
+  ],
+  "productionAccepted": false,
+  "reason": "Quality, safety and latency targets unsatisfied; answer drift retained in evidence.",
+  "externalWeightsSHA256": "e4ac6da0542aab12737e39821fc1e163164729b5a52f61d1e206b6024adc084d",
+  "consequentialRiskDemotionBoundary": "Reference FP32 predicted consequential; candidate INT8 predicted safe/reversible. Does not imply every reference prediction matched gold.",
+  "demotionsWithConsequentialGold": 3,
+  "demotionsWithConsequentialGoldHeldOut": 3
+}

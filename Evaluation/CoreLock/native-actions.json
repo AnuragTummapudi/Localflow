@@ -1,0 +1,159 @@
+{
+  "accessibility" : "READY",
+  "inputSource" : "fixed developer requests, no microphone",
+  "microphone" : "READY",
+  "results" : [
+    {
+      "arguments" : "application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: Optional(file:\/\/\/System\/Applications\/Notes.app\/), confidence: 1.0, alternateNames: []), processID: nil)",
+      "milliseconds" : 594.13191666635612,
+      "reason" : "The application could not be activated.",
+      "scenario" : "Open Notes",
+      "status" : "FAILED",
+      "tool" : "application.open"
+    },
+    {
+      "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+      "milliseconds" : 709.76754166667888,
+      "reason" : "The application could not be activated.",
+      "scenario" : "Open Safari",
+      "status" : "FAILED",
+      "tool" : "application.open"
+    },
+    {
+      "arguments" : "application(CommandMode.ApplicationMatch(name: \"Google Chrome\", bundleIdentifier: Optional(\"com.google.Chrome\"), url: Optional(file:\/\/\/Applications\/Google%20Chrome.app\/), confidence: 1.0, alternateNames: [\"Chrome\"]), processID: nil)",
+      "milliseconds" : 7.509083333388844,
+      "reason" : "The application could not be activated.",
+      "scenario" : "Open Chrome",
+      "status" : "FAILED",
+      "tool" : "application.open"
+    },
+    {
+      "arguments" : "url(https:\/\/github.com)",
+      "milliseconds" : 121.43749999995634,
+      "output" : "openedURL(https:\/\/github.com)",
+      "reason" : "The browser accepted the URL; page loading is not verified.",
+      "receipt" : "Website opened",
+      "scenario" : "Open github.com",
+      "status" : "UNVERIFIED",
+      "tool" : "web.open_url"
+    },
+    {
+      "reason" : "No exact executable parser result",
+      "scenario" : "Open nonexistent application",
+      "status" : "UNAVAILABLE"
+    },
+    {
+      "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+      "milliseconds" : 6.1428750000231958,
+      "reason" : "The application could not be activated.",
+      "scenario" : "Open Safari",
+      "status" : "FAILED",
+      "tool" : "application.open"
+    },
+    {
+      "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+      "milliseconds" : 2.4220000000241271,
+      "reason" : "The application could not be activated.",
+      "scenario" : "Open Chrome, actually Safari",
+      "status" : "FAILED",
+      "tool" : "application.open"
+    },
+    {
+      "arguments" : "note(title: \"LocalFlow Ideas\", body: \"hello from LocalFlow\")",
+      "milliseconds" : 5590.5674999999064,
+      "reason" : "Native automation failed (-1712).",
+      "scenario" : "Create exact test note",
+      "status" : "FAILED",
+      "tool" : "note.create"
+    },
+    {
+      "arguments" : "reminder(title: \"Review LocalFlow Ideas\", notes: nil, due: nil)",
+      "milliseconds" : 2194.8235416666648,
+      "output" : "reminder(\"27A5FC28-A989-415D-BD3B-94BF0FCD04DA\")",
+      "receipt" : "Reminder created",
+      "scenario" : "Create exact test reminder",
+      "status" : "VERIFIED",
+      "tool" : "reminder.create"
+    },
+    {
+      "arguments" : "reminder(title: \"Review LocalFlow Ideas\", notes: nil, due: nil)",
+      "milliseconds" : 0,
+      "output" : "none",
+      "receipt" : "Action undone",
+      "scenario" : "Guarded test-reminder Undo",
+      "status" : "VERIFIED",
+      "tool" : "reminder.create"
+    },
+    {
+      "arguments" : "volume(40)",
+      "milliseconds" : 502.92579166671203,
+      "output" : "volume(40, muted: false)",
+      "receipt" : "Volume 40%",
+      "scenario" : "Native reversible command",
+      "status" : "VERIFIED",
+      "tool" : "system.volume_set"
+    },
+    {
+      "arguments" : "volume(40)",
+      "milliseconds" : 0,
+      "output" : "none",
+      "receipt" : "Action undone",
+      "scenario" : "Guarded native Undo",
+      "status" : "VERIFIED",
+      "tool" : "system.volume_set"
+    },
+    {
+      "arguments" : "none",
+      "milliseconds" : 5.5359583334393392,
+      "output" : "volume(94, muted: true)",
+      "receipt" : "Audio muted",
+      "scenario" : "Native reversible command",
+      "status" : "VERIFIED",
+      "tool" : "system.mute"
+    },
+    {
+      "arguments" : "none",
+      "milliseconds" : 0,
+      "output" : "none",
+      "receipt" : "Action undone",
+      "scenario" : "Guarded native Undo",
+      "status" : "VERIFIED",
+      "tool" : "system.mute"
+    },
+    {
+      "arguments" : "spotify(CommandMode.SpotifyPlaybackAction.pause)",
+      "milliseconds" : 2717.8774999997586,
+      "output" : "media",
+      "receipt" : "Spotify updated",
+      "scenario" : "Native reversible command",
+      "status" : "VERIFIED",
+      "tool" : "spotify.transport"
+    },
+    {
+      "arguments" : "spotify(CommandMode.SpotifyPlaybackAction.pause)",
+      "milliseconds" : 0,
+      "output" : "none",
+      "receipt" : "Action undone",
+      "scenario" : "Guarded native Undo",
+      "status" : "VERIFIED",
+      "tool" : "spotify.transport"
+    },
+    {
+      "arguments" : "none",
+      "milliseconds" : 0,
+      "reason" : "Frozen confirmation prepared; native effect not performed.",
+      "scenario" : "Consequential preview",
+      "status" : "ACTION REQUIRED",
+      "tool" : "system.lock"
+    },
+    {
+      "arguments" : "none",
+      "milliseconds" : 0,
+      "reason" : "This confirmation is no longer valid.",
+      "scenario" : "Cancelled preview cannot execute",
+      "status" : "FAILED",
+      "tool" : "system.lock"
+    }
+  ],
+  "run" : "2026-10-04T07:18:32Z"
+}

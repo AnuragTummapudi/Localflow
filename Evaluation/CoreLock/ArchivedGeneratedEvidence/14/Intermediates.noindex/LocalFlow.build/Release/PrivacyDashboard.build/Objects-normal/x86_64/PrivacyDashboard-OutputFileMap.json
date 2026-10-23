@@ -1,0 +1,16 @@
+{
+  "" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/PrivacyDashboard.build/Objects-normal/x86_64/PrivacyDashboard-primary.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/PrivacyDashboard.build/Objects-normal/x86_64/PrivacyDashboard-primary.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/PrivacyDashboard.build/Objects-normal/x86_64/PrivacyDashboard-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/PrivacyDashboard.build/Objects-normal/x86_64/PrivacyDashboard-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/PrivacyDashboard.build/Objects-normal/x86_64/PrivacyDashboard-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/PrivacyDashboard.build/Objects-normal/x86_64/PrivacyDashboard-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/PrivacyDashboard.build/Objects-normal/x86_64/PrivacyDashboard-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/PrivacyDashboard/PrivacyDashboardModel.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/PrivacyDashboard.build/Objects-normal/x86_64/PrivacyDashboardModel.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/PrivacyDashboard.build/Objects-normal/x86_64/PrivacyDashboardModel.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/PrivacyDashboard.build/Objects-normal/x86_64/PrivacyDashboardModel.o"
+  }
+}

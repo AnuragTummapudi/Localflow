@@ -1,0 +1,11 @@
+{
+  "reason": "Calibration fixed correction destination Safari overlapped the train application entity set; changed to calibration-owned Firefox.",
+  "trainUnchanged": true,
+  "heldoutUnchanged": true,
+  "trainingStartedWithManifest": "d28dc76edb61d94996ce7b244eaa84d52ea62cfb4ea3245b764719e76a961a66",
+  "evaluationManifest": "6f19c8ce1d9d75bd9ac5dc36b55ea71debb0700082c000fe34b5d8b8348a9b35",
+  "previousCalibrationSHA256": "838752d1943227ed2695c49f31c52fc75d3be36379a59f8a5f97ed2e4d3cf4d7",
+  "evaluationCalibrationSHA256": "e03fc18a16697dd5fcbc3740000d43a48d02ceb21374eebd47b346ff907bf980",
+  "evaluationTrainSHA256": "ba262b61ce837d54507639720b5213ca25a2f1bab8e6c4a685c95f5997fa8954",
+  "humanReview": "Pending. Regenerated deterministic 240-row review sheet; no human review performed."
+}

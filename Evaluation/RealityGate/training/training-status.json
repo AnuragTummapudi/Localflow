@@ -1,0 +1,10 @@
+{
+  "updatesCompleted": 74,
+  "microSteps": 2340,
+  "elapsedSeconds": 805.7122076249798,
+  "status": "full configured training completed; not production qualified",
+  "checkpointSHA256": "66e223580811be6485bf64362320e0f0ecbed05ee6762c0e50089a160c244dac",
+  "calibration": "Not embedded. Evaluate fits per-decision calibration on separate calibration split.",
+  "testUsedInTraining": false,
+  "peakRSSBytes": 2731360256
+}

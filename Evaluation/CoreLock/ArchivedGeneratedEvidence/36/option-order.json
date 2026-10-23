@@ -1,0 +1,1 @@
+{"intent": ["dictation", "open_application", "switch_application", "close_application", "web_navigation", "search", "note_action", "reminder_action", "media_action", "system_action", "unknown"], "risk": ["safe", "reversible", "consequential"], "requires_more_speech": ["A", "B"]}

@@ -1,0 +1,237 @@
+{
+  "boundary" : "Real model and real repository reads; no editor\/browser\/workflow effects or production memory writes",
+  "examples" : [
+    {
+      "firstActualActionMS" : 3371.8707083353365,
+      "goal" : "Resolve project LF",
+      "notice" : "Planner stopped: Invalid arguments for this tool.",
+      "receipts" : [
+        {
+          "arguments" : {
+            "name" : "LF"
+          },
+          "data" : {
+            "folder" : "\/Users\/anuragtummapudi\/Localflow-project\/LocalFlow",
+            "project" : "LocalFlow"
+          },
+          "detail" : "Resolved LocalFlow",
+          "status" : "verified",
+          "stepID" : "1",
+          "tool" : "project.resolve"
+        }
+      ],
+      "totalMS" : 11866.811750001943
+    },
+    {
+      "firstActualActionMS" : 4259.1910000010103,
+      "goal" : "Find the VoiceAgentCoordinator symbol in project LocalFlow",
+      "notice" : "Plan limit reached. Confirm continuation in Settings.",
+      "receipts" : [
+        {
+          "arguments" : {
+            "project" : "LocalFlow",
+            "query" : "VoiceAgentCoordinator"
+          },
+          "data" : {
+            "matches" : [
+              {
+                "line" : 207,
+                "path" : "LIVE_CONTINUATION_BUGFIX_REPORT.md"
+              },
+              {
+                "line" : 78,
+                "path" : "App\/DictationCoordinator.swift"
+              },
+              {
+                "line" : 16,
+                "path" : "App\/SettingsRootView.swift"
+              },
+              {
+                "line" : 720,
+                "path" : "REALITY_GATE_REPORT.md"
+              },
+              {
+                "line" : 1,
+                "path" : "Features\/CommandMode\/VoiceAgentCoordinator.swift"
+              },
+              {
+                "line" : 42,
+                "path" : "Tests\/FeaturesTests\/AgentOperationalTests.swift"
+              },
+              {
+                "line" : 10,
+                "path" : "Tests\/FeaturesTests\/PlannerTests.swift"
+              },
+              {
+                "line" : 24,
+                "path" : "Tests\/FeaturesTests\/VoiceAgentTests.swift"
+              },
+              {
+                "line" : 21,
+                "path" : "Tests\/FeaturesTests\/VoiceContinuationTests.swift"
+              },
+              {
+                "line" : 114,
+                "path" : "Tests\/FeaturesTests\/PlannerBenchmarkTests.swift"
+              },
+              {
+                "line" : 227,
+                "path" : "Tests\/SharedTests\/LayaRuntimeTests.swift"
+              },
+              {
+                "line" : 82,
+                "path" : "Tests\/SharedTests\/AppleSpeechTests.swift"
+              },
+              {
+                "line" : 19,
+                "path" : "STREAMING.md"
+              },
+              {
+                "line" : 10,
+                "path" : "SYSTEM2_PLANNER.md"
+              },
+              {
+                "line" : 16,
+                "path" : "Evaluation\/System2\/third-compile.log"
+              },
+              {
+                "line" : 6,
+                "path" : "Evaluation\/System2\/ui-compile.log"
+              },
+              {
+                "line" : 7,
+                "path" : "Evaluation\/System2\/typed-benchmark.log"
+              },
+              {
+                "line" : 5,
+                "path" : "Evaluation\/System2\/planner-tests-8.log"
+              },
+              {
+                "line" : 143,
+                "path" : "Evaluation\/System2\/first-compile.log"
+              },
+              {
+                "line" : 14,
+                "path" : "Evaluation\/System2\/build_scenarios.py"
+              }
+            ]
+          },
+          "detail" : "Found 20 project matches",
+          "status" : "verified",
+          "stepID" : "1",
+          "tool" : "editor.revealSymbol"
+        },
+        {
+          "arguments" : {
+            "path" : "Features\/CommandMode\/VoiceAgentCoordinator.swift",
+            "project" : "LocalFlow"
+          },
+          "data" : {
+
+          },
+          "detail" : "Read-only live benchmark boundary",
+          "status" : "failed",
+          "stepID" : "2",
+          "tool" : "editor.openFile"
+        },
+        {
+          "arguments" : {
+            "path" : "Features\/CommandMode\/VoiceAgentCoordinator.swift",
+            "project" : "LocalFlow"
+          },
+          "data" : {
+
+          },
+          "detail" : "Read-only live benchmark boundary",
+          "status" : "failed",
+          "stepID" : "3",
+          "tool" : "editor.openFile"
+        },
+        {
+          "arguments" : {
+            "path" : "Features\/CommandMode\/VoiceAgentCoordinator.swift",
+            "project" : "LocalFlow"
+          },
+          "data" : {
+
+          },
+          "detail" : "Read-only live benchmark boundary",
+          "status" : "failed",
+          "stepID" : "4",
+          "tool" : "editor.openFile"
+        },
+        {
+          "arguments" : {
+            "path" : "Features\/CommandMode\/VoiceAgentCoordinator.swift",
+            "project" : "LocalFlow"
+          },
+          "data" : {
+
+          },
+          "detail" : "Read-only live benchmark boundary",
+          "status" : "failed",
+          "stepID" : "5",
+          "tool" : "editor.openFile"
+        },
+        {
+          "arguments" : {
+            "path" : "Features\/CommandMode\/VoiceAgentCoordinator.swift",
+            "project" : "LocalFlow"
+          },
+          "data" : {
+
+          },
+          "detail" : "Read-only live benchmark boundary",
+          "status" : "failed",
+          "stepID" : "6",
+          "tool" : "editor.openFile"
+        }
+      ],
+      "totalMS" : 68428.612833333318
+    },
+    {
+      "firstActualActionMS" : 2566.778708333004,
+      "goal" : "Resolve project LocalFlow then list its saved workflows",
+      "notice" : "Planner stopped: Invalid arguments for this tool.",
+      "receipts" : [
+        {
+          "arguments" : {
+            "name" : "LocalFlow"
+          },
+          "data" : {
+            "folder" : "\/Users\/anuragtummapudi\/Localflow-project\/LocalFlow",
+            "project" : "LocalFlow"
+          },
+          "detail" : "Resolved LocalFlow",
+          "status" : "verified",
+          "stepID" : "1",
+          "tool" : "project.resolve"
+        },
+        {
+          "arguments" : {
+            "project" : "LocalFlow"
+          },
+          "data" : {
+            "workflows" : [
+
+            ]
+          },
+          "detail" : "0 saved workflows",
+          "status" : "verified",
+          "stepID" : "2",
+          "tool" : "workflow.list"
+        }
+      ],
+      "totalMS" : 13086.30116666609
+    }
+  ],
+  "generationCancellationMS" : 40.276208332215901,
+  "load" : {
+    "coldLoadMS" : 3202.6441666675964,
+    "mlxActiveBytes" : 2367679904,
+    "mlxPeakBytes" : 3034562212,
+    "prefixPrepareMS" : 18321.909458332811,
+    "rssBytes" : 668778496
+  },
+  "reloadAfterCancellation" : true
+}

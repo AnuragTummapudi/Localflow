@@ -1,0 +1,49 @@
+{
+  "": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/HeapModule.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/HeapModule.o",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-collections/Sources/HeapModule/Heap+Descriptions.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+Descriptions.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+Descriptions~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+Descriptions.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+Descriptions.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-collections/Sources/HeapModule/Heap+ExpressibleByArrayLiteral.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+ExpressibleByArrayLiteral.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+ExpressibleByArrayLiteral~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+ExpressibleByArrayLiteral.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+ExpressibleByArrayLiteral.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-collections/Sources/HeapModule/Heap+Invariants.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+Invariants.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+Invariants~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+Invariants.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+Invariants.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-collections/Sources/HeapModule/Heap+Testing.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+Testing.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+Testing~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+Testing.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+Testing.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-collections/Sources/HeapModule/Heap+UnsafeHandle.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+UnsafeHandle.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+UnsafeHandle~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+UnsafeHandle.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap+UnsafeHandle.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-collections/Sources/HeapModule/Heap.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/Heap.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-collections/Sources/HeapModule/_HeapNode.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/_HeapNode.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/_HeapNode~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/_HeapNode.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/HeapModule.build/_HeapNode.dia"
+  }
+}

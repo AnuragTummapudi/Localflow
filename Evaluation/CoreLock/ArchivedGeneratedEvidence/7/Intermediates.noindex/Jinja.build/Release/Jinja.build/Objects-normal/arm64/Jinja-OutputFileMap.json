@@ -1,0 +1,81 @@
+{
+  "" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Jinja-primary.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Jinja-primary.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Jinja-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Jinja-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Jinja-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Jinja-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Jinja-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/AST.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/arm64/AST.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/AST.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/AST.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Error.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Error.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Error.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Error.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Filters.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Filters.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Filters.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Filters.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Globals.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Globals.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Globals.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Globals.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Interpreter.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Interpreter.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Interpreter.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Interpreter.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Lexer.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Lexer.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Lexer.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Lexer.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Macro.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Macro.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Macro.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Macro.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Parser.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Parser.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Parser.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Parser.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/PropertyMembers.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/arm64/PropertyMembers.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/PropertyMembers.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/PropertyMembers.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Template.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Template.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Template.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Template.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Tests.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Tests.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Tests.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Tests.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Token.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Token.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Token.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Token.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Utilities.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Utilities.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Utilities.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Utilities.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/swift-jinja/Sources/Jinja/Value.swift" : {
+    "index-unit-output-path" : "/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Value.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Value.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/Jinja.build/Release/Jinja.build/Objects-normal/arm64/Value.o"
+  }
+}

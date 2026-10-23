@@ -1,0 +1,70 @@
+{
+  "missions" : [
+    {
+      "goal" : "Select Downloads in Finder",
+      "notice" : "More information is needed to continue.",
+      "states" : [
+        {
+          "elements" : 0,
+          "goalSatisfied" : false,
+          "selected" : 0,
+          "tools" : [
+            "ui.observe",
+            "decision.finish",
+            "decision.askUser",
+            "decision.abstain"
+          ]
+        },
+        {
+          "elements" : 0,
+          "goalSatisfied" : false,
+          "selected" : 0,
+          "tools" : [
+            "decision.finish",
+            "decision.askUser",
+            "decision.abstain"
+          ]
+        }
+      ],
+      "tools" : [
+        "ui.observe"
+      ],
+      "turns" : 2,
+      "unrelatedActions" : 0,
+      "verifiedReceipts" : 1
+    },
+    {
+      "goal" : "Show Accessibility in System Settings",
+      "notice" : "More information is needed to continue.",
+      "states" : [
+        {
+          "elements" : 0,
+          "goalSatisfied" : false,
+          "selected" : 0,
+          "tools" : [
+            "ui.observe",
+            "decision.finish",
+            "decision.askUser",
+            "decision.abstain"
+          ]
+        },
+        {
+          "elements" : 0,
+          "goalSatisfied" : false,
+          "selected" : 0,
+          "tools" : [
+            "decision.finish",
+            "decision.askUser",
+            "decision.abstain"
+          ]
+        }
+      ],
+      "tools" : [
+        "ui.observe"
+      ],
+      "turns" : 2,
+      "unrelatedActions" : 0,
+      "verifiedReceipts" : 1
+    }
+  ]
+}

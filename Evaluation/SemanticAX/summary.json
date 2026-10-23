@@ -1,0 +1,27 @@
+{
+  "fixtureTasks": 12,
+  "parseable": 12,
+  "correctNextTool": 12,
+  "acceptedScopedArguments": 12,
+  "correctElements": 8,
+  "elementCalls": 8,
+  "averageExposedTools": 4.916666666666667,
+  "realMissions": 2,
+  "realCompleted": 0,
+  "realUnrelatedActions": 0,
+  "tests": {
+    "fullSuite": {
+      "executed": 330,
+      "skipped": 17,
+      "failures": 0
+    },
+    "finalTargeted": {
+      "executed": 21,
+      "skipped": 4,
+      "failures": 0
+    },
+    "unsignedDebugBuild": "passed"
+  },
+  "qualification": "NOT READY FOR LOCAL VISUAL FALLBACK ITERATION",
+  "note": "Fixture proposals were validated but not sent to real apps; real missions used the shared ledger. Full suite preceded final bounded-observation/confirmation refinements, covered by final targeted tests and rebuilt Debug."
+}

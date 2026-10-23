@@ -1,0 +1,1179 @@
+{
+  "model": ".build/reality-gate/models/typed",
+  "device": "mps",
+  "dtype": "float32",
+  "threads": 4,
+  "checkpointSHA256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e",
+  "questionsSHA256": "d4bd68e029bc282806f83afddba5ddf242eca127dd21e5e43f74d6d969fbf16a",
+  "datasetManifestSHA256": "e8247ce3b8d17ae3afbeadcfca9dcdc1a460dc4ff7945bca3a69b9d669775e14",
+  "performance": {
+    "coldLoadMilliseconds": 3906.4837920013815,
+    "firstInferenceMilliseconds": 1573.810500005493,
+    "warmP50Milliseconds": 1576.6953749989625,
+    "warmP95Milliseconds": 1874.7324379946804,
+    "decisionQuestionsPerUtterance": 5,
+    "utterances": 112,
+    "peakRSSBytes": 1995325440,
+    "mpsAllocatedBytes": 1688613632,
+    "mpsDriverBytes": 2164211712,
+    "modelDiskBytes": 846198758
+  },
+  "questions": {
+    "intent": {
+      "temperature": 0.6506288748655574,
+      "calibration": {
+        "count": 40,
+        "accuracy": 0.625,
+        "ece10": 0.2244399689291363,
+        "nll": 1.1519901194978037,
+        "brier": 0.5339827520470875,
+        "confidenceGates": {
+          "0.5": {
+            "threshold": 0.5,
+            "accepted": 33,
+            "coverage": 0.825,
+            "selectiveAccuracy": 0.696969696969697,
+            "accuracy95LowerBound": 0.5266186485419944
+          },
+          "0.75": {
+            "threshold": 0.75,
+            "accepted": 8,
+            "coverage": 0.2,
+            "selectiveAccuracy": 0.875,
+            "accuracy95LowerBound": 0.5291118177871466
+          },
+          "0.9": {
+            "threshold": 0.9,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.95": {
+            "threshold": 0.95,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.97": {
+            "threshold": 0.97,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.99": {
+            "threshold": 0.99,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        }
+      },
+      "testRaw": {
+        "count": 72,
+        "accuracy": 0.4444444444444444,
+        "ece10": 0.07967062077959398,
+        "nll": 1.589980229410985,
+        "brier": 0.6845252302467308,
+        "confidenceGates": {
+          "0.5": {
+            "threshold": 0.5,
+            "accepted": 25,
+            "coverage": 0.3472222222222222,
+            "selectiveAccuracy": 0.64,
+            "accuracy95LowerBound": 0.44518497748164865
+          },
+          "0.75": {
+            "threshold": 0.75,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.9": {
+            "threshold": 0.9,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.95": {
+            "threshold": 0.95,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.97": {
+            "threshold": 0.97,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.99": {
+            "threshold": 0.99,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        }
+      },
+      "testCalibrated": {
+        "count": 72,
+        "accuracy": 0.4444444444444444,
+        "ece10": 0.1751124507853163,
+        "nll": 1.6526107152882787,
+        "brier": 0.7149647437055535,
+        "confidenceGates": {
+          "0.5": {
+            "threshold": 0.5,
+            "accepted": 52,
+            "coverage": 0.7222222222222222,
+            "selectiveAccuracy": 0.5576923076923077,
+            "accuracy95LowerBound": 0.4233976178720288
+          },
+          "0.75": {
+            "threshold": 0.75,
+            "accepted": 19,
+            "coverage": 0.2638888888888889,
+            "selectiveAccuracy": 0.5789473684210527,
+            "accuracy95LowerBound": 0.3627590353425504
+          },
+          "0.9": {
+            "threshold": 0.9,
+            "accepted": 2,
+            "coverage": 0.027777777777777776,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.3423802275066531
+          },
+          "0.95": {
+            "threshold": 0.95,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.97": {
+            "threshold": 0.97,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.99": {
+            "threshold": 0.99,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        }
+      },
+      "selectiveCoverage": {
+        "0.95": {
+          "calibrationEmpirical": null,
+          "testAtCalibrationEmpiricalGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "calibrationStatisticallySupported": null,
+          "testAtSupportedGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "0.97": {
+          "calibrationEmpirical": null,
+          "testAtCalibrationEmpiricalGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "calibrationStatisticallySupported": null,
+          "testAtSupportedGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "0.99": {
+          "calibrationEmpirical": null,
+          "testAtCalibrationEmpiricalGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "calibrationStatisticallySupported": null,
+          "testAtSupportedGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        }
+      }
+    },
+    "risk": {
+      "temperature": 1.0471285480509003,
+      "calibration": {
+        "count": 40,
+        "accuracy": 0.525,
+        "ece10": 0.17581830776027912,
+        "nll": 0.9729947556705202,
+        "brier": 0.567296252850479,
+        "confidenceGates": {
+          "0.5": {
+            "threshold": 0.5,
+            "accepted": 22,
+            "coverage": 0.55,
+            "selectiveAccuracy": 0.7272727272727273,
+            "accuracy95LowerBound": 0.5184826598759761
+          },
+          "0.75": {
+            "threshold": 0.75,
+            "accepted": 2,
+            "coverage": 0.05,
+            "selectiveAccuracy": 0.5,
+            "accuracy95LowerBound": 0.09453120573423071
+          },
+          "0.9": {
+            "threshold": 0.9,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.95": {
+            "threshold": 0.95,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.97": {
+            "threshold": 0.97,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.99": {
+            "threshold": 0.99,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        }
+      },
+      "testRaw": {
+        "count": 72,
+        "accuracy": 0.4027777777777778,
+        "ece10": 0.11221230681615929,
+        "nll": 1.1425439668380204,
+        "brier": 0.6755584665133885,
+        "confidenceGates": {
+          "0.5": {
+            "threshold": 0.5,
+            "accepted": 40,
+            "coverage": 0.5555555555555556,
+            "selectiveAccuracy": 0.525,
+            "accuracy95LowerBound": 0.3749736210669247
+          },
+          "0.75": {
+            "threshold": 0.75,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.9": {
+            "threshold": 0.9,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.95": {
+            "threshold": 0.95,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.97": {
+            "threshold": 0.97,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.99": {
+            "threshold": 0.99,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        }
+      },
+      "testCalibrated": {
+        "count": 72,
+        "accuracy": 0.4027777777777778,
+        "ece10": 0.10453322277557288,
+        "nll": 1.1358894383172666,
+        "brier": 0.673075581538638,
+        "confidenceGates": {
+          "0.5": {
+            "threshold": 0.5,
+            "accepted": 36,
+            "coverage": 0.5,
+            "selectiveAccuracy": 0.5,
+            "accuracy95LowerBound": 0.34474325409626827
+          },
+          "0.75": {
+            "threshold": 0.75,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.9": {
+            "threshold": 0.9,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.95": {
+            "threshold": 0.95,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.97": {
+            "threshold": 0.97,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.99": {
+            "threshold": 0.99,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        }
+      },
+      "selectiveCoverage": {
+        "0.95": {
+          "calibrationEmpirical": null,
+          "testAtCalibrationEmpiricalGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "calibrationStatisticallySupported": null,
+          "testAtSupportedGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "0.97": {
+          "calibrationEmpirical": null,
+          "testAtCalibrationEmpiricalGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "calibrationStatisticallySupported": null,
+          "testAtSupportedGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "0.99": {
+          "calibrationEmpirical": null,
+          "testAtCalibrationEmpiricalGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "calibrationStatisticallySupported": null,
+          "testAtSupportedGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        }
+      }
+    },
+    "more_speech": {
+      "temperature": 0.6918309709189367,
+      "calibration": {
+        "count": 40,
+        "accuracy": 0.825,
+        "ece10": 0.08466569673648322,
+        "nll": 0.4266646434039319,
+        "brier": 0.2636580730005784,
+        "confidenceGates": {
+          "0.5": {
+            "threshold": 0.5,
+            "accepted": 40,
+            "coverage": 1.0,
+            "selectiveAccuracy": 0.825,
+            "accuracy95LowerBound": 0.6805000966821229
+          },
+          "0.75": {
+            "threshold": 0.75,
+            "accepted": 26,
+            "coverage": 0.65,
+            "selectiveAccuracy": 0.9230769230769231,
+            "accuracy95LowerBound": 0.7585844622837095
+          },
+          "0.9": {
+            "threshold": 0.9,
+            "accepted": 11,
+            "coverage": 0.275,
+            "selectiveAccuracy": 0.9090909090909091,
+            "accuracy95LowerBound": 0.6226415635484044
+          },
+          "0.95": {
+            "threshold": 0.95,
+            "accepted": 8,
+            "coverage": 0.2,
+            "selectiveAccuracy": 0.875,
+            "accuracy95LowerBound": 0.5291118177871466
+          },
+          "0.97": {
+            "threshold": 0.97,
+            "accepted": 6,
+            "coverage": 0.15,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.6096657120978346
+          },
+          "0.99": {
+            "threshold": 0.99,
+            "accepted": 1,
+            "coverage": 0.025,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.20654931437723742
+          }
+        },
+        "precision": 0.0,
+        "recall": 0.0,
+        "positiveCount": 6,
+        "predictedPositiveCount": 1
+      },
+      "testRaw": {
+        "count": 72,
+        "accuracy": 0.8611111111111112,
+        "ece10": 0.09757129711353049,
+        "nll": 0.37904869807472474,
+        "brier": 0.2286752097910226,
+        "confidenceGates": {
+          "0.5": {
+            "threshold": 0.5,
+            "accepted": 72,
+            "coverage": 1.0,
+            "selectiveAccuracy": 0.8611111111111112,
+            "accuracy95LowerBound": 0.7628681274944371
+          },
+          "0.75": {
+            "threshold": 0.75,
+            "accepted": 43,
+            "coverage": 0.5972222222222222,
+            "selectiveAccuracy": 0.9534883720930233,
+            "accuracy95LowerBound": 0.8454450199593604
+          },
+          "0.9": {
+            "threshold": 0.9,
+            "accepted": 9,
+            "coverage": 0.125,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.700854951580456
+          },
+          "0.95": {
+            "threshold": 0.95,
+            "accepted": 3,
+            "coverage": 0.041666666666666664,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.4385029682449545
+          },
+          "0.97": {
+            "threshold": 0.97,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.99": {
+            "threshold": 0.99,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "precision": 0.5,
+        "recall": 0.1,
+        "positiveCount": 10,
+        "predictedPositiveCount": 2
+      },
+      "testCalibrated": {
+        "count": 72,
+        "accuracy": 0.8611111111111112,
+        "ece10": 0.03395367013673126,
+        "nll": 0.34208051378272564,
+        "brier": 0.21215909435492153,
+        "confidenceGates": {
+          "0.5": {
+            "threshold": 0.5,
+            "accepted": 72,
+            "coverage": 1.0,
+            "selectiveAccuracy": 0.8611111111111112,
+            "accuracy95LowerBound": 0.7628681274944371
+          },
+          "0.75": {
+            "threshold": 0.75,
+            "accepted": 55,
+            "coverage": 0.7638888888888888,
+            "selectiveAccuracy": 0.9272727272727272,
+            "accuracy95LowerBound": 0.8274005992784395
+          },
+          "0.9": {
+            "threshold": 0.9,
+            "accepted": 25,
+            "coverage": 0.3472222222222222,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.8668077490609514
+          },
+          "0.95": {
+            "threshold": 0.95,
+            "accepted": 14,
+            "coverage": 0.19444444444444445,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.7846891972623642
+          },
+          "0.97": {
+            "threshold": 0.97,
+            "accepted": 7,
+            "coverage": 0.09722222222222222,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.6456695649333126
+          },
+          "0.99": {
+            "threshold": 0.99,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "precision": 0.5,
+        "recall": 0.1,
+        "positiveCount": 10,
+        "predictedPositiveCount": 2
+      },
+      "selectiveCoverage": {
+        "0.95": {
+          "calibrationEmpirical": {
+            "threshold": 0.8448141282115624,
+            "accepted": 22,
+            "coverage": 0.55,
+            "selectiveAccuracy": 0.9545454545454546,
+            "accuracy95LowerBound": 0.7820195416134267
+          },
+          "testAtCalibrationEmpiricalGate": {
+            "threshold": 0.8448141282115624,
+            "accepted": 41,
+            "coverage": 0.5694444444444444,
+            "selectiveAccuracy": 0.975609756097561,
+            "accuracy95LowerBound": 0.8740493794422575
+          },
+          "calibrationStatisticallySupported": null,
+          "testAtSupportedGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "0.97": {
+          "calibrationEmpirical": {
+            "threshold": 0.9754757675227991,
+            "accepted": 6,
+            "coverage": 0.15,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.6096657120978346
+          },
+          "testAtCalibrationEmpiricalGate": {
+            "threshold": 0.9754757675227991,
+            "accepted": 4,
+            "coverage": 0.05555555555555555,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.5101091635454027
+          },
+          "calibrationStatisticallySupported": null,
+          "testAtSupportedGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "0.99": {
+          "calibrationEmpirical": {
+            "threshold": 0.9754757675227991,
+            "accepted": 6,
+            "coverage": 0.15,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.6096657120978346
+          },
+          "testAtCalibrationEmpiricalGate": {
+            "threshold": 0.9754757675227991,
+            "accepted": 4,
+            "coverage": 0.05555555555555555,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.5101091635454027
+          },
+          "calibrationStatisticallySupported": null,
+          "testAtSupportedGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        }
+      }
+    },
+    "command": {
+      "temperature": 0.9404448517263521,
+      "calibration": {
+        "count": 40,
+        "accuracy": 0.75,
+        "ece10": 0.14361118292437186,
+        "nll": 0.5465336656170813,
+        "brier": 0.36823636669540866,
+        "confidenceGates": {
+          "0.5": {
+            "threshold": 0.5,
+            "accepted": 40,
+            "coverage": 1.0,
+            "selectiveAccuracy": 0.75,
+            "accuracy95LowerBound": 0.5980603857923198
+          },
+          "0.75": {
+            "threshold": 0.75,
+            "accepted": 16,
+            "coverage": 0.4,
+            "selectiveAccuracy": 0.8125,
+            "accuracy95LowerBound": 0.5699111903802586
+          },
+          "0.9": {
+            "threshold": 0.9,
+            "accepted": 6,
+            "coverage": 0.15,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.6096657120978346
+          },
+          "0.95": {
+            "threshold": 0.95,
+            "accepted": 3,
+            "coverage": 0.075,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.4385029682449545
+          },
+          "0.97": {
+            "threshold": 0.97,
+            "accepted": 2,
+            "coverage": 0.05,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.3423802275066531
+          },
+          "0.99": {
+            "threshold": 0.99,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "precision": 0.9565217391304348,
+        "recall": 0.7096774193548387,
+        "positiveCount": 31,
+        "predictedPositiveCount": 23
+      },
+      "testRaw": {
+        "count": 72,
+        "accuracy": 0.625,
+        "ece10": 0.11458832901677952,
+        "nll": 0.7120643827150358,
+        "brier": 0.4874931072085265,
+        "confidenceGates": {
+          "0.5": {
+            "threshold": 0.5,
+            "accepted": 72,
+            "coverage": 1.0,
+            "selectiveAccuracy": 0.625,
+            "accuracy95LowerBound": 0.5095289902692697
+          },
+          "0.75": {
+            "threshold": 0.75,
+            "accepted": 28,
+            "coverage": 0.3888888888888889,
+            "selectiveAccuracy": 0.6428571428571429,
+            "accuracy95LowerBound": 0.45830306514427804
+          },
+          "0.9": {
+            "threshold": 0.9,
+            "accepted": 4,
+            "coverage": 0.05555555555555555,
+            "selectiveAccuracy": 0.5,
+            "accuracy95LowerBound": 0.15003898915214947
+          },
+          "0.95": {
+            "threshold": 0.95,
+            "accepted": 3,
+            "coverage": 0.041666666666666664,
+            "selectiveAccuracy": 0.6666666666666666,
+            "accuracy95LowerBound": 0.20765960080204768
+          },
+          "0.97": {
+            "threshold": 0.97,
+            "accepted": 1,
+            "coverage": 0.013888888888888888,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.20654931437723742
+          },
+          "0.99": {
+            "threshold": 0.99,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "precision": 0.8780487804878049,
+        "recall": 0.6206896551724138,
+        "positiveCount": 58,
+        "predictedPositiveCount": 41
+      },
+      "testCalibrated": {
+        "count": 72,
+        "accuracy": 0.625,
+        "ece10": 0.0942320820668061,
+        "nll": 0.7214788397778742,
+        "brier": 0.4906357659016677,
+        "confidenceGates": {
+          "0.5": {
+            "threshold": 0.5,
+            "accepted": 72,
+            "coverage": 1.0,
+            "selectiveAccuracy": 0.625,
+            "accuracy95LowerBound": 0.5095289902692697
+          },
+          "0.75": {
+            "threshold": 0.75,
+            "accepted": 31,
+            "coverage": 0.4305555555555556,
+            "selectiveAccuracy": 0.6774193548387096,
+            "accuracy95LowerBound": 0.5014100930808564
+          },
+          "0.9": {
+            "threshold": 0.9,
+            "accepted": 5,
+            "coverage": 0.06944444444444445,
+            "selectiveAccuracy": 0.4,
+            "accuracy95LowerBound": 0.11762077423264786
+          },
+          "0.95": {
+            "threshold": 0.95,
+            "accepted": 3,
+            "coverage": 0.041666666666666664,
+            "selectiveAccuracy": 0.6666666666666666,
+            "accuracy95LowerBound": 0.20765960080204768
+          },
+          "0.97": {
+            "threshold": 0.97,
+            "accepted": 3,
+            "coverage": 0.041666666666666664,
+            "selectiveAccuracy": 0.6666666666666666,
+            "accuracy95LowerBound": 0.20765960080204768
+          },
+          "0.99": {
+            "threshold": 0.99,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "precision": 0.8780487804878049,
+        "recall": 0.6206896551724138,
+        "positiveCount": 58,
+        "predictedPositiveCount": 41
+      },
+      "selectiveCoverage": {
+        "0.95": {
+          "calibrationEmpirical": {
+            "threshold": 0.908358266532934,
+            "accepted": 6,
+            "coverage": 0.15,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.6096657120978346
+          },
+          "testAtCalibrationEmpiricalGate": {
+            "threshold": 0.908358266532934,
+            "accepted": 4,
+            "coverage": 0.05555555555555555,
+            "selectiveAccuracy": 0.5,
+            "accuracy95LowerBound": 0.15003898915214947
+          },
+          "calibrationStatisticallySupported": null,
+          "testAtSupportedGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "0.97": {
+          "calibrationEmpirical": {
+            "threshold": 0.908358266532934,
+            "accepted": 6,
+            "coverage": 0.15,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.6096657120978346
+          },
+          "testAtCalibrationEmpiricalGate": {
+            "threshold": 0.908358266532934,
+            "accepted": 4,
+            "coverage": 0.05555555555555555,
+            "selectiveAccuracy": 0.5,
+            "accuracy95LowerBound": 0.15003898915214947
+          },
+          "calibrationStatisticallySupported": null,
+          "testAtSupportedGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "0.99": {
+          "calibrationEmpirical": {
+            "threshold": 0.908358266532934,
+            "accepted": 6,
+            "coverage": 0.15,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.6096657120978346
+          },
+          "testAtCalibrationEmpiricalGate": {
+            "threshold": 0.908358266532934,
+            "accepted": 4,
+            "coverage": 0.05555555555555555,
+            "selectiveAccuracy": 0.5,
+            "accuracy95LowerBound": 0.15003898915214947
+          },
+          "calibrationStatisticallySupported": null,
+          "testAtSupportedGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        }
+      }
+    },
+    "ambiguous": {
+      "temperature": 0.844630318583969,
+      "calibration": {
+        "count": 40,
+        "accuracy": 0.825,
+        "ece10": 0.046969260660936346,
+        "nll": 0.43343352773145066,
+        "brier": 0.27411352168989117,
+        "confidenceGates": {
+          "0.5": {
+            "threshold": 0.5,
+            "accepted": 40,
+            "coverage": 1.0,
+            "selectiveAccuracy": 0.825,
+            "accuracy95LowerBound": 0.6805000966821229
+          },
+          "0.75": {
+            "threshold": 0.75,
+            "accepted": 33,
+            "coverage": 0.825,
+            "selectiveAccuracy": 0.8484848484848485,
+            "accuracy95LowerBound": 0.6908012411955788
+          },
+          "0.9": {
+            "threshold": 0.9,
+            "accepted": 7,
+            "coverage": 0.175,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.6456695649333126
+          },
+          "0.95": {
+            "threshold": 0.95,
+            "accepted": 3,
+            "coverage": 0.075,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.4385029682449545
+          },
+          "0.97": {
+            "threshold": 0.97,
+            "accepted": 1,
+            "coverage": 0.025,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.20654931437723742
+          },
+          "0.99": {
+            "threshold": 0.99,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "precision": null,
+        "recall": 0.0,
+        "positiveCount": 7,
+        "predictedPositiveCount": 0
+      },
+      "testRaw": {
+        "count": 72,
+        "accuracy": 0.7638888888888888,
+        "ece10": 0.11037569980957296,
+        "nll": 0.5385990543476266,
+        "brier": 0.35319683244631894,
+        "confidenceGates": {
+          "0.5": {
+            "threshold": 0.5,
+            "accepted": 72,
+            "coverage": 1.0,
+            "selectiveAccuracy": 0.7638888888888888,
+            "accuracy95LowerBound": 0.6540123102714637
+          },
+          "0.75": {
+            "threshold": 0.75,
+            "accepted": 46,
+            "coverage": 0.6388888888888888,
+            "selectiveAccuracy": 0.8260869565217391,
+            "accuracy95LowerBound": 0.6927664628362151
+          },
+          "0.9": {
+            "threshold": 0.9,
+            "accepted": 8,
+            "coverage": 0.1111111111111111,
+            "selectiveAccuracy": 0.75,
+            "accuracy95LowerBound": 0.40927543031016894
+          },
+          "0.95": {
+            "threshold": 0.95,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.97": {
+            "threshold": 0.97,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.99": {
+            "threshold": 0.99,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "precision": 1.0,
+        "recall": 0.05555555555555555,
+        "positiveCount": 18,
+        "predictedPositiveCount": 1
+      },
+      "testCalibrated": {
+        "count": 72,
+        "accuracy": 0.7638888888888888,
+        "ece10": 0.06563126566048166,
+        "nll": 0.550300143332549,
+        "brier": 0.35733135348051953,
+        "confidenceGates": {
+          "0.5": {
+            "threshold": 0.5,
+            "accepted": 72,
+            "coverage": 1.0,
+            "selectiveAccuracy": 0.7638888888888888,
+            "accuracy95LowerBound": 0.6540123102714637
+          },
+          "0.75": {
+            "threshold": 0.75,
+            "accepted": 50,
+            "coverage": 0.6944444444444444,
+            "selectiveAccuracy": 0.78,
+            "accuracy95LowerBound": 0.6475845041874633
+          },
+          "0.9": {
+            "threshold": 0.9,
+            "accepted": 17,
+            "coverage": 0.2361111111111111,
+            "selectiveAccuracy": 0.7647058823529411,
+            "accuracy95LowerBound": 0.5273820188043501
+          },
+          "0.95": {
+            "threshold": 0.95,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.97": {
+            "threshold": 0.97,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          },
+          "0.99": {
+            "threshold": 0.99,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "precision": 1.0,
+        "recall": 0.05555555555555555,
+        "positiveCount": 18,
+        "predictedPositiveCount": 1
+      },
+      "selectiveCoverage": {
+        "0.95": {
+          "calibrationEmpirical": {
+            "threshold": 0.8878499084862946,
+            "accepted": 11,
+            "coverage": 0.275,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.7411670330319683
+          },
+          "testAtCalibrationEmpiricalGate": {
+            "threshold": 0.8878499084862946,
+            "accepted": 22,
+            "coverage": 0.3055555555555556,
+            "selectiveAccuracy": 0.8181818181818182,
+            "accuracy95LowerBound": 0.6148339256287346
+          },
+          "calibrationStatisticallySupported": null,
+          "testAtSupportedGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "0.97": {
+          "calibrationEmpirical": {
+            "threshold": 0.8878499084862946,
+            "accepted": 11,
+            "coverage": 0.275,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.7411670330319683
+          },
+          "testAtCalibrationEmpiricalGate": {
+            "threshold": 0.8878499084862946,
+            "accepted": 22,
+            "coverage": 0.3055555555555556,
+            "selectiveAccuracy": 0.8181818181818182,
+            "accuracy95LowerBound": 0.6148339256287346
+          },
+          "calibrationStatisticallySupported": null,
+          "testAtSupportedGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        },
+        "0.99": {
+          "calibrationEmpirical": {
+            "threshold": 0.8878499084862946,
+            "accepted": 11,
+            "coverage": 0.275,
+            "selectiveAccuracy": 1.0,
+            "accuracy95LowerBound": 0.7411670330319683
+          },
+          "testAtCalibrationEmpiricalGate": {
+            "threshold": 0.8878499084862946,
+            "accepted": 22,
+            "coverage": 0.3055555555555556,
+            "selectiveAccuracy": 0.8181818181818182,
+            "accuracy95LowerBound": 0.6148339256287346
+          },
+          "calibrationStatisticallySupported": null,
+          "testAtSupportedGate": {
+            "threshold": null,
+            "accepted": 0,
+            "coverage": 0.0,
+            "selectiveAccuracy": null,
+            "accuracy95LowerBound": null
+          }
+        }
+      }
+    },
+    "autoExecutableRisk": {
+      "accepted": 65,
+      "precision": 0.8153846153846154,
+      "precision95LowerBound": 0.7044600616636224,
+      "productionGateEnabled": false
+    }
+  }
+}

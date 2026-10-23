@@ -1,0 +1,59 @@
+{
+  "runtime": "native",
+  "command": [
+    "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/system2/swift/release/localflow-qwen",
+    "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/system2/candidate"
+  ],
+  "load": {
+    "coldLoadMS": 3226.7868333328806,
+    "mlxActiveBytes": 2367679904,
+    "mlxPeakBytes": 3034562212,
+    "ready": true,
+    "rssBytes": 789872640
+  },
+  "samplesPerModeCase": 5,
+  "firstOnly": false,
+  "rssSemantics": "current RSS",
+  "rows": [
+    {
+      "case": "one",
+      "thinking": false,
+      "sample": 0,
+      "warmup": true,
+      "wallMS": 21786.595000001398,
+      "reply": {
+        "cachedPrefixTokens": "2925",
+        "firstToolCallMS": "21699.295374997746",
+        "mlxActiveBytes": "2519854644",
+        "mlxPeakBytes": "3378569306",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "21781.7551666667",
+        "promptTokens": "3197",
+        "rssBytes": "367575040",
+        "tokens": "26",
+        "tokensPerSecond": "19.135093772166513",
+        "ttftMS": "20395.07320833218"
+      }
+    },
+    {
+      "case": "one",
+      "thinking": true,
+      "sample": 0,
+      "warmup": true,
+      "wallMS": 10692.704166998737,
+      "reply": {
+        "cachedPrefixTokens": "2925",
+        "firstToolCallMS": "10596.764041667484",
+        "mlxActiveBytes": "2519854644",
+        "mlxPeakBytes": "3395491200",
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "planMS": "10687.261166665849",
+        "promptTokens": "3195",
+        "rssBytes": "309854208",
+        "tokens": "157",
+        "tokensPerSecond": "18.425134440405206",
+        "ttftMS": "2134.3988750013523"
+      }
+    }
+  ]
+}

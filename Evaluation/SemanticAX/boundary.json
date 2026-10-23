@@ -1,0 +1,42 @@
+[
+  {
+    "app" : "com.apple.finder",
+    "decodedElements" : 8,
+    "enabled" : 0,
+    "goalSatisfied" : false,
+    "matching" : 0,
+    "matchingActions" : [
+
+    ],
+    "matchingRoles" : [
+
+    ],
+    "rawElements" : 8,
+    "selected" : 0,
+    "tools" : [
+      "decision.finish",
+      "decision.askUser",
+      "decision.abstain"
+    ]
+  },
+  {
+    "app" : "com.apple.systempreferences",
+    "decodedElements" : 6,
+    "enabled" : 0,
+    "goalSatisfied" : false,
+    "matching" : 0,
+    "matchingActions" : [
+
+    ],
+    "matchingRoles" : [
+
+    ],
+    "rawElements" : 6,
+    "selected" : 0,
+    "tools" : [
+      "decision.finish",
+      "decision.askUser",
+      "decision.abstain"
+    ]
+  }
+]

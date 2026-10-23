@@ -1,0 +1,249 @@
+{
+  "" : {
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperKit-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperKit-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperKit-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperKit-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperKit-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Audio/AudioChunker.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioChunker.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioChunker.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioChunker.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioChunker.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioChunker.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioChunker.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioChunker.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioChunker~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Audio/AudioProcessor.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioProcessor.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioProcessor.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioProcessor.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioProcessor.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioProcessor.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioProcessor.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioProcessor.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioProcessor~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Audio/AudioStreamTranscriber.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioStreamTranscriber.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioStreamTranscriber.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioStreamTranscriber.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioStreamTranscriber.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioStreamTranscriber.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioStreamTranscriber.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioStreamTranscriber.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioStreamTranscriber~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Audio/EnergyVAD.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/EnergyVAD.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/EnergyVAD.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/EnergyVAD.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/EnergyVAD.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/EnergyVAD.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/EnergyVAD.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/EnergyVAD.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/EnergyVAD~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Audio/VoiceActivityDetector.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/VoiceActivityDetector.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/VoiceActivityDetector.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/VoiceActivityDetector.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/VoiceActivityDetector.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/VoiceActivityDetector.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/VoiceActivityDetector.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/VoiceActivityDetector.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/VoiceActivityDetector~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/AudioEncoder.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioEncoder.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioEncoder.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioEncoder.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioEncoder.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioEncoder.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioEncoder.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioEncoder.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/AudioEncoder~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Configurations.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Configurations.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Configurations.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Configurations.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Configurations.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Configurations.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Configurations.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Configurations.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Configurations~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/FeatureExtractor.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/FeatureExtractor.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/FeatureExtractor.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/FeatureExtractor.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/FeatureExtractor.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/FeatureExtractor.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/FeatureExtractor.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/FeatureExtractor.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/FeatureExtractor~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Models.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Models.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Models.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Models.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Models.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Models.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Models.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Models.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Models~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Text/LogitsFilter.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/LogitsFilter.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/LogitsFilter.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/LogitsFilter.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/LogitsFilter.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/LogitsFilter.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/LogitsFilter.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/LogitsFilter.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/LogitsFilter~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Text/SegmentSeeker.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/SegmentSeeker.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/SegmentSeeker.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/SegmentSeeker.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/SegmentSeeker.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/SegmentSeeker.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/SegmentSeeker.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/SegmentSeeker.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/SegmentSeeker~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Text/TokenSampler.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TokenSampler.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TokenSampler.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TokenSampler.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TokenSampler.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TokenSampler.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TokenSampler.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TokenSampler.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TokenSampler~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/TextDecoder.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TextDecoder.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TextDecoder.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TextDecoder.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TextDecoder.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TextDecoder.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TextDecoder.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TextDecoder.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TextDecoder~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/TranscribeTask.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TranscribeTask.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TranscribeTask.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TranscribeTask.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TranscribeTask.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TranscribeTask.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TranscribeTask.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TranscribeTask.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TranscribeTask~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/WhisperKit.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperKit.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperKit.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperKit.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperKit.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperKit.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperKit.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperKit.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperKit~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/Concurrency.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Concurrency.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Concurrency.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Concurrency.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Concurrency.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Concurrency.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Concurrency.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Concurrency.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Concurrency~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/Extensions+Internal.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Extensions+Internal.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Extensions+Internal.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Extensions+Internal.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Extensions+Internal.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Extensions+Internal.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Extensions+Internal.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Extensions+Internal.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Extensions+Internal~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/Extensions+Public.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Extensions+Public.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Extensions+Public.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Extensions+Public.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Extensions+Public.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Extensions+Public.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Extensions+Public.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Extensions+Public.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Extensions+Public~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/Logging.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Logging.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Logging.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Logging.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Logging.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Logging.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Logging.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Logging.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/Logging~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/ModelUtilities.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/ModelUtilities.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/ModelUtilities.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/ModelUtilities.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/ModelUtilities.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/ModelUtilities.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/ModelUtilities.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/ModelUtilities.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/ModelUtilities~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/ResultWriter.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/ResultWriter.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/ResultWriter.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/ResultWriter.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/ResultWriter.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/ResultWriter.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/ResultWriter.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/ResultWriter.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/ResultWriter~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/TextUtilities.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TextUtilities.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TextUtilities.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TextUtilities.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TextUtilities.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TextUtilities.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TextUtilities.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TextUtilities.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TextUtilities~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/TranscriptionUtilities.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TranscriptionUtilities.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TranscriptionUtilities.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TranscriptionUtilities.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TranscriptionUtilities.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TranscriptionUtilities.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TranscriptionUtilities.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TranscriptionUtilities.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/TranscriptionUtilities~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/WhisperError.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperError.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperError.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperError.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperError.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperError.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperError.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperError.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/WhisperKit.build/Objects-normal/arm64/WhisperError~partial.swiftmodule"
+  }
+}

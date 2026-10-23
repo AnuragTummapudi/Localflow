@@ -1,0 +1,9 @@
+{
+  "source": "Human report in this chat",
+  "scenario": "One continuous Voice Agent session: Open Notes, pause, Open Safari, pause, Open Chrome, pause, Open github.com",
+  "userReport": "All four acted before stopping",
+  "status": "Human-reported live pass",
+  "instrumentedLatency": null,
+  "instrumentedTranscriptExport": null,
+  "limitations": "No fabricated transcript, timing, receipt or automatic browser readback. Separate native harness verifies API effects."
+}

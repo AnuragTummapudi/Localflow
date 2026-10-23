@@ -1,0 +1,68 @@
+{
+  "cases" : [
+    {
+      "elements" : 53,
+      "name" : "observe-com.apple.finder",
+      "result" : "VERIFIED",
+      "truncated" : false,
+      "windows" : 2
+    },
+    {
+      "name" : "finder-downloads",
+      "result" : "failed(\"The target changed. Nothing was overwritten.\")"
+    },
+    {
+      "elements" : 79,
+      "name" : "observe-com.apple.systempreferences",
+      "result" : "VERIFIED",
+      "truncated" : false,
+      "windows" : 1
+    },
+    {
+      "name" : "safe-navigation",
+      "result" : "verified"
+    },
+    {
+      "elements" : 8,
+      "name" : "observe-dev.localflow.ax-test",
+      "result" : "VERIFIED",
+      "truncated" : false,
+      "windows" : 1
+    },
+    {
+      "name" : "ui.focus",
+      "result" : "verified"
+    },
+    {
+      "name" : "stale-after-ui.focus",
+      "rejected" : true
+    },
+    {
+      "name" : "ui.setValue",
+      "result" : "verified"
+    },
+    {
+      "name" : "stale-after-ui.setValue",
+      "rejected" : true
+    },
+    {
+      "name" : "ui.raiseWindow",
+      "result" : "verified"
+    },
+    {
+      "name" : "stale-after-ui.raiseWindow",
+      "rejected" : true
+    },
+    {
+      "name" : "unsupported-action",
+      "rejected" : true
+    },
+    {
+      "applications" : 8,
+      "frontmostIdentified" : true,
+      "name" : "application-enumeration"
+    }
+  ],
+  "trusted" : true,
+  "unrelatedEffects" : 0
+}

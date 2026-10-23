@@ -1,0 +1,1806 @@
+{
+  "states": 64,
+  "decisions": 256,
+  "argmaxAgreements": 256,
+  "agreementRate": 1.0,
+  "maxAbsoluteLogitDifference": 0.03778958320617676,
+  "maxAbsoluteUncalibratedProbabilityDifference": 0.008653032580103082,
+  "acceptableForMeasuredFP16Experiment": true,
+  "checkpointSHA256": "b9a7d21a756740a11fe32d1ad44cba73898f96999b060fe437407a5c87c96e9a",
+  "criterion": "At least 99% argmax agreement and at most .02 uncalibrated probability difference; independent of calibration threshold selection. Does not enable production policies.",
+  "reference": "MPS FP32 and MPS FP16, same saved FP16 weights; arithmetic parity, not restoration of pre-rounding trained FP32 weights. Native CPU parity is separate.",
+  "decisionsDetail": [
+    {
+      "id": "test/negation/0/19/hesitation/2",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004119217395782471,
+      "maxProbabilityDelta": 0.0013125181537060604
+    },
+    {
+      "id": "test/negation/0/19/hesitation/2",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.003928661346435547,
+      "maxProbabilityDelta": 3.2158015816913113e-06
+    },
+    {
+      "id": "test/negation/0/19/hesitation/2",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005049705505371094,
+      "maxProbabilityDelta": 1.9080465897301438e-07
+    },
+    {
+      "id": "test/negation/0/19/hesitation/2",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.013187408447265625,
+      "maxProbabilityDelta": 0.0020802944050465344
+    },
+    {
+      "id": "test/media/1/0/trailing_conjunction/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00209808349609375,
+      "maxProbabilityDelta": 3.2262329582118447e-09
+    },
+    {
+      "id": "test/media/1/0/trailing_conjunction/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0032072067260742188,
+      "maxProbabilityDelta": 5.6933849301721295e-08
+    },
+    {
+      "id": "test/media/1/0/trailing_conjunction/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.003429889678955078,
+      "maxProbabilityDelta": 8.955721209069623e-08
+    },
+    {
+      "id": "test/media/1/0/trailing_conjunction/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.03332260251045227,
+      "maxProbabilityDelta": 4.317631283179413e-05
+    },
+    {
+      "id": "test/quoted/1/10/hesitation/2",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0034716129302978516,
+      "maxProbabilityDelta": 7.072841425836973e-05
+    },
+    {
+      "id": "test/quoted/1/10/hesitation/2",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0030469894409179688,
+      "maxProbabilityDelta": 3.471232758130486e-07
+    },
+    {
+      "id": "test/quoted/1/10/hesitation/2",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0036554336547851562,
+      "maxProbabilityDelta": 2.918861207179546e-07
+    },
+    {
+      "id": "test/quoted/1/10/hesitation/2",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.026988983154296875,
+      "maxProbabilityDelta": 3.1009465618958565e-05
+    },
+    {
+      "id": "test/other/1/3/trailing_conjunction/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.001674652099609375,
+      "maxProbabilityDelta": 3.6187880876253725e-09
+    },
+    {
+      "id": "test/other/1/3/trailing_conjunction/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005096435546875,
+      "maxProbabilityDelta": 5.112861212186459e-08
+    },
+    {
+      "id": "test/other/1/3/trailing_conjunction/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0012111663818359375,
+      "maxProbabilityDelta": 1.7861470037162876e-07
+    },
+    {
+      "id": "test/other/1/3/trailing_conjunction/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.021334350109100342,
+      "maxProbabilityDelta": 0.006049803251773289
+    },
+    {
+      "id": "test/application/1/12/streaming_prefix/6",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0045013427734375,
+      "maxProbabilityDelta": 2.6354983514266887e-08
+    },
+    {
+      "id": "test/application/1/12/streaming_prefix/6",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.03164893388748169,
+      "maxProbabilityDelta": 0.007593394838496581
+    },
+    {
+      "id": "test/application/1/12/streaming_prefix/6",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0022668838500976562,
+      "maxProbabilityDelta": 4.135921047127917e-09
+    },
+    {
+      "id": "test/application/1/12/streaming_prefix/6",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.002597808837890625,
+      "maxProbabilityDelta": 1.298474872784172e-08
+    },
+    {
+      "id": "test/productivity/0/5/incomplete_note/2",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.006844520568847656,
+      "maxProbabilityDelta": 7.656770321238894e-08
+    },
+    {
+      "id": "test/productivity/0/5/incomplete_note/2",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0037894248962402344,
+      "maxProbabilityDelta": 3.2051022954565503e-06
+    },
+    {
+      "id": "test/productivity/0/5/incomplete_note/2",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.001160740852355957,
+      "maxProbabilityDelta": 7.871580554041913e-08
+    },
+    {
+      "id": "test/productivity/0/5/incomplete_note/2",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0029287338256835938,
+      "maxProbabilityDelta": 4.385485929958577e-08
+    },
+    {
+      "id": "test/productivity/2/18/incomplete_note/2",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005279541015625,
+      "maxProbabilityDelta": 1.4069889564929575e-07
+    },
+    {
+      "id": "test/productivity/2/18/incomplete_note/2",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00015401840209960938,
+      "maxProbabilityDelta": 5.858675635302341e-08
+    },
+    {
+      "id": "test/productivity/2/18/incomplete_note/2",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0015759468078613281,
+      "maxProbabilityDelta": 9.018275337613346e-08
+    },
+    {
+      "id": "test/productivity/2/18/incomplete_note/2",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0031876564025878906,
+      "maxProbabilityDelta": 2.577468916076242e-08
+    },
+    {
+      "id": "test/web/2/5/hesitation/3",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00477910041809082,
+      "maxProbabilityDelta": 1.313319601706285e-06
+    },
+    {
+      "id": "test/web/2/5/hesitation/3",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0004901885986328125,
+      "maxProbabilityDelta": 1.5152658139339081e-07
+    },
+    {
+      "id": "test/web/2/5/hesitation/3",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0060176849365234375,
+      "maxProbabilityDelta": 1.6908143807663404e-07
+    },
+    {
+      "id": "test/web/2/5/hesitation/3",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.017074227333068848,
+      "maxProbabilityDelta": 1.5542696363279873e-06
+    },
+    {
+      "id": "test/web/1/10/incomplete_web_query/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0036592483520507812,
+      "maxProbabilityDelta": 2.1039966570031803e-08
+    },
+    {
+      "id": "test/web/1/10/incomplete_web_query/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.011349678039550781,
+      "maxProbabilityDelta": 0.0015274547479442735
+    },
+    {
+      "id": "test/web/1/10/incomplete_web_query/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0017957687377929688,
+      "maxProbabilityDelta": 2.7372056909946707e-07
+    },
+    {
+      "id": "test/web/1/10/incomplete_web_query/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00704503059387207,
+      "maxProbabilityDelta": 1.1043349735118113e-05
+    },
+    {
+      "id": "test/productivity/2/3/incomplete_note/2",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.008362770080566406,
+      "maxProbabilityDelta": 7.89947653526291e-08
+    },
+    {
+      "id": "test/productivity/2/3/incomplete_note/2",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0028486251831054688,
+      "maxProbabilityDelta": 4.798080215362432e-07
+    },
+    {
+      "id": "test/productivity/2/3/incomplete_note/2",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0024394989013671875,
+      "maxProbabilityDelta": 8.206510468785266e-08
+    },
+    {
+      "id": "test/productivity/2/3/incomplete_note/2",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0034761428833007812,
+      "maxProbabilityDelta": 3.446102569970577e-08
+    },
+    {
+      "id": "test/productivity/1/8/repeated_partial/6",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0020890235900878906,
+      "maxProbabilityDelta": 1.5289087906822374e-07
+    },
+    {
+      "id": "test/productivity/1/8/repeated_partial/6",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004239082336425781,
+      "maxProbabilityDelta": 8.582139197965688e-06
+    },
+    {
+      "id": "test/productivity/1/8/repeated_partial/6",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0017862319946289062,
+      "maxProbabilityDelta": 9.302761000566694e-07
+    },
+    {
+      "id": "test/productivity/1/8/repeated_partial/6",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.003238677978515625,
+      "maxProbabilityDelta": 8.722840894037631e-09
+    },
+    {
+      "id": "test/compound/0/17/complete/0",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004738330841064453,
+      "maxProbabilityDelta": 1.8390713063531905e-08
+    },
+    {
+      "id": "test/compound/0/17/complete/0",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005128383636474609,
+      "maxProbabilityDelta": 1.4897995844160867e-05
+    },
+    {
+      "id": "test/compound/0/17/complete/0",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0022783279418945312,
+      "maxProbabilityDelta": 1.7824481624018063e-07
+    },
+    {
+      "id": "test/compound/0/17/complete/0",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.014619946479797363,
+      "maxProbabilityDelta": 0.0007850027514262337
+    },
+    {
+      "id": "test/negation/0/14/hesitation/2",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0025458335876464844,
+      "maxProbabilityDelta": 5.2059831620598906e-05
+    },
+    {
+      "id": "test/negation/0/14/hesitation/2",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0006551742553710938,
+      "maxProbabilityDelta": 3.1091031837959804e-07
+    },
+    {
+      "id": "test/negation/0/14/hesitation/2",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.003368854522705078,
+      "maxProbabilityDelta": 2.15030398408153e-07
+    },
+    {
+      "id": "test/negation/0/14/hesitation/2",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.007848501205444336,
+      "maxProbabilityDelta": 0.0001748239822157993
+    },
+    {
+      "id": "test/compound/0/2/complete/0",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0008840560913085938,
+      "maxProbabilityDelta": 2.935869548282728e-08
+    },
+    {
+      "id": "test/compound/0/2/complete/0",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0024483203887939453,
+      "maxProbabilityDelta": 5.892084444203416e-05
+    },
+    {
+      "id": "test/compound/0/2/complete/0",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0003185272216796875,
+      "maxProbabilityDelta": 3.5512562890360755e-09
+    },
+    {
+      "id": "test/compound/0/2/complete/0",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.03778958320617676,
+      "maxProbabilityDelta": 0.007585787488952334
+    },
+    {
+      "id": "test/ambiguous/0/4/trailing_conjunction/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004220008850097656,
+      "maxProbabilityDelta": 3.152547445317566e-09
+    },
+    {
+      "id": "test/ambiguous/0/4/trailing_conjunction/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.003863811492919922,
+      "maxProbabilityDelta": 2.8616710223694497e-08
+    },
+    {
+      "id": "test/ambiguous/0/4/trailing_conjunction/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0034995079040527344,
+      "maxProbabilityDelta": 8.430249309743232e-08
+    },
+    {
+      "id": "test/ambiguous/0/4/trailing_conjunction/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.008872509002685547,
+      "maxProbabilityDelta": 0.0004694557896860463
+    },
+    {
+      "id": "test/web/2/3/incomplete_web_query/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004291534423828125,
+      "maxProbabilityDelta": 2.399100691482257e-08
+    },
+    {
+      "id": "test/web/2/3/incomplete_web_query/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.003810882568359375,
+      "maxProbabilityDelta": 0.0006780823966821004
+    },
+    {
+      "id": "test/web/2/3/incomplete_web_query/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00394439697265625,
+      "maxProbabilityDelta": 8.31024279413379e-08
+    },
+    {
+      "id": "test/web/2/3/incomplete_web_query/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.010475844144821167,
+      "maxProbabilityDelta": 5.503185699362589e-06
+    },
+    {
+      "id": "test/application/0/9/streaming_prefix/6",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0021076202392578125,
+      "maxProbabilityDelta": 2.2989493557375985e-08
+    },
+    {
+      "id": "test/application/0/9/streaming_prefix/6",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.030400395393371582,
+      "maxProbabilityDelta": 0.00714113803640648
+    },
+    {
+      "id": "test/application/0/9/streaming_prefix/6",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0016655921936035156,
+      "maxProbabilityDelta": 4.361567228756513e-07
+    },
+    {
+      "id": "test/application/0/9/streaming_prefix/6",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004456043243408203,
+      "maxProbabilityDelta": 1.2372595947773846e-07
+    },
+    {
+      "id": "test/productivity/0/8/repeated_partial/6",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.002903461456298828,
+      "maxProbabilityDelta": 1.4723177002451556e-07
+    },
+    {
+      "id": "test/productivity/0/8/repeated_partial/6",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.006960391998291016,
+      "maxProbabilityDelta": 9.733810203701228e-05
+    },
+    {
+      "id": "test/productivity/0/8/repeated_partial/6",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.002410411834716797,
+      "maxProbabilityDelta": 7.406507526175332e-07
+    },
+    {
+      "id": "test/productivity/0/8/repeated_partial/6",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005199432373046875,
+      "maxProbabilityDelta": 1.8204612928229835e-08
+    },
+    {
+      "id": "test/productivity/2/10/incomplete_reminder/3",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.006259441375732422,
+      "maxProbabilityDelta": 4.1481337365034676e-08
+    },
+    {
+      "id": "test/productivity/2/10/incomplete_reminder/3",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0006496906280517578,
+      "maxProbabilityDelta": 3.9892083359620127e-07
+    },
+    {
+      "id": "test/productivity/2/10/incomplete_reminder/3",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0011196136474609375,
+      "maxProbabilityDelta": 2.8161675280635734e-07
+    },
+    {
+      "id": "test/productivity/2/10/incomplete_reminder/3",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005190372467041016,
+      "maxProbabilityDelta": 2.158067913260453e-08
+    },
+    {
+      "id": "test/dictation/0/17/complete/0",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.008901596069335938,
+      "maxProbabilityDelta": 1.9917154094883927e-06
+    },
+    {
+      "id": "test/dictation/0/17/complete/0",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.002223968505859375,
+      "maxProbabilityDelta": 8.184157995749786e-07
+    },
+    {
+      "id": "test/dictation/0/17/complete/0",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.002566814422607422,
+      "maxProbabilityDelta": 3.4605886833904975e-07
+    },
+    {
+      "id": "test/dictation/0/17/complete/0",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.006604671478271484,
+      "maxProbabilityDelta": 7.729329076777702e-08
+    },
+    {
+      "id": "test/web/2/1/incomplete_web_query/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.003142833709716797,
+      "maxProbabilityDelta": 5.214266796116362e-10
+    },
+    {
+      "id": "test/web/2/1/incomplete_web_query/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.008179664611816406,
+      "maxProbabilityDelta": 1.9707427880811545e-07
+    },
+    {
+      "id": "test/web/2/1/incomplete_web_query/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0013011693954467773,
+      "maxProbabilityDelta": 1.7666385064392322e-07
+    },
+    {
+      "id": "test/web/2/1/incomplete_web_query/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.012553691864013672,
+      "maxProbabilityDelta": 2.083678924163666e-05
+    },
+    {
+      "id": "test/correction/1/5/partial_correction/3",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.006775856018066406,
+      "maxProbabilityDelta": 4.578417582834504e-07
+    },
+    {
+      "id": "test/correction/1/5/partial_correction/3",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.003307342529296875,
+      "maxProbabilityDelta": 9.675348244364557e-06
+    },
+    {
+      "id": "test/correction/1/5/partial_correction/3",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0014939308166503906,
+      "maxProbabilityDelta": 1.900328384860366e-07
+    },
+    {
+      "id": "test/correction/1/5/partial_correction/3",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.025986850261688232,
+      "maxProbabilityDelta": 1.5074236872636426e-05
+    },
+    {
+      "id": "test/compound/0/14/compound_prefix/3",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.002269744873046875,
+      "maxProbabilityDelta": 2.426144326550528e-07
+    },
+    {
+      "id": "test/compound/0/14/compound_prefix/3",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0073506832122802734,
+      "maxProbabilityDelta": 0.0007754431868181727
+    },
+    {
+      "id": "test/compound/0/14/compound_prefix/3",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.001636505126953125,
+      "maxProbabilityDelta": 8.000810669539504e-08
+    },
+    {
+      "id": "test/compound/0/14/compound_prefix/3",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.007140159606933594,
+      "maxProbabilityDelta": 7.259886641852731e-07
+    },
+    {
+      "id": "test/application/0/0/hesitation/7",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.006363868713378906,
+      "maxProbabilityDelta": 1.6298080252052927e-07
+    },
+    {
+      "id": "test/application/0/0/hesitation/7",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004888057708740234,
+      "maxProbabilityDelta": 0.00021233290754940626
+    },
+    {
+      "id": "test/application/0/0/hesitation/7",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0029282569885253906,
+      "maxProbabilityDelta": 2.5797288499609656e-07
+    },
+    {
+      "id": "test/application/0/0/hesitation/7",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005036354064941406,
+      "maxProbabilityDelta": 3.155083513339818e-06
+    },
+    {
+      "id": "test/productivity/0/16/hesitation/5",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0008778572082519531,
+      "maxProbabilityDelta": 7.76541514979634e-07
+    },
+    {
+      "id": "test/productivity/0/16/hesitation/5",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0012122392654418945,
+      "maxProbabilityDelta": 5.815901291832451e-07
+    },
+    {
+      "id": "test/productivity/0/16/hesitation/5",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005745887756347656,
+      "maxProbabilityDelta": 1.175700485463513e-06
+    },
+    {
+      "id": "test/productivity/0/16/hesitation/5",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.002887725830078125,
+      "maxProbabilityDelta": 2.1141344341835122e-08
+    },
+    {
+      "id": "test/compound/1/3/new_command_after_pause/6",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005927085876464844,
+      "maxProbabilityDelta": 1.2056183240376141e-06
+    },
+    {
+      "id": "test/compound/1/3/new_command_after_pause/6",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004734039306640625,
+      "maxProbabilityDelta": 5.26079390528178e-05
+    },
+    {
+      "id": "test/compound/1/3/new_command_after_pause/6",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00173187255859375,
+      "maxProbabilityDelta": 3.5167968981397735e-08
+    },
+    {
+      "id": "test/compound/1/3/new_command_after_pause/6",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.003283977508544922,
+      "maxProbabilityDelta": 2.750510166293907e-07
+    },
+    {
+      "id": "test/correction/0/8/complete/0",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.010577201843261719,
+      "maxProbabilityDelta": 5.795726728541339e-06
+    },
+    {
+      "id": "test/correction/0/8/complete/0",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.002845287322998047,
+      "maxProbabilityDelta": 4.649870253281563e-07
+    },
+    {
+      "id": "test/correction/0/8/complete/0",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0023012161254882812,
+      "maxProbabilityDelta": 8.92748620584527e-08
+    },
+    {
+      "id": "test/correction/0/8/complete/0",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.008264303207397461,
+      "maxProbabilityDelta": 8.759987449868945e-07
+    },
+    {
+      "id": "test/hypothetical/0/14/complete/0",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005068778991699219,
+      "maxProbabilityDelta": 1.0006297991527191e-05
+    },
+    {
+      "id": "test/hypothetical/0/14/complete/0",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0025987625122070312,
+      "maxProbabilityDelta": 1.5595185540728806e-06
+    },
+    {
+      "id": "test/hypothetical/0/14/complete/0",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0024728775024414062,
+      "maxProbabilityDelta": 1.0496447810925957e-07
+    },
+    {
+      "id": "test/hypothetical/0/14/complete/0",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.017640113830566406,
+      "maxProbabilityDelta": 0.0025749030302744114
+    },
+    {
+      "id": "test/text_file/0/6/complete/0",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.007315635681152344,
+      "maxProbabilityDelta": 2.049617241929965e-06
+    },
+    {
+      "id": "test/text_file/0/6/complete/0",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0037688016891479492,
+      "maxProbabilityDelta": 2.642352211312815e-05
+    },
+    {
+      "id": "test/text_file/0/6/complete/0",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0064849853515625,
+      "maxProbabilityDelta": 2.0834391193259844e-07
+    },
+    {
+      "id": "test/text_file/0/6/complete/0",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004757881164550781,
+      "maxProbabilityDelta": 6.972840860264284e-09
+    },
+    {
+      "id": "test/correction/1/9/partial_correction/3",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.006731986999511719,
+      "maxProbabilityDelta": 5.061556434306981e-07
+    },
+    {
+      "id": "test/correction/1/9/partial_correction/3",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0008880198001861572,
+      "maxProbabilityDelta": 2.9442629315293636e-06
+    },
+    {
+      "id": "test/correction/1/9/partial_correction/3",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0035605430603027344,
+      "maxProbabilityDelta": 2.5010627320298795e-06
+    },
+    {
+      "id": "test/correction/1/9/partial_correction/3",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.007611274719238281,
+      "maxProbabilityDelta": 2.999370440878462e-08
+    },
+    {
+      "id": "test/media/1/15/complete/0",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.008865833282470703,
+      "maxProbabilityDelta": 8.081264928350151e-06
+    },
+    {
+      "id": "test/media/1/15/complete/0",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.002808094024658203,
+      "maxProbabilityDelta": 2.279237780904858e-05
+    },
+    {
+      "id": "test/media/1/15/complete/0",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0010528564453125,
+      "maxProbabilityDelta": 9.522649284729586e-08
+    },
+    {
+      "id": "test/media/1/15/complete/0",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004797220230102539,
+      "maxProbabilityDelta": 5.2115183494529614e-08
+    },
+    {
+      "id": "test/compound/0/10/compound_prefix/3",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004937410354614258,
+      "maxProbabilityDelta": 2.5220889676713654e-07
+    },
+    {
+      "id": "test/compound/0/10/compound_prefix/3",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0011653751134872437,
+      "maxProbabilityDelta": 1.578835365667608e-06
+    },
+    {
+      "id": "test/compound/0/10/compound_prefix/3",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0032415390014648438,
+      "maxProbabilityDelta": 1.9100550296968777e-07
+    },
+    {
+      "id": "test/compound/0/10/compound_prefix/3",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.003435850143432617,
+      "maxProbabilityDelta": 6.65355729512207e-07
+    },
+    {
+      "id": "test/compound/0/12/new_command_after_pause/6",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.009218215942382812,
+      "maxProbabilityDelta": 2.9541849947053447e-07
+    },
+    {
+      "id": "test/compound/0/12/new_command_after_pause/6",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005871295928955078,
+      "maxProbabilityDelta": 8.803773783986127e-05
+    },
+    {
+      "id": "test/compound/0/12/new_command_after_pause/6",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00552012026309967,
+      "maxProbabilityDelta": 2.9756832343463824e-06
+    },
+    {
+      "id": "test/compound/0/12/new_command_after_pause/6",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.01320260763168335,
+      "maxProbabilityDelta": 0.0002546275476620341
+    },
+    {
+      "id": "test/web/1/0/initial_prefix/2",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.001712799072265625,
+      "maxProbabilityDelta": 2.1470618420848977e-07
+    },
+    {
+      "id": "test/web/1/0/initial_prefix/2",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0008964240550994873,
+      "maxProbabilityDelta": 1.3958344022351951e-06
+    },
+    {
+      "id": "test/web/1/0/initial_prefix/2",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0015101432800292969,
+      "maxProbabilityDelta": 4.801287944999899e-08
+    },
+    {
+      "id": "test/web/1/0/initial_prefix/2",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.007781982421875,
+      "maxProbabilityDelta": 8.436119806609632e-05
+    },
+    {
+      "id": "test/compound/0/10/trailing_conjunction/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005328178405761719,
+      "maxProbabilityDelta": 9.555691376185517e-10
+    },
+    {
+      "id": "test/compound/0/10/trailing_conjunction/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.008861064910888672,
+      "maxProbabilityDelta": 2.4616598537363643e-08
+    },
+    {
+      "id": "test/compound/0/10/trailing_conjunction/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00487518310546875,
+      "maxProbabilityDelta": 2.36506080821878e-07
+    },
+    {
+      "id": "test/compound/0/10/trailing_conjunction/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.015904903411865234,
+      "maxProbabilityDelta": 1.3331742659781218e-05
+    },
+    {
+      "id": "test/application/1/4/partial_application/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0011320114135742188,
+      "maxProbabilityDelta": 5.867968333461704e-09
+    },
+    {
+      "id": "test/application/1/4/partial_application/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0012054443359375,
+      "maxProbabilityDelta": 4.9691083619310406e-06
+    },
+    {
+      "id": "test/application/1/4/partial_application/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0033512115478515625,
+      "maxProbabilityDelta": 6.364767091149304e-08
+    },
+    {
+      "id": "test/application/1/4/partial_application/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00217437744140625,
+      "maxProbabilityDelta": 3.1832005586984735e-08
+    },
+    {
+      "id": "test/correction/1/4/complete/0",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00023555755615234375,
+      "maxProbabilityDelta": 4.658588070860503e-08
+    },
+    {
+      "id": "test/correction/1/4/complete/0",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00116729736328125,
+      "maxProbabilityDelta": 9.523034423253307e-07
+    },
+    {
+      "id": "test/correction/1/4/complete/0",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.001678466796875,
+      "maxProbabilityDelta": 6.30677011725922e-08
+    },
+    {
+      "id": "test/correction/1/4/complete/0",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.011490583419799805,
+      "maxProbabilityDelta": 4.576066192418793e-06
+    },
+    {
+      "id": "test/negation/1/6/complete/0",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00748857855796814,
+      "maxProbabilityDelta": 0.002342283709423576
+    },
+    {
+      "id": "test/negation/1/6/complete/0",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00016379356384277344,
+      "maxProbabilityDelta": 2.9668222290002433e-07
+    },
+    {
+      "id": "test/negation/1/6/complete/0",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0022020339965820312,
+      "maxProbabilityDelta": 2.4172043033843238e-08
+    },
+    {
+      "id": "test/negation/1/6/complete/0",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.021247148513793945,
+      "maxProbabilityDelta": 0.005096340925658305
+    },
+    {
+      "id": "test/media/0/17/trailing_conjunction/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.003742694854736328,
+      "maxProbabilityDelta": 8.533282895176849e-09
+    },
+    {
+      "id": "test/media/0/17/trailing_conjunction/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004553794860839844,
+      "maxProbabilityDelta": 5.5068189563911574e-08
+    },
+    {
+      "id": "test/media/0/17/trailing_conjunction/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0023651123046875,
+      "maxProbabilityDelta": 2.5119991120536866e-07
+    },
+    {
+      "id": "test/media/0/17/trailing_conjunction/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.015244007110595703,
+      "maxProbabilityDelta": 2.0626917356381114e-06
+    },
+    {
+      "id": "test/dictation/2/1/hesitation/2",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005131244659423828,
+      "maxProbabilityDelta": 1.5644027641270906e-07
+    },
+    {
+      "id": "test/dictation/2/1/hesitation/2",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0009746551513671875,
+      "maxProbabilityDelta": 4.016934848551784e-09
+    },
+    {
+      "id": "test/dictation/2/1/hesitation/2",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0004563331604003906,
+      "maxProbabilityDelta": 4.4219829172811e-08
+    },
+    {
+      "id": "test/dictation/2/1/hesitation/2",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.003086090087890625,
+      "maxProbabilityDelta": 1.8448863103870394e-08
+    },
+    {
+      "id": "test/compound/1/5/hesitation/2",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0036058425903320312,
+      "maxProbabilityDelta": 5.648481815612172e-08
+    },
+    {
+      "id": "test/compound/1/5/hesitation/2",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0013427734375,
+      "maxProbabilityDelta": 1.3012883530356695e-06
+    },
+    {
+      "id": "test/compound/1/5/hesitation/2",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0027532577514648438,
+      "maxProbabilityDelta": 2.3662343008965935e-07
+    },
+    {
+      "id": "test/compound/1/5/hesitation/2",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0032029151916503906,
+      "maxProbabilityDelta": 1.8766313325535577e-07
+    },
+    {
+      "id": "test/web/0/1/hesitation/3",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.006611347198486328,
+      "maxProbabilityDelta": 1.767122966961468e-08
+    },
+    {
+      "id": "test/web/0/1/hesitation/3",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.019676566123962402,
+      "maxProbabilityDelta": 0.004406091624487463
+    },
+    {
+      "id": "test/web/0/1/hesitation/3",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0022253990173339844,
+      "maxProbabilityDelta": 3.519751916591929e-07
+    },
+    {
+      "id": "test/web/0/1/hesitation/3",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.007931709289550781,
+      "maxProbabilityDelta": 1.570559882146938e-08
+    },
+    {
+      "id": "test/web/0/13/incomplete_web_query/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0030364990234375,
+      "maxProbabilityDelta": 3.573451534677474e-10
+    },
+    {
+      "id": "test/web/0/13/incomplete_web_query/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0028181076049804688,
+      "maxProbabilityDelta": 3.674516061608298e-08
+    },
+    {
+      "id": "test/web/0/13/incomplete_web_query/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0013043880462646484,
+      "maxProbabilityDelta": 1.1336377740803509e-08
+    },
+    {
+      "id": "test/web/0/13/incomplete_web_query/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004403114318847656,
+      "maxProbabilityDelta": 9.255739619185022e-09
+    },
+    {
+      "id": "test/system/1/6/trailing_conjunction/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0022978782653808594,
+      "maxProbabilityDelta": 2.2627464346669512e-09
+    },
+    {
+      "id": "test/system/1/6/trailing_conjunction/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0026650428771972656,
+      "maxProbabilityDelta": 1.1826324586294845e-08
+    },
+    {
+      "id": "test/system/1/6/trailing_conjunction/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0021467208862304688,
+      "maxProbabilityDelta": 1.4955166416363852e-07
+    },
+    {
+      "id": "test/system/1/6/trailing_conjunction/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.010147571563720703,
+      "maxProbabilityDelta": 3.763690781255491e-08
+    },
+    {
+      "id": "test/other/1/13/trailing_conjunction/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00115203857421875,
+      "maxProbabilityDelta": 2.2196467026102984e-09
+    },
+    {
+      "id": "test/other/1/13/trailing_conjunction/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0019297599792480469,
+      "maxProbabilityDelta": 8.859365907554206e-09
+    },
+    {
+      "id": "test/other/1/13/trailing_conjunction/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0013599395751953125,
+      "maxProbabilityDelta": 7.063989408782195e-08
+    },
+    {
+      "id": "test/other/1/13/trailing_conjunction/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005251407623291016,
+      "maxProbabilityDelta": 1.5376448625481487e-06
+    },
+    {
+      "id": "test/application/0/11/hesitation/7",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.008974552154541016,
+      "maxProbabilityDelta": 9.364373012576976e-07
+    },
+    {
+      "id": "test/application/0/11/hesitation/7",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0030536651611328125,
+      "maxProbabilityDelta": 5.53430909655539e-06
+    },
+    {
+      "id": "test/application/0/11/hesitation/7",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0003027915954589844,
+      "maxProbabilityDelta": 2.5165065440036155e-08
+    },
+    {
+      "id": "test/application/0/11/hesitation/7",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0038270950317382812,
+      "maxProbabilityDelta": 5.1970573955451016e-08
+    },
+    {
+      "id": "test/system/1/7/trailing_conjunction/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0022554397583007812,
+      "maxProbabilityDelta": 2.6534198281045156e-09
+    },
+    {
+      "id": "test/system/1/7/trailing_conjunction/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0033550262451171875,
+      "maxProbabilityDelta": 2.1867351374105226e-08
+    },
+    {
+      "id": "test/system/1/7/trailing_conjunction/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0016169548034667969,
+      "maxProbabilityDelta": 2.2205428084118685e-07
+    },
+    {
+      "id": "test/system/1/7/trailing_conjunction/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004019737243652344,
+      "maxProbabilityDelta": 6.334649444117222e-09
+    },
+    {
+      "id": "test/ambiguous/1/15/complete/0",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0036835670471191406,
+      "maxProbabilityDelta": 8.151980009918347e-07
+    },
+    {
+      "id": "test/ambiguous/1/15/complete/0",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.007761478424072266,
+      "maxProbabilityDelta": 3.420195726647115e-05
+    },
+    {
+      "id": "test/ambiguous/1/15/complete/0",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0017124414443969727,
+      "maxProbabilityDelta": 1.2769679216262375e-06
+    },
+    {
+      "id": "test/ambiguous/1/15/complete/0",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.013460278511047363,
+      "maxProbabilityDelta": 0.005192423332550378
+    },
+    {
+      "id": "test/corrupt/1/12/hesitation/2",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.002823352813720703,
+      "maxProbabilityDelta": 3.189876578191253e-05
+    },
+    {
+      "id": "test/corrupt/1/12/hesitation/2",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.006070137023925781,
+      "maxProbabilityDelta": 1.510871583075736e-06
+    },
+    {
+      "id": "test/corrupt/1/12/hesitation/2",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0006806850433349609,
+      "maxProbabilityDelta": 1.3840113055607617e-08
+    },
+    {
+      "id": "test/corrupt/1/12/hesitation/2",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0097808837890625,
+      "maxProbabilityDelta": 0.0003368758998945065
+    },
+    {
+      "id": "test/negation/0/16/complete/0",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0012545585632324219,
+      "maxProbabilityDelta": 7.376644804448634e-05
+    },
+    {
+      "id": "test/negation/0/16/complete/0",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0017428398132324219,
+      "maxProbabilityDelta": 5.4442612046363276e-06
+    },
+    {
+      "id": "test/negation/0/16/complete/0",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.000972747802734375,
+      "maxProbabilityDelta": 8.61113259587043e-08
+    },
+    {
+      "id": "test/negation/0/16/complete/0",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.009539961814880371,
+      "maxProbabilityDelta": 0.0001717204302085218
+    },
+    {
+      "id": "test/media/1/14/complete/0",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.002220630645751953,
+      "maxProbabilityDelta": 1.59700574451705e-07
+    },
+    {
+      "id": "test/media/1/14/complete/0",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.001427292823791504,
+      "maxProbabilityDelta": 1.8525336520358593e-06
+    },
+    {
+      "id": "test/media/1/14/complete/0",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0025072097778320312,
+      "maxProbabilityDelta": 1.7641168445166523e-08
+    },
+    {
+      "id": "test/media/1/14/complete/0",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.033327847719192505,
+      "maxProbabilityDelta": 6.3870094642037856e-06
+    },
+    {
+      "id": "test/correction/0/15/partial_correction/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004984855651855469,
+      "maxProbabilityDelta": 6.341324221281752e-08
+    },
+    {
+      "id": "test/correction/0/15/partial_correction/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.008326053619384766,
+      "maxProbabilityDelta": 6.301355485931626e-05
+    },
+    {
+      "id": "test/correction/0/15/partial_correction/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.002753734588623047,
+      "maxProbabilityDelta": 1.634035469155748e-07
+    },
+    {
+      "id": "test/correction/0/15/partial_correction/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0017924308776855469,
+      "maxProbabilityDelta": 5.1721888216782475e-08
+    },
+    {
+      "id": "test/system/0/4/trailing_conjunction/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0028548240661621094,
+      "maxProbabilityDelta": 6.599868454312279e-09
+    },
+    {
+      "id": "test/system/0/4/trailing_conjunction/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.002962350845336914,
+      "maxProbabilityDelta": 1.20856600283048e-07
+    },
+    {
+      "id": "test/system/0/4/trailing_conjunction/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.002569913864135742,
+      "maxProbabilityDelta": 8.378745914723156e-08
+    },
+    {
+      "id": "test/system/0/4/trailing_conjunction/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004535675048828125,
+      "maxProbabilityDelta": 6.860799739438761e-08
+    },
+    {
+      "id": "test/productivity/1/14/hesitation/5",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0018224716186523438,
+      "maxProbabilityDelta": 2.190584047490063e-09
+    },
+    {
+      "id": "test/productivity/1/14/hesitation/5",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0018157958984375,
+      "maxProbabilityDelta": 1.0152615167848336e-06
+    },
+    {
+      "id": "test/productivity/1/14/hesitation/5",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0010046958923339844,
+      "maxProbabilityDelta": 1.5823707111284335e-07
+    },
+    {
+      "id": "test/productivity/1/14/hesitation/5",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.003973960876464844,
+      "maxProbabilityDelta": 6.270402974628553e-09
+    },
+    {
+      "id": "test/correction/0/12/partial_correction/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0030536651611328125,
+      "maxProbabilityDelta": 9.477180151762354e-09
+    },
+    {
+      "id": "test/correction/0/12/partial_correction/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0036978721618652344,
+      "maxProbabilityDelta": 7.117906590014601e-07
+    },
+    {
+      "id": "test/correction/0/12/partial_correction/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0006237030029296875,
+      "maxProbabilityDelta": 1.1226614529672081e-07
+    },
+    {
+      "id": "test/correction/0/12/partial_correction/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0035419464111328125,
+      "maxProbabilityDelta": 2.316527101105374e-08
+    },
+    {
+      "id": "test/other/1/0/complete/0",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.007052421569824219,
+      "maxProbabilityDelta": 3.92705700744192e-05
+    },
+    {
+      "id": "test/other/1/0/complete/0",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.002512812614440918,
+      "maxProbabilityDelta": 1.046548089300714e-07
+    },
+    {
+      "id": "test/other/1/0/complete/0",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0039196014404296875,
+      "maxProbabilityDelta": 2.9327696604575237e-08
+    },
+    {
+      "id": "test/other/1/0/complete/0",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0022487640380859375,
+      "maxProbabilityDelta": 1.511817504740165e-06
+    },
+    {
+      "id": "test/correction/0/3/complete/0",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0009350776672363281,
+      "maxProbabilityDelta": 3.0974139719752714e-07
+    },
+    {
+      "id": "test/correction/0/3/complete/0",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00301361083984375,
+      "maxProbabilityDelta": 1.6694686310400478e-06
+    },
+    {
+      "id": "test/correction/0/3/complete/0",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005161285400390625,
+      "maxProbabilityDelta": 1.6168481487000008e-07
+    },
+    {
+      "id": "test/correction/0/3/complete/0",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0040912628173828125,
+      "maxProbabilityDelta": 1.2848204077320347e-06
+    },
+    {
+      "id": "test/web/1/13/complete/0",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0008611679077148438,
+      "maxProbabilityDelta": 1.653027894565895e-07
+    },
+    {
+      "id": "test/web/1/13/complete/0",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0012090206146240234,
+      "maxProbabilityDelta": 4.4774065677266606e-08
+    },
+    {
+      "id": "test/web/1/13/complete/0",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0010089874267578125,
+      "maxProbabilityDelta": 1.1941183486463558e-08
+    },
+    {
+      "id": "test/web/1/13/complete/0",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.006798267364501953,
+      "maxProbabilityDelta": 0.0010498933345151062
+    },
+    {
+      "id": "test/hypothetical/0/9/dictation_prefix/1",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.014060020446777344,
+      "maxProbabilityDelta": 9.43005297642241e-05
+    },
+    {
+      "id": "test/hypothetical/0/9/dictation_prefix/1",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0044879913330078125,
+      "maxProbabilityDelta": 1.7564033056860495e-06
+    },
+    {
+      "id": "test/hypothetical/0/9/dictation_prefix/1",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0023441314697265625,
+      "maxProbabilityDelta": 1.4355863264814417e-07
+    },
+    {
+      "id": "test/hypothetical/0/9/dictation_prefix/1",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004886627197265625,
+      "maxProbabilityDelta": 0.0002653355777605948
+    },
+    {
+      "id": "test/compound/0/6/compound_prefix/4",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.009197235107421875,
+      "maxProbabilityDelta": 9.370123885351454e-08
+    },
+    {
+      "id": "test/compound/0/6/compound_prefix/4",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0013005733489990234,
+      "maxProbabilityDelta": 3.963414481138704e-06
+    },
+    {
+      "id": "test/compound/0/6/compound_prefix/4",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004910945892333984,
+      "maxProbabilityDelta": 1.2314775148934871e-06
+    },
+    {
+      "id": "test/compound/0/6/compound_prefix/4",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.007069110870361328,
+      "maxProbabilityDelta": 0.0007338609805887519
+    },
+    {
+      "id": "test/hypothetical/0/1/complete/0",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004962921142578125,
+      "maxProbabilityDelta": 7.773733238851616e-07
+    },
+    {
+      "id": "test/hypothetical/0/1/complete/0",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005246162414550781,
+      "maxProbabilityDelta": 5.45958384179368e-06
+    },
+    {
+      "id": "test/hypothetical/0/1/complete/0",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0037212371826171875,
+      "maxProbabilityDelta": 3.054778102021754e-07
+    },
+    {
+      "id": "test/hypothetical/0/1/complete/0",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004834651947021484,
+      "maxProbabilityDelta": 0.0015882569442888794
+    },
+    {
+      "id": "test/compound/0/5/compound_prefix/4",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.002849102020263672,
+      "maxProbabilityDelta": 1.5366427019714024e-08
+    },
+    {
+      "id": "test/compound/0/5/compound_prefix/4",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.006334781646728516,
+      "maxProbabilityDelta": 4.697119642094183e-05
+    },
+    {
+      "id": "test/compound/0/5/compound_prefix/4",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0008552074432373047,
+      "maxProbabilityDelta": 6.844617062018443e-08
+    },
+    {
+      "id": "test/compound/0/5/compound_prefix/4",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0075397491455078125,
+      "maxProbabilityDelta": 0.0005203349021977166
+    },
+    {
+      "id": "test/ambiguous/1/4/hesitation/2",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.003510713577270508,
+      "maxProbabilityDelta": 7.715017327214468e-07
+    },
+    {
+      "id": "test/ambiguous/1/4/hesitation/2",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0031080245971679688,
+      "maxProbabilityDelta": 2.47381315656586e-06
+    },
+    {
+      "id": "test/ambiguous/1/4/hesitation/2",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.004010200500488281,
+      "maxProbabilityDelta": 1.0536347239131771e-07
+    },
+    {
+      "id": "test/ambiguous/1/4/hesitation/2",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.027718544006347656,
+      "maxProbabilityDelta": 0.008653032580103082
+    },
+    {
+      "id": "test/corrupt/0/5/hesitation/2",
+      "question": "actionable_command",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00879049301147461,
+      "maxProbabilityDelta": 1.8742339302768585e-07
+    },
+    {
+      "id": "test/corrupt/0/5/hesitation/2",
+      "question": "needs_more_speech",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.0006115436553955078,
+      "maxProbabilityDelta": 1.0071584892745733e-06
+    },
+    {
+      "id": "test/corrupt/0/5/hesitation/2",
+      "question": "correction_or_replacement",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.005085945129394531,
+      "maxProbabilityDelta": 9.187387198509222e-08
+    },
+    {
+      "id": "test/corrupt/0/5/hesitation/2",
+      "question": "coarse_family",
+      "argmaxAgreement": true,
+      "maxLogitDelta": 0.00974130630493164,
+      "maxProbabilityDelta": 1.1299337609682603e-05
+    }
+  ]
+}

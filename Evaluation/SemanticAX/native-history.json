@@ -1,0 +1,14 @@
+{
+  "historicalVerifiedRun": {
+    "test": "testRealSafeAccessibilityOptIn",
+    "timestamp": "2026-10-05 19:16:21 local",
+    "source": "captured native test tool output",
+    "finderDownloads": "VERIFIED",
+    "systemSettingsAccessibility": "VERIFIED",
+    "ownedFieldFocus": "VERIFIED",
+    "ownedHarmlessTextReadback": "VERIFIED",
+    "ownedWindowRaise": "VERIFIED"
+  },
+  "latestNativeRun": "real.json",
+  "note": "Later Finder captures failed closed as stale; headless follow-up captures omitted the requested sidebar targets. Preserve the successes and failures separately."
+}

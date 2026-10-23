@@ -1,0 +1,139 @@
+{
+  "" : {
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/ArgmaxCoreError.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCoreError.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCoreError.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCoreError.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCoreError.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCoreError.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCoreError.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCoreError.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCoreError~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/ConcurrencyUtilities.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ConcurrencyUtilities.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ConcurrencyUtilities.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ConcurrencyUtilities.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ConcurrencyUtilities.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ConcurrencyUtilities.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ConcurrencyUtilities.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ConcurrencyUtilities.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ConcurrencyUtilities~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/FloatType.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/FloatType.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/FloatType.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/FloatType.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/FloatType.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/FloatType.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/FloatType.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/FloatType.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/FloatType~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/FoundationExtensions.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/FoundationExtensions.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/FoundationExtensions.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/FoundationExtensions.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/FoundationExtensions.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/FoundationExtensions.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/FoundationExtensions.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/FoundationExtensions.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/FoundationExtensions~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/Logging.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/Logging.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/Logging.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/Logging.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/Logging.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/Logging.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/Logging.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/Logging.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/Logging~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/MLModelExtensions.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLModelExtensions.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLModelExtensions.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLModelExtensions.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLModelExtensions.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLModelExtensions.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLModelExtensions.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLModelExtensions.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLModelExtensions~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/MLModelLoading.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLModelLoading.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLModelLoading.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLModelLoading.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLModelLoading.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLModelLoading.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLModelLoading.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLModelLoading.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLModelLoading~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/MLMultiArrayExtensions.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLMultiArrayExtensions.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLMultiArrayExtensions.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLMultiArrayExtensions.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLMultiArrayExtensions.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLMultiArrayExtensions.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLMultiArrayExtensions.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLMultiArrayExtensions.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLMultiArrayExtensions~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/MLTensorExtensions.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLTensorExtensions.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLTensorExtensions.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLTensorExtensions.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLTensorExtensions.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLTensorExtensions.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLTensorExtensions.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLTensorExtensions.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/MLTensorExtensions~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/ModelDownloader.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelDownloader.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelDownloader.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelDownloader.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelDownloader.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelDownloader.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelDownloader.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelDownloader.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelDownloader~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/ModelManager.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelManager.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelManager.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelManager.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelManager.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelManager.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelManager.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelManager.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelManager~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/ModelState.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelState.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelState.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelState.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelState.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelState.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelState.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelState.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelState~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/ModelUtilities.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.dia",
+    "index-unit-output-path" : "/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/whisperkit.build/Debug/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities~partial.swiftmodule"
+  }
+}

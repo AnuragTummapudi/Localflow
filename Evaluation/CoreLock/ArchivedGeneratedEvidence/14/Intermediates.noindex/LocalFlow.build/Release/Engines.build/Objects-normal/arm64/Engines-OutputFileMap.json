@@ -1,0 +1,41 @@
+{
+  "" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/Engines-primary.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/Engines-primary.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/Engines-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/Engines-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/Engines-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/Engines-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/Engines-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Engines/AppleSpeechEngine/AppleSpeechEngine.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/AppleSpeechEngine.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/AppleSpeechEngine.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/AppleSpeechEngine.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Engines/CascadingSTTEngine.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/CascadingSTTEngine.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/CascadingSTTEngine.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/CascadingSTTEngine.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Engines/ParakeetEngine/ParakeetEngine.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/ParakeetEngine.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/ParakeetEngine.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/ParakeetEngine.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Engines/STTEngine.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/STTEngine.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/STTEngine.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/STTEngine.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Engines/TranscriptionRouter.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/TranscriptionRouter.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/TranscriptionRouter.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/TranscriptionRouter.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Engines/WhisperEngine/WhisperEngine.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/WhisperEngine.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/WhisperEngine.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/Engines.build/Objects-normal/arm64/WhisperEngine.o"
+  }
+}

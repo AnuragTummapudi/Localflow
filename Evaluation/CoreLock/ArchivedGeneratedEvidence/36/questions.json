@@ -1,0 +1,36 @@
+[
+  {
+    "id": "intent",
+    "instructions": "Classify the current voice request. Quoted commands and ordinary sentences are dictation. Follow the latest correction. Unclear unfinished requests are unknown.",
+    "options": {
+      "dictation": "text to type; no request for an action",
+      "open_application": "launch an installed Mac app",
+      "switch_application": "focus an already running app",
+      "close_application": "quit or close a Mac app",
+      "web_navigation": "visit a website",
+      "search": "look up information or search a site",
+      "note_action": "create or change a note",
+      "reminder_action": "create or change a reminder",
+      "media_action": "play, pause, skip or change music",
+      "system_action": "change computer settings or lock it",
+      "unknown": "unclear, ambiguous or incomplete request"
+    }
+  },
+  {
+    "id": "risk",
+    "instructions": "Classify the risk of carrying out the voice request. Closing apps may lose work. Locking or sleeping interrupts work. Typing ordinary text and searching are safe.",
+    "options": {
+      "safe": "ordinary dictation, reading or searching",
+      "reversible": "opening apps, music, notes, reminders, volume",
+      "consequential": "closing apps, deleting, sending, locking or sleeping"
+    }
+  },
+  {
+    "id": "requires_more_speech",
+    "instructions": "Does the request need more speech to resolve ambiguity, unfinished phrasing, missing targets or a correction? Completed clear requests do not.",
+    "options": {
+      "A": "no; clear and complete request",
+      "B": "yes; ambiguous or unfinished request"
+    }
+  }
+]

@@ -1,0 +1,761 @@
+[
+  {
+    "agentActions" : [
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: Optional(file:\/\/\/System\/Applications\/Notes.app\/), confidence: 1.0, alternateNames: []), processID: nil)",
+        "milliseconds" : 4604.585416665941,
+        "tool" : "application.open"
+      }
+    ],
+    "agentActionsBeforeInputClose" : [
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: Optional(file:\/\/\/System\/Applications\/Notes.app\/), confidence: 1.0, alternateNames: []), processID: nil)",
+        "milliseconds" : 4604.585416665941,
+        "tool" : "application.open"
+      }
+    ],
+    "agentInput" : "Real paced Apple Speech; injected native effects, deterministic decision fallback",
+    "completedMilliseconds" : 4833.7939583334446,
+    "confidence" : 0.68799996376037598,
+    "confirmation" : null,
+    "exactTranscript" : false,
+    "expected" : "Open Notes.",
+    "file" : "notes.aiff",
+    "final" : "Open notes.",
+    "finalDrainMilliseconds" : 51.458625000122993,
+    "finalRangeLagMilliseconds" : [
+      4207.4438333326179,
+      3367.5287499998376
+    ],
+    "firstFinalFromInputStartMilliseconds" : 4567.4438333326179,
+    "inputClosedMilliseconds" : 4782.3353333333216,
+    "phraseCount" : 2,
+    "realAnalyzerCancellationMilliseconds" : 0.34429166680638446,
+    "revisions" : 5,
+    "speechAlternatives" : [
+      {
+        "alternatives" : [
+          "Open"
+        ],
+        "original" : "Open"
+      },
+      {
+        "alternatives" : [
+          "notes.",
+          "Notes",
+          "notes",
+          "Notes."
+        ],
+        "original" : "notes."
+      }
+    ],
+    "trailingSilenceMilliseconds" : 3250.7936507936506,
+    "volatileFromInputStartMilliseconds" : 4545.2187083328681,
+    "volatileRangeLagMilliseconds" : [
+      560.84370833286812,
+      560.98341666620399,
+      561.2209166665707
+    ]
+  },
+  {
+    "agentActions" : [
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+        "milliseconds" : 4373.4757083329896,
+        "tool" : "application.open"
+      }
+    ],
+    "agentActionsBeforeInputClose" : [
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+        "milliseconds" : 4373.4757083329896,
+        "tool" : "application.open"
+      }
+    ],
+    "agentInput" : "Real paced Apple Speech; injected native effects, deterministic decision fallback",
+    "completedMilliseconds" : 4760.3102499997476,
+    "confidence" : 0.88899999856948853,
+    "confirmation" : null,
+    "exactTranscript" : true,
+    "expected" : "Open Safari.",
+    "file" : "safari.aiff",
+    "final" : "Open Safari.",
+    "finalDrainMilliseconds" : 66.686250000202563,
+    "finalRangeLagMilliseconds" : [
+      4042.9621249997581,
+      3023.0081249998693
+    ],
+    "firstFinalFromInputStartMilliseconds" : 4342.9621249997581,
+    "inputClosedMilliseconds" : 4693.623999999545,
+    "phraseCount" : 2,
+    "realAnalyzerCancellationMilliseconds" : 0.34429166680638446,
+    "revisions" : 5,
+    "speechAlternatives" : [
+      {
+        "alternatives" : [
+          "Open",
+          "open"
+        ],
+        "original" : "Open"
+      },
+      {
+        "alternatives" : [
+          "Safari.",
+          "Safari",
+          "safari"
+        ],
+        "original" : "Safari."
+      }
+    ],
+    "trailingSilenceMilliseconds" : 3250.7936507936506,
+    "volatileFromInputStartMilliseconds" : 4323.2060000000274,
+    "volatileRangeLagMilliseconds" : [
+      362.08100000002742,
+      362.32670833286829,
+      362.66512499950477
+    ]
+  },
+  {
+    "agentActions" : [
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Google Chrome\", bundleIdentifier: Optional(\"com.google.Chrome\"), url: Optional(file:\/\/\/Applications\/Google%20Chrome.app\/), confidence: 1.0, alternateNames: [\"Chrome\"]), processID: nil)",
+        "milliseconds" : 4451.3544583332987,
+        "tool" : "application.open"
+      }
+    ],
+    "agentActionsBeforeInputClose" : [
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Google Chrome\", bundleIdentifier: Optional(\"com.google.Chrome\"), url: Optional(file:\/\/\/Applications\/Google%20Chrome.app\/), confidence: 1.0, alternateNames: [\"Chrome\"]), processID: nil)",
+        "milliseconds" : 4451.3544583332987,
+        "tool" : "application.open"
+      }
+    ],
+    "agentInput" : "Real paced Apple Speech; injected native effects, deterministic decision fallback",
+    "completedMilliseconds" : 4604.7164166666334,
+    "confidence" : 0.87000000476837158,
+    "confirmation" : null,
+    "exactTranscript" : true,
+    "expected" : "Open Chrome.",
+    "file" : "chrome.aiff",
+    "final" : "Open Chrome.",
+    "finalDrainMilliseconds" : 50.328291666119185,
+    "finalRangeLagMilliseconds" : [
+      4113.1050833339032,
+      3213.1619999998293
+    ],
+    "firstFinalFromInputStartMilliseconds" : 4413.1050833339032,
+    "inputClosedMilliseconds" : 4554.3881250005143,
+    "phraseCount" : 2,
+    "realAnalyzerCancellationMilliseconds" : 0.34429166680638446,
+    "revisions" : 6,
+    "speechAlternatives" : [
+      {
+        "alternatives" : [
+          "Open",
+          "open"
+        ],
+        "original" : "Open"
+      },
+      {
+        "alternatives" : [
+          "Chrome.",
+          "chrome.",
+          "Chrome"
+        ],
+        "original" : "Chrome."
+      }
+    ],
+    "trailingSilenceMilliseconds" : 3250.7936507936506,
+    "volatileFromInputStartMilliseconds" : 4384.4806249999237,
+    "volatileRangeLagMilliseconds" : [
+      388.48062499992375,
+      388.78304166710586,
+      389.31899999998132,
+      389.73104166698613
+    ]
+  },
+  {
+    "actualSlot" : "https:\/\/github.com",
+    "agentActions" : [
+      {
+        "arguments" : "website(\"GitHub\")",
+        "milliseconds" : 4423.0969999998706,
+        "tool" : "web.open_website"
+      }
+    ],
+    "agentActionsBeforeInputClose" : [
+      {
+        "arguments" : "website(\"GitHub\")",
+        "milliseconds" : 4423.0969999998706,
+        "tool" : "web.open_website"
+      }
+    ],
+    "agentInput" : "Real paced Apple Speech; injected native effects, deterministic decision fallback",
+    "completedMilliseconds" : 4686.2960833332181,
+    "confidence" : 0.83500003814697266,
+    "confirmation" : null,
+    "exactPayload" : true,
+    "exactTranscript" : false,
+    "expected" : "Open github.com.",
+    "expectedSlot" : "https:\/\/github.com",
+    "file" : "github.aiff",
+    "final" : "Open GitHub.",
+    "finalDrainMilliseconds" : 45.929124999929627,
+    "finalRangeLagMilliseconds" : [
+      4105.017083333405,
+      3085.0742083336445
+    ],
+    "firstFinalFromInputStartMilliseconds" : 4405.017083333405,
+    "inputClosedMilliseconds" : 4640.3669583332885,
+    "phraseCount" : 2,
+    "realAnalyzerCancellationMilliseconds" : 0.34429166680638446,
+    "revisions" : 8,
+    "speechAlternatives" : [
+      {
+        "alternatives" : [
+          "Open"
+        ],
+        "original" : "Open"
+      },
+      {
+        "alternatives" : [
+          "GitHub.",
+          "GitHob.",
+          "GuitHub.",
+          "GitHub"
+        ],
+        "original" : "GitHub."
+      }
+    ],
+    "trailingSilenceMilliseconds" : 3250.7936507936506,
+    "volatileFromInputStartMilliseconds" : 4366.3846666668178,
+    "volatileRangeLagMilliseconds" : [
+      405.25966666681779,
+      405.3538750002117,
+      405.8701250003578,
+      406.33108333330892,
+      406.92387500056793,
+      407.51725000044826
+    ]
+  },
+  {
+    "actualSlot" : "local flow ideas.",
+    "agentActions" : [
+      {
+        "arguments" : "note(title: \"called\", body: \"\")",
+        "milliseconds" : 4479.471458333137,
+        "tool" : "note.create"
+      }
+    ],
+    "agentActionsBeforeInputClose" : [
+      {
+        "arguments" : "note(title: \"called\", body: \"\")",
+        "milliseconds" : 4479.471458333137,
+        "tool" : "note.create"
+      }
+    ],
+    "agentInput" : "Real paced Apple Speech; injected native effects, deterministic decision fallback",
+    "completedMilliseconds" : 6558.6731249995864,
+    "confidence" : 0.8291667103767395,
+    "confirmation" : "Create note: local flow",
+    "exactPayload" : false,
+    "exactTranscript" : false,
+    "expected" : "Create a note called LocalFlow Ideas.",
+    "expectedSlot" : "LocalFlow Ideas",
+    "file" : "title.aiff",
+    "final" : "Create a note called local flow ideas.",
+    "finalDrainMilliseconds" : 65.772583333455259,
+    "finalRangeLagMilliseconds" : [
+      4116.4787916665227,
+      3456.5367083327874,
+      2676.5772083328557,
+      1836.610458333198
+    ],
+    "firstFinalFromInputStartMilliseconds" : 4476.4787916665227,
+    "inputClosedMilliseconds" : 6492.9005416661312,
+    "phraseCount" : 4,
+    "realAnalyzerCancellationMilliseconds" : 0.34429166680638446,
+    "revisions" : 16,
+    "speechAlternatives" : [
+      {
+        "alternatives" : [
+          "Create",
+          "create"
+        ],
+        "original" : "Create"
+      },
+      {
+        "alternatives" : [
+          "a note called"
+        ],
+        "original" : "a note called"
+      },
+      {
+        "alternatives" : [
+          "local flow",
+          "Local Flow"
+        ],
+        "original" : "local flow"
+      },
+      {
+        "alternatives" : [
+          "ideas.",
+          "Ideas.",
+          "Ideas"
+        ],
+        "original" : "ideas."
+      }
+    ],
+    "trailingSilenceMilliseconds" : 3250.7936507936506,
+    "volatileFromInputStartMilliseconds" : 4417.6522500001738,
+    "volatileRangeLagMilliseconds" : [
+      510.77725000017381,
+      510.86324999927456,
+      511.66024999987712,
+      512.72566666615603,
+      514.11749999955646,
+      515.40691666617931,
+      516.8889583334385,
+      518.32504166635772,
+      519.89879166616447,
+      521.42949999928533,
+      476.93120833336434,
+      478.54341666679102
+    ]
+  },
+  {
+    "actualSlot" : "hello from local flow.",
+    "agentActions" : [
+
+    ],
+    "agentActionsBeforeInputClose" : [
+
+    ],
+    "agentInput" : "Real paced Apple Speech; injected native effects, deterministic decision fallback",
+    "completedMilliseconds" : 6019.5524999999179,
+    "confidence" : 0.81087499856948853,
+    "confirmation" : "Append to current note: hello",
+    "exactPayload" : false,
+    "exactTranscript" : false,
+    "expected" : "Write hello from LocalFlow.",
+    "expectedSlot" : "hello from LocalFlow.",
+    "file" : "body.aiff",
+    "final" : "Write hello from local flow.",
+    "finalDrainMilliseconds" : 63.488708333352406,
+    "finalRangeLagMilliseconds" : [
+      4337.6594166662835,
+      4097.6975416664573,
+      3797.7240416663335,
+      2717.763958332871
+    ],
+    "firstFinalFromInputStartMilliseconds" : 4697.6594166662835,
+    "inputClosedMilliseconds" : 5956.0637916665655,
+    "phraseCount" : 4,
+    "realAnalyzerCancellationMilliseconds" : 0.34429166680638446,
+    "revisions" : 12,
+    "speechAlternatives" : [
+      {
+        "alternatives" : [
+          "Write"
+        ],
+        "original" : "Write"
+      },
+      {
+        "alternatives" : [
+          "hello",
+          "Hello"
+        ],
+        "original" : "hello"
+      },
+      {
+        "alternatives" : [
+          "from"
+        ],
+        "original" : "from"
+      },
+      {
+        "alternatives" : [
+          "local flow.",
+          "local Flow.",
+          "Local Flow."
+        ],
+        "original" : "local flow."
+      }
+    ],
+    "trailingSilenceMilliseconds" : 3250.7936507936506,
+    "volatileFromInputStartMilliseconds" : 4662.1989166660569,
+    "volatileRangeLagMilliseconds" : [
+      698.7614166660569,
+      698.82633333287231,
+      699.06320833302743,
+      700.2849583328134,
+      700.58691666650702,
+      701.33691666665982,
+      702.09279166607303,
+      702.79995833294379
+    ]
+  },
+  {
+    "actualSlot" : "Norbert Wiener",
+    "agentActions" : [
+      {
+        "arguments" : "url(https:\/\/www.google.com\/search?q=Norbert)",
+        "milliseconds" : 4629.5060833326716,
+        "tool" : "web.open_url"
+      }
+    ],
+    "agentActionsBeforeInputClose" : [
+      {
+        "arguments" : "url(https:\/\/www.google.com\/search?q=Norbert)",
+        "milliseconds" : 4629.5060833326716,
+        "tool" : "web.open_url"
+      }
+    ],
+    "agentInput" : "Real paced Apple Speech; injected native effects, deterministic decision fallback",
+    "completedMilliseconds" : 5509.4637499996679,
+    "confidence" : 0.88249999284744263,
+    "confirmation" : null,
+    "exactPayload" : true,
+    "exactTranscript" : true,
+    "expected" : "Search for Norbert Wiener.",
+    "expectedSlot" : "Norbert Wiener",
+    "file" : "query.aiff",
+    "final" : "Search for Norbert Wiener.",
+    "finalDrainMilliseconds" : 61.569708333081508,
+    "finalRangeLagMilliseconds" : [
+      3547.8010833329972,
+      2767.8627083329411
+    ],
+    "firstFinalFromInputStartMilliseconds" : 4627.8010833329972,
+    "inputClosedMilliseconds" : 5447.8940416665864,
+    "phraseCount" : 2,
+    "realAnalyzerCancellationMilliseconds" : 0.34429166680638446,
+    "revisions" : 9,
+    "speechAlternatives" : [
+      {
+        "alternatives" : [
+          "Search for Norbert"
+        ],
+        "original" : "Search for Norbert"
+      },
+      {
+        "alternatives" : [
+          "Wiener.",
+          "Wiener?",
+          "Wiener",
+          "wiener.",
+          "Weiner."
+        ],
+        "original" : "Wiener."
+      }
+    ],
+    "trailingSilenceMilliseconds" : 3250.7936507936506,
+    "volatileFromInputStartMilliseconds" : 4584.8584583327465,
+    "volatileRangeLagMilliseconds" : [
+      602.92095833274652,
+      602.9975416665402,
+      603.73495833273773,
+      604.46849999944243,
+      605.39366666644491,
+      606.36708333341085,
+      607.46887499927107
+    ]
+  },
+  {
+    "actualSlot" : "review local flow ideas.",
+    "agentActions" : [
+      {
+        "arguments" : "reminder(title: \"review local\", notes: nil, due: nil)",
+        "milliseconds" : 4571.4304583334524,
+        "tool" : "reminder.create"
+      }
+    ],
+    "agentActionsBeforeInputClose" : [
+      {
+        "arguments" : "reminder(title: \"review local\", notes: nil, due: nil)",
+        "milliseconds" : 4571.4304583334524,
+        "tool" : "reminder.create"
+      }
+    ],
+    "agentInput" : "Real paced Apple Speech; injected native effects, deterministic decision fallback",
+    "completedMilliseconds" : 6958.4337916667209,
+    "confidence" : 0.88075006008148193,
+    "confirmation" : null,
+    "exactPayload" : false,
+    "exactTranscript" : false,
+    "expected" : "Create reminder Review LocalFlow Ideas.",
+    "expectedSlot" : "Review LocalFlow Ideas",
+    "file" : "reminder.aiff",
+    "final" : "Create reminder review local flow ideas.",
+    "finalDrainMilliseconds" : 62.042916666541714,
+    "finalRangeLagMilliseconds" : [
+      4208.641958333501,
+      2948.7375833340411,
+      2468.7714166670048,
+      1688.8015833338795
+    ],
+    "firstFinalFromInputStartMilliseconds" : 4568.641958333501,
+    "inputClosedMilliseconds" : 6896.3908750001792,
+    "phraseCount" : 4,
+    "realAnalyzerCancellationMilliseconds" : 0.34429166680638446,
+    "revisions" : 13,
+    "speechAlternatives" : [
+      {
+        "alternatives" : [
+          "Create",
+          "create"
+        ],
+        "original" : "Create"
+      },
+      {
+        "alternatives" : [
+          "reminder review local",
+          "reminder, review local",
+          "Reminder review local",
+          "reminder, review, local"
+        ],
+        "original" : "reminder review local"
+      },
+      {
+        "alternatives" : [
+          "flow"
+        ],
+        "original" : "flow"
+      },
+      {
+        "alternatives" : [
+          "ideas.",
+          "ideas"
+        ],
+        "original" : "ideas."
+      }
+    ],
+    "trailingSilenceMilliseconds" : 3250.7936507936506,
+    "volatileFromInputStartMilliseconds" : 4509.0579583338695,
+    "volatileRangeLagMilliseconds" : [
+      602.18295833386946,
+      602.554958333385,
+      603.48308333381283,
+      604.66987500025425,
+      605.90595833367843,
+      607.32333333329734,
+      608.87354166665318,
+      610.39304166719376,
+      612.1652083335357
+    ]
+  },
+  {
+    "agentActions" : [
+
+    ],
+    "agentActionsBeforeInputClose" : [
+
+    ],
+    "agentInput" : "Real paced Apple Speech; injected native effects, deterministic decision fallback",
+    "completedMilliseconds" : 6561.0502500003349,
+    "confidence" : 0.88433331251144409,
+    "confirmation" : "Open application: Google Chrome",
+    "exactTranscript" : true,
+    "expected" : "Open Chrome, actually Safari.",
+    "file" : "correction.aiff",
+    "final" : "Open Chrome, actually Safari.",
+    "finalDrainMilliseconds" : 63.997750000453379,
+    "finalRangeLagMilliseconds" : [
+      4359.7693333333154,
+      3279.8362083332177,
+      2019.8769166666898
+    ],
+    "firstFinalFromInputStartMilliseconds" : 4659.7693333333154,
+    "inputClosedMilliseconds" : 6497.0524999998815,
+    "phraseCount" : 3,
+    "realAnalyzerCancellationMilliseconds" : 0.34429166680638446,
+    "revisions" : 10,
+    "speechAlternatives" : [
+      {
+        "alternatives" : [
+          "Open"
+        ],
+        "original" : "Open"
+      },
+      {
+        "alternatives" : [
+          "Chrome, actually",
+          "chrome, actually",
+          "Chrome actually"
+        ],
+        "original" : "Chrome, actually"
+      },
+      {
+        "alternatives" : [
+          "Safari.",
+          "safari."
+        ],
+        "original" : "Safari."
+      }
+    ],
+    "trailingSilenceMilliseconds" : 3250.7936507936506,
+    "volatileFromInputStartMilliseconds" : 4614.3230416664665,
+    "volatileRangeLagMilliseconds" : [
+      641.63554166646645,
+      641.71087499983696,
+      642.09195833303238,
+      642.67499999971915,
+      643.63112500053103,
+      644.92424999992363,
+      645.94045833349082
+    ]
+  },
+  {
+    "agentActions" : [
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: Optional(file:\/\/\/System\/Applications\/Notes.app\/), confidence: 1.0, alternateNames: []), processID: nil)",
+        "milliseconds" : 4608.8879583339804,
+        "tool" : "application.open"
+      },
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+        "milliseconds" : 8965.3380833333358,
+        "tool" : "application.open"
+      },
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Google Chrome\", bundleIdentifier: Optional(\"com.google.Chrome\"), url: Optional(file:\/\/\/Applications\/Google%20Chrome.app\/), confidence: 1.0, alternateNames: [\"Chrome\"]), processID: nil)",
+        "milliseconds" : 9144.5835416670889,
+        "tool" : "application.open"
+      },
+      {
+        "arguments" : "website(\"GitHub\")",
+        "milliseconds" : 13545.968791667292,
+        "tool" : "web.open_website"
+      }
+    ],
+    "agentActionsBeforeInputClose" : [
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: Optional(file:\/\/\/System\/Applications\/Notes.app\/), confidence: 1.0, alternateNames: []), processID: nil)",
+        "milliseconds" : 4608.8879583339804,
+        "tool" : "application.open"
+      },
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: Optional(file:\/\/\/Applications\/Safari.app), confidence: 1.0, alternateNames: []), processID: nil)",
+        "milliseconds" : 8965.3380833333358,
+        "tool" : "application.open"
+      },
+      {
+        "arguments" : "application(CommandMode.ApplicationMatch(name: \"Google Chrome\", bundleIdentifier: Optional(\"com.google.Chrome\"), url: Optional(file:\/\/\/Applications\/Google%20Chrome.app\/), confidence: 1.0, alternateNames: [\"Chrome\"]), processID: nil)",
+        "milliseconds" : 9144.5835416670889,
+        "tool" : "application.open"
+      },
+      {
+        "arguments" : "website(\"GitHub\")",
+        "milliseconds" : 13545.968791667292,
+        "tool" : "web.open_website"
+      }
+    ],
+    "agentInput" : "Real paced Apple Speech; injected native effects, deterministic decision fallback",
+    "completedMilliseconds" : 18471.848416666944,
+    "confidence" : 0.87275004386901855,
+    "confirmation" : null,
+    "exactTranscript" : false,
+    "expected" : "Open Notes. Open Safari. Open Chrome. Open github.com.",
+    "file" : "continuation.caf",
+    "final" : "Open notes. Open Safari. Open Chrome. Open GitHub.",
+    "finalDrainMilliseconds" : 89.803083333208633,
+    "finalRangeLagMilliseconds" : [
+      4225.3121666668812,
+      3445.3643333339278,
+      6159.9135833332548,
+      4899.967374999942,
+      3599.0225000006467,
+      2639.1505416670043,
+      5457.734458333689,
+      4437.7985416668889
+    ],
+    "firstFinalFromInputStartMilliseconds" : 4585.3121666668812,
+    "inputClosedMilliseconds" : 18382.045333333735,
+    "phraseCount" : 8,
+    "realAnalyzerCancellationMilliseconds" : 0.34429166680638446,
+    "revisions" : 24,
+    "speechAlternatives" : [
+      {
+        "alternatives" : [
+          "Open"
+        ],
+        "original" : "Open"
+      },
+      {
+        "alternatives" : [
+          "notes.",
+          "Notes",
+          "notes",
+          "Notes."
+        ],
+        "original" : "notes."
+      },
+      {
+        "alternatives" : [
+          "Open",
+          "open"
+        ],
+        "original" : "Open"
+      },
+      {
+        "alternatives" : [
+          "Safari.",
+          "Safari",
+          "safari."
+        ],
+        "original" : "Safari."
+      },
+      {
+        "alternatives" : [
+          "Open",
+          "open"
+        ],
+        "original" : "Open"
+      },
+      {
+        "alternatives" : [
+          "Chrome.",
+          "chrome.",
+          "Chrome.,"
+        ],
+        "original" : "Chrome."
+      },
+      {
+        "alternatives" : [
+          "Open"
+        ],
+        "original" : "Open"
+      },
+      {
+        "alternatives" : [
+          "GitHub.",
+          "GitHob.",
+          "gitHub.",
+          "GuitHub.",
+          "GitHub. Open"
+        ],
+        "original" : "GitHub."
+      }
+    ],
+    "trailingSilenceMilliseconds" : 7430.385487528345,
+    "volatileFromInputStartMilliseconds" : 4558.2407083338694,
+    "volatileRangeLagMilliseconds" : [
+      565.17820833386941,
+      565.26762499988399,
+      565.43179166664777,
+      545.89608333376236,
+      546.00466666656575,
+      1089.8581666669561,
+      1119.0386666666673,
+      1119.6225833336503,
+      1120.364083333654,
+      1120.8998333340351,
+      1667.010958333296,
+      1667.1014583339202,
+      1667.5208333340124,
+      1667.9634166671094,
+      1668.5197500005161,
+      1669.0933750000768
+    ]
+  }
+]

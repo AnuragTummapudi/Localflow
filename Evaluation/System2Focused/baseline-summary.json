@@ -1,0 +1,885 @@
+{
+  "latencyPercentileMethod": "nearest rank, warmup excluded, 5 samples per workload/mode (20 pooled)",
+  "native": {
+    "load": {
+      "coldLoadMS": 6449.740124997334,
+      "mlxActiveBytes": 2367679904,
+      "mlxPeakBytes": 3034562212,
+      "ready": true,
+      "rssBytes": 194592768
+    },
+    "rssSemantics": "current RSS",
+    "modes": {
+      "nonThinking": {
+        "samples": 20,
+        "workloads": {
+          "one": {
+            "ttftMS": {
+              "p50": 2432.6930833340157,
+              "p95": 2598.0329166704905
+            },
+            "firstToolCallMS": {
+              "p50": 3704.3653750006342,
+              "p95": 4493.665833339037
+            },
+            "planMS": {
+              "p50": 3732.251791669114,
+              "p95": 4523.28208333347
+            },
+            "emittedCallsRange": [
+              1,
+              1
+            ]
+          },
+          "three": {
+            "ttftMS": {
+              "p50": 2172.3655833338853,
+              "p95": 2452.1691249974538
+            },
+            "firstToolCallMS": {
+              "p50": 3500.4103333340026,
+              "p95": 4016.678416664945
+            },
+            "planMS": {
+              "p50": 3537.2142083288054,
+              "p95": 4048.610749996442
+            },
+            "emittedCallsRange": [
+              1,
+              1
+            ]
+          },
+          "five": {
+            "ttftMS": {
+              "p50": 2462.7005416696193,
+              "p95": 2692.177958335378
+            },
+            "firstToolCallMS": {
+              "p50": 3683.7740416667657,
+              "p95": 4048.0480000042007
+            },
+            "planMS": {
+              "p50": 3712.5318333346513,
+              "p95": 4074.689125001896
+            },
+            "emittedCallsRange": [
+              1,
+              1
+            ]
+          },
+          "replan": {
+            "ttftMS": {
+              "p50": 2476.030666672159,
+              "p95": 2594.4738750040415
+            },
+            "firstToolCallMS": {
+              "p50": 4470.224708333262,
+              "p95": 4579.878250006004
+            },
+            "planMS": {
+              "p50": 4499.952000005578,
+              "p95": 4609.471625000879
+            },
+            "emittedCallsRange": [
+              1,
+              1
+            ]
+          }
+        },
+        "ttftMS": {
+          "p50": 2452.1691249974538,
+          "p95": 2659.4949583377456
+        },
+        "firstToolCallMS": {
+          "p50": 3859.5338749946677,
+          "p95": 4573.388208329561
+        },
+        "planMS": {
+          "p50": 3885.57479166775,
+          "p95": 4601.249708328396
+        },
+        "tokensPerSecondMedian": 20.22408967508632,
+        "rssBytes": {
+          "min": 89358336,
+          "max": 92225536
+        },
+        "mlxActiveBytes": {
+          "min": 2519854644,
+          "max": 2519854644
+        },
+        "mlxPeakBytes": {
+          "min": 3376455754,
+          "max": 3493061768
+        }
+      },
+      "thinking": {
+        "samples": 20,
+        "workloads": {
+          "one": {
+            "ttftMS": {
+              "p50": 2147.114125000371,
+              "p95": 3984.1707083396614
+            },
+            "firstToolCallMS": {
+              "p50": 24749.59454166674,
+              "p95": 29352.356166673417
+            },
+            "planMS": {
+              "p50": 24778.516375001345,
+              "p95": 29381.67083333974
+            },
+            "emittedCallsRange": [
+              1,
+              1
+            ]
+          },
+          "three": {
+            "ttftMS": {
+              "p50": 2087.963750003837,
+              "p95": 2173.100374995556
+            },
+            "firstToolCallMS": {
+              "p50": 14334.451708331471,
+              "p95": 14576.12020833767
+            },
+            "planMS": {
+              "p50": 14363.930916668323,
+              "p95": 14607.709958334453
+            },
+            "emittedCallsRange": [
+              1,
+              1
+            ]
+          },
+          "five": {
+            "ttftMS": {
+              "p50": 2274.8148333339486,
+              "p95": 2278.2789999982924
+            },
+            "firstToolCallMS": {
+              "p50": 18330.617125000572,
+              "p95": 18485.314124998695
+            },
+            "planMS": {
+              "p50": 18359.136833329103,
+              "p95": 18514.331166668853
+            },
+            "emittedCallsRange": [
+              1,
+              1
+            ]
+          },
+          "replan": {
+            "ttftMS": {
+              "p50": 2573.0930833306047,
+              "p95": 2680.8252916671336
+            },
+            "firstToolCallMS": {
+              "p50": 7045.597333330079,
+              "p95": 7123.971916669689
+            },
+            "planMS": {
+              "p50": 7077.7539999980945,
+              "p95": 7155.458541667031
+            },
+            "emittedCallsRange": [
+              1,
+              1
+            ]
+          }
+        },
+        "ttftMS": {
+          "p50": 2264.4477916692267,
+          "p95": 2680.8252916671336
+        },
+        "firstToolCallMS": {
+          "p50": 14576.12020833767,
+          "p95": 24840.78062500339
+        },
+        "planMS": {
+          "p50": 14607.709958334453,
+          "p95": 24867.86270833545
+        },
+        "tokensPerSecondMedian": 19.15492442630581,
+        "rssBytes": {
+          "min": 55803904,
+          "max": 97255424
+        },
+        "mlxActiveBytes": {
+          "min": 2519854644,
+          "max": 2519855048
+        },
+        "mlxPeakBytes": {
+          "min": 3493061768,
+          "max": 3493061768
+        }
+      }
+    }
+  },
+  "python": {
+    "load": {
+      "ready": true,
+      "coldLoadMS": 3294.9308329989435,
+      "rssBytes": 2025734144,
+      "mlxActiveBytes": 2367528456,
+      "mlxPeakBytes": 2367528456
+    },
+    "rssSemantics": "high-water RSS",
+    "modes": {
+      "nonThinking": {
+        "samples": 20,
+        "workloads": {
+          "one": {
+            "ttftMS": {
+              "p50": 1681.9931659993017,
+              "p95": 2853.7484589978703
+            },
+            "firstToolCallMS": {
+              "p50": 2958.5010829978273,
+              "p95": 4684.257208995405
+            },
+            "planMS": {
+              "p50": 2984.792750001361,
+              "p95": 4707.433666997531
+            },
+            "emittedCallsRange": [
+              1,
+              1
+            ]
+          },
+          "three": {
+            "ttftMS": {
+              "p50": 2322.8459999954794,
+              "p95": 4293.9896669995505
+            },
+            "firstToolCallMS": {
+              "p50": 3706.375957997807,
+              "p95": 8388.665917002072
+            },
+            "planMS": {
+              "p50": 3738.4715829975903,
+              "p95": 8404.632707999554
+            },
+            "emittedCallsRange": [
+              1,
+              1
+            ]
+          },
+          "five": {
+            "ttftMS": {
+              "p50": 2167.8699999974924,
+              "p95": 2863.1922919958015
+            },
+            "firstToolCallMS": {
+              "p50": 3980.965415998071,
+              "p95": 4341.265249997377
+            },
+            "planMS": {
+              "p50": 4010.0232500044513,
+              "p95": 4368.155083000602
+            },
+            "emittedCallsRange": [
+              1,
+              1
+            ]
+          },
+          "replan": {
+            "ttftMS": {
+              "p50": 2138.019334001001,
+              "p95": 2219.5010830037063
+            },
+            "firstToolCallMS": {
+              "p50": 4142.532042002131,
+              "p95": 4532.849916002306
+            },
+            "planMS": {
+              "p50": 4170.096834001015,
+              "p95": 4561.050041003909
+            },
+            "emittedCallsRange": [
+              1,
+              1
+            ]
+          }
+        },
+        "ttftMS": {
+          "p50": 2138.019334001001,
+          "p95": 3089.785292002489
+        },
+        "firstToolCallMS": {
+          "p50": 4000.8529999977327,
+          "p95": 4930.350125003315
+        },
+        "planMS": {
+          "p50": 4052.328290999867,
+          "p95": 4958.410625004035
+        },
+        "tokensPerSecondMedian": 19.158529734605082,
+        "rssBytes": {
+          "min": 2025734144,
+          "max": 2025734144
+        },
+        "mlxActiveBytes": {
+          "min": 2684837388,
+          "max": 2684837388
+        },
+        "mlxPeakBytes": {
+          "min": 3304111738,
+          "max": 3304111738
+        }
+      },
+      "thinking": {
+        "samples": 20,
+        "workloads": {
+          "one": {
+            "ttftMS": {
+              "p50": 1784.6787080052309,
+              "p95": 2014.1115000005811
+            },
+            "firstToolCallMS": {
+              "p50": 16720.79975000088,
+              "p95": 19202.226207999047
+            },
+            "planMS": {
+              "p50": 16751.298333001614,
+              "p95": 19233.236000000034
+            },
+            "emittedCallsRange": [
+              1,
+              1
+            ]
+          },
+          "three": {
+            "ttftMS": {
+              "p50": 1825.0631249975413,
+              "p95": 1861.5394590015057
+            },
+            "firstToolCallMS": {
+              "p50": 14124.057082997751,
+              "p95": 14284.504499999457
+            },
+            "planMS": {
+              "p50": 14152.050042001065,
+              "p95": 14314.205750000838
+            },
+            "emittedCallsRange": [
+              1,
+              1
+            ]
+          },
+          "five": {
+            "ttftMS": {
+              "p50": 1998.6174169971491,
+              "p95": 2054.2130829999223
+            },
+            "firstToolCallMS": {
+              "p50": 18917.786083002284,
+              "p95": 19038.424209000368
+            },
+            "planMS": {
+              "p50": 18948.537208001653,
+              "p95": 19067.4921250029
+            },
+            "emittedCallsRange": [
+              1,
+              1
+            ]
+          },
+          "replan": {
+            "ttftMS": {
+              "p50": 2156.824041994696,
+              "p95": 2235.5490830013878
+            },
+            "firstToolCallMS": {
+              "p50": 6342.8932079987135,
+              "p95": 6490.486250004324
+            },
+            "planMS": {
+              "p50": 6372.916915999667,
+              "p95": 6512.760500001605
+            },
+            "emittedCallsRange": [
+              1,
+              1
+            ]
+          }
+        },
+        "ttftMS": {
+          "p50": 1954.8962079934427,
+          "p95": 2160.307499994815
+        },
+        "firstToolCallMS": {
+          "p50": 14284.504499999457,
+          "p95": 19038.424209000368
+        },
+        "planMS": {
+          "p50": 14314.205750000838,
+          "p95": 19067.4921250029
+        },
+        "tokensPerSecondMedian": 18.8557072991476,
+        "rssBytes": {
+          "min": 2025734144,
+          "max": 2025734144
+        },
+        "mlxActiveBytes": {
+          "min": 2684837388,
+          "max": 2693225996
+        },
+        "mlxPeakBytes": {
+          "min": 3304111738,
+          "max": 3304111738
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "scenarios": 108,
+    "invocations": 92,
+    "routingCorrect": 108,
+    "toolExact": 45,
+    "argumentsExact": 33,
+    "valid": 78,
+    "parsedPlans": 82,
+    "unparsedErrors": 10,
+    "detectedUnknownToolPlans": 0,
+    "confirmationChallenges": 4,
+    "policyEquivalentToolMatch": 47,
+    "policyEquivalentArgumentMatch": 45,
+    "categories": {
+      "COMPLEX": {
+        "count": 28,
+        "toolExact": 17,
+        "argumentsExact": 10,
+        "valid": 28
+      },
+      "MEMORY": {
+        "count": 24,
+        "toolExact": 20,
+        "argumentsExact": 15,
+        "valid": 24
+      },
+      "SAFETY": {
+        "count": 24,
+        "toolExact": 0,
+        "argumentsExact": 0,
+        "valid": 10
+      },
+      "FAILURE": {
+        "count": 16,
+        "toolExact": 8,
+        "argumentsExact": 8,
+        "valid": 16
+      }
+    }
+  },
+  "modeComparison24": {
+    "thinking": {
+      "count": 24,
+      "toolExact": 14,
+      "argumentsExact": 11,
+      "valid": 22
+    },
+    "nonThinking": {
+      "count": 24,
+      "toolExact": 11,
+      "argumentsExact": 10,
+      "valid": 18
+    }
+  },
+  "modeComparisonCaveat": "Exploratory thinking subset from preceding helper run, compared with final non-thinking rows; not a final paired accuracy qualification",
+  "iterativeMissions": {
+    "count": 24,
+    "complexCount": 18,
+    "rawToolCoverageMetComplex": 12,
+    "strictComplexCompleted": 8,
+    "nativeCallsSimulated": 80,
+    "unrelatedCompletedSteps": 24,
+    "wrongProjectSteps": 2,
+    "duplicateCompletedSteps": 0,
+    "readinessViolations": 0,
+    "benchmarkOnlyConfirmationGrants": 7,
+    "audits": [
+      {
+        "id": 1,
+        "strictComplexCompletion": false,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 1,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 2,
+        "strictComplexCompletion": false,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 3,
+        "strictComplexCompletion": false,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 4,
+        "strictComplexCompletion": true,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 5,
+        "strictComplexCompletion": false,
+        "unrelatedCompletedSteps": 1,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 6,
+        "strictComplexCompletion": false,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 7,
+        "strictComplexCompletion": false,
+        "unrelatedCompletedSteps": 13,
+        "wrongProjectSteps": 1,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 8,
+        "strictComplexCompletion": true,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 9,
+        "strictComplexCompletion": true,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 10,
+        "strictComplexCompletion": true,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 11,
+        "strictComplexCompletion": false,
+        "unrelatedCompletedSteps": 1,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 12,
+        "strictComplexCompletion": false,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 13,
+        "strictComplexCompletion": true,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 14,
+        "strictComplexCompletion": true,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 15,
+        "strictComplexCompletion": true,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 16,
+        "strictComplexCompletion": true,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 17,
+        "strictComplexCompletion": false,
+        "unrelatedCompletedSteps": 1,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 18,
+        "strictComplexCompletion": false,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 19,
+        "strictComplexCompletion": false,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 20,
+        "strictComplexCompletion": false,
+        "unrelatedCompletedSteps": 2,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 21,
+        "strictComplexCompletion": false,
+        "unrelatedCompletedSteps": 1,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 22,
+        "strictComplexCompletion": false,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 23,
+        "strictComplexCompletion": false,
+        "unrelatedCompletedSteps": 5,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      },
+      {
+        "id": 24,
+        "strictComplexCompletion": false,
+        "unrelatedCompletedSteps": 0,
+        "wrongProjectSteps": 0,
+        "duplicateCompletedSteps": 0,
+        "readinessViolation": false
+      }
+    ],
+    "completedSimulatedSteps": 78,
+    "stage": "Pre-token-filter iterative run, unchanged planner/executor behavior except terminal UI wording; actual recorded results, not rerun for this derivation",
+    "method": "Post-run strict tool/target/terminal audit; preparatory resolve and workflow.list before run allowed. Query semantic exactness and real OS completion not assessed; all effects simulated."
+  },
+  "realReads": {
+    "boundary": "Real model and real repository reads; no editor/browser/workflow effects or production memory writes",
+    "examples": [
+      {
+        "firstActualActionMS": 2445.3826666649547,
+        "goal": "Resolve project LF",
+        "notice": "Planner stopped: Invalid arguments for this tool.",
+        "receipts": [
+          {
+            "arguments": {
+              "name": "LF"
+            },
+            "data": {
+              "folder": "/Users/anuragtummapudi/Localflow-project/LocalFlow",
+              "project": "LocalFlow"
+            },
+            "detail": "Resolved LocalFlow",
+            "status": "verified",
+            "stepID": "1",
+            "tool": "project.resolve"
+          }
+        ],
+        "totalMS": 8089.19437500299
+      },
+      {
+        "firstActualActionMS": 4306.081458329572,
+        "goal": "Search project LocalFlow for the literal VoiceAgentCoordinator. Return matches only; do not open files or an editor.",
+        "notice": "Planner finished",
+        "receipts": [
+          {
+            "arguments": {
+              "project": "LocalFlow",
+              "query": "VoiceAgentCoordinator"
+            },
+            "data": {
+              "matches": [
+                {
+                  "line": 207,
+                  "path": "LIVE_CONTINUATION_BUGFIX_REPORT.md"
+                },
+                {
+                  "line": 78,
+                  "path": "App/DictationCoordinator.swift"
+                },
+                {
+                  "line": 16,
+                  "path": "App/SettingsRootView.swift"
+                },
+                {
+                  "line": 720,
+                  "path": "REALITY_GATE_REPORT.md"
+                },
+                {
+                  "line": 1,
+                  "path": "Features/CommandMode/VoiceAgentCoordinator.swift"
+                },
+                {
+                  "line": 42,
+                  "path": "Tests/FeaturesTests/AgentOperationalTests.swift"
+                },
+                {
+                  "line": 11,
+                  "path": "Tests/FeaturesTests/PlannerTests.swift"
+                },
+                {
+                  "line": 24,
+                  "path": "Tests/FeaturesTests/VoiceAgentTests.swift"
+                },
+                {
+                  "line": 21,
+                  "path": "Tests/FeaturesTests/VoiceContinuationTests.swift"
+                },
+                {
+                  "line": 114,
+                  "path": "Tests/FeaturesTests/PlannerBenchmarkTests.swift"
+                },
+                {
+                  "line": 227,
+                  "path": "Tests/SharedTests/LayaRuntimeTests.swift"
+                },
+                {
+                  "line": 82,
+                  "path": "Tests/SharedTests/AppleSpeechTests.swift"
+                },
+                {
+                  "line": 19,
+                  "path": "STREAMING.md"
+                },
+                {
+                  "line": 10,
+                  "path": "SYSTEM2_PLANNER.md"
+                },
+                {
+                  "line": 16,
+                  "path": "Evaluation/System2/third-compile.log"
+                },
+                {
+                  "line": 6,
+                  "path": "Evaluation/System2/ui-compile.log"
+                },
+                {
+                  "line": 361,
+                  "path": "Evaluation/System2/model-108-final.json"
+                },
+                {
+                  "line": 722,
+                  "path": "Evaluation/System2/summary.json"
+                },
+                {
+                  "line": 7,
+                  "path": "Evaluation/System2/typed-benchmark.log"
+                },
+                {
+                  "line": 5,
+                  "path": "Evaluation/System2/planner-tests-8.log"
+                }
+              ]
+            },
+            "detail": "Found 20 project matches",
+            "status": "verified",
+            "stepID": "1",
+            "tool": "project.search"
+          }
+        ],
+        "totalMS": 34065.47854166274
+      },
+      {
+        "firstActualActionMS": 2780.819874998997,
+        "goal": "Resolve project LocalFlow then list its saved workflows",
+        "notice": "Planner finished",
+        "receipts": [
+          {
+            "arguments": {
+              "name": "LocalFlow"
+            },
+            "data": {
+              "folder": "/Users/anuragtummapudi/Localflow-project/LocalFlow",
+              "project": "LocalFlow"
+            },
+            "detail": "Resolved LocalFlow",
+            "status": "verified",
+            "stepID": "1",
+            "tool": "project.resolve"
+          },
+          {
+            "arguments": {
+              "project": "LocalFlow"
+            },
+            "data": {
+              "workflows": []
+            },
+            "detail": "0 saved workflows",
+            "status": "verified",
+            "stepID": "2",
+            "tool": "workflow.list"
+          }
+        ],
+        "totalMS": 11815.044000002672
+      }
+    ],
+    "generationCancellationMS": 18.752958334516734,
+    "load": {
+      "coldLoadMS": 2489.018541666155,
+      "mlxActiveBytes": 2367679904,
+      "mlxPeakBytes": 3034562212,
+      "prefixPrepareMS": 18015.32866666821,
+      "rssBytes": 867860480
+    },
+    "reloadAfterCancellation": true
+  },
+  "installation": {
+    "experimentalEnabled": false,
+    "installed": true,
+    "modelBytes": 3061128063,
+    "residentAfterSetup": false,
+    "residentDuringHealthProbe": true,
+    "revision": "32f3e8ecf65426fc3306969496342d504bfa13f3",
+    "runtime": {
+      "coldLoadMS": 3683.875666669337,
+      "mlxActiveBytes": 2367679904,
+      "mlxPeakBytes": 3034562212,
+      "prefixPrepareMS": 25896.694416667742,
+      "rssBytes": 600145920
+    },
+    "status": "Ready"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "host": "macOS 26.6",
+  "build": "25G72",
+  "hardware": "Mac16,12",
+  "physicalMemoryBytes": 17179869184,
+  "debugMinimumOS": "26.0",
+  "debugSDK": "26.5",
+  "speechLocale": "en-IN",
+  "applicationBuild": "unsigned Debug; success",
+  "gitDiffCheck": "pass",
+  "gitActions": "No commit, staging, push, PR, remote change, deployment or release packaging"
+}

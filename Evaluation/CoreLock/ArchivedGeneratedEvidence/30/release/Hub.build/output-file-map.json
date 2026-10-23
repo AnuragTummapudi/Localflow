@@ -1,0 +1,49 @@
+{
+  "": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/Hub.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/Hub.o",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-transformers/Sources/Hub/BinaryDistinct.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/BinaryDistinct.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/BinaryDistinct~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/BinaryDistinct.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/BinaryDistinct.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-transformers/Sources/Hub/Config.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/Config.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/Config~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/Config.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/Config.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-transformers/Sources/Hub/Downloader.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/Downloader.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/Downloader~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/Downloader.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/Downloader.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-transformers/Sources/Hub/Hub.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/Hub.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/Hub~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/Hub.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/Hub.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-transformers/Sources/Hub/HubApi.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/HubApi.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/HubApi~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/HubApi.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/HubApi.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-transformers/Sources/Hub/YYJSONParser.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/YYJSONParser.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/YYJSONParser~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/YYJSONParser.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/YYJSONParser.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/DerivedSources/resource_bundle_accessor.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/resource_bundle_accessor.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/resource_bundle_accessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/resource_bundle_accessor.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/Hub.build/resource_bundle_accessor.dia"
+  }
+}

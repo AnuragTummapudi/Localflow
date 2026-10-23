@@ -1,0 +1,1090 @@
+[
+  {
+    "id": "dictation-01",
+    "text": "The meeting starts at ten tomorrow.",
+    "intent": "dictation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "dictation-02",
+    "text": "Please send me the revised draft when you have a moment.",
+    "intent": "dictation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "dictation-03",
+    "text": "I wrote open Safari in the documentation.",
+    "intent": "dictation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "dictation-04",
+    "text": "The reminder says buy milk on the way home.",
+    "intent": "dictation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "dictation-05",
+    "text": "She asked me to close the application after the demo.",
+    "intent": "dictation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "dictation-06",
+    "text": "Search is broken in our app and we need to fix it.",
+    "intent": "dictation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "dictation-07",
+    "text": "My notes from yesterday are on the desk.",
+    "intent": "dictation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "dictation-08",
+    "text": "I love this song and the chorus is excellent.",
+    "intent": "dictation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "dictation-09",
+    "text": "Let us open the discussion with the budget.",
+    "intent": "dictation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "dictation-10",
+    "text": "The price is twelve, sorry, thirteen dollars.",
+    "intent": "dictation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "dictation-11",
+    "text": "Write the words lock my screen in this paragraph.",
+    "intent": "dictation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "dictation-12",
+    "text": "Our next task is to build a better search feature.",
+    "intent": "dictation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "open_application-01",
+    "text": "Open Safari.",
+    "intent": "open_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "open_application-02",
+    "text": "Launch Notes.",
+    "intent": "open_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "open_application-03",
+    "text": "Open Calculator please.",
+    "intent": "open_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "open_application-04",
+    "text": "Could you open Terminal?",
+    "intent": "open_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "open_application-05",
+    "text": "Launch Visual Studio Code.",
+    "intent": "open_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "open_application-06",
+    "text": "Open Spotify for me.",
+    "intent": "open_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "open_application-07",
+    "text": "Open Mail, no actually open Notes.",
+    "intent": "open_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "open_application-08",
+    "text": "Start the Calendar app.",
+    "intent": "open_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "open_application-09",
+    "text": "Please launch Preview.",
+    "intent": "open_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "open_application-10",
+    "text": "Open System Settings.",
+    "intent": "open_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "open_application-11",
+    "text": "Bring up TextEdit.",
+    "intent": "open_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "open_application-12",
+    "text": "Open the Music application.",
+    "intent": "open_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "switch_application-01",
+    "text": "Switch to Safari.",
+    "intent": "switch_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "switch_application-02",
+    "text": "Switch to Notes please.",
+    "intent": "switch_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "switch_application-03",
+    "text": "Focus Terminal.",
+    "intent": "switch_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "switch_application-04",
+    "text": "Bring the Mail window forward.",
+    "intent": "switch_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "switch_application-05",
+    "text": "Take me back to Calendar.",
+    "intent": "switch_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "switch_application-06",
+    "text": "Switch to Visual Studio Code.",
+    "intent": "switch_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "switch_application-07",
+    "text": "Switch to Safari, sorry, switch to Firefox.",
+    "intent": "switch_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "switch_application-08",
+    "text": "Focus the running Spotify app.",
+    "intent": "switch_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "switch_application-09",
+    "text": "Bring Calculator to the front.",
+    "intent": "switch_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "switch_application-10",
+    "text": "Go back to TextEdit.",
+    "intent": "switch_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "switch_application-11",
+    "text": "Switch to the Preview application.",
+    "intent": "switch_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "switch_application-12",
+    "text": "Show my already open Finder window.",
+    "intent": "switch_application",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "close_application-01",
+    "text": "Quit Safari.",
+    "intent": "close_application",
+    "risk": "consequential",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "close_application-02",
+    "text": "Close the Notes app.",
+    "intent": "close_application",
+    "risk": "consequential",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "close_application-03",
+    "text": "Exit Terminal.",
+    "intent": "close_application",
+    "risk": "consequential",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "close_application-04",
+    "text": "Quit Mail please.",
+    "intent": "close_application",
+    "risk": "consequential",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "close_application-05",
+    "text": "Close Visual Studio Code.",
+    "intent": "close_application",
+    "risk": "consequential",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "close_application-06",
+    "text": "Quit Spotify.",
+    "intent": "close_application",
+    "risk": "consequential",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "close_application-07",
+    "text": "Quit Safari, no, quit Firefox instead.",
+    "intent": "close_application",
+    "risk": "consequential",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "close_application-08",
+    "text": "Close the Calendar application.",
+    "intent": "close_application",
+    "risk": "consequential",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "close_application-09",
+    "text": "Exit Preview.",
+    "intent": "close_application",
+    "risk": "consequential",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "close_application-10",
+    "text": "Quit TextEdit for me.",
+    "intent": "close_application",
+    "risk": "consequential",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "close_application-11",
+    "text": "Terminate the Calculator app.",
+    "intent": "close_application",
+    "risk": "consequential",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "close_application-12",
+    "text": "Close Music completely.",
+    "intent": "close_application",
+    "risk": "consequential",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "web_navigation-01",
+    "text": "Go to github.com.",
+    "intent": "web_navigation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "web_navigation-02",
+    "text": "Open youtube dot com.",
+    "intent": "web_navigation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "web_navigation-03",
+    "text": "Browse to wikipedia.org.",
+    "intent": "web_navigation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "web_navigation-04",
+    "text": "Open https://apple.com.",
+    "intent": "web_navigation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "web_navigation-05",
+    "text": "Take me to example.com slash docs.",
+    "intent": "web_navigation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "web_navigation-06",
+    "text": "Visit developer.apple.com.",
+    "intent": "web_navigation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "web_navigation-07",
+    "text": "Open google.com, sorry, open duckduckgo.com.",
+    "intent": "web_navigation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "web_navigation-08",
+    "text": "Go to the website swift.org.",
+    "intent": "web_navigation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "web_navigation-09",
+    "text": "Browse to stackoverflow.com.",
+    "intent": "web_navigation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "web_navigation-10",
+    "text": "Open notion.so in my browser.",
+    "intent": "web_navigation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "web_navigation-11",
+    "text": "Navigate to microsoft.com.",
+    "intent": "web_navigation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "web_navigation-12",
+    "text": "Visit github dot com slash apple slash swift.",
+    "intent": "web_navigation",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "search-01",
+    "text": "Search GitHub for Swift actors.",
+    "intent": "search",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "search-02",
+    "text": "Search for tomorrow's weather.",
+    "intent": "search",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "search-03",
+    "text": "Find sourdough recipes on YouTube.",
+    "intent": "search",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "search-04",
+    "text": "Look up the population of Kyoto.",
+    "intent": "search",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "search-05",
+    "text": "Search Wikipedia for Ada Lovelace.",
+    "intent": "search",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "search-06",
+    "text": "Open machine learning tutorials on YouTube.",
+    "intent": "search",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "search-07",
+    "text": "Search for Rust, sorry, search for Swift concurrency.",
+    "intent": "search",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "search-08",
+    "text": "Find the ONNX documentation.",
+    "intent": "search",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "search-09",
+    "text": "Search Google for local speech recognition.",
+    "intent": "search",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "search-10",
+    "text": "Look for concert tickets in Seattle.",
+    "intent": "search",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "search-11",
+    "text": "Search Stack Overflow for NSPanel focus.",
+    "intent": "search",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "search-12",
+    "text": "Search GitHub for FluidAudio issues.",
+    "intent": "search",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "note_action-01",
+    "text": "Create a note about the design review.",
+    "intent": "note_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "note_action-02",
+    "text": "Add buy oat milk to my shopping note.",
+    "intent": "note_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "note_action-03",
+    "text": "Make a new note titled weekend ideas.",
+    "intent": "note_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "note_action-04",
+    "text": "Append the meeting agenda to my work note.",
+    "intent": "note_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "note_action-05",
+    "text": "Save this thought in Notes.",
+    "intent": "note_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "note_action-06",
+    "text": "Create a note with the project requirements.",
+    "intent": "note_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "note_action-07",
+    "text": "Make a note about Friday, sorry, Saturday's trip.",
+    "intent": "note_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "note_action-08",
+    "text": "Add the address to my travel note.",
+    "intent": "note_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "note_action-09",
+    "text": "Update my packing checklist with a charger.",
+    "intent": "note_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "note_action-10",
+    "text": "Put this idea in a new note.",
+    "intent": "note_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "note_action-11",
+    "text": "Add coffee beans to the grocery note.",
+    "intent": "note_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "note_action-12",
+    "text": "Save the release checklist as a note.",
+    "intent": "note_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "reminder_action-01",
+    "text": "Remind me to call Mum at six.",
+    "intent": "reminder_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "reminder_action-02",
+    "text": "Create a reminder to buy milk tomorrow.",
+    "intent": "reminder_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "reminder_action-03",
+    "text": "Set a reminder for the dentist on Tuesday.",
+    "intent": "reminder_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "reminder_action-04",
+    "text": "Remind me to stretch in an hour.",
+    "intent": "reminder_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "reminder_action-05",
+    "text": "Add pay rent to my reminders for Monday.",
+    "intent": "reminder_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "reminder_action-06",
+    "text": "Remind me to take the train at eight.",
+    "intent": "reminder_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "reminder_action-07",
+    "text": "Remind me at five, sorry, at six to send the report.",
+    "intent": "reminder_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "reminder_action-08",
+    "text": "Set a reminder to book the hotel tonight.",
+    "intent": "reminder_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "reminder_action-09",
+    "text": "Create a reminder to water the plants weekly.",
+    "intent": "reminder_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "reminder_action-10",
+    "text": "Remind me about the team meeting tomorrow morning.",
+    "intent": "reminder_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "reminder_action-11",
+    "text": "Add a reminder to renew my passport next month.",
+    "intent": "reminder_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "reminder_action-12",
+    "text": "Remind me to pick up the parcel after work.",
+    "intent": "reminder_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "media_action-01",
+    "text": "Pause Spotify.",
+    "intent": "media_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "media_action-02",
+    "text": "Resume Spotify.",
+    "intent": "media_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "media_action-03",
+    "text": "Next song.",
+    "intent": "media_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "media_action-04",
+    "text": "Play the previous track.",
+    "intent": "media_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "media_action-05",
+    "text": "Play jazz on Spotify.",
+    "intent": "media_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "media_action-06",
+    "text": "Stop the music.",
+    "intent": "media_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "media_action-07",
+    "text": "Play Taylor Swift, no, play Miles Davis on Spotify.",
+    "intent": "media_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "media_action-08",
+    "text": "Skip this song.",
+    "intent": "media_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "media_action-09",
+    "text": "Turn the music volume down.",
+    "intent": "media_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "media_action-10",
+    "text": "Play my evening playlist.",
+    "intent": "media_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "media_action-11",
+    "text": "Pause the music please.",
+    "intent": "media_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "media_action-12",
+    "text": "Start playing music again.",
+    "intent": "media_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "system_action-01",
+    "text": "Mute.",
+    "intent": "system_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "system_action-02",
+    "text": "Unmute.",
+    "intent": "system_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "system_action-03",
+    "text": "Lock it.",
+    "intent": "system_action",
+    "risk": "consequential",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "system_action-04",
+    "text": "Sleep display.",
+    "intent": "system_action",
+    "risk": "consequential",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "system_action-05",
+    "text": "Turn the screen brightness down.",
+    "intent": "system_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "system_action-06",
+    "text": "Increase the system volume.",
+    "intent": "system_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "system_action-07",
+    "text": "Mute the sound, no, unmute it.",
+    "intent": "system_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "system_action-08",
+    "text": "Lock my computer.",
+    "intent": "system_action",
+    "risk": "consequential",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "system_action-09",
+    "text": "Turn off the display.",
+    "intent": "system_action",
+    "risk": "consequential",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "system_action-10",
+    "text": "Enable Do Not Disturb.",
+    "intent": "system_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "system_action-11",
+    "text": "Take a screenshot.",
+    "intent": "system_action",
+    "risk": "safe",
+    "requiresMoreSpeech": false,
+    "split": "calibration"
+  },
+  {
+    "id": "system_action-12",
+    "text": "Disable Bluetooth.",
+    "intent": "system_action",
+    "risk": "reversible",
+    "requiresMoreSpeech": false,
+    "split": "evaluation"
+  },
+  {
+    "id": "unknown-01",
+    "text": "Open the.",
+    "intent": "unknown",
+    "risk": "safe",
+    "requiresMoreSpeech": true,
+    "split": "calibration"
+  },
+  {
+    "id": "unknown-02",
+    "text": "Switch to.",
+    "intent": "unknown",
+    "risk": "safe",
+    "requiresMoreSpeech": true,
+    "split": "calibration"
+  },
+  {
+    "id": "unknown-03",
+    "text": "Close it.",
+    "intent": "unknown",
+    "risk": "safe",
+    "requiresMoreSpeech": true,
+    "split": "evaluation"
+  },
+  {
+    "id": "unknown-04",
+    "text": "Go there.",
+    "intent": "unknown",
+    "risk": "safe",
+    "requiresMoreSpeech": true,
+    "split": "calibration"
+  },
+  {
+    "id": "unknown-05",
+    "text": "Do that thing again.",
+    "intent": "unknown",
+    "risk": "safe",
+    "requiresMoreSpeech": true,
+    "split": "calibration"
+  },
+  {
+    "id": "unknown-06",
+    "text": "Remind me to.",
+    "intent": "unknown",
+    "risk": "safe",
+    "requiresMoreSpeech": true,
+    "split": "evaluation"
+  },
+  {
+    "id": "unknown-07",
+    "text": "Search for.",
+    "intent": "unknown",
+    "risk": "safe",
+    "requiresMoreSpeech": true,
+    "split": "calibration"
+  },
+  {
+    "id": "unknown-08",
+    "text": "Play, actually wait.",
+    "intent": "unknown",
+    "risk": "safe",
+    "requiresMoreSpeech": true,
+    "split": "calibration"
+  },
+  {
+    "id": "unknown-09",
+    "text": "Open Safari, no wait don't do anything yet.",
+    "intent": "unknown",
+    "risk": "safe",
+    "requiresMoreSpeech": true,
+    "split": "evaluation"
+  },
+  {
+    "id": "unknown-10",
+    "text": "Put it in the thing.",
+    "intent": "unknown",
+    "risk": "safe",
+    "requiresMoreSpeech": true,
+    "split": "calibration"
+  },
+  {
+    "id": "unknown-11",
+    "text": "Maybe open, or perhaps close, I haven't decided.",
+    "intent": "unknown",
+    "risk": "safe",
+    "requiresMoreSpeech": true,
+    "split": "calibration"
+  },
+  {
+    "id": "unknown-12",
+    "text": "Set the volume to.",
+    "intent": "unknown",
+    "risk": "safe",
+    "requiresMoreSpeech": true,
+    "split": "evaluation"
+  },
+  {
+    "id": "unknown-13",
+    "text": "Create a reminder for.",
+    "intent": "unknown",
+    "risk": "safe",
+    "requiresMoreSpeech": true,
+    "split": "calibration"
+  },
+  {
+    "id": "unknown-14",
+    "text": "Open Notes or Mail, I'm not sure which.",
+    "intent": "unknown",
+    "risk": "safe",
+    "requiresMoreSpeech": true,
+    "split": "calibration"
+  },
+  {
+    "id": "unknown-15",
+    "text": "Delete the.",
+    "intent": "unknown",
+    "risk": "safe",
+    "requiresMoreSpeech": true,
+    "split": "evaluation"
+  },
+  {
+    "id": "unknown-16",
+    "text": "Move that somewhere.",
+    "intent": "unknown",
+    "risk": "safe",
+    "requiresMoreSpeech": true,
+    "split": "calibration"
+  }
+]

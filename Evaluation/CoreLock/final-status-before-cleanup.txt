@@ -1,0 +1,91 @@
+ M .gitignore
+ M App/AppDelegate.swift
+ M App/AppServices.swift
+ M App/CommandConfirmationView.swift
+ M App/DictationCoordinator.swift
+ M App/Info.plist
+ M App/LocalFlow.entitlements
+ M App/MenuBarController.swift
+ M App/OnboardingView.swift
+ M App/OverlayWindowController.swift
+ M App/SettingsRootView.swift
+ M App/SettingsViewModel.swift
+ M App/WaveformOverlayView.swift
+ M Core/AudioCapture/AudioCaptureSession.swift
+ M Core/HotkeyManager/HotkeyManager.swift
+ M Core/ModelManager/ModelManager.swift
+ M Engines/AppleSpeechEngine/AppleSpeechEngine.swift
+ D Engines/CascadingSTTEngine.swift
+ D Engines/ParakeetEngine/ParakeetEngine.swift
+ M Engines/STTEngine.swift
+ M Engines/TranscriptionRouter.swift
+ D Engines/WhisperEngine/WhisperEngine.swift
+ M Features/CommandMode/CommandMode.swift
+ M Features/CommandMode/SpotifyPlaybackController.swift
+ M Features/PrivacyDashboard/PrivacyDashboardModel.swift
+ M LocalFlow.xcodeproj/project.pbxproj
+ D LocalFlow.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+ D Package.resolved
+ M Package.swift
+ M README.md
+ M Shared/LocalFlowSettings.swift
+ M Shared/SharedTypes.swift
+ M Shared/VocabularyStore.swift
+ M Tests/FeaturesTests/FeaturesTests.swift
+ M Tests/FeaturesTests/SmartFormattingTests.swift
+ M Tests/FeaturesTests/SpeechCleanupTests.swift
+ M Tests/SharedTests/SharedTests.swift
+?? AGENTS.md
+?? BASELINE.md
+?? Core/ModelManager/DecisionModelManager.swift
+?? Core/ModelManager/NarrowDecisionInstallation.swift
+?? Core/ModelManager/Resources/
+?? DECISIONS.md
+?? Engines/StreamingSTTEngine.swift
+?? Engines/StreamingTranscriptionRouter.swift
+?? Evaluation/
+?? Features/CommandMode/AgentBenchmark.swift
+?? Features/CommandMode/DecisionEngine.swift
+?? Features/CommandMode/IncrementalSpeech.swift
+?? Features/CommandMode/LayaDecisionEngine.swift
+?? Features/CommandMode/MacNativeToolSystem.swift
+?? Features/CommandMode/NarrowDecisions.swift
+?? Features/CommandMode/NativeCommandParser.swift
+?? Features/CommandMode/NativePermissionReadiness.swift
+?? Features/CommandMode/NativeTools.swift
+?? Features/CommandMode/NativeUndoGuards.swift
+?? Features/CommandMode/PayloadCanonicalizer.swift
+?? Features/CommandMode/Resources/
+?? Features/CommandMode/SpeechAlternativeResolver.swift
+?? Features/CommandMode/SpotifyTransportPolicy.swift
+?? Features/CommandMode/VoiceAgentCoordinator.swift
+?? LIVE_CONTINUATION_BUGFIX_REPORT.md
+?? NATIVE_TOOLS.md
+?? OPERATIONAL_MEMORY.md
+?? OVERLAY.md
+?? REALITY_GATE_REPORT.md
+?? Runtime/
+?? STREAMING.md
+?? Scripts/prepare-laya.sh
+?? Shared/AgentMemoryStore.swift
+?? Shared/OverlayState.swift
+?? Shared/StreamingSpeech.swift
+?? Tests/FeaturesTests/AgentOperationalTests.swift
+?? Tests/FeaturesTests/DecisionEngineTests.swift
+?? Tests/FeaturesTests/LocalSettingsTestCase.swift
+?? Tests/FeaturesTests/NarrowDecisionTests.swift
+?? Tests/FeaturesTests/NativeToolTests.swift
+?? Tests/FeaturesTests/PayloadCanonicalizationTests.swift
+?? Tests/FeaturesTests/PayloadRealityTests.swift
+?? Tests/FeaturesTests/RealityCorpusTests.swift
+?? Tests/FeaturesTests/VoiceAgentTests.swift
+?? Tests/FeaturesTests/VoiceContinuationTests.swift
+?? Tests/SharedTests/AgentMemoryTests.swift
+?? Tests/SharedTests/AppleSpeechTests.swift
+?? Tests/SharedTests/BatchOwnershipTests.swift
+?? Tests/SharedTests/LayaRuntimeTests.swift
+?? Tests/SharedTests/NarrowLayaRuntimeTests.swift
+?? Tests/SharedTests/OverlayStateTests.swift
+?? Tests/SharedTests/StreamingTranscriptionTests.swift
+?? VERSION_EVOLUTION_SUMMARY.md
+?? VOICE_AGENT.md

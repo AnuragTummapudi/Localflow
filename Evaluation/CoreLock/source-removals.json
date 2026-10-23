@@ -1,0 +1,13 @@
+[
+  "Package.resolved",
+  "Engines/CascadingSTTEngine.swift",
+  "LocalFlow.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved",
+  "Evaluation/STTBakeoff/fetch_whisper.py",
+  "Engines/ParakeetEngine/ParakeetStreamingEngine.swift",
+  "Engines/ParakeetEngine/ParakeetEngine.swift",
+  "Engines/WhisperEngine/WhisperEngine.swift",
+  "Tests/SharedTests/STTBakeoffTests.swift",
+  "Tests/SharedTests/CascadingSTTEngineTests.swift",
+  "Tests/SharedTests/ParakeetStreamingIntegrationTests.swift",
+  "Features/CommandMode/AgentFinalSpeechPolicy.swift"
+]

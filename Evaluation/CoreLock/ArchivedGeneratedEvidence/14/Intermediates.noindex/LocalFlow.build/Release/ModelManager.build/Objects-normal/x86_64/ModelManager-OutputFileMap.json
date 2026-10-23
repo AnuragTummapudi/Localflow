@@ -1,0 +1,16 @@
+{
+  "" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/ModelManager.build/Objects-normal/x86_64/ModelManager-primary.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/ModelManager.build/Objects-normal/x86_64/ModelManager-primary.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/ModelManager.build/Objects-normal/x86_64/ModelManager-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/ModelManager.build/Objects-normal/x86_64/ModelManager-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/ModelManager.build/Objects-normal/x86_64/ModelManager-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/ModelManager.build/Objects-normal/x86_64/ModelManager-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/ModelManager.build/Objects-normal/x86_64/ModelManager-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/ModelManager.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/ModelManager.build/Objects-normal/x86_64/ModelManager.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/ModelManager.build/Objects-normal/x86_64/ModelManager.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/LocalFlow.build/Release/ModelManager.build/Objects-normal/x86_64/ModelManager.o"
+  }
+}

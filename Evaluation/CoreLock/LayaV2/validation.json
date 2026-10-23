@@ -1,0 +1,51 @@
+{
+  "checkpointSHA256": "b9a7d21a756740a11fe32d1ad44cba73898f96999b060fe437407a5c87c96e9a",
+  "questionsSHA256": "e6ddd9e2ecfc88be47219f339d20ce415e3aea708b4f8445e3c58e77fc874cc4",
+  "baseRevision": "e4e9ddf21a7b1903b7acffd8814ad4307bf63a67",
+  "baseSHA256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+  "trainingCount": 2400,
+  "calibrationCount": 400,
+  "heldoutCount": 600,
+  "humanReviewed": false,
+  "parity": {
+    "passed": true,
+    "decisions": 128,
+    "maxAbsoluteLogitDifference": 3.403425216674805e-05,
+    "argmaxAgreements": 128,
+    "reference": "official laya 0.3.26 token construction and full-precision PyTorch CPU",
+    "firstIPCInferenceMilliseconds": 410.62487500039424,
+    "warmIPC_p50Milliseconds": 466.59729200018774,
+    "warmIPC_p95Milliseconds": 676.0361454998929,
+    "nativeReady": {
+      "coldLoadMilliseconds": 6746.357209,
+      "protocolVersion": 2,
+      "ready": true,
+      "residentBytes": 689553408,
+      "wallColdLoadMilliseconds": 7185.908499999641
+    },
+    "referenceColdLoadMilliseconds": 4449.6503329992265
+  },
+  "policies": {
+    "actionable_command": {
+      "temperature": 3.4673685045253184,
+      "threshold": null,
+      "enabled": false
+    },
+    "needs_more_speech": {
+      "temperature": 1.995262314968881,
+      "threshold": null,
+      "enabled": false
+    },
+    "correction_or_replacement": {
+      "temperature": 2.9739477452346077,
+      "threshold": null,
+      "enabled": false
+    },
+    "coarse_family": {
+      "temperature": 3.1622776601683813,
+      "threshold": null,
+      "enabled": false
+    }
+  },
+  "quality": {}
+}

@@ -1,0 +1,61 @@
+{
+  "": {
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/SharedTests/AgentMemoryTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/AgentMemoryTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/AgentMemoryTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/AgentMemoryTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/AgentMemoryTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/AgentMemoryTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/SharedTests/AppleSpeechTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/AppleSpeechTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/AppleSpeechTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/AppleSpeechTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/AppleSpeechTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/AppleSpeechTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/SharedTests/BatchOwnershipTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/BatchOwnershipTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/BatchOwnershipTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/BatchOwnershipTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/BatchOwnershipTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/BatchOwnershipTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/SharedTests/LayaRuntimeTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/LayaRuntimeTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/LayaRuntimeTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/LayaRuntimeTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/LayaRuntimeTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/LayaRuntimeTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/SharedTests/NarrowLayaRuntimeTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/NarrowLayaRuntimeTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/NarrowLayaRuntimeTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/NarrowLayaRuntimeTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/NarrowLayaRuntimeTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/NarrowLayaRuntimeTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/SharedTests/OverlayStateTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/OverlayStateTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/OverlayStateTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/OverlayStateTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/OverlayStateTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/OverlayStateTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/SharedTests/SharedTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/SharedTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/SharedTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/SharedTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/SharedTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/SharedTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/SharedTests/StreamingTranscriptionTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/StreamingTranscriptionTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/StreamingTranscriptionTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/StreamingTranscriptionTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/StreamingTranscriptionTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/SharedTests.build/StreamingTranscriptionTests.dia"
+  }
+}

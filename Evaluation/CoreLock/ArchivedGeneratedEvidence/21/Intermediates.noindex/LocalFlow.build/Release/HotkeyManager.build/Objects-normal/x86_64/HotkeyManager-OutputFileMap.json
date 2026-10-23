@@ -1,0 +1,16 @@
+{
+  "" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/HotkeyManager.build/Objects-normal/x86_64/HotkeyManager-primary.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/HotkeyManager.build/Objects-normal/x86_64/HotkeyManager-primary.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/HotkeyManager.build/Objects-normal/x86_64/HotkeyManager-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/HotkeyManager.build/Objects-normal/x86_64/HotkeyManager-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/HotkeyManager.build/Objects-normal/x86_64/HotkeyManager-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/HotkeyManager.build/Objects-normal/x86_64/HotkeyManager-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/HotkeyManager.build/Objects-normal/x86_64/HotkeyManager-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/HotkeyManager/HotkeyManager.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/HotkeyManager.build/Objects-normal/x86_64/HotkeyManager.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/HotkeyManager.build/Objects-normal/x86_64/HotkeyManager.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/HotkeyManager.build/Objects-normal/x86_64/HotkeyManager.o"
+  }
+}

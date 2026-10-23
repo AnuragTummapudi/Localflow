@@ -1,0 +1,125 @@
+{
+  "boundary": "Fixed synthetic TTS AIFF-C PCM files, not real microphone. Input-rate real-time pacing. Waveform QC does not prove pronunciation or orthographic casing.",
+  "fixtures": [
+    {
+      "scenario": 1,
+      "sha256": "f37bd2ae372ec6bb9a2d5639bc983542a64c669ffe949965b3db833cfa56ab7f",
+      "channels": 1,
+      "sampleRate": 22050.0,
+      "sampleWidthBits": 16,
+      "compression": "twos",
+      "seconds": 0.7605895691609977,
+      "peakAbsolute": 0.438690185546875,
+      "rms": 0.0935281709608975,
+      "clippedSamples": 0
+    },
+    {
+      "scenario": 2,
+      "sha256": "e939563e7b31ff51789bd9b2cfac17cd6d0b1402ef0828e7391ece705f256f75",
+      "channels": 1,
+      "sampleRate": 22050.0,
+      "sampleWidthBits": 16,
+      "compression": "twos",
+      "seconds": 3.1006349206349206,
+      "peakAbsolute": 0.5374755859375,
+      "rms": 0.10563449675088774,
+      "clippedSamples": 0
+    },
+    {
+      "scenario": 3,
+      "sha256": "1ab97f8d89327748c986d4204ecc987e4a16412928545b1722ed74d93b1d5c0f",
+      "channels": 1,
+      "sampleRate": 22050.0,
+      "sampleWidthBits": 16,
+      "compression": "twos",
+      "seconds": 3.4765532879818593,
+      "peakAbsolute": 0.76910400390625,
+      "rms": 0.10713321125903057,
+      "clippedSamples": 0
+    },
+    {
+      "scenario": 4,
+      "sha256": "840e93374e3c91087c13aec5b2b7fe8372cf7625f7965a5e500d3338eb62cbac",
+      "channels": 1,
+      "sampleRate": 22050.0,
+      "sampleWidthBits": 16,
+      "compression": "twos",
+      "seconds": 0.8560997732426304,
+      "peakAbsolute": 0.77264404296875,
+      "rms": 0.14088808246025128,
+      "clippedSamples": 0
+    },
+    {
+      "scenario": 5,
+      "sha256": "7b63cddbbad63e5277dda1cc46a0d7d640073fcfcd3ed9a85209934fbee7f549",
+      "channels": 1,
+      "sampleRate": 22050.0,
+      "sampleWidthBits": 16,
+      "compression": "twos",
+      "seconds": 1.4676190476190476,
+      "peakAbsolute": 0.539215087890625,
+      "rms": 0.10806381119156419,
+      "clippedSamples": 0
+    },
+    {
+      "scenario": 6,
+      "sha256": "1c7c314d4e66e62111532d2ff5b469fdb1ab16fd40eb47894d40108ced31597f",
+      "channels": 1,
+      "sampleRate": 22050.0,
+      "sampleWidthBits": 16,
+      "compression": "twos",
+      "seconds": 3.1401814058956914,
+      "peakAbsolute": 0.67584228515625,
+      "rms": 0.12225976455602613,
+      "clippedSamples": 0
+    },
+    {
+      "scenario": 7,
+      "sha256": "acd2f8de3582131426f739a978d0f82c39178842e5f49c21f6f8a7dec1d712b0",
+      "channels": 1,
+      "sampleRate": 22050.0,
+      "sampleWidthBits": 16,
+      "compression": "twos",
+      "seconds": 0.9145124716553288,
+      "peakAbsolute": 0.436065673828125,
+      "rms": 0.09904754923671165,
+      "clippedSamples": 0
+    },
+    {
+      "scenario": 8,
+      "sha256": "5ad1d2a30c04cafd7570694e6085a56723f5cc2c78f8335455e367193d17c615",
+      "channels": 1,
+      "sampleRate": 22050.0,
+      "sampleWidthBits": 16,
+      "compression": "twos",
+      "seconds": 1.4946031746031747,
+      "peakAbsolute": 0.65960693359375,
+      "rms": 0.123782692125919,
+      "clippedSamples": 0
+    },
+    {
+      "scenario": 9,
+      "sha256": "3b9e56ce0bd6e9572f11066d40a0647fbd179267eea4379344c8a12e97066b16",
+      "channels": 1,
+      "sampleRate": 22050.0,
+      "sampleWidthBits": 16,
+      "compression": "twos",
+      "seconds": 2.476780045351474,
+      "peakAbsolute": 0.631011962890625,
+      "rms": 0.11776653834032931,
+      "clippedSamples": 0
+    },
+    {
+      "scenario": 10,
+      "sha256": "01537731d74c57e23d6b3889a73879bc0a4959c5b1687ca50014b8339f50f4e1",
+      "channels": 1,
+      "sampleRate": 22050.0,
+      "sampleWidthBits": 16,
+      "compression": "twos",
+      "seconds": 3.355419501133787,
+      "peakAbsolute": 0.802734375,
+      "rms": 0.118296939362987,
+      "clippedSamples": 0
+    }
+  ]
+}

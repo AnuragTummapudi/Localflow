@@ -1,0 +1,32 @@
+[
+  {
+    "name": "native-optimized",
+    "exit": 0,
+    "seconds": 682.8864398750011
+  },
+  {
+    "name": "python-optimized",
+    "exit": 0,
+    "seconds": 637.4854052919982
+  },
+  {
+    "name": "model-108",
+    "exit": 0,
+    "seconds": 448.4692758329984
+  },
+  {
+    "name": "missions-24",
+    "exit": 0,
+    "seconds": 645.2539661670016
+  },
+  {
+    "name": "thinking-24",
+    "exit": 0,
+    "seconds": 542.1350752500002
+  },
+  {
+    "name": "real-read-only",
+    "exit": 0,
+    "seconds": 75.62256179100223
+  }
+]

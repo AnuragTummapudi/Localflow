@@ -1,0 +1,129 @@
+{
+  "" : {
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Tokenizers-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Tokenizers-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Tokenizers-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Tokenizers-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Tokenizers-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/BPETokenizer.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/BPETokenizer.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/BPETokenizer.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/BPETokenizer.dia",
+    "index-unit-output-path" : "/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/BPETokenizer.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/BPETokenizer.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/BPETokenizer.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/BPETokenizer.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/BPETokenizer~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/BertTokenizer.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/BertTokenizer.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/BertTokenizer.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/BertTokenizer.dia",
+    "index-unit-output-path" : "/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/BertTokenizer.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/BertTokenizer.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/BertTokenizer.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/BertTokenizer.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/BertTokenizer~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/ByteEncoder.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/ByteEncoder.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/ByteEncoder.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/ByteEncoder.dia",
+    "index-unit-output-path" : "/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/ByteEncoder.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/ByteEncoder.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/ByteEncoder.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/ByteEncoder.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/ByteEncoder~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/Decoder.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Decoder.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Decoder.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Decoder.dia",
+    "index-unit-output-path" : "/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Decoder.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Decoder.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Decoder.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Decoder.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Decoder~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/Normalizer.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Normalizer.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Normalizer.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Normalizer.dia",
+    "index-unit-output-path" : "/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Normalizer.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Normalizer.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Normalizer.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Normalizer.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Normalizer~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/PostProcessor.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/PostProcessor.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/PostProcessor.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/PostProcessor.dia",
+    "index-unit-output-path" : "/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/PostProcessor.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/PostProcessor.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/PostProcessor.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/PostProcessor.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/PostProcessor~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/PreTokenizer.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/PreTokenizer.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/PreTokenizer.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/PreTokenizer.dia",
+    "index-unit-output-path" : "/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/PreTokenizer.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/PreTokenizer.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/PreTokenizer.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/PreTokenizer.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/PreTokenizer~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/String+PreTokenization.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/String+PreTokenization.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/String+PreTokenization.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/String+PreTokenization.dia",
+    "index-unit-output-path" : "/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/String+PreTokenization.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/String+PreTokenization.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/String+PreTokenization.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/String+PreTokenization.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/String+PreTokenization~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/TokenLattice.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/TokenLattice.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/TokenLattice.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/TokenLattice.dia",
+    "index-unit-output-path" : "/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/TokenLattice.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/TokenLattice.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/TokenLattice.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/TokenLattice.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/TokenLattice~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/Tokenizer.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Tokenizer.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Tokenizer.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Tokenizer.dia",
+    "index-unit-output-path" : "/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Tokenizer.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Tokenizer.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Tokenizer.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Tokenizer.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Tokenizer~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/Trie.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Trie.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Trie.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Trie.dia",
+    "index-unit-output-path" : "/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Trie.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Trie.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Trie.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Trie.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/Trie~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/SourcePackages/checkouts/swift-transformers/Sources/Tokenizers/UnigramTokenizer.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/UnigramTokenizer.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/UnigramTokenizer.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/UnigramTokenizer.dia",
+    "index-unit-output-path" : "/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/UnigramTokenizer.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/UnigramTokenizer.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/UnigramTokenizer.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/UnigramTokenizer.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/AgentDebug/Build/Intermediates.noindex/swift-transformers.build/Debug/Tokenizers.build/Objects-normal/arm64/UnigramTokenizer~partial.swiftmodule"
+  }
+}

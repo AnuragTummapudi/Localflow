@@ -1,0 +1,16 @@
+{
+  "" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/AudioCapture.build/Objects-normal/arm64/AudioCapture-primary.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/AudioCapture.build/Objects-normal/arm64/AudioCapture-primary.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/AudioCapture.build/Objects-normal/arm64/AudioCapture-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/AudioCapture.build/Objects-normal/arm64/AudioCapture-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/AudioCapture.build/Objects-normal/arm64/AudioCapture-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/AudioCapture.build/Objects-normal/arm64/AudioCapture-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/AudioCapture.build/Objects-normal/arm64/AudioCapture-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/AudioCapture/AudioCaptureSession.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/AudioCapture.build/Objects-normal/arm64/AudioCaptureSession.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/AudioCapture.build/Objects-normal/arm64/AudioCaptureSession.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/AudioCapture.build/Objects-normal/arm64/AudioCaptureSession.o"
+  }
+}

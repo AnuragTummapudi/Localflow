@@ -1,0 +1,21 @@
+{
+  "" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SmartFormatting.build/Objects-normal/x86_64/SmartFormatting-primary.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SmartFormatting.build/Objects-normal/x86_64/SmartFormatting-primary.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SmartFormatting.build/Objects-normal/x86_64/SmartFormatting-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SmartFormatting.build/Objects-normal/x86_64/SmartFormatting-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SmartFormatting.build/Objects-normal/x86_64/SmartFormatting-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SmartFormatting.build/Objects-normal/x86_64/SmartFormatting-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SmartFormatting.build/Objects-normal/x86_64/SmartFormatting-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/SmartFormatting/LocalWritingAssistant.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/SmartFormatting.build/Objects-normal/x86_64/LocalWritingAssistant.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SmartFormatting.build/Objects-normal/x86_64/LocalWritingAssistant.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SmartFormatting.build/Objects-normal/x86_64/LocalWritingAssistant.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/SmartFormatting/SmartFormatting.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/SmartFormatting.build/Objects-normal/x86_64/SmartFormatting.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SmartFormatting.build/Objects-normal/x86_64/SmartFormatting.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SmartFormatting.build/Objects-normal/x86_64/SmartFormatting.o"
+  }
+}

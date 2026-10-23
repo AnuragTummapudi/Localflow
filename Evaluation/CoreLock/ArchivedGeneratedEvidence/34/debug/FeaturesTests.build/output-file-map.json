@@ -1,0 +1,103 @@
+{
+  "": {
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/FeaturesTests/AgentOperationalTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/AgentOperationalTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/AgentOperationalTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/AgentOperationalTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/AgentOperationalTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/AgentOperationalTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/FeaturesTests/DecisionEngineTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/DecisionEngineTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/DecisionEngineTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/DecisionEngineTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/DecisionEngineTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/DecisionEngineTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/FeaturesTests/FeaturesTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/FeaturesTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/FeaturesTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/FeaturesTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/FeaturesTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/FeaturesTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/FeaturesTests/InsightsStatsTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/InsightsStatsTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/InsightsStatsTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/InsightsStatsTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/InsightsStatsTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/InsightsStatsTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/FeaturesTests/LocalSettingsTestCase.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/LocalSettingsTestCase.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/LocalSettingsTestCase.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/LocalSettingsTestCase~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/LocalSettingsTestCase.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/LocalSettingsTestCase.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/FeaturesTests/NarrowDecisionTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/NarrowDecisionTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/NarrowDecisionTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/NarrowDecisionTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/NarrowDecisionTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/NarrowDecisionTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/FeaturesTests/NativeToolTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/NativeToolTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/NativeToolTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/NativeToolTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/NativeToolTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/NativeToolTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/FeaturesTests/PayloadCanonicalizationTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/PayloadCanonicalizationTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/PayloadCanonicalizationTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/PayloadCanonicalizationTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/PayloadCanonicalizationTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/PayloadCanonicalizationTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/FeaturesTests/PayloadRealityTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/PayloadRealityTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/PayloadRealityTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/PayloadRealityTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/PayloadRealityTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/PayloadRealityTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/FeaturesTests/RealityCorpusTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/RealityCorpusTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/RealityCorpusTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/RealityCorpusTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/RealityCorpusTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/RealityCorpusTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/FeaturesTests/SmartFormattingTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/SmartFormattingTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/SmartFormattingTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/SmartFormattingTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/SmartFormattingTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/SmartFormattingTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/FeaturesTests/SpeechCleanupTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/SpeechCleanupTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/SpeechCleanupTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/SpeechCleanupTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/SpeechCleanupTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/SpeechCleanupTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/FeaturesTests/VoiceAgentTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/VoiceAgentTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/VoiceAgentTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/VoiceAgentTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/VoiceAgentTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/VoiceAgentTests.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Tests/FeaturesTests/VoiceContinuationTests.swift": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/VoiceContinuationTests.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/VoiceContinuationTests.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/VoiceContinuationTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/VoiceContinuationTests.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/arm64-apple-macosx/debug/FeaturesTests.build/VoiceContinuationTests.dia"
+  }
+}

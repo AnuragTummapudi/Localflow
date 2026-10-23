@@ -1,0 +1,61 @@
+{
+  "experiment": "LocalFlow-Laya-v2",
+  "baseProvenance": {
+    "model": "convaiinnovations/laya-multilingual",
+    "revision": "e4e9ddf21a7b1903b7acffd8814ad4307bf63a67",
+    "hashes": {
+      "encoder/config.json": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4",
+      "tokenizer/tokenizer.json": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+      "tokenizer/tokenizer_config.json": "424b69444bf7b5809dc2cd2e36d0bd71b8055124dd24274d6db3c655d38205e7",
+      "rl_agent_config.json": "25061739243b617ad88d1219ba6f8a9c86c5881ca28df024fa2d9b3b2fcc30c6",
+      "model.safetensors": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204"
+    }
+  },
+  "baseSHA256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+  "dependencies": {
+    "torch": "2.14.1",
+    "transformers": "5.18.0",
+    "numpy": "2.4.6",
+    "safetensors": "0.8.0",
+    "laya": "0.3.26"
+  },
+  "seed": 722041,
+  "epochs": 1,
+  "gradAccum": 32,
+  "microBatch": 1,
+  "device": "mps",
+  "trainingDtype": "float32",
+  "loss": "ce",
+  "labelTargets": "one-hot supervised; independent soft teacher targets unavailable",
+  "optimizer": {
+    "name": "AdamW",
+    "encoderLR": 2.5e-05,
+    "headLR": 0.0001,
+    "weightDecay": 0.01
+  },
+  "scheduler": {
+    "name": "cosine",
+    "updates": 285,
+    "minLR": 1e-06
+  },
+  "clipNorm": 1.0,
+  "projections": 0,
+  "sigma": [
+    0.4,
+    0.1
+  ],
+  "properRewardWeights": [
+    0.75,
+    1.0
+  ],
+  "recipeRevision": "2e4d9c87e8b1621deb344eac7de5c7258f32f849",
+  "datasetManifestSHA256": "d28dc76edb61d94996ce7b244eaa84d52ea62cfb4ea3245b764719e76a961a66",
+  "splitHashes": {
+    "train": "ba262b61ce837d54507639720b5213ca25a2f1bab8e6c4a685c95f5997fa8954",
+    "calibration": "838752d1943227ed2695c49f31c52fc75d3be36379a59f8a5f97ed2e4d3cf4d7",
+    "test": "e4fefef8ec7cbe57e3c59e42bc84652d4350b1faf53f1db7cd5138a2a1a4a653"
+  },
+  "pipelineSHA256": "6f22664e5e4ee4bba638b7ac5f23f4eb15987fb07edee7edbc414862b73750fb",
+  "reusedPipelineSHA256": "87e6a6681684d220f8f29ae20dcdf6eb8aee24dc2ae263dcaf3f011129c476e5",
+  "questionSHA256": "d7edcae8836455b3c7032d122054f393a39a3243a86464f9aea14d9187acb852"
+}

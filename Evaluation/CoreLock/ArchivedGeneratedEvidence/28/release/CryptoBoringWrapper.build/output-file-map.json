@@ -1,0 +1,55 @@
+{
+  "": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/CryptoBoringWrapper.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/CryptoBoringWrapper.o",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/checkouts/swift-crypto/Sources/CryptoBoringWrapper/AEAD/BoringSSLAEAD.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/BoringSSLAEAD.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/BoringSSLAEAD~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/BoringSSLAEAD.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/BoringSSLAEAD.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/checkouts/swift-crypto/Sources/CryptoBoringWrapper/CryptoKitErrors_boring.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/CryptoKitErrors_boring.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/CryptoKitErrors_boring~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/CryptoKitErrors_boring.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/CryptoKitErrors_boring.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/checkouts/swift-crypto/Sources/CryptoBoringWrapper/EC/EllipticCurve.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/EllipticCurve.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/EllipticCurve~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/EllipticCurve.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/EllipticCurve.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/checkouts/swift-crypto/Sources/CryptoBoringWrapper/EC/EllipticCurvePoint.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/EllipticCurvePoint.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/EllipticCurvePoint~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/EllipticCurvePoint.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/EllipticCurvePoint.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/checkouts/swift-crypto/Sources/CryptoBoringWrapper/Util/ArbitraryPrecisionInteger.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/ArbitraryPrecisionInteger.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/ArbitraryPrecisionInteger~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/ArbitraryPrecisionInteger.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/ArbitraryPrecisionInteger.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/checkouts/swift-crypto/Sources/CryptoBoringWrapper/Util/FiniteFieldArithmeticContext.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/FiniteFieldArithmeticContext.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/FiniteFieldArithmeticContext~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/FiniteFieldArithmeticContext.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/FiniteFieldArithmeticContext.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/checkouts/swift-crypto/Sources/CryptoBoringWrapper/Util/RandomBytes.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/RandomBytes.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/RandomBytes~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/RandomBytes.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/RandomBytes.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/DerivedSources/resource_bundle_accessor.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/resource_bundle_accessor.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/resource_bundle_accessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/resource_bundle_accessor.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-helper/arm64-apple-macosx/release/CryptoBoringWrapper.build/resource_bundle_accessor.dia"
+  }
+}

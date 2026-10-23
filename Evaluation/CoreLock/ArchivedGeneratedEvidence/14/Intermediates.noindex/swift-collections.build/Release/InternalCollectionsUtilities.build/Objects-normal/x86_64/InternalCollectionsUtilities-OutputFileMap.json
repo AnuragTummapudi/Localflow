@@ -1,0 +1,106 @@
+{
+  "" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/InternalCollectionsUtilities-primary.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/InternalCollectionsUtilities-primary.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/InternalCollectionsUtilities-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/InternalCollectionsUtilities-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/InternalCollectionsUtilities-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/InternalCollectionsUtilities-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/InternalCollectionsUtilities-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/Debugging.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/Debugging.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/Debugging.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/Debugging.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/Descriptions.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/Descriptions.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/Descriptions.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/Descriptions.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/IntegerTricks/FixedWidthInteger+roundUpToPowerOfTwo.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/FixedWidthInteger+roundUpToPowerOfTwo.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/FixedWidthInteger+roundUpToPowerOfTwo.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/FixedWidthInteger+roundUpToPowerOfTwo.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/IntegerTricks/Integer rank.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/Integer rank.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/Integer rank.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/Integer rank.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/IntegerTricks/UInt+first and last set bit.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UInt+first and last set bit.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UInt+first and last set bit.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UInt+first and last set bit.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/IntegerTricks/UInt+reversed.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UInt+reversed.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UInt+reversed.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UInt+reversed.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/LifetimeOverride.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/LifetimeOverride.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/LifetimeOverride.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/LifetimeOverride.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/RandomAccessCollection+Offsets.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/RandomAccessCollection+Offsets.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/RandomAccessCollection+Offsets.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/RandomAccessCollection+Offsets.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/Span+Extras.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/Span+Extras.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/Span+Extras.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/Span+Extras.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/String+Padding.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/String+Padding.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/String+Padding.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/String+Padding.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/UnsafeBitSet/_UnsafeBitSet+Index.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/_UnsafeBitSet+Index.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/_UnsafeBitSet+Index.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/_UnsafeBitSet+Index.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/UnsafeBitSet/_UnsafeBitSet+_Word.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/_UnsafeBitSet+_Word.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/_UnsafeBitSet+_Word.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/_UnsafeBitSet+_Word.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/UnsafeBitSet/_UnsafeBitSet.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/_UnsafeBitSet.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/_UnsafeBitSet.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/_UnsafeBitSet.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/UnsafeBufferPointer+Extras.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UnsafeBufferPointer+Extras.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UnsafeBufferPointer+Extras.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UnsafeBufferPointer+Extras.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/UnsafeMutableBufferPointer+Extras.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UnsafeMutableBufferPointer+Extras.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UnsafeMutableBufferPointer+Extras.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UnsafeMutableBufferPointer+Extras.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/UnsafeMutableRawBufferPointer+Extras.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UnsafeMutableRawBufferPointer+Extras.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UnsafeMutableRawBufferPointer+Extras.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UnsafeMutableRawBufferPointer+Extras.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/UnsafeRawBufferPointer+Extras.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UnsafeRawBufferPointer+Extras.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UnsafeRawBufferPointer+Extras.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/UnsafeRawBufferPointer+Extras.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/_SortedCollection.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/_SortedCollection.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/_SortedCollection.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/_SortedCollection.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/SourcePackages/checkouts/swift-collections/Sources/InternalCollectionsUtilities/_UniqueCollection.swift" : {
+    "index-unit-output-path" : "/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/_UniqueCollection.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/_UniqueCollection.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/onboarding-derived/Build/Intermediates.noindex/swift-collections.build/Release/InternalCollectionsUtilities.build/Objects-normal/x86_64/_UniqueCollection.o"
+  }
+}

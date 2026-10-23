@@ -1,0 +1,76 @@
+{
+  "" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCore-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/ArgmaxCoreError.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCoreError.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCoreError.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ArgmaxCoreError.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/ConcurrencyUtilities.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ConcurrencyUtilities.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ConcurrencyUtilities.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ConcurrencyUtilities.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/FloatType.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/FloatType.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/FloatType.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/FloatType.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/FoundationExtensions.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/FoundationExtensions.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/FoundationExtensions.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/FoundationExtensions.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/Logging.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/Logging.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/Logging.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/Logging.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/MLModelExtensions.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLModelExtensions.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLModelExtensions.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLModelExtensions.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/MLModelLoading.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLModelLoading.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLModelLoading.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLModelLoading.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/MLMultiArrayExtensions.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLMultiArrayExtensions.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLMultiArrayExtensions.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLMultiArrayExtensions.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/MLTensorExtensions.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLTensorExtensions.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLTensorExtensions.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/MLTensorExtensions.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/ModelDownloader.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelDownloader.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelDownloader.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelDownloader.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/ModelManager.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelManager.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelManager.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelManager.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/ModelState.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelState.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelState.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelState.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/SourcePackages/checkouts/argmax-oss-swift/Sources/ArgmaxCore/ModelUtilities.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/whisperkit.build/Release/ArgmaxCore.build/Objects-normal/arm64/ModelUtilities.o"
+  }
+}

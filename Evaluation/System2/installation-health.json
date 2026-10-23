@@ -1,0 +1,16 @@
+{
+  "experimentalEnabled" : false,
+  "installed" : true,
+  "modelBytes" : 3061128063,
+  "residentAfterSetup" : false,
+  "residentDuringHealthProbe" : true,
+  "revision" : "32f3e8ecf65426fc3306969496342d504bfa13f3",
+  "runtime" : {
+    "coldLoadMS" : 3683.8756666693371,
+    "mlxActiveBytes" : 2367679904,
+    "mlxPeakBytes" : 3034562212,
+    "prefixPrepareMS" : 25896.694416667742,
+    "rssBytes" : 600145920
+  },
+  "status" : "Ready"
+}

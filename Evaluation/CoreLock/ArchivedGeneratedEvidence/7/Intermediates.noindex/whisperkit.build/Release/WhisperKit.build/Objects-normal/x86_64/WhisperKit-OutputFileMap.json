@@ -1,0 +1,131 @@
+{
+  "" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/WhisperKit-primary.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/WhisperKit-primary.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/WhisperKit-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/WhisperKit-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/WhisperKit-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/WhisperKit-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/WhisperKit-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Audio/AudioChunker.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/AudioChunker.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/AudioChunker.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/AudioChunker.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Audio/AudioProcessor.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/AudioProcessor.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/AudioProcessor.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/AudioProcessor.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Audio/AudioStreamTranscriber.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/AudioStreamTranscriber.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/AudioStreamTranscriber.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/AudioStreamTranscriber.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Audio/EnergyVAD.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/EnergyVAD.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/EnergyVAD.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/EnergyVAD.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Audio/VoiceActivityDetector.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/VoiceActivityDetector.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/VoiceActivityDetector.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/VoiceActivityDetector.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/AudioEncoder.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/AudioEncoder.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/AudioEncoder.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/AudioEncoder.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Configurations.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Configurations.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Configurations.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Configurations.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/FeatureExtractor.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/FeatureExtractor.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/FeatureExtractor.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/FeatureExtractor.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Models.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Models.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Models.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Models.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Text/LogitsFilter.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/LogitsFilter.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/LogitsFilter.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/LogitsFilter.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Text/SegmentSeeker.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/SegmentSeeker.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/SegmentSeeker.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/SegmentSeeker.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/Text/TokenSampler.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/TokenSampler.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/TokenSampler.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/TokenSampler.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/TextDecoder.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/TextDecoder.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/TextDecoder.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/TextDecoder.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/TranscribeTask.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/TranscribeTask.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/TranscribeTask.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/TranscribeTask.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Core/WhisperKit.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/WhisperKit.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/WhisperKit.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/WhisperKit.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/Concurrency.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Concurrency.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Concurrency.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Concurrency.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/Extensions+Internal.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Extensions+Internal.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Extensions+Internal.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Extensions+Internal.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/Extensions+Public.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Extensions+Public.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Extensions+Public.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Extensions+Public.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/Logging.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Logging.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Logging.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/Logging.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/ModelUtilities.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/ModelUtilities.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/ModelUtilities.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/ModelUtilities.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/ResultWriter.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/ResultWriter.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/ResultWriter.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/ResultWriter.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/TextUtilities.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/TextUtilities.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/TextUtilities.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/TextUtilities.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/TranscriptionUtilities.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/TranscriptionUtilities.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/TranscriptionUtilities.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/TranscriptionUtilities.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/SourcePackages/checkouts/argmax-oss-swift/Sources/WhisperKit/Utilities/WhisperError.swift" : {
+    "index-unit-output-path" : "/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/WhisperError.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/WhisperError.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/whisperkit.build/Release/WhisperKit.build/Objects-normal/x86_64/WhisperError.o"
+  }
+}

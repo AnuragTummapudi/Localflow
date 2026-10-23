@@ -1,0 +1,22 @@
+[
+  {
+    "path": "/Users/anuragtummapudi/Library/Application Support/LocalFlow/Models/laya/laya.onnx.data",
+    "bytes": 1685258240,
+    "sha256": "c1c08150e12327b306ed5389a9e5768c69ee068ed591362911fa67da3b6ee387"
+  },
+  {
+    "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-production-package/laya.onnx.data",
+    "bytes": 1685258240,
+    "sha256": "c1c08150e12327b306ed5389a9e5768c69ee068ed591362911fa67da3b6ee387"
+  },
+  {
+    "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/laya.onnx.data",
+    "bytes": 1685258240,
+    "sha256": "c1c08150e12327b306ed5389a9e5768c69ee068ed591362911fa67da3b6ee387"
+  },
+  {
+    "path": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/reality-gate/quantization-source/laya.onnx.data",
+    "bytes": 1685258240,
+    "sha256": "c1c08150e12327b306ed5389a9e5768c69ee068ed591362911fa67da3b6ee387"
+  }
+]

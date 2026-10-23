@@ -1,0 +1,12 @@
+{
+  "reference": "multilingual-mps-fp32",
+  "candidate": "multilingual-mps-fp16",
+  "decisions": 560,
+  "argmaxDisagreements": 0,
+  "agreement": 1.0,
+  "maximumAbsoluteLogitDrift": 0.10263824462890625,
+  "meanAbsoluteLogitDrift": 0.0032991213978540083,
+  "disagreements": [],
+  "productionAccepted": false,
+  "reason": "Measured latency and selective safety targets still unsatisfied."
+}

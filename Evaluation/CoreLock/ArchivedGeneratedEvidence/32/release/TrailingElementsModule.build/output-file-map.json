@@ -1,0 +1,25 @@
+{
+  "": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/TrailingElementsModule.build/TrailingElementsModule.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/TrailingElementsModule.build/TrailingElementsModule.o",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/TrailingElementsModule.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-collections/Sources/TrailingElementsModule/TrailingArray.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/TrailingElementsModule.build/TrailingArray.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/TrailingElementsModule.build/TrailingArray~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/TrailingElementsModule.build/TrailingArray.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/TrailingElementsModule.build/TrailingArray.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-collections/Sources/TrailingElementsModule/TrailingElements.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/TrailingElementsModule.build/TrailingElements.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/TrailingElementsModule.build/TrailingElements~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/TrailingElementsModule.build/TrailingElements.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/TrailingElementsModule.build/TrailingElements.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-collections/Sources/TrailingElementsModule/TrailingPadding.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/TrailingElementsModule.build/TrailingPadding.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/TrailingElementsModule.build/TrailingPadding~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/TrailingElementsModule.build/TrailingPadding.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/TrailingElementsModule.build/TrailingPadding.dia"
+  }
+}

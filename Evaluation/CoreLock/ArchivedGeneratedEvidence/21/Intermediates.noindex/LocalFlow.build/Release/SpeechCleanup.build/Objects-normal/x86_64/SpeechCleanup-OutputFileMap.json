@@ -1,0 +1,26 @@
+{
+  "" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SpeechCleanup.build/Objects-normal/x86_64/SpeechCleanup-primary.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SpeechCleanup.build/Objects-normal/x86_64/SpeechCleanup-primary.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SpeechCleanup.build/Objects-normal/x86_64/SpeechCleanup-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SpeechCleanup.build/Objects-normal/x86_64/SpeechCleanup-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SpeechCleanup.build/Objects-normal/x86_64/SpeechCleanup-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SpeechCleanup.build/Objects-normal/x86_64/SpeechCleanup-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SpeechCleanup.build/Objects-normal/x86_64/SpeechCleanup-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SpeechCleanup.build/DerivedSources/resource_bundle_accessor.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/SpeechCleanup.build/Objects-normal/x86_64/resource_bundle_accessor.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SpeechCleanup.build/Objects-normal/x86_64/resource_bundle_accessor.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SpeechCleanup.build/Objects-normal/x86_64/resource_bundle_accessor.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/SpeechCleanup/SpeechCleanup.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/SpeechCleanup.build/Objects-normal/x86_64/SpeechCleanup.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SpeechCleanup.build/Objects-normal/x86_64/SpeechCleanup.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SpeechCleanup.build/Objects-normal/x86_64/SpeechCleanup.o"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Features/SpeechCleanup/SpeechCleanupConfig.swift" : {
+    "index-unit-output-path" : "/LocalFlow.build/Release/SpeechCleanup.build/Objects-normal/x86_64/SpeechCleanupConfig.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SpeechCleanup.build/Objects-normal/x86_64/SpeechCleanupConfig.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/xcode-derived/Build/Intermediates.noindex/LocalFlow.build/Release/SpeechCleanup.build/Objects-normal/x86_64/SpeechCleanupConfig.o"
+  }
+}

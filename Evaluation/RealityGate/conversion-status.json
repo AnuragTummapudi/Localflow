@@ -1,0 +1,33 @@
+{
+  "coremlEP": {
+    "status": "FAILED",
+    "attempts": 2,
+    "runtime": "onnxruntime 1.24.2",
+    "failure": "CoreML partition initialization: axis 2 is not in valid range [-2,1]. Same failure with ORT graph optimizations disabled.",
+    "numericBenchmark": null,
+    "installed": false
+  },
+  "directCoreML": {
+    "status": "FAILED",
+    "tool": "coremltools 9.0; torch 2.14.1 not tested by this converter",
+    "attempts": 3,
+    "failures": [
+      "aten::new_ones converter missing",
+      "mixed integer/boolean aten::bitwise_and unsupported",
+      "boolean attention input still reaches mixed integer/boolean mask operation"
+    ],
+    "numericBenchmark": null,
+    "installed": false
+  },
+  "int8Conversion": {
+    "status": "CONVERTED, evaluated, rejected for production",
+    "attempts": 3,
+    "repairs": [
+      "Used single-link APFS clones; retained ONNX hardlink security check",
+      "Regenerated stale intermediate shape annotations; retained operators, weights and input/output contract"
+    ],
+    "sha256": "9440f721eca3ede5d5da2a89453aee25856ac5cc1a02fda5485727bc00e2969c",
+    "quality": "75/560 answer disagreements; 11 demotions of FP32 consequential predictions, three consequential-gold held-out demotions",
+    "productionAccepted": false
+  }
+}

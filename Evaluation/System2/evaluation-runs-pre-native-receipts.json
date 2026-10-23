@@ -1,0 +1,22 @@
+[
+  {
+    "name": "native-optimized",
+    "exit": 0,
+    "seconds": 621.2789751249984
+  },
+  {
+    "name": "python-optimized",
+    "exit": 0,
+    "seconds": 410.85604958300246
+  },
+  {
+    "name": "model-108",
+    "exit": 0,
+    "seconds": 407.93169866600147
+  },
+  {
+    "name": "real-read-only",
+    "exit": 0,
+    "seconds": 50.01797174999956
+  }
+]

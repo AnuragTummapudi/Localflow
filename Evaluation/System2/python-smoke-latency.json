@@ -1,0 +1,56 @@
+{
+  "runtime": "python",
+  "command": [
+    "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/system2/python/bin/python",
+    "/Users/anuragtummapudi/Localflow-project/LocalFlow/Evaluation/System2/python_helper.py",
+    "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/system2/candidate"
+  ],
+  "load": {
+    "ready": true,
+    "coldLoadMS": 3201.6236250019574,
+    "rssBytes": 2240888832,
+    "mlxActiveBytes": 2367528456,
+    "mlxPeakBytes": 2367528456
+  },
+  "samplesPerModeCase": 5,
+  "firstOnly": false,
+  "rssSemantics": "high-water RSS",
+  "rows": [
+    {
+      "case": "one",
+      "thinking": false,
+      "sample": 0,
+      "warmup": true,
+      "wallMS": 23446.51858299767,
+      "reply": {
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "ttftMS": "22101.27379199912",
+        "firstToolCallMS": "23359.21958399922",
+        "planMS": "23445.82900000023",
+        "tokens": "27",
+        "tokensPerSecond": "20.5459672261182",
+        "rssBytes": "2240888832",
+        "mlxActiveBytes": "2368036362",
+        "mlxPeakBytes": "3920187444"
+      }
+    },
+    {
+      "case": "one",
+      "thinking": true,
+      "sample": 0,
+      "warmup": true,
+      "wallMS": 27906.659666998166,
+      "reply": {
+        "output": "<tool_call>\n<function=project.resolve>\n<parameter=name>\nLocalFlow\n</parameter>\n</function>\n</tool_call>",
+        "ttftMS": "19575.84562500051",
+        "firstToolCallMS": "27812.613000001875",
+        "planMS": "27901.199792002444",
+        "tokens": "156",
+        "tokensPerSecond": "18.818973212895735",
+        "rssBytes": "2240888832",
+        "mlxActiveBytes": "2368036362",
+        "mlxPeakBytes": "3920187444"
+      }
+    }
+  ]
+}

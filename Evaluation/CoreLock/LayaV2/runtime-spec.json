@@ -1,0 +1,9 @@
+{
+  "protocolVersion": 2,
+  "maxLength": 1024,
+  "headMaxLength": 256,
+  "clsToken": "<bos>",
+  "sepToken": "<eos>",
+  "maskToken": "<mask>",
+  "padToken": "<pad>"
+}

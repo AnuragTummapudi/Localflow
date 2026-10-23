@@ -1,0 +1,12 @@
+{
+  "source": "calibration.jsonl only; never test.jsonl",
+  "calibrationSHA256": "825e9f6567aa3d5530ec84ffec3a85e2bd5b68f344a636a63e1b3a8a882bedc7",
+  "temperatures": {
+    "intent": 5.41169526546464,
+    "risk": 8.709635899560809,
+    "more_speech": 10.000000000000007,
+    "command": 8.066156921766142,
+    "ambiguous": 10.000000000000007
+  },
+  "productionEnabled": false
+}

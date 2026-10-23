@@ -1,0 +1,209 @@
+{
+  "" : {
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlow-primary.dia",
+    "emit-module-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlow-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlow-primary-emit-module.dia",
+    "pch" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlow-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlow-primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/AppDelegate.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/AppDelegate.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/AppDelegate.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/AppDelegate.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/AppDelegate.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/AppDelegate.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/AppDelegate.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/AppDelegate.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/AppDelegate~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/AppServices.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/AppServices.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/AppServices.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/AppServices.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/AppServices.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/AppServices.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/AppServices.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/AppServices.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/AppServices~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/CommandConfirmationView.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/CommandConfirmationView.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/CommandConfirmationView.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/CommandConfirmationView.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/CommandConfirmationView.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/CommandConfirmationView.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/CommandConfirmationView.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/CommandConfirmationView.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/CommandConfirmationView~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/DictationCoordinator.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictationCoordinator.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictationCoordinator.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictationCoordinator.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictationCoordinator.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictationCoordinator.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictationCoordinator.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictationCoordinator.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictationCoordinator~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/DictationPane.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictationPane.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictationPane.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictationPane.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictationPane.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictationPane.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictationPane.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictationPane.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictationPane~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/DictionaryPane.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictionaryPane.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictionaryPane.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictionaryPane.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictionaryPane.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictionaryPane.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictionaryPane.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictionaryPane.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/DictionaryPane~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/FloatingResultCardController.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/FloatingResultCardController.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/FloatingResultCardController.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/FloatingResultCardController.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/FloatingResultCardController.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/FloatingResultCardController.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/FloatingResultCardController.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/FloatingResultCardController.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/FloatingResultCardController~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/FloatingResultCardView.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/FloatingResultCardView.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/FloatingResultCardView.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/FloatingResultCardView.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/FloatingResultCardView.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/FloatingResultCardView.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/FloatingResultCardView.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/FloatingResultCardView.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/FloatingResultCardView~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/InsightsPane.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/InsightsPane.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/InsightsPane.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/InsightsPane.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/InsightsPane.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/InsightsPane.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/InsightsPane.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/InsightsPane.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/InsightsPane~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/LaunchAtLoginController.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LaunchAtLoginController.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LaunchAtLoginController.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LaunchAtLoginController.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LaunchAtLoginController.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LaunchAtLoginController.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LaunchAtLoginController.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LaunchAtLoginController.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LaunchAtLoginController~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/LaunchLogoView.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LaunchLogoView.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LaunchLogoView.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LaunchLogoView.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LaunchLogoView.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LaunchLogoView.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LaunchLogoView.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LaunchLogoView.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LaunchLogoView~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/LocalFlowApp.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlowApp.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlowApp.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlowApp.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlowApp.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlowApp.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlowApp.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlowApp.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlowApp~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/LocalFlowDesign.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlowDesign.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlowDesign.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlowDesign.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlowDesign.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlowDesign.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlowDesign.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlowDesign.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/LocalFlowDesign~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/MenuBarController.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/MenuBarController.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/MenuBarController.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/MenuBarController.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/MenuBarController.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/MenuBarController.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/MenuBarController.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/MenuBarController.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/MenuBarController~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/OnboardingView.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/OnboardingView.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/OnboardingView.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/OnboardingView.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/OnboardingView.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/OnboardingView.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/OnboardingView.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/OnboardingView.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/OnboardingView~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/OverlayWindowController.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/OverlayWindowController.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/OverlayWindowController.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/OverlayWindowController.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/OverlayWindowController.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/OverlayWindowController.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/OverlayWindowController.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/OverlayWindowController.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/OverlayWindowController~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/SettingsRootView.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/SettingsRootView.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/SettingsRootView.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/SettingsRootView.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/SettingsRootView.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/SettingsRootView.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/SettingsRootView.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/SettingsRootView.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/SettingsRootView~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/SettingsViewModel.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/SettingsViewModel.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/SettingsViewModel.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/SettingsViewModel.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/SettingsViewModel.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/SettingsViewModel.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/SettingsViewModel.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/SettingsViewModel.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/SettingsViewModel~partial.swiftmodule"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/App/WaveformOverlayView.swift" : {
+    "const-values" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/WaveformOverlayView.swiftconstvalues",
+    "dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/WaveformOverlayView.d",
+    "diagnostics" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/WaveformOverlayView.dia",
+    "index-unit-output-path" : "/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/WaveformOverlayView.o",
+    "llvm-bc" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/WaveformOverlayView.bc",
+    "object" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/WaveformOverlayView.o",
+    "swift-dependencies" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/WaveformOverlayView.swiftdeps",
+    "swiftmodule" : "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/ReleaseDerivedData/Build/Intermediates.noindex/LocalFlow.build/Release/LocalFlow.build/Objects-normal/x86_64/WaveformOverlayView~partial.swiftmodule"
+  }
+}

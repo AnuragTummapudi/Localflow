@@ -1,0 +1,26 @@
+{
+  "gitDiffCheckExit": 0,
+  "trailingWhitespace": [],
+  "installedRuntimeHashesMatch": {
+    "localflow-qwen": true,
+    "mlx.metallib": true,
+    "localflow-workflow-guard": true
+  },
+  "sourceSHA256": {
+    "Features/CommandMode/PlannerGoalEnvelope.swift": "6c197fb7c3db4d4be40c1c556ddcf6cdb85e208243914b1868d59ae5012202e0",
+    "Features/CommandMode/PlannerContract.swift": "f369ca87eadbaa059574e08061cbd2b18baf3468b864d1586ab4a50bc7ac156c",
+    "Features/CommandMode/PlannerRuntime.swift": "fc8a77a925e1a6e71626465715ea7b84ad07eeb459e14bf78c2a73c1a8a3ca68",
+    "Features/CommandMode/VoiceAgentCoordinator.swift": "344e3aa5946570e0be4cb82439f96cb6527cdf2850d62919fb9cf1a33c336f7a",
+    "Core/ModelManager/PlannerModelManager.swift": "18e82964d2b93d4199d33bcd0c4e8b213e703f47b403523e7d403000a8e633fc",
+    "Core/ModelManager/Resources/PlannerRuntime/QwenHelper/Sources/QwenHelper/main.swift": "be42415d36c8fcf47a92da49d77f0fd2a67b9ffe2e41e243ad0a4e0c6898ddea",
+    "Tests/FeaturesTests/PlannerFocusedTests.swift": "a8a75a42f4112d3c7337aac5aa850766e614ec4bdadb9ed308c4bd8e2663d13e",
+    "Tests/FeaturesTests/PlannerTests.swift": "8c394d63c6e8ed3cec9c1352ceb18edb72a261d23953dfb0c464f55f29eb4a85",
+    "Tests/FeaturesTests/PlannerBenchmarkTests.swift": "461a22cf0c1c594bdd5dbba63df46eda6cc16183eaedc60464283fbccab49eca",
+    "SYSTEM2_PLANNER.md": "15b1992dae4b0f6d5c3962cb3ae7b5be4cf543bf3ab0678cfe01a08cc6e94e39",
+    "SYSTEM2_FOCUSED_REPORT.md": "10d064e0802ede82f0dd69165664df238612b45c8bc6911d6d3e6038fa437938",
+    "Evaluation/System2Focused/summarize.py": "59b287498eea08860690ecf2737d058a6a68d3aea651e51515cb6cdf4fb5548e"
+  },
+  "fullSwiftPassed": true,
+  "unsignedDebugPassed": true,
+  "note": "After the single full run only opt-in evaluation scoring/gold metadata was corrected; production source is unchanged."
+}

@@ -1,0 +1,13 @@
+{
+  "description": "Synthetic local ASR safety fixtures; calibration split is separate from held-out regression traces. A positive means a uniquely matched opening clause with a following explicit command boundary. No model-confidence claim is made.",
+  "calibration": [
+    {"observations":1,"age":0.1,"safe":false},
+    {"observations":1,"age":1.5,"safe":false},
+    {"observations":2,"age":0.2,"safe":false},
+    {"observations":3,"age":0.4,"safe":false},
+    {"observations":2,"age":0.7,"safe":true},
+    {"observations":3,"age":0.9,"safe":true},
+    {"observations":4,"age":1.2,"safe":true},
+    {"observations":2,"age":1.4,"safe":true}
+  ]
+}

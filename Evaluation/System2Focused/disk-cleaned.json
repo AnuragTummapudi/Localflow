@@ -1,0 +1,20 @@
+{
+  "removed": [
+    {
+      "path": ".build/system2/candidate",
+      "logicalBytes": 3061127002,
+      "reason": "verified duplicate model staging"
+    },
+    {
+      "path": ".build/system2/python",
+      "logicalBytes": 444354224,
+      "reason": "obsolete comparator environment"
+    },
+    {
+      "path": ".build/system2/xcode",
+      "logicalBytes": 378271952,
+      "reason": "superseded failed native Xcode helper build"
+    }
+  ],
+  "freeBytesAfterCleanup": 6713974784
+}

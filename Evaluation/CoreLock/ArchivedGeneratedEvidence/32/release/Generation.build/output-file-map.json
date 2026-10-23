@@ -1,0 +1,61 @@
+{
+  "": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/Generation.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/Generation.o",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-transformers/Sources/Generation/Decoders.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/Decoders.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/Decoders~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/Decoders.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/Decoders.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-transformers/Sources/Generation/Generation.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/Generation.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/Generation~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/Generation.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/Generation.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-transformers/Sources/Generation/GenerationConfig.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/GenerationConfig.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/GenerationConfig~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/GenerationConfig.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/GenerationConfig.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-transformers/Sources/Generation/LogitsWarper/LogitsProcessor.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/LogitsProcessor.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/LogitsProcessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/LogitsProcessor.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/LogitsProcessor.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-transformers/Sources/Generation/LogitsWarper/MinPLogitsWarper.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/MinPLogitsWarper.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/MinPLogitsWarper~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/MinPLogitsWarper.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/MinPLogitsWarper.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-transformers/Sources/Generation/LogitsWarper/RepetitionPenaltyLogitsProcessor.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/RepetitionPenaltyLogitsProcessor.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/RepetitionPenaltyLogitsProcessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/RepetitionPenaltyLogitsProcessor.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/RepetitionPenaltyLogitsProcessor.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-transformers/Sources/Generation/LogitsWarper/TemperatureLogitsWarper.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/TemperatureLogitsWarper.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/TemperatureLogitsWarper~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/TemperatureLogitsWarper.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/TemperatureLogitsWarper.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-transformers/Sources/Generation/LogitsWarper/TopKLogitsWarper.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/TopKLogitsWarper.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/TopKLogitsWarper~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/TopKLogitsWarper.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/TopKLogitsWarper.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/checkouts/swift-transformers/Sources/Generation/LogitsWarper/TopPLogitsWarper.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/TopPLogitsWarper.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/TopPLogitsWarper~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/TopPLogitsWarper.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/Core/ModelManager/Resources/DecisionPreparation/LayaHelper/.build/arm64-apple-macosx/release/Generation.build/TopPLogitsWarper.dia"
+  }
+}

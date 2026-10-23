@@ -1,0 +1,160 @@
+{
+  "provenance": "Fixed synthetic system-TTS fixtures; not user audio/transcripts. Real Parakeet EOU and full-recording inference; mocked native effects. No vocabulary applied in these fixtures.",
+  "comparatorChanged": false,
+  "before": {
+    "invocations": 12,
+    "mismatches": 5,
+    "rate": 0.4166666666666667
+  },
+  "failures": [
+    {
+      "batchFinal": "Create a new note, call it local flow benchmark.",
+      "constructedActions": [
+        "note.create: note(title: \"Untitled\", body: \"\") [cancelled]",
+        "note.create: note(title: \"call\", body: \"\") [cancelled]",
+        "note.create: note(title: \"call it\", body: \"\") [cancelled]",
+        "note.create: note(title: \"loc\", body: \"\") [cancelled]",
+        "note.create: note(title: \"local\", body: \"\") [cancelled]",
+        "note.create: note(title: \"local so\", body: \"\") [cancelled]",
+        "note.create: note(title: \"local sob\", body: \"\") [cancelled]",
+        "note.create: note(title: \"local sobench\", body: \"\") [cancelled]",
+        "note.create: note(title: \"local sobenchm\", body: \"\") [cancelled]",
+        "note.create: note(title: \"local sobenchmark\", body: \"\") [cancelled]",
+        "note.create: note(title: \"local flow benchmark.\", body: \"\") [completed]"
+      ],
+      "expected": [
+        "note.create: note(title: \"LocalFlow Benchmark\", body: \"\")"
+      ],
+      "latestStreamingPartial": "create a new note call it local sobenchmark",
+      "scenario": 2,
+      "segments": [
+        "Create a new note, call it local flow benchmark."
+      ],
+      "streamingFinal": "create a new note call it local sobenchmark",
+      "syntheticInstruction": "Create a new note, call it LocalFlow Benchmark",
+      "vocabulary": "not applied in synthetic fixture",
+      "earliestResponsibleLayer": "streaming-STT",
+      "analysis": "Batch ASR split/cased the name differently and inserted terminal punctuation; source title preserved.",
+      "safelyReconstructable": false,
+      "earliestObservedMismatchLayer": "streaming-STT",
+      "finalAuthoritativeMismatchLayer": "batch-final-ASR",
+      "audioBoundary": "No clipped samples. Synthetic pronunciation and case-information limits cannot be ruled out by waveform QC; no real microphone is covered."
+    },
+    {
+      "batchFinal": "Append to current note, this is my dictated benchmark text.",
+      "constructedActions": [
+        "note.append_current: currentNote(\"this is my dictated benchmark text.\", snapshot: nil) [completed]"
+      ],
+      "expected": [
+        "note.append_current: currentNote(\"This is my dictated benchmark text.\", snapshot: nil)"
+      ],
+      "latestStreamingPartial": "to current note this is my dictated benchmark text",
+      "scenario": 3,
+      "segments": [
+        "Append to current note, this is my dictated benchmark text."
+      ],
+      "streamingFinal": "to current note this is my dictated benchmark text",
+      "syntheticInstruction": "Append to current note This is my dictated benchmark text.",
+      "vocabulary": "not applied in synthetic fixture",
+      "earliestResponsibleLayer": "streaming-STT",
+      "analysis": "Batch ASR lowercased the first payload word; current-note argument preserves that source casing.",
+      "safelyReconstructable": false,
+      "earliestObservedMismatchLayer": "streaming-STT",
+      "finalAuthoritativeMismatchLayer": "batch-final-ASR",
+      "audioBoundary": "No clipped samples. Synthetic pronunciation and case-information limits cannot be ruled out by waveform QC; no real microphone is covered."
+    },
+    {
+      "batchFinal": "Open examblow.com",
+      "constructedActions": [
+        "web.open_url: url(https://examblow.com) [completed]"
+      ],
+      "expected": [
+        "web.open_url: url(https://example.com)"
+      ],
+      "latestStreamingPartial": "an examlocom",
+      "scenario": 8,
+      "segments": [
+        "Open examblow.com"
+      ],
+      "streamingFinal": "an examlocom",
+      "syntheticInstruction": "Open https://example.com",
+      "vocabulary": "not applied in synthetic fixture",
+      "earliestResponsibleLayer": "streaming-STT",
+      "analysis": "Batch ASR transcribed a different domain; deterministic extraction must not guess example.com.",
+      "safelyReconstructable": false,
+      "earliestObservedMismatchLayer": "streaming-STT",
+      "finalAuthoritativeMismatchLayer": "batch-final-ASR",
+      "audioBoundary": "No clipped samples. Synthetic pronunciation and case-information limits cannot be ruled out by waveform QC; no real microphone is covered."
+    },
+    {
+      "batchFinal": "Create reminder review local flow benchmark.",
+      "constructedActions": [
+        "reminder.create: reminder(title: \"review local flow benchmark.\", notes: nil, due: nil) [completed]"
+      ],
+      "expected": [
+        "reminder.create: reminder(title: \"Review LocalFlow benchmark\", notes: nil, due: nil)"
+      ],
+      "latestStreamingPartial": "reminder review local benchmark",
+      "scenario": 9,
+      "segments": [
+        "Create reminder review local flow benchmark."
+      ],
+      "streamingFinal": "reminder review local benchmark",
+      "syntheticInstruction": "Create reminder Review LocalFlow benchmark",
+      "vocabulary": "not applied in synthetic fixture",
+      "earliestResponsibleLayer": "streaming-STT",
+      "analysis": "Batch ASR changed casing, word joining and terminal punctuation; source reminder title preserved.",
+      "safelyReconstructable": false,
+      "earliestObservedMismatchLayer": "streaming-STT",
+      "finalAuthoritativeMismatchLayer": "batch-final-ASR",
+      "audioBoundary": "No clipped samples. Synthetic pronunciation and case-information limits cannot be ruled out by waveform QC; no real microphone is covered."
+    },
+    {
+      "batchFinal": "Open notes then open browser then search for Swift Actors.",
+      "constructedActions": [
+        "application.open: application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: nil, confidence: 1.0), processID: nil) [completed]",
+        "application.open: application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: nil, confidence: 1.0), processID: nil) [cancelled]",
+        "application.open: application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: nil, confidence: 1.0), processID: nil) [completed]",
+        "web.open_url: url(https://www.google.com/search?q=for) [cancelled]",
+        "web.open_url: url(https://www.google.com/search?q=swif) [cancelled]",
+        "web.open_url: url(https://www.google.com/search?q=swift) [cancelled]",
+        "web.open_url: url(https://www.google.com/search?q=swift%20act) [cancelled]",
+        "web.open_url: url(https://www.google.com/search?q=swift%20actors) [cancelled]",
+        "web.open_url: url(https://www.google.com/search?q=Swift%20Actors) [completed]"
+      ],
+      "expected": [
+        "application.open: application(CommandMode.ApplicationMatch(name: \"Notes\", bundleIdentifier: Optional(\"com.apple.Notes\"), url: nil, confidence: 1.0), processID: nil)",
+        "application.open: application(CommandMode.ApplicationMatch(name: \"Safari\", bundleIdentifier: Optional(\"com.apple.Safari\"), url: nil, confidence: 1.0), processID: nil)",
+        "web.open_url: url(https://www.google.com/search?q=Swift%20actors)"
+      ],
+      "latestStreamingPartial": "open notes then open browser then search for swift actors",
+      "scenario": 10,
+      "segments": [
+        "Open notes",
+        "open browser",
+        "search for Swift Actors."
+      ],
+      "streamingFinal": "open notes then open browser then search for swift actors",
+      "syntheticInstruction": "Open Notes then open browser then search for Swift actors",
+      "vocabulary": "not applied in synthetic fixture",
+      "earliestResponsibleLayer": "batch-final-refinement",
+      "analysis": "Streaming query was swift actors. Batch refinement repaired Swift capitalization but introduced an uppercase Actors; deterministic query extraction preserved that final case.",
+      "safelyReconstructable": false,
+      "earliestObservedMismatchLayer": "batch-final-refinement",
+      "finalAuthoritativeMismatchLayer": "batch-final-ASR",
+      "audioBoundary": "No clipped samples. Synthetic pronunciation and case-information limits cannot be ruled out by waveform QC; no real microphone is covered."
+    }
+  ],
+  "after": {
+    "invocations": 12,
+    "mismatches": 5,
+    "rate": 0.4166666666666667,
+    "avoidableParserPayloadBugsFixed": 2,
+    "remaining": "Transcription-origin exact-text errors; no guessed reconstruction"
+  },
+  "regressions": [
+    "VocabularyStore no longer substitutes dictation shortcuts into explicit agent payloads",
+    "Embedded write verbs in note titles/bodies no longer repartition slots"
+  ],
+  "layerConclusion": "Four failures are first visible in streaming STT. The final query capitalization error is introduced by batch refinement. Final authoritative transcripts contain all five errors. No later layer repairs them by guessing."
+}

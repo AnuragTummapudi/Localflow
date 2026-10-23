@@ -1,0 +1,95 @@
+{
+  "checkpoint": "convaiinnovations/laya",
+  "revision": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+  "fixtureSHA256": "dd90fd7ce9a53b9ed86c62cc73c5171d99623fa202f1d75aa07fce44ba0a001e",
+  "fixtureCount": 136,
+  "questionsSHA256": "769bab57174be24499eda5475a1c84343194bfc5642a312b771bb1f0136f8aac",
+  "metrics": {
+    "coldLoadMilliseconds": 4225.062375,
+    "protocolVersion": 1,
+    "ready": true,
+    "residentBytes": 958332928,
+    "wallColdLoadMilliseconds": 5223.180291999597,
+    "warmP50Milliseconds": 824.2056670133024,
+    "warmP95Milliseconds": 1047.902708989568,
+    "firstInferenceMilliseconds": 994.063082995126,
+    "peakResidentBytes": 1722793984
+  },
+  "questions": {
+    "intent": {
+      "calibration": {
+        "count": 91,
+        "accuracy": 0.6373626373626373,
+        "accepted": 0,
+        "coverage": 0.0,
+        "selectiveAccuracy": null
+      },
+      "evaluation": {
+        "count": 45,
+        "accuracy": 0.6,
+        "accepted": 0,
+        "coverage": 0.0,
+        "selectiveAccuracy": null
+      },
+      "policy": {
+        "temperature": 1.829220207709305,
+        "threshold": null,
+        "enabled": false,
+        "calibrationNLL": 1.1672121497883094,
+        "calibrationCount": 91
+      }
+    },
+    "risk": {
+      "calibration": {
+        "count": 91,
+        "accuracy": 0.4725274725274725,
+        "accepted": 0,
+        "coverage": 0.0,
+        "selectiveAccuracy": null
+      },
+      "evaluation": {
+        "count": 45,
+        "accuracy": 0.4444444444444444,
+        "accepted": 0,
+        "coverage": 0.0,
+        "selectiveAccuracy": null
+      },
+      "policy": {
+        "temperature": 1.5211182989324266,
+        "threshold": null,
+        "enabled": false,
+        "calibrationNLL": 1.0275748680946262,
+        "calibrationCount": 91
+      }
+    },
+    "requires_more_speech": {
+      "calibration": {
+        "count": 91,
+        "accuracy": 0.8681318681318682,
+        "accepted": 80,
+        "coverage": 0.8791208791208791,
+        "selectiveAccuracy": 0.95
+      },
+      "evaluation": {
+        "count": 45,
+        "accuracy": 0.8666666666666667,
+        "accepted": 41,
+        "coverage": 0.9111111111111111,
+        "selectiveAccuracy": 0.8780487804878049
+      },
+      "policy": {
+        "temperature": 1.0200148436614485,
+        "threshold": 0.8061749187924125,
+        "enabled": false,
+        "calibrationNLL": 0.2557145493099069,
+        "calibrationCount": 91
+      }
+    }
+  },
+  "parity": {
+    "backend": "official laya 0.3.24 PyTorch CPU",
+    "comparedQuestions": 42,
+    "maxAbsoluteLogitDifference": 3.814697265625e-05,
+    "passed": true
+  }
+}

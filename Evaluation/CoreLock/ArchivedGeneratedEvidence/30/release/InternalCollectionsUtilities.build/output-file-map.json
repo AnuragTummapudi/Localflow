@@ -1,0 +1,187 @@
+{
+  "": {
+    "dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/InternalCollectionsUtilities.d",
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/InternalCollectionsUtilities.o",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/primary.swiftdeps"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/BorrowingIteratorProtocol+Equality.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/BorrowingIteratorProtocol+Equality.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/BorrowingIteratorProtocol+Equality~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/BorrowingIteratorProtocol+Equality.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/BorrowingIteratorProtocol+Equality.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/BorrowingIteratorProtocol+Extras.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/BorrowingIteratorProtocol+Extras.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/BorrowingIteratorProtocol+Extras~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/BorrowingIteratorProtocol+Extras.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/BorrowingIteratorProtocol+Extras.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/Debugging.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Debugging.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Debugging~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Debugging.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Debugging.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/Descriptions.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Descriptions.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Descriptions~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Descriptions.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Descriptions.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/IntegerTricks/FixedWidthInteger+roundUpToPowerOfTwo.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/FixedWidthInteger+roundUpToPowerOfTwo.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/FixedWidthInteger+roundUpToPowerOfTwo~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/FixedWidthInteger+roundUpToPowerOfTwo.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/FixedWidthInteger+roundUpToPowerOfTwo.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/IntegerTricks/Integer rank.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Integer rank.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Integer rank~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Integer rank.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Integer rank.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/IntegerTricks/UInt+first and last set bit.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UInt+first and last set bit.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UInt+first and last set bit~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UInt+first and last set bit.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UInt+first and last set bit.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/IntegerTricks/UInt+reversed.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UInt+reversed.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UInt+reversed~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UInt+reversed.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UInt+reversed.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/Iterable+CopyContents.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Iterable+CopyContents.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Iterable+CopyContents~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Iterable+CopyContents.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Iterable+CopyContents.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/Iterable+Equality.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Iterable+Equality.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Iterable+Equality~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Iterable+Equality.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Iterable+Equality.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/LifetimeOverride.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/LifetimeOverride.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/LifetimeOverride~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/LifetimeOverride.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/LifetimeOverride.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/MutableRef.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/MutableRef.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/MutableRef~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/MutableRef.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/MutableRef.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/MutableSpan+Extras.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/MutableSpan+Extras.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/MutableSpan+Extras~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/MutableSpan+Extras.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/MutableSpan+Extras.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/OutputSpan+Extras.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/OutputSpan+Extras.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/OutputSpan+Extras~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/OutputSpan+Extras.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/OutputSpan+Extras.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/RandomAccessCollection+Offsets.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/RandomAccessCollection+Offsets.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/RandomAccessCollection+Offsets~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/RandomAccessCollection+Offsets.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/RandomAccessCollection+Offsets.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/Span+Extras.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Span+Extras.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Span+Extras~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Span+Extras.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Span+Extras.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/Strideable+LimitHelpers.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Strideable+LimitHelpers.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Strideable+LimitHelpers~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Strideable+LimitHelpers.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/Strideable+LimitHelpers.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/String+Padding.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/String+Padding.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/String+Padding~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/String+Padding.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/String+Padding.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/TemporaryAllocation.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/TemporaryAllocation.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/TemporaryAllocation~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/TemporaryAllocation.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/TemporaryAllocation.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/UnsafeBitSet/_UnsafeBitSet+Index.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_UnsafeBitSet+Index.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_UnsafeBitSet+Index~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_UnsafeBitSet+Index.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_UnsafeBitSet+Index.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/UnsafeBitSet/_UnsafeBitSet+_Word.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_UnsafeBitSet+_Word.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_UnsafeBitSet+_Word~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_UnsafeBitSet+_Word.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_UnsafeBitSet+_Word.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/UnsafeBitSet/_UnsafeBitSet.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_UnsafeBitSet.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_UnsafeBitSet~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_UnsafeBitSet.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_UnsafeBitSet.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/UnsafeBufferPointer+Extras.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeBufferPointer+Extras.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeBufferPointer+Extras~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeBufferPointer+Extras.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeBufferPointer+Extras.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/UnsafeMutableBufferPointer+Extras.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeMutableBufferPointer+Extras.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeMutableBufferPointer+Extras~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeMutableBufferPointer+Extras.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeMutableBufferPointer+Extras.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/UnsafeMutablePointer+Extras.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeMutablePointer+Extras.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeMutablePointer+Extras~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeMutablePointer+Extras.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeMutablePointer+Extras.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/UnsafeMutableRawBufferPointer+Extras.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeMutableRawBufferPointer+Extras.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeMutableRawBufferPointer+Extras~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeMutableRawBufferPointer+Extras.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeMutableRawBufferPointer+Extras.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/UnsafePointer+Extras.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafePointer+Extras.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafePointer+Extras~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafePointer+Extras.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafePointer+Extras.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/UnsafeRawBufferPointer+Extras.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeRawBufferPointer+Extras.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeRawBufferPointer+Extras~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeRawBufferPointer+Extras.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/UnsafeRawBufferPointer+Extras.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/_SortedCollection.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_SortedCollection.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_SortedCollection~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_SortedCollection.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_SortedCollection.dia"
+  },
+  "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/checkouts/swift-collections/Sources/InternalCollectionsUtilities/_UniqueCollection.swift": {
+    "object": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_UniqueCollection.swift.o",
+    "swiftmodule": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_UniqueCollection~partial.swiftmodule",
+    "swift-dependencies": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_UniqueCollection.swiftdeps",
+    "diagnostics": "/Users/anuragtummapudi/Localflow-project/LocalFlow/.build/laya-research/helper-build/arm64-apple-macosx/release/InternalCollectionsUtilities.build/_UniqueCollection.dia"
+  }
+}

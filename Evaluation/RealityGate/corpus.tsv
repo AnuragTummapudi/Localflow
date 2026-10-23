@@ -1,0 +1,201 @@
+# split|family|intent|risk|more_speech|command|ambiguous|final|utterance
+# Authored and label-reviewed by the coding assistant. Not independent human review.
+# Each family stays in one split. Noise siblings are created only inside TRAIN.
+train|launch-calc|open_application|reversible|0|1|0|1|Open Calculator please
+train|launch-preview|open_application|reversible|0|1|0|1|Could you launch Preview for me
+train|launch-mail|open_application|reversible|0|1|0|1|Bring up Mail
+train|launch-calendar|open_application|reversible|0|1|0|1|I need Calendar open now
+train|launch-finder|open_application|reversible|0|1|0|1|Get Finder running
+train|launch-code|open_application|reversible|0|1|0|1|Start Visual Studio Code
+train|focus-mail|focus_application|reversible|0|1|0|1|Switch to the Mail window
+train|focus-finder|focus_application|reversible|0|1|0|1|Focus Finder
+train|focus-terminal|focus_application|reversible|0|1|0|1|Make Terminal the frontmost app
+train|quit-preview|quit_application|consequential|0|1|0|1|Quit Preview
+train|quit-mail|quit_application|consequential|0|1|0|1|Exit Mail altogether
+train|quit-code|quit_application|consequential|0|1|0|1|Close the Code application
+train|web-mdn|web_navigation|safe|0|1|0|1|Go to developer.mozilla.org
+train|web-local|web_navigation|safe|0|1|0|1|Navigate to http://localhost:8080/status
+train|web-alias|web_navigation|safe|0|1|0|1|Open the saved research portal website
+train|web-path|web_navigation|safe|0|1|0|1|Visit https://example.net/guide?q=alpha
+train|search-bridge|search|safe|0|1|0|1|Look up suspension bridge design
+train|search-platypus|search|safe|0|1|0|1|Search the web for platypus habitats
+train|search-github|search|safe|0|1|0|1|Search GitHub for actor cancellation examples
+train|search-phrase|search|safe|0|1|0|1|Find pages about restoring antique radios
+train|note-ceramics|note_action|reversible|0|1|0|1|Create a note titled Ceramics notebook
+train|note-inventories|note_action|reversible|0|1|0|1|Make a new note called Workshop inventory
+train|note-append|note_action|consequential|0|1|0|1|Append to the current note: glaze test passed
+train|note-write|note_action|consequential|0|1|0|1|Write in this note: two samples were damaged
+train|reminder-filters|reminder_action|reversible|0|1|0|1|Remind me to replace the air filter
+train|reminder-library|reminder_action|reversible|0|1|0|1|Add a reminder called Return library books
+train|reminder-timer|reminder_action|reversible|0|1|0|1|Create a reminder to water the seedlings at six
+train|media-pause|media_action|reversible|0|1|0|1|Pause Spotify playback
+train|media-next|media_action|reversible|0|1|0|1|Skip to the next track
+train|media-resume|media_action|reversible|0|1|0|1|Resume the music
+train|system-volume|system_action|reversible|0|1|0|1|Set the volume to thirty percent
+train|system-mute|system_action|reversible|0|1|0|1|Mute the speakers
+train|system-sleep|system_action|consequential|0|1|0|1|Put the display to sleep
+train|system-lock|system_action|consequential|0|1|0|1|Lock this Mac
+train|text-copy|text_action|reversible|0|1|0|1|Copy the text checked and approved
+train|text-type|text_action|reversible|0|1|0|1|Type exactly Maple Street
+train|text-replace|text_action|consequential|0|1|0|1|Replace the selection with corrected estimate
+train|file-reveal|file_action|safe|0|1|0|1|Reveal /tmp/demo/report.pdf in Finder
+train|file-folder|file_action|safe|0|1|0|1|Show my saved archive folder
+train|macro-focus|workflow|consequential|0|1|0|1|Run my saved focus routine
+train|macro-lab|workflow|consequential|0|1|0|1|Start the lab workspace macro
+train|compound-web|workflow|reversible|0|1|0|1|Open Calculator then visit example.net
+train|compound-note|workflow|consequential|0|1|0|1|Launch Notes, create a note called Clay tests and write kiln temperature stable
+train|compound-media|workflow|reversible|0|1|0|1|Open Spotify and then pause playback
+train|unknown-meal|unknown|consequential|0|1|1|1|Order dinner for the entire office
+train|unknown-cloud|unknown|consequential|0|1|1|1|Upload the whole folder to a public bucket
+train|unknown-delete|unknown|consequential|0|1|1|1|Delete every downloaded file
+train|unknown-login|unknown|consequential|0|1|1|1|Sign into the portal with my password
+train|dictation-weather|dictation|safe|0|0|0|1|The rain stopped just before sunrise
+train|dictation-report|dictation|safe|0|0|0|1|Our report contains four sections and an appendix
+train|dictation-open-source|dictation|safe|0|0|0|1|Open source licenses make reuse simpler
+train|dictation-quote|dictation|safe|0|0|0|1|The manual literally says quit Mail before updating
+train|dictation-yesterday|dictation|safe|0|0|0|1|Yesterday I launched Calculator to check the budget
+train|dictation-negation|dictation|safe|0|0|0|1|Do not launch Preview
+train|dictation-condition|dictation|safe|0|0|0|1|If I say bring up Mail I mean later
+train|dictation-reported|dictation|safe|0|0|0|1|She asked me to pause Spotify but I kept listening
+train|dictation-instruction-text|text_action|reversible|0|1|0|1|Type the sentence do not launch Preview
+train|dictation-double-negation|dictation|safe|0|0|0|1|I never said you should lock my Mac
+train|dictation-code|dictation|safe|0|0|0|1|The code variable is named openApplication
+train|correction-app|open_application|reversible|0|1|0|1|Open Calendar actually make that Calculator
+train|correction-query|search|safe|0|1|0|1|Search for pottery no sorry porcelain
+train|correction-time|reminder_action|reversible|0|1|0|1|Remind me to prune the tree at six actually at nine
+train|correction-negated|dictation|safe|0|0|0|1|Launch Mail no cancel that request
+train|ambiguity-code|open_application|reversible|0|1|1|1|Open Code
+train|ambiguity-ark|open_application|reversible|0|1|1|1|Launch Ark
+train|ambiguity-notes|open_application|reversible|0|1|1|1|Open note
+train|ambiguity-terminal|open_application|reversible|0|1|1|1|Use my terminal
+train|ambiguity-target|focus_application|reversible|0|1|1|1|Focus the other window
+train|prefix-launch|unknown|safe|1|1|0|0|Open
+train|prefix-launch|open_application|reversible|1|1|1|0|Open note
+train|prefix-launch|open_application|reversible|0|1|0|0|Open Notes
+train|prefix-launch|workflow|reversible|1|1|0|0|Open Notes and
+train|prefix-create|unknown|safe|1|1|0|0|Create a
+train|prefix-create|note_action|reversible|1|1|0|0|Create a note titled
+train|prefix-create|note_action|reversible|0|1|0|0|Create a note titled Ceramic trials
+train|prefix-search|search|safe|1|1|0|0|Search GitHub for
+train|prefix-search|search|safe|0|1|0|0|Search GitHub for porcelain
+train|prefix-correction|open_application|reversible|1|1|0|0|Launch Mail actually
+train|prefix-reminder|reminder_action|reversible|1|1|0|0|Remind me to
+train|prefix-copy|text_action|reversible|1|1|0|0|Copy the text
+train|prefix-domain|web_navigation|safe|1|1|1|0|Go to example dot
+train|noise-homophone|open_application|reversible|0|1|1|1|Open eye term
+train|noise-partial-word|open_application|reversible|1|1|1|0|Launch calcu
+train|noise-repeat|search|safe|0|1|0|1|Search search for kiln ventilation
+train|noise-filler|reminder_action|reversible|0|1|0|1|Um could you make a reminder uh inspect the roof
+train|noise-article|note_action|reversible|0|1|0|1|Create new note titled Cabinet dimensions
+calibration|cal-denial|dictation|safe|0|0|0|1|No, leave Safari closed; I am describing the interface
+calibration|cal-instruction-quotation|dictation|safe|0|0|0|1|The heading Open Notes belongs in the documentation
+calibration|cal-metaphor|dictation|safe|0|0|0|1|We should open our minds before closing the discussion
+calibration|cal-dictated-negation|text_action|reversible|0|1|0|1|Type exactly don't quit the editor yet
+calibration|cal-history|dictation|safe|0|0|0|1|My terminal was running all night
+calibration|cal-editor-correction|open_application|reversible|0|1|0|1|Start Sublime Text, wait, Visual Studio Code instead
+calibration|cal-target-correction|focus_application|reversible|0|1|0|1|Bring the browser forward, sorry the Finder window
+calibration|cal-exit-unsaved|quit_application|consequential|0|1|0|1|I'm done with Pages; quit that application
+calibration|cal-site-spelling|web_navigation|safe|0|1|0|1|Go directly to https://www.nasa.gov/missions/
+calibration|cal-query-quote|search|safe|0|1|0|1|Find the phrase open a new chapter on the web
+calibration|cal-title-command|note_action|reversible|0|1|0|1|Make a note whose title is Quit talking and listen
+calibration|cal-reminder-location|reminder_action|reversible|0|1|0|1|Add pick up the parcel to Reminders
+calibration|cal-media-specific|media_action|reversible|0|1|0|1|Spotify, go back one song
+calibration|cal-system-percent|system_action|reversible|0|1|0|1|The sound is loud, reduce the volume a little
+calibration|cal-system-lock|system_action|consequential|0|1|0|1|I'm stepping away; lock the computer
+calibration|cal-path-spaces|file_action|safe|0|1|0|1|Reveal /tmp/fixture/Blue Folder in Finder
+calibration|cal-macro-named|workflow|consequential|0|1|0|1|Execute the saved routine named Reading time
+calibration|cal-compound-correct|workflow|reversible|0|1|0|1|Bring up Music, pause it, then go to https://example.edu
+calibration|cal-danger-hidden|unknown|consequential|0|1|1|1|Silently erase the external drive
+calibration|cal-app-ambiguous|open_application|reversible|0|1|1|1|Bring up the coding app, whichever one you think
+calibration|cal-domain-ambiguous|web_navigation|safe|0|1|1|1|Take me to the company site
+calibration|cal-time-ambiguous|reminder_action|reversible|0|1|1|1|Make a reminder for sometime later
+calibration|cal-prefix-web|web_navigation|safe|1|1|0|0|Navigate to
+calibration|cal-prefix-exit|quit_application|consequential|1|1|0|0|Quit the
+calibration|cal-prefix-replace|text_action|consequential|1|1|0|0|Replace the selection with
+calibration|cal-prefix-completed|system_action|reversible|0|1|0|0|Set the volume to twenty
+calibration|cal-prefix-dictation|dictation|safe|1|0|0|0|The reason this matters is
+calibration|cal-prefix-negation|dictation|safe|0|0|0|0|Do not open that
+calibration|cal-prefix-macro|workflow|consequential|1|1|0|0|Run my morning workflow and
+calibration|cal-partial-asr|search|safe|1|1|1|0|Search the web for architec
+calibration|cal-repetition|web_navigation|safe|0|1|0|1|Visit visit the saved course portal
+calibration|cal-near-homophone|open_application|reversible|0|1|1|1|Start photo boot
+calibration|cal-header-body|note_action|consequential|0|1|0|1|Append to this note the words launch Safari tomorrow
+calibration|cal-headline|dictation|safe|0|0|0|1|Open Sesame was the headline, not an instruction
+calibration|cal-unsupported-explain|unknown|safe|0|1|1|1|Explain why my computer is slow
+calibration|cal-due-correction|reminder_action|reversible|0|1|0|1|Set a reminder for noon, no, make it midnight
+calibration|cal-intent-shift|search|safe|0|1|0|1|Open the camera, actually just search for camera settings
+calibration|cal-aborted-command|dictation|safe|0|0|0|1|I was going to ask you to quit Mail but never mind
+calibration|cal-filler-dictation|dictation|safe|0|0|0|1|Uh well the browser keeps my bookmarks organized
+calibration|cal-no-article|note_action|reversible|0|1|0|1|Make note called Window measurements
+test|test-quote-nested|dictation|safe|0|0|0|1|He said, "when I say open Notes, don't actually do it"
+test|test-payload-is-command|text_action|reversible|0|1|0|1|Type exactly: open Notes, then quit Safari
+test|test-conditional-macro|dictation|safe|0|0|0|1|When I say start the workspace tomorrow, remind me what it does
+test|test-open-adjective|dictation|safe|0|0|0|1|Open ended questions are harder than closed questions
+test|test-quoted-reminder|dictation|safe|0|0|0|1|"Create a reminder" was the phrase she couldn't pronounce
+test|test-past-action|dictation|safe|0|0|0|1|I opened Notes yesterday and wrote about the harbour
+test|test-negated-app|dictation|safe|0|0|0|1|Don't open Notes even if you hear me mention it twice
+test|test-descriptive-quit|dictation|safe|0|0|0|1|Quit applications is the name of a menu option
+test|test-fiction|dictation|safe|0|0|0|1|In the story the captain orders everyone to lock the cabin
+test|test-instruction-as-note|note_action|consequential|0|1|0|1|Append this exact sentence to the current note: do not open Notes
+test|test-nested-title|note_action|reversible|0|1|0|1|Create a note named My write plan: open source is useful
+test|test-two-headers|note_action|reversible|0|1|0|1|Create a new note, call it Sound checks, and write mute is just a word here
+test|test-query-correction|search|safe|0|1|0|1|Search Google for cats no dogs
+test|test-app-correction|open_application|reversible|0|1|0|1|Open Chrome actually Safari
+test|test-correction-aborted|dictation|safe|0|0|0|1|Open the browser, actually don't do anything
+test|test-time-correction|reminder_action|reversible|0|1|0|1|Create a reminder at seven actually eight
+test|test-compound-scope|workflow|consequential|0|1|0|1|Open Notes, make a new note and write hello, then leave it open
+test|test-compound-payload|workflow|reversible|0|1|0|1|Launch Maps then search the web for the phrase quit Maps
+test|test-compound-revision|workflow|reversible|0|1|0|1|Open the camera, no the browser, and search for lunar craters
+test|test-macro-reference|workflow|consequential|0|1|0|1|Use my saved desk setup routine; don't improvise extra steps
+test|test-unknown-transaction|unknown|consequential|0|1|1|1|Purchase whichever laptop you recommend
+test|test-unknown-shell|unknown|consequential|0|1|1|1|Run rm dash rf on my home directory
+test|test-unknown-upload|unknown|consequential|0|1|1|1|Share every screenshot with the whole team
+test|test-unknown-answer|unknown|safe|0|1|1|1|Tell me which applications are wasting battery
+test|test-editor-ambiguous|open_application|reversible|0|1|1|1|Open my editor; I haven't configured which one yet
+test|test-arc-distinction|open_application|reversible|0|1|1|1|Ark or Arc, I can't remember which browser I installed
+test|test-notion-distinction|open_application|reversible|0|1|1|1|Open no shun
+test|test-terminal-distinction|focus_application|reversible|0|1|1|1|Switch to my terminal, maybe Warp or iTerm
+test|test-web-missing-target|web_navigation|safe|0|1|1|1|Go to the placement portal; that alias isn't saved
+test|test-reminder-missing-title|reminder_action|reversible|1|1|1|1|Make a reminder, I'll tell you the title in a moment
+test|test-payload-spelled-url|web_navigation|safe|0|1|0|1|Visit https://example.org/Aa?Q=MixedCase#Top exactly
+test|test-http-preservation|web_navigation|safe|0|1|0|1|Go to http://127.0.0.1:9090/debug
+test|test-search-literal|search|safe|0|1|0|1|Look online for C++ actor lifetime bugs -site:example.org
+test|test-reminder-command-title|reminder_action|reversible|0|1|0|1|Add a reminder with the title Open Notes tomorrow
+test|test-file-alias-unset|file_action|safe|0|1|1|1|Show the LocalFlow project folder; I haven't saved its location
+test|test-file-exact|file_action|safe|0|1|0|1|Reveal /tmp/reality-gate/notes AND reminders.txt in Finder
+test|test-text-selection|text_action|consequential|0|1|0|1|Overwrite the selected paragraph with Version two
+test|test-text-literal|text_action|reversible|0|1|0|1|Put the words search for galaxies into the current text field
+test|test-copy-quote|text_action|reversible|0|1|0|1|Copy "lock it" to the clipboard without running it
+test|test-quit-exception|quit_application|consequential|0|1|0|1|Quit Numbers, even if its document has unsaved edits
+test|test-focus-explicit|focus_application|reversible|0|1|0|1|Keep both apps open but bring Reminders in front of Preview
+test|test-open-complete|open_application|reversible|0|1|0|1|Could we get Photo Booth running before I continue
+test|test-media-target|media_action|reversible|0|1|0|1|Only pause the Spotify track, leave the browser video alone
+test|test-media-negation|dictation|safe|0|0|0|1|Don't skip this song; the next track is awful
+test|test-system-specific|system_action|reversible|0|1|0|1|Mute audio, but keep the display awake
+test|test-system-consequential|system_action|consequential|0|1|0|1|Blank the display now without shutting the machine down
+test|test-prefix-operator|unknown|safe|1|1|0|0|Could you please
+test|test-prefix-target|open_application|reversible|1|1|1|0|Bring up the appli
+test|test-prefix-and|workflow|reversible|1|1|0|0|Open Reminders and then
+test|test-prefix-body|note_action|consequential|1|1|0|0|Append to the current note:
+test|test-prefix-domain|web_navigation|safe|1|1|1|0|Take me to https colon slash
+test|test-prefix-query|search|safe|1|1|0|0|Look on GitHub for the phrase
+test|test-prefix-self-repair|search|safe|1|1|0|0|Search for lunar craters actually no
+test|test-prefix-finished|media_action|reversible|0|1|0|0|Spotify pause
+test|test-prefix-dictated-past|dictation|safe|0|0|0|0|I used to search for fossils
+test|test-prefix-quote|dictation|safe|1|0|0|0|The instructions said open the
+test|test-prefix-reminder-complete|reminder_action|reversible|0|1|0|0|Remind me to check the kiln
+test|test-asr-repeated-correction|search|safe|0|1|0|1|search search for moons no no meteors
+test|test-asr-partial-word|note_action|reversible|1|1|1|0|make a note ti
+test|test-asr-hesitation|quit_application|consequential|0|1|0|1|uh shut down uh just the Pages app please
+test|test-asr-confusable-title|note_action|reversible|0|1|0|1|new note title terminal illness research
+test|test-asr-confusable-body|note_action|consequential|0|1|0|1|write to current note arc and ark sound alike
+test|test-asr-missing-punctuation|workflow|consequential|0|1|0|1|start notes make note called field guide write rain began at dusk
+test|test-asr-article-noise|search|safe|0|1|0|1|search the the web for a a volcanic glass
+test|test-asr-no-casing|file_action|safe|0|1|1|1|reveal my local flow folder
+test|test-asr-near-domain|web_navigation|safe|0|1|1|1|open examblow dot com or was that example dot com
+test|test-text-internal-boundary|text_action|reversible|0|1|0|1|Type exactly open Browser then search for Saturn
+test|test-negated-consequence|dictation|safe|0|0|0|1|Please never delete my notes automatically
+test|test-unknown-general-plan|unknown|consequential|0|1|1|1|Fix my entire computer however you think best
+test|test-workflow-unsaved|workflow|consequential|0|1|1|1|Run a workspace routine called Ocean but I have not created it
+test|test-correction-addition|reminder_action|reversible|0|1|0|1|Remind me to buy pens, not pencils, on Friday
+test|test-quoted-opener|dictation|safe|0|0|0|1|"Open the browser" is something I often say out loud

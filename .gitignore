@@ -17,3 +17,4 @@ dist/
 
 # Downloaded speech-model data is intentionally never versioned.
 Models/
+Scripts/dmg/background-preview.png

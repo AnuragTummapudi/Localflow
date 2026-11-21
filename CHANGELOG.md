@@ -2,7 +2,7 @@
 
 All notable changes to LocalFlow are listed here.
 
-## Unreleased
+## 0.1.1 — 2026-11-21
 
 ### Fixed
 - When Fn is the shortcut and macOS also uses it for Emoji & Symbols, Settings offers to set “Press 🌐 key to” to Do Nothing.

@@ -5,6 +5,7 @@ import PrivacyDashboard
 import ModelManager
 import Engines
 import TextInjection
+import HotkeyManager
 import SmartFormatting
 
 // MARK: - Settings Root
@@ -295,6 +296,7 @@ public struct GeneralSettingsView: View {
     @EnvironmentObject private var coordinator: DictationCoordinator
 
     @State private var axOK = TextInjection().isAccessibilityTrusted(prompt: false)
+    @State private var globeKeyConflict = GlobeKeySetting.conflictsWithFn
 
     public init(viewModel: SettingsViewModel) {
         self.viewModel = viewModel
@@ -380,10 +382,24 @@ public struct GeneralSettingsView: View {
                         .font(LocalFlowDesign.generalSans(size: 12))
                         .foregroundStyle(LocalFlowDesign.graphite)
 
-                    Text("When Fn is selected, LocalFlow reserves the key while running so macOS shortcuts do not open at the same time.")
-                        .font(LocalFlowDesign.generalSans(size: 12))
-                        .foregroundStyle(LocalFlowDesign.graphite)
-                        .fixedSize(horizontal: false, vertical: true)
+                    if viewModel.settings.useFnAsAlternateHotkey && globeKeyConflict {
+                        HStack(alignment: .firstTextBaseline, spacing: 10) {
+                            Text("macOS also uses Fn to open Emoji & Symbols. Set \u{201C}Press 🌐 key to\u{201D} to Do Nothing so only LocalFlow responds.")
+                                .font(LocalFlowDesign.generalSans(size: 12))
+                                .foregroundStyle(LocalFlowDesign.graphite)
+                                .fixedSize(horizontal: false, vertical: true)
+                            Button("Turn off") {
+                                GlobeKeySetting.setDoNothing()
+                                globeKeyConflict = GlobeKeySetting.conflictsWithFn
+                            }
+                            Button("Keyboard Settings") {
+                                NSWorkspace.shared.open(URL(string: "x-apple.systempreferences:com.apple.Keyboard-Settings.extension")!)
+                            }
+                        }
+                        .onReceive(Timer.publish(every: 2, on: .main, in: .common).autoconnect()) { _ in
+                            globeKeyConflict = GlobeKeySetting.conflictsWithFn
+                        }
+                    }
                 }
 
                 VStack(alignment: .leading, spacing: 0) {

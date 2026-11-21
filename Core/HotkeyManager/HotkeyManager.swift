@@ -343,3 +343,21 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
         isFunctionShortcutSuppressionActive = false
     }
 }
+
+/// macOS acts on the Globe/Fn key (emoji picker, input source, Dictation) below where an
+/// event tap can stop it, so the only reliable fix is the system's own "Press 🌐 key to" setting.
+public enum GlobeKeySetting {
+    private static let key = "AppleFnUsageType" as CFString
+    private static let domain = "com.apple.HIToolbox" as CFString
+
+    /// True when pressing Fn also triggers a macOS action. A missing value means the system default (Emoji & Symbols).
+    public static var conflictsWithFn: Bool {
+        (CFPreferencesCopyAppValue(key, domain) as? Int) != 0
+    }
+
+    /// Sets "Press 🌐 key to" to "Do Nothing". Only call from an explicit user action.
+    public static func setDoNothing() {
+        CFPreferencesSetAppValue(key, 0 as CFNumber, domain)
+        CFPreferencesAppSynchronize(domain)
+    }
+}

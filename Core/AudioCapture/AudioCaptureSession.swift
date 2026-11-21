@@ -1,6 +1,7 @@
 @preconcurrency import AVFoundation
 import Foundation
 import Combine
+import OSLog
 import Shared
 
 /// Captures microphone audio and emits waveform levels while recording.
@@ -14,12 +15,21 @@ public final class AudioCaptureSession: ObservableObject, @unchecked Sendable {
     private var engine = AVAudioEngine()
     private var capturedSamples: [Float] = []
     private var captureSampleRate: Double = 16_000
-    private var silenceFrameCount = 0
+    private var silenceSeconds: Double = 0
     private var speechFrameCount = 0
     private var peakLevel: Float = 0
     private let silenceThreshold: Float = 0.015
-    private let silenceFrameLimit = 45
     private let sampleLock = NSLock()
+    private var configurationObserver: (any NSObjectProtocol)?
+    private var startedAt: ContinuousClock.Instant?
+    private static let log = Logger(subsystem: "dev.localflow.LocalFlow", category: "AudioCapture")
+
+    /// Called on the main thread when the input device changes mid-recording (AirPods connect, headset unplugged).
+    /// Capture has stopped by then; the samples recorded so far are still returned by `stop()`.
+    public var onInterrupted: (() -> Void)?
+
+    /// Longest recording kept in memory (10 min at 48 kHz ≈ 115 MB). Dictation auto-stops and transcribes here.
+    public static let maxRecordingSeconds: Double = 600
 
     /// Creates an audio capture session.
     public init() {}
@@ -48,7 +58,7 @@ public final class AudioCaptureSession: ObservableObject, @unchecked Sendable {
         sampleLock.lock()
         defer { sampleLock.unlock() }
         guard isRecording else { return 0 }
-        return Double(silenceFrameCount) * (1024.0 / max(captureSampleRate, 16_000))
+        return silenceSeconds
     }
 
     /// Starts microphone capture.
@@ -59,7 +69,7 @@ public final class AudioCaptureSession: ObservableObject, @unchecked Sendable {
 
         sampleLock.lock()
         capturedSamples = []
-        silenceFrameCount = 0
+        silenceSeconds = 0
         speechFrameCount = 0
         peakLevel = 0
         sampleLock.unlock()
@@ -79,7 +89,18 @@ public final class AudioCaptureSession: ObservableObject, @unchecked Sendable {
             self?.consume(buffer: buffer)
         }
 
+        // AVAudioEngine stops itself when the input device changes; without this the UI keeps "listening" to nothing.
+        configurationObserver = NotificationCenter.default.addObserver(
+            forName: .AVAudioEngineConfigurationChange, object: engine, queue: .main
+        ) { [weak self] _ in
+            guard let self, self.isRecording else { return }
+            Self.log.notice("input device changed mid-recording; stopping capture")
+            self.stopEngineIfNeeded()
+            self.onInterrupted?()
+        }
+
         engine.prepare()
+        startedAt = .now
         try engine.start()
         // Set synchronously so a fast key-up never races past an async flag.
         isRecording = true
@@ -97,11 +118,8 @@ public final class AudioCaptureSession: ObservableObject, @unchecked Sendable {
         let samples = capturedSamples
         sampleLock.unlock()
 
-        return CapturedAudio(
-            buffer: Self.buffer(from: samples, sampleRate: captureSampleRate),
-            samples: samples,
-            sampleRate: captureSampleRate
-        )
+        // The engine buffer is built lazily by CapturedAudio, so stop() holds only one copy.
+        return CapturedAudio(buffer: nil, samples: samples, sampleRate: captureSampleRate)
     }
 
     /// Explicitly cancels capture and tears down all audio resources cleanly.
@@ -115,7 +133,7 @@ public final class AudioCaptureSession: ObservableObject, @unchecked Sendable {
         stopEngineIfNeeded()
         sampleLock.lock()
         capturedSamples.removeAll(keepingCapacity: false)
-        silenceFrameCount = 0
+        silenceSeconds = 0
         speechFrameCount = 0
         peakLevel = 0
         sampleLock.unlock()
@@ -129,14 +147,11 @@ public final class AudioCaptureSession: ObservableObject, @unchecked Sendable {
         }
     }
 
-    /// Returns true when enough silence has been observed to stop automatically.
-    public func shouldStopForSilence() -> Bool {
-        sampleLock.lock()
-        defer { sampleLock.unlock() }
-        return silenceFrameCount >= silenceFrameLimit
-    }
-
     private func stopEngineIfNeeded() {
+        if let configurationObserver {
+            NotificationCenter.default.removeObserver(configurationObserver)
+            self.configurationObserver = nil
+        }
         if engine.isRunning {
             engine.inputNode.removeTap(onBus: 0)
             engine.stop()
@@ -161,12 +176,19 @@ public final class AudioCaptureSession: ObservableObject, @unchecked Sendable {
         }
 
         sampleLock.lock()
-        capturedSamples.append(contentsOf: chunk)
+        if capturedSamples.isEmpty, let startedAt {
+            // Evidence for first-word clipping: how long the mic took to deliver audio after the hotkey.
+            Self.log.notice("first audio buffer after \(String(describing: ContinuousClock.now - startedAt), privacy: .public)")
+        }
+        // Backstop for the coordinator's auto-stop: never grow past the recording limit.
+        let room = Int(captureSampleRate * Self.maxRecordingSeconds) - capturedSamples.count
+        if room > 0 { capturedSamples.append(contentsOf: chunk.prefix(room)) }
         let level = min(1, sum / Float(count) * 12)
         if level < silenceThreshold {
-            silenceFrameCount += 1
+            // Measured in seconds: macOS taps often deliver ~4,800 frames, not the 1,024 requested.
+            silenceSeconds += Double(count) / captureSampleRate
         } else {
-            silenceFrameCount = 0
+            silenceSeconds = 0
             speechFrameCount += 1
             if level > peakLevel {
                 peakLevel = level
@@ -180,21 +202,5 @@ public final class AudioCaptureSession: ObservableObject, @unchecked Sendable {
                 self.waveformLevels.removeFirst(self.waveformLevels.count - 32)
             }
         }
-    }
-
-    private static func buffer(from samples: [Float], sampleRate: Double) -> AVAudioPCMBuffer? {
-        guard !samples.isEmpty,
-              let format = AVAudioFormat(commonFormat: .pcmFormatFloat32, sampleRate: sampleRate, channels: 1, interleaved: false),
-              let buffer = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: AVAudioFrameCount(samples.count)),
-              let channel = buffer.floatChannelData?[0]
-        else { return nil }
-
-        buffer.frameLength = AVAudioFrameCount(samples.count)
-        samples.withUnsafeBufferPointer { pointer in
-            if let baseAddress = pointer.baseAddress {
-                channel.update(from: baseAddress, count: samples.count)
-            }
-        }
-        return buffer
     }
 }

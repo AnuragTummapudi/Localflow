@@ -97,7 +97,13 @@ LocalFlow requires two standard macOS system permissions for audio capture and t
 - **Double-tap** <kbd>Fn</kbd> (or <kbd>Right Option</kbd>).
 - The pill overlay locks into active recording mode.
 - Speak freely for long-form thoughts, notes, or brainstorming.
-- Tap the trigger key once to finish and insert.
+- Tap the trigger key once to finish and insert. Press <kbd>Esc</kbd> to cancel; **Undo** within a few seconds restores and inserts that recording.
+- No Fn or Right Option key? Choose **Start Dictation** from the LocalFlow menu bar icon, then **Stop & Transcribe** (or ✓ on the pill).
+- Recordings stop automatically at 10 minutes and are transcribed. If your microphone changes mid-recording (AirPods connect, headset unplugged), LocalFlow transcribes what it captured.
+
+### Dictionary that learns
+- Add names, jargon, and shortcuts (`btw → by the way`) in **Settings → Dictionary**.
+- **Learn from my corrections** (on by default): fix a word right after dictating, such as "Kieran" to "Kieron", and LocalFlow shows *New word learned* and adds `Kieran → Kieron` to the Dictionary. Next time the fix is applied automatically. The field is read on your Mac for up to 30 seconds after a paste; only the learned word is stored. Works in apps that expose their text to Accessibility (Notes, Mail, TextEdit, most native apps); many Electron editors don't.
 
 ### 3. Smart Polish & Prompt Engineering
 - **Select any text** in your editor or browser.
@@ -200,38 +206,19 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Report security issues privately as desc
 
 ```
 LocalFlow/
-├── App/                # macOS SwiftUI interface, settings window, overlays, & coordinators
-│   ├── DictationCoordinator.swift   # Dictation session lifecycle and audio routing
-│   ├── SettingsRootView.swift       # Preferences and voice command cheatsheet UI
-│   ├── OverlayWindowController.swift# Floating recording pill and status indicators
-│   └── Info.plist                   # App bundle configuration & entitlements
-├── Core/               # Hardware audio capture, global hotkeys, & text injection
-│   ├── AudioCapture.swift           # Low-latency microphone streaming
-│   ├── GlobalHotKeyManager.swift    # Fn and Right Option event monitoring
-│   └── TextInsertion.swift          # Accessibility and clipboard insertion engine
-├── Engines/            # On-device transcription engine drivers
-│   ├── AppleSpeechEngine.swift      # Native Apple Speech transcription
-│   └── WhisperEngine.swift          # Local Whisper transcription pipeline
-├── Features/           # High-level product features
-│   ├── CommandMode/                 # Voice command parsing, search routing, & Spotify control
-│   ├── SmartFormatting/             # App-aware punctuation, casing, & cleanup
-│   └── SpeechCleanup/               # Local filler word removal and false-start correction
-├── Resources/          # Icons, font assets, and application catalogs
-├── Scripts/            # Build automation and DMG packaging scripts
-└── Tests/              # Comprehensive test suites (unit, commands, formatting, cleanup)
+├── App/        # SwiftUI settings, menu bar, overlays; DictationCoordinator (session lifecycle)
+├── Core/
+│   ├── AudioCapture/    # AudioCaptureSession: mic capture, silence timing, device-change handling
+│   ├── HotkeyManager/   # Fn / Right Option monitoring, ⌥1 / ⌥2 Carbon hotkeys
+│   ├── ModelManager/    # Engine selection, pinned + checksummed Whisper downloads
+│   └── TextInjection/   # Paste / Accessibility insertion, layout-aware ⌘V, selection capture
+├── Engines/    # Apple Speech, Parakeet (FluidAudio), Whisper (WhisperKit), cloud providers
+├── Features/   # CommandMode, SmartFormatting, SpeechCleanup, PrivacyDashboard
+├── Shared/     # Settings, history, vocabulary + correction learning, cloud client, Keychain
+├── Resources/  # Fonts, icons, asset catalogs
+├── Scripts/    # DMG packaging, icon generation
+└── Tests/      # SharedTests, FeaturesTests
 ```
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit issues, feature suggestions, or pull requests:
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ---
 

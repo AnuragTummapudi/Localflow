@@ -93,6 +93,12 @@ public final class MenuBarController: NSObject, NSMenuDelegate {
             menu.addItem(cancelItem)
 
             menu.addItem(.separator())
+        } else {
+            // For keyboards without Fn/Right Option: starts hands-free; stop from this menu or the hotkey.
+            let startItem = NSMenuItem(title: "Start Dictation", action: #selector(startDictationAction), keyEquivalent: "")
+            startItem.target = self
+            menu.addItem(startItem)
+            menu.addItem(.separator())
         }
 
         // ── Settings ──────────────────────────────────────────────────
@@ -107,6 +113,12 @@ public final class MenuBarController: NSObject, NSMenuDelegate {
 
         menu.addItem(.separator())
         menu.addItem(NSMenuItem(title: "Quit LocalFlow", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+    }
+
+    @objc private func startDictationAction() {
+        Task { @MainActor in
+            await AppServices.shared.coordinator.beginDictation(mode: .handsFree)
+        }
     }
 
     @objc private func stopDictationAction() {

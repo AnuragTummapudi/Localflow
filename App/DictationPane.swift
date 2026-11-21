@@ -15,6 +15,7 @@ public struct DictationPane: View {
     @State private var query: String = ""
     @State private var pendingDeleteID: UUID? = nil
     @State private var showDeleteConfirm = false
+    @State private var showClearAllConfirm = false
     @FocusState private var isSearchFocused: Bool
 
     public init(
@@ -39,6 +40,13 @@ public struct DictationPane: View {
             HStack(alignment: .firstTextBaseline) {
                 LFPaneTitle("Dictation")
                 Spacer()
+                if !store.items.isEmpty {
+                    Button("Clear all") { showClearAllConfirm = true }
+                        .font(LocalFlowDesign.generalSans(size: 12, weight: .medium))
+                        .foregroundStyle(LocalFlowDesign.graphite)
+                        .buttonStyle(.plain)
+                        .padding(.trailing, 4)
+                }
                 HStack(spacing: 8) {
                     Image(systemName: "magnifyingglass")
                         .foregroundStyle(LocalFlowDesign.graphite)
@@ -136,35 +144,50 @@ public struct DictationPane: View {
                 }
             } else {
                 ScrollView {
-                    LazyVStack(alignment: .leading, spacing: 0, pinnedViews: .sectionHeaders) {
+                    // One card per day; rows inside share hairline dividers aligned to the text column.
+                    LazyVStack(alignment: .leading, spacing: 20) {
                         ForEach(filteredGroups, id: \.label) { group in
-                            Section {
-                                ForEach(group.items) { item in
-                                    DictationHistoryRow(item: item) { id in
-                                        pendingDeleteID = id
-                                        showDeleteConfirm = true
-                                    }
-                                    Divider()
-                                        .background(LocalFlowDesign.graphite.opacity(0.12))
-                                        .padding(.leading, 20)
-                                }
-                            } header: {
-                                Text(group.label.uppercased())
-                                    .font(LocalFlowDesign.generalSans(size: 11, weight: .medium))
-                                    .tracking(0.8)
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text(group.label)
+                                    .font(LocalFlowDesign.generalSans(size: 13, weight: .medium))
                                     .foregroundStyle(LocalFlowDesign.graphite)
-                                    .padding(.horizontal, 28)
-                                    .padding(.vertical, 8)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .background(LocalFlowDesign.canvas)
+                                    .padding(.leading, 4)
+                                VStack(spacing: 0) {
+                                    ForEach(Array(group.items.enumerated()), id: \.element.id) { index, item in
+                                        if index > 0 {
+                                            Rectangle()
+                                                .fill(LocalFlowDesign.hairline)
+                                                .frame(height: 1)
+                                                .padding(.leading, DictationHistoryRow.textInset)
+                                        }
+                                        DictationHistoryRow(item: item) { id in
+                                            pendingDeleteID = id
+                                            showDeleteConfirm = true
+                                        }
+                                    }
+                                }
+                                .background(LocalFlowDesign.cardBackground(cornerRadius: 14))
+                                .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
                             }
                         }
                     }
+                    .padding(.horizontal, 28)
+                    .padding(.vertical, 20)
                 }
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(LocalFlowDesign.canvas)
+        .confirmationDialog(
+            "Delete all \(store.items.count) dictations?",
+            isPresented: $showClearAllConfirm,
+            titleVisibility: .visible
+        ) {
+            Button("Delete All", role: .destructive) { store.removeAll() }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("History is stored only on this Mac and cannot be recovered.")
+        }
         .confirmationDialog(
             "Delete this dictation?",
             isPresented: $showDeleteConfirm,
@@ -197,7 +220,9 @@ public struct DictationPane: View {
         }
 
         let fmt = DateFormatter()
-        fmt.dateFormat = "MMM d, yyyy"
+        fmt.dateFormat = "EEEE, MMM d"
+        let olderFmt = DateFormatter()
+        olderFmt.dateFormat = "MMM d, yyyy"
 
         return byDay.keys
             .sorted(by: >)
@@ -207,8 +232,10 @@ public struct DictationPane: View {
                     label = "Today"
                 } else if day == yesterday {
                     label = "Yesterday"
-                } else {
+                } else if cal.isDate(day, equalTo: today, toGranularity: .year) {
                     label = fmt.string(from: day)
+                } else {
+                    label = olderFmt.string(from: day)
                 }
                 let sortedItems = byDay[day]!.sorted { $0.createdAt > $1.createdAt }
                 return (label: label, items: sortedItems)
@@ -229,7 +256,9 @@ public struct DictationHistoryRow: View {
     @State private var isCopied = false
     @State private var isDeleteHovered = false
     @State private var isRowHovered = false
-    private let truncationThreshold = 160
+    private let truncationThreshold = 220
+    /// Leading inset of the text column (row padding + time column + spacing); dividers align to it.
+    static let textInset: CGFloat = 16 + 58 + 14
 
     public init(
         item: DictationHistoryItem,
@@ -252,89 +281,73 @@ public struct DictationHistoryRow: View {
     private var isTruncatable: Bool {
         item.text.count > truncationThreshold
     }
-    private var displayText: String {
-        guard isTruncatable && !expanded else { return item.text }
-        return String(item.text.prefix(truncationThreshold)).trimmingCharacters(in: .whitespaces) + "…"
-    }
 
     public var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            HStack(alignment: .firstTextBaseline, spacing: 16) {
-                // Timestamp
-                Text(item.createdAt, format: .dateTime.hour().minute())
-                    .font(LocalFlowDesign.fragmentMono(size: 11))
-                    .foregroundStyle(LocalFlowDesign.graphite)
-                    .frame(width: 62, alignment: .leading)
+        HStack(alignment: .firstTextBaseline, spacing: 14) {
+            Text(item.createdAt, format: .dateTime.hour().minute())
+                .font(LocalFlowDesign.fragmentMono(size: 11))
+                .foregroundStyle(LocalFlowDesign.graphite)
+                .frame(width: 58, alignment: .leading)
 
-                // Transcribed text
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(displayText)
-                        .font(LocalFlowDesign.generalSans(size: 13))
-                        .foregroundStyle(LocalFlowDesign.ink)
-                        .fixedSize(horizontal: false, vertical: true)
+            VStack(alignment: .leading, spacing: 6) {
+                Text(item.text)
+                    .font(LocalFlowDesign.generalSans(size: 13))
+                    .foregroundStyle(LocalFlowDesign.ink)
+                    .lineSpacing(2)
+                    .lineLimit(expanded ? nil : 3)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .textSelection(.enabled)
 
-                    if isTruncatable {
-                        Button(expanded ? "Show less" : "Show more") {
-                            withAnimation(.easeInOut(duration: 0.15)) {
-                                expanded.toggle()
-                            }
-                        }
-                        .font(LocalFlowDesign.generalSans(size: 12))
-                        .foregroundStyle(LocalFlowDesign.signal)
-                        .buttonStyle(.plain)
+                if isTruncatable {
+                    Button(expanded ? "Show less" : "Show more") {
+                        withAnimation(.easeInOut(duration: 0.15)) { expanded.toggle() }
                     }
-                }
-
-                Spacer()
-
-                // Action buttons
-                HStack(spacing: 10) {
-                    Button {
-                        NSPasteboard.general.clearContents()
-                        NSPasteboard.general.setString(item.text, forType: .string)
-                        withAnimation(.easeInOut(duration: 0.15)) {
-                            isCopied = true
-                        }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-                            withAnimation(.easeInOut(duration: 0.15)) {
-                                isCopied = false
-                            }
-                        }
-                    } label: {
-                        Image(systemName: effectiveCopied ? "checkmark" : "doc.on.doc")
-                            .frame(width: 16, height: 16)
-                            .foregroundStyle(effectiveCopied ? LocalFlowDesign.signal : LocalFlowDesign.graphite)
-                    }
+                    .font(LocalFlowDesign.generalSans(size: 12, weight: .medium))
+                    .foregroundStyle(LocalFlowDesign.signal)
                     .buttonStyle(.plain)
-                    .help(effectiveCopied ? "Copied" : "Copy")
-
-                    Button {
-                        onDelete(item.id)
-                    } label: {
-                        Image(systemName: "trash")
-                            .frame(width: 16, height: 16)
-                            .foregroundStyle(effectiveDeleteHover ? LocalFlowDesign.destructiveRed : LocalFlowDesign.graphite)
-                            .scaleEffect(effectiveDeleteHover ? 1.05 : 1.0)
-                            .animation(.easeInOut(duration: 0.15), value: effectiveDeleteHover)
-                    }
-                    .buttonStyle(.plain)
-                    .help("Delete")
-                    .onHover { isDeleteHovered = $0 }
                 }
-                .padding(.leading, 8)
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
+
+            // Actions appear on hover (and stay while "Copied" shows) to keep the list quiet.
+            HStack(spacing: 4) {
+                actionButton(systemName: effectiveCopied ? "checkmark" : "doc.on.doc",
+                             help: effectiveCopied ? "Copied" : "Copy",
+                             tint: effectiveCopied ? LocalFlowDesign.signal : LocalFlowDesign.graphite) {
+                    NSPasteboard.general.clearContents()
+                    NSPasteboard.general.setString(item.text, forType: .string)
+                    withAnimation(.easeInOut(duration: 0.15)) { isCopied = true }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                        withAnimation(.easeInOut(duration: 0.15)) { isCopied = false }
+                    }
+                }
+                actionButton(systemName: "trash", help: "Delete",
+                             tint: effectiveDeleteHover ? LocalFlowDesign.destructiveRed : LocalFlowDesign.graphite) {
+                    onDelete(item.id)
+                }
+                .onHover { isDeleteHovered = $0 }
+            }
+            .opacity(effectiveRowHover || effectiveCopied ? 1 : 0)
+            .animation(.easeInOut(duration: 0.12), value: effectiveRowHover)
         }
-        .padding(.horizontal, 28)
-        .padding(.vertical, 14)
-        .background(
-            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                .fill(
-                    expanded ? LocalFlowDesign.card :
-                    (effectiveRowHover ? LocalFlowDesign.canvasHover : Color.clear)
-                )
-        )
         .padding(.horizontal, 16)
+        .padding(.vertical, 12)
+        .background(effectiveRowHover ? LocalFlowDesign.canvasHover.opacity(0.5) : Color.clear)
+        .contentShape(Rectangle())
         .onHover { isRowHovered = $0 }
+    }
+
+    private func actionButton(systemName: String, help: String, tint: Color, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Image(systemName: systemName)
+                .font(.system(size: 12))
+                .foregroundStyle(tint)
+                .frame(width: 26, height: 26)
+                .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .help(help)
+        .accessibilityLabel(help)
     }
 }
 

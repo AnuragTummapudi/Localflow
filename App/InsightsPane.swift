@@ -31,7 +31,7 @@ public struct InsightsPane: View {
 
                 // ── Streak heatmap ───────────────────────────────────────
                 VStack(alignment: .leading, spacing: 10) {
-                    SectionHeading(title: "Activity", subtitle: "Your last 52 weeks of dictation")
+                    SectionHeading(title: "Activity", subtitle: "Dictations per day, most recent on the right")
                     StreakHeatmap(items: store.items, longestStreak: stats.longestStreak, currentStreak: stats.currentStreak)
                 }
 
@@ -147,9 +147,11 @@ private struct StreakHeatmap: View {
     let currentStreak: Int
 
     private let daysPerWeek = 7
-    private let weeks = 52
-    private let cellSize: CGFloat = 13
+    private let maxWeeks = 52
+    private let cellSize: CGFloat = 12
     private let gap: CGFloat = 3
+    private let dayLabelWidth: CGFloat = 28
+    private let monthRowHeight: CGFloat = 14
 
     private var countByDay: [Date: Int] {
         let cal = Calendar.current
@@ -161,8 +163,8 @@ private struct StreakHeatmap: View {
         return dict
     }
 
-    /// Week columns × day rows, Monday-aligned, covering a full 52 weeks.
-    private var grid: [[Date]] {
+    /// Week columns × day rows, Monday-aligned, ending with the current week.
+    private func grid(weeks: Int) -> [[Date]] {
         let cal = Calendar.current
         let today = cal.startOfDay(for: Date())
         let weekday = (cal.component(.weekday, from: today) + 5) % 7 // 0 = Mon
@@ -208,40 +210,38 @@ private struct StreakHeatmap: View {
                 }
             }
 
-            ScrollView(.horizontal, showsIndicators: false) {
-            HStack(alignment: .top, spacing: 10) {
-                VStack(spacing: gap) {
-                    Color.clear.frame(height: 16)
-                    ForEach(0..<daysPerWeek, id: \.self) { d in
-                        Text(dayLabels[d])
-                            .font(LocalFlowDesign.fragmentMono(size: 9))
-                            .foregroundStyle(LocalFlowDesign.graphite)
-                            .frame(width: 28, height: cellSize, alignment: .trailing)
+            // As many weeks as fit the card (up to 52), so the current week is always visible without scrolling.
+            GeometryReader { geo in
+                let available = geo.size.width - dayLabelWidth - 10
+                let weeks = max(4, min(maxWeeks, Int((available + gap) / (cellSize + gap))))
+                let columns = grid(weeks: weeks)
+                HStack(alignment: .top, spacing: 10) {
+                    VStack(spacing: gap) {
+                        Color.clear.frame(height: monthRowHeight + 6 - gap)
+                        ForEach(0..<daysPerWeek, id: \.self) { d in
+                            Text(dayLabels[d])
+                                .font(LocalFlowDesign.fragmentMono(size: 9))
+                                .foregroundStyle(LocalFlowDesign.graphite)
+                                .frame(width: dayLabelWidth, height: cellSize, alignment: .trailing)
+                        }
                     }
-                }
 
-                VStack(alignment: .leading, spacing: 6) {
-                    monthLabelsRow
-                    HStack(alignment: .top, spacing: gap) {
-                        ForEach(0..<weeks, id: \.self) { week in
-                            VStack(spacing: gap) {
-                                ForEach(0..<daysPerWeek, id: \.self) { day in
-                                    let date = grid[week][day]
-                                    let count = counts[date] ?? 0
-                                    let isFuture = date > today
-                                    RoundedRectangle(cornerRadius: 2.5, style: .continuous)
-                                        .fill(isFuture ? Color.clear : fillColor(for: count))
-                                        .overlay(RoundedRectangle(cornerRadius: 3).strokeBorder(LocalFlowDesign.hairline.opacity(count == 0 ? 0.3 : 0), lineWidth: 0.5))
-                                        .frame(width: cellSize, height: cellSize)
-                                        .accessibilityLabel(isFuture ? "Future day" : "\(date.formatted(date: .abbreviated, time: .omitted)): \(count) dictation\(count == 1 ? "" : "s")")
-                                        .help(isFuture ? "" : "\(date.formatted(date: .abbreviated, time: .omitted)): \(count) dictation\(count == 1 ? "" : "s")")
+                    VStack(alignment: .leading, spacing: 6) {
+                        monthLabelsRow(columns)
+                        HStack(alignment: .top, spacing: gap) {
+                            ForEach(0..<columns.count, id: \.self) { week in
+                                VStack(spacing: gap) {
+                                    ForEach(0..<daysPerWeek, id: \.self) { day in
+                                        cell(date: columns[week][day], counts: counts, today: today)
+                                    }
                                 }
                             }
                         }
                     }
                 }
+                .frame(maxWidth: .infinity, alignment: .trailing)
             }
-            }
+            .frame(height: monthRowHeight + 6 + CGFloat(daysPerWeek) * cellSize + CGFloat(daysPerWeek - 1) * gap)
 
             HStack(spacing: 6) {
                 Text("Less")
@@ -261,26 +261,52 @@ private struct StreakHeatmap: View {
         .background(LocalFlowDesign.cardBackground(cornerRadius: 16))
     }
 
-    private var monthLabelsRow: some View {
+    @ViewBuilder
+    private func cell(date: Date, counts: [Date: Int], today: Date) -> some View {
+        let count = counts[date] ?? 0
+        let isFuture = date > today
+        let label = "\(date.formatted(date: .abbreviated, time: .omitted)): \(count) dictation\(count == 1 ? "" : "s")"
+        RoundedRectangle(cornerRadius: 2.5, style: .continuous)
+            .fill(isFuture ? Color.clear : fillColor(for: count))
+            .overlay {
+                if date == today {
+                    RoundedRectangle(cornerRadius: 2.5, style: .continuous)
+                        .strokeBorder(LocalFlowDesign.ink.opacity(0.45), lineWidth: 1)
+                }
+            }
+            .frame(width: cellSize, height: cellSize)
+            .accessibilityLabel(isFuture ? "Future day" : label)
+            .help(isFuture ? "" : label)
+    }
+
+    /// Month names over the week where each month starts, skipped when too close to the previous label.
+    private func monthLabelsRow(_ grid: [[Date]]) -> some View {
         let cal = Calendar.current
         let fmt = DateFormatter()
         fmt.dateFormat = "MMM"
+        var shown = Set<Int>()
+        var lastShown = -10
+        for week in grid.indices {
+            let starts = week == 0 || cal.component(.month, from: grid[week][0]) != cal.component(.month, from: grid[week - 1][0])
+            // A label needs ~3 columns of room; never let two collide (the old "NovDec").
+            if starts && week - lastShown >= 3 {
+                if week == 0, let next = grid.indices.dropFirst().first(where: {
+                    cal.component(.month, from: grid[$0][0]) != cal.component(.month, from: grid[$0 - 1][0])
+                }), next < 3 { continue }
+                shown.insert(week)
+                lastShown = week
+            }
+        }
         return HStack(spacing: gap) {
-            ForEach(0..<weeks, id: \.self) { week in
-                let date = grid[week][0]
-                let show: Bool = {
-                    if week == 0 { return true }
-                    let prev = grid[week - 1][0]
-                    return cal.component(.month, from: date) != cal.component(.month, from: prev)
-                }()
+            ForEach(grid.indices, id: \.self) { week in
                 Color.clear
-                    .frame(width: cellSize, height: 14)
+                    .frame(width: cellSize, height: monthRowHeight)
                     .overlay(alignment: .leading) {
-                        if show {
-                            Text(fmt.string(from: date))
+                        if shown.contains(week) {
+                            Text(fmt.string(from: grid[week][0]))
                                 .font(LocalFlowDesign.fragmentMono(size: 9))
                                 .foregroundStyle(LocalFlowDesign.graphite)
-                                .fixedSize(horizontal: true, vertical: false)
+                                .fixedSize()
                         }
                     }
             }
@@ -419,10 +445,9 @@ private struct AppUsageBreakdown: View {
             VStack(spacing: 12) {
                 ForEach(entries) { entry in
                     HStack(spacing: 12) {
-                        Text(entry.displayName.uppercased())
-                            .font(LocalFlowDesign.generalSans(size: 11, weight: .medium))
-                            .tracking(0.6)
-                            .foregroundStyle(LocalFlowDesign.graphite)
+                        Text(entry.displayName)
+                            .font(LocalFlowDesign.generalSans(size: 13))
+                            .foregroundStyle(LocalFlowDesign.ink)
                             .frame(width: 120, alignment: .leading)
                             .lineLimit(1)
 

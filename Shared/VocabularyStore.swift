@@ -44,6 +44,29 @@ public final class VocabularyStore: ObservableObject, @unchecked Sendable {
         persist()
     }
 
+    /// Learns a correction the user made after a dictation. Returns false when nothing new was added.
+    /// Case-only fixes store the spelling; other fixes map the misheard word to the correction.
+    @discardableResult
+    public func learn(_ correction: LearnedCorrection) -> Bool {
+        let heard = correction.heard.lowercased()
+        let caseOnly = heard == correction.corrected.lowercased()
+        // Skip if this word is already known (as a word, or as the target of a mapping) or the mishearing is mapped.
+        let known = entries.contains { entry in
+            let phrase = entry.phrase.lowercased()
+            return (!caseOnly && phrase == heard)
+                || entry.phrase == correction.corrected
+                || entry.replacement == correction.corrected && phrase == heard
+        }
+        guard !known else { return false }
+        entries.append(VocabularyEntry(
+            phrase: caseOnly ? correction.corrected : correction.heard,
+            replacement: caseOnly ? "" : correction.corrected,
+            isLearned: true
+        ))
+        persist()
+        return true
+    }
+
     /// Updates an existing vocabulary entry.
     public func update(entry: VocabularyEntry) {
         if let idx = entries.firstIndex(where: { $0.id == entry.id }) {
@@ -129,22 +152,13 @@ public final class VocabularyStore: ObservableObject, @unchecked Sendable {
         let phrase = entry.phrase.trimmingCharacters(in: .whitespacesAndNewlines)
         let replacement = entry.isShortcut ? entry.replacement.trimmingCharacters(in: .whitespacesAndNewlines) : phrase
 
-        switch phrase.lowercased() {
-        case "inr":
-            current = replaceRegex(pattern: "(?i)\\b(i\\s*n\\s*r|i\\.n\\.r\\.?|inr)\\b", with: replacement, in: current)
-        case "abgen":
-            current = replaceRegex(pattern: "(?i)\\b(a\\s*b\\s*gen|ab\\s*gen|abgen)\\b", with: replacement, in: current)
-        case "mckarthy":
-            current = replaceRegex(pattern: "(?i)\\b(mccarthy|mc\\s*carthy|macarthy|mckarthy)\\b", with: replacement, in: current)
-        case "pausch":
-            current = replaceRegex(pattern: "(?i)\\b(pausch|posh|poush)\\b", with: replacement, in: current)
-        case "wispr flow":
-            current = replaceRegex(pattern: "(?i)\\b(whisper\\s*flow|wisper\\s*flow|wispr\\s*flow)\\b", with: replacement, in: current)
-        default:
-            if phrase.count <= 5 && phrase.allSatisfy({ $0.isLetter }) {
-                let spaced = phrase.map { String($0) }.joined(separator: "\\s+")
-                current = replaceRegex(pattern: "(?i)\\b\(spaced)\\b", with: replacement, in: current)
-            }
+        // Generic rule: a short letter/digit term may be heard spelled out or split up
+        // ("a b gen", "i.n.r.", "ab gen" → "ABGen" / "INR"). Specific sound-alikes are learned
+        // per user from their corrections, never hard-coded here.
+        let compact = phrase.filter { !$0.isWhitespace }
+        if (2...8).contains(compact.count), compact.allSatisfy({ $0.isLetter || $0.isNumber }) {
+            let pattern = compact.map { NSRegularExpression.escapedPattern(for: String($0)) }.joined(separator: "[\\s.]*")
+            current = replaceRegex(pattern: "(?i)(?<!\\w)\(pattern)(?!\\w)", with: replacement, in: current)
         }
 
         return current

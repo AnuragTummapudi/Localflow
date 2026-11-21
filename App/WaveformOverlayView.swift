@@ -19,6 +19,10 @@ public final class WaveformOverlayModel: ObservableObject {
     /// Whether the session is in the "Transcript cancelled" undo state.
     @Published public var isCancelled: Bool = false
 
+    /// Text and button label of the countdown pill (also used for "Transcription failed" + Retry).
+    @Published public var cancelledTitle = "Transcript cancelled"
+    @Published public var cancelledActionTitle = "Undo"
+
     /// Whether the session is in the "Polished" state.
     @Published public var isPolished: Bool = false
 
@@ -66,8 +70,15 @@ public final class WaveformOverlayModel: ObservableObject {
     }
 
     /// Triggers the "Transcript cancelled" countdown timer.
-    public func triggerCancelled(durationSeconds: Double = 3.5, onDismiss: @escaping () -> Void) {
+    public func triggerCancelled(
+        title: String = "Transcript cancelled",
+        actionTitle: String = "Undo",
+        durationSeconds: Double = 3.5,
+        onDismiss: @escaping () -> Void
+    ) {
         countdownTask?.cancel()
+        cancelledTitle = title
+        cancelledActionTitle = actionTitle
         isCancelled = true
         pillState = .cancelled
         cancelProgress = 1.0
@@ -331,7 +342,7 @@ public struct WaveformOverlayView: View {
     private var cancelledView: some View {
         ZStack(alignment: .bottomLeading) {
             HStack(spacing: 10) {
-                Text("Transcript cancelled")
+                Text(model.cancelledTitle)
                     .font(LocalFlowDesign.generalSans(size: 13.5, weight: .medium))
                     .lineLimit(1)
                     .fixedSize(horizontal: true, vertical: false)
@@ -340,7 +351,7 @@ public struct WaveformOverlayView: View {
                 Spacer(minLength: 8)
 
                 Button(action: { model.onUndo?() }) {
-                    Text("Undo")
+                    Text(model.cancelledActionTitle)
                         .font(LocalFlowDesign.generalSans(size: 12.5, weight: .medium))
                         .lineLimit(1)
                         .fixedSize(horizontal: true, vertical: false)
@@ -381,7 +392,7 @@ public struct WaveformOverlayView: View {
                 )
         )
         .shadow(color: Color.black.opacity(0.35), radius: 14, y: 6)
-        .accessibilityLabel("Transcript cancelled. Tap Undo to restore.")
+        .accessibilityLabel("\(model.cancelledTitle). Tap \(model.cancelledActionTitle).")
     }
 
     // MARK: - Push-to-Talk Mode (Compact Waveform, No Buttons)

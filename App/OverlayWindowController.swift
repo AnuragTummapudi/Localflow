@@ -65,7 +65,12 @@ public final class OverlayWindowController {
     }
 
     /// Displays the "Transcript cancelled" state with Undo button and animated progress bar.
-    public func showCancelled(durationSeconds: Double = 3.5, onDismiss: @escaping () -> Void) {
+    public func showCancelled(
+        title: String = "Transcript cancelled",
+        actionTitle: String = "Undo",
+        durationSeconds: Double = 3.5,
+        onDismiss: @escaping () -> Void
+    ) {
         cancelTerminalDismissal()
         levelsCancellable?.cancel()
         levelsCancellable = nil
@@ -77,7 +82,7 @@ public final class OverlayWindowController {
         position(panel, size: size)
         panel.orderFrontRegardless()
 
-        model.triggerCancelled(durationSeconds: durationSeconds) { [weak self] in
+        model.triggerCancelled(title: title, actionTitle: actionTitle, durationSeconds: durationSeconds) { [weak self] in
             self?.hide()
             onDismiss()
         }

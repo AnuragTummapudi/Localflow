@@ -45,8 +45,10 @@ public enum ModelTier: String, Codable, CaseIterable, Identifiable, Sendable {
 
 /// Captured speech audio preserved in the native audio form expected by engine SDKs.
 public struct CapturedAudio: @unchecked Sendable {
-    /// The original captured PCM buffer, when capture came from AVAudioEngine.
-    public let buffer: AVAudioPCMBuffer?
+    private let storedBuffer: AVAudioPCMBuffer?
+
+    /// A mono PCM buffer for engine SDKs. Built on demand so cloud dictation never pays for a second copy.
+    public var buffer: AVAudioPCMBuffer? { storedBuffer ?? Self.makeBuffer(samples, sampleRate: sampleRate) }
 
     /// Mono floating-point samples captured from the first input channel.
     public let samples: [Float]
@@ -56,9 +58,22 @@ public struct CapturedAudio: @unchecked Sendable {
 
     /// Creates captured audio metadata.
     public init(buffer: AVAudioPCMBuffer?, samples: [Float], sampleRate: Double) {
-        self.buffer = buffer
+        self.storedBuffer = buffer
         self.samples = samples
         self.sampleRate = sampleRate
+    }
+
+    private static func makeBuffer(_ samples: [Float], sampleRate: Double) -> AVAudioPCMBuffer? {
+        guard !samples.isEmpty, sampleRate.isFinite, sampleRate > 0,
+              let format = AVAudioFormat(commonFormat: .pcmFormatFloat32, sampleRate: sampleRate, channels: 1, interleaved: false),
+              let buffer = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: AVAudioFrameCount(samples.count)),
+              let channel = buffer.floatChannelData?[0]
+        else { return nil }
+        buffer.frameLength = AVAudioFrameCount(samples.count)
+        samples.withUnsafeBufferPointer { pointer in
+            if let base = pointer.baseAddress { channel.update(from: base, count: samples.count) }
+        }
+        return buffer
     }
 
     /// Returns true when no usable audio samples were captured.
@@ -156,6 +171,9 @@ public struct VocabularyEntry: Codable, Equatable, Identifiable, Sendable {
     /// Whether this entry uses smart phonetic recognition (✨).
     public var hasSparkle: Bool
 
+    /// True when LocalFlow added this entry by watching the user correct a dictation.
+    public var isLearned: Bool
+
     /// True if this entry expands or replaces a shortcut into another text.
     public var isShortcut: Bool {
         let trimmedPhrase = phrase.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -177,17 +195,19 @@ public struct VocabularyEntry: Codable, Equatable, Identifiable, Sendable {
         phrase: String,
         replacement: String = "",
         isFavorite: Bool = false,
-        hasSparkle: Bool = false
+        hasSparkle: Bool = false,
+        isLearned: Bool = false
     ) {
         self.id = id
         self.phrase = phrase
         self.replacement = replacement
         self.isFavorite = isFavorite
         self.hasSparkle = hasSparkle
+        self.isLearned = isLearned
     }
 
     public enum CodingKeys: String, CodingKey {
-        case id, phrase, replacement, isFavorite, hasSparkle
+        case id, phrase, replacement, isFavorite, hasSparkle, isLearned
     }
 
     public init(from decoder: any Decoder) throws {
@@ -197,6 +217,7 @@ public struct VocabularyEntry: Codable, Equatable, Identifiable, Sendable {
         replacement = try container.decodeIfPresent(String.self, forKey: .replacement) ?? ""
         isFavorite = try container.decodeIfPresent(Bool.self, forKey: .isFavorite) ?? false
         hasSparkle = try container.decodeIfPresent(Bool.self, forKey: .hasSparkle) ?? false
+        isLearned = try container.decodeIfPresent(Bool.self, forKey: .isLearned) ?? false
     }
 
     public func encode(to encoder: any Encoder) throws {
@@ -206,6 +227,7 @@ public struct VocabularyEntry: Codable, Equatable, Identifiable, Sendable {
         try container.encode(replacement, forKey: .replacement)
         try container.encode(isFavorite, forKey: .isFavorite)
         try container.encode(hasSparkle, forKey: .hasSparkle)
+        try container.encode(isLearned, forKey: .isLearned)
     }
 }
 

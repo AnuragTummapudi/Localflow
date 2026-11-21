@@ -6,6 +6,7 @@ import Shared
 /// The Dictionary settings pane — manage custom vocabulary and shortcuts LocalFlow uses during transcription.
 public struct DictionaryPane: View {
     @ObservedObject public var store: VocabularyStore
+    @ObservedObject private var settings = LocalFlowSettings.shared
     public var hoveredEntryId: UUID? = nil
 
     @State private var query: String = ""
@@ -86,6 +87,21 @@ public struct DictionaryPane: View {
             .padding(.horizontal, 28)
             .padding(.top, 24)
             .padding(.bottom, 16)
+
+            Toggle(isOn: Binding(get: { settings.learnFromCorrections }, set: { settings.learnFromCorrections = $0 })) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Learn from my corrections")
+                        .font(LocalFlowDesign.generalSans(size: 13, weight: .medium))
+                        .foregroundStyle(LocalFlowDesign.ink)
+                    Text("When you fix a word right after dictating, LocalFlow adds it here. The text is read on this Mac only.")
+                        .font(LocalFlowDesign.generalSans(size: 12))
+                        .foregroundStyle(LocalFlowDesign.graphite)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .toggleStyle(.switch)
+            .padding(.horizontal, 28)
+            .padding(.bottom, 14)
 
             Divider()
                 .background(LocalFlowDesign.hairline)
@@ -195,20 +211,14 @@ public struct DictionaryEntryRow: View {
                     Text(entry.replacement)
                         .font(LocalFlowDesign.generalSans(size: 14))
                         .foregroundStyle(LocalFlowDesign.ink)
+                    if entry.isLearned { LearnedBadge() }
                 }
             } else {
                 HStack(spacing: 4) {
                     Text(entry.phrase)
                         .font(LocalFlowDesign.generalSans(size: 14))
                         .foregroundStyle(LocalFlowDesign.ink)
-                    if entry.hasSparkle {
-                        Text("Learned")
-                            .font(LocalFlowDesign.generalSans(size: 11, weight: .medium))
-                            .foregroundStyle(LocalFlowDesign.graphite)
-                            .padding(.horizontal, 7)
-                            .padding(.vertical, 3)
-                            .background(Capsule().fill(LocalFlowDesign.canvasHover))
-                    }
+                    if entry.isLearned { LearnedBadge() }
                 }
             }
 
@@ -425,12 +435,6 @@ public struct WordEditSheet: View {
                         Text("Smart Phonetic Recognition")
                             .font(LocalFlowDesign.generalSans(size: 13))
                             .foregroundStyle(LocalFlowDesign.ink)
-                        Text("Learned")
-                            .font(LocalFlowDesign.generalSans(size: 11, weight: .medium))
-                            .foregroundStyle(LocalFlowDesign.graphite)
-                            .padding(.horizontal, 7)
-                            .padding(.vertical, 3)
-                            .background(Capsule().fill(LocalFlowDesign.canvasHover))
                     }
                 }
                 .buttonStyle(.plain)
@@ -546,5 +550,18 @@ public struct WordEditSheet: View {
         .background(LocalFlowDesign.canvas)
         .preferredColorScheme(.light)
         .onAppear { phraseFieldFocused = true }
+    }
+}
+
+/// Marks entries LocalFlow added by itself from the user's corrections.
+private struct LearnedBadge: View {
+    var body: some View {
+        Text("Learned")
+            .font(LocalFlowDesign.generalSans(size: 11, weight: .medium))
+            .foregroundStyle(LocalFlowDesign.graphite)
+            .padding(.horizontal, 7)
+            .padding(.vertical, 3)
+            .background(Capsule().fill(LocalFlowDesign.canvasHover))
+            .help("Added automatically after you corrected a dictation")
     }
 }

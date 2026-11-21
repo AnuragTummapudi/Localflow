@@ -294,9 +294,16 @@ public struct GeneralSettingsView: View {
     @ObservedObject private var observedSettings: LocalFlowSettings
     @EnvironmentObject private var coordinator: DictationCoordinator
 
+    @State private var axOK = TextInjection().isAccessibilityTrusted(prompt: false)
+
     public init(viewModel: SettingsViewModel) {
         self.viewModel = viewModel
         _observedSettings = ObservedObject(wrappedValue: viewModel.settings)
+    }
+
+    private func refreshAccessibility() {
+        let trusted = TextInjection().isAccessibilityTrusted(prompt: false)
+        if trusted != axOK { axOK = trusted }
     }
 
     /// The view body.
@@ -312,7 +319,6 @@ public struct GeneralSettingsView: View {
                         .font(LocalFlowDesign.instrumentSerif(size: 18))
                         .foregroundStyle(LocalFlowDesign.ink)
 
-                    let axOK = TextInjection().isAccessibilityTrusted(prompt: false)
                     HStack(alignment: .top, spacing: 10) {
                         Image(systemName: axOK ? "checkmark.circle.fill" : "exclamationmark.triangle.fill")
                             .foregroundStyle(axOK ? LocalFlowDesign.signal : LocalFlowDesign.marker)
@@ -322,7 +328,7 @@ public struct GeneralSettingsView: View {
                                 .foregroundStyle(LocalFlowDesign.ink)
                             Text(axOK
                                  ? "LocalFlow can insert text into Notes and other apps."
-                                 : "Speech already works. Enable Accessibility for this LocalFlow Debug app, then dictate again.")
+                                 : "Speech already works. Turn on LocalFlow in System Settings → Privacy & Security → Accessibility to paste.")
                                 .font(LocalFlowDesign.generalSans(size: 12))
                                 .foregroundStyle(LocalFlowDesign.graphite)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -343,6 +349,9 @@ public struct GeneralSettingsView: View {
                 }
 
                 SourceConfigurationView()
+                    .onAppear { refreshAccessibility() }
+                    // Permission is granted in System Settings, outside the app: re-check so the card updates without a relaunch.
+                    .onReceive(Timer.publish(every: 2, on: .main, in: .common).autoconnect()) { _ in refreshAccessibility() }
 
                 // Hotkey — custom card selector (not stock Picker)
                 VStack(alignment: .leading, spacing: 12) {

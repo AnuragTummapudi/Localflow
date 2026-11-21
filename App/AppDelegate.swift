@@ -5,7 +5,7 @@ import Shared
 /// AppKit delegate used for menu bar integration and app activation policy.
 @MainActor
 public final class AppDelegate: NSObject, NSApplicationDelegate {
-    private var statusController: MenuBarController?
+    private(set) var statusController: MenuBarController?
     private var onboardingController: NSWindowController?
 
     /// Finishes app launch by installing the menu bar item and dock presence.

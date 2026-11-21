@@ -487,3 +487,12 @@ final class FeaturesTests: XCTestCase {
         XCTAssertEqual(fallback, .noFocusedTarget)
     }
 }
+
+final class CommandKeyCodeTests: XCTestCase {
+    /// Whatever layout this Mac uses, ⌘V/⌘C/⌘A must resolve to three distinct real keys.
+    func testCommandKeysResolveToDistinctKeys() {
+        let codes = ["v", "c", "a"].map { TextInjection.commandKeyCode(for: Character($0), fallback: 0x7F) }
+        XCTAssertEqual(Set(codes).count, 3)
+        XCTAssertFalse(codes.contains(0x7F), "layout lookup fell back")
+    }
+}

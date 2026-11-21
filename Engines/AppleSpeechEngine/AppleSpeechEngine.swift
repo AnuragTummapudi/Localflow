@@ -212,7 +212,7 @@ private extension AppleSpeechEngine {
         let status = await AssetInventory.status(forModules: modules)
         guard status == .installed else {
             throw LocalFlowError.modelUnavailable(
-                "Apple Speech model is not installed for \(locale.identifier). Check System Settings, then retry."
+                "Apple Speech couldn't load its \(locale.identifier) model. Try again in a moment; if it keeps failing, quit and reopen LocalFlow, or choose Local models in Settings → General."
             )
         }
     }

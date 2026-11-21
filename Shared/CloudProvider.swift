@@ -35,7 +35,7 @@ public enum CloudProvider: String, Codable, CaseIterable, Identifiable, Sendable
     }
     public var polishModel: String {
         switch self {
-        case .groq: "llama-3.3-70b-versatile"
+        case .groq: "openai/gpt-oss-120b"
         case .openAI: "gpt-4.1-mini"
         case .claude: "claude-haiku-5-5"
         case .gemini: "gemini-3.5-flash-lite"

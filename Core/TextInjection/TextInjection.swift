@@ -106,6 +106,13 @@ public final class TextInjection: @unchecked Sendable {
         await activateTargetIfNeeded(targetApp)
         await waitForModifiersToClear()
 
+        // No focused element means ⌘V would land nowhere; never paste dictation into a password field.
+        // Opaque Electron/Chromium groups still count as focused and get the paste below.
+        guard let focused = focusedElement(preferredPID: targetApp?.processIdentifier),
+              !Self.isSecureTextField(focused) else {
+            return .noFocusedTarget
+        }
+
         // Electron and Chromium apps often expose their editor as an opaque AXGroup,
         // even when the caret is visibly active, so AX role detection is not a gate for
         // Cmd+V. Use the standard paste path for both native and opaque editors.
@@ -518,6 +525,24 @@ public final class TextInjection: @unchecked Sendable {
         return Self.axElement(focused)
     }
 
+    /// The focused field's full text, for learning corrections. Nil for password fields,
+    /// fields that don't expose their value (many Electron editors), or very large documents.
+    public func focusedFieldText(preferredPID: pid_t?) -> (element: AXUIElement, text: String)? {
+        guard isAccessibilityTrusted(prompt: false),
+              let element = focusedElement(preferredPID: preferredPID),
+              !Self.isSecureTextField(element) else { return nil }
+        var value: CFTypeRef?
+        guard AXUIElementCopyAttributeValue(element, kAXValueAttribute as CFString, &value) == .success,
+              let text = value as? String, text.utf16.count <= 50_000 else { return nil }
+        return (element, text)
+    }
+
+    private static func isSecureTextField(_ element: AXUIElement) -> Bool {
+        var subrole: CFTypeRef?
+        guard AXUIElementCopyAttributeValue(element, kAXSubroleAttribute as CFString, &subrole) == .success else { return false }
+        return (subrole as? String) == (kAXSecureTextFieldSubrole as String)
+    }
+
     private func focusedElement(in pid: pid_t) -> AXUIElement? {
         let axApp = AXUIElementCreateApplication(pid)
         var focused: CFTypeRef?
@@ -710,7 +735,7 @@ public final class TextInjection: @unchecked Sendable {
         }
         source.localEventsSuppressionInterval = 0
 
-        let keyCode = CGKeyCode(kVK_ANSI_V)
+        let keyCode = Self.commandKeyCode(for: "v", fallback: kVK_ANSI_V)
         guard let keyDown = CGEvent(keyboardEventSource: source, virtualKey: keyCode, keyDown: true),
               let keyUp = CGEvent(keyboardEventSource: source, virtualKey: keyCode, keyDown: false)
         else {
@@ -725,8 +750,8 @@ public final class TextInjection: @unchecked Sendable {
 
     private func postCommandC() throws {
         guard let source = CGEventSource(stateID: .hidSystemState),
-              let down = CGEvent(keyboardEventSource: source, virtualKey: CGKeyCode(kVK_ANSI_C), keyDown: true),
-              let up = CGEvent(keyboardEventSource: source, virtualKey: CGKeyCode(kVK_ANSI_C), keyDown: false)
+              let down = CGEvent(keyboardEventSource: source, virtualKey: Self.commandKeyCode(for: "c", fallback: kVK_ANSI_C), keyDown: true),
+              let up = CGEvent(keyboardEventSource: source, virtualKey: Self.commandKeyCode(for: "c", fallback: kVK_ANSI_C), keyDown: false)
         else { throw LocalFlowError.textInjectionFailed }
         source.localEventsSuppressionInterval = 0
         down.flags = .maskCommand
@@ -741,7 +766,7 @@ public final class TextInjection: @unchecked Sendable {
         }
         source.localEventsSuppressionInterval = 0
 
-        let keyCode = CGKeyCode(kVK_ANSI_A)
+        let keyCode = Self.commandKeyCode(for: "a", fallback: kVK_ANSI_A)
         guard let keyDown = CGEvent(keyboardEventSource: source, virtualKey: keyCode, keyDown: true),
               let keyUp = CGEvent(keyboardEventSource: source, virtualKey: keyCode, keyDown: false)
         else {
@@ -752,6 +777,35 @@ public final class TextInjection: @unchecked Sendable {
         keyUp.flags = .maskCommand
         keyDown.post(tap: .cgAnnotatedSessionEventTap)
         keyUp.post(tap: .cgAnnotatedSessionEventTap)
+    }
+
+    /// The key that types `character` with ⌘ held in the active layout, so ⌘V is still paste on
+    /// Dvorak, Colemak, AZERTY, etc. "Dvorak – QWERTY ⌘" resolves to QWERTY positions because ⌘ is applied.
+    public static func commandKeyCode(for character: Character, fallback: Int) -> CGKeyCode {
+        // TIS input-source APIs must run on the main thread.
+        let lookup = { () -> CGKeyCode? in
+            guard let source = TISCopyCurrentKeyboardLayoutInputSource()?.takeRetainedValue(),
+                  let raw = TISGetInputSourceProperty(source, kTISPropertyUnicodeKeyLayoutData) else { return nil }
+            let data = Unmanaged<CFData>.fromOpaque(raw).takeUnretainedValue() as Data
+            return data.withUnsafeBytes { bytes -> CGKeyCode? in
+                guard let layout = bytes.baseAddress?.assumingMemoryBound(to: UCKeyboardLayout.self) else { return nil }
+                for code in 0..<128 {
+                    var deadKeys: UInt32 = 0
+                    var length = 0
+                    var chars = [UniChar](repeating: 0, count: 4)
+                    let status = UCKeyTranslate(layout, UInt16(code), UInt16(kUCKeyActionDown),
+                                                UInt32((cmdKey >> 8) & 0xFF), UInt32(LMGetKbdType()),
+                                                OptionBits(kUCKeyTranslateNoDeadKeysBit), &deadKeys, 4, &length, &chars)
+                    if status == noErr, length == 1,
+                       String(utf16CodeUnits: chars, count: 1).lowercased() == String(character) {
+                        return CGKeyCode(code)
+                    }
+                }
+                return nil
+            }
+        }
+        let found = Thread.isMainThread ? lookup() : DispatchQueue.main.sync(execute: lookup)
+        return found ?? CGKeyCode(fallback)
     }
 }
 

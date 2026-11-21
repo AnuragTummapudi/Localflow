@@ -26,12 +26,13 @@ public struct LocalFlowApp: App {
 
     /// The app scene hierarchy.
     public var body: some Scene {
-        Settings {
-            SettingsRootView(viewModel: settings)
-                .environmentObject(coordinator)
-                .onReceive(coordinator.$activeEngineName) { name in
-                    settings.activeEngineName = name
+        // ⌘, opens the same window as the menu bar item; a second SwiftUI Settings window drifted out of sync.
+        Settings { EmptyView() }
+            .commands {
+                CommandGroup(replacing: .appSettings) {
+                    Button("Settings…") { appDelegate.statusController?.openSettingsWindow() }
+                        .keyboardShortcut(",")
                 }
-        }
+            }
     }
 }

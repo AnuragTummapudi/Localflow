@@ -67,11 +67,11 @@ final class SharedTests: XCTestCase {
         let defaults = UserDefaults(suiteName: "LocalFlowTests.\(UUID().uuidString)")!
         let settings = LocalFlowSettings(defaults: defaults)
         let store = VocabularyStore(settings: settings)
-        for phrase in ["Mckarthy", "Pausch", "ABGen"] { store.add(phrase: phrase, hasSparkle: true) }
+        for phrase in ["ABGen", "INR", "K8s"] { store.add(phrase: phrase, hasSparkle: true) }
 
-        let input = "meeting with mccarthy and reading posh quotes about a b gen"
+        let input = "reading about a b gen, paid 5 i n r. Then deployed to k 8 s, ab gen again"
         let result = store.apply(to: input)
-        XCTAssertEqual(result, "meeting with Mckarthy and reading Pausch quotes about ABGen")
+        XCTAssertEqual(result, "reading about ABGen, paid 5 INR. Then deployed to K8s, ABGen again")
     }
 
     func testEmailSpokenAddressParsing() {
@@ -222,5 +222,97 @@ final class SharedTests: XCTestCase {
                 functionHotkeyEnabled: true
             )
         )
+    }
+}
+
+final class CapturedAudioBufferTests: XCTestCase {
+    func testBufferIsBuiltLazilyFromSamples() {
+        let audio = CapturedAudio(buffer: nil, samples: [0.1, -0.2, 0.3], sampleRate: 48_000)
+        let buffer = audio.buffer
+        XCTAssertEqual(buffer?.frameLength, 3)
+        XCTAssertEqual(buffer?.format.sampleRate, 48_000)
+        XCTAssertEqual(buffer?.floatChannelData?[0][1], -0.2)
+        XCTAssertNil(CapturedAudio(buffer: nil, samples: [], sampleRate: 48_000).buffer)
+    }
+}
+
+final class CorrectionDetectorTests: XCTestCase {
+    private let common: (String) -> Bool = { ["posh", "their", "there", "the", "meeting", "cat", "dog"].contains($0) }
+
+    private func detect(_ inserted: String, before: String, after: String) -> [LearnedCorrection] {
+        CorrectionDetector.corrections(inserted: inserted, before: before, after: after, isCommonWord: common)
+    }
+
+    func testLearnsProperNounFixInsideDictation() {
+        let text = "I met Randy posh at the meeting."
+        let fixed = "I met Randy Pausch at the meeting."
+        XCTAssertEqual(detect(text, before: text, after: fixed), [LearnedCorrection(heard: "posh", corrected: "Pausch")])
+    }
+
+    func testLearnsCaseOnlyFixAndKeepsWorkingWhenUserKeepsTyping() {
+        let before = "Notes: try localflow today"
+        let after = "Notes: try LocalFlow today and tomorrow too"
+        XCTAssertEqual(detect("try localflow today", before: before, after: after),
+                       [LearnedCorrection(heard: "localflow", corrected: "LocalFlow")])
+    }
+
+    func testIgnoresGrammarSwapBetweenCommonWords() {
+        XCTAssertEqual(detect("their going", before: "their going", after: "there going"), [])
+    }
+
+    func testIgnoresUnrelatedRewrite() {
+        XCTAssertEqual(detect("feed the cat", before: "feed the cat", after: "feed the Kubernetes"), [])
+    }
+
+    func testIgnoresEditsOutsideTheDictation() {
+        let before = "Earlier posh text. New dictation here"
+        let after = "Earlier Pausch text. New dictation here"
+        XCTAssertEqual(detect("New dictation here", before: before, after: after), [])
+    }
+
+    func testIgnoresMultiWordRewrites() {
+        XCTAssertEqual(detect("call bob now", before: "call bob now", after: "call Robert Smith now"), [])
+    }
+}
+
+final class VocabularyLearningTests: XCTestCase {
+    private func store() -> VocabularyStore {
+        VocabularyStore(settings: LocalFlowSettings(defaults: UserDefaults(suiteName: "LocalFlowTests.\(UUID().uuidString)")!))
+    }
+
+    func testLearnedMappingFixesNextDictationOnce() {
+        let store = store()
+        XCTAssertTrue(store.learn(LearnedCorrection(heard: "posh", corrected: "Pausch")))
+        XCTAssertFalse(store.learn(LearnedCorrection(heard: "posh", corrected: "Pausch")), "no duplicates")
+        XCTAssertEqual(store.apply(to: "Randy posh spoke"), "Randy Pausch spoke")
+        XCTAssertTrue(store.entries.last?.isLearned == true)
+    }
+
+    func testLearnedCaseOnlyWordEnforcesSpelling() {
+        let store = store()
+        store.learn(LearnedCorrection(heard: "localflow", corrected: "LocalFlow"))
+        XCTAssertEqual(store.entries.last?.replacement, "")
+        XCTAssertEqual(store.apply(to: "try localflow"), "try LocalFlow")
+    }
+
+    func testOldEntriesWithoutLearnedFlagStillDecode() throws {
+        let json = #"[{"id":"7E0C1F0A-1B2C-4D3E-8F90-A1B2C3D4E5F6","phrase":"btw","replacement":"by the way","isFavorite":false,"hasSparkle":false}]"#
+        let entries = try JSONDecoder().decode([VocabularyEntry].self, from: Data(json.utf8))
+        XCTAssertEqual(entries.first?.isLearned, false)
+    }
+}
+
+final class HistoryStoreSafetyTests: XCTestCase {
+    func testCorruptHistoryIsBackedUpNotOverwritten() throws {
+        let dir = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString, isDirectory: true)
+        try FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+        let file = dir.appendingPathComponent("history.json")
+        try Data("not json".utf8).write(to: file)
+
+        let store = DictationHistoryStore(fileURL: file)
+        XCTAssertTrue(store.items.isEmpty)
+        let backups = try FileManager.default.contentsOfDirectory(atPath: dir.path).filter { $0.contains("corrupt") }
+        XCTAssertEqual(backups.count, 1)
+        XCTAssertEqual(try String(contentsOf: dir.appendingPathComponent(backups[0]), encoding: .utf8), "not json")
     }
 }

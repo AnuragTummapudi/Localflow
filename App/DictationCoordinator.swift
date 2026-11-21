@@ -40,7 +40,7 @@ public final class DictationCoordinator: ObservableObject {
     public var canConfigureEngine: Bool { !isPreparingEngine && state != .listening && state != .processing && !isRewritingSelection }
 
     /// The audio capture service.
-    public let audioCapture = AudioCaptureSession()
+    let audioCapture: any AudioCapturing
 
     /// Local dictation history (shared with Settings).
     public let historyStore: DictationHistoryStore
@@ -51,20 +51,23 @@ public final class DictationCoordinator: ObservableObject {
     private let settings = LocalFlowSettings.shared
     private let hotkeyManager = HotkeyManager()
     private let modelManager = ModelManager.shared
-    private let textInjection = TextInjection()
+    private let textInjection: any TextInjecting
     private let commandMode = CommandMode()
     private let speechCleanup = SpeechCleanup()
     private let formatter = SmartFormatting()
     private var isRewritingSelection = false
-    private let overlayController = OverlayWindowController()
-    private let resultCardController = FloatingResultCardController()
+    private let overlayController: any DictationOverlayPresenting
+    private let resultCardController: any ResultCardPresenting
     private var cancellables = Set<AnyCancellable>()
-    private var router = TranscriptionRouter(engine: UnavailableEngine(message: "Model not loaded"))
+    private var router: TranscriptionRouter
     private var dictationTask: Task<Void, Never>?
     private var timeoutTask: Task<Void, Never>?
     private var handsFreeSilenceTask: Task<Void, Never>?
     private var pendingKeyReleaseTask: Task<Void, Never>?
     private var sessionStartTime: Date?
+    private var correctionWatchTask: Task<Void, Never>?
+    /// Audio from a cancelled hands-free session or a failed transcription, kept only while Undo/Retry is shown.
+    private var cancelledAudio: (audio: CapturedAudio, hadSpeech: Bool)?
 
     /// The active session mode (push-to-talk vs. locked hands-free).
     @Published public private(set) var sessionMode: DictationSessionMode = .pushToTalk
@@ -76,13 +79,27 @@ public final class DictationCoordinator: ObservableObject {
     private var workspaceObserver: (any NSObjectProtocol)?
 
     /// Creates a dictation coordinator and starts observing the hotkey.
-    public init(
+    /// The extra parameters are a test seam; the app uses the defaults.
+    init(
         historyStore: DictationHistoryStore = DictationHistoryStore(),
-        vocabularyStore: VocabularyStore = VocabularyStore()
+        vocabularyStore: VocabularyStore = VocabularyStore(),
+        audioCapture: any AudioCapturing = AudioCaptureSession(),
+        textInjection: any TextInjecting = TextInjection(),
+        overlayController: (any DictationOverlayPresenting)? = nil,
+        resultCardController: (any ResultCardPresenting)? = nil,
+        engine: (any STTEngine)? = nil,
+        startsSystemObservers: Bool = true
     ) {
         self.historyStore = historyStore
         self.vocabularyStore = vocabularyStore
-        hotkeyManager.start()
+        self.audioCapture = audioCapture
+        self.textInjection = textInjection
+        // Built here, not as default arguments: those are evaluated off the main actor.
+        self.overlayController = overlayController ?? OverlayWindowController()
+        self.resultCardController = resultCardController ?? FloatingResultCardController()
+        self.router = TranscriptionRouter(engine: engine ?? UnavailableEngine(message: "Model not loaded"))
+        if engine != nil { activeEngineName = "Injected engine" }
+        if startsSystemObservers { hotkeyManager.start() }
         hotkeyManager.eventPublisher
             .sink { [weak self] event in
                 Task { @MainActor in
@@ -91,22 +108,30 @@ public final class DictationCoordinator: ObservableObject {
             }
             .store(in: &cancellables)
 
-        overlayController.onCancel = { [weak self] in
+        self.overlayController.onCancel = { [weak self] in
             Task { @MainActor in
                 self?.cancelHandsFreeSession()
             }
         }
-        overlayController.onFinishAndPaste = { [weak self] in
+        self.overlayController.onFinishAndPaste = { [weak self] in
             Task { @MainActor in
                 await self?.endDictation()
             }
         }
-        overlayController.onUndo = { [weak self] in
+        self.audioCapture.onInterrupted = { [weak self] in
+            Task { @MainActor in
+                // Mic changed mid-recording: transcribe what we have instead of "listening" to a dead engine.
+                guard let self, self.state == .listening else { return }
+                await self.endDictation()
+            }
+        }
+        self.overlayController.onUndo = { [weak self] in
             Task { @MainActor in
                 self?.undoCancellation()
             }
         }
 
+        guard startsSystemObservers else { return }
         if let front = NSWorkspace.shared.frontmostApplication,
            front.bundleIdentifier != Bundle.main.bundleIdentifier {
             lastExternalApplication = front
@@ -222,6 +247,7 @@ public final class DictationCoordinator: ObservableObject {
 
         sessionStartTime = nil
         sessionMode = .pushToTalk
+        cancelledAudio = nil
 
         audioCapture.reset()
         overlayController.hide()
@@ -250,20 +276,21 @@ public final class DictationCoordinator: ObservableObject {
         dictationTask?.cancel()
         dictationTask = nil
 
-        _ = audioCapture.stop()
+        let audio = audioCapture.stop()
+        cancelledAudio = (audio, audioCapture.hasMeaningfulAudio)
         state = .idle
 
         // Present the "Transcript cancelled" undo state with 3.5s countdown
-        overlayController.showCancelled(durationSeconds: 3.5) { [weak self] in
+        overlayController.showCancelled(title: "Transcript cancelled", actionTitle: "Undo", durationSeconds: 3.5) { [weak self] in
             self?.teardownSession(errorMessage: nil, clearErrorMessage: true)
         }
     }
 
-    /// Restores the hands-free session if the user taps "Undo".
+    /// "Undo" / "Retry" transcribes the held recording and inserts it as if the user had tapped Finish.
     public func undoCancellation() {
-        Task { @MainActor in
-            await beginDictation(mode: .handsFree)
-        }
+        guard state == .idle, let cancelled = cancelledAudio else { return }
+        cancelledAudio = nil
+        transcribe(cancelled.audio, capturedSpeech: cancelled.hadSpeech)
     }
 
     /// Handles incoming hotkey events (push-to-talk holds, double-taps, Escape cancellation).
@@ -280,7 +307,7 @@ public final class DictationCoordinator: ObservableObject {
                 // Double tap arrived while push-to-talk was initiated: promote to hands-free!
                 sessionMode = .handsFree
                 setupHandsFreeTimers()
-                overlayController.show(mode: .handsFree, levelsPublisher: audioCapture.$waveformLevels.eraseToAnyPublisher())
+                overlayController.show(mode: .handsFree, levelsPublisher: audioCapture.waveformLevelsPublisher)
             } else if state == .idle {
                 await beginDictation(mode: .handsFree)
             }
@@ -496,11 +523,11 @@ public final class DictationCoordinator: ObservableObject {
     }
 
     private func setupHandsFreeTimers() {
-        // 1. Hard auto-stop timeout at 30 minutes (1,800 seconds): auto-stop cleanly and transcribe whatever was captured
+        // 1. Hard auto-stop at the capture limit: stop cleanly and transcribe whatever was captured
         timeoutTask?.cancel()
         timeoutTask = Task { [weak self] in
             do {
-                try await Task.sleep(nanoseconds: 1_800_000_000_000)
+                try await Task.sleep(for: .seconds(AudioCaptureSession.maxRecordingSeconds))
                 guard !Task.isCancelled else { return }
                 await MainActor.run {
                     guard self?.state == .listening, self?.sessionMode == .handsFree else { return }
@@ -541,6 +568,10 @@ public final class DictationCoordinator: ObservableObject {
     }
 
     public func beginDictation(mode: DictationSessionMode = .pushToTalk) async {
+        // A new paste would show up as an "edit" of the previous one.
+        correctionWatchTask?.cancel()
+        cancelledAudio = nil  // a new recording replaces any pending Undo/Retry
+
         // Guarantee any previous session (or stuck state) is cleanly torn down first.
         if state != .idle {
             teardownSession()
@@ -580,18 +611,18 @@ public final class DictationCoordinator: ObservableObject {
             try audioCapture.start()
             sessionMode = mode
             sessionStartTime = Date()
-            overlayController.show(mode: mode, levelsPublisher: audioCapture.$waveformLevels.eraseToAnyPublisher())
+            overlayController.show(mode: mode, levelsPublisher: audioCapture.waveformLevelsPublisher)
             state = .listening
             lastErrorMessage = nil
 
             if mode == .handsFree {
                 setupHandsFreeTimers()
             } else {
-                // Hard timeout failsafe: auto-stop and transcribe if held longer than 30 minutes
+                // Hard timeout failsafe: auto-stop and transcribe at the capture limit
                 timeoutTask?.cancel()
                 timeoutTask = Task { [weak self] in
                     do {
-                        try await Task.sleep(nanoseconds: 1_800_000_000_000)
+                        try await Task.sleep(for: .seconds(AudioCaptureSession.maxRecordingSeconds))
                         guard !Task.isCancelled else { return }
                         await MainActor.run {
                             guard self?.state == .listening else { return }
@@ -621,10 +652,14 @@ public final class DictationCoordinator: ObservableObject {
 
         let audio = audioCapture.stop()
         overlayController.hide()
+        transcribe(audio, capturedSpeech: audioCapture.hasMeaningfulAudio)
+    }
 
+    /// Transcribes captured audio, then runs commands or formats and inserts the text.
+    private func transcribe(_ audio: CapturedAudio, capturedSpeech: Bool) {
         // Silence detection: if no meaningful audio energy was captured for the hold duration,
         // explicitly cancel and tear down the session — do not attempt to transcribe or inject.
-        guard !audio.isEmpty, audio.hasMeaningfulAudio, audioCapture.hasMeaningfulAudio else {
+        guard !audio.isEmpty, audio.hasMeaningfulAudio, capturedSpeech else {
             teardownSession(errorMessage: "No speech detected.")
             return
         }
@@ -650,10 +685,8 @@ public final class DictationCoordinator: ObservableObject {
         dictationTask = Task { @MainActor in
             do {
                 let result = try await router.transcribe(audio: audio)
-                guard !Task.isCancelled else {
-                    teardownSession()
-                    return
-                }
+                // Whoever cancelled already tore down; tearing down again would kill a newer session.
+                guard !Task.isCancelled else { return }
 
                 let corrected = vocabularyStore.apply(to: result.text)
                 let trimmed = corrected.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -680,16 +713,24 @@ public final class DictationCoordinator: ObservableObject {
                     historyStore.append(text: formatted, bundleIdentifier: bundleID)
                     do {
                         let outcome = try await textInjection.insert(formatted, into: target)
+                        guard !Task.isCancelled else { return }
                         switch outcome {
                         case .inserted:
                             teardownSession(clearErrorMessage: true)
+                            watchForCorrections(of: formatted, in: target)
                         case .noFocusedTarget:
                             // Fallback UI: show floating result card near cursor
                             resultCardController.show(text: formatted)
                             teardownSession(clearErrorMessage: true)
                         }
-                    } catch {
+                    } catch LocalFlowError.accessibilityPermissionMissing {
+                        if Task.isCancelled { return }
                         teardownSession(errorMessage: "Transcribed and saved to History, but paste needs Accessibility. Enable LocalFlow in System Settings → Privacy & Security → Accessibility (text is also on your clipboard — press ⌘V).")
+                    } catch {
+                        if Task.isCancelled { return }
+                        // Paste failed for another reason: keep the text one click away instead of blaming permissions.
+                        resultCardController.show(text: formatted, status: "Couldn't paste. Copy it here — it's also in History.", persistent: true)
+                        teardownSession(clearErrorMessage: true)
                     }
                 case .execute(let intent):
                     commandMode.execute(intent)
@@ -704,12 +745,49 @@ public final class DictationCoordinator: ObservableObject {
                     teardownSession(clearErrorMessage: true)
                 }
             } catch {
+                if Task.isCancelled || error is CancellationError { return }
                 teardownSession(errorMessage: "Transcription failed: \(error.localizedDescription)")
+                // Never lose what the user said to an engine hiccup: hold the audio and offer Retry.
+                cancelledAudio = (audio, capturedSpeech)
+                overlayController.showCancelled(title: "Transcription failed", actionTitle: "Retry", durationSeconds: 10) { [weak self] in
+                    self?.cancelledAudio = nil
+                }
             }
         }
     }
 
-    /// Prefer the app captured at hotkey-down; never paste into LocalFlow itself.
+    /// After a paste, watch the same field until the user leaves it (max ~30 s) and learn
+    /// one-word fixes they make inside the dictation. Reads stay on this Mac; only learned words are stored.
+    private func watchForCorrections(of inserted: String, in target: NSRunningApplication?) {
+        guard settings.learnFromCorrections else { return }
+        correctionWatchTask?.cancel()
+        let pid = target?.processIdentifier
+        correctionWatchTask = Task { @MainActor [weak self] in
+            try? await Task.sleep(for: .milliseconds(400))  // let the paste land
+            guard let self, !Task.isCancelled,
+                  let start = self.textInjection.focusedFieldText(preferredPID: pid) else { return }
+            var latest = start.text
+            for _ in 0..<60 {
+                try? await Task.sleep(for: .milliseconds(500))
+                if Task.isCancelled { return }
+                guard let now = self.textInjection.focusedFieldText(preferredPID: pid),
+                      CFEqual(now.element, start.element) else { break }
+                latest = now.text
+            }
+            let checker = NSSpellChecker.shared
+            let corrections = CorrectionDetector.corrections(inserted: inserted, before: start.text, after: latest) { word in
+                checker.checkSpelling(of: word, startingAt: 0).location == NSNotFound
+            }
+            let learned = corrections.filter { self.vocabularyStore.learn($0) }
+            guard let first = learned.first, self.state == .idle else { return }
+            self.overlayController.showPolished(
+                message: learned.count == 1 ? "New word learned: \(first.corrected)" : "\(learned.count) new words learned",
+                durationSeconds: 2.2
+            )
+        }
+    }
+
+        /// Prefer the app captured at hotkey-down; never paste into LocalFlow itself.
     private func resolvedTargetApplication() -> NSRunningApplication? {
         if let target = targetApplication, !target.isTerminated,
            target.bundleIdentifier != Bundle.main.bundleIdentifier {
@@ -725,6 +803,65 @@ public final class DictationCoordinator: ObservableObject {
         return nil
     }
 }
+
+// MARK: - Test seam (the production types below are the only real conformers)
+
+@MainActor
+protocol AudioCapturing: AnyObject {
+    var onInterrupted: (() -> Void)? { get set }
+    var hasMeaningfulAudio: Bool { get }
+    var continuousSilenceDurationSeconds: Double { get }
+    var waveformLevelsPublisher: AnyPublisher<[Float], Never> { get }
+    func requestMicrophonePermission() async -> Bool
+    func start() throws
+    func stop() -> CapturedAudio
+    func reset()
+}
+
+extension AudioCaptureSession: AudioCapturing {
+    var waveformLevelsPublisher: AnyPublisher<[Float], Never> { $waveformLevels.eraseToAnyPublisher() }
+}
+
+protocol TextInjecting: AnyObject, Sendable {
+    func isAccessibilityTrusted(prompt: Bool) -> Bool
+    func insert(_ text: String, into targetApp: NSRunningApplication?) async throws -> TextInjectionOutcome
+    func captureCurrentSelection() async -> SelectedTextCaptureResult
+    func replaceCapturedSelection(_ snapshot: SelectedTextSnapshot, with polished: String) async -> SelectionReplacementResult
+    func focusedFieldText(preferredPID: pid_t?) -> (element: AXUIElement, text: String)?
+}
+
+extension TextInjection: TextInjecting {}
+
+@MainActor
+protocol DictationOverlayPresenting: AnyObject {
+    var onCancel: (() -> Void)? { get set }
+    var onFinishAndPaste: (() -> Void)? { get set }
+    var onUndo: (() -> Void)? { get set }
+    func show(mode: DictationSessionMode, levelsPublisher: AnyPublisher<[Float], Never>)
+    func showCancelled(title: String, actionTitle: String, durationSeconds: Double, onDismiss: @escaping () -> Void)
+    func showPolished(message: String, durationSeconds: Double)
+    func showError(_ message: String)
+    func showPolishing(message: String)
+    func showProcessing()
+    func hide()
+}
+
+extension DictationOverlayPresenting {
+    func showPolished(message: String) { showPolished(message: message, durationSeconds: 1.6) }
+}
+
+extension OverlayWindowController: DictationOverlayPresenting {}
+
+@MainActor
+protocol ResultCardPresenting: AnyObject {
+    func show(text: String, status: String, persistent: Bool)
+}
+
+extension ResultCardPresenting {
+    func show(text: String) { show(text: text, status: "No text field selected", persistent: false) }
+}
+
+extension FloatingResultCardController: ResultCardPresenting {}
 
 extension Notification.Name {
     /// Posted whenever LocalFlow's activity state changes.

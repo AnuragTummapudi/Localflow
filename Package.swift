@@ -86,6 +86,11 @@ let package = Package(
             name: "FeaturesTests",
             dependencies: ["Shared", "CommandMode", "SpeechCleanup", "SmartFormatting", "TextInjection"],
             path: "Tests/FeaturesTests"
+        ),
+        .testTarget(
+            name: "AppTests",
+            dependencies: ["LocalFlowApp", "Shared", "Engines", "TextInjection", "HotkeyManager"],
+            path: "Tests/AppTests"
         )
     ]
 )

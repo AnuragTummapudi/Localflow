@@ -174,6 +174,12 @@ public final class LocalFlowSettings: ObservableObject, @unchecked Sendable {
         set { objectWillChange.send(); defaults.set(newValue, forKey: Keys.smartPolishShortcutEnabled) }
     }
 
+    /// Learn words the user corrects right after a dictation (reads that field locally for ~30 s).
+    public var learnFromCorrections: Bool {
+        get { defaults.object(forKey: Keys.learnFromCorrections) as? Bool ?? true }
+        set { objectWillChange.send(); defaults.set(newValue, forKey: Keys.learnFromCorrections) }
+    }
+
     private func registerDefaults() {
         defaults.register(defaults: [
             Keys.hotkey: encodedDefault(HotkeyDescriptor.rightOption),
@@ -233,6 +239,7 @@ public final class LocalFlowSettings: ObservableObject, @unchecked Sendable {
         static let didCompleteOnboarding = "didCompleteOnboarding"
         static let didPlayLaunchAnimation = "didPlayLaunchAnimation"
         static let customVocabulary = "customVocabulary"
+        static let learnFromCorrections = "learnFromCorrections"
         static let cleanSpeechEnabled = "cleanSpeechEnabled"
         static let removeFillerWords = "removeFillerWords"
         static let collapseRepeatedWords = "collapseRepeatedWords"

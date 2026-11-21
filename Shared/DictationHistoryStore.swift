@@ -33,6 +33,12 @@ public final class DictationHistoryStore: ObservableObject, @unchecked Sendable 
         save()
     }
 
+    /// Deletes every history item on this Mac.
+    public func removeAll() {
+        items = []
+        save()
+    }
+
     /// Searches history using a case-insensitive substring match.
     public func search(_ query: String) -> [DictationHistoryItem] {
         let trimmed = query.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -46,7 +52,15 @@ public final class DictationHistoryStore: ObservableObject, @unchecked Sendable 
             items = []
             return
         }
-        items = (try? JSONDecoder().decode([DictationHistoryItem].self, from: data)) ?? []
+        do {
+            items = try JSONDecoder().decode([DictationHistoryItem].self, from: data)
+        } catch {
+            // Keep the unreadable file instead of letting the next save overwrite (and lose) it.
+            let backup = fileURL.deletingPathExtension()
+                .appendingPathExtension("corrupt-\(Int(Date().timeIntervalSince1970)).json")
+            try? FileManager.default.moveItem(at: fileURL, to: backup)
+            items = []
+        }
     }
 
     /// Persists history to disk.

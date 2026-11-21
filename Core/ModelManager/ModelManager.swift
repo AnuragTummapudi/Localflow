@@ -242,7 +242,7 @@ public final class ModelManager: NSObject, ObservableObject, URLSessionDownloadD
     }
 
     private func downloadWhisperViaTreeAPI() async throws {
-        let spec = repositorySpec(for: .whisperLargeV3Turbo)
+        let spec = whisperRepositorySpec()
         progress = ModelDownloadProgress(stage: "Reading Whisper model manifest")
         let files = try await fetchRepositoryFiles(spec)
         guard !files.isEmpty else {
@@ -443,25 +443,17 @@ public final class ModelManager: NSObject, ObservableObject, URLSessionDownloadD
         return URL(string: "https://huggingface.co/\(repoID)/resolve/\(revision)/\(escapedPath)")!
     }
 
-    private func repositorySpec(for tier: ModelTier) -> ModelRepositorySpec {
-        let modelsRoot = supportDirectory.appendingPathComponent("Models", isDirectory: true)
-        switch tier {
-        case .parakeetTDT, .automatic:
-            return ModelRepositorySpec(
-                repoID: "FluidInference/parakeet-tdt-0.6b-v3-coreml",
-                revision: "main",
-                subdirectory: nil,
-                destinationRoot: modelsRoot.appendingPathComponent("parakeet-tdt-0.6b-v3", isDirectory: true)
-            )
-        case .whisperLargeV3Turbo:
-            // Pinned so the manifest and its checksums are reproducible; bump deliberately.
-            return ModelRepositorySpec(
-                repoID: "argmaxinc/whisperkit-coreml",
-                revision: "0f63a7800b00dd0226abd051b906c246e1907482",
-                subdirectory: "openai_whisper-large-v3_turbo",
-                destinationRoot: modelsRoot
-            )
-        }
+    /// Whisper is downloaded here, pinned to a commit with per-file SHA-256 checks.
+    /// Parakeet is downloaded by FluidAudio (`AsrModels.download`), which always fetches the repo's `main`;
+    /// pinning it needs an upstream FluidAudio change (see BACKEND_REVIEW.md, N7).
+    private func whisperRepositorySpec() -> ModelRepositorySpec {
+        // Pinned so the manifest and its checksums are reproducible; bump deliberately.
+        ModelRepositorySpec(
+            repoID: "argmaxinc/whisperkit-coreml",
+            revision: "0f63a7800b00dd0226abd051b906c246e1907482",
+            subdirectory: "openai_whisper-large-v3_turbo",
+            destinationRoot: supportDirectory.appendingPathComponent("Models", isDirectory: true)
+        )
     }
 
     private static func defaultSupportDirectory() -> URL {

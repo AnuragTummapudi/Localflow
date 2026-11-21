@@ -309,7 +309,7 @@ private final class SpotifyAutomationService {
         let app = AXUIElementCreateApplication(pid)
         var value: CFTypeRef?
         guard AXUIElementCopyAttributeValue(app, kAXFocusedUIElementAttribute as CFString, &value) == .success,
-              let value else { return nil }
+              let value, CFGetTypeID(value) == AXUIElementGetTypeID() else { return nil }
         return (value as! AXUIElement)
     }
 
@@ -331,7 +331,7 @@ private final class SpotifyAutomationService {
         var windowValue: CFTypeRef?
         let root: AXUIElement
         if AXUIElementCopyAttributeValue(app, kAXFocusedWindowAttribute as CFString, &windowValue) == .success,
-           let windowValue { root = (windowValue as! AXUIElement) } else { root = app }
+           let windowValue, CFGetTypeID(windowValue) == AXUIElementGetTypeID() { root = (windowValue as! AXUIElement) } else { root = app }
         var result: [AccessibilityNode] = []
         var visited = Set<CFHashCode>()
         collectNodes(from: root, depth: 0, ancestorContext: "", visited: &visited, result: &result)

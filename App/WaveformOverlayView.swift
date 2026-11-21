@@ -152,7 +152,7 @@ public struct WaveformOverlayView: View {
         }
     }
 
-    // MARK: - Hands-Free Mode (Wispr Flow style)
+    // MARK: - Hands-Free Mode
 
     private var handsFreeView: some View {
         let effectiveHover = hoveredButton ?? initialHover

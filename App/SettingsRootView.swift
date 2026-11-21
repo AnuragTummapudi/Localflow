@@ -294,9 +294,6 @@ public struct GeneralSettingsView: View {
     @ObservedObject private var observedSettings: LocalFlowSettings
     @EnvironmentObject private var coordinator: DictationCoordinator
 
-    @State private var isPreparingModel = false
-    @State private var prepareMessage: String?
-
     public init(viewModel: SettingsViewModel) {
         self.viewModel = viewModel
         _observedSettings = ObservedObject(wrappedValue: viewModel.settings)
@@ -345,125 +342,7 @@ public struct GeneralSettingsView: View {
                     }
                 }
 
-                // Engine status
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("Speech Engine")
-                        .font(LocalFlowDesign.instrumentSerif(size: 18))
-                        .foregroundStyle(LocalFlowDesign.ink)
-
-                    HStack(spacing: 10) {
-                        Image(systemName: coordinator.isEngineReady ? "checkmark.circle.fill" : "exclamationmark.triangle.fill")
-                            .foregroundStyle(coordinator.isEngineReady ? LocalFlowDesign.signal : LocalFlowDesign.marker)
-                        Text(coordinator.isEngineReady
-                             ? (viewModel.activeEngineName == "Not loaded" ? coordinator.activeEngineName : viewModel.activeEngineName)
-                             : "Not loaded — enable Apple Speech or download a local model")
-                            .font(LocalFlowDesign.generalSans(size: 13))
-                            .foregroundStyle(LocalFlowDesign.ink)
-                        Spacer()
-                    }
-                    .padding(14)
-                    .background(LocalFlowDesign.cardBackground(cornerRadius: 16))
-
-                    if appleSpeechEngineIsAvailable() {
-                        HStack(alignment: .top, spacing: 10) {
-                            Image(systemName: "apple.logo")
-                                .foregroundStyle(LocalFlowDesign.signal)
-                                .padding(.top, 1)
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text("Apple Speech (primary)")
-                                    .font(LocalFlowDesign.generalSans(size: 13, weight: .medium))
-                                    .foregroundStyle(LocalFlowDesign.ink)
-                                Text("On-device SpeechAnalyzer on macOS 26. No Hugging Face download required.")
-                                    .font(LocalFlowDesign.generalSans(size: 12))
-                                    .foregroundStyle(LocalFlowDesign.graphite)
-                                    .fixedSize(horizontal: false, vertical: true)
-                            }
-                        }
-                        .padding(14)
-                        .background(
-                            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                .fill(LocalFlowDesign.signal.opacity(0.07))
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                        .strokeBorder(LocalFlowDesign.signal.opacity(0.2), lineWidth: 1)
-                                )
-                        )
-                    }
-
-                    if let prepareMessage {
-                        Text(prepareMessage)
-                            .font(LocalFlowDesign.generalSans(size: 12))
-                            .foregroundStyle(LocalFlowDesign.graphite)
-                    }
-                    if let err = coordinator.lastErrorMessage {
-                        Text(err)
-                            .font(LocalFlowDesign.generalSans(size: 12))
-                            .foregroundStyle(LocalFlowDesign.marker)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-
-                    HStack(spacing: 12) {
-                        LFPrimaryButton(
-                            isPreparingModel ? "Preparing…" : (appleSpeechEngineIsAvailable() ? "Enable / Reload Apple Speech" : "Download / Prepare Model"),
-                            enabled: !isPreparingModel
-                        ) {
-                            Task { await prepareModel() }
-                        }
-                        if isPreparingModel {
-                            ProgressView().controlSize(.small)
-                        }
-                    }
-
-                    if appleSpeechEngineIsAvailable() {
-                        VStack(alignment: .leading, spacing: 10) {
-                            Text("Optional local fallbacks")
-                                .font(LocalFlowDesign.generalSans(size: 13, weight: .medium))
-                                .foregroundStyle(LocalFlowDesign.ink)
-                            Text("Download Parakeet or Whisper if you want a second engine when Apple Speech fails or returns empty text. Already-downloaded models are used automatically as fallback.")
-                                .font(LocalFlowDesign.generalSans(size: 12))
-                                .foregroundStyle(LocalFlowDesign.graphite)
-                                .fixedSize(horizontal: false, vertical: true)
-
-                            HStack(spacing: 10) {
-                                Button {
-                                    Task { await downloadFallback(.parakeetTDT) }
-                                } label: {
-                                    Text(ModelManager.shared.localModelExists(for: .parakeetTDT) ? "Parakeet ✓" : "Download Parakeet")
-                                        .font(LocalFlowDesign.generalSans(size: 12, weight: .medium))
-                                        .foregroundStyle(LocalFlowDesign.ink)
-                                        .padding(.horizontal, 12)
-                                        .frame(height: 32)
-                                        .background(
-                                            Capsule(style: .continuous)
-                                                .fill(LocalFlowDesign.card)
-                                                .overlay(Capsule(style: .continuous).strokeBorder(LocalFlowDesign.hairline, lineWidth: 1))
-                                        )
-                                }
-                                .buttonStyle(.plain)
-                                .disabled(isPreparingModel)
-
-                                Button {
-                                    Task { await downloadFallback(.whisperLargeV3Turbo) }
-                                } label: {
-                                    Text(ModelManager.shared.localModelExists(for: .whisperLargeV3Turbo) ? "Whisper ✓" : "Download Whisper")
-                                        .font(LocalFlowDesign.generalSans(size: 12, weight: .medium))
-                                        .foregroundStyle(LocalFlowDesign.ink)
-                                        .padding(.horizontal, 12)
-                                        .frame(height: 32)
-                                        .background(
-                                            Capsule(style: .continuous)
-                                                .fill(LocalFlowDesign.card)
-                                                .overlay(Capsule(style: .continuous).strokeBorder(LocalFlowDesign.hairline, lineWidth: 1))
-                                        )
-                                }
-                                .buttonStyle(.plain)
-                                .disabled(isPreparingModel)
-                            }
-                        }
-                        .padding(14)
-                        .background(LocalFlowDesign.cardBackground(cornerRadius: 16))
-                    }
-                }
+                SourceConfigurationView()
 
                 // Hotkey — custom card selector (not stock Picker)
                 VStack(alignment: .leading, spacing: 12) {
@@ -510,55 +389,8 @@ public struct GeneralSettingsView: View {
                             }
                         )
                     )
-                    Divider().background(LocalFlowDesign.hairline)
-                    SettingsToggleRow(
-                        title: "Show advanced options",
-                        subtitle: "Reveal model override controls below.",
-                        isOn: Binding(
-                            get: { viewModel.settings.showAdvancedOptions },
-                            set: { viewModel.settings.showAdvancedOptions = $0 }
-                        )
-                    )
                 }
                 .background(LocalFlowDesign.cardBackground(cornerRadius: 16))
-
-                if viewModel.settings.showAdvancedOptions {
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("Model override")
-                            .font(LocalFlowDesign.instrumentSerif(size: 18))
-                            .foregroundStyle(LocalFlowDesign.ink)
-
-                        Text("Automatic keeps Apple Speech first (on macOS 26). Choosing Parakeet or Whisper forces that local model.")
-                            .font(LocalFlowDesign.generalSans(size: 12))
-                            .foregroundStyle(LocalFlowDesign.graphite)
-
-                        HStack(spacing: 10) {
-                            ForEach(ModelTier.allCases) { tier in
-                                let selected = (viewModel.settings.modelOverride ?? .automatic) == tier
-                                Button {
-                                    viewModel.settings.modelOverride = tier
-                                    Task { await prepareModel() }
-                                } label: {
-                                    Text(tier.displayName)
-                                        .font(LocalFlowDesign.generalSans(size: 13, weight: .medium))
-                                        .foregroundStyle(selected ? Color.white : LocalFlowDesign.ink)
-                                        .padding(.horizontal, 14)
-                                        .frame(height: 36)
-                                        .background(
-                                            Capsule(style: .continuous)
-                                                .fill(selected ? LocalFlowDesign.signal : LocalFlowDesign.card)
-                                                .overlay(
-                                                    Capsule(style: .continuous)
-                                                        .strokeBorder(selected ? Color.clear : LocalFlowDesign.hairline, lineWidth: 1)
-                                                )
-                                        )
-                                }
-                                .buttonStyle(.plain)
-                                .disabled(isPreparingModel)
-                            }
-                        }
-                    }
-                }
 
                 Spacer(minLength: 24)
             }
@@ -578,34 +410,6 @@ public struct GeneralSettingsView: View {
         }
     }
 
-    private func prepareModel() async {
-        isPreparingModel = true
-        prepareMessage = appleSpeechEngineIsAvailable()
-            ? "Enabling Apple Speech…"
-            : "Downloading / loading model — this can take a few minutes the first time…"
-        do {
-            try await coordinator.prepareModelsWithError()
-            prepareMessage = "Ready: \(coordinator.activeEngineName)"
-            viewModel.activeEngineName = coordinator.activeEngineName
-        } catch {
-            prepareMessage = nil
-        }
-        isPreparingModel = false
-    }
-
-    private func downloadFallback(_ tier: ModelTier) async {
-        isPreparingModel = true
-        prepareMessage = "Downloading \(tier.displayName)…"
-        do {
-            try await ModelManager.shared.downloadModel(tier)
-            try await coordinator.prepareModelsWithError()
-            prepareMessage = "Ready: \(coordinator.activeEngineName)"
-            viewModel.activeEngineName = coordinator.activeEngineName
-        } catch {
-            prepareMessage = error.localizedDescription
-        }
-        isPreparingModel = false
-    }
 }
 
 private struct HotkeyOptionCard: View {
@@ -816,13 +620,13 @@ public struct FormattingSettingsView: View {
 
                     HStack(alignment: .top) {
                         VStack(alignment: .leading, spacing: 3) {
-                            Text("Apple on-device model status")
+                            Text(settings.polishProvider.map { "Smart Polish: \($0.displayName)" } ?? "Apple on-device model status")
                                 .font(LocalFlowDesign.generalSans(size: 13, weight: .medium))
-                            Text(LocalWritingAssistant.availabilityDescription)
+                            Text(settings.polishProvider == nil ? LocalWritingAssistant.availabilityDescription : "Configured in General → Dictation & Smart Polish")
                                 .id(availabilityRevision)
                                 .font(LocalFlowDesign.generalSans(size: 12))
                                 .foregroundStyle(LocalFlowDesign.graphite)
-                            if LocalWritingAssistant.isAvailable {
+                            if settings.polishProvider == nil && LocalWritingAssistant.isAvailable {
                                 Text("Runs privately on this Mac. No API key or usage fee.")
                                     .font(LocalFlowDesign.generalSans(size: 12))
                                     .foregroundStyle(LocalFlowDesign.graphite)
@@ -970,7 +774,7 @@ public struct PrivacySettingsView: View {
                                 .font(.system(size: 13))
                                 .foregroundStyle(LocalFlowDesign.signal)
                                 .padding(.top, 1)
-                            Text("Apple's on-device speech model is downloaded and managed by macOS itself, not by LocalFlow directly. LocalFlow does not send audio anywhere either way.")
+                            Text("Apple's on-device speech model is downloaded and managed by macOS itself, not by LocalFlow directly. Apple Speech processes your audio on this Mac.")
                                 .font(LocalFlowDesign.generalSans(size: 12))
                                 .foregroundStyle(LocalFlowDesign.graphite)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -1000,7 +804,10 @@ public struct PrivacySettingsView: View {
                     .padding(16)
                     .background(LocalFlowDesign.cardBackground(cornerRadius: 16))
 
-                    Toggle("Hard-block network after models are downloaded", isOn: $model.hardBlockNetwork)
+                    Text("Cloud dictation sends recordings to your chosen provider. Cloud Smart Polish sends only your selected text. On-device modes keep that content on this Mac. Provider usage fees and retention policies apply.")
+                        .font(LocalFlowDesign.generalSans(size: 12))
+                        .foregroundStyle(LocalFlowDesign.graphite)
+                    Toggle("Block cloud requests (and model downloads once models are available)", isOn: $model.hardBlockNetwork)
                         .font(LocalFlowDesign.generalSans(size: 13))
                         .toggleStyle(.switch)
                         .tint(LocalFlowDesign.signal)

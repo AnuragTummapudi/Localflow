@@ -86,20 +86,6 @@ private extension AppleSpeechEngine {
             )
         }
 
-        // #region agent log
-        AgentDebugLog.write(
-            hypothesisId: "B",
-            location: "AppleSpeechEngine.swift:transcribeOnMacOS26",
-            message: "speech begin",
-            data: [
-                "frames": Int(buffer.frameLength),
-                "sampleRate": buffer.format.sampleRate,
-                "seconds": seconds,
-                "channels": Int(buffer.format.channelCount)
-            ],
-            runId: "apple-first"
-        )
-        // #endregion
 
         let locale = await preferredLocale()
         let transcriber = SpeechTranscriber(
@@ -123,19 +109,6 @@ private extension AppleSpeechEngine {
 
         let converted = try convert(buffer, to: analyzerFormat)
 
-        // #region agent log
-        AgentDebugLog.write(
-            hypothesisId: "B",
-            location: "AppleSpeechEngine.swift:transcribeOnMacOS26",
-            message: "converted — starting file analysis",
-            data: [
-                "outSampleRate": converted.format.sampleRate,
-                "outFrames": Int(converted.frameLength),
-                "outChannels": Int(converted.format.channelCount)
-            ],
-            runId: "apple-first"
-        )
-        // #endregion
 
         let fileURL = try writeTemporaryAudioFile(from: converted, format: analyzerFormat)
         defer { try? FileManager.default.removeItem(at: fileURL) }
@@ -163,15 +136,6 @@ private extension AppleSpeechEngine {
         }
 
         do {
-            // #region agent log
-            AgentDebugLog.write(
-                hypothesisId: "B",
-                location: "AppleSpeechEngine.swift:transcribeOnMacOS26",
-                message: "calling start(inputAudioFile:)",
-                data: [:],
-                runId: "apple-first"
-            )
-            // #endregion
 
             try await analyzer.start(inputAudioFile: audioFile, finishAfterFile: true)
             let fullText: String = try await withThrowingTaskGroup(of: String.self) { group in
@@ -189,15 +153,6 @@ private extension AppleSpeechEngine {
                 return first
             }.trimmingCharacters(in: .whitespacesAndNewlines)
 
-            // #region agent log
-            AgentDebugLog.write(
-                hypothesisId: "B",
-                location: "AppleSpeechEngine.swift:transcribeOnMacOS26",
-                message: "speech success",
-                data: ["textLen": fullText.count],
-                runId: "apple-first"
-            )
-            // #endregion
 
             guard !fullText.isEmpty else {
                 throw LocalFlowError.transcriptionFailed(
@@ -207,27 +162,9 @@ private extension AppleSpeechEngine {
             return STTResult(text: fullText, confidence: 1.0)
         } catch let error as LocalFlowError {
             resultsTask.cancel()
-            // #region agent log
-            AgentDebugLog.write(
-                hypothesisId: "B",
-                location: "AppleSpeechEngine.swift:transcribeOnMacOS26",
-                message: "speech LocalFlowError",
-                data: ["error": error.localizedDescription],
-                runId: "apple-first"
-            )
-            // #endregion
             throw error
         } catch {
             resultsTask.cancel()
-            // #region agent log
-            AgentDebugLog.write(
-                hypothesisId: "B",
-                location: "AppleSpeechEngine.swift:transcribeOnMacOS26",
-                message: "speech analyzer error",
-                data: ["error": error.localizedDescription],
-                runId: "apple-first"
-            )
-            // #endregion
             throw LocalFlowError.transcriptionFailed(
                 "Apple SpeechAnalyzer failed: \(error.localizedDescription)"
             )

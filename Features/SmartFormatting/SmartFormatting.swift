@@ -26,7 +26,7 @@ public struct SmartFormattingOptions: Sendable {
 }
 
 /// Applies intelligent local formatting, spelling autocorrection, typography hygiene,
-/// and Wispr Flow-style Smart Polish before or during text injection.
+/// and Smart Polish before or during text injection.
 public final class SmartFormatting {
     private let settings: LocalFlowSettings
     private let spellChecker = NSSpellChecker.shared
@@ -179,7 +179,7 @@ public final class SmartFormatting {
         return restoreTechnicalLiterals(in: applyProfile(processed, profile: profile), literals: protection.literals)
     }
 
-    /// Wispr Flow-style Smart Polish entrypoint: runs full speech hygiene, typo/spelling correction,
+    /// Smart Polish entrypoint: runs full speech hygiene, typo/spelling correction,
     /// smart punctuation, and profile formatting. Ideal for the Option+1 shortcut.
     public func polish(
         _ text: String,

@@ -154,7 +154,7 @@ public struct DictionaryPane: View {
     }
 }
 
-// MARK: - Entry Row (Matches Wispr Flow Screenshot)
+// MARK: - Entry Row
 
 public struct DictionaryEntryRow: View {
     public let entry: VocabularyEntry
@@ -395,7 +395,7 @@ public struct WordEditSheet: View {
                         .foregroundStyle(LocalFlowDesign.graphite)
                     ZStack(alignment: .leading) {
                         if phrase.isEmpty {
-                            Text("e.g. Anurag Tummapudi, INR, ABGen")
+                            Text("e.g. a name, product, or acronym")
                                 .font(LocalFlowDesign.generalSans(size: 14))
                                 .foregroundStyle(LocalFlowDesign.graphite.opacity(0.6))
                         }

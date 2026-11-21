@@ -8,6 +8,46 @@ public final class LocalFlowSettings: ObservableObject, @unchecked Sendable {
 
     private let defaults: UserDefaults
 
+    public var dictationSource: DictationSource {
+        get {
+            if let raw = defaults.string(forKey: "dictationSource"), let value = DictationSource(rawValue: raw) { return value }
+            return modelOverride != nil && modelOverride != .automatic ? .local : .apple
+        }
+        set { objectWillChange.send(); defaults.set(newValue.rawValue, forKey: "dictationSource") }
+    }
+
+    public var transcriptionProvider: CloudProvider {
+        get { CloudProvider(rawValue: defaults.string(forKey: "transcriptionProvider") ?? "") ?? .groq }
+        set { objectWillChange.send(); defaults.set(newValue.rawValue, forKey: "transcriptionProvider") }
+    }
+
+    /// Provider model IDs change often, so users can override the built-in defaults.
+    public func speechModel(for provider: CloudProvider) -> String {
+        modelID(defaults.string(forKey: "speechModel.\(provider.rawValue)")) ?? provider.speechModel
+    }
+    public func setSpeechModel(_ id: String, for provider: CloudProvider) {
+        objectWillChange.send(); defaults.set(modelID(id), forKey: "speechModel.\(provider.rawValue)")
+    }
+    public func polishModel(for provider: CloudProvider) -> String {
+        modelID(defaults.string(forKey: "polishModel.\(provider.rawValue)")) ?? provider.polishModel
+    }
+    public func setPolishModel(_ id: String, for provider: CloudProvider) {
+        objectWillChange.send(); defaults.set(modelID(id), forKey: "polishModel.\(provider.rawValue)")
+    }
+    /// Model IDs go into a URL path (Gemini), so only allow the characters providers use.
+    private func modelID(_ raw: String?) -> String? {
+        guard let id = raw?.trimmingCharacters(in: .whitespacesAndNewlines), !id.isEmpty, id.count <= 128,
+              id.unicodeScalars.allSatisfy({ CharacterSet.alphanumerics.contains($0) || "-._:/".unicodeScalars.contains($0) }),
+              !id.contains("..") else { return nil }
+        return id
+    }
+
+    /// Nil keeps Smart Polish on this Mac.
+    public var polishProvider: CloudProvider? {
+        get { defaults.string(forKey: "polishProvider").flatMap(CloudProvider.init(rawValue:)) }
+        set { objectWillChange.send(); defaults.set(newValue?.rawValue, forKey: "polishProvider") }
+    }
+
     /// Optional on-device semantic rewriting for Option+1. No cloud fallback.
     public var localRewriteEnabled: Bool {
         // Deep polish should work out of the box on a supported Mac. An explicit user

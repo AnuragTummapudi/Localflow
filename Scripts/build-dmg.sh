@@ -29,9 +29,15 @@ if [ ! -d "$APP_BUNDLE" ]; then
   exit 1
 fi
 
-echo "=== 2. Ad-hoc Signing App Bundle for Pilot Testing ==="
-# Ad-hoc sign all frameworks and main app bundle so it runs cleanly on local MacBooks
-codesign --force --deep --sign - "$APP_BUNDLE"
+echo "=== 2. Signing App Bundle ==="
+# Set SIGN_IDENTITY="Developer ID Application: …" for a distributable, hardened-runtime build.
+# Without it the app is ad-hoc signed, which only runs on the machine that built it without warnings.
+if [ -n "${SIGN_IDENTITY:-}" ]; then
+  codesign --force --deep --options runtime --timestamp \
+    --entitlements App/LocalFlow.entitlements --sign "$SIGN_IDENTITY" "$APP_BUNDLE"
+else
+  codesign --force --deep --sign - "$APP_BUNDLE"
+fi
 
 echo "=== 3. Preparing DMG Staging ==="
 mkdir -p "$STAGING_DIR"
@@ -47,6 +53,16 @@ hdiutil create \
   "$DMG_PATH"
 
 rm -rf "$STAGING_DIR"
+
+if [ -n "${SIGN_IDENTITY:-}" ]; then
+  codesign --force --timestamp --sign "$SIGN_IDENTITY" "$DMG_PATH"
+fi
+# Set NOTARY_PROFILE to a profile saved with `xcrun notarytool store-credentials`.
+if [ -n "${NOTARY_PROFILE:-}" ]; then
+  echo "=== 5. Notarizing ==="
+  xcrun notarytool submit "$DMG_PATH" --keychain-profile "$NOTARY_PROFILE" --wait
+  xcrun stapler staple "$DMG_PATH"
+fi
 
 echo "======================================================"
 echo " Successfully created: $DMG_PATH"

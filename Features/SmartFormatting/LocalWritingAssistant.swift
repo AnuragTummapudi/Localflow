@@ -64,7 +64,7 @@ public struct PromptBlueprintValue: Equatable, Sendable {
     }
 }
 
-/// Optional semantic rewriting. Uses only Apple's on-device model; never a network API.
+/// Optional semantic rewriting. Uses Apple Intelligence or the explicitly selected BYOK provider.
 @MainActor
 public enum LocalWritingAssistant {
     private static let requestGate = FoundationModelRequestGate()
@@ -127,7 +127,7 @@ public enum LocalWritingAssistant {
         return false
     }
 
-    /// Performs the Option + 1 edit with Apple's on-device Foundation Model.
+    /// Performs the Option + 1 edit with the explicitly selected writing provider.
     /// This intentionally throws rather than substituting a superficial local pass: the UI must
     /// never claim an AI polish occurred when a model result was not produced.
     public static func polish(_ source: String, tone: PolishTone = .natural, protectedWords: [String] = []) async throws -> String {
@@ -136,6 +136,16 @@ public enum LocalWritingAssistant {
         let input = source.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !input.isEmpty else { throw PolishError.invalidInput("Select text or dictate something before polishing.") }
         guard input.count <= 6_000 else { throw PolishError.invalidInput("Select less than 6,000 characters to polish.") }
+        if let provider = LocalFlowSettings.shared.polishProvider {
+            let result = try await CloudAPIClient().polish(input,
+                instructions: polishInstructions + "\nRequested tone: " + tone.instruction,
+                provider: provider)
+            let output = normalizedModelOutput(result)
+            guard isAcceptable(output, for: input, protectedWords: protectedWords), !looksLikeMetaResponse(output) else {
+                throw PolishError.unsafeOutput("The provider returned an unsafe edit, so the original text was kept.")
+            }
+            return output
+        }
         #if canImport(FoundationModels)
         if #available(macOS 26.0, *) {
             guard case .available = SystemLanguageModel.default.availability else {
@@ -192,7 +202,7 @@ public enum LocalWritingAssistant {
     #endif
 
     private static let polishInstructions = """
-    You are LocalFlow’s private on-device writing editor.
+    You are LocalFlow’s writing editor.
 
     Your only task is to transform the user-provided source text into clear, natural, polished writing while preserving what the author means.
 

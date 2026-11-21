@@ -106,7 +106,7 @@ public struct DictationPane: View {
                 HStack(alignment: .top, spacing: 8) {
                     Image(systemName: "arrow.down.circle")
                         .foregroundStyle(LocalFlowDesign.signal)
-                    Text("Speech model not loaded. Open General → Download / Prepare Model (or finish onboarding) before dictating.")
+                    Text("Speech model not loaded. Open General → Apply & prepare (or finish onboarding) before dictating.")
                         .font(LocalFlowDesign.generalSans(size: 12))
                         .foregroundStyle(LocalFlowDesign.ink)
                         .fixedSize(horizontal: false, vertical: true)

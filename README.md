@@ -5,16 +5,17 @@
 <h1 align="center">LocalFlow</h1>
 
 <p align="center">
-  <strong>Fast, private, on-device voice-to-text and Mac control.</strong><br>
-  Speak naturally anywhere you type. No subscriptions, no cloud latency, zero audio sent to remote servers.
+  <strong>Voice-to-text and Mac control, on-device or with your own API key.</strong><br>
+  Speak naturally anywhere you type. Choose Apple Speech, local models, or a cloud provider.
 </p>
 
 <p align="center">
   <a href="https://apple.com/macos"><img src="https://img.shields.io/badge/macOS-14.0%2B-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS 14.0+" /></a>
-  <a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-5.9%2B-F05138?style=for-the-badge&logo=swift&logoColor=white" alt="Swift 5.9+" /></a>
+  <a href="https://developer.apple.com/xcode/"><img src="https://img.shields.io/badge/Xcode-26%2B-F05138?style=for-the-badge&logo=swift&logoColor=white" alt="Xcode 26+" /></a>
+  <a href="https://github.com/AnuragTummapudi/Localflow/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/AnuragTummapudi/Localflow/ci.yml?branch=main&style=for-the-badge&label=CI" alt="CI" /></a>
   <a href="#"><img src="https://img.shields.io/badge/Arch-Universal%20(Apple%20Silicon%20%26%20Intel)-4A154B?style=for-the-badge" alt="Universal Binary" /></a>
-  <a href="#privacy"><img src="https://img.shields.io/badge/Privacy-100%25%20On--Device-10B981?style=for-the-badge" alt="100% On-Device" /></a>
-  <a href="dist/LocalFlow.dmg"><img src="https://img.shields.io/badge/Download-LocalFlow.dmg-007AFF?style=for-the-badge&logo=apple&logoColor=white" alt="Download DMG" /></a>
+  <a href="#privacy"><img src="https://img.shields.io/badge/Privacy-On--Device%20by%20Default-10B981?style=for-the-badge" alt="On-Device by Default" /></a>
+  <a href="https://github.com/AnuragTummapudi/Localflow/releases/latest"><img src="https://img.shields.io/badge/Download-LocalFlow.dmg-007AFF?style=for-the-badge&logo=apple&logoColor=white" alt="Download DMG" /></a>
 </p>
 
 <p align="center">
@@ -33,16 +34,16 @@
   <img src="assets/banner.jpg" width="100%" alt="LocalFlow Quiet Desk Banner" style="border-radius: 8px;" />
 </p>
 
-> **Stop renting your voice.** LocalFlow runs entirely on your Mac. Transcribe speech, format technical prose, control your workspace, and search music without recurring cloud subscriptions, tracking, or network latency.
+> **Choose where your words go.** Use LocalFlow on your Mac without API usage fees, or bring your own key for cloud dictation and Smart Polish.
 
 ---
 
 ## ⚡ Key Features
 
-- **🎙️ Zero-Cloud Dictation**: Transcription runs locally using optimized on-device models (Whisper / Apple Speech). Your voice never touches external servers.
+- **🎙️ Three dictation modes**: Apple Speech, local Parakeet / Whisper, or cloud transcription with your Groq, OpenAI, or Gemini API key.
 - **⌨️ Instant Text Insertion**: Hold **Fn** or **Right Option** to dictate, then release to insert text into any focused text box, IDE, browser, or terminal without stealing application focus.
 - **🙌 Hands-Free Toggle**: Double-tap your trigger key to lock dictation hands-free for continuous talking, and single-tap to stop.
-- **🧠 On-Device Smart Polish**: Clean up rambling thoughts into structured, professional prose with **Option + 1** using Apple Intelligence / local models.
+- **🧠 Smart Polish**: Rewrite selected text with **Option + 1** using Apple Intelligence or your Groq, OpenAI, Claude, or Gemini key.
 - **🛠️ Prompt Engineering**: Convert spoken engineering intent into high-leverage prompts with **Option + 2** (role, objective, context, instructions).
 - **🎵 Native Spotify Integration**: Say *"play Midnight City by M83 on Spotify"* or *"play Bohemian Rhapsody"* to instantly open Spotify with the song searched and results displayed. Also controls playback (`pause`, `resume`, `skip`, `previous`) locally.
 - **🖥️ System Voice Commands**: Control your Mac by voice: mute/unmute audio, sleep display, lock the screen, launch apps, or search directly on Google, YouTube, and GitHub.
@@ -54,13 +55,27 @@
 
 ### Option 1: Direct Download (.dmg)
 
-1. Download the latest Universal build: **[LocalFlow.dmg](dist/LocalFlow.dmg)**
+1. Download the latest Universal build: **[LocalFlow.dmg](https://github.com/AnuragTummapudi/Localflow/releases/latest)** from GitHub Releases
 2. Open `LocalFlow.dmg` and drag **LocalFlow.app** to your **Applications** folder.
 3. Launch **LocalFlow** from Applications or Spotlight.
 
+### Choose your processing mode
+
+Onboarding and **Settings → General → Dictation & Smart Polish** offer:
+
+1. **Apple Speech** — built-in on-device transcription on macOS 26+; may require a one-time language asset download.
+2. **Local models** — Parakeet on Apple Silicon or Whisper, downloaded once and used locally.
+3. **Your API key** — Groq (`whisper-large-v3-turbo`), OpenAI (`gpt-transcribe`), or Gemini (`gemini-3.5-flash-lite`) for dictation.
+
+Smart Polish has an independent provider choice: Apple Intelligence, Groq, OpenAI, Claude, or Gemini. Claude is offered for text polishing only. Save the required keys, optionally check their connection, acknowledge cloud processing, then choose **Apply & prepare** (or **Finish setup**). Cloud usage requires internet and a provider account with model access and sufficient quota.
+
+Cloud recordings are converted to 16 kHz mono before upload and limited to about six minutes; use local processing for longer recordings. Smart Polish accepts up to 6,000 characters and keeps existing output validation and selection-change protection. Option + 2 Prompt Engineer remains on-device.
+
+Provider API references: [OpenAI transcription](https://developers.openai.com/api/docs/guides/speech-to-text), [Groq transcription](https://console.groq.com/docs/speech-to-text), [Gemini content generation](https://ai.google.dev/api/generate-content), [Claude Messages](https://platform.claude.com/docs/en/api/messages/create).
+
 ### Required Permissions
 
-LocalFlow requires two standard macOS system permissions to operate completely on-device:
+LocalFlow requires two standard macOS system permissions for audio capture and text insertion:
 
 | Permission | Purpose | Why It's Needed |
 |---|---|---|
@@ -86,7 +101,7 @@ LocalFlow requires two standard macOS system permissions to operate completely o
 
 ### 3. Smart Polish & Prompt Engineering
 - **Select any text** in your editor or browser.
-- Press <kbd>⌥ Option</kbd> + <kbd>1</kbd>: Polishes the selection into clean, concise prose using on-device intelligence.
+- Press <kbd>⌥ Option</kbd> + <kbd>1</kbd>: Polishes the selection into clean, concise prose using the Smart Polish provider you selected.
 - Press <kbd>⌥ Option</kbd> + <kbd>2</kbd>: Rewrites rough notes into a structured developer prompt with Role, Objective, and Constraints.
 
 ---
@@ -124,13 +139,15 @@ LocalFlow understands natural commands out of the box. Simply speak the command 
 
 ## 🔒 Privacy & Security
 
-LocalFlow is engineered with a strict **Local-First Privacy Architecture**:
+LocalFlow is **local-first**: nothing leaves your Mac unless you turn on a cloud provider.
 
-- **No Remote Audio**: Your voice is digitized and transcribed strictly within macOS memory on your machine.
-- **No Cloud Dictation API**: We never send your audio, transcripts, clipboard data, or text history to any server.
+- **On-device by default**: Apple Speech and local models keep audio on your Mac. Explicitly enabled cloud dictation sends the current recording directly to your chosen provider; cloud Smart Polish sends only the selected text. No dictation history is included.
+- **BYOK storage**: API keys are saved in macOS Keychain, with Save, Check connection, and Remove controls. Connection checks send no audio or selected text.
+- **Cloud privacy**: Provider billing and retention policies apply. The Privacy network block disables all BYOK calls. Failed requests do not fall back to another provider.
 - **No Telemetry or Tracking**: There are no analytics trackers, crash reporters sending telemetry, or user fingerprinting.
 - **AppleScript & Sandboxed Controls**: Spotify and system commands use standard macOS scripting interfaces; LocalFlow never asks for or stores Spotify login credentials.
-- **Apple Intelligence Integration**: Polishing uses Apple's official system on-device models when available on macOS 26+.
+- **Apple Intelligence Integration**: When no cloud provider is selected, polishing uses Apple's on-device models on macOS 26+.
+- **Clipboard hygiene**: Text pasted by LocalFlow is marked transient so clipboard managers skip it, and your previous clipboard is restored.
 
 ---
 
@@ -138,8 +155,7 @@ LocalFlow is engineered with a strict **Local-First Privacy Architecture**:
 
 ### Prerequisites
 - macOS 14.0 (Sonoma) or later
-- Xcode 15.0 or later with Command Line Tools
-- Swift 5.9 or later
+- Xcode 26 or later (the macOS 26 SDK is needed for Apple Speech and Apple Intelligence)
 
 ### 1. Clone the Repository
 ```sh
@@ -162,7 +178,7 @@ xcodebuild -project LocalFlow.xcodeproj -scheme LocalFlow -configuration Release
 ### 4. Run the Test Suite
 LocalFlow includes extensive unit and integration tests:
 ```sh
-swift test --package-path . --filter FeaturesTests
+swift test
 ```
 
 ### 5. Package a Release DMG
@@ -171,6 +187,12 @@ To build a universal, signed disk image:
 ./Scripts/build-dmg.sh
 ```
 The output file will be created at `dist/LocalFlow.dmg`.
+
+---
+
+## 🤝 Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Report security issues privately as described in [SECURITY.md](SECURITY.md).
 
 ---
 

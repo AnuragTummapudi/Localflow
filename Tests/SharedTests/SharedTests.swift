@@ -34,16 +34,17 @@ final class SharedTests: XCTestCase {
         let settings = LocalFlowSettings(defaults: defaults)
         let store = VocabularyStore(settings: settings)
         // Add single word without replacement
-        store.add(phrase: "Anurag Tummapudi")
+        store.add(phrase: "Ada Lovelace")
 
-        let result = store.apply(to: "my name is anurag tummapudi and I code")
-        XCTAssertEqual(result, "my name is Anurag Tummapudi and I code")
+        let result = store.apply(to: "my name is ada lovelace and I code")
+        XCTAssertEqual(result, "my name is Ada Lovelace and I code")
     }
 
     func testWordBoundaryPreventsSubstringCorruption() {
         let defaults = UserDefaults(suiteName: "LocalFlowTests.\(UUID().uuidString)")!
         let settings = LocalFlowSettings(defaults: defaults)
         let store = VocabularyStore(settings: settings)
+        store.add(phrase: "INR", hasSparkle: true)
 
         // "dinner" contains "inr", "obtuse" contains "bt"
         let input = "having dinner with 500 inr while feeling obtuse btw"
@@ -66,6 +67,7 @@ final class SharedTests: XCTestCase {
         let defaults = UserDefaults(suiteName: "LocalFlowTests.\(UUID().uuidString)")!
         let settings = LocalFlowSettings(defaults: defaults)
         let store = VocabularyStore(settings: settings)
+        for phrase in ["Mckarthy", "Pausch", "ABGen"] { store.add(phrase: phrase, hasSparkle: true) }
 
         let input = "meeting with mccarthy and reading posh quotes about a b gen"
         let result = store.apply(to: input)
@@ -76,21 +78,23 @@ final class SharedTests: XCTestCase {
         let defaults = UserDefaults(suiteName: "LocalFlowTests.\(UUID().uuidString)")!
         let settings = LocalFlowSettings(defaults: defaults)
         let store = VocabularyStore(settings: settings)
+        store.add(phrase: "adalovelace@example.com")
 
-        let input = "email me at tummapudianurag at gmail dot com today"
+        let input = "email me at adalovelace at example dot com today"
         let result = store.apply(to: input)
-        XCTAssertEqual(result, "email me at tummapudianurag@gmail.com today")
+        XCTAssertEqual(result, "email me at adalovelace@example.com today")
     }
 
     func testLengthPrioritizedMatching() {
         let defaults = UserDefaults(suiteName: "LocalFlowTests.\(UUID().uuidString)")!
         let settings = LocalFlowSettings(defaults: defaults)
         let store = VocabularyStore(settings: settings)
+        store.add(phrase: "Ada")
+        store.add(phrase: "Ada Lovelace")
 
-        // Both "Anurag" and "Anurag Tummapudi" exist
-        let input = "hello anurag tummapudi and anurag"
+        let input = "hello ada lovelace and ada"
         let result = store.apply(to: input)
-        XCTAssertEqual(result, "hello Anurag Tummapudi and Anurag")
+        XCTAssertEqual(result, "hello Ada Lovelace and Ada")
     }
 
     func testHistorySearchUsesSubstringMatching() {

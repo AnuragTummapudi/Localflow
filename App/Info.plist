@@ -25,7 +25,7 @@
     <key>LSUIElement</key>
     <false/>
     <key>NSMicrophoneUsageDescription</key>
-    <string>LocalFlow records your voice only while you hold the dictation hotkey so it can transcribe speech locally on this Mac.</string>
+    <string>LocalFlow records your voice only while you dictate. Audio is transcribed on this Mac unless you choose a cloud provider with your own API key.</string>
     <key>NSAppleEventsUsageDescription</key>
     <string>LocalFlow controls Spotify only when you use a spoken Spotify command to search, play, pause, resume, skip, or go back.</string>
     <key>NSHumanReadableCopyright</key>
@@ -34,7 +34,5 @@
     <string>Fonts</string>
     <key>SUEnableAutomaticChecks</key>
     <false/>
-    <key>SUFeedURL</key>
-    <string>https://example.invalid/localflow/appcast.xml</string>
 </dict>
 </plist>

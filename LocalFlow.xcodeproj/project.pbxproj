@@ -39,6 +39,7 @@
 		A1000000000000000000001F /* FloatingResultCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001F /* FloatingResultCardView.swift */; };
 		A10000000000000000000020 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000020 /* Fonts */; };
 		A10000000000000000000022 /* OnboardingResolve.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000022 /* OnboardingResolve.mp3 */; };
+		B10000000000000000000001 /* SourceConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000001 /* SourceConfigurationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		A2000000000000000000001F /* FloatingResultCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingResultCardView.swift; sourceTree = "<group>"; };
 		A20000000000000000000020 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		A20000000000000000000022 /* OnboardingResolve.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = OnboardingResolve.mp3; sourceTree = "<group>"; };
+		B20000000000000000000001 /* SourceConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceConfigurationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -120,6 +122,7 @@
 				A20000000000000000000006 /* WaveformOverlayView.swift */,
 				A20000000000000000000007 /* LaunchLogoView.swift */,
 				A20000000000000000000008 /* OnboardingView.swift */,
+				B20000000000000000000001 /* SourceConfigurationView.swift */,
 				A20000000000000000000009 /* SettingsViewModel.swift */,
 				A2000000000000000000000A /* SettingsRootView.swift */,
 				A2000000000000000000000B /* CommandConfirmationView.swift */,
@@ -249,6 +252,7 @@
 				A10000000000000000000006 /* WaveformOverlayView.swift in Sources */,
 				A10000000000000000000007 /* LaunchLogoView.swift in Sources */,
 				A10000000000000000000008 /* OnboardingView.swift in Sources */,
+				B10000000000000000000001 /* SourceConfigurationView.swift in Sources */,
 				A10000000000000000000009 /* SettingsViewModel.swift in Sources */,
 				A1000000000000000000000A /* SettingsRootView.swift in Sources */,
 				A1000000000000000000000B /* CommandConfirmationView.swift in Sources */,

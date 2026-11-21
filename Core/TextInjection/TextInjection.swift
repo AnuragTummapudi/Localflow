@@ -94,21 +94,6 @@ public final class TextInjection: @unchecked Sendable {
             trusted = isAccessibilityTrusted(prompt: true)
         }
 
-        // #region agent log
-        AgentDebugLog.write(
-            hypothesisId: "E",
-            location: "TextInjection.swift:insert",
-            message: "insert begin",
-            data: [
-                "textLen": trimmed.count,
-                "targetBundle": targetApp?.bundleIdentifier ?? "nil",
-                "targetPID": Int(targetApp?.processIdentifier ?? -1),
-                "frontBundle": NSWorkspace.shared.frontmostApplication?.bundleIdentifier ?? "nil",
-                "axTrusted": trusted
-            ]
-        )
-        // #endregion
-
         guard trusted else {
             openAccessibilitySettings()
             // Keep transcript on clipboard so the user can ⌘V manually.
@@ -122,33 +107,10 @@ public final class TextInjection: @unchecked Sendable {
         await waitForModifiersToClear()
 
         // Electron and Chromium apps often expose their editor as an opaque AXGroup,
-        // even when the caret is visibly active. That makes AX role detection a useful
-        // hint, but not a gate for normal Cmd+V insertion. Once the app captured at
-        // hotkey-down is frontmost, use the standard paste path for both native and
-        // opaque editors (Cursor, Codex, ChatGPT, and browser chats).
-        let hasObservableTextTarget = hasFocusedTextTarget(preferredPID: targetApp?.processIdentifier)
-        AgentDebugLog.write(
-            hypothesisId: "E",
-            location: "TextInjection.swift:insert",
-            message: hasObservableTextTarget ? "focused text target observed" : "focused target opaque; using clipboard paste",
-            data: [
-                "targetBundle": targetApp?.bundleIdentifier ?? "nil",
-                "frontBundle": NSWorkspace.shared.frontmostApplication?.bundleIdentifier ?? "nil"
-            ]
-        )
-
+        // even when the caret is visibly active, so AX role detection is not a gate for
+        // Cmd+V. Use the standard paste path for both native and opaque editors.
         do {
             try await paste(trimmed)
-            // #region agent log
-            AgentDebugLog.write(
-                hypothesisId: "D",
-                location: "TextInjection.swift:insert",
-                message: "clipboard paste posted (fast path)",
-                data: [
-                    "frontBundle": NSWorkspace.shared.frontmostApplication?.bundleIdentifier ?? "nil"
-                ]
-            )
-            // #endregion
             return .inserted
         } catch {
             if insertViaAccessibility(trimmed, preferredPID: targetApp?.processIdentifier) {
@@ -538,8 +500,8 @@ public final class TextInjection: @unchecked Sendable {
             systemWide,
             kAXFocusedUIElementAttribute as CFString,
             &focused
-        ) == .success, let focused {
-            return (focused as! AXUIElement)
+        ) == .success, let element = Self.axElement(focused) {
+            return element
         }
 
         let pid = preferredPID ?? NSWorkspace.shared.frontmostApplication?.processIdentifier
@@ -550,18 +512,17 @@ public final class TextInjection: @unchecked Sendable {
             axApp,
             kAXFocusedUIElementAttribute as CFString,
             &focused
-        ) == .success, let focused else {
+        ) == .success else {
             return nil
         }
-        return (focused as! AXUIElement)
+        return Self.axElement(focused)
     }
 
     private func focusedElement(in pid: pid_t) -> AXUIElement? {
         let axApp = AXUIElementCreateApplication(pid)
         var focused: CFTypeRef?
-        guard AXUIElementCopyAttributeValue(axApp, kAXFocusedUIElementAttribute as CFString, &focused) == .success,
-              let focused else { return nil }
-        return (focused as! AXUIElement)
+        guard AXUIElementCopyAttributeValue(axApp, kAXFocusedUIElementAttribute as CFString, &focused) == .success else { return nil }
+        return Self.axElement(focused)
     }
 
     private func selectedText(from element: AXUIElement) -> String? {
@@ -574,6 +535,12 @@ public final class TextInjection: @unchecked Sendable {
     private func selectedRange(from element: AXUIElement) -> NSRange? {
         guard let range = selectedUTF16Range(of: element) else { return nil }
         return NSRange(location: range.location, length: range.length)
+    }
+
+    /// Checked CF bridge: AX attributes are untyped, so verify before treating one as an element.
+    private static func axElement(_ value: CFTypeRef?) -> AXUIElement? {
+        guard let value, CFGetTypeID(value) == AXUIElementGetTypeID() else { return nil }
+        return (value as! AXUIElement)
     }
 
     private struct PasteboardSnapshot {
@@ -683,13 +650,13 @@ public final class TextInjection: @unchecked Sendable {
             kAXSelectedTextRangeAttribute as CFString,
             &rangeRef
         ) == .success,
-              let axValue = rangeRef
+              let rangeRef, CFGetTypeID(rangeRef) == AXValueGetTypeID()
         else {
             return nil
         }
 
         var range = CFRange(location: 0, length: 0)
-        guard AXValueGetValue(axValue as! AXValue, .cfRange, &range) else {
+        guard AXValueGetValue(rangeRef as! AXValue, .cfRange, &range) else {
             return nil
         }
         return range
@@ -707,13 +674,19 @@ public final class TextInjection: @unchecked Sendable {
 
     private func paste(_ text: String) async throws {
         let pasteboard = NSPasteboard.general
-        let previous = pasteboard.string(forType: .string)
+        let snapshot = PasteboardSnapshot(pasteboard)
 
-        // Avoid clearContents() — it drops other pasteboard types and races paste.
-        pasteboard.declareTypes([.string], owner: nil)
+        // Avoid clearContents() — it races paste. Transient/concealed markers (nspasteboard.org)
+        // keep dictated text out of clipboard-manager history.
+        let transient = NSPasteboard.PasteboardType("org.nspasteboard.TransientType")
+        let concealed = NSPasteboard.PasteboardType("org.nspasteboard.ConcealedType")
+        pasteboard.declareTypes([.string, transient, concealed], owner: nil)
         guard pasteboard.setString(text, forType: .string) else {
             throw LocalFlowError.textInjectionFailed
         }
+        pasteboard.setData(Data(), forType: transient)
+        pasteboard.setData(Data(), forType: concealed)
+        let ownChangeCount = pasteboard.changeCount
 
         // Give Electron/Chromium a short turn to restore its editor responder after
         // LocalFlow's non-activating overlay is dismissed.
@@ -721,14 +694,11 @@ public final class TextInjection: @unchecked Sendable {
 
         try postCommandV()
 
-        // Restore previous clipboard after paste has had time to consume ours.
-        if let previous {
-            Task {
-                try? await Task.sleep(nanoseconds: 600_000_000)
-                let pasteboard = NSPasteboard.general
-                pasteboard.declareTypes([.string], owner: nil)
-                pasteboard.setString(previous, forType: .string)
-            }
+        // Restore the full previous clipboard once paste has consumed ours, unless the
+        // user or another app has written to the clipboard since.
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 600_000_000)
+            if NSPasteboard.general.changeCount == ownChangeCount { snapshot.restore(to: NSPasteboard.general) }
         }
     }
 

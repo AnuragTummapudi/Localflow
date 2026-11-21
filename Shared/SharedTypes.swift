@@ -5,6 +5,7 @@ import Foundation
 public enum EngineKind: String, Codable, CaseIterable, Identifiable, Sendable {
     case automatic
     case appleSpeech
+    case cloud
     case parakeet
     case whisper
 
@@ -16,6 +17,7 @@ public enum EngineKind: String, Codable, CaseIterable, Identifiable, Sendable {
         switch self {
         case .automatic: "Automatic"
         case .appleSpeech: "Apple Speech"
+        case .cloud: "Cloud"
         case .parakeet: "Parakeet"
         case .whisper: "Whisper"
         }
@@ -161,7 +163,7 @@ public struct VocabularyEntry: Codable, Equatable, Identifiable, Sendable {
         return !trimmedReplacement.isEmpty && trimmedPhrase.lowercased() != trimmedReplacement.lowercased()
     }
 
-    /// The display text formatted for lists (e.g. "btw -> by the way" or "Anurag Tummapudi").
+    /// The display text formatted for lists (e.g. "btw -> by the way" or "Ada Lovelace").
     public var displayText: String {
         if isShortcut {
             return "\(phrase) -> \(replacement)"
@@ -255,6 +257,7 @@ public enum LocalFlowError: Error, LocalizedError, Equatable {
     case transcriptionFailed(String)
     case textInjectionFailed
     case audioCaptureFailed(String)
+    case providerFailed(String)
 
     /// A localized error description.
     public var errorDescription: String? {
@@ -266,6 +269,7 @@ public enum LocalFlowError: Error, LocalizedError, Equatable {
         case .transcriptionFailed(let detail): "Transcription failed: \(detail)"
         case .textInjectionFailed: "LocalFlow could not insert text into the focused field."
         case .audioCaptureFailed(let detail): "Audio capture failed: \(detail)"
+        case .providerFailed(let detail): detail
         }
     }
 }

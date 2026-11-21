@@ -36,6 +36,9 @@ public final class DictationCoordinator: ObservableObject {
     /// Whether a speech engine is ready to transcribe.
     public var isEngineReady: Bool { activeEngineName != "Not loaded" }
 
+    @Published public private(set) var isPreparingEngine = false
+    public var canConfigureEngine: Bool { !isPreparingEngine && state != .listening && state != .processing && !isRewritingSelection }
+
     /// The audio capture service.
     public let audioCapture = AudioCaptureSession()
 
@@ -160,14 +163,21 @@ public final class DictationCoordinator: ObservableObject {
         } else {
             appleReady = false
         }
-        guard modelManager.modelsAvailable() || appleReady else { return }
+        guard settings.dictationSource == .cloud || modelManager.modelsAvailable() || appleReady else { return }
         await prepareModels()
     }
 
     /// Prepares speech models and throws on failure, enabling callers to surface errors.
     public func prepareModelsWithError() async throws {
+        guard canConfigureEngine else {
+            throw LocalFlowError.modelUnavailable("Finish the current dictation or rewrite before changing engines.")
+        }
+        isPreparingEngine = true
+        defer { isPreparingEngine = false }
+        // Keep the current engine running until the new one is ready, so a failed switch never leaves dictation dead.
         let engine = try await modelManager.prepareEngine()
-        let name = modelManager.selectedEngine.kind.displayName
+        let name = modelManager.selectedEngine.kind == .cloud
+            ? "\(modelManager.selectedEngine.detail) (cloud)" : modelManager.selectedEngine.kind.displayName
         let detail = modelManager.selectedEngine.detail
         await router.updateEngine(engine, name: name)
         activeEngineName = name
@@ -426,7 +436,7 @@ public final class DictationCoordinator: ObservableObject {
             return
         }
         do {
-            overlayController.showPolishing(message: "Rewriting privately on this Mac…")
+            overlayController.showPolishing(message: settings.polishProvider.map { "Polishing with \($0.displayName)…" } ?? "Rewriting privately on this Mac…")
             let started = ContinuousClock.now
             let polished = try await LocalWritingAssistant.polish(
                 selection.text,
@@ -442,7 +452,6 @@ public final class DictationCoordinator: ObservableObject {
             overlayController.showPolishing(message: "Replacing text…")
             await applyPolish(polished, selection: selection, requestID: requestID)
         } catch {
-            AgentDebugLog.write(hypothesisId: "polish", location: "DictationCoordinator.polish", message: "On-device polish failed", data: ["error": error.localizedDescription])
             Self.polishLog.error("request \(requestID.uuidString, privacy: .public) failed: \(error.localizedDescription, privacy: .public)")
             let message: String
             if let polishError = error as? LocalWritingAssistant.PolishError {
@@ -454,7 +463,7 @@ public final class DictationCoordinator: ObservableObject {
                 case .unsafeOutput: message = "The rewrite was not safe to apply; your selection was kept."
                 }
             } else {
-                message = "Apple Intelligence could not finish polishing."
+                message = error.localizedDescription
             }
             overlayController.showError(message)
         }
@@ -542,7 +551,7 @@ public final class DictationCoordinator: ObservableObject {
             do {
                 try await prepareModelsWithError()
             } catch {
-                lastErrorMessage = "Speech model not ready. Open Settings → General → Download / Prepare Model. (\(error.localizedDescription))"
+                lastErrorMessage = "Speech model not ready. Open Settings → General → Apply & prepare. (\(error.localizedDescription))"
                 state = .error
                 Task { @MainActor in
                     try? await Task.sleep(nanoseconds: 800_000_000)
@@ -566,20 +575,6 @@ public final class DictationCoordinator: ObservableObject {
             targetApplication = last
         }
 
-        // #region agent log
-        AgentDebugLog.write(
-            hypothesisId: "C",
-            location: "DictationCoordinator.swift:beginDictation",
-            message: "dictation started",
-            data: [
-                "mode": mode.rawValue,
-                "frontBundle": NSWorkspace.shared.frontmostApplication?.bundleIdentifier ?? "nil",
-                "targetBundle": targetApplication?.bundleIdentifier ?? "nil",
-                "lastExternal": lastExternalApplication?.bundleIdentifier ?? "nil",
-                "engine": activeEngineName
-            ]
-        )
-        // #endregion
 
         do {
             try audioCapture.start()
@@ -681,66 +676,19 @@ public final class DictationCoordinator: ObservableObject {
                         vocabularyStore: vocabularyStore
                     )
                     let formatted = formatter.format(cleaned, profile: profile, vocabularyStore: vocabularyStore)
-                    // #region agent log
-                    AgentDebugLog.write(
-                        hypothesisId: "C",
-                        location: "DictationCoordinator.swift:endDictation",
-                        message: "transcription ok, about to insert",
-                        data: [
-                            "textLen": formatted.count,
-                            "rawLength": trimmed.count,
-                            "cleanedLength": cleaned.count,
-                            "targetBundle": target?.bundleIdentifier ?? "nil",
-                            "frontBundle": NSWorkspace.shared.frontmostApplication?.bundleIdentifier ?? "nil",
-                            "axTrusted": textInjection.isAccessibilityTrusted(prompt: false)
-                        ],
-                        runId: "post-fix"
-                    )
-                    // #endregion
                     // Always keep history even when paste/AX insert fails.
                     historyStore.append(text: formatted, bundleIdentifier: bundleID)
                     do {
                         let outcome = try await textInjection.insert(formatted, into: target)
                         switch outcome {
                         case .inserted:
-                            // #region agent log
-                            AgentDebugLog.write(
-                                hypothesisId: "D",
-                                location: "DictationCoordinator.swift:endDictation",
-                                message: "insert returned success",
-                                data: [
-                                    "targetBundle": target?.bundleIdentifier ?? "nil",
-                                    "frontAfter": NSWorkspace.shared.frontmostApplication?.bundleIdentifier ?? "nil"
-                                ],
-                                runId: "post-fix"
-                            )
-                            // #endregion
                             teardownSession(clearErrorMessage: true)
                         case .noFocusedTarget:
-                            // #region agent log
-                            AgentDebugLog.write(
-                                hypothesisId: "D",
-                                location: "DictationCoordinator.swift:endDictation",
-                                message: "no focused target, showing floating card",
-                                data: [
-                                    "targetBundle": target?.bundleIdentifier ?? "nil"
-                                ],
-                                runId: "post-fix"
-                            )
-                            // #endregion
                             // Fallback UI: show floating result card near cursor
                             resultCardController.show(text: formatted)
                             teardownSession(clearErrorMessage: true)
                         }
                     } catch {
-                        // #region agent log
-                        AgentDebugLog.write(
-                            hypothesisId: "D",
-                            location: "DictationCoordinator.swift:endDictation",
-                            message: "insert threw",
-                            data: ["error": error.localizedDescription]
-                        )
-                        // #endregion
                         teardownSession(errorMessage: "Transcribed and saved to History, but paste needs Accessibility. Enable LocalFlow in System Settings → Privacy & Security → Accessibility (text is also on your clipboard — press ⌘V).")
                     }
                 case .execute(let intent):
@@ -756,14 +704,6 @@ public final class DictationCoordinator: ObservableObject {
                     teardownSession(clearErrorMessage: true)
                 }
             } catch {
-                // #region agent log
-                AgentDebugLog.write(
-                    hypothesisId: "B",
-                    location: "DictationCoordinator.swift:endDictation",
-                    message: "transcription failed",
-                    data: ["error": error.localizedDescription]
-                )
-                // #endregion
                 teardownSession(errorMessage: "Transcription failed: \(error.localizedDescription)")
             }
         }

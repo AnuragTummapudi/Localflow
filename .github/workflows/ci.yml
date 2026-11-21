@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    # The macOS 26 SDK is needed for Apple Speech and Apple Intelligence code paths.
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        with:
+          path: .build
+          key: spm-${{ runner.os }}-${{ hashFiles('Package.resolved') }}
+      - name: Build
+        run: swift build
+      - name: Test
+        run: swift test
+      - name: Build app (unsigned)
+        run: xcodebuild -project LocalFlow.xcodeproj -scheme LocalFlow -configuration Debug CODE_SIGNING_ALLOWED=NO build

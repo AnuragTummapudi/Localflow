@@ -3,16 +3,8 @@ import Combine
 
 /// A shared store for custom vocabulary entries and shortcuts.
 public final class VocabularyStore: ObservableObject, @unchecked Sendable {
-    /// Pre-seeds default dictionary items matching the user's reference entries.
+    /// Starter entry for new installs. Keep this generic: it ships to every user.
     public static let defaultSeedEntries: [VocabularyEntry] = [
-        VocabularyEntry(phrase: "INR", replacement: "", isFavorite: false, hasSparkle: true),
-        VocabularyEntry(phrase: "ABGen", replacement: "", isFavorite: false, hasSparkle: true),
-        VocabularyEntry(phrase: "Anurag Tummapudi", replacement: "", isFavorite: false, hasSparkle: false),
-        VocabularyEntry(phrase: "Mckarthy", replacement: "", isFavorite: false, hasSparkle: true),
-        VocabularyEntry(phrase: "Pausch", replacement: "", isFavorite: false, hasSparkle: true),
-        VocabularyEntry(phrase: "tummapudianurag@gmail.com", replacement: "", isFavorite: false, hasSparkle: false),
-        VocabularyEntry(phrase: "Wispr Flow", replacement: "", isFavorite: false, hasSparkle: false),
-        VocabularyEntry(phrase: "Anurag", replacement: "", isFavorite: false, hasSparkle: false),
         VocabularyEntry(phrase: "btw", replacement: "by the way", isFavorite: false, hasSparkle: false),
     ]
 

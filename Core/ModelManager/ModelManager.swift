@@ -61,6 +61,11 @@ public final class ModelManager: NSObject, ObservableObject, URLSessionDownloadD
     private let networkCounter: NetworkActivityCounter
     private let supportDirectory: URL
     private var activeContinuation: CheckedContinuation<URL, Error>?
+    /// Bytes from files finished earlier in a multi-file download, so per-file progress reads as overall progress.
+    private var downloadBaseBytes: Int64 = 0
+    private var downloadTotalBytes: Int64?
+    /// Written last; a model folder without it is an interrupted download.
+    static let completeMarker = ".localflow-complete"
     private lazy var session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
 
     /// Creates a model manager.
@@ -105,9 +110,8 @@ public final class ModelManager: NSObject, ObservableObject, URLSessionDownloadD
             // FluidAudio owns the on-disk layout; empty folders from failed scrapes don't count.
             return ParakeetModelDownloader.modelsExist(at: directory)
         case .whisperLargeV3Turbo:
-            // WhisperKit expects compiled Core ML assets under the model folder.
-            let contents = (try? FileManager.default.contentsOfDirectory(atPath: directory.path)) ?? []
-            return contents.contains { $0.hasSuffix(".mlmodelc") || $0.hasSuffix(".json") }
+            // Partial downloads leave files behind, so only a verified, completed download counts.
+            return FileManager.default.fileExists(atPath: directory.appendingPathComponent(Self.completeMarker).path)
         case .automatic:
             return false
         }
@@ -115,11 +119,23 @@ public final class ModelManager: NSObject, ObservableObject, URLSessionDownloadD
 
     /// Prepares the selected model and returns an engine hidden behind `STTEngine`.
     ///
-    /// Priority: Apple Speech (macOS 26+, no HF download) → optional on-disk Parakeet/Whisper
-    /// cascade → download local model only when Apple Speech is unavailable or overridden.
+    /// Honors the selected processing mode. Apple Speech may use an on-disk local fallback;
+    /// cloud requests never switch providers or fall back automatically.
     public func prepareEngine() async throws -> any STTEngine {
-        if let override = settings.modelOverride, override != .automatic {
-            return try await prepareLocalEngine(tier: override, allowDownload: true)
+        if settings.dictationSource == .cloud {
+            let provider = settings.transcriptionProvider
+            guard CloudProvider.transcriptionProviders.contains(provider) else {
+                throw LocalFlowError.modelUnavailable("Choose Groq, OpenAI, or Gemini for cloud dictation.")
+            }
+            guard !settings.hardBlockNetworkAfterModelsDownloaded else { throw LocalFlowError.networkBlocked }
+            guard try ProviderKeyStore().read(provider) != nil else {
+                throw LocalFlowError.modelUnavailable("Add your \(provider.displayName) API key in Settings → General.")
+            }
+            selectedEngine = STTEngineDescriptor(kind: .cloud, modelTier: .automatic, detail: provider.displayName)
+            return CloudSTTEngine(provider: provider, settings: settings)
+        }
+        if settings.dictationSource == .local {
+            return try await prepareLocalEngine(tier: resolvedModelTier(), allowDownload: true)
         }
 
         if appleSpeechEngineIsAvailable() {
@@ -160,7 +176,7 @@ public final class ModelManager: NSObject, ObservableObject, URLSessionDownloadD
         }
 
         let directory = modelDirectory(for: effective)
-        if !FileManager.default.fileExists(atPath: directory.path) {
+        if !localModelExists(for: effective) {
             guard allowDownload else {
                 throw LocalFlowError.modelUnavailable("\(effective.displayName) is not downloaded yet.")
             }
@@ -238,9 +254,14 @@ public final class ModelManager: NSObject, ObservableObject, URLSessionDownloadD
         }
         var completedBytes: Int64 = 0
 
+        let marker = modelDirectory(for: .whisperLargeV3Turbo).appendingPathComponent(Self.completeMarker)
+        try? FileManager.default.removeItem(at: marker)
         try FileManager.default.createDirectory(at: spec.destinationRoot, withIntermediateDirectories: true)
+        try ensureFreeSpace(for: files, under: spec.destinationRoot)
+        downloadTotalBytes = totalBytes > 0 ? totalBytes : nil
+        defer { downloadBaseBytes = 0; downloadTotalBytes = nil }
         for file in files {
-            let destination = spec.destinationRoot.appendingPathComponent(file.path, isDirectory: false)
+            let destination = try safeDestination(for: file.path, under: spec.destinationRoot)
             if try existingVerifiedFile(at: destination, expectedSHA256: file.sha256) {
                 completedBytes += file.byteCount ?? 0
                 progress = ModelDownloadProgress(completedBytes: completedBytes, totalBytes: totalBytes > 0 ? totalBytes : nil, stage: "Verifying model")
@@ -248,6 +269,8 @@ public final class ModelManager: NSObject, ObservableObject, URLSessionDownloadD
             }
 
             try FileManager.default.createDirectory(at: destination.deletingLastPathComponent(), withIntermediateDirectories: true)
+            try Task.checkCancellation()
+            downloadBaseBytes = completedBytes
             networkCounter.recordRequest()
             let temporaryURL = try await download(from: resolveURL(repoID: spec.repoID, revision: spec.revision, path: file.path))
             try verifySHA256(fileURL: temporaryURL, expected: file.sha256)
@@ -258,6 +281,7 @@ public final class ModelManager: NSObject, ObservableObject, URLSessionDownloadD
             completedBytes += file.byteCount ?? 0
             progress = ModelDownloadProgress(completedBytes: completedBytes, totalBytes: totalBytes > 0 ? totalBytes : nil, stage: "Downloading model")
         }
+        try Data().write(to: marker)
 
         progress = ModelDownloadProgress(completedBytes: max(completedBytes, 1), totalBytes: max(totalBytes, 1), stage: "Ready")
     }
@@ -287,12 +311,6 @@ public final class ModelManager: NSObject, ObservableObject, URLSessionDownloadD
         }
     }
 
-    /// Checks for app updates through the future Sparkle integration point.
-    public func checkForUpdates() {
-        // TODO: Wire Sparkle's SPUStandardUpdaterController here. This must remain the only
-        // non-model network path and must increment NetworkActivityCounter when enabled.
-    }
-
     /// Receives download progress from URLSession.
     public func urlSession(
         _ session: URLSession,
@@ -303,8 +321,8 @@ public final class ModelManager: NSObject, ObservableObject, URLSessionDownloadD
     ) {
         DispatchQueue.main.async {
             self.progress = ModelDownloadProgress(
-                completedBytes: totalBytesWritten,
-                totalBytes: totalBytesExpectedToWrite > 0 ? totalBytesExpectedToWrite : nil,
+                completedBytes: self.downloadBaseBytes + totalBytesWritten,
+                totalBytes: self.downloadTotalBytes ?? (totalBytesExpectedToWrite > 0 ? totalBytesExpectedToWrite : nil),
                 stage: "Downloading model"
             )
         }
@@ -338,16 +356,50 @@ public final class ModelManager: NSObject, ObservableObject, URLSessionDownloadD
     }
 
     private func download(from url: URL) async throws -> URL {
-        try await withCheckedThrowingContinuation { continuation in
-            activeContinuation = continuation
-            session.downloadTask(with: url).resume()
+        let task = session.downloadTask(with: url)
+        return try await withTaskCancellationHandler {
+            try await withCheckedThrowingContinuation { continuation in
+                activeContinuation = continuation
+                task.resume()
+            }
+        } onCancel: {
+            task.cancel()
         }
     }
 
+    /// Rejects manifest paths that would write outside the model folder.
+    private func safeDestination(for path: String, under root: URL) throws -> URL {
+        let destination = root.appendingPathComponent(path, isDirectory: false).standardizedFileURL
+        guard !path.hasPrefix("/"), !path.split(separator: "/").contains(".."),
+              destination.path.hasPrefix(root.standardizedFileURL.path + "/") else {
+            throw LocalFlowError.modelUnavailable("The model manifest contained an unsafe file path.")
+        }
+        return destination
+    }
+
+    private func ensureFreeSpace(for files: [ModelFileSpec], under root: URL) throws {
+        let needed = files.reduce(Int64(0)) { total, file in
+            let path = root.appendingPathComponent(file.path).path
+            let existing = (try? FileManager.default.attributesOfItem(atPath: path)[.size] as? Int64) ?? 0
+            return total + max(0, (file.byteCount ?? 0) - existing)
+        }
+        let available = (try? root.resourceValues(forKeys: [.volumeAvailableCapacityForImportantUsageKey]))?
+            .volumeAvailableCapacityForImportantUsage ?? .max
+        // Headroom for the temporary copy URLSession makes before each move.
+        guard available > needed + 512 * 1_048_576 else {
+            let gb = Double(needed) / 1_000_000_000
+            throw LocalFlowError.modelUnavailable(String(format: "Free up at least %.1f GB of disk space, then try again.", gb + 0.5))
+        }
+    }
+
+    /// Streams the file through SHA-256 so multi-GB weights never load into memory at once.
     private func verifySHA256(fileURL: URL, expected: String?) throws {
         guard let expected, !expected.isEmpty else { return }
-        let data = try Data(contentsOf: fileURL)
-        let digest = SHA256.hash(data: data).map { String(format: "%02x", $0) }.joined()
+        let handle = try FileHandle(forReadingFrom: fileURL)
+        defer { try? handle.close() }
+        var hasher = SHA256()
+        while let chunk = try handle.read(upToCount: 4 * 1_048_576), !chunk.isEmpty { hasher.update(data: chunk) }
+        let digest = hasher.finalize().map { String(format: "%02x", $0) }.joined()
         guard digest.lowercased() == expected.lowercased() else {
             throw LocalFlowError.modelUnavailable("Checksum mismatch for downloaded model.")
         }
@@ -402,9 +454,10 @@ public final class ModelManager: NSObject, ObservableObject, URLSessionDownloadD
                 destinationRoot: modelsRoot.appendingPathComponent("parakeet-tdt-0.6b-v3", isDirectory: true)
             )
         case .whisperLargeV3Turbo:
+            // Pinned so the manifest and its checksums are reproducible; bump deliberately.
             return ModelRepositorySpec(
                 repoID: "argmaxinc/whisperkit-coreml",
-                revision: "main",
+                revision: "0f63a7800b00dd0226abd051b906c246e1907482",
                 subdirectory: "openai_whisper-large-v3_turbo",
                 destinationRoot: modelsRoot
             )

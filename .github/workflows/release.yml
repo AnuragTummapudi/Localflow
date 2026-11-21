@@ -1,0 +1,45 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  dmg:
+    runs-on: macos-26
+    # Job-level env so step `if:` conditions can see whether signing secrets exist.
+    env:
+      CERT_P12: ${{ secrets.DEVELOPER_ID_CERT_P12 }}
+      APPLE_ID: ${{ secrets.NOTARY_APPLE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import Developer ID certificate
+        if: ${{ env.CERT_P12 != '' }}
+        env:
+          CERT_PASSWORD: ${{ secrets.DEVELOPER_ID_CERT_PASSWORD }}
+        run: |
+          echo "$CERT_P12" | base64 --decode > cert.p12
+          security create-keychain -p ci build.keychain
+          security default-keychain -s build.keychain
+          security unlock-keychain -p ci build.keychain
+          security import cert.p12 -k build.keychain -P "$CERT_PASSWORD" -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple: -s -k ci build.keychain
+          rm cert.p12
+      - name: Store notary credentials
+        if: ${{ env.APPLE_ID != '' }}
+        env:
+          TEAM_ID: ${{ secrets.NOTARY_TEAM_ID }}
+          APP_PASSWORD: ${{ secrets.NOTARY_APP_PASSWORD }}
+        run: xcrun notarytool store-credentials localflow --apple-id "$APPLE_ID" --team-id "$TEAM_ID" --password "$APP_PASSWORD"
+      - name: Build DMG
+        env:
+          SIGN_IDENTITY: ${{ secrets.DEVELOPER_ID_IDENTITY }}
+          NOTARY_PROFILE: ${{ env.APPLE_ID != '' && 'localflow' || '' }}
+        run: ./Scripts/build-dmg.sh
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/LocalFlow.dmg --generate-notes --verify-tag

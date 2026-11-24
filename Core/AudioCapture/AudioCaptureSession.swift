@@ -22,10 +22,11 @@ public final class AudioCaptureSession: ObservableObject, @unchecked Sendable {
     private let sampleLock = NSLock()
     private var configurationObserver: (any NSObjectProtocol)?
     private var startedAt: ContinuousClock.Instant?
+    private var restartsThisSession = 0
     private static let log = Logger(subsystem: "dev.localflow.LocalFlow", category: "AudioCapture")
 
-    /// Called on the main thread when the input device changes mid-recording (AirPods connect, headset unplugged).
-    /// Capture has stopped by then; the samples recorded so far are still returned by `stop()`.
+    /// Called on the main thread when the input device changes mid-recording and capture could not be restarted
+    /// (e.g. the sample rate changed). Capture has stopped by then; the samples recorded so far are still returned by `stop()`.
     public var onInterrupted: (() -> Void)?
 
     /// Longest recording kept in memory (10 min at 48 kHz ≈ 115 MB). Dictation auto-stops and transcribes here.
@@ -75,7 +76,25 @@ public final class AudioCaptureSession: ObservableObject, @unchecked Sendable {
         sampleLock.unlock()
 
         waveformLevels = Array(repeating: 0.12, count: 32)
+        restartsThisSession = 0
+        startedAt = .now
+        try startEngine(sampleRate: nil)
+        // Set synchronously so a fast key-up never races past an async flag.
+        isRecording = true
+    }
 
+    enum ConfigurationChangeAction: Equatable { case ignore, restart, interrupt }
+
+    /// macOS (notably 27) posts AVAudioEngineConfigurationChange right after start() and whenever a call app
+    /// (Meet, Zoom, FaceTime) reconfigures the mic. Only a stopped engine needs action.
+    static func configurationChangeAction(engineRunning: Bool, restartsSoFar: Int) -> ConfigurationChangeAction {
+        if engineRunning { return .ignore }
+        return restartsSoFar < maxRestartsPerSession ? .restart : .interrupt
+    }
+    static let maxRestartsPerSession = 5
+
+    /// Builds a fresh engine and tap. With `sampleRate`, refuses a different input rate so one recording keeps one rate.
+    private func startEngine(sampleRate: Double?) throws {
         // Fresh engine per session avoids stale I/O context after stop().
         engine = AVAudioEngine()
         let input = engine.inputNode
@@ -83,27 +102,49 @@ public final class AudioCaptureSession: ObservableObject, @unchecked Sendable {
         guard format.channelCount > 0, format.sampleRate > 0 else {
             throw LocalFlowError.audioCaptureFailed("Microphone input format is unavailable.")
         }
+        // shortcut: a mid-recording rate change (e.g. AirPods switching to call mode) ends the dictation instead of resampling.
+        if let sampleRate, sampleRate != format.sampleRate {
+            throw LocalFlowError.audioCaptureFailed("Microphone sample rate changed mid-recording.")
+        }
         captureSampleRate = format.sampleRate
 
         input.installTap(onBus: 0, bufferSize: 1024, format: format) { [weak self] buffer, _ in
             self?.consume(buffer: buffer)
         }
 
-        // AVAudioEngine stops itself when the input device changes; without this the UI keeps "listening" to nothing.
+        // Observe before start(): the engine can post its own change while starting.
         configurationObserver = NotificationCenter.default.addObserver(
             forName: .AVAudioEngineConfigurationChange, object: engine, queue: .main
-        ) { [weak self] _ in
-            guard let self, self.isRecording else { return }
-            Self.log.notice("input device changed mid-recording; stopping capture")
-            self.stopEngineIfNeeded()
-            self.onInterrupted?()
+        ) { [weak self] notification in
+            guard let self, self.isRecording, (notification.object as AnyObject?) === self.engine else { return }
+            self.handleConfigurationChange()
         }
 
         engine.prepare()
-        startedAt = .now
         try engine.start()
-        // Set synchronously so a fast key-up never races past an async flag.
-        isRecording = true
+    }
+
+    private func handleConfigurationChange() {
+        switch Self.configurationChangeAction(engineRunning: engine.isRunning, restartsSoFar: restartsThisSession) {
+        case .ignore:
+            Self.log.notice("configuration change with engine still running; continuing capture")
+        case .restart:
+            restartsThisSession += 1
+            let rate = captureSampleRate
+            stopEngineIfNeeded()
+            do {
+                try startEngine(sampleRate: rate)
+                Self.log.notice("engine stopped by a device change; restarted capture (\(self.restartsThisSession, privacy: .public))")
+            } catch {
+                Self.log.notice("could not restart capture after device change: \(error.localizedDescription, privacy: .public)")
+                stopEngineIfNeeded()
+                onInterrupted?()
+            }
+        case .interrupt:
+            Self.log.notice("input device keeps changing mid-recording; stopping capture")
+            stopEngineIfNeeded()
+            onInterrupted?()
+        }
     }
 
     /// Stops capture and returns the captured audio.

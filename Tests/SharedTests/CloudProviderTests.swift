@@ -108,6 +108,23 @@ final class CloudProviderTests: XCTestCase {
             XCTAssertEqual(text, "Hello there.")
         }
     }
+    func testSarvamDictateRequestAndClipLimit() async throws {
+        try keys.save("test-secret", for: .sarvam)
+        CloudTestProtocol.handler = { request in
+            XCTAssertEqual(request.url!.absoluteString, "https://api.sarvam.ai/v2/dictate")
+            XCTAssertEqual(request.value(forHTTPHeaderField: "api-subscription-key"), "test-secret")
+            XCTAssertNil(request.value(forHTTPHeaderField: "Authorization"))
+            let body = Self.body(request)
+            XCTAssertTrue(String(decoding: body, as: UTF8.self).contains("name=\"file\""))
+            XCTAssertTrue(String(decoding: body, as: UTF8.self).contains(CloudProvider.sarvam.speechModel))
+            return (200, ["transcript": "um hello there", "text": "Hello there."])
+        }
+        let text = try await client().transcribe(CapturedAudio(buffer: nil, samples: [0.5], sampleRate: 16_000), provider: .sarvam)
+        XCTAssertEqual(text, "Hello there.")
+        let tooLong = CapturedAudio(buffer: nil, samples: [Float](repeating: 0.1, count: 31 * 16_000), sampleRate: 16_000)
+        do { _ = try await client().transcribe(tooLong, provider: .sarvam); XCTFail("Should reject clips over 30 s") }
+        catch { XCTAssertTrue(error.localizedDescription.contains("30 seconds")) }
+    }
     func testPolishProviderRequestsAndResponses() async throws {
         for provider in CloudProvider.allCases {
             try keys.save("test-secret", for: provider)

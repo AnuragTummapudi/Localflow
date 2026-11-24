@@ -52,7 +52,7 @@ public struct OnboardingView: View {
                         .foregroundStyle(LocalFlowDesign.graphite)
                     sourceOption(.apple, icon: "apple.logo", detail: "Built into macOS 26+. No API key. Audio stays on this Mac.")
                     sourceOption(.local, icon: "desktopcomputer", detail: "Download Parakeet or Whisper once, then dictate on-device.")
-                    sourceOption(.cloud, icon: "key", detail: "Use your Groq, OpenAI, or Gemini key. Internet and provider usage apply.")
+                    sourceOption(.cloud, icon: "key", detail: "Use your Groq, OpenAI, Gemini, or Sarvam key. Internet and provider usage apply.")
                 }
                 .padding(32)
             case .model:

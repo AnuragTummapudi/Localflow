@@ -229,8 +229,9 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
         let pressed: Bool
 
         if descriptor.isFunctionKey {
-            // Fn state lives in modifierFlags; update on any flagsChanged that involves Fn keycode or Fn bit flip.
+            // macOS 27.0.1 can deliver Fn (keyCode 63) without the .function flag, so also ask the HID state.
             pressed = event.modifierFlags.contains(.function)
+                || CGEventSource.keyState(.hidSystemState, key: CGKeyCode(kVK_Function))
         } else {
             // Right/Left Option: ONLY update when this key's own flagsChanged fires.
             // Ignoring other modifiers prevents a false "release" while Option is still held.
@@ -278,11 +279,22 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
         functionHotkeyEnabled && keyCode == UInt16(kVK_Function)
     }
 
+    /// Key code macOS sends as a keyDown/keyUp after a lone Fn release; it, not Fn's flagsChanged,
+    /// opens the Emoji & Symbols picker (or switches input source) on macOS 27.
+    public static let globeKeyCode: UInt16 = 0xB3
+
+    /// Pure decision: drop the Globe key event only while Fn is LocalFlow's dictation key.
+    public static func shouldDropGlobeKeyEvent(isKeyEvent: Bool, keyCode: UInt16, functionHotkeyEnabled: Bool) -> Bool {
+        functionHotkeyEnabled && isKeyEvent && keyCode == globeKeyCode
+    }
+
     private func startFunctionEventTapIfNeeded() {
         stopFunctionEventTap()
         guard settings.useFnAsAlternateHotkey else { return }
 
         let mask = CGEventMask(1) << CGEventType.flagsChanged.rawValue
+            | CGEventMask(1) << CGEventType.keyDown.rawValue
+            | CGEventMask(1) << CGEventType.keyUp.rawValue
         let context = Unmanaged.passUnretained(self).toOpaque()
         guard let tap = CGEvent.tapCreate(
             tap: .cgSessionEventTap,
@@ -298,6 +310,14 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
                         CGEvent.tapEnable(tap: tap, enable: true)
                     }
                     return Unmanaged.passUnretained(event)
+                }
+
+                if type == .keyDown || type == .keyUp {
+                    let keyCode = UInt16(event.getIntegerValueField(.keyboardEventKeycode))
+                    let drop = HotkeyManager.shouldDropGlobeKeyEvent(
+                        isKeyEvent: true, keyCode: keyCode,
+                        functionHotkeyEnabled: manager.settings.useFnAsAlternateHotkey)
+                    return drop ? nil : Unmanaged.passUnretained(event)
                 }
 
                 guard type == .flagsChanged,
@@ -344,8 +364,8 @@ public final class HotkeyManager: ObservableObject, @unchecked Sendable {
     }
 }
 
-/// macOS acts on the Globe/Fn key (emoji picker, input source, Dictation) below where an
-/// event tap can stop it, so the only reliable fix is the system's own "Press 🌐 key to" setting.
+/// The Fn event tap drops the Globe key event (0xB3) on recent macOS, but older releases act on Fn below
+/// where a tap can stop it, so the system's own "Press 🌐 key to" setting stays the reliable fix.
 public enum GlobeKeySetting {
     private static let key = "AppleFnUsageType" as CFString
     private static let domain = "com.apple.HIToolbox" as CFString

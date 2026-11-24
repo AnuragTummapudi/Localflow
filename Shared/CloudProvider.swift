@@ -14,7 +14,7 @@ public enum DictationSource: String, Codable, CaseIterable, Identifiable, Sendab
 }
 
 public enum CloudProvider: String, Codable, CaseIterable, Identifiable, Sendable {
-    case groq, openAI, claude, gemini
+    case groq, openAI, claude, gemini, sarvam
     public var id: String { rawValue }
     public var displayName: String {
         switch self {
@@ -22,14 +22,17 @@ public enum CloudProvider: String, Codable, CaseIterable, Identifiable, Sendable
         case .openAI: "OpenAI"
         case .claude: "Claude"
         case .gemini: "Gemini"
+        case .sarvam: "Sarvam"
         }
     }
-    public static var transcriptionProviders: [Self] { [.groq, .openAI, .gemini] }
+    public static var transcriptionProviders: [Self] { [.groq, .openAI, .gemini, .sarvam] }
     public var speechModel: String {
         switch self {
         case .groq: "whisper-large-v3-turbo"
         case .openAI: "gpt-transcribe"
         case .gemini: "gemini-3.5-flash-lite"
+        // Sarvam Dictate: Saaras V4 transcription + Sarvam 105B cleanup in one call.
+        case .sarvam: "dictate-v1-2026-11-11"
         case .claude: ""
         }
     }
@@ -39,6 +42,7 @@ public enum CloudProvider: String, Codable, CaseIterable, Identifiable, Sendable
         case .openAI: "gpt-4.1-mini"
         case .claude: "claude-haiku-5-5"
         case .gemini: "gemini-3.5-flash-lite"
+        case .sarvam: "sarvam-105b"
         }
     }
     public var keyURL: URL {
@@ -47,6 +51,7 @@ public enum CloudProvider: String, Codable, CaseIterable, Identifiable, Sendable
         case .openAI: URL(string: "https://platform.openai.com/api-keys")!
         case .claude: URL(string: "https://platform.claude.com/settings/keys")!
         case .gemini: URL(string: "https://aistudio.google.com/apikey")!
+        case .sarvam: URL(string: "https://dashboard.sarvam.ai/")!
         }
     }
 }

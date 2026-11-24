@@ -40,10 +40,10 @@
 
 ## ⚡ Key Features
 
-- **🎙️ Three dictation modes**: Apple Speech, local Parakeet / Whisper, or cloud transcription with your Groq, OpenAI, or Gemini API key.
+- **🎙️ Three dictation modes**: Apple Speech, local Parakeet / Whisper, or cloud transcription with your Groq, OpenAI, Gemini, or Sarvam API key.
 - **⌨️ Instant Text Insertion**: Hold **Fn** or **Right Option** to dictate, then release to insert text into any focused text box, IDE, browser, or terminal without stealing application focus.
 - **🙌 Hands-Free Toggle**: Double-tap your trigger key to lock dictation hands-free for continuous talking, and single-tap to stop.
-- **🧠 Smart Polish**: Rewrite selected text with **Option + 1** using Apple Intelligence or your Groq, OpenAI, Claude, or Gemini key.
+- **🧠 Smart Polish**: Rewrite selected text with **Option + 1** using Apple Intelligence or your Groq, OpenAI, Claude, Gemini, or Sarvam key.
 - **🛠️ Prompt Engineering**: Convert spoken engineering intent into high-leverage prompts with **Option + 2** (role, objective, context, instructions).
 - **🎵 Native Spotify Integration**: Say *"play Midnight City by M83 on Spotify"* or *"play Bohemian Rhapsody"* to instantly open Spotify with the song searched and results displayed. Also controls playback (`pause`, `resume`, `skip`, `previous`) locally.
 - **🖥️ System Voice Commands**: Control your Mac by voice: mute/unmute audio, sleep display, lock the screen, launch apps, or search directly on Google, YouTube, and GitHub.
@@ -65,13 +65,13 @@ Onboarding and **Settings → General → Dictation & Smart Polish** offer:
 
 1. **Apple Speech** — built-in on-device transcription on macOS 26+; may require a one-time language asset download.
 2. **Local models** — Parakeet on Apple Silicon or Whisper, downloaded once and used locally.
-3. **Your API key** — Groq (`whisper-large-v3-turbo`), OpenAI (`gpt-transcribe`), or Gemini (`gemini-3.5-flash-lite`) for dictation.
+3. **Your API key** — Groq (`whisper-large-v3-turbo`), OpenAI (`gpt-transcribe`), Gemini (`gemini-3.5-flash-lite`), or Sarvam Dictate (`dictate-v1-2026-11-11`, English + 22 Indian languages, 30 s per clip) for dictation.
 
-Smart Polish has an independent provider choice: Apple Intelligence, Groq, OpenAI, Claude, or Gemini. Claude is offered for text polishing only. Save the required keys, optionally check their connection, acknowledge cloud processing, then choose **Apply & prepare** (or **Finish setup**). Cloud usage requires internet and a provider account with model access and sufficient quota.
+Smart Polish has an independent provider choice: Apple Intelligence, Groq, OpenAI, Claude, Gemini, or Sarvam (`sarvam-105b`). Claude is offered for text polishing only. Save the required keys, optionally check their connection, acknowledge cloud processing, then choose **Apply & prepare** (or **Finish setup**). Cloud usage requires internet and a provider account with model access and sufficient quota.
 
 Cloud recordings are converted to 16 kHz mono before upload and limited to about six minutes; use local processing for longer recordings. Smart Polish accepts up to 6,000 characters and keeps existing output validation and selection-change protection. Option + 2 Prompt Engineer remains on-device.
 
-Provider API references: [OpenAI transcription](https://developers.openai.com/api/docs/guides/speech-to-text), [Groq transcription](https://console.groq.com/docs/speech-to-text), [Gemini content generation](https://ai.google.dev/api/generate-content), [Claude Messages](https://platform.claude.com/docs/en/api/messages/create).
+Provider API references: [OpenAI transcription](https://developers.openai.com/api/docs/guides/speech-to-text), [Groq transcription](https://console.groq.com/docs/speech-to-text), [Gemini content generation](https://ai.google.dev/api/generate-content), [Claude Messages](https://platform.claude.com/docs/en/api/messages/create), [Sarvam Dictate](https://docs.sarvam.ai/api-reference/dictate/clip).
 
 ### Required Permissions
 

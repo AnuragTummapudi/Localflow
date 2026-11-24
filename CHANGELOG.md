@@ -2,6 +2,15 @@
 
 All notable changes to LocalFlow are listed here.
 
+## Unreleased
+
+### Added
+- Sarvam as a cloud provider: Sarvam Dictate for dictation (English + 22 Indian languages, up to 30 s per clip) and `sarvam-105b` for Smart Polish.
+
+### Fixed
+- macOS 27: dictation no longer stops right after it starts or when a call app (Meet, Zoom, FaceTime) reconfigures the mic; capture restarts in place and keeps what was recorded.
+- macOS 27: holding Fn to dictate no longer opens the Emoji & Symbols picker, and Fn is detected even when macOS omits its modifier flag.
+
 ## 0.1.1 — 2026-11-21
 
 ### Fixed

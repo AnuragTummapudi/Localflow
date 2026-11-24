@@ -125,7 +125,7 @@ public final class ModelManager: NSObject, ObservableObject, URLSessionDownloadD
         if settings.dictationSource == .cloud {
             let provider = settings.transcriptionProvider
             guard CloudProvider.transcriptionProviders.contains(provider) else {
-                throw LocalFlowError.modelUnavailable("Choose Groq, OpenAI, or Gemini for cloud dictation.")
+                throw LocalFlowError.modelUnavailable("Choose Groq, OpenAI, Gemini, or Sarvam for cloud dictation.")
             }
             guard !settings.hardBlockNetworkAfterModelsDownloaded else { throw LocalFlowError.networkBlocked }
             guard try ProviderKeyStore().read(provider) != nil else {

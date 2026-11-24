@@ -223,6 +223,20 @@ final class SharedTests: XCTestCase {
             )
         )
     }
+
+    func testGlobeKeyEventIsDroppedOnlyWhileFnIsTheHotkey() {
+        XCTAssertTrue(HotkeyManager.shouldDropGlobeKeyEvent(isKeyEvent: true, keyCode: 0xB3, functionHotkeyEnabled: true))
+        XCTAssertFalse(HotkeyManager.shouldDropGlobeKeyEvent(isKeyEvent: true, keyCode: 0xB3, functionHotkeyEnabled: false))
+        XCTAssertFalse(HotkeyManager.shouldDropGlobeKeyEvent(isKeyEvent: true, keyCode: UInt16(kVK_Escape), functionHotkeyEnabled: true))
+        XCTAssertFalse(HotkeyManager.shouldDropGlobeKeyEvent(isKeyEvent: false, keyCode: 0xB3, functionHotkeyEnabled: true))
+    }
+
+    func testMicConfigurationChangeKeepsRunningEngineAndBoundsRestarts() {
+        XCTAssertEqual(AudioCaptureSession.configurationChangeAction(engineRunning: true, restartsSoFar: 99), .ignore)
+        XCTAssertEqual(AudioCaptureSession.configurationChangeAction(engineRunning: false, restartsSoFar: 0), .restart)
+        XCTAssertEqual(AudioCaptureSession.configurationChangeAction(
+            engineRunning: false, restartsSoFar: AudioCaptureSession.maxRestartsPerSession), .interrupt)
+    }
 }
 
 final class CapturedAudioBufferTests: XCTestCase {

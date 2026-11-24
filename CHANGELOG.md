@@ -2,7 +2,7 @@
 
 All notable changes to LocalFlow are listed here.
 
-## Unreleased
+## 0.1.2 — 2026-11-24
 
 ### Added
 - Sarvam as a cloud provider: Sarvam Dictate for dictation (English + 22 Indian languages, up to 30 s per clip) and `sarvam-105b` for Smart Polish.
